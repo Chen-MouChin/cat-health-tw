@@ -1,0 +1,2666 @@
+{
+  "_meta": {
+    "description": "貓健康站 literature database",
+    "total": 105,
+    "pending_review": 91,
+    "approved": 14,
+    "rejected": 0
+  },
+  "WILHELMY-2016-BREED-COAT-BEHAVIOR": {
+    "title": "Behavioral associations with breed, coat type, and eye color in single-breed cats",
+    "title_zh": "單一品種貓的行為與品種/毛色/眼色關聯性研究",
+    "authors": "Jacqueline Wilhelmy, James Serpell, Dorothy Brown, Carlo Siracusa",
+    "source": "Journal of Veterinary Behavior",
+    "journal": "Journal of Veterinary Behavior (Elsevier)",
+    "journal_impact_factor": 2.0,
+    "journal_if_year": 2024,
+    "journal_quartile": "Q2（獸醫科學）",
+    "url": "https://www.sciencedirect.com/science/article/abs/pii/S1558787816300284",
+    "doi": "10.1016/j.jveb.2016.03.009",
+    "year": 2016,
+    "type": "research_paper",
+    "language": "en",
+    "open_access": false,
+    "paywall_note": "付費期刊，僅摘要公開可讀；本站引用限於已公開摘要與方法",
+    "sample_size": 574,
+    "study_design": "Feline Behavioral Assessment and Research Questionnaire（問卷研究）+ 飼主自陳 + 多變量分析",
+    "abstract_zh": "美國賓州大學團隊對 574 隻登記單一品種貓進行行為調查：\n\n■ 涵蓋 12 品種：阿比西尼亞、孟加拉、伯曼、緬甸、德文捲毛、緬因、挪威森林、東方貓、波斯、布偶、暹羅、東基尼斯\n■ 量測 20 個行為因子 + 7 個特定問題行為：\n  - 恐懼型攻擊性、領地攻擊性、不當社交、怕噪音、轉向攻擊、分離焦慮、排尿/便不當\n■ 主要發現：\n  - 品種間確實有顯著行為差異（p<0.05）\n  - 毛色差異多半反映品種差異（毛色本身影響有限）\n  - 少數例外：agouti 虎斑紋貓攻擊性較高\n  - 紅/橘貓對獵物興趣較高\n  - 斑塊（piebald）貓對陌生人攻擊性較低\n  - 暹羅與東基尼斯（Siamese/Tonkinese pattern）分離焦慮明顯較高\n■ 限制：樣本量中等（n=574）；飼主自陳偏誤；美國樣本以北美血統為主；付費期刊",
+    "keywords": [
+      "品種行為",
+      "毛色",
+      "分離焦慮",
+      "單一品種",
+      "Wilhelmy"
+    ],
+    "disease_tags": [
+      "behavior",
+      "breed"
+    ],
+    "covered_breeds": [
+      "Abyssinian",
+      "Bengal",
+      "Birman",
+      "Burmese",
+      "Devon Rex",
+      "Maine Coon",
+      "Norwegian Forest",
+      "Oriental",
+      "Persian",
+      "Ragdoll",
+      "Siamese",
+      "Tonkinese"
+    ],
+    "status": "approved",
+    "url_verified": true,
+    "verified_at": "2026-04-18",
+    "notes": "付費期刊但可用摘要。與 Salonen 2019 互補：Salonen 偏活動量/社交，Wilhelmy 偏攻擊性/焦慮。",
+    "cited_by": [
+      "mixed-breed-cats-taiwan"
+    ]
+  },
+  "LITCHFIELD-2017-FELINE-FIVE": {
+    "title": "The 'Feline Five': An exploration of personality in pet cats (Felis catus)",
+    "title_zh": "貓咪五大人格特質：寵物貓個體性格探索",
+    "authors": "Carla A Litchfield, Gillian Quinton, Hayley Tindle, Belinda Chiera, K Heidy Kikillus, Philip Roetman",
+    "source": "PLOS ONE",
+    "journal": "PLOS ONE",
+    "journal_impact_factor": 3.7,
+    "journal_if_year": 2024,
+    "journal_quartile": "Q1（多學科）",
+    "url": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0183455",
+    "doi": "10.1371/journal.pone.0183455",
+    "pmid": "28832622",
+    "year": 2017,
+    "type": "research_paper",
+    "language": "en",
+    "open_access": true,
+    "sample_size": 2802,
+    "study_design": "飼主問卷（52 項人格特質）+ 主軸因素分析（principal axis factor analysis）",
+    "abstract_zh": "南澳與紐西蘭團隊對 2,802 隻寵物貓的個體人格研究：\n\n■ 方法：仿照人類 Big Five 架構，飼主評 52 項人格特質\n■ 因素分析後歸納出「Feline Five」5 大貓咪人格維度：\n  1. 神經質（Neuroticism）— 易焦慮/害羞\n  2. 外向（Extraversion）— 活潑/好奇\n  3. 支配（Dominance）— 具攻擊性/欺負其他貓\n  4. 衝動（Impulsiveness）— 不規律/突發行為\n  5. 隨和（Agreeableness）— 親人/溫柔\n■ 重點：此為**個體差異**研究，不比較品種\n■ 應用：飼主辨識個別貓個性、改善環境設計、提早發現行為改變可能代表的健康問題\n■ 限制：飼主自陳偏誤；樣本以澳紐為主；個體層級而非品種層級",
+    "keywords": [
+      "Feline Five",
+      "個體人格",
+      "Litchfield",
+      "Big Five"
+    ],
+    "disease_tags": [
+      "behavior"
+    ],
+    "covered_breeds": [],
+    "status": "approved",
+    "url_verified": true,
+    "verified_at": "2026-04-18",
+    "notes": "完全 OA。提供「如何看貓的個性」的框架，不做品種比較。與 Salonen/Wilhelmy 不同層級：這篇是個體層級理論框架。",
+    "cited_by": [
+      "mixed-breed-cats-taiwan"
+    ]
+  },
+  "SALONEN-2019-BREED-BEHAVIOUR": {
+    "title": "Breed differences of heritable behaviour traits in cats",
+    "title_zh": "貓品種行為特質的遺傳差異",
+    "authors": "Milla Salonen, Katariina Vapalahti, Katriina Tiira, Asko Mäki-Tanila, Hannes Lohi",
+    "source": "Scientific Reports",
+    "journal": "Scientific Reports (Nature Publishing Group)",
+    "journal_impact_factor": 4.6,
+    "journal_if_year": 2024,
+    "journal_quartile": "Q1（多學科）",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6538663/",
+    "doi": "10.1038/s41598-019-44324-x",
+    "pmid": "31138836",
+    "year": 2019,
+    "type": "research_paper",
+    "language": "en",
+    "open_access": true,
+    "sample_size": 5726,
+    "study_design": "問卷研究（飼主自陳）+ 多變量分析 + 遺傳力估算",
+    "abstract_zh": "芬蘭赫爾辛基大學 Lohi lab 大規模貓品種行為研究：\n\n■ 樣本：5,726 隻貓，涵蓋 19 個品種與品種群\n■ 方法：飼主問卷（驗證信度與效度）+ 因素分析 + 多變量混合模型\n■ 量測 10 項行為特質：\n  1. 對家人攻擊性（aggression toward family）\n  2. 對陌生人攻擊性（aggression toward strangers）\n  3. 對其他貓攻擊性（aggression toward other cats）\n  4. 對陌生人害羞（shyness toward strangers）\n  5. 對人接觸減少（reduced contact with people）\n  6. 活動量（activity level）\n  7. 吸羊毛行為（wool sucking）\n  8. 過度梳理（excessive grooming）\n  9. 飼主自評行為問題\n  10. 砂盆問題\n■ 主要發現：\n  - 品種間有顯著行為差異（p<0.001）\n  - 7 項特質遺傳力 0.4-0.53（中等遺傳）\n  - 19 個品種可分為 4 個行為群集\n  - 土耳其安哥拉貓最活躍；不列顛短毛貓最不活躍\n  - 緬甸/暹羅/孟加拉社交性高；俄羅斯藍/英短較矜持\n■ 限制：飼主自陳可能有期望偏誤；樣本偏歐洲血統",
+    "keywords": [
+      "品種行為",
+      "性格",
+      "遺傳",
+      "Salonen",
+      "問卷研究"
+    ],
+    "disease_tags": [
+      "behavior",
+      "breed"
+    ],
+    "covered_breeds": [
+      "Abyssinian",
+      "Bengal",
+      "British Shorthair",
+      "Burmese",
+      "Burmilla",
+      "Cornish Rex",
+      "Devon Rex",
+      "European Shorthair",
+      "Korat",
+      "Maine Coon",
+      "Norwegian Forest Cat",
+      "Oriental",
+      "Persian",
+      "Exotic",
+      "Ragdoll",
+      "Russian Blue",
+      "Birman",
+      "Siamese",
+      "Turkish Angora"
+    ],
+    "status": "approved",
+    "url_verified": true,
+    "verified_at": "2026-04-18",
+    "notes": "Q1 期刊，樣本量大，方法嚴謹。是目前品種行為研究最大規模的同儕審查論文之一。",
+    "cited_by": []
+  },
+  "IRIS-CKD-2023": {
+    "title": "IRIS Staging of CKD (modified 2023)",
+    "title_zh": "IRIS 貓慢性腎病分期系統（2023 修訂版）",
+    "authors": "International Renal Interest Society",
+    "source": "iris-kidney.com",
+    "journal": null,
+    "url": "https://www.iris-kidney.com/iris-guidelines-1",
+    "year": 2023,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "IRIS 慢性腎病分期（貓，2019 修訂版，IRIS 網站標示 2023）：\n\n■ 分期標準（空腹、水合狀態、至少兩次測量）\n  Stage 1：肌酸酐 < 1.6 mg/dL，SDMA < 18 μg/dL\n    → 非氮血症，僅有其他腎損傷標記（蛋白尿、影像異常、腎臟觸診異常）\n  Stage 2：肌酸酐 1.6–2.8，SDMA 18–25\n    → 輕度氮血症，通常無明顯臨床症狀\n  Stage 3：肌酸酐 2.9–5.0，SDMA 25–38\n    → 中度氮血症，開始出現多喝多尿、食慾下降、體重減輕\n  Stage 4：肌酸酐 > 5.0，SDMA > 38\n    → 重度氮血症，尿毒症狀明顯（嘔吐、脫水、貧血）\n\n■ SDMA vs 肌酸酐不一致時\n  若 SDMA 持續 >18 但肌酸酐 < 1.6 → 按 Stage 2 處理\n  若 SDMA 持續 >25 但肌酸酐在 Stage 2 範圍 → 按 Stage 3 處理\n  若 SDMA 持續 >38 但肌酸酐在 Stage 3 範圍 → 按 Stage 4 處理\n  （SDMA 比肌酸酐更敏感，較少受肌肉量影響）\n\n■ Sub-staging — 蛋白尿（UPC，排除泌尿道炎症/出血後測量）\n  Non-proteinuric：UPC < 0.2\n  Borderline proteinuric：UPC 0.2–0.4（2 個月內重測）\n  Proteinuric：UPC > 0.4 → 需治療介入\n\n■ Sub-staging — 收縮壓（多次測量，理想在不同日）\n  Normotensive：< 140 mmHg（最小風險）\n  Prehypertensive：140–159 mmHg（低風險）\n  Hypertensive：160–179 mmHg（中度風險）→ 需降壓藥\n  Severely hypertensive：≥ 180 mmHg（高風險）→ 可能靶器官損傷\n\n■ 重要注意\n  - 分期和 sub-staging 應隨治療變化而修訂\n  - 治療中的分期應標註「(treating)」\n  - 適用於貓和犬，但數值不同（上述為貓的數值）",
+    "keywords": [
+      "CKD",
+      "腎病",
+      "IRIS",
+      "分期",
+      "SDMA",
+      "肌酸酐"
+    ],
+    "disease_tags": [
+      "ckd"
+    ],
+    "status": "approved",
+    "url_verified": true,
+    "notes": "PDF 原文標題為 modified 2019，但 IRIS 網站 2023 重新發布。數值經 PDF 原文逐字核實。",
+    "cited_by": [
+      "cat-ckd-complete-guide"
+    ]
+  },
+  "IRIS-CKD-TREATMENT-2023": {
+    "title": "IRIS Treatment Recommendations for CKD in Cats",
+    "title_zh": "IRIS 貓慢性腎病治療建議",
+    "authors": "International Renal Interest Society",
+    "source": "iris-kidney.com",
+    "journal": null,
+    "url": "https://www.iris-kidney.com/iris-guidelines-1",
+    "year": 2023,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "IRIS 貓慢性腎病治療建議（2019 修訂，2023 重新發布）：\n\n■ Stage 1（肌酸酐 < 1.6）\n  - 停用腎毒性藥物\n  - 排除可治療原因（腎盂腎炎、尿路結石）\n  - 監測血壓和 UPC\n  - 保持充足飲水\n  - 血壓 ≥ 160 mmHg → 降壓藥：amlodipine 0.125-0.25 mg/kg 每日一次 或 telmisartan 2 mg/kg 每日一次\n  - UPC > 0.4 → 抗蛋白尿治療\n\n■ Stage 2（肌酸酐 1.6-2.8）\n  - 以上所有 + 開始腎臟處方飲食（趁食慾還好時轉換較容易）\n  - 磷控制目標：血磷 < 4.6 mg/dL（1.5 mmol/L），不低於 2.7 mg/dL（0.9 mmol/L）\n  - 若飲食控制不足 → 磷結合劑：aluminum hydroxide / calcium carbonate 等，30-60 mg/kg/day 混入食物\n  - FGF23 > 400 pg/ml → 即使血磷正常也建議限磷（2023 新增）\n\n■ Stage 3（肌酸酐 2.9-5.0）\n  - 以上所有 + 生活品質治療變得更重要\n  - 脫水管理：部分貓需要常規皮下輸液維持水合（原文未指定具體 ml 數）\n  - 磷目標同上，但原文提及 Stage 3 可能需要「更務實的目標」\n  - 噁心嘔吐：maropitant（Cerenia）1 mg/kg 每日一次\n  - 貧血：紅血球生成素（EPO/darbepoetin）當 PCV < 20%\n  - 代謝性酸中毒：口服碳酸氫鈉或檸檬酸鉀\n  - 監測頻率：至少每 3 個月\n\n■ Stage 4（肌酸酐 > 5.0）\n  - 以上所有 + 生活品質為最優先（超越延緩惡化的重要性）\n  - 常規皮下輸液維持水合（原文未指定具體 ml 數）\n  - 積極管理噁心/嘔吐/食慾/脫水/酸中毒/貧血\n\n■ 重要警告（原文逐字）\n  - 脫水貓禁用 RAAS 抑制劑（telmisartan/benazepril）→ 先補水再用藥，否則 GFR 可能驟降\n  - 降壓後肌酸酐微幅上升 < 0.5 mg/dL（或 SDMA < 2.0 μg/dL）屬正常\n  - 收縮壓 < 120 mmHg 伴隨虛弱/心搏過速 = 低血壓，需調藥\n  - 所有降壓貓需終身治療 + 穩定後至少每 3 個月監測\n  - 低白蛋白（< 2 g/dL）→ 考慮 clopidogrel 10-18.75 mg/day 預防血栓",
+    "keywords": [
+      "CKD",
+      "治療",
+      "磷結合劑",
+      "皮下輸液",
+      "飲食"
+    ],
+    "disease_tags": [
+      "ckd"
+    ],
+    "status": "approved",
+    "url_verified": true,
+    "notes": "17 頁 PDF 逐字核實。已修正 3 處原摘要中非原文內容：(1)刪除皮下輸液具體 ml 數 (2)刪除 Stage 4 特定磷目標 (3)刪除餵食管建議。14/14 項經 regex 比對原文確認。",
+    "cited_by": [
+      "cat-life-stages-care-taiwan"
+    ]
+  },
+  "ISFM-DIABETES-2015": {
+    "title": "ISFM Consensus Guidelines on the Practical Management of Diabetes Mellitus in Cats",
+    "title_zh": "ISFM 貓糖尿病實務管理共識指引",
+    "authors": "Sparkes AH, Cannon M, Church D, et al.",
+    "source": "JFMS",
+    "journal": "Journal of Feline Medicine and Surgery",
+    "url": "https://journals.sagepub.com/doi/10.1177/1098612X15571880",
+    "year": 2015,
+    "type": "consensus_guideline",
+    "language": "en",
+    "open_access": false,
+    "abstract_zh": "貓糖尿病的診斷標準（持續性高血糖+糖尿）、治療選擇（胰島素 vs 口服藥）、居家血糖監測方法、飲食管理（高蛋白低碳水）、緩解（remission）的定義和追蹤。",
+    "keywords": [
+      "糖尿病",
+      "胰島素",
+      "血糖",
+      "飲食",
+      "緩解"
+    ],
+    "disease_tags": [
+      "diabetes"
+    ],
+    "status": "pending_review",
+    "url_verified": false,
+    "notes": "JFMS 付費牆，但摘要免費。iCatCare 有對應的 owner guide 免費版 | DOI link verified (HEAD blocked by publisher, browser OK)",
+    "cited_by": [
+      "cat-diabetes-care"
+    ]
+  },
+  "ABCD-FIP-2019": {
+    "title": "ABCD Guidelines on Feline Infectious Peritonitis",
+    "title_zh": "ABCD 貓傳染性腹膜炎指引",
+    "authors": "Addie D, Belák S, Boucraut-Baralon C, et al.",
+    "source": "ABCD",
+    "journal": "Journal of Feline Medicine and Surgery",
+    "url": "https://www.abcdcatsvets.org/feline-infectious-peritonitis/",
+    "year": 2019,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "FIP 的病原學（FCoV 突變）、臨床分型（濕性/乾性/混合）、診斷方法（Rivalta test/RT-PCR/免疫組化）、傳統治療和新藥（GS-441524/GC376）的早期證據。",
+    "keywords": [
+      "FIP",
+      "傳腹",
+      "FCoV",
+      "GS-441524",
+      "診斷"
+    ],
+    "disease_tags": [
+      "fip"
+    ],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "ABCD 指引免費 PDF。GS-441524 臨床數據近年大量更新",
+    "cited_by": [
+      "cat-fip-guide-taiwan"
+    ]
+  },
+  "AAFP-FIP-DIAGNOSIS-2022": {
+    "title": "AAFP/EveryCat Feline Infectious Peritonitis Diagnosis Guidelines",
+    "title_zh": "AAFP/EveryCat 貓傳染性腹膜炎診斷指引",
+    "authors": "AAFP & EveryCat Health Foundation",
+    "source": "AAFP",
+    "journal": null,
+    "url": "https://catvets.com/resource/aafp-everycat-feline-infectious-peritonitis-diagnosis-fip-guidelines/",
+    "year": 2022,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "2022 年最新 FIP 診斷流程：臨床表現+生化+積液分析+Rivalta+RT-PCR。含決策樹流程圖。反映 GS-441524 時代的診斷需求。",
+    "keywords": [
+      "FIP",
+      "診斷",
+      "Rivalta",
+      "RT-PCR",
+      "決策樹"
+    ],
+    "disease_tags": [
+      "fip"
+    ],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "AAFP 官網免費下載",
+    "cited_by": [
+      "cat-fip-guide-taiwan"
+    ]
+  },
+  "ACVIM-HCM-2020": {
+    "title": "ACVIM Consensus Statement: Guidelines for the Classification, Diagnosis, and Management of Cardiomyopathies in Cats",
+    "title_zh": "ACVIM 貓心肌病分類、診斷與管理共識聲明",
+    "authors": "Luis Fuentes V, Abbott J, Chetboul V, et al.",
+    "source": "ACVIM",
+    "journal": "Journal of Veterinary Internal Medicine",
+    "url": "https://onlinelibrary.wiley.com/doi/10.1111/jvim.15745",
+    "year": 2020,
+    "type": "consensus_statement",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "貓心肌病分類（HCM/DCM/RCM/ARVC/UCM）、超音波診斷標準、NT-proBNP 生物標記、藥物治療（atenolol/clopidogrel）、血栓預防。JVIM 全文免費。",
+    "keywords": [
+      "HCM",
+      "心臟病",
+      "心肌病",
+      "超音波",
+      "血栓"
+    ],
+    "disease_tags": [
+      "hcm"
+    ],
+    "status": "pending_review",
+    "url_verified": false,
+    "notes": "JVIM 2018 後全 OA，全文免費 | DOI link verified (HEAD blocked by publisher, browser OK)",
+    "cited_by": [
+      "cat-hcm-heart-disease"
+    ]
+  },
+  "AAFP-HYPERTHYROIDISM-2016": {
+    "title": "AAFP Guidelines for the Management of Feline Hyperthyroidism",
+    "title_zh": "AAFP 貓甲狀腺亢進管理指引",
+    "authors": "Carney HC, Ward CR, Bailey SJ, et al.",
+    "source": "AAFP",
+    "journal": "Journal of Feline Medicine and Surgery",
+    "url": "https://catvets.com/resource/guidelines-practice-guidelines-feline-hyperthyroidism/",
+    "year": 2016,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "貓甲亢的四種治療選擇：甲巯咪唑（Methimazole）、放射碘（I-131）、手術、處方飼料（y/d）。含診斷流程、監測頻率、腎甲亢共病管理。",
+    "keywords": [
+      "甲亢",
+      "甲狀腺",
+      "Methimazole",
+      "放射碘",
+      "老貓"
+    ],
+    "disease_tags": [
+      "hyperthyroidism"
+    ],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "AAFP 官網免費",
+    "cited_by": [
+      "cat-hyperthyroidism-senior"
+    ]
+  },
+  "AAFP-VACCINATION-2020": {
+    "title": "2020 AAFP/AAHA Feline Vaccination Guidelines",
+    "title_zh": "2020 AAFP/AAHA 貓疫苗接種指引",
+    "authors": "Stone AES, Brummet GO, Carozza EM, et al.",
+    "source": "AAFP",
+    "journal": "Journal of Feline Medicine and Surgery",
+    "url": "https://catvets.com/resource/guidelines-practice-guidelines-aafp-aaha-feline-vaccination-feline-vaccination-guidelines/",
+    "year": 2020,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "核心疫苗（FVRCP+Rabies）vs 非核心疫苗（FeLV/FIV/Chlamydia）的接種時程。幼貓 6-16 週系列、成貓追加、抗體效價替代方案。",
+    "keywords": [
+      "疫苗",
+      "FVRCP",
+      "FeLV",
+      "接種時程",
+      "核心疫苗"
+    ],
+    "disease_tags": [
+      "vaccination"
+    ],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "AAFP 官網免費",
+    "cited_by": []
+  },
+  "AAFP-RETROVIRUS-2020": {
+    "title": "2020 AAFP Feline Retrovirus Management Guidelines",
+    "title_zh": "2020 AAFP 貓反轉錄病毒（FeLV/FIV）管理指引",
+    "authors": "Little S, Levy J, Hartmann K, et al.",
+    "source": "AAFP",
+    "journal": "Journal of Feline Medicine and Surgery",
+    "url": "https://catvets.com/resource/guidelines-practice-guidelines-retrovirus-management-guidelines-feline-retrovirus-management/",
+    "year": 2020,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "FeLV 和 FIV 的篩檢策略、確認診斷（ELISA/IFA/PCR）、陽性貓管理（隔離/不隔離的依據）、共感染處理、預後評估。",
+    "keywords": [
+      "FeLV",
+      "FIV",
+      "貓白血病",
+      "貓愛滋",
+      "篩檢"
+    ],
+    "disease_tags": [
+      "felv",
+      "fiv"
+    ],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "AAFP 官網免費",
+    "cited_by": [
+      "fiv-felv-management-taiwan"
+    ]
+  },
+  "AAFP-SENIOR-2021": {
+    "title": "2021 AAFP Feline Senior Care Guidelines",
+    "title_zh": "2021 AAFP 貓高齡照護指引",
+    "authors": "Ray M, Carney HC, Boynton B, et al.",
+    "source": "AAFP",
+    "journal": "Journal of Feline Medicine and Surgery",
+    "url": "https://catvets.com/resource/guidelines-practice-guidelines-senior-care-guidelines/",
+    "year": 2021,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "定義 Senior（11-14 歲）和 Super Senior（15+歲）。老貓常見疾病篩檢（CKD/甲亢/HCM/糖尿病/認知退化）、營養調整、環境改造、安寧照護轉介時機。",
+    "keywords": [
+      "老貓",
+      "高齡",
+      "篩檢",
+      "認知退化",
+      "安寧"
+    ],
+    "disease_tags": [
+      "senior_care"
+    ],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "AAFP 官網免費",
+    "cited_by": [
+      "cat-common-symptoms-taiwan"
+    ]
+  },
+  "AAFP-PAIN-2022": {
+    "title": "2022 ISFM/AAFP Cat Friendly Veterinary Interaction Guidelines",
+    "title_zh": "2022 ISFM/AAFP 貓友善獸醫互動指引",
+    "authors": "ISFM & AAFP",
+    "source": "AAFP",
+    "journal": "Journal of Feline Medicine and Surgery",
+    "url": "https://catvets.com/resource/cat-friendly-veterinary-interaction-guidelines/",
+    "year": 2022,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "減少貓看診壓力的操作指引：低壓力固定法、費洛蒙使用、環境調控、鎮靜方案。含壓力量表（Cat Stress Score）。",
+    "keywords": [
+      "低壓力",
+      "貓友善",
+      "固定法",
+      "費洛蒙",
+      "壓力"
+    ],
+    "disease_tags": [
+      "vet_visit"
+    ],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "AAFP 官網免費",
+    "cited_by": []
+  },
+  "AAFP-DENTAL-2025": {
+    "title": "2025 AAFP Feline Oral Health and Dental Care Guidelines",
+    "title_zh": "2025 AAFP 貓口腔健康與牙科照護指引",
+    "authors": "AAFP",
+    "source": "AAFP",
+    "journal": null,
+    "url": "https://catvets.com/resource/2025-oral-health-guidelines",
+    "year": 2025,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "貓口腔疾病（牙周病/FORL/口炎）的診斷與治療。含居家口腔護理方法、麻醉下洗牙指引、口炎的全口拔牙決策。最新 2025 版。",
+    "keywords": [
+      "牙科",
+      "口炎",
+      "FORL",
+      "牙周病",
+      "拔牙"
+    ],
+    "disease_tags": [
+      "dental"
+    ],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "2025 最新版，AAFP 官網免費",
+    "cited_by": []
+  },
+  "AAFP-NSAID-2024": {
+    "title": "2024 Consensus Guidelines on the Long-term Use of NSAIDs in Cats",
+    "title_zh": "2024 貓長期使用 NSAIDs 共識指引",
+    "authors": "AAFP",
+    "source": "AAFP",
+    "journal": null,
+    "url": "https://catvets.com/2024-long-term-use-of-nsaids-in-cats-guidelines/",
+    "year": 2024,
+    "type": "consensus_guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "貓長期使用 NSAIDs（如 meloxicam/robenacoxib）的安全性評估、腎功能監測、退化性關節病（OA）的疼痛管理方案。含 Solensia（frunevetmab）抗體療法。",
+    "keywords": [
+      "NSAID",
+      "疼痛",
+      "關節炎",
+      "OA",
+      "Solensia"
+    ],
+    "disease_tags": [
+      "pain",
+      "arthritis"
+    ],
+    "status": "pending_review",
+    "url_verified": false,
+    "notes": "AAFP 官網免費",
+    "cited_by": []
+  },
+  "AAFP-NUTRITION-2018": {
+    "title": "2018 AAFP Consensus Statement: How to Feed a Cat",
+    "title_zh": "2018 AAFP 共識聲明：如何餵貓",
+    "authors": "AAFP",
+    "source": "AAFP",
+    "journal": null,
+    "url": "https://catvets.com/resource/guidelines-practice-guidelines-how-to-feed-how-to-feed-a-cat-consensus-statement/",
+    "year": 2018,
+    "type": "consensus_statement",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "貓的自然進食行為（多次少量、獵食模式）、食物謎題的使用、濕食 vs 乾食選擇、肥胖預防、多貓家庭的餵食策略。",
+    "keywords": [
+      "營養",
+      "餵食",
+      "濕食",
+      "乾食",
+      "肥胖"
+    ],
+    "disease_tags": [
+      "nutrition"
+    ],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "AAFP 官網免費",
+    "cited_by": []
+  },
+  "AAFP-FLUID-2013": {
+    "title": "2013 AAFP Fluid Therapy Guidelines",
+    "title_zh": "2013 AAFP 輸液治療指引",
+    "authors": "AAFP",
+    "source": "AAFP",
+    "journal": null,
+    "url": "https://catvets.com/guidelines/practice-guidelines/fluid-therapy-guidelines/",
+    "year": 2013,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "貓的靜脈輸液和皮下輸液（subcutaneous fluid）完整指引。含輸液速率計算、脫水評估、電解質補充、居家皮下輸液操作方法。CKD 居家輸液的重要參考。",
+    "keywords": [
+      "輸液",
+      "皮下輸液",
+      "脫水",
+      "電解質",
+      "居家照護"
+    ],
+    "disease_tags": [
+      "ckd",
+      "fluid_therapy"
+    ],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "AAFP 官網免費。皮下輸液教學文章的核心引用",
+    "cited_by": []
+  },
+  "AAFP-HOUSESOILING-2014": {
+    "title": "2014 ISFM/AAFP Guidelines for Diagnosing and Solving House-Soiling Behavior in Cats",
+    "title_zh": "2014 ISFM/AAFP 貓亂尿行為診斷與解決指引",
+    "authors": "ISFM & AAFP",
+    "source": "AAFP",
+    "journal": "Journal of Feline Medicine and Surgery",
+    "url": "https://catvets.com/guidelines/practice-guidelines/house-soiling-guidelines/",
+    "year": 2014,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "貓亂尿的醫學 vs 行為原因鑑別。FLUTD/CKD/糖尿病排除後的行為介入：貓砂盆數量/位置/基質、費洛蒙、環境修改。",
+    "keywords": [
+      "亂尿",
+      "貓砂盆",
+      "行為",
+      "FLUTD",
+      "費洛蒙"
+    ],
+    "disease_tags": [
+      "behavior",
+      "flutd"
+    ],
+    "status": "pending_review",
+    "url_verified": false,
+    "notes": "AAFP 官網免費",
+    "cited_by": [
+      "male-cat-urethral-obstruction"
+    ]
+  },
+  "AAFP-ENVIRONMENT-2013": {
+    "title": "2013 ISFM/AAFP Environmental Needs Guidelines",
+    "title_zh": "2013 ISFM/AAFP 貓環境需求指引",
+    "authors": "ISFM & AAFP",
+    "source": "AAFP",
+    "journal": "Journal of Feline Medicine and Surgery",
+    "url": "https://catvets.com/guidelines/practice-guidelines/environmental-needs-guidelines/",
+    "year": 2013,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "貓的五大環境需求：安全空間、多重資源點、遊戲機會、社交互動、嗅覺刺激。室內貓環境豐富化的具體做法。",
+    "keywords": [
+      "環境",
+      "豐富化",
+      "室內貓",
+      "垂直空間",
+      "遊戲"
+    ],
+    "disease_tags": [
+      "enrichment"
+    ],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "AAFP 官網免費",
+    "cited_by": [
+      "cat-environment-enrichment-taiwan"
+    ]
+  },
+  "AAFP-HOSPICE-2023": {
+    "title": "2023 AAFP Feline Hospice & Palliative Care Guidelines",
+    "title_zh": "2023 AAFP 貓安寧療護指引",
+    "authors": "AAFP",
+    "source": "AAFP",
+    "journal": null,
+    "url": "https://catvets.com/resource/2023-feline-hospice-and-palliative-care-guidelines/",
+    "year": 2023,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "貓的安寧照護原則：疼痛評估（Grimace Scale）、生活品質量表、轉介安寧的時機、安樂死討論、飼主悲傷支持。",
+    "keywords": [
+      "安寧",
+      "安樂死",
+      "生活品質",
+      "疼痛評估",
+      "悲傷"
+    ],
+    "disease_tags": [
+      "palliative",
+      "senior_care"
+    ],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "AAFP 官網免費",
+    "cited_by": []
+  },
+  "CORNELL-CKD": {
+    "title": "Chronic Kidney Disease — Cornell Feline Health Center",
+    "title_zh": "慢性腎病 — Cornell 貓健康中心",
+    "authors": "Cornell University College of Veterinary Medicine",
+    "source": "Cornell",
+    "journal": null,
+    "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/chronic-kidney-disease",
+    "year": 2024,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "面向飼主的 CKD 完整說明：症狀（多喝多尿/體重下降/嘔吐）、診斷（血檢/尿檢/SDMA/超音波）、治療（飲食/輸液/藥物）、預後。",
+    "keywords": [
+      "CKD",
+      "腎病",
+      "Cornell",
+      "飼主教育"
+    ],
+    "disease_tags": [
+      "ckd"
+    ],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "Cornell 免費，品質最高的飼主教育內容",
+    "cited_by": [
+      "cat-ckd-complete-guide",
+      "cat-life-stages-care-taiwan"
+    ]
+  },
+  "CORNELL-DIABETES": {
+    "title": "Feline Diabetes — Cornell Feline Health Center",
+    "title_zh": "貓糖尿病 — Cornell 貓健康中心",
+    "authors": "Cornell University College of Veterinary Medicine",
+    "source": "Cornell",
+    "journal": null,
+    "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/feline-diabetes",
+    "year": 2024,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "貓糖尿病基礎：第二型為主、症狀（多喝多尿/體重下降）、胰島素注射教學、居家血糖監測、飲食管理、緩解可能性。",
+    "keywords": [
+      "糖尿病",
+      "胰島素",
+      "Cornell",
+      "飼主教育"
+    ],
+    "disease_tags": [
+      "diabetes"
+    ],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "Cornell 免費",
+    "cited_by": [
+      "cat-diabetes-care"
+    ]
+  },
+  "CORNELL-FLUTD": {
+    "title": "Feline Lower Urinary Tract Disease — Cornell Feline Health Center",
+    "title_zh": "貓下泌尿道疾病 — Cornell 貓健康中心",
+    "authors": "Cornell University College of Veterinary Medicine",
+    "source": "Cornell",
+    "journal": null,
+    "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/feline-lower-urinary-tract-disease",
+    "year": 2024,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "FLUTD 的各種原因（FIC/結石/尿道阻塞/感染）、症狀（頻尿/血尿/排尿困難）、診斷、治療、預防（增加飲水/環境減壓）。",
+    "keywords": [
+      "FLUTD",
+      "FIC",
+      "尿道阻塞",
+      "結石",
+      "泌尿"
+    ],
+    "disease_tags": [
+      "flutd"
+    ],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "Cornell 免費",
+    "cited_by": [
+      "male-cat-urethral-obstruction"
+    ]
+  },
+  "CORNELL-HYPERTHYROIDISM": {
+    "title": "Hyperthyroidism in Cats — Cornell Feline Health Center",
+    "title_zh": "貓甲狀腺亢進 — Cornell 貓健康中心",
+    "authors": "Cornell University College of Veterinary Medicine",
+    "source": "Cornell",
+    "journal": null,
+    "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/hyperthyroidism-cats",
+    "year": 2024,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "貓甲亢的症狀（體重下降+食慾增加+心跳快）、診斷（T4/fT4）、四種治療選擇比較（藥物/放射碘/手術/飲食）。",
+    "keywords": [
+      "甲亢",
+      "甲狀腺",
+      "T4",
+      "放射碘",
+      "Cornell"
+    ],
+    "disease_tags": [
+      "hyperthyroidism"
+    ],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "Cornell 免費",
+    "cited_by": [
+      "cat-hyperthyroidism-senior"
+    ]
+  },
+  "CORNELL-HCM": {
+    "title": "Hypertrophic Cardiomyopathy — Cornell Feline Health Center",
+    "title_zh": "肥厚性心肌病 — Cornell 貓健康中心",
+    "authors": "Cornell University College of Veterinary Medicine",
+    "source": "Cornell",
+    "journal": null,
+    "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/hypertrophic-cardiomyopathy",
+    "year": 2024,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "HCM 是貓最常見心臟病。左心室肥厚→心衰竭/血栓/猝死。診斷靠超音波。治療：atenolol/clopidogrel 預防血栓。",
+    "keywords": [
+      "HCM",
+      "心臟病",
+      "超音波",
+      "血栓",
+      "Cornell"
+    ],
+    "disease_tags": [
+      "hcm"
+    ],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "Cornell 免費",
+    "cited_by": [
+      "cat-hcm-heart-disease"
+    ]
+  },
+  "VCA-EMERGENCY-SIGNS": {
+    "title": "Emergency Care for Cats — VCA Animal Hospitals",
+    "title_zh": "貓急診照護 — VCA",
+    "authors": "VCA Animal Hospitals",
+    "source": "VCA",
+    "journal": null,
+    "url": "https://vcahospitals.com/know-your-pet/first-aid-for-cats",
+    "year": 2024,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "貓的急診徵兆清單：呼吸困難、無法排尿、持續嘔吐、抽搐、大量出血、中毒。何時該衝急診 vs 可以等門診。",
+    "keywords": [
+      "急診",
+      "緊急",
+      "徵兆",
+      "中毒",
+      "呼吸困難"
+    ],
+    "disease_tags": [
+      "emergency"
+    ],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "VCA 免費，獸醫撰寫",
+    "cited_by": [
+      "cat-emergency-care-taiwan"
+    ]
+  },
+  "WSAVA-VACCINATION-2024": {
+    "title": "WSAVA Guidelines for the Vaccination of Dogs and Cats (2024 Update)",
+    "title_zh": "WSAVA 犬貓疫苗接種指引（2024 更新版）",
+    "authors": "Day MJ, Horzinek MC, Schultz RD, Squires RA",
+    "source": "WSAVA",
+    "journal": null,
+    "url": "https://wsava.org/committees/vaccination-guidelines-group/",
+    "year": 2024,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "全球疫苗接種標準：核心（FVRCP+狂犬病）vs 非核心（FeLV）。接種間隔（核心 3 年、非核心 1 年）。抗體效價檢測替代追加的科學依據。",
+    "keywords": [
+      "疫苗",
+      "WSAVA",
+      "核心疫苗",
+      "抗體效價",
+      "接種間隔"
+    ],
+    "disease_tags": [
+      "vaccination"
+    ],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "WSAVA 免費 PDF",
+    "cited_by": []
+  },
+  "WSAVA-NUTRITION-2011": {
+    "title": "WSAVA Nutritional Assessment Guidelines",
+    "title_zh": "WSAVA 營養評估指引",
+    "authors": "WSAVA Global Nutrition Committee",
+    "source": "WSAVA",
+    "journal": null,
+    "url": "https://wsava.org/committees/global-nutrition-committee/",
+    "year": 2011,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "貓犬營養評估的標準化流程：體態評分（BCS 1-9）、肌肉量評估（MCS）、飲食史採集、營養相關疾病篩檢。",
+    "keywords": [
+      "營養",
+      "BCS",
+      "體態評分",
+      "飲食",
+      "WSAVA"
+    ],
+    "disease_tags": [
+      "nutrition"
+    ],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "WSAVA 免費 PDF",
+    "cited_by": []
+  },
+  "ASPCA-TOXIC-PLANTS": {
+    "title": "Toxic and Non-Toxic Plants List — ASPCA",
+    "title_zh": "有毒和無毒植物清單 — ASPCA",
+    "authors": "ASPCA Animal Poison Control Center",
+    "source": "ASPCA",
+    "journal": null,
+    "url": "https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants",
+    "year": 2024,
+    "type": "database",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "ASPCA 毒物控制中心的完整植物毒性資料庫。可按貓/狗/馬篩選。每種植物附毒性程度、中毒症狀、處理方式。",
+    "keywords": [
+      "中毒",
+      "植物",
+      "毒物",
+      "ASPCA",
+      "百合"
+    ],
+    "disease_tags": [
+      "toxicology"
+    ],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "ASPCA 免費，毒物清單的金標準",
+    "cited_by": [
+      "cat-toxic-substances-taiwan"
+    ]
+  },
+  "ASPCA-TOXIC-FOODS": {
+    "title": "People Foods to Avoid Feeding Your Pets — ASPCA",
+    "title_zh": "不能餵貓的人類食物 — ASPCA",
+    "authors": "ASPCA Animal Poison Control Center",
+    "source": "ASPCA",
+    "journal": null,
+    "url": "https://www.aspca.org/pet-care/animal-poison-control/people-foods-avoid-feeding-your-pets",
+    "year": 2024,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "對貓有毒的人類食物清單：巧克力、洋蔥/大蒜、葡萄/葡萄乾、木糖醇、酒精、咖啡因。每種附毒性機制和中毒劑量。",
+    "keywords": [
+      "中毒",
+      "食物",
+      "巧克力",
+      "洋蔥",
+      "ASPCA"
+    ],
+    "disease_tags": [
+      "toxicology"
+    ],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "ASPCA 免費",
+    "cited_by": [
+      "cat-toxic-substances-taiwan"
+    ]
+  },
+  "SNOWDON-CAT-MUSIC-2015": {
+    "title": "Cats Prefer Species-Appropriate Music",
+    "title_zh": "貓偏好物種專屬音樂",
+    "authors": "Snowdon CT, Teie D, Savage M",
+    "source": "Applied Animal Behaviour Science",
+    "journal": "Applied Animal Behaviour Science",
+    "url": "https://doi.org/10.1016/j.applanim.2015.02.012",
+    "year": 2015,
+    "type": "research_paper",
+    "language": "en",
+    "open_access": false,
+    "abstract_zh": "實驗證明貓對「物種專屬音樂」（匹配呼嚕頻率 25Hz + 吸奶節奏）有顯著正面行為反應（靠近、磨蹭、呼嚕），對人類音樂（巴哈）無反應。N=47 隻貓。",
+    "keywords": [
+      "音樂",
+      "行為",
+      "呼嚕",
+      "壓力",
+      "物種專屬"
+    ],
+    "disease_tags": [
+      "behavior",
+      "enrichment"
+    ],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "付費牆（Elsevier），但摘要免費。基礎理論論文 | DOI link verified (HEAD blocked by publisher, browser OK)",
+    "cited_by": []
+  },
+  "HAMPTON-CAT-MUSIC-VET-2020": {
+    "title": "Effects of music on behavior and physiological stress response of domestic cats in a veterinary clinic",
+    "title_zh": "音樂對獸醫診間貓行為和生理壓力反應的影響",
+    "authors": "Hampton A, Ford A, Cox RE III, Liu CC, Koh R",
+    "source": "JFMS",
+    "journal": "Journal of Feline Medicine and Surgery",
+    "url": "https://doi.org/10.1177/1098612X19828131",
+    "year": 2020,
+    "type": "research_paper",
+    "language": "en",
+    "open_access": false,
+    "abstract_zh": "獸醫檢查時播放三種條件（貓專屬音樂/古典樂/安靜），貓專屬音樂組的貓壓力評分（CSS）和操作困難度顯著最低。發表在 JFMS（ISFM 期刊）。",
+    "keywords": [
+      "音樂",
+      "壓力",
+      "獸醫",
+      "CSS",
+      "JFMS"
+    ],
+    "disease_tags": [
+      "behavior",
+      "vet_visit"
+    ],
+    "status": "pending_review",
+    "url_verified": false,
+    "notes": "發表在 ISFM 的 JFMS 期刊，付費牆但摘要免費 | DOI link verified (HEAD blocked by publisher, browser OK)",
+    "cited_by": []
+  },
+  "AAFP-CAT-FRIENDLY-VETERINARY-ENVIRONMENT-GUID-2020": {
+    "title": "2022 ISFM/AAFP Cat Friendly Veterinary Environment Guidelines",
+    "title_zh": "2022 ISFM/AAFP 貓友善獸醫環境指引",
+    "authors": "AAFP",
+    "source": "AAFP",
+    "journal": null,
+    "url": "https://catvets.com/resource/isfm-aafp-cat-friendly-veterinary-environment-guidelines/",
+    "year": 2022,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "說明如何調整獸醫診療環境以減少貓的壓力。針對獸醫團隊，提供候診室、檢查室等空間的實用設計建議，無需昂貴改建即可提升貓就診體驗。",
+    "keywords": [],
+    "disease_tags": [],
+    "status": "needs_review",
+    "url_verified": true,
+    "notes": "auto-crawled from catvets.com/guidelines",
+    "cited_by": []
+  },
+  "AAFP-CAT-FRIENDLY-VETERINARY-INTERACTION-GUID-2020": {
+    "title": "Cat Friendly Veterinary Interaction Guidelines: Approach and Handling Techniques",
+    "title_zh": "",
+    "authors": "AAFP",
+    "source": "AAFP",
+    "journal": null,
+    "url": "https://catvets.com/resource/aafp-isfm-cat-friendly-veterinary-interaction-guidelines/",
+    "year": 2020,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "AAFP/ISFM 貓友善獸醫互動指引。聚焦降低貓於就診與居家處置時的恐懼與壓力：低壓力保定技巧、環境調整、費洛蒙運用與正向互動原則。",
+    "keywords": [],
+    "disease_tags": [],
+    "status": "pending_review",
+    "url_verified": false,
+    "notes": "auto-crawled from catvets.com/guidelines | 摘要依指引範圍整理（原文 PDF）。2026-06-10",
+    "cited_by": [
+      "cat-pheromone-products-guide",
+      "cat-leaving-home-taiwan"
+    ]
+  },
+  "AAFP-2025-FELINEVMA-FELINE-ORAL-HEALTH-AND-DE-2025": {
+    "title": "2025 FelineVMA Feline Oral Health and Dental Care Guidelines",
+    "title_zh": "2025 FelineVMA 貓口腔健康與牙科照護指引",
+    "authors": "AAFP",
+    "source": "AAFP",
+    "journal": null,
+    "url": "https://catvets.com/resource/2025-oral-health-guidelines",
+    "year": 2025,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "為獸醫專業人士提供貓口腔健康與牙科護理的實證建議。涵蓋疾病診斷、患者評估、麻醉、手術與術後照護，強調團隊合作與飼主參與。",
+    "keywords": [],
+    "disease_tags": [],
+    "status": "needs_review",
+    "url_verified": true,
+    "notes": "auto-crawled from catvets.com/guidelines",
+    "cited_by": [
+      "cat-dental-health-taiwan"
+    ]
+  },
+  "AAFP-2024-ISFM-AAFP-CONSENSUS-GUIDELINES-ON-T-2024": {
+    "title": "2024 ISFM/AAFP Consensus Guidelines on the Long-term Use of NSAIDs in Cats",
+    "title_zh": "2024 ISFM/AAFP 貓長期使用 NSAIDs 共識指引",
+    "authors": "AAFP",
+    "source": "AAFP",
+    "journal": null,
+    "url": "https://catvets.com/2024-long-term-use-of-nsaids-in-cats-guidelines/",
+    "year": 2024,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "針對慢性疼痛貓使用 NSAIDs 的決策指引（取代 2010 版）。涵蓋有共病的貓，提供降低副作用、與飼主合作的實用建議。",
+    "keywords": [],
+    "disease_tags": [],
+    "status": "needs_review",
+    "url_verified": false,
+    "notes": "auto-crawled from catvets.com/guidelines",
+    "cited_by": []
+  },
+  "AAFP-2023-AAFP-IAAHPC-FELINE-HOSPICE-PALLIATI-2023": {
+    "title": "2023 AAFP/IAAHPC Feline Hospice and Palliative Care Guidelines",
+    "title_zh": "2023 AAFP/IAAHPC 貓安寧緩和照護指引",
+    "authors": "AAFP",
+    "source": "AAFP",
+    "journal": null,
+    "url": "https://catvets.com/resource/2023-feline-hospice-and-palliative-care-guidelines/",
+    "year": 2023,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "針對貓臨終與舒緩照護，強調溝通、倫理與個人化護理。重點在整體照護計畫、「照護預算」與「照護單位」概念，涵蓋舒適照護與情緒福祉評估。",
+    "keywords": [],
+    "disease_tags": [],
+    "status": "needs_review",
+    "url_verified": false,
+    "notes": "auto-crawled from catvets.com/guidelines",
+    "cited_by": [
+      "cat-end-of-life-care-taiwan"
+    ]
+  },
+  "AAFP-2022-AAFP-ISFM-CAT-FRIENDLY-VETERINARY-I-2022": {
+    "title": "2022 AAFP/ISFM Cat Friendly Veterinary Interaction Guidelines: Approach and Handling Techniques",
+    "title_zh": "",
+    "authors": "AAFP",
+    "source": "AAFP",
+    "journal": null,
+    "url": "https://catvets.com/resource/cat-friendly-veterinary-interaction-guidelines/",
+    "year": 2022,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "",
+    "keywords": [],
+    "disease_tags": [],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "auto-crawled from catvets.com/guidelines",
+    "cited_by": []
+  },
+  "AAFP-2022-ISFM-AAFP-CAT-FRIENDLY-VETERINARY-E-2022": {
+    "title": "2022 ISFM/AAFP Cat Friendly Veterinary Environment Guidelines",
+    "title_zh": "",
+    "authors": "AAFP",
+    "source": "AAFP",
+    "journal": null,
+    "url": "https://catvets.com/resource/isfm-aafp-cat-friendly-veterinary-environment-guidelines/",
+    "year": 2022,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "",
+    "keywords": [],
+    "disease_tags": [],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "auto-crawled from catvets.com/guidelines",
+    "cited_by": []
+  },
+  "AAFP-2022-AAFP-EVERYCAT-FELINE-INFECTIOUS-PER-2022": {
+    "title": "2022 AAFP/EveryCat Feline Infectious Peritonitis Diagnosis Guidelines",
+    "title_zh": "2022 AAFP/EveryCat 貓傳染性腹膜炎（FIP）診斷指引",
+    "authors": "AAFP",
+    "source": "AAFP",
+    "journal": null,
+    "url": "https://catvets.com/guidelines/practice-guidelines/fip-diagnosis-guidelines/",
+    "year": 2022,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "為獸醫提供 FIP 診斷所需的關鍵資訊。FIP 是貓最重要的傳染病之一，特別好發於 2 歲以下貓。指引整理品種、病史、理學檢查與診斷檢驗，附臨床圖、表格與影片資源。",
+    "keywords": [],
+    "disease_tags": [],
+    "status": "needs_review",
+    "url_verified": false,
+    "notes": "auto-crawled from catvets.com/guidelines",
+    "cited_by": [
+      "cat-upper-respiratory-infection"
+    ]
+  },
+  "AAFP-2022-AAFP-AAHA-ANTIMICROBIAL-STEWARDSHIP-2022": {
+    "title": "2022 AAFP/AAHA Antimicrobial Stewardship",
+    "title_zh": "",
+    "authors": "AAFP",
+    "source": "AAFP",
+    "journal": null,
+    "url": "https://catvets.com/resource/guidelines-practice-guidelines-antimicrobial-in-cats-antimicrobial-stewardship-guidelines/",
+    "year": 2022,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "",
+    "keywords": [],
+    "disease_tags": [],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "auto-crawled from catvets.com/guidelines",
+    "cited_by": []
+  },
+  "AAFP-2022-APPROACHES-TO-UROLITHIASIS-TREATMEN-2022": {
+    "title": "2022 Approaches to Urolithiasis Treatment",
+    "title_zh": "",
+    "authors": "AAFP",
+    "source": "AAFP",
+    "journal": null,
+    "url": "https://catvets.com/resource/guidelines-practice-guidelines-urolithiasis-approaches-to-urolithiasis-treatment-consensus-statement/",
+    "year": 2022,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "",
+    "keywords": [],
+    "disease_tags": [],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "auto-crawled from catvets.com/guidelines",
+    "cited_by": []
+  },
+  "AAFP-2021-FELINE-SENIOR-CARE-2021": {
+    "title": "2021 AAFP Feline Senior Care Guidelines",
+    "title_zh": "2021 AAFP 高齡貓照護指引",
+    "authors": "AAFP",
+    "source": "AAFP",
+    "journal": null,
+    "url": "https://catvets.com/resource/guidelines-practice-guidelines-senior-care-guidelines/",
+    "year": 2021,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "高齡貓的全面醫療照護建議：疼痛管理、營養、常見疾病與生活品質評估。引入「四項照護預算」（財務、時間、情感、身體）概念，協助獸醫與飼主制定個人化方案。",
+    "keywords": [],
+    "disease_tags": [],
+    "status": "needs_review",
+    "url_verified": true,
+    "notes": "auto-crawled from catvets.com/guidelines",
+    "cited_by": [
+      "cat-hyperthyroidism-senior",
+      "cat-life-stages-care-taiwan"
+    ]
+  },
+  "AAFP-2021-FELINE-LIFE-STAGE-2021": {
+    "title": "2021 Feline Life Stage",
+    "title_zh": "",
+    "authors": "AAFP",
+    "source": "AAFP",
+    "journal": null,
+    "url": "https://catvets.com/resource/guidelines-practice-guidelines-life-stage-guidelines/",
+    "year": 2021,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "2021 AAFP 貓生命階段指引（Quimby 等，JFMS）。以生命階段取代純年齡分類：幼貓(0–1歲)、青年成貓(1–6)、成熟成貓(7–10)、高齡(10歲以上)；提供各階段健檢頻率、營養、行為與篩檢建議。",
+    "keywords": [],
+    "disease_tags": [],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "auto-crawled from catvets.com/guidelines | 摘要依指引範圍整理（原文 PDF）。2026-06-10",
+    "cited_by": [
+      "cat-life-stages-care-taiwan",
+      "cat-vaccination-wellness-taiwan"
+    ]
+  },
+  "AAFP-2020-FELINE-VACCINATION-2020": {
+    "title": "2020 Feline Vaccination",
+    "title_zh": "",
+    "authors": "AAFP",
+    "source": "AAFP",
+    "journal": null,
+    "url": "https://catvets.com/resource/guidelines-practice-guidelines-aafp-aaha-feline-vaccination-feline-vaccination-guidelines/",
+    "year": 2020,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "",
+    "keywords": [],
+    "disease_tags": [],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "auto-crawled from catvets.com/guidelines",
+    "cited_by": []
+  },
+  "AAFP-2020-FELINE-RETROVIRUS-MANAGEMENT-2020": {
+    "title": "2020 AAFP Feline Retrovirus Testing and Management Guidelines",
+    "title_zh": "2020 AAFP 貓反轉錄病毒（FeLV/FIV）檢測與管理指引",
+    "authors": "AAFP",
+    "source": "AAFP",
+    "journal": null,
+    "url": "https://catvets.com/resource/guidelines-practice-guidelines-retrovirus-management-guidelines-feline-retrovirus-management/",
+    "year": 2020,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "由國際專家小組編制，涵蓋貓白血病病毒（FeLV）與貓免疫缺陷病毒（FIV）的檢測與管理。強調透過教育、檢測與疫苗接種降低傳播，並納入最新定量檢測與臨床決策資訊。",
+    "keywords": [],
+    "disease_tags": [],
+    "status": "needs_review",
+    "url_verified": true,
+    "notes": "auto-crawled from catvets.com/guidelines",
+    "cited_by": []
+  },
+  "AAFP-2019-ZOONOSES-2019": {
+    "title": "2019 Zoonoses",
+    "title_zh": "",
+    "authors": "AAFP",
+    "source": "AAFP",
+    "journal": null,
+    "url": "https://catvets.com/resource/guidelines-practice-guidelines-zoonoses-guidelines/",
+    "year": 2019,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "2019 AAFP 人畜共通傳染病指引。涵蓋貓相關 zoonoses（弓形蟲、貓抓病／巴氏桿菌、皮癬菌、腸道寄生蟲等）的風險評估、預防與免疫低下族群（含孕婦）的衛教建議。",
+    "keywords": [],
+    "disease_tags": [],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "auto-crawled from catvets.com/guidelines | 摘要依指引範圍整理，2026-06-10",
+    "cited_by": [
+      "cat-toxoplasma-pregnancy"
+    ]
+  },
+  "AAFP-2018-FELINE-ANESTHESIA-2018": {
+    "title": "2018 Feline Anesthesia",
+    "title_zh": "",
+    "authors": "AAFP",
+    "source": "AAFP",
+    "journal": null,
+    "url": "https://catvets.com/resource/guidelines-practice-guidelines-anesthesia-guidelines/",
+    "year": 2018,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "",
+    "keywords": [],
+    "disease_tags": [],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "auto-crawled from catvets.com/guidelines",
+    "cited_by": []
+  },
+  "AAFP-2018-HOW-TO-FEED-A-CAT-2018": {
+    "title": "2018 How to Feed a Cat",
+    "title_zh": "",
+    "authors": "AAFP",
+    "source": "AAFP",
+    "journal": null,
+    "url": "https://catvets.com/guidelines/practice-guidelines/how-to-feed-a-cat/",
+    "year": 2018,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "",
+    "keywords": [],
+    "disease_tags": [],
+    "status": "pending_review",
+    "url_verified": false,
+    "notes": "auto-crawled from catvets.com/guidelines",
+    "cited_by": []
+  },
+  "AAFP-2016-MANAGEMENT-OF-FELINE-HYPERTHYROIDIS-2016": {
+    "title": "2016 AAFP Guidelines for the Management of Feline Hyperthyroidism",
+    "title_zh": "2016 AAFP 貓甲狀腺機能亢進管理指引",
+    "authors": "AAFP",
+    "source": "AAFP",
+    "journal": null,
+    "url": "https://catvets.com/resource/guidelines-practice-guidelines-feline-hyperthyroidism/",
+    "year": 2016,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "貓甲亢的診斷與管理策略，將患者分為六個臨床類別。強調所有罹病貓都應治療，提供現有治療方案、監測方法與循證建議，協助獸醫早期診斷與管理。",
+    "keywords": [],
+    "disease_tags": [],
+    "status": "needs_review",
+    "url_verified": true,
+    "notes": "auto-crawled from catvets.com/guidelines",
+    "cited_by": []
+  },
+  "AAFP-2015-PAIN-MANAGEMENT-2015": {
+    "title": "2015 Pain Management",
+    "title_zh": "",
+    "authors": "AAFP",
+    "source": "AAFP",
+    "journal": null,
+    "url": "https://catvets.com/guidelines/practice-guidelines/pain-management-guidelines/",
+    "year": 2015,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "",
+    "keywords": [],
+    "disease_tags": [],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "auto-crawled from catvets.com/guidelines",
+    "cited_by": []
+  },
+  "AAFP-2014-DIAGNOSING-AND-SOLVING-HOUSE-SOILIN-2014": {
+    "title": "2014 Diagnosing and Solving House-Soiling Behavior in Cats",
+    "title_zh": "",
+    "authors": "AAFP",
+    "source": "AAFP",
+    "journal": null,
+    "url": "https://catvets.com/resource/guidelines-practice-guidelines-house-soiling-house-soiling-guidelines/",
+    "year": 2014,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "2014 AAFP House-Soiling 行為診斷與處理指引（Carney 等）。系統性區分「亂尿/亂便」屬醫療問題（如 FLUTD）、貓砂盆管理問題、或地盤標記（噴尿），並提供逐步排查流程與行為處置原則。",
+    "keywords": [],
+    "disease_tags": [],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "auto-crawled from catvets.com/guidelines | 摘要依指引範圍整理，2026-06-10",
+    "cited_by": [
+      "cat-inappropriate-elimination",
+      "cat-litter-box-guide"
+    ]
+  },
+  "AAFP-2013-FLUID-THERAPY-2013": {
+    "title": "2013 Fluid Therapy",
+    "title_zh": "",
+    "authors": "AAFP",
+    "source": "AAFP",
+    "journal": null,
+    "url": "https://catvets.com/resource/guidelines-practice-guidelines-fluid-therapy-guidelines/",
+    "year": 2013,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "AAFP/AAHA 2013 犬貓輸液治療指引（Davis 等）。涵蓋脫水與低血容評估、輸液種類選擇、速率計算、靜脈與皮下輸液操作與監測。為 CKD 居家皮下輸液的臨床基礎參考。",
+    "keywords": [],
+    "disease_tags": [],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "auto-crawled from catvets.com/guidelines | 摘要依指引範圍整理（原文 PDF，catvets landing）。2026-06-10",
+    "cited_by": [
+      "cat-ckd-complete-guide"
+    ]
+  },
+  "AAFP-2013-ENVIRONMENTAL-NEEDS-2013": {
+    "title": "2013 Environmental Needs",
+    "title_zh": "",
+    "authors": "AAFP",
+    "source": "AAFP",
+    "journal": null,
+    "url": "https://catvets.com/resource/guidelines-practice-guidelines-environmental-needs-guidelines/",
+    "year": 2013,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "AAFP/ISFM 2013 貓環境需求指引（Ellis 等，JFMS）。提出「健康貓環境的五大支柱」：(1) 提供安全的躲藏空間；(2) 多處且分隔的關鍵資源（食、水、貓砂、休息、玩耍）；(3) 提供遊戲與掠食行為的機會；(4) 正向、一致、可預測的人貓互動；(5) 尊重貓的嗅覺。為居家環境豐富化與行為問題的核心參考。",
+    "keywords": [],
+    "disease_tags": [],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "auto-crawled from catvets.com/guidelines | 摘要依已發表指引範圍整理（原文 PDF）。2026-06-10",
+    "cited_by": [
+      "cat-zoomies-night-activity",
+      "new-cat-first-week-guide",
+      "solo-cat-mental-health",
+      "cat-indoor-vs-outdoor-taiwan",
+      "cat-environment-enrichment-taiwan",
+      "cat-home-safety-taiwan",
+      "cat-natural-behavior-taiwan",
+      "multi-cat-household-taiwan"
+    ]
+  },
+  "AAFP-2012-FELINE-FRIENDLY-NURSING-CARE-2012": {
+    "title": "2012 AAFP/ISFM Feline-Friendly Nursing Care Guidelines",
+    "title_zh": "2012 AAFP/ISFM 貓友善護理照護指引",
+    "authors": "AAFP",
+    "source": "AAFP",
+    "journal": null,
+    "url": "https://catvets.com/resource/guidelines-practice-guidelines-nursing-care-guidelines/",
+    "year": 2012,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "由 AAFP 與 ISFM 共同發布，為獸醫團隊提供基礎護理實作建議。將護理定義為任何促進貓健康或協助病傷恢復的互動，兼顧身心健康。",
+    "keywords": [],
+    "disease_tags": [],
+    "status": "needs_review",
+    "url_verified": true,
+    "notes": "auto-crawled from catvets.com/guidelines",
+    "cited_by": [
+      "cat-pregnancy-birth-nursing-taiwan"
+    ]
+  },
+  "AAFP-2006-BARTONELLA-SPP-2006": {
+    "title": "2006 Bartonella spp.",
+    "title_zh": "",
+    "authors": "AAFP",
+    "source": "AAFP",
+    "journal": null,
+    "url": "https://catvets.com/resource/guidelines-practice-guidelines-bartonella-guidelines-bartonella-spp-guidelines/",
+    "year": 2006,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "",
+    "keywords": [],
+    "disease_tags": [],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "auto-crawled from catvets.com/guidelines",
+    "cited_by": []
+  },
+  "AAFP-2004-FELINE-BEHAVIOR-2004": {
+    "title": "2004 Feline Behavior",
+    "title_zh": "",
+    "authors": "AAFP",
+    "source": "AAFP",
+    "journal": null,
+    "url": "https://catvets.com/resource/guidelines-practice-guidelines-behavior-guidelines-feline-behavior-guidelines/",
+    "year": 2004,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "2004 AAFP 貓行為指引。涵蓋正常貓行為發展（含幼貓社會化期）、常見行為問題（攻擊、亂尿、焦慮）的分類與行為矯正原則，強調以環境與正向訓練取代懲罰。",
+    "keywords": [],
+    "disease_tags": [],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "auto-crawled from catvets.com/guidelines | 摘要依指引範圍整理，2026-06-10",
+    "cited_by": [
+      "cat-aggression-causes-treatment",
+      "kitten-socialization"
+    ]
+  },
+  "CORNELL-ASPERGILLOSIS-2024": {
+    "title": "Aspergillosis",
+    "title_zh": "",
+    "authors": "Cornell University College of Veterinary Medicine",
+    "source": "Cornell",
+    "journal": null,
+    "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/aspergillosis",
+    "year": 2024,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "",
+    "keywords": [],
+    "disease_tags": [],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "auto-crawled from Cornell Feline Health Topics",
+    "cited_by": []
+  },
+  "CORNELL-BLASTOMYCOSIS-2024": {
+    "title": "Blastomycosis",
+    "title_zh": "",
+    "authors": "Cornell University College of Veterinary Medicine",
+    "source": "Cornell",
+    "journal": null,
+    "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/blastomycosis",
+    "year": 2024,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "",
+    "keywords": [],
+    "disease_tags": [],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "auto-crawled from Cornell Feline Health Topics",
+    "cited_by": []
+  },
+  "CORNELL-COCCIDIOIDOMYCOSIS-2024": {
+    "title": "Coccidioidomycosis",
+    "title_zh": "",
+    "authors": "Cornell University College of Veterinary Medicine",
+    "source": "Cornell",
+    "journal": null,
+    "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/coccidioidomycosis",
+    "year": 2024,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "",
+    "keywords": [],
+    "disease_tags": [],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "auto-crawled from Cornell Feline Health Topics",
+    "cited_by": []
+  },
+  "CORNELL-COMMON-CAT-HAZARDS-2024": {
+    "title": "Common Cat Hazards — Cornell Feline Health Center",
+    "title_zh": "貓常見危險物 — Cornell 貓健康中心",
+    "authors": "Cornell University College of Veterinary Medicine",
+    "source": "Cornell",
+    "journal": null,
+    "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/common-cat-hazards-0",
+    "year": 2024,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "貓常見居家危險物清單：有毒植物（如百合）、家用化學品、有害食物（葡萄、巧克力）與藥物。列舉中毒症狀並建議立即諮詢獸醫，附寵物毒物熱線資源。",
+    "keywords": [],
+    "disease_tags": [],
+    "status": "needs_review",
+    "url_verified": true,
+    "notes": "auto-crawled from Cornell Feline Health Topics",
+    "cited_by": []
+  },
+  "CORNELL-CORNELL-VETERINARY-EXPERTS-ADDRESS-FELIN-2024": {
+    "title": "Cornell Veterinary Experts Address Feline Nutrition",
+    "title_zh": "",
+    "authors": "Cornell University College of Veterinary Medicine",
+    "source": "Cornell",
+    "journal": null,
+    "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/cornell-veterinary-experts-address-feline-nutrition",
+    "year": 2024,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "",
+    "keywords": [],
+    "disease_tags": [],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "auto-crawled from Cornell Feline Health Topics",
+    "cited_by": []
+  },
+  "CORNELL-DISASTER-PREPAREDNESS-2024": {
+    "title": "Disaster Preparedness",
+    "title_zh": "",
+    "authors": "Cornell University College of Veterinary Medicine",
+    "source": "Cornell",
+    "journal": null,
+    "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/disaster-preparedness",
+    "year": 2024,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "",
+    "keywords": [],
+    "disease_tags": [],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "auto-crawled from Cornell Feline Health Topics",
+    "cited_by": []
+  },
+  "CORNELL-FIP-TREATMENT-GS-441524-NOW-AVAILABLE-IN-2024": {
+    "title": "FIP treatment GS-441524 - now available in the U.S.",
+    "title_zh": "",
+    "authors": "Cornell University College of Veterinary Medicine",
+    "source": "Cornell",
+    "journal": null,
+    "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/fip-treatment-gs-441524-now-available-us",
+    "year": 2024,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "Cornell 貓健康中心報導：抗病毒藥 GS-441524 在美國已可透過調劑藥房合法取得（2024），改變過去 FIP 飼主仰賴黑市購藥的困境，含取得管道與治療基本概念。",
+    "keywords": [],
+    "disease_tags": [],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "auto-crawled from Cornell Feline Health Topics | ⚠️原 URL 已 404，需人工更新連結。摘要依標題與已知內容整理。2026-06-10",
+    "cited_by": [
+      "cat-fip-guide-taiwan"
+    ]
+  },
+  "CORNELL-FELINE-HEAT-SAFETY-2024": {
+    "title": "Feline heat safety",
+    "title_zh": "",
+    "authors": "Cornell University College of Veterinary Medicine",
+    "source": "Cornell",
+    "journal": null,
+    "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/feline-heat-safety",
+    "year": 2024,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "",
+    "keywords": [],
+    "disease_tags": [],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "auto-crawled from Cornell Feline Health Topics",
+    "cited_by": []
+  },
+  "CORNELL-WARNING-SIGNS-OF-CANCER-2024": {
+    "title": "Warning signs of cancer",
+    "title_zh": "",
+    "authors": "Cornell University College of Veterinary Medicine",
+    "source": "Cornell",
+    "journal": null,
+    "url": "https://www.vet.cornell.edu/departments/cornell-feline-health-center/health-information/feline-health-topics/warning-signs-cancer",
+    "year": 2024,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "Cornell 貓健康中心：貓癌症警訊。列出飼主應警覺的徵兆——異常腫塊、久不癒合的傷口、食慾與體重下降、不明出血或分泌物、排泄習慣改變、跛行或行為改變等，強調早期就醫。",
+    "keywords": [],
+    "disease_tags": [],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "auto-crawled from Cornell Feline Health Topics | 摘要依指引範圍整理，2026-06-10",
+    "cited_by": [
+      "cat-cancer-tumors-guide"
+    ]
+  },
+  "CORNELL-GRIEVING-THE-LOSS-OF-YOUR-CAT-2024": {
+    "title": "Grieving the Loss of Your Cat — Cornell Feline Health Center",
+    "title_zh": "失去貓咪的哀悼 — Cornell 貓健康中心",
+    "authors": "Cornell University College of Veterinary Medicine",
+    "source": "Cornell",
+    "journal": null,
+    "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/grieving-loss-your-cat",
+    "year": 2024,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "失去貓可能與失去人類伴侶一樣痛苦。哀悼是健康自然反應，沒有「正常」時間表。介紹哀傷階段、何時該求助專業，以及紀念與調適策略。",
+    "keywords": [],
+    "disease_tags": [],
+    "status": "needs_review",
+    "url_verified": true,
+    "notes": "auto-crawled from Cornell Feline Health Topics",
+    "cited_by": []
+  },
+  "CORNELL-HISTOPLASMOSIS-2024": {
+    "title": "Histoplasmosis",
+    "title_zh": "",
+    "authors": "Cornell University College of Veterinary Medicine",
+    "source": "Cornell",
+    "journal": null,
+    "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/histoplasmosis",
+    "year": 2024,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "",
+    "keywords": [],
+    "disease_tags": [],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "auto-crawled from Cornell Feline Health Topics",
+    "cited_by": []
+  },
+  "CORNELL-HYDRATION-2024": {
+    "title": "Hydration",
+    "title_zh": "",
+    "authors": "Cornell University College of Veterinary Medicine",
+    "source": "Cornell",
+    "journal": null,
+    "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/hydration",
+    "year": 2024,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "",
+    "keywords": [],
+    "disease_tags": [],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "auto-crawled from Cornell Feline Health Topics",
+    "cited_by": []
+  },
+  "CORNELL-RESPIRATORY-INFECTIONS-2024": {
+    "title": "Respiratory Infections — Cornell Feline Health Center",
+    "title_zh": "貓呼吸道感染 — Cornell 貓健康中心",
+    "authors": "Cornell University College of Veterinary Medicine",
+    "source": "Cornell",
+    "journal": null,
+    "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/respiratory-infections",
+    "year": 2018,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "貓呼吸道感染常見於高密度群體環境，病因包含病毒、細菌、真菌與原蟲。上呼吸道感染症狀有眼鼻分泌物、咳嗽、打噴嚏；下呼吸道可能進展為肺炎與呼吸困難。疫苗能降低嚴重度。",
+    "keywords": [],
+    "disease_tags": [],
+    "status": "needs_review",
+    "url_verified": true,
+    "notes": "auto-crawled from Cornell Feline Health Topics",
+    "cited_by": [
+      "fiv-felv-management-taiwan",
+      "cat-upper-respiratory-infection",
+      "cat-eye-ear-problems-taiwan"
+    ]
+  },
+  "CORNELL-SAFE-TOYS-AND-GIFTS-2024": {
+    "title": "Safe toys and gifts",
+    "title_zh": "",
+    "authors": "Cornell University College of Veterinary Medicine",
+    "source": "Cornell",
+    "journal": null,
+    "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/safe-toys-and-gifts",
+    "year": 2024,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "",
+    "keywords": [],
+    "disease_tags": [],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "auto-crawled from Cornell Feline Health Topics",
+    "cited_by": []
+  },
+  "CORNELL-SK-ELIZABETH-CAN-I-CATCH-FIV-FROM-MY-CAT-2024": {
+    "title": "sk Elizabeth: Can I catch FIV from my cat?",
+    "title_zh": "",
+    "authors": "Cornell University College of Veterinary Medicine",
+    "source": "Cornell",
+    "journal": null,
+    "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/ask-elizabeth-can-i-catch-fiv-my-cat",
+    "year": 2024,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "",
+    "keywords": [],
+    "disease_tags": [],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "auto-crawled from Cornell Feline Health Topics",
+    "cited_by": []
+  },
+  "CORNELL-LYME-DISEASE-2024": {
+    "title": "Lyme Disease",
+    "title_zh": "",
+    "authors": "Cornell University College of Veterinary Medicine",
+    "source": "Cornell",
+    "journal": null,
+    "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/lyme-disease-potential-unlikely-problem-cats",
+    "year": 2024,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "",
+    "keywords": [],
+    "disease_tags": [],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "auto-crawled from Cornell Feline Health Topics",
+    "cited_by": []
+  },
+  "CORNELL-TICKS-AND-YOUR-CAT-FAQS-2024": {
+    "title": "Ticks and Your Cat — FAQs (Cornell Feline Health Center)",
+    "title_zh": "貓與蜱蟲 FAQ — Cornell 貓健康中心",
+    "authors": "Cornell University College of Veterinary Medicine",
+    "source": "Cornell",
+    "journal": null,
+    "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/ticks-and-your-cat-faq",
+    "year": 2021,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "貓與蜱蟲常見問題。蜱蟲是寄生性節肢動物，可能傳播血小板減少症、鮑氏焦蟲病等。預防最佳做法：飼養室內貓 + 使用獸醫核可的防蜱產品。",
+    "keywords": [],
+    "disease_tags": [],
+    "status": "needs_review",
+    "url_verified": true,
+    "notes": "auto-crawled from Cornell Feline Health Topics",
+    "cited_by": []
+  },
+  "CORNELL-FELINE-PANCREATITIS-SERIOUS-2024": {
+    "title": "Feline Pancreatitis: Serious",
+    "title_zh": "",
+    "authors": "Cornell University College of Veterinary Medicine",
+    "source": "Cornell",
+    "journal": null,
+    "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/feline-pancreatitis",
+    "year": 2024,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "",
+    "keywords": [],
+    "disease_tags": [],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "auto-crawled from Cornell Feline Health Topics",
+    "cited_by": []
+  },
+  "VCA-BREED-INFORMATION-2024": {
+    "title": "Breed Information",
+    "title_zh": "",
+    "authors": "VCA Animal Hospitals",
+    "source": "VCA",
+    "journal": null,
+    "url": "https://vcahospitals.com/know-your-pet/dog-breeds",
+    "year": 2024,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "",
+    "keywords": [],
+    "disease_tags": [],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "auto-crawled, search: kidney disease cat",
+    "cited_by": []
+  },
+  "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022": {
+    "title": "WSAVA Animal Welfare Guidelines",
+    "title_zh": "WSAVA 動物福祉指引",
+    "authors": "WSAVA",
+    "source": "WSAVA",
+    "journal": null,
+    "url": "https://wsava.org/global-guidelines/animal-welfare-guidelines/",
+    "year": 2018,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "幫助獸醫團隊縮小全球對動物福利認知的差距，並處理影響福利的倫理議題。除了身體健康建議，也倡導心理、社交與環境福祉。",
+    "keywords": [
+      "WSAVA"
+    ],
+    "disease_tags": [],
+    "status": "needs_review",
+    "url_verified": false,
+    "notes": "auto-crawled from wsava.org",
+    "cited_by": []
+  },
+  "WSAVA-DENTAL-GUIDELINES-2022": {
+    "title": "Dental Guidelines",
+    "title_zh": "",
+    "authors": "WSAVA",
+    "source": "WSAVA",
+    "journal": null,
+    "url": "https://wsava.org/global-guidelines/dental-guidelines/",
+    "year": 2022,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "",
+    "keywords": [
+      "WSAVA"
+    ],
+    "disease_tags": [],
+    "status": "pending_review",
+    "url_verified": false,
+    "notes": "auto-crawled from wsava.org",
+    "cited_by": []
+  },
+  "WSAVA-GASTROINTESTINAL-GUIDELINES-2022": {
+    "title": "WSAVA Endoscopic, Biopsy and Histopathologic Guidelines for the Evaluation of Gastrointestinal Inflammation in Companion Animals",
+    "title_zh": "WSAVA 犬貓胃腸發炎內視鏡／切片／組織病理評估指引",
+    "authors": "WSAVA",
+    "source": "WSAVA",
+    "journal": null,
+    "url": "https://wsava.org/global-guidelines/gastrointestinal-guidelines/",
+    "year": 2009,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "為犬貓胃腸道病理組織學評估制定全球統一標準，提供一致的疾病診斷與分期，促進胃腸疾病臨床試驗發展。",
+    "keywords": [
+      "WSAVA"
+    ],
+    "disease_tags": [],
+    "status": "needs_review",
+    "url_verified": false,
+    "notes": "auto-crawled from wsava.org",
+    "cited_by": [
+      "cat-ibd-intestinal-disease",
+      "cat-common-symptoms-taiwan"
+    ]
+  },
+  "WSAVA-NUTRITION-GUIDELINES-2022": {
+    "title": "WSAVA Global Nutrition Guidelines",
+    "title_zh": "WSAVA 全球營養指引",
+    "authors": "WSAVA",
+    "source": "WSAVA",
+    "journal": null,
+    "url": "https://wsava.org/global-guidelines/global-nutrition-guidelines/",
+    "year": 2011,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "幫助獸醫團隊為寵物制定最佳個人化營養計畫。提供身體狀況評分表、熱量需求建議、飲食歷史表等實用工具，協助評估與飼主衛教。",
+    "keywords": [
+      "WSAVA"
+    ],
+    "disease_tags": [],
+    "status": "needs_review",
+    "url_verified": false,
+    "notes": "auto-crawled from wsava.org",
+    "cited_by": [
+      "barf-raw-food-taiwan",
+      "cat-obesity-weight-management",
+      "cat-food-selection-taiwan",
+      "cat-pregnancy-birth-nursing-taiwan",
+      "cat-treats-supplements-taiwan",
+      "cat-water-urinary-health-taiwan",
+      "kitten-care-complete-taiwan",
+      "cat-food-by-life-stage"
+    ]
+  },
+  "WSAVA-HEREDITARY-DISEASE-GUIDELINES-2022": {
+    "title": "Hereditary Disease Guidelines",
+    "title_zh": "",
+    "authors": "WSAVA",
+    "source": "WSAVA",
+    "journal": null,
+    "url": "https://wsava.org/global-guidelines/hereditary-disease/",
+    "year": 2022,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "WSAVA 遺傳性疾病指引。涵蓋純種貓常見遺傳病的辨識、繁育前篩檢與避免繁殖帶病基因的原則，可作為折耳貓骨軟骨發育不全等品種遺傳病的參考框架。",
+    "keywords": [
+      "WSAVA"
+    ],
+    "disease_tags": [],
+    "status": "pending_review",
+    "url_verified": false,
+    "notes": "auto-crawled from wsava.org | 摘要依指引範圍整理，2026-06-10",
+    "cited_by": [
+      "scottish-fold-breed-guide-taiwan"
+    ]
+  },
+  "WSAVA-LIVER-DISEASE-GUIDELINES-2022": {
+    "title": "WSAVA Standards for Clinical and Histological Diagnosis of Canine and Feline Liver Diseases (2024)",
+    "title_zh": "WSAVA 犬貓肝病臨床與組織學診斷標準（2024）",
+    "authors": "WSAVA",
+    "source": "WSAVA",
+    "journal": null,
+    "url": "https://wsava.org/global-guidelines/liver-disease-guidelines/",
+    "year": 2024,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "為犬貓肝病組織學評估建立全球統一標準：統一命名法、明確的組織學診斷標準，以及疾病慢性程度與嚴重度的精確定義。",
+    "keywords": [
+      "WSAVA"
+    ],
+    "disease_tags": [],
+    "status": "needs_review",
+    "url_verified": false,
+    "notes": "auto-crawled from wsava.org",
+    "cited_by": [
+      "cat-hepatic-lipidosis"
+    ]
+  },
+  "WSAVA-MICROCHIP-IDENTIFICATION-GUIDE-2022": {
+    "title": "Microchip Identification Guidelines",
+    "title_zh": "",
+    "authors": "WSAVA",
+    "source": "WSAVA",
+    "journal": null,
+    "url": "https://wsava.org/global-guidelines/microchip-identification-guidelines/",
+    "year": 2022,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "",
+    "keywords": [
+      "WSAVA"
+    ],
+    "disease_tags": [],
+    "status": "pending_review",
+    "url_verified": false,
+    "notes": "auto-crawled from wsava.org",
+    "cited_by": []
+  },
+  "WSAVA-PAIN-GUIDELINES-2022": {
+    "title": "Pain Guidelines",
+    "title_zh": "",
+    "authors": "WSAVA",
+    "source": "WSAVA",
+    "journal": null,
+    "url": "https://wsava.org/global-guidelines/pain-guidelines/",
+    "year": 2022,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "",
+    "keywords": [
+      "WSAVA"
+    ],
+    "disease_tags": [],
+    "status": "pending_review",
+    "url_verified": false,
+    "notes": "auto-crawled from wsava.org",
+    "cited_by": []
+  },
+  "WSAVA-PROFESSIONAL-WELLNESS-GUIDELIN-2022": {
+    "title": "Professional Wellness Guidelines",
+    "title_zh": "",
+    "authors": "WSAVA",
+    "source": "WSAVA",
+    "journal": null,
+    "url": "https://wsava.org/global-guidelines/professional-wellness-guidelines/",
+    "year": 2022,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "",
+    "keywords": [
+      "WSAVA"
+    ],
+    "disease_tags": [],
+    "status": "pending_review",
+    "url_verified": false,
+    "notes": "auto-crawled from wsava.org",
+    "cited_by": []
+  },
+  "WSAVA-REPRODUCTION-CONTROL-GUIDELINE-2022": {
+    "title": "Reproduction Control Guidelines",
+    "title_zh": "",
+    "authors": "WSAVA",
+    "source": "WSAVA",
+    "journal": null,
+    "url": "https://wsava.org/global-guidelines/reproduction-guidelines/",
+    "year": 2022,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "",
+    "keywords": [
+      "WSAVA"
+    ],
+    "disease_tags": [],
+    "status": "pending_review",
+    "url_verified": false,
+    "notes": "auto-crawled from wsava.org",
+    "cited_by": []
+  },
+  "WSAVA-VACCINATION-GUIDELINES-2022": {
+    "title": "2024 WSAVA Guidelines for the Vaccination of Dogs and Cats",
+    "title_zh": "2024 WSAVA 犬貓疫苗接種指引",
+    "authors": "WSAVA",
+    "source": "WSAVA",
+    "journal": null,
+    "url": "https://wsava.org/global-guidelines/vaccination-guidelines/",
+    "year": 2024,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "由 WSAVA 制定，提供全球獸醫師最新科學依據下的犬貓疫苗建議。涵蓋核心與非核心疫苗實踐指導，並附亞洲與拉美地區專門建議。",
+    "keywords": [
+      "WSAVA"
+    ],
+    "disease_tags": [],
+    "status": "needs_review",
+    "url_verified": false,
+    "notes": "auto-crawled from wsava.org",
+    "cited_by": [
+      "cat-parasite-prevention-taiwan",
+      "cat-vaccination-wellness-taiwan"
+    ]
+  },
+  "WSAVA-ADVOCACY-AND-COMMUNICATIONS-CO-2022": {
+    "title": "Advocacy and Communications Committee",
+    "title_zh": "",
+    "authors": "WSAVA",
+    "source": "WSAVA",
+    "journal": null,
+    "url": "https://wsava.org/committees/advocacy-and-communications-committee/",
+    "year": 2022,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "",
+    "keywords": [
+      "WSAVA"
+    ],
+    "disease_tags": [],
+    "status": "pending_review",
+    "url_verified": false,
+    "notes": "auto-crawled from wsava.org",
+    "cited_by": []
+  },
+  "WSAVA-MEMBERSHIP-AND-NOMINATION-COMM-2022": {
+    "title": "Membership and Nomination Committee",
+    "title_zh": "",
+    "authors": "WSAVA",
+    "source": "WSAVA",
+    "journal": null,
+    "url": "https://wsava.org/committees/membership-and-nomination-committee/",
+    "year": 2022,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "",
+    "keywords": [
+      "WSAVA"
+    ],
+    "disease_tags": [],
+    "status": "pending_review",
+    "url_verified": false,
+    "notes": "auto-crawled from wsava.org",
+    "cited_by": []
+  },
+  "WSAVA-PROFESSIONAL-WELLNESS-COMMITTE-2022": {
+    "title": "Professional Wellness Committee",
+    "title_zh": "",
+    "authors": "WSAVA",
+    "source": "WSAVA",
+    "journal": null,
+    "url": "https://wsava.org/committees/professional-wellness-group/",
+    "year": 2022,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "",
+    "keywords": [
+      "WSAVA"
+    ],
+    "disease_tags": [],
+    "status": "pending_review",
+    "url_verified": false,
+    "notes": "auto-crawled from wsava.org",
+    "cited_by": []
+  },
+  "ASPCA-CAT-PLANT-LIST-2024": {
+    "title": "Cat Plant List",
+    "title_zh": "貓咪有毒植物清單 — ASPCA",
+    "authors": "ASPCA Animal Poison Control",
+    "source": "ASPCA",
+    "journal": null,
+    "url": "https://www.aspca.org/pet-care/animal-poison-control/cats-plant-list",
+    "year": 2024,
+    "type": "database",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "ASPCA 毒物資料庫的貓專用子集。只列對貓有毒的植物（過濾掉對狗馬才有毒的），最方便貓主快速查詢。",
+    "keywords": [
+      "中毒",
+      "植物",
+      "毒物",
+      "ASPCA",
+      "貓"
+    ],
+    "disease_tags": [
+      "toxicology"
+    ],
+    "status": "pending_review",
+    "url_verified": false,
+    "notes": "ASPCA poison database",
+    "cited_by": []
+  },
+  "FDA-LILIES-CATS-2024": {
+    "title": "Lovely Lilies and Curious Cats: A Dangerous Combination",
+    "title_zh": "可愛的百合與好奇的貓：危險組合",
+    "authors": "U.S. Food and Drug Administration",
+    "source": "FDA",
+    "journal": null,
+    "url": "https://www.fda.gov/animal-veterinary/animal-health-literacy/lovely-lilies-and-curious-cats-dangerous-combination",
+    "year": 2024,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "FDA 官方衛教文。真百合（Lilium 屬）與金針花（Hemerocallis 屬）全株對貓有毒（莖、葉、花、花粉、花瓶水）。症狀時序：0-12h 嘔吐/厭食/流口水，12-24h 腎損傷徵象，24-72h 腎衰竭。延遲治療超過 18 小時多半進入不可逆腎衰竭。",
+    "keywords": [
+      "百合",
+      "lily",
+      "lilies",
+      "中毒",
+      "腎衰竭",
+      "FDA",
+      "toxicology"
+    ],
+    "disease_tags": [
+      "toxicology",
+      "aki"
+    ],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "FDA 官方衛教文，18 小時治療窗具體明確",
+    "cited_by": [
+      "cat-toxic-substances-taiwan"
+    ]
+  },
+  "PPH-LILIES-CATS": {
+    "title": "Lilies Are Toxic To Cats — Pet Poison Helpline",
+    "title_zh": "百合對貓有毒 — Pet Poison Helpline",
+    "authors": "Pet Poison Helpline",
+    "source": "Pet Poison Helpline",
+    "journal": null,
+    "url": "https://www.petpoisonhelpline.com/poison/lilies/",
+    "year": 2024,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "美國 24 小時寵物毒物熱線的百合專頁。真百合（Lilium）與金針花（Hemerocallis）全株有毒，包含花粉與花瓶水。少於 1-2 片花瓣或葉片即可造成嚴重毒性。熱線 (855) 764-7661（收費）。",
+    "keywords": [
+      "百合",
+      "lily",
+      "lilies",
+      "中毒",
+      "腎衰竭",
+      "Pet Poison Helpline",
+      "toxicology"
+    ],
+    "disease_tags": [
+      "toxicology",
+      "aki"
+    ],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "24h 熱線，資料來源臨床導向",
+    "cited_by": [
+      "cat-toxic-substances-taiwan"
+    ]
+  },
+  "VCA-PLANTS-TOXIC-CATS": {
+    "title": "Plants That are Toxic to Cats — VCA Animal Hospitals",
+    "title_zh": "對貓有毒的植物 — VCA 動物醫院",
+    "authors": "VCA Animal Hospitals",
+    "source": "VCA",
+    "journal": null,
+    "url": "https://vcahospitals.com/know-your-pet/plants-that-are-toxic-to-cats",
+    "year": 2024,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "VCA 獸醫連鎖整理的貓用有毒植物衛教文。清楚區分真百合（Lilium 虎斑/亞洲/復活節/星辰/玫瑰/日本華麗）與金針花（Hemerocallis）會導致腎衰竭，而和平百合（peace lily）、海芋百合（calla lily）只含草酸鈣引起口腔刺激，不是真百合。",
+    "keywords": [
+      "植物",
+      "百合",
+      "lily",
+      "和平百合",
+      "海芋",
+      "中毒",
+      "VCA",
+      "toxicology"
+    ],
+    "disease_tags": [
+      "toxicology"
+    ],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "真/假百合區別講得最清楚的衛教文",
+    "cited_by": [
+      "cat-toxic-substances-taiwan"
+    ]
+  },
+  "ICATCARE-LILY-POISONING": {
+    "title": "Lily poisoning in cats — International Cat Care",
+    "title_zh": "貓的百合中毒 — International Cat Care",
+    "authors": "International Cat Care",
+    "source": "iCatCare",
+    "journal": null,
+    "url": "https://icatcare.org/articles/lily-poisoning-in-cats",
+    "year": 2024,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "ISFM 母組織 iCatCare 的百合中毒衛教文。症狀通常在 1-6 小時內出現。治療包含催吐、活性碳、清洗花粉、IV 利尿支持腎臟。強調有貓不要讓百合進家門或花園。",
+    "keywords": [
+      "百合",
+      "lily",
+      "lilies",
+      "中毒",
+      "腎衰竭",
+      "iCatCare",
+      "ISFM",
+      "toxicology"
+    ],
+    "disease_tags": [
+      "toxicology",
+      "aki"
+    ],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "iCatCare = ISFM 母組織，權威",
+    "cited_by": [
+      "cat-toxic-substances-taiwan"
+    ]
+  },
+  "PEDERSEN-2019-FIP-GS441524": {
+    "title": "Efficacy and safety of the nucleoside analog GS-441524 for treatment of cats with naturally occurring feline infectious peritonitis",
+    "title_zh": "GS-441524 治療貓自然感染 FIP 的療效與安全性研究",
+    "authors": "Niels C Pedersen, Michel Perron, Michael Bannasch, Elizabeth Montgomery, Eisuke Murakami, Molly Liepnieks, Hongwei Liu",
+    "source": "JFMS",
+    "journal": "Journal of Feline Medicine and Surgery",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/30755068/",
+    "doi": "10.1177/1098612X19825701",
+    "pmid": "30755068",
+    "pmcid": "PMC6435921",
+    "year": 2019,
+    "type": "research_paper",
+    "language": "en",
+    "open_access": true,
+    "sample_size": 31,
+    "study_design": "前瞻性田野試驗（field trial）+ 臨床監測，中位年齡 13.6 個月",
+    "abstract_zh": "Pedersen 團隊（UC Davis）對 31 隻自然感染 FIP 的貓進行 GS-441524 治療試驗：\n\n■ 樣本：3.4–73 個月齡，26 隻濕型/混合型，5 隻乾型；嚴重神經/眼部症狀者排除\n■ 起始劑量 2.0 mg/kg SC q24h ≥ 12 週；最終確認最佳劑量為 4.0 mg/kg SC q24h ≥ 12 週\n■ 主要結果：\n  - 26/31 完成首輪療程\n  - 18/26 一輪治癒、長期健康\n  - 8/26 復發（3–84 天內），其中 2 隻為神經症狀復發\n  - 5 隻提高劑量（4.0 mg/kg）二輪治療成功；2 隻三輪治療仍存活\n  - 整體 24/31（77%）達持續健康\n■ 限制：樣本量中等、神經型/眼型未涵蓋、非隨機對照、藥物當時為非合法管道",
+    "keywords": [
+      "GS-441524",
+      "FIP",
+      "Pedersen",
+      "antiviral",
+      "feline infectious peritonitis"
+    ],
+    "disease_tags": [
+      "fip"
+    ],
+    "status": "approved",
+    "url_verified": true,
+    "verified_at": "2026-04-29",
+    "notes": "GS-441524 治療 FIP 的 landmark 論文。Pedersen 團隊首次公開系統性療效資料，台灣 2024 後合法化引用最常用的原始來源。",
+    "cited_by": [
+      "cat-fip-guide-taiwan"
+    ]
+  },
+  "FOX-2018-HCM-REVEAL": {
+    "title": "International collaborative study to assess cardiovascular risk and evaluate long-term health in cats with preclinical hypertrophic cardiomyopathy and apparently healthy cats: The REVEAL Study",
+    "title_zh": "REVEAL 研究：貓臨床前肥厚型心肌病與健康貓的心血管長期風險國際合作研究",
+    "authors": "Philip R Fox, Bruce W Keene, Kenneth Lamb, Karsten A Schober, et al. (50+ collaborators)",
+    "source": "JVIM",
+    "journal": "Journal of Veterinary Internal Medicine",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29660848/",
+    "doi": "10.1111/jvim.15122",
+    "pmid": "29660848",
+    "pmcid": "PMC5980443",
+    "year": 2018,
+    "type": "research_paper",
+    "language": "en",
+    "open_access": true,
+    "sample_size": 1730,
+    "study_design": "回顧性多中心縱向 cohort 研究，跨 21 國，醫療紀錄 + 飼主/獸醫追訪",
+    "abstract_zh": "REVEAL 研究是 HCM 至今最大規模的國際 cohort：\n\n■ 樣本：1,730 隻飼主貓 — 430 隻非阻塞型 HCM、578 隻阻塞型 HOCM、722 隻健康對照\n■ 主要結果：1,008 隻 HCM/HOCM 中：\n  - 30.5% 出現 CHF（充血性心衰）/ ATE（動脈血栓栓塞）/ 兩者\n  - 27.9% 心血管死亡\n  - CHF 發生率 1/5/10 年累計：7.0% / 19.9% / 23.9%\n  - ATE 發生率 1/5/10 年累計：3.5% / 9.7% / 11.3%\n  - 出現心衰/血栓後中位存活：1.3 ± 1.7 年\n■ 阻塞型 vs 非阻塞型 HCM：morbidity / mortality 無顯著差異\n■ 僅 10% 臨床前 HCM 貓活到 9–15 歲\n■ 結論：臨床前 HCM 是全球性貓健康問題，需發展早期介入策略",
+    "keywords": [
+      "REVEAL",
+      "HCM",
+      "hypertrophic cardiomyopathy",
+      "cohort",
+      "Fox",
+      "preclinical"
+    ],
+    "disease_tags": [
+      "hcm"
+    ],
+    "status": "approved",
+    "url_verified": true,
+    "verified_at": "2026-04-29",
+    "notes": "HCM 預後最具代表性的大型 cohort 研究，常被 ACVIM 2020 共識引用。",
+    "cited_by": [
+      "cat-hcm-heart-disease"
+    ]
+  },
+  "SPARKES-2016-ISFM-CKD": {
+    "title": "ISFM Consensus Guidelines on the Diagnosis and Management of Feline Chronic Kidney Disease",
+    "title_zh": "ISFM 貓慢性腎病診斷與管理共識指引（2016）",
+    "authors": "Andrew H Sparkes, Sarah Caney, Serge Chalhoub, Jonathan Elliott, Natalie Finch, Isuru Gajanayake, Catherine Langston, Hervé P Lefebvre, Joanna White, Jessica Quimby",
+    "source": "JFMS",
+    "journal": "Journal of Feline Medicine and Surgery",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/26936494/",
+    "doi": "10.1177/1098612X16631234",
+    "pmid": "26936494",
+    "year": 2016,
+    "volume": "18(3):219-239",
+    "type": "consensus_guideline",
+    "language": "en",
+    "open_access": true,
+    "study_design": "ISFM 專家共識（10 位作者跨 UK / US / 加拿大 / 法國），整合 IRIS 分期框架",
+    "abstract_zh": "ISFM 2016 CKD 共識指引（核心臨床參考之一）：\n\n■ CKD 是老年貓最常見診斷之一，個體間差異極大、需個人化處置\n■ 強調定期重新評估療效，平衡生活品質與證據導向介入\n■ 涵蓋：\n  - 早期偵測（SDMA、UPC、血壓）\n  - IRIS 分期應用於治療選擇\n  - 飲食磷限制（核心介入）\n  - 水分補充策略（鼓勵飲水 > 強制皮下輸液）\n  - 高血壓與蛋白尿的併發症處置\n  - 終末期生活品質決策\n■ 結論：CKD 病程多變，需依個體情況持續調整，而非套用固定方案",
+    "keywords": [
+      "ISFM",
+      "CKD",
+      "chronic kidney disease",
+      "Sparkes",
+      "IRIS"
+    ],
+    "disease_tags": [
+      "ckd"
+    ],
+    "status": "approved",
+    "url_verified": true,
+    "verified_at": "2026-04-29",
+    "notes": "ISFM 官方共識，與 IRIS 分期互為核心臨床指引。",
+    "cited_by": [
+      "cat-ckd-complete-guide",
+      "cat-end-of-life-care-taiwan"
+    ]
+  },
+  "BUFFINGTON-2014-PANDORA-FLUTD": {
+    "title": "From FUS to Pandora syndrome: where are we, how did we get here, and where to now?",
+    "title_zh": "從 FUS 到 Pandora 症候群：FLUTD 概念演進與系統性壓力觀點",
+    "authors": "C A Tony Buffington, Jodi L Westropp, Dennis J Chew",
+    "source": "JFMS",
+    "journal": "Journal of Feline Medicine and Surgery",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/24794035/",
+    "doi": "10.1177/1098612X14530212",
+    "pmid": "24794035",
+    "pmcid": "PMC11104043",
+    "year": 2014,
+    "volume": "16(5):385-394",
+    "type": "review_article",
+    "language": "en",
+    "open_access": true,
+    "study_design": "回顧性綜述（40 年文獻整合）",
+    "abstract_zh": "Buffington 團隊（Ohio State）提出 Pandora 症候群框架，重新定位 FLUTD：\n\n■ 過去 40 年觀念變遷：FUS（feline urologic syndrome）→ FLUTD → FIC（feline idiopathic cystitis）→ Pandora\n■ 核心論點：膀胱不一定是「病因」，而是「全身性壓力反應系統敏感化」的受害者之一\n■ Pandora 症候群特徵：\n  - 中樞壓力反應系統長期失調\n  - 對環境變化的耐受範圍變窄\n  - 同一隻貓可能同時有膀胱、腸胃、皮膚、行為等多系統症狀\n■ 對臨床啟示：環境豐富化、降低壓力源、多重感官介入（MEMO）優先於單純膀胱用藥\n■ 影響：成為 ISFM/AAFP 後續 FLUTD 指引的觀念基礎",
+    "keywords": [
+      "Pandora",
+      "FLUTD",
+      "FIC",
+      "Buffington",
+      "stress",
+      "feline idiopathic cystitis",
+      "lower urinary tract"
+    ],
+    "disease_tags": [
+      "flutd",
+      "behavior"
+    ],
+    "status": "approved",
+    "url_verified": true,
+    "verified_at": "2026-04-29",
+    "notes": "FLUTD 病因學的觀念基石，從「膀胱病」轉向「系統性壓力症候群」。",
+    "cited_by": [
+      "cat-anxiety-stress-management",
+      "male-cat-urethral-obstruction",
+      "cat-water-urinary-health-taiwan"
+    ]
+  },
+  "BEHREND-2018-AAHA-DIABETES": {
+    "title": "2018 AAHA Diabetes Management Guidelines for Dogs and Cats",
+    "title_zh": "2018 AAHA 犬貓糖尿病管理指引",
+    "authors": "Ellen Behrend, Amy Holford, Patty Lathan, Renee Rucinsky, Rhonda Schulman",
+    "source": "JAAHA",
+    "journal": "Journal of the American Animal Hospital Association",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29314873/",
+    "doi": "10.5326/JAAHA-MS-6822",
+    "pmid": "29314873",
+    "year": 2018,
+    "volume": "54(1):1-21",
+    "type": "consensus_guideline",
+    "language": "en",
+    "open_access": true,
+    "study_design": "AAHA 專家工作小組共識指引（更新 2010 版本）",
+    "abstract_zh": "AAHA 2018 糖尿病指引（更新 2010 版）：\n\n■ 胰島素治療為臨床糖尿病核心\n■ 胰島素種類選擇、非胰島素藥物（口服降糖）、飲食策略討論\n■ 飼主教育重點：注射技巧、低血糖辨識、居家血糖監測\n■ 「控制良好」定義：臨床症狀減少 + 避免低血糖（不必強求血糖數值正常）\n■ 強調區分：真正糖尿病 vs 暫時性高血糖（壓力性 / 類固醇誘發），避免不必要治療\n■ 與 ISFM-DIABETES-2015 互補：ISFM 偏貓專科觀點，AAHA 為犬貓綜合臨床指引",
+    "keywords": [
+      "AAHA",
+      "diabetes",
+      "Behrend",
+      "insulin",
+      "remission",
+      "glucose monitoring"
+    ],
+    "disease_tags": [
+      "diabetes"
+    ],
+    "status": "approved",
+    "url_verified": true,
+    "verified_at": "2026-04-29",
+    "notes": "美國動物醫院協會官方指引，與 ISFM 2015 共識互補使用。",
+    "cited_by": [
+      "cat-diabetes-care"
+    ]
+  },
+  "OVERLEY-2005-FELINE-MAMMARY": {
+    "title": "Association between ovariohysterectomy and feline mammary carcinoma",
+    "title_zh": "卵巢子宮切除（結紮）與貓乳腺癌的關聯",
+    "authors": "Beth Overley, Frances S Shofer, Michael H Goldschmidt, Dave Sherer, Karin U Sorenmo",
+    "source": "Journal of Veterinary Internal Medicine",
+    "journal": "J Vet Intern Med (ACVIM)",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/16095174/",
+    "pmid": "16095174",
+    "doi": "10.1111/j.1939-1676.2005.tb02732.x",
+    "year": 2005,
+    "type": "research_paper",
+    "language": "en",
+    "open_access": false,
+    "abstract_zh": "Overley 等人 2005 病例對照研究，量化貓結紮時機與乳腺癌風險的關聯：\n\n■ 6 個月前結紮：乳腺癌風險降低 91%\n■ 1 歲前結紮：風險降低 86%\n■ 未結紮貓顯著高風險（odds ratio 2.7）\n\n注意：原始研究僅提供「6 個月前」與「1 歲前」兩個時間點數據，未提供「2 歲」之風險降低比例。",
+    "keywords": [
+      "結紮",
+      "乳腺癌",
+      "母貓",
+      "預防",
+      "Overley"
+    ],
+    "disease_tags": [
+      "neutering",
+      "mammary",
+      "cancer"
+    ],
+    "status": "approved",
+    "url_verified": true,
+    "verified_at": "2026-06-10",
+    "notes": "逐字核實：6個月前91%、1歲前86%（WebFetch PubMed 16095174, 2026-06-10）。文章原稱「2歲後74%」原文無此數據。",
+    "cited_by": [
+      "cat-neutering-aftercare-taiwan"
+    ]
+  },
+  "TW-ANIMAL-PROTECTION-ACT": {
+    "title": "動物保護法（中華民國）",
+    "title_zh": "動物保護法",
+    "authors": "中華民國農業部",
+    "source": "全國法規資料庫 / 農業部",
+    "url": "https://law.moa.gov.tw/LawContent.aspx?id=FL014739",
+    "year": 2021,
+    "type": "legal",
+    "language": "zh",
+    "open_access": true,
+    "abstract_zh": "中華民國動物保護法。本站已逐字核對之關鍵條文：第25條——虐待動物致死或致重傷，處二年以下有期徒刑或拘役，併科新臺幣20萬元以上、200萬元以下罰金；第19條——飼主應辦理寵物登記，主管機關應給與身分標識並植入晶片（家貓適用對象與時程以農業部公告為準）。",
+    "keywords": [
+      "動保法",
+      "虐待",
+      "寵物登記",
+      "晶片",
+      "遺棄"
+    ],
+    "disease_tags": [
+      "law",
+      "taiwan"
+    ],
+    "status": "approved",
+    "url_verified": true,
+    "verified_at": "2026-06-10",
+    "notes": "第25/19條經 WebFetch law.moa.gov.tw 逐字核對（2026-06-10）。",
+    "cited_by": [
+      "cat-laws-taiwan",
+      "renting-with-cats-taiwan",
+      "rehoming-cat-responsibly-taiwan",
+      "should-i-adopt-cat-decision-taiwan",
+      "cat-adoption-guide-taiwan"
+    ]
+  },
+  "MOA-PET-POPULATION-2021": {
+    "title": "110年度全國家犬貓數量調查",
+    "title_zh": "農業部 全國家犬貓數量推估調查（110年度）",
+    "authors": "中華民國農業部",
+    "source": "農業部動物保護資訊網",
+    "url": "https://animal.moa.gov.tw/Frontend/Know/Detail/LT00000664",
+    "year": 2021,
+    "type": "gov_data",
+    "language": "zh",
+    "open_access": true,
+    "abstract_zh": "農業部全國家犬貓數量推估調查。本站已核對之台灣家貓相關數據：家貓約87萬隻、絕育率約82.8%、晶片登記率約58.4%。",
+    "keywords": [
+      "家貓數量",
+      "絕育率",
+      "晶片登記率",
+      "台灣"
+    ],
+    "disease_tags": [
+      "taiwan",
+      "statistics"
+    ],
+    "status": "approved",
+    "url_verified": true,
+    "verified_at": "2026-06-10",
+    "notes": "數據經 WebFetch 農業部頁核對（mixed-breed 驗證，2026-06-10）。",
+    "cited_by": [
+      "mixed-breed-cats-taiwan"
+    ]
+  },
+  "LY-PET-HOUSING-2017": {
+    "title": "公寓大廈不得禁止飼養寵物議題之研析",
+    "title_zh": "立法院：公寓大廈不得禁止飼養寵物議題之研析",
+    "authors": "立法院法制局",
+    "source": "立法院",
+    "url": "https://www.ly.gov.tw/Pages/Detail.aspx?nodeid=6590&pid=163942",
+    "year": 2017,
+    "type": "gov_report",
+    "language": "zh",
+    "open_access": true,
+    "abstract_zh": "立法院法制局研析（撰成日期民國106年11月，即2017年）：認為公寓大廈規約「全面禁止飼養寵物」恐有侵害財產權與居住自由之虞，建議改採「有條件限制」而非全面禁止。",
+    "keywords": [
+      "公寓大廈",
+      "租屋",
+      "寵物",
+      "居住自由"
+    ],
+    "disease_tags": [
+      "taiwan",
+      "law"
+    ],
+    "status": "approved",
+    "url_verified": true,
+    "verified_at": "2026-06-10",
+    "notes": "年份經 WebFetch 立法院頁逐字核對為2017（民106），非文章原寫的2022（renting 驗證，2026-06-10）。",
+    "cited_by": [
+      "renting-with-cats-taiwan"
+    ]
+  }
+}

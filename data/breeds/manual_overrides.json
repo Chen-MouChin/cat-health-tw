@@ -1,0 +1,265 @@
+{
+  "_meta": {
+    "description": "TheCatAPI 未收錄但需要手補的品種；或 TheCatAPI 資料需修正/補充的部分",
+    "last_updated": "2026-04-20"
+  },
+  "mala": {
+    "_image_only_override": true,
+    "id": "mala",
+    "_note": "Malayan 一名指兩個不同品種：CFA Malayan（1979-1995, Burmese 稀釋色變種，已合併回 Burmese）vs 英國 GCCF Asian/Malayan（1981 起, Burmese × Chinchilla Persian 衍生）。TheCatAPI 描述符合 GCCF 版，故用英國 Asian cat 圖。",
+    "images": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/IMGP1134_%2851750850378%29.jpg/960px-IMGP1134_%2851750850378%29.jpg",
+        "author": "Matt Buck",
+        "license": "CC BY-SA 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:IMGP1134_(51750850378).jpg",
+        "caption": "Cinnamon Ticked Asian Tabby（GCCF Asian/Malayan）"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/IMGP6856_%2851528772530%29.jpg/960px-IMGP6856_%2851528772530%29.jpg",
+        "author": "Matt Buck",
+        "license": "CC BY-SA 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:IMGP6856_(51528772530).jpg",
+        "caption": "Asian Smoke（GCCF Asian/Malayan）"
+      }
+    ],
+    "description_zh": "名稱指兩個不同品種：(1) CFA Malayan（1979-1995，Burmese 稀釋色變種，已合併回 Burmese）；(2) **GCCF Asian / Malayan**（英國，Burmese × Chinchilla Persian 衍生）。本站採英國版定義。**主要健康問題低血鉀症（Hypokalaemia）**，2018 起繁殖必做 DNA 篩。",
+    "description_zh_status": "translated"
+  },
+  "esha": {
+    "_manual_only": true,
+    "id": "esha",
+    "slug": "european-shorthair",
+    "name_zh": "歐洲短毛貓",
+    "name_en": "European Shorthair",
+    "alt_names": [
+      "European",
+      "Celtic Shorthair"
+    ],
+    "origin": "瑞典",
+    "origin_en": "Sweden",
+    "country_code": "SE",
+    "life_span_years": [
+      15,
+      20
+    ],
+    "weight_kg": [
+      3.5,
+      7
+    ],
+    "temperament_zh": [
+      "強壯",
+      "活潑",
+      "友善",
+      "聰明",
+      "愛玩"
+    ],
+    "temperament_en": [
+      "Strong",
+      "Active",
+      "Friendly",
+      "Intelligent",
+      "Playful"
+    ],
+    "scores": {},
+    "tags": {
+      "natural": true
+    },
+    "description_en": "European Shorthair is a pedigreed breed developed in Sweden (FIFe-recognized 1949) from natural European mousing cats. Muscular body with short, dense, glossy coat. Generally healthy with one notable exception: highest reported rate of urate urolithiasis among studied breeds.",
+    "description_zh": "歐洲短毛貓由瑞典自然家貓育種而成，FIFe 於 1949 年承認為品種。體格強壯肌肉發達，短毛濃密有光澤。整體健康，但已知尿酸鹽結石（urate urolithiasis）發生率在被研究品種中最高。",
+    "description_zh_status": "translated",
+    "wikipedia_url_en": "https://en.wikipedia.org/wiki/European_Shorthair",
+    "wikipedia_url_zh": "",
+    "images": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Europ%C3%A4isch-Kurzhaar_Silber_Tabby.jpg",
+        "author": "Loggediteur",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Europ%C3%A4isch-Kurzhaar_Silber_Tabby.jpg"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Gatto_europeo3.jpg",
+        "author": "Wikimedia Commons contributor",
+        "license": "CC BY-SA",
+        "source": "https://commons.wikimedia.org/wiki/File:Gatto_europeo3.jpg"
+      }
+    ],
+    "thecatapi_url": "",
+    "_note": "TheCatAPI 未收錄此品種。資料來源：Wikipedia + Salonen 2019。圖片來自 Wikimedia Commons（CC BY-SA）。"
+  },
+  "lihu": {
+    "id": "lihu",
+    "description_zh": "中國原生家貓品種，金棕色虎斑帶古銅色澤。獨立性強、警覺性高、捕鼠能力突出。台灣極罕見，幾乎都是對岸引入。整體健康無已知特殊基因病。",
+    "description_zh_status": "translated"
+  },
+  "birm": {
+    "id": "birm",
+    "description_zh": "重點色長毛 + 招牌「白手套」（四足末端純白色）。性格溫柔安靜，喜歡跟人但不過度黏。長毛打理需求中等，每週梳 1-2 次即可。台灣偶見。",
+    "description_zh_status": "translated"
+  },
+  "rblu": {
+    "id": "rblu",
+    "description_zh": "銀藍色短毛、綠眼、苗條優雅。個性內斂謹慎、認熟人但對陌生人冷淡。**少數有研究支持的低致敏品種之一**（Fel d 1 蛋白量略低），但個體差異大，過敏者投入前應實際接觸測試。整體健康。",
+    "description_zh_status": "translated"
+  },
+  "cspa": {
+    "id": "cspa",
+    "description_zh": "1980s 美國培育的豹紋家貓（無野生血統，純家貓選育）。基因庫極小、已接近滅絕，全球個體不到百隻。台灣幾乎看不到。",
+    "description_zh_status": "translated"
+  },
+  "kuri": {
+    "id": "kuri",
+    "description_zh": "俄羅斯千島群島原生品種，**天然短尾**（不是人為剪），體型強壯結實。獨立、聰明、會社交。台灣極罕見。短尾基因為隱性，無 Manx Syndrome 健康問題。",
+    "description_zh_status": "translated"
+  },
+  "hbro": {
+    "id": "hbro",
+    "description_zh": "全身均勻深棕色短毛、綠眼，整體像「巧克力雕像」。性格親人愛玩、好奇心強。全球年產不到 20 隻，台灣幾乎沒有。",
+    "description_zh_status": "translated"
+  },
+  "hima": {
+    "id": "hima",
+    "description_zh": "波斯貓 × 暹羅貓的色點長毛版。**繼承波斯極端短頭顱問題**：呼吸困難、淚溢、PKD 多囊腎風險（盛行率 30-40%，DNA 可篩）。長毛每日梳。台灣繁殖場品質差異大。",
+    "description_zh_status": "translated"
+  },
+  "tvan": {
+    "id": "tvan",
+    "description_zh": "土耳其原生半長毛品種，白底配色彩花紋（多為頭尾），**愛玩水著名**（會跳進浴缸）。體型大、活力強、需大空間。台灣少見。",
+    "description_zh_status": "translated"
+  },
+  "emau": {
+    "id": "emau",
+    "description_zh": "古埃及壁畫可見的天然斑點花紋（全身佈滿圓形 / 長條斑點）。短跑速度可達 48 km/h，活動量極大、需垂直空間。台灣罕見。",
+    "description_zh_status": "translated"
+  },
+  "cypr": {
+    "id": "cypr",
+    "description_zh": "塞普勒斯島原生家貓，考古證實 9000+ 年歷史（人類最早馴化貓之一）。體型強壯、適應力強。塞普勒斯以外幾乎沒有。",
+    "description_zh_status": "translated"
+  },
+  "srex": {
+    "id": "srex",
+    "description_zh": "自然捲毛突變的長 / 短毛品種，外型像「絨毛玩具」。性格溫和有耐心。捲毛需定期梳避免結團。台灣少見。",
+    "description_zh_status": "translated"
+  },
+  "chee": {
+    "id": "chee",
+    "description_zh": "孟加拉貓 × 歐西貓的雜交品種（2000s 培育），豹紋外型 + 較親人個性（比孟加拉溫和）。極新品種，台灣幾乎沒有。",
+    "description_zh_status": "translated"
+  },
+  "nebe": {
+    "id": "nebe",
+    "description_zh": "俄羅斯藍貓的長毛版，銀藍色長毛、綠眼。性格內斂、跟主人黏但對陌生人保留。長毛需定期梳。整體健康，台灣罕見。",
+    "description_zh_status": "translated"
+  },
+  "aege": {
+    "id": "aege",
+    "description_zh": "希臘愛琴海諸島的天然家貓，多色短毛 + 白色斑塊。社交、聰明、體格強健。希臘以外幾乎看不到。",
+    "description_zh_status": "translated"
+  },
+  "lape": {
+    "id": "lape",
+    "description_zh": "自然捲毛突變品種，全身蓬鬆捲毛 + 大耳。性格親人活潑。**少數飼主回報「相對較不致敏」的品種之一**（捲毛掉毛少 → Fel d 1 散佈少），但無確切研究。台灣少見。",
+    "description_zh_status": "translated"
+  },
+  "sing": {
+    "id": "sing",
+    "description_zh": "**全球公認最小型純種貓**（成貓 2-4 kg），新加坡街貓培育。米黃色 ticked tabby 紋路、大耳大眼、像永遠長不大的小貓。活潑黏人。",
+    "description_zh_status": "translated"
+  },
+  "jbob": {
+    "id": "jbob",
+    "description_zh": "日本原生天然短尾品種（兔尾狀），**三花為招財貓原型**。活潑愛叫、智商高、會玩接物。短尾基因為隱性，無 Manx Syndrome 健康問題。",
+    "description_zh_status": "translated"
+  },
+  "khao": {
+    "id": "khao",
+    "description_zh": "泰國皇室白毛短毛品種，常見「鴛鴦眼」（一藍一金）。聰明外向、愛叫。藍眼或鴛鴦眼個體**有先天性失聰風險**，購買時可請繁殖場做 BAER 測聽。台灣極罕見。",
+    "description_zh_status": "translated"
+  },
+  "orie": {
+    "id": "orie",
+    "description_zh": "暹羅體型 + 多種毛色花紋變體。**繼承暹羅 PRA 視網膜萎縮與斜視風險**。性格極黏人、愛叫、需要大量陪伴 — 獨自在家久會壓力大、可能憂鬱。",
+    "description_zh_status": "translated"
+  },
+  "ebur": {
+    "id": "ebur",
+    "description_zh": "歐洲型緬甸貓（vs 美國型短臉），臉較長楔形、體型較纖細。性格活潑黏人、愛說話。台灣常見的多為美國型，購買時需跟繁殖場確認血統。",
+    "description_zh_status": "translated"
+  },
+  "ocic": {
+    "id": "ocic",
+    "description_zh": "1960s 美國培育（暹羅 × 阿比西尼亞 × 美短），野性外表 + 家貓性格。活躍、聰明、可訓練握手坐下、愛玩水。台灣少見。",
+    "description_zh_status": "translated"
+  },
+  "amis": {
+    "id": "amis",
+    "description_zh": "澳洲原生品種（緬甸 × 阿比西尼亞 × 澳洲家貓），全身霧狀斑紋（顏色暈染感）。個性溫和、適合家庭。澳洲以外少見。",
+    "description_zh_status": "translated"
+  },
+  "pixi": {
+    "id": "pixi",
+    "description_zh": "北美短尾貓（外型像短尾大山貓 Bobcat 但**無野生血統**，純家貓選育）。體型大、忠誠像狗。**多趾（polydactyl）為品種特徵之一**。台灣罕見。",
+    "description_zh_status": "translated"
+  },
+  "toyg": {
+    "id": "toyg",
+    "description_zh": "1980s 培育的孟加拉變種，目標培育成「迷你老虎」外型（垂直直紋而非斑點）。活躍聰明、可訓練。基因庫小、極罕見。",
+    "description_zh_status": "translated"
+  },
+  "kora": {
+    "id": "kora",
+    "description_zh": "泰國原生銀藍色短毛貓（出現早於俄藍）、心型臉、綠眼。**有 GM1 / GM2 神經節苷脂沉積症（gangliosidosis）基因病風險**，購買前必須要求 DNA 篩。台灣罕見。",
+    "description_zh_status": "translated"
+  },
+  "ycho": {
+    "id": "ycho",
+    "description_zh": "1980s 紐約培育的純巧克力色長毛品種，已接近滅絕（年生不到 20 隻）。台灣幾乎沒有。",
+    "description_zh_status": "translated"
+  },
+  "bure": {
+    "id": "bure",
+    "description_zh": "短毛、強壯、深褐至貂色。極黏人、愛叫，需要陪伴。**有頭部畸形綜合症（少見但嚴重）**、扁桃腺結石、眼部問題風險。Hypoallergenic（低致敏）標籤無確切科學證據。",
+    "description_zh_status": "translated"
+  },
+  "acur": {
+    "id": "acur",
+    "description_zh": "自然顯性突變的卷耳品種，**跟摺耳（FGFR3）機制不同 — 健康影響顯著較小**，無系統性軟骨問題。但耳道結構特殊需定期清耳。普遍健康，無已知重大基因病。",
+    "description_zh_status": "translated"
+  },
+  "abob": {
+    "id": "abob",
+    "description_zh": "天然短尾突變、體型結實、性格像狗（會玩接物、學指令）。短尾基因為顯性但雜合即表現，**無 Manx Syndrome 風險**。台灣少見。",
+    "description_zh_status": "translated"
+  },
+  "asho": {
+    "id": "asho",
+    "description_zh": "北美最普及的工作貓品種，**銀色虎斑為招牌花色**。健康強壯、適應力強、性格平和。HCM 心肌病風險中等，購買可詢問父母貓心臟超音波。",
+    "description_zh_status": "translated"
+  },
+  "awir": {
+    "id": "awir",
+    "description_zh": "美短的硬毛突變版（毛質像鋼絲、捲曲彈性）。性格溫和耐心、跟美短一樣健康。基因庫小、台灣幾乎沒有。",
+    "description_zh_status": "translated"
+  },
+  "bslo": {
+    "id": "bslo",
+    "description_zh": "英短的長毛版，體型同樣圓潤敦實。性格慵懶溫和。**繼承英短 HCM 風險中等** + 容易過重（結紮後代謝下降需嚴控食量）。長毛需定期梳。台灣較英短少見。",
+    "description_zh_status": "translated"
+  },
+  "raga": {
+    "id": "raga",
+    "description_zh": "布偶貓的姊妹品種（同源獨立分化），體型大、長毛、性格極溫和（拋抱姿勢時會放鬆全身）。HCM 心臟風險中等（同布偶但 R820W 突變不適用）。長毛需定期梳。",
+    "description_zh_status": "translated"
+  },
+  "amau": {
+    "id": "amau",
+    "description_zh": "中東阿拉伯半島的原生家貓，高活動量、適應沙漠氣候。短毛易整理。台灣罕見。",
+    "description_zh_status": "translated"
+  },
+  "ctif": {
+    "id": "ctif",
+    "description_zh": "巧克力色長毛品種（亦稱 Foreign Longhair），1960s 美國培育。性格溫和忠誠、會跟主人說話。基因庫小，台灣幾乎沒有。",
+    "description_zh_status": "translated"
+  }
+}

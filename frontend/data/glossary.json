@@ -1,0 +1,751 @@
+{
+  "_meta": {
+    "description": "貓醫療專業術語對照庫（含組織/期刊/疾病/藥物/檢驗/文獻類型）",
+    "last_updated": "2026-04-18"
+  },
+
+  "guideline": {
+    "term": "guideline",
+    "full_en": "Clinical Guideline",
+    "full_zh": "臨床指引",
+    "category": "citation_type",
+    "definition_zh": "由學會或專家組制定的標準化診療建議文件，多基於系統性文獻回顧。本知識庫中數量最多（如 ISFM/AAFP/IRIS 各疾病指引）。",
+    "key_points_zh": [
+      "可信度高於單篇研究",
+      "通常每 3-5 年更新",
+      "區分 evidence-based 與 expert opinion"
+    ],
+    "related": []
+  },
+
+  "consensus_guideline": {
+    "term": "consensus_guideline",
+    "full_en": "Consensus Guideline",
+    "full_zh": "共識指引",
+    "category": "citation_type",
+    "definition_zh": "多個學會或國際專家小組聯合制定的指引，代表最高層級的專家共識（如 ISFM+AAFP 聯合指引）。",
+    "key_points_zh": [
+      "跨組織背書",
+      "適用範圍最廣",
+      "更新頻率較低（5-10 年）"
+    ],
+    "related": []
+  },
+
+  "consensus_statement": {
+    "term": "consensus_statement",
+    "full_en": "Consensus Statement",
+    "full_zh": "共識聲明",
+    "category": "citation_type",
+    "definition_zh": "由專科學院（如 ACVIM）召集專家就特定議題達成的聲明，比指引更聚焦於單一疾病或診療議題。",
+    "key_points_zh": [
+      "ACVIM consensus statements 為主",
+      "聚焦單一議題（HCM、高血壓等）",
+      "證據等級明確標示"
+    ],
+    "related": ["ACVIM"]
+  },
+
+  "research_paper": {
+    "term": "research_paper",
+    "full_en": "Research Paper",
+    "full_zh": "研究論文",
+    "category": "citation_type",
+    "definition_zh": "原創研究的同儕審查論文，包含試驗設計、結果、討論。本庫中為支撐特定臨床數據的原始來源。",
+    "key_points_zh": [
+      "需檢視樣本數與研究設計",
+      "RCT > cohort > case report",
+      "OA 比例變化大"
+    ],
+    "related": []
+  },
+
+  "educational": {
+    "term": "educational",
+    "full_en": "Educational Article",
+    "full_zh": "衛教文章",
+    "category": "citation_type",
+    "definition_zh": "面向飼主的衛教文章（VCA / Cornell / icatcare 等），語言親民但仍由獸醫審閱。本庫用於補充飼主導向的描述。",
+    "key_points_zh": [
+      "可信但非原始證據",
+      "深度引用優先用 guideline",
+      "適合作飼主溝通範本"
+    ],
+    "related": ["VCA", "Cornell"]
+  },
+
+  "database": {
+    "term": "database",
+    "full_en": "Database / Reference",
+    "full_zh": "資料庫 / 參考資料",
+    "category": "citation_type",
+    "definition_zh": "結構化的參考資料庫（如毒物清單、藥物手冊）。本庫中如 ASPCA Animal Poison Control 毒物資料庫。",
+    "key_points_zh": [
+      "持續更新",
+      "需注意版本/查詢日",
+      "適合查找特定條目"
+    ],
+    "related": ["ASPCA"]
+  },
+
+  "government": {
+    "term": "government",
+    "full_en": "Government Document",
+    "full_zh": "政府文件",
+    "category": "citation_type",
+    "definition_zh": "政府機關公告、法規、官方統計（如台灣農業部動保法、寵物登記資料）。為法規與在地化資訊權威來源。",
+    "key_points_zh": [
+      "法律效力 > 學會建議",
+      "台灣特有規定（如狂犬病疫苗強制）",
+      "需注意修訂版本"
+    ],
+    "related": ["MOA", "regulation"]
+  },
+
+  "SDMA": {
+    "term": "SDMA",
+    "full_en": "Symmetric Dimethylarginine",
+    "full_zh": "對稱二甲基精胺酸",
+    "category": "lab_marker",
+    "definition_zh": "血液中的腎功能標記物，2015 年由 IDEXX 推出商業化檢測。比傳統的肌酸酐更早偵測到腎功能下降（約早 9-17 個月），且較少受肌肉量影響。",
+    "key_points_zh": [
+      "正常範圍：< 14 μg/dL",
+      "貓 CKD Stage 1：< 18 μg/dL",
+      "Stage 2：18-25",
+      "Stage 3：25-38",
+      "Stage 4：> 38",
+      "與肌酸酐並用更精準"
+    ],
+    "related": ["creatinine", "IRIS", "CKD"]
+  },
+
+  "creatinine": {
+    "term": "Creatinine（肌酸酐）",
+    "full_en": "Serum Creatinine",
+    "full_zh": "血清肌酸酐",
+    "category": "lab_marker",
+    "definition_zh": "肌肉代謝產物，由腎臟排出。血液中濃度上升 = 腎功能下降。是傳統腎病診斷標準，但對早期 CKD 不夠敏感（要喪失 75% 腎功能才會升高）。",
+    "key_points_zh": [
+      "貓正常：< 1.6 mg/dL",
+      "受肌肉量影響（瘦貓會偏低）",
+      "需空腹+水合狀態+至少兩次測量",
+      "現在通常與 SDMA 並用"
+    ],
+    "related": ["SDMA", "BUN", "IRIS"]
+  },
+
+  "UPC": {
+    "term": "UPC（尿蛋白/肌酸酐比）",
+    "full_en": "Urine Protein-to-Creatinine ratio",
+    "full_zh": "尿蛋白/肌酸酐比值",
+    "category": "lab_marker",
+    "definition_zh": "尿液中蛋白質相對於肌酸酐的比例，反映腎臟蛋白漏出程度。CKD 貓的蛋白尿是疾病惡化的重要指標。",
+    "key_points_zh": [
+      "貓正常：< 0.2",
+      "Borderline：0.2-0.4（需 2 個月內重測）",
+      "Proteinuric：> 0.4 → 需介入治療",
+      "測量前需排除泌尿道炎症/出血"
+    ],
+    "related": ["IRIS", "proteinuria", "CKD"]
+  },
+
+  "IRIS": {
+    "term": "IRIS",
+    "full_en": "International Renal Interest Society",
+    "full_zh": "國際腎臟興趣協會",
+    "category": "organization",
+    "definition_zh": "全球獸醫腎臟病專家組成的非營利組織（成立 1998），制定 CKD 分期系統，是全球獸醫通用的診斷標準。官網 iris-kidney.com 提供免費指引。",
+    "key_points_zh": [
+      "CKD 分 Stage 1-4",
+      "用肌酸酐 + SDMA 分期",
+      "蛋白尿 + 血壓 sub-staging",
+      "2023 版整合 SDMA 為早期偵測",
+      "贊助來源：Elanco（公開揭露）"
+    ],
+    "related": ["CKD", "SDMA", "creatinine"]
+  },
+
+  "AAFP": {
+    "term": "AAFP",
+    "full_en": "American Association of Feline Practitioners",
+    "full_zh": "美國貓科獸醫師協會",
+    "category": "organization",
+    "definition_zh": "美國專注貓科醫療的獸醫師組織，制定多項貓專屬臨床指引（疫苗、老貓、看診壓力管理、疼痛、高血壓等）。指引品質高且 OA。",
+    "key_points_zh": [
+      "JFMS 共同出版單位",
+      "Cat Friendly Practice 認證制度",
+      "貓疫苗指引（與 AAHA 聯合）",
+      "Senior Care guidelines 老貓照護"
+    ],
+    "related": ["ISFM", "JFMS", "vaccination"]
+  },
+
+  "ISFM": {
+    "term": "ISFM",
+    "full_en": "International Society of Feline Medicine",
+    "full_zh": "國際貓科醫學會",
+    "category": "organization",
+    "definition_zh": "全球貓專屬醫學學會（International Cat Care 的獸醫部門），出版 JFMS 期刊與多項共識指引（CKD、糖尿病、高血壓、傳染病等）。",
+    "key_points_zh": [
+      "icatcare.org 旗下",
+      "出版 JFMS（與 AAFP 共同）",
+      "ISFM Consensus Guidelines 系列",
+      "歐美獸醫共識首選"
+    ],
+    "related": ["AAFP", "JFMS"]
+  },
+
+  "WSAVA": {
+    "term": "WSAVA",
+    "full_en": "World Small Animal Veterinary Association",
+    "full_zh": "世界小動物獸醫協會",
+    "category": "organization",
+    "definition_zh": "全球小動物獸醫協會聯盟，制定全球通用的疫苗、營養、疼痛、肝病等指引。WSAVA 疫苗指引是全球參考標準。",
+    "key_points_zh": [
+      "Vaccination Guidelines（全球參考）",
+      "Global Nutrition Committee",
+      "Pain Management Guidelines",
+      "Body Condition Score 9 級系統"
+    ],
+    "related": ["vaccination", "nutrition"]
+  },
+
+  "ABCD": {
+    "term": "ABCD",
+    "full_en": "European Advisory Board on Cat Diseases",
+    "full_zh": "歐洲貓科疾病諮詢委員會",
+    "category": "organization",
+    "definition_zh": "歐洲專家組成的貓傳染病權威，發布 30+ 份疾病管理指引（FIP、FeLV、FIV、FCoV 等）。abcdcatsvets.org 全部免費。",
+    "key_points_zh": [
+      "傳染病指引最完整",
+      "每幾年更新（如 FIP 因 GS-441524 大改）",
+      "Boehringer Ingelheim 贊助（揭露）",
+      "歐洲視角，與 AAFP 互補"
+    ],
+    "related": ["FIP", "FeLV", "FIV", "FCoV"]
+  },
+
+  "ACVIM": {
+    "term": "ACVIM",
+    "full_en": "American College of Veterinary Internal Medicine",
+    "full_zh": "美國獸醫內科學院",
+    "category": "organization",
+    "definition_zh": "美國獸醫內科專科認證機構，發布多項共識聲明（HCM、心臟病分期、CKD、高血壓等）。ACVIM Consensus Statement 是內科金標準。",
+    "key_points_zh": [
+      "HCM 分期共識（A/B1/B2/C/D）",
+      "高血壓分級共識",
+      "心臟病用藥指引",
+      "JVIM 期刊出版單位"
+    ],
+    "related": ["HCM", "CKD"]
+  },
+
+  "Cornell": {
+    "term": "Cornell",
+    "full_en": "Cornell Feline Health Center",
+    "full_zh": "康乃爾大學貓健康中心",
+    "category": "organization",
+    "definition_zh": "康乃爾大學獸醫學院附設貓健康研究與衛教中心。網站提供大量飼主衛教資訊，學術可信度高。",
+    "key_points_zh": [
+      "vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center",
+      "飼主衛教文章大量 OA",
+      "學術機構非商業",
+      "中文網路常引用此來源"
+    ],
+    "related": []
+  },
+
+  "VCA": {
+    "term": "VCA",
+    "full_en": "VCA Animal Hospitals",
+    "full_zh": "VCA 動物醫院（全美連鎖）",
+    "category": "organization",
+    "definition_zh": "美國最大連鎖動物醫院（Mars 集團旗下），網站 Pet Health Library 提供大量飼主衛教文章。商業機構但內容由獸醫審閱。",
+    "key_points_zh": [
+      "vcahospitals.com/know-your-pet",
+      "1,000+ 衛教文章",
+      "商業背景需注意（Mars 集團）",
+      "適合作入門參考，深度引用優先 ISFM/AAFP"
+    ],
+    "related": []
+  },
+
+  "ASPCA": {
+    "term": "ASPCA",
+    "full_en": "American Society for the Prevention of Cruelty to Animals",
+    "full_zh": "美國防止虐待動物協會",
+    "category": "organization",
+    "definition_zh": "美國最老的動物保護組織（成立 1866），其旗下 Animal Poison Control Center 是寵物毒物中文/英文資料的權威來源。",
+    "key_points_zh": [
+      "Animal Poison Control Center 全年無休熱線",
+      "毒物資料庫最完整",
+      "百合、葡萄、巧克力等毒物清單",
+      "需付費諮詢但資料庫免費"
+    ],
+    "related": ["toxicology"]
+  },
+
+  "JFMS": {
+    "term": "JFMS",
+    "full_en": "Journal of Feline Medicine and Surgery",
+    "full_zh": "貓科醫學與外科期刊",
+    "category": "journal",
+    "definition_zh": "ISFM 與 AAFP 共同出版的貓科專業同儕審查期刊（SAGE Publishing），是貓專屬論文最重要的學術陣地。",
+    "key_points_zh": [
+      "SAGE 出版，部分 OA",
+      "ISFM/AAFP 共識指引常於此刊發表",
+      "JFMS Open Reports 為純 OA 子刊",
+      "Impact Factor ~2.0（2024）"
+    ],
+    "related": ["ISFM", "AAFP"]
+  },
+
+  "JVMS": {
+    "term": "JVMS",
+    "full_en": "Journal of Veterinary Medical Science (Japan)",
+    "full_zh": "日本獸醫學會期刊",
+    "category": "journal",
+    "definition_zh": "日本獸醫學會出版的同儕審查期刊，全文 OA（J-STAGE 平台）。亞洲視角的研究來源，對台灣品種與環境較貼近。",
+    "key_points_zh": [
+      "J-STAGE 平台全 OA",
+      "亞洲品種/環境研究",
+      "英文發表",
+      "1939 年創刊"
+    ],
+    "related": []
+  },
+
+  "AABS": {
+    "term": "Applied Animal Behaviour Science",
+    "full_en": "Applied Animal Behaviour Science (Elsevier)",
+    "full_zh": "應用動物行為科學期刊",
+    "category": "journal",
+    "definition_zh": "Elsevier 出版的動物行為學期刊，貓行為（壓力、環境豐富化、人貓互動）研究的主要發表場域。多數論文需付費。",
+    "key_points_zh": [
+      "Elsevier 商業期刊",
+      "ISAE（國際應用動物行為學會）官方刊",
+      "FIC 壓力研究常引用",
+      "OA 比例低"
+    ],
+    "related": ["behavior", "enrichment", "FIC"]
+  },
+
+  "KDCAT": {
+    "term": "KDCAT",
+    "full_en": "Taiwan Kidney Cat Association",
+    "full_zh": "台灣腎貓協會",
+    "category": "organization",
+    "definition_zh": "台灣本土腎貓飼主與獸醫合作的非營利組織，提供中文版 CKD 衛教與在地化資訊（藥品、處方飼料、台灣費用估算）。",
+    "key_points_zh": [
+      "kdcat.org.tw",
+      "台灣在地化資訊重要來源",
+      "處方飼料台灣售價",
+      "皮下輸液在地耗材清單"
+    ],
+    "related": ["CKD", "IRIS"]
+  },
+
+  "MOA": {
+    "term": "MOA",
+    "full_en": "Ministry of Agriculture, Taiwan",
+    "full_zh": "台灣農業部（含動物保護司）",
+    "category": "organization",
+    "definition_zh": "台灣最高農業主管機關（2023 年由農委會升格），動物保護司主管寵物登記、疫苗、業者管理、動保法規。法規與政府公告權威來源。",
+    "key_points_zh": [
+      "moa.gov.tw",
+      "動物保護法主管機關",
+      "狂犬病疫苗強制施打規定",
+      "寵物登記、業者特定許可"
+    ],
+    "related": ["regulation", "vaccination"]
+  },
+
+  "CKD": {
+    "term": "CKD（慢性腎病）",
+    "full_en": "Chronic Kidney Disease",
+    "full_zh": "慢性腎臟疾病",
+    "category": "disease",
+    "definition_zh": "腎臟功能持續性、不可逆的退化。是貓最常見的老年疾病之一，10 歲以上貓約 30% 罹患，15 歲以上超過 50%。",
+    "key_points_zh": [
+      "症狀：多喝多尿、體重下降、嘔吐、食慾差",
+      "診斷：血檢（肌酸酐+SDMA）+ 尿檢（UPC）+ 血壓",
+      "治療：飲食控制 + 磷結合劑 + 皮下輸液",
+      "預後依分期：Stage 2 中位存活 1100 天，Stage 4 約 35-100 天"
+    ],
+    "related": ["IRIS", "SDMA", "creatinine", "FLUTD"]
+  },
+
+  "FLUTD": {
+    "term": "FLUTD（下泌尿道疾病）",
+    "full_en": "Feline Lower Urinary Tract Disease",
+    "full_zh": "貓下泌尿道疾病",
+    "category": "disease",
+    "definition_zh": "影響膀胱和尿道的疾病總稱，最常見原因是 FIC（特發性膀胱炎）約 60%，其次是結石、尿道阻塞、感染。",
+    "key_points_zh": [
+      "症狀：頻尿、血尿、亂尿、排尿困難",
+      "公貓尿道阻塞 = 急診（24 小時內可致命）",
+      "FIC 與壓力有關，需環境豐富化",
+      "增加飲水量是重要預防"
+    ],
+    "related": ["FIC", "urethral_obstruction"]
+  },
+
+  "FIC": {
+    "term": "FIC（貓特發性膀胱炎）",
+    "full_en": "Feline Idiopathic Cystitis",
+    "full_zh": "貓特發性膀胱炎",
+    "category": "disease",
+    "definition_zh": "FLUTD 中最常見的型態，找不到明確原因（無結石、感染），與壓力、環境、飲水量相關。",
+    "key_points_zh": [
+      "60% FLUTD 是 FIC",
+      "壓力是主要誘因",
+      "環境豐富化可降低發作",
+      "增加濕食、多砂盆"
+    ],
+    "related": ["FLUTD", "stress"]
+  },
+
+  "FIP": {
+    "term": "FIP（傳染性腹膜炎）",
+    "full_en": "Feline Infectious Peritonitis",
+    "full_zh": "貓傳染性腹膜炎",
+    "category": "disease",
+    "definition_zh": "由貓冠狀病毒（FCoV）突變引起的致命疾病。傳統視為絕症，但 2019 年後 GS-441524 抗病毒藥物治癒率達 80-90%。",
+    "key_points_zh": [
+      "分濕性（腹水/胸水）和乾性（神經/眼）",
+      "幼貓和多貓家庭高風險",
+      "GS-441524 療程 84 天",
+      "費用台灣約 5-15 萬"
+    ],
+    "related": ["FCoV", "GS-441524"]
+  },
+
+  "FCoV": {
+    "term": "FCoV（貓冠狀病毒）",
+    "full_en": "Feline Coronavirus",
+    "full_zh": "貓冠狀病毒",
+    "category": "pathogen",
+    "definition_zh": "一種常見的貓腸道病毒，多數貓感染後僅輕微腹瀉自癒。約 5-10% 病毒會在貓體內突變，引發 FIP。",
+    "key_points_zh": [
+      "糞口傳染，多貓環境流行率高",
+      "突變機制不明",
+      "與 SARS-CoV-2 不同種"
+    ],
+    "related": ["FIP"]
+  },
+
+  "GS-441524": {
+    "term": "GS-441524",
+    "full_en": "GS-441524 (Remdesivir metabolite)",
+    "full_zh": "GS-441524（瑞德西韋代謝物）",
+    "category": "drug",
+    "definition_zh": "Gilead 開發的抗病毒藥物，UC Davis 2019 年研究證實可治癒 FIP。台灣可透過特定管道取得，2024 年起部分國家正式核可。",
+    "key_points_zh": [
+      "口服或注射，療程 84 天",
+      "治癒率 80-90%",
+      "劑量按 FIP 分型調整",
+      "費用高昂"
+    ],
+    "related": ["FIP"]
+  },
+
+  "HCM": {
+    "term": "HCM（肥厚性心肌病）",
+    "full_en": "Hypertrophic Cardiomyopathy",
+    "full_zh": "肥厚性心肌病",
+    "category": "disease",
+    "definition_zh": "貓最常見的心臟病，左心室壁異常增厚導致心臟功能障礙。可能無症狀直到突發心衰竭、血栓或猝死。",
+    "key_points_zh": [
+      "緬因貓、布偶貓、波斯貓基因易感",
+      "診斷靠超音波（不是聽診）",
+      "NT-proBNP 血檢可篩檢",
+      "治療：atenolol（β阻斷劑）+ clopidogrel（抗血栓）"
+    ],
+    "related": ["NT-proBNP", "ATE"]
+  },
+
+  "ATE": {
+    "term": "ATE（動脈血栓栓塞）",
+    "full_en": "Aortic Thromboembolism",
+    "full_zh": "主動脈血栓栓塞",
+    "category": "disease",
+    "definition_zh": "HCM 的嚴重併發症，血塊從心臟脫落卡在主動脈分叉處，導致後肢突然癱瘓、劇烈疼痛。死亡率極高。",
+    "key_points_zh": [
+      "症狀：後肢突然冰冷、無脈、癱瘓",
+      "急診！黃金時間極短",
+      "存活率 30-50%",
+      "預防靠 clopidogrel"
+    ],
+    "related": ["HCM", "clopidogrel"]
+  },
+
+  "FORL": {
+    "term": "FORL（齒吸收病灶）",
+    "full_en": "Feline Odontoclastic Resorptive Lesion",
+    "full_zh": "貓齒破骨細胞性吸收病灶",
+    "category": "disease",
+    "definition_zh": "貓特有的牙齒疾病，破骨細胞吃掉牙齒結構。50% 以上 5 歲以上貓罹患。極度疼痛但貓擅長隱忍。",
+    "key_points_zh": [
+      "症狀：流口水、單邊咀嚼、體重下降",
+      "需 X 光確診（口腔肉眼看不出來）",
+      "唯一治療：拔牙",
+      "原因不明，無法預防"
+    ],
+    "related": ["dental"]
+  },
+
+  "FVRCP": {
+    "term": "FVRCP（三合一疫苗）",
+    "full_en": "Feline Viral Rhinotracheitis, Calicivirus, Panleukopenia",
+    "full_zh": "貓三合一疫苗",
+    "category": "vaccine",
+    "definition_zh": "貓的核心疫苗，預防三種疾病：FHV-1（皰疹病毒）、FCV（卡里西病毒）、FPV（貓瘟）。WSAVA/AAFP 建議所有貓都應接種。",
+    "key_points_zh": [
+      "幼貓 6-16 週接種 3-4 劑",
+      "1 歲追加",
+      "之後每 3 年（核心疫苗標準）",
+      "可改用抗體效價檢測決定追加"
+    ],
+    "related": ["FHV", "FCV", "FPV", "vaccination"]
+  },
+
+  "FHV": {
+    "term": "FHV-1（貓皰疹病毒）",
+    "full_en": "Feline Herpesvirus type 1",
+    "full_zh": "貓第一型皰疹病毒",
+    "category": "pathogen",
+    "definition_zh": "貓上呼吸道感染最常見原因，俗稱「貓鼻支」。感染後病毒終身潛伏，壓力下會復發。",
+    "key_points_zh": [
+      "症狀：打噴嚏、流鼻涕、結膜炎",
+      "嚴重會角膜潰瘍",
+      "L-lysine 補充曾流行但 2015 後證據不支持",
+      "FVRCP 疫苗預防"
+    ],
+    "related": ["FCV", "FVRCP", "URI"]
+  },
+
+  "FCV": {
+    "term": "FCV（貓卡里西病毒）",
+    "full_en": "Feline Calicivirus",
+    "full_zh": "貓卡里西病毒",
+    "category": "pathogen",
+    "definition_zh": "另一個常見上呼吸道病原，特徵是口腔潰瘍。新型強毒株（VS-FCV）罕見但致死率高。",
+    "key_points_zh": [
+      "症狀：口腔潰瘍、流口水、發燒",
+      "可能引起跛行（暫時性）",
+      "FVRCP 疫苗預防",
+      "VS-FCV 致死率 40-60%"
+    ],
+    "related": ["FHV", "FVRCP", "URI"]
+  },
+
+  "FPV": {
+    "term": "FPV（貓瘟）",
+    "full_en": "Feline Panleukopenia Virus",
+    "full_zh": "貓泛白血球減少症（貓瘟）",
+    "category": "pathogen",
+    "definition_zh": "高度傳染性致命疾病，攻擊白血球和腸道。幼貓死亡率 90%。FVRCP 疫苗高度有效。",
+    "key_points_zh": [
+      "症狀：嚴重嘔吐腹瀉、發燒、白血球極低",
+      "幼貓 24-48 小時可致命",
+      "環境消毒：漂白水（一般消毒劑無效）",
+      "與犬小病毒同科"
+    ],
+    "related": ["FVRCP", "vaccination"]
+  },
+
+  "FeLV": {
+    "term": "FeLV（貓白血病病毒）",
+    "full_en": "Feline Leukemia Virus",
+    "full_zh": "貓白血病病毒",
+    "category": "pathogen",
+    "definition_zh": "反轉錄病毒，攻擊免疫和造血系統。可致淋巴癌、白血病、貧血。多貓家庭應全部篩檢。",
+    "key_points_zh": [
+      "唾液傳染（共用碗、互相理毛）",
+      "感染貓中位存活 2.4 年",
+      "非核心疫苗（戶外貓建議施打）",
+      "與 FIV 不同病毒"
+    ],
+    "related": ["FIV", "vaccination"]
+  },
+
+  "FIV": {
+    "term": "FIV（貓免疫缺陷病毒）",
+    "full_en": "Feline Immunodeficiency Virus",
+    "full_zh": "貓免疫缺陷病毒",
+    "category": "pathogen",
+    "definition_zh": "俗稱「貓愛滋」，但與人類 HIV 不能跨種感染。經咬傷傳染，多見於戶外公貓。感染後可活多年。",
+    "key_points_zh": [
+      "經深咬傷傳染（不會經食盆）",
+      "感染貓可活 5+ 年",
+      "免疫低下，易二次感染",
+      "與 FeLV 同為反轉錄病毒但不同種"
+    ],
+    "related": ["FeLV"]
+  },
+
+  "T4": {
+    "term": "T4（甲狀腺素）",
+    "full_en": "Thyroxine (T4)",
+    "full_zh": "甲狀腺素 T4",
+    "category": "lab_marker",
+    "definition_zh": "甲狀腺分泌的主要激素。貓甲亢（10 歲以上常見）會 T4 異常升高。",
+    "key_points_zh": [
+      "正常：1.5-4.0 μg/dL",
+      "甲亢：> 4.0 μg/dL",
+      "邊界值需測 free T4",
+      "甲亢治療選擇：藥物、放射碘、手術、處方飼料"
+    ],
+    "related": ["hyperthyroidism"]
+  },
+
+  "BUN": {
+    "term": "BUN（血液尿素氮）",
+    "full_en": "Blood Urea Nitrogen",
+    "full_zh": "血液尿素氮",
+    "category": "lab_marker",
+    "definition_zh": "蛋白代謝產物，由腎臟排出。CKD 時與肌酸酐並列檢測，但受飲食、脫水影響大。",
+    "key_points_zh": [
+      "貓正常：14-36 mg/dL",
+      "受高蛋白飲食影響",
+      "脫水會升高",
+      "BUN/creatinine 比值有診斷意義"
+    ],
+    "related": ["creatinine", "CKD"]
+  },
+
+  "PCV": {
+    "term": "PCV（血容比/血比容）",
+    "full_en": "Packed Cell Volume",
+    "full_zh": "血容比",
+    "category": "lab_marker",
+    "definition_zh": "紅血球占血液體積百分比。CKD 晚期常出現非再生性貧血，PCV < 20% 需考慮 EPO 治療。",
+    "key_points_zh": [
+      "貓正常：30-45%",
+      "貧血：< 25%",
+      "嚴重貧血：< 20% → 考慮 EPO",
+      "與 hematocrit (HCT) 同義"
+    ],
+    "related": ["CKD", "EPO"]
+  },
+
+  "EPO": {
+    "term": "EPO（紅血球生成素）",
+    "full_en": "Erythropoietin",
+    "full_zh": "紅血球生成素",
+    "category": "drug",
+    "definition_zh": "由腎臟分泌，刺激骨髓造血。CKD 晚期腎臟分泌不足→貧血，需注射補充。常用 darbepoetin alfa。",
+    "key_points_zh": [
+      "PCV < 20% 時考慮使用",
+      "副作用：高血壓、抗體產生",
+      "需配合鐵劑",
+      "費用較高"
+    ],
+    "related": ["CKD", "PCV"]
+  },
+
+  "URI": {
+    "term": "URI（上呼吸道感染）",
+    "full_en": "Upper Respiratory Infection",
+    "full_zh": "上呼吸道感染",
+    "category": "disease",
+    "definition_zh": "貓鼻涕、打噴嚏、結膜炎的總稱。多由 FHV-1、FCV 引起。收容所/多貓環境流行。",
+    "key_points_zh": [
+      "傳染性高",
+      "幼貓和老貓嚴重",
+      "症狀治療為主",
+      "FVRCP 疫苗預防"
+    ],
+    "related": ["FHV", "FCV"]
+  },
+
+  "IBD": {
+    "term": "IBD（發炎性腸道疾病）",
+    "full_en": "Inflammatory Bowel Disease",
+    "full_zh": "發炎性腸道疾病",
+    "category": "disease",
+    "definition_zh": "腸道慢性發炎，原因不明。需切片才能確診（與小細胞淋巴瘤難區分）。中老年貓常見。",
+    "key_points_zh": [
+      "症狀：慢性嘔吐、腹瀉、體重下降",
+      "需內視鏡切片",
+      "治療：飲食 + 類固醇 + 維他命 B12",
+      "與小細胞淋巴瘤難區分"
+    ],
+    "related": ["lymphoma"]
+  },
+
+  "OA": {
+    "term": "OA（骨關節炎）/ 也指 Open Access",
+    "full_en": "Osteoarthritis (disease) / Open Access (publishing)",
+    "full_zh": "骨關節炎 / 開放取用",
+    "category": "disease",
+    "definition_zh": "骨關節炎：12 歲以上貓 90% 有 X 光證據，但極少表現明顯跛行。新藥 frunevetmab（Solensia）2022 年核可。｜Open Access：學術論文可免費取用。",
+    "key_points_zh": [
+      "症狀隱蔽：少跳高、毛打結、便秘",
+      "Solensia 月注射一次",
+      "傳統 NSAIDs 對腎不友善",
+      "環境改造很重要（降低跳躍）"
+    ],
+    "related": ["NSAID", "Solensia"]
+  },
+
+  "NSAID": {
+    "term": "NSAID（非類固醇消炎藥）",
+    "full_en": "Non-Steroidal Anti-Inflammatory Drug",
+    "full_zh": "非類固醇消炎藥",
+    "category": "drug",
+    "definition_zh": "止痛消炎藥物，貓常用 meloxicam、robenacoxib。長期使用要嚴格監測腎功能。",
+    "key_points_zh": [
+      "貓對 NSAIDs 敏感（代謝慢）",
+      "禁忌：脫水、CKD、潰瘍",
+      "ibuprofen/aspirin 對貓有毒",
+      "長期用必須定期監測"
+    ],
+    "related": ["pain", "OA"]
+  },
+
+  "FGF23": {
+    "term": "FGF23（成纖維細胞生長因子 23）",
+    "full_en": "Fibroblast Growth Factor 23",
+    "full_zh": "纖維母細胞生長因子 23",
+    "category": "lab_marker",
+    "definition_zh": "由骨骼分泌的磷調節激素。CKD 早期就會升高（早於血磷異常），是早期偵測腎臟磷代謝異常的指標。",
+    "key_points_zh": [
+      "> 400 pg/ml 表示磷代謝失衡",
+      "可在血磷正常時就升高",
+      "IRIS 2023 建議檢測",
+      "用於決定是否限磷"
+    ],
+    "related": ["CKD", "IRIS", "phosphate"]
+  },
+
+  "RAAS": {
+    "term": "RAAS（腎素-血管收縮素-醛固酮系統）",
+    "full_en": "Renin-Angiotensin-Aldosterone System",
+    "full_zh": "腎素-血管收縮素-醛固酮系統",
+    "category": "physiology",
+    "definition_zh": "調節血壓和水鹽平衡的激素系統。CKD 時過度活化會加速腎損傷。RAAS 抑制劑（telmisartan/benazepril）是治療基石。",
+    "key_points_zh": [
+      "telmisartan 是 ARB 類",
+      "benazepril 是 ACE 抑制劑",
+      "脫水時禁用！會驟降 GFR",
+      "需先補水再用藥"
+    ],
+    "related": ["CKD", "telmisartan", "ACE"]
+  },
+
+  "GFR": {
+    "term": "GFR（腎絲球過濾率）",
+    "full_en": "Glomerular Filtration Rate",
+    "full_zh": "腎絲球過濾率",
+    "category": "physiology",
+    "definition_zh": "腎臟過濾血液的速率，是腎功能的金標準。臨床上用肌酸酐和 SDMA 間接估算。",
+    "key_points_zh": [
+      "直接測量需注射造影劑",
+      "肌酸酐/SDMA 是替代指標",
+      "下降 = 腎功能變差",
+      "RAAS 抑制劑可能短暫降低 GFR"
+    ],
+    "related": ["creatinine", "SDMA", "RAAS"]
+  }
+}

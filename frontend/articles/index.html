@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>貓咪知識庫文章列表 — 貓健康站</title>
+  <meta name="description" content="台灣養貓人完整知識庫：飲食、醫療、行為、居家環境，全部文章均佐證學術來源。">
+  <link rel="stylesheet" href="../css/ads.css">
+  <link rel="stylesheet" href="../css/theme.css">
+  <link rel="stylesheet" href="../css/nav.css?v=20260420b">
+  <script src="../js/theme.js"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, "Noto Sans TC", sans-serif; background: var(--bg, #fafafa); color: var(--text, #333); }
+    header { background: var(--header-bg, #1d1d1f); color: var(--header-text, #fff); padding: 1rem 2rem; display: flex; align-items: center; gap: 1rem; }
+    header a { color: var(--header-text, #fff); text-decoration: none; opacity: 0.8; }
+    header h1 { font-size: 1.3rem; flex: 1; }
+    .ad-wrap { background: var(--bg-card, #fff); border-top: 1px solid var(--border, #eee); border-bottom: 1px solid var(--border, #eee); padding: 0.4rem 0; }
+    main { max-width: 960px; margin: 2rem auto; padding: 0 1.5rem; }
+    /* Filter bar */
+    .search-bar { margin-bottom: 1rem; }
+    .search-bar input {
+      width: 100%; padding: 0.85rem 1.1rem; font-size: 1rem;
+      border: 1px solid var(--border, #e0e0e0); border-radius: 24px;
+      background: var(--bg-card, #fff); color: var(--text, #333);
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .search-bar input:focus {
+      outline: none; border-color: var(--accent, #1d1d1f);
+      box-shadow: 0 0 0 3px rgba(0,0,0,0.05);
+    }
+    .filter-bar { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2rem; }
+    .filter-btn {
+      padding: 0.35rem 0.9rem; border: 1px solid var(--border, #ccc); border-radius: 20px;
+      background: var(--bg-card, #fff); cursor: pointer; font-size: 0.88rem; text-decoration: none; color: var(--text, #333);
+    }
+    .filter-btn.active, .filter-btn:hover { background: var(--accent, #1d1d1f); color: #fff; border-color: var(--accent, #1d1d1f); }
+    /* Category sections */
+    .cat-section { margin-bottom: 2.5rem; }
+    .cat-heading {
+      font-size: 1.3rem; font-weight: 800; color: var(--accent, #1d1d1f);
+      border-bottom: 2px solid var(--accent, #1d1d1f); padding-bottom: 0.4rem; margin-bottom: 1.2rem;
+      display: flex; align-items: center; gap: 0.5rem;
+    }
+    .cat-heading .count {
+      font-size: 0.85rem; font-weight: 400; color: var(--text-muted, #888);
+      background: var(--accent-light, #f0f0f3); border-radius: 20px; padding: 0.1rem 0.5rem;
+    }
+    /* Subcategory sections */
+    .subcat-section { margin-bottom: 1.5rem; }
+    .subcat-heading {
+      font-size: 0.9rem; font-weight: 700; color: var(--text-muted, #666);
+      text-transform: uppercase; letter-spacing: 0.06em;
+      padding: 0.25rem 0.7rem; margin-bottom: 0.8rem;
+      border-left: 3px solid var(--accent, #1d1d1f);
+      background: var(--accent-light, #f0faf4);
+    }
+    /* Article cards */
+    .article-list { display: flex; flex-direction: column; gap: 0.7rem; }
+    .article-card {
+      background: var(--bg-card, #fff); border: 1px solid var(--border, #e0e0e0); border-radius: 10px;
+      overflow: hidden; text-decoration: none; color: var(--text, inherit);
+      display: flex; flex-direction: row; align-items: stretch;
+      transition: box-shadow 0.15s; gap: 0;
+    }
+    .article-card:hover { box-shadow: 0 4px 12px var(--shadow, rgba(0,0,0,0.1)); }
+    .article-card-thumb {
+      width: 130px; min-width: 130px; max-width: 130px; height: 90px;
+      background-color: var(--accent-light, #f0f0f3);
+      flex-shrink: 0; align-self: stretch;
+      position: relative; overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .thumb-emoji { font-size: 2rem; z-index: 0; }  /* 底層 emoji placeholder */
+    .thumb-img {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; z-index: 1;  /* 蓋在 emoji 上 */
+    }
+    .article-card-body { padding: 0.8rem 1rem; flex: 1 1 auto; min-width: 0; }
+    .article-card .meta { font-size: 0.78rem; color: var(--text-muted, #888); margin-bottom: 0.3rem; display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; }
+    .article-card .subcat-pill {
+      background: var(--border, #eee); color: var(--text-muted, #666); padding: 0.05rem 0.45rem;
+      border-radius: 10px; font-size: 0.72rem;
+    }
+    .article-card h2 { font-size: 1rem; font-weight: 700; margin-bottom: 0.25rem; color: var(--accent, #1d1d1f); }
+    .article-card p { font-size: 0.85rem; color: var(--text-muted, #666); line-height: 1.45; }
+    /* Quality badges (Phase 1B) */
+    .quality-badge { font-size: 0.7rem; padding: 1px 6px; border-radius: 8px; }
+    .q-draft { background: #f5f0e8; color: #8a7340; border: 1px solid #d4c8b0; }
+    .q-reviewed { background: #f0f0f3; color: #1d1d1f; border: 1px solid #d2d2d7; }
+    .q-featured { background: #1d1d1f; color: #fff; }
+    .article-card.is-draft { opacity: 0.65; }
+    .article-card.is-draft:hover { opacity: 1; }
+    body.hide-drafts .article-card.is-draft { display: none; }
+    .quality-toggle {
+      display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.85rem;
+      padding: 0.35rem 0.9rem; border: 1px solid var(--border, #ccc); border-radius: 20px;
+      background: var(--bg-card, #fff); cursor: pointer;
+    }
+    .quality-toggle.active { background: var(--accent, #1d1d1f); color: var(--accent-on, #fff); border-color: var(--accent, #1d1d1f); }
+    @media (max-width: 600px) {
+      .article-card-thumb { width: 90px; min-width: 90px; height: 72px; }
+      .article-card h2 { font-size: 0.95rem; }
+    }
+    footer { text-align: center; padding: 1.5rem 2rem 2rem; color: var(--text-muted, #999); font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <nav class="site-nav">
+    <a class="nav-brand" href="../index.html" title="回首頁"><span class="b-icon">🐱</span><span class="brand-text">貓健康站</span><span class="brand-home" aria-hidden="true">🏠</span></a>
+    <div class="nav-links">
+      <a class="nav-link" href="../library.html" data-nav="library">📚 文獻庫</a>
+      <a class="nav-link" href="../breeds.html" data-nav="breeds">🐈 品種</a>
+      <a class="nav-link" href="../vets.html" data-nav="vets">🏥 獸醫院</a>
+      <a class="nav-link active" href="index.html" data-nav="articles">📝 文章</a>
+      <a class="nav-link" href="../about.html" data-nav="about">ℹ️ 關於</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="search-bar">
+      <input type="search" id="articleSearch" placeholder="🔍 搜尋文章標題或內容（例：腎指數、亂尿尿、結紮）">
+    </div>
+    <div class="filter-bar">
+      <button class="filter-btn" data-cat="全部">全部</button>
+      <button class="filter-btn" data-cat="入門">🆕 入門</button>
+      <button class="filter-btn" data-cat="健康">❤️ 健康</button>
+      <button class="filter-btn" data-cat="飲食">🍖 飲食</button>
+      <button class="filter-btn" data-cat="行為">🐾 行為</button>
+      <button class="filter-btn" data-cat="環境">🏠 環境</button>
+      <button class="filter-btn" data-cat="階段">⏳ 階段</button>
+      <span style="margin-left:auto"></span>
+      <label class="quality-toggle" id="qualityToggle">
+        <input type="checkbox" id="hideDraftsCb" style="margin:0">
+        <span>只看已審核</span>
+      </label>
+    </div>
+    <div id="articleSections">
+    <div class="cat-section" data-cat="入門">
+      <h2 class="cat-heading">🆕 入門 <span class="count">9 篇</span></h2>
+      <div class="subcat-section">
+        <div class="subcat-heading">決策準備</div>
+        <div class="article-list">
+          <a class="article-card is-draft" href="should-i-adopt-cat-decision-taiwan.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">🆕</span></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">決策準備</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-19</span></div>
+              <h2>我適合養貓嗎？10 個自評 + 認養 vs 購買誠實比較</h2>
+              <p>養貓是 12-15 年承諾。10 個誠實自評（費用/時間/住宅/過敏）+ 認養 vs 購買的真實比較 + 如何辨別負責任繁殖場 + 品種健康警示。</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="subcat-section">
+        <div class="subcat-heading">費用規劃</div>
+        <div class="article-list">
+          <a class="article-card is-draft" href="cat-cost-insurance-taiwan.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">🆕</span></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">費用規劃</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-19</span></div>
+              <h2>養貓財務規劃 — 年度費用 + 寵物保險完整指南</h2>
+              <p>成貓年費 $20,000-45,000，老貓+慢性病可破 $100,000。完整費用試算 + 寵物保險選擇 5 個關鍵問題 + 越早投保越好的時機。</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="subcat-section">
+        <div class="subcat-heading">領養流程</div>
+        <div class="article-list">
+          <a class="article-card is-draft" href="cat-adoption-guide-taiwan.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">🆕</span></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">領養流程</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-19</span></div>
+              <h2>台灣貓咪認養完整指南（含老貓特別注意）</h2>
+              <p>台灣認養通路（公立收容所 / 中途之家 / 個人送養）+ 年齡選擇 + 健康確認清單 + 認養合約重點 + 到家前準備 + 老貓認養特別注意。</p>
+            </div>
+          </a>
+          <a class="article-card is-draft" href="rehoming-cat-responsibly-taiwan.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">🆕</span><img class="thumb-img" src="https://image.pollinations.ai/prompt/Responsible%20cat%20rehoming%20handover%2C%20previous%20owner%20passing%20cat%20to%20new%20family%2C%20documentation%2C%20Taiwan%2C%20professional%20pet%20photography%2C%20soft%20natural%20bokeh%20lighting%2C%20photorealistic%20high%20quality%2C%204K%20sharp%20focus%2C%20warm%20tones?width=800&height=450&nologo=true&model=flux-schnell&seed=42" alt="" loading="lazy" onerror="this.remove()"></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">領養流程</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-08</span></div>
+              <h2>負責任送養貓咪：台灣的正確程序與常見錯誤</h2>
+              <p>有時不得不為貓咪尋找新家，但送養不是直接「交出去就好」。了解如何篩選認養人、準備文件，以及避免讓貓咪落入不良環境的方法。</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="subcat-section">
+        <div class="subcat-heading">新貓到家</div>
+        <div class="article-list">
+          <a class="article-card is-draft" href="new-cat-first-week-guide.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">🆕</span><img class="thumb-img" src="https://image.pollinations.ai/prompt/New%20cat%20cautiously%20exploring%20home%20for%20the%20first%20time%2C%20first%20day%20arrival%2C%20hiding%20under%20furniture%2C%20adjustment%20period%2C%20professional%20pet%20photography%2C%20soft%20natural%20bokeh%20lighting%2C%20photorealistic%20high%20quality%2C%204K%20sharp%20focus%2C%20warm%20tones?width=800&height=450&nologo=true&model=flux-schnell&seed=42" alt="" loading="lazy" onerror="this.remove()"></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">新貓到家</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-08</span></div>
+              <h2>新貓到家第一週：逐日安置指南</h2>
+              <p>新貓到家不要立刻放出來探索！了解「安全房」設置、逐步擴大領域的正確節奏，以及如何讓貓咪和家中原有成員安全認識。</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="subcat-section">
+        <div class="subcat-heading">動物保護法</div>
+        <div class="article-list">
+          <a class="article-card is-draft" href="cat-laws-taiwan.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">🆕</span></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">動物保護法</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-19</span></div>
+              <h2>台灣養貓法規完整指南 — 動保法 / 晶片登記 / TNR</h2>
+              <p>台灣飼主必知法律：晶片登記強制（罰 1-5 萬）、虐待 2 年徒刑、遺棄 6-30 萬罰鍰、TNR 法源、通報管道。</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="subcat-section">
+        <div class="subcat-heading">飼主權益</div>
+        <div class="article-list">
+          <a class="article-card is-draft" href="renting-with-cats-taiwan.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">🆕</span><img class="thumb-img" src="https://image.pollinations.ai/prompt/Cat%20owner%20reviewing%20rental%20lease%20with%20landlord%20in%20Taiwan%20apartment%2C%20pet-friendly%20rental%20agreement%2C%20happy%20resolution%2C%20modern%20interior%2C%20professional%20pet%20photography%2C%20soft%20natural%20bokeh%20lighting%2C%20photorealistic%20high%20quality%2C%204K%20sharp%20focus%2C%20warm%20tones?width=800&height=450&nologo=true&model=flux-schnell&seed=42" alt="" loading="lazy" onerror="this.remove()"></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">飼主權益</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-08</span></div>
+              <h2>在台灣租屋養貓完整指南：法律、合約、房東溝通</h2>
+              <p>台灣租屋族養貓是普遍但充滿法律灰色地帶的議題。許多人不清楚房東究竟有沒有權利禁止養貓、違規了怎麼辦、以及如何合法保護自己的養貓權益。本文從法律面到實務面，給你清楚的答案。</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="subcat-section">
+        <div class="subcat-heading">台灣本土貓</div>
+        <div class="article-list">
+          <a class="article-card is-draft" href="mixed-breed-cats-taiwan.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">🆕</span><img class="thumb-img" src="https://image.pollinations.ai/prompt/Adorable%20mixed%20breed%20domestic%20shorthair%20cat%2C%20orange%20tabby%20street%20cat%2C%20affectionate%20and%20curious%2C%20Taiwan%20cityscape%20background%2C%20professional%20pet%20photography%2C%20soft%20natural%20bokeh%20lighting%2C%20photorealistic%20high%20quality%2C%204K%20sharp%20focus%2C%20warm%20tones?width=800&height=450&nologo=true&model=flux-schnell&seed=42" alt="" loading="lazy" onerror="this.remove()"></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">台灣本土貓</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-08</span></div>
+              <h2>台灣米克斯貓完整介紹：花色、個性、領養指南</h2>
+              <p>「米克斯」（Mixed，英文 mixed breed 的音譯）是台灣對混種貓的通稱，指非人工選育的自然繁殖貓。本文整理台灣米克斯的常見花色、基因事實，以及領養管道。</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="subcat-section">
+        <div class="subcat-heading">特殊與健康爭議</div>
+        <div class="article-list">
+          <a class="article-card is-draft" href="scottish-fold-breed-guide-taiwan.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">🆕</span><img class="thumb-img" src="https://image.pollinations.ai/prompt/Scottish%20Fold%20cat%20portrait%2C%20distinctive%20folded%20ears%2C%20round%20owl-like%20face%2C%20large%20round%20eyes%2C%20sitting%20upright%2C%20adorable%20expression%2C%20professional%20pet%20photography%2C%20soft%20natural%20bokeh%20lighting%2C%20photorealistic%20high%20quality%2C%204K%20sharp%20focus%2C%20warm%20tones?width=800&height=450&nologo=true&model=flux-schnell&seed=42" alt="" loading="lazy" onerror="this.remove()"></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">特殊與健康爭議</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-08</span></div>
+              <h2>蘇格蘭折耳貓：可愛外表背後的基因疾病問題（飼主必讀）</h2>
+              <p>蘇格蘭折耳貓的折耳是基因突變的結果，所有折耳貓都帶有會導致骨關節疼痛的遺傳缺陷。了解這個科學事實，以及如何照顧已擁有折耳貓的飼主的責任。</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="cat-section" data-cat="健康">
+      <h2 class="cat-heading">❤️ 健康 <span class="count">21 篇</span></h2>
+      <div class="subcat-section">
+        <div class="subcat-heading">常見疾病</div>
+        <div class="article-list">
+          <a class="article-card is-draft" href="cat-eye-ear-problems-taiwan.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">❤️</span></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">常見疾病</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-19</span></div>
+              <h2>貓咪眼睛與耳朵問題完整指南</h2>
+              <p>眼分泌物顏色判讀、結膜炎/角膜潰瘍辨識 + 耳疥蟲 vs 耳炎差異、居家安全清潔 SOP、何時就醫。</p>
+            </div>
+          </a>
+          <a class="article-card is-draft" href="cat-cancer-tumors-guide.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">❤️</span><img class="thumb-img" src="https://image.pollinations.ai/prompt/Senior%20cat%20at%20veterinary%20examination%2C%20health%20screening%20for%20older%20cats%2C%20caring%20oncology%20check%2C%20professional%20pet%20photography%2C%20soft%20natural%20bokeh%20lighting%2C%20photorealistic%20high%20quality%2C%204K%20sharp%20focus%2C%20warm%20tones?width=800&height=450&nologo=true&model=flux-schnell&seed=42" alt="" loading="lazy" onerror="this.remove()"></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">常見疾病</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-09</span></div>
+              <h2>貓咪常見腫瘤與癌症：淋巴瘤、注射部位肉瘤、口腔癌早期識別</h2>
+              <p>貓咪是常見罹癌的動物，淋巴瘤是最常見的癌症類型。了解各類腫瘤的早期警訊、診斷方式與治療選項，及早發現是改善預後最重要的一步。</p>
+            </div>
+          </a>
+          <a class="article-card is-draft" href="cat-cognitive-dysfunction.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">❤️</span><img class="thumb-img" src="https://image.pollinations.ai/prompt/Very%20senior%20cat%20gazing%20into%20distance%20with%20gentle%20confused%20look%2C%20cognitive%20dysfunction%20syndrome%2C%20elderly%20cat%20mental%20health%2C%20professional%20pet%20photography%2C%20soft%20natural%20bokeh%20lighting%2C%20photorealistic%20high%20quality%2C%204K%20sharp%20focus%2C%20warm%20tones?width=800&height=450&nologo=true&model=flux-schnell&seed=42" alt="" loading="lazy" onerror="this.remove()"></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">常見疾病</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-09</span></div>
+              <h2>老貓認知功能障礙（貓咪失智）：症狀識別與居家管理</h2>
+              <p>超過 50% 的 15 歲以上老貓有認知功能障礙。了解與老化、高血壓或甲狀腺亢進的區分，以及延緩進展的環境和飲食策略。</p>
+            </div>
+          </a>
+          <a class="article-card is-draft" href="cat-fip-guide-taiwan.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">❤️</span><img class="thumb-img" src="https://image.pollinations.ai/prompt/Veterinarian%20examining%20sick%20cat%20with%20swollen%20abdomen%2C%20FIP%20diagnosis%2C%20caring%20professional%20vet%20clinic%2C%20compassionate%20treatment%2C%20professional%20pet%20photography%2C%20soft%20natural%20bokeh%20lighting%2C%20photorealistic%20high%20quality%2C%204K%20sharp%20focus%2C%20warm%20tones?width=800&height=450&nologo=true&model=flux-schnell&seed=42" alt="" loading="lazy" onerror="this.remove()"></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">常見疾病</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-09</span></div>
+              <h2>貓傳染性腹膜炎（FIP）：症狀、診斷與 GS-441524 治療台灣現況</h2>
+              <p>FIP 曾是貓咪最令人絕望的診斷之一，但 GS-441524 抗病毒療法已讓超過 85% 的貓咪達到緩解。了解濕型與乾型 FIP 的症狀、診斷方式，以及台灣取得治療的現況。</p>
+            </div>
+          </a>
+          <a class="article-card is-draft" href="cat-hcm-heart-disease.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">❤️</span><img class="thumb-img" src="https://image.pollinations.ai/prompt/Veterinarian%20using%20stethoscope%20to%20listen%20to%20cat%27s%20heart%2C%20cardiac%20examination%2C%20echocardiogram%20monitor%2C%20professional%20cardiology%2C%20professional%20pet%20photography%2C%20soft%20natural%20bokeh%20lighting%2C%20photorealistic%20high%20quality%2C%204K%20sharp%20focus%2C%20warm%20tones?width=800&height=450&nologo=true&model=flux-schnell&seed=42" alt="" loading="lazy" onerror="this.remove()"></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">常見疾病</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-09</span></div>
+              <h2>貓咪肥厚型心肌病（HCM）：最常見的貓心臟病完整說明</h2>
+              <p>HCM 是貓咪最常見的心臟病，估計 15% 的貓咪帶有相關基因。了解哪些品種高風險、症狀識別、心臟超音波篩檢，以及藥物管理。</p>
+            </div>
+          </a>
+          <a class="article-card is-draft" href="cat-hepatic-lipidosis.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">❤️</span><img class="thumb-img" src="https://image.pollinations.ai/prompt/Cat%20receiving%20nutritional%20support%20at%20veterinary%20clinic%2C%20tube%20feeding%2C%20critical%20care%20for%20cats%2C%20compassionate%20treatment%2C%20professional%20pet%20photography%2C%20soft%20natural%20bokeh%20lighting%2C%20photorealistic%20high%20quality%2C%204K%20sharp%20focus%2C%20warm%20tones?width=800&height=450&nologo=true&model=flux-schnell&seed=42" alt="" loading="lazy" onerror="this.remove()"></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">常見疾病</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-09</span></div>
+              <h2>貓咪脂肪肝（肝脂肪肝病）：為什麼不吃東西會危及生命</h2>
+              <p>貓咪停止進食超過 48–72 小時就可能啟動脂肪肝病變機制，肥胖貓風險更高。了解脂肪肝的原因、症狀、緊急治療方式，以及為什麼貓咪節食有別於其他動物。</p>
+            </div>
+          </a>
+          <a class="article-card is-draft" href="cat-ibd-intestinal-disease.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">❤️</span><img class="thumb-img" src="https://image.pollinations.ai/prompt/Cat%20eating%20therapeutic%20prescription%20diet%20from%20bowl%2C%20gastrointestinal%20health%2C%20dietary%20management%2C%20indoor%20domestic%20cat%2C%20professional%20pet%20photography%2C%20soft%20natural%20bokeh%20lighting%2C%20photorealistic%20high%20quality%2C%204K%20sharp%20focus%2C%20warm%20tones?width=800&height=450&nologo=true&model=flux-schnell&seed=42" alt="" loading="lazy" onerror="this.remove()"></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">常見疾病</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-09</span></div>
+              <h2>貓咪腸道炎（IBD）：慢性嘔吐腹瀉的背後原因與管理</h2>
+              <p>貓咪 IBD（炎症性腸病）是慢性嘔吐和腹瀉的常見原因之一，與腸道淋巴瘤難以區分。了解診斷方法、飲食管理，以及為何活體組織切片如此重要。</p>
+            </div>
+          </a>
+          <a class="article-card is-draft" href="cat-upper-respiratory-infection.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">❤️</span><img class="thumb-img" src="https://image.pollinations.ai/prompt/Sick%20kitten%20with%20watery%20eyes%20and%20runny%20nose%2C%20respiratory%20infection%2C%20gentle%20care%2C%20warm%20and%20cozy%20environment%2C%20professional%20pet%20photography%2C%20soft%20natural%20bokeh%20lighting%2C%20photorealistic%20high%20quality%2C%204K%20sharp%20focus%2C%20warm%20tones?width=800&height=450&nologo=true&model=flux-schnell&seed=42" alt="" loading="lazy" onerror="this.remove()"></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">常見疾病</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-09</span></div>
+              <h2>貓咪上呼吸道感染（貓感冒）：症狀、治療與預防</h2>
+              <p>貓咪「感冒」幾乎都是貓疱疹病毒（FHV-1）或貓卡里西病毒（FCV）感染。了解症狀識別、居家護理方法，以及疱疹病毒終生潛伏的管理。</p>
+            </div>
+          </a>
+          <a class="article-card is-draft" href="cat-ckd-complete-guide.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">❤️</span><img class="thumb-img" src="../images/articles/cat-ckd-complete-guide.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">常見疾病</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-08</span></div>
+              <h2>貓咪慢性腎病（CKD）完整指南：分期、飲食管理與日常照護</h2>
+              <p>貓咪 CKD 是老貓最常見的疾病之一，IRIS 2023 分期指引、低磷飲食策略、水分補充方法，讓你陪貓咪走好每一步。</p>
+            </div>
+          </a>
+          <a class="article-card is-draft" href="cat-diabetes-care.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">❤️</span><img class="thumb-img" src="https://image.pollinations.ai/prompt/Cat%20receiving%20blood%20glucose%20monitoring%20at%20veterinary%20clinic%2C%20diabetes%20management%2C%20careful%20veterinarian%2C%20clinical%20setting%2C%20professional%20pet%20photography%2C%20soft%20natural%20bokeh%20lighting%2C%20photorealistic%20high%20quality%2C%204K%20sharp%20focus%2C%20warm%20tones?width=800&height=450&nologo=true&model=flux-schnell&seed=42" alt="" loading="lazy" onerror="this.remove()"></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">常見疾病</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-08</span></div>
+              <h2>貓咪糖尿病照護指南：症狀、治療與居家管理</h2>
+              <p>貓咪糖尿病與人類第二型糖尿病相似，肥胖是最大風險因子。了解症狀、胰島素注射方法、飲食管理，以及緩解（remission）的可能性。</p>
+            </div>
+          </a>
+          <a class="article-card is-draft" href="cat-hyperthyroidism-senior.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">❤️</span><img class="thumb-img" src="https://image.pollinations.ai/prompt/Senior%20cat%20at%20veterinary%20examination%2C%20thyroid%20health%20monitoring%2C%20elderly%20cat%20wellness%20check%2C%20professional%20vet%20with%20stethoscope%2C%20professional%20pet%20photography%2C%20soft%20natural%20bokeh%20lighting%2C%20photorealistic%20high%20quality%2C%204K%20sharp%20focus%2C%20warm%20tones?width=800&height=450&nologo=true&model=flux-schnell&seed=42" alt="" loading="lazy" onerror="this.remove()"></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">常見疾病</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-08</span></div>
+              <h2>老貓甲狀腺亢進：症狀、診斷與治療選項完整說明</h2>
+              <p>甲狀腺亢進是老貓第二常見的內分泌疾病，多食卻消瘦是典型症狀。了解診斷方法、四種治療選項（藥物、碘131、手術、飲食）的優缺點比較。</p>
+            </div>
+          </a>
+          <a class="article-card is-draft" href="cat-skin-allergies.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">❤️</span><img class="thumb-img" src="https://image.pollinations.ai/prompt/Veterinarian%20examining%20cat%20skin%20and%20fur%20for%20allergies%2C%20dermatology%20assessment%2C%20parting%20cat%27s%20coat%2C%20professional%20clinical%20examination%2C%20professional%20pet%20photography%2C%20soft%20natural%20bokeh%20lighting%2C%20photorealistic%20high%20quality%2C%204K%20sharp%20focus%2C%20warm%20tones?width=800&height=450&nologo=true&model=flux-schnell&seed=42" alt="" loading="lazy" onerror="this.remove()"></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">常見疾病</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-08</span></div>
+              <h2>貓咪皮膚過敏：症狀、過敏原種類與治療選項</h2>
+              <p>貓咪皮膚過敏分為食物過敏、跳蚤過敏和環境過敏三大類。了解各類型症狀差異、診斷方法（水解飼料試驗）與現代治療選項。</p>
+            </div>
+          </a>
+          <a class="article-card is-draft" href="fiv-felv-management-taiwan.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">❤️</span><img class="thumb-img" src="https://image.pollinations.ai/prompt/Veterinarian%20drawing%20blood%20from%20cat%20for%20FIV%20FeLV%20testing%2C%20laboratory%20testing%2C%20professional%20diagnostic%20clinic%2C%20professional%20pet%20photography%2C%20soft%20natural%20bokeh%20lighting%2C%20photorealistic%20high%20quality%2C%204K%20sharp%20focus%2C%20warm%20tones?width=800&height=450&nologo=true&model=flux-schnell&seed=42" alt="" loading="lazy" onerror="this.remove()"></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">常見疾病</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-08</span></div>
+              <h2>貓愛滋（FIV）與貓白血病（FeLV）：台灣版管理指南</h2>
+              <p>FIV 陽性貓可以活得很久，FeLV 陽性貓需要更積極管理。了解兩種病毒的傳播方式、診斷、台灣認養現況，以及共同飼養的注意事項。</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="subcat-section">
+        <div class="subcat-heading">預防保健</div>
+        <div class="article-list">
+          <a class="article-card is-draft" href="cat-neutering-aftercare-taiwan.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">❤️</span></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">預防保健</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-19</span></div>
+              <h2>貓咪結紮完整指南 — 時機 / 費用 / 補助 / 術後 7 天照顧</h2>
+              <p>貓結紮全流程：醫學依據、台灣費用 + 6 都補助、術前準備、術後 7 天照顧 SOP、何時要回診、結紮後飲食調整。</p>
+            </div>
+          </a>
+          <a class="article-card is-draft" href="cat-parasite-prevention-taiwan.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">❤️</span></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">預防保健</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-19</span></div>
+              <h2>貓咪寄生蟲預防完整指南 — 內外驅蟲 + 跳蚤防治</h2>
+              <p>台灣常見體內外寄生蟲清單 + 寵愛/心疥爽/博來恩比較 + 跳蚤生命週期防治 + 室內貓也要驅蟲的真相。</p>
+            </div>
+          </a>
+          <a class="article-card is-draft" href="cat-vaccination-wellness-taiwan.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">❤️</span></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">預防保健</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-19</span></div>
+              <h2>貓咪預防保健 — 疫苗時程 + 年度健檢完整指南</h2>
+              <p>WSAVA 疫苗時程 + 含/無佐劑差異 + 狂犬病台灣法規真相 + 各年齡層健檢頻率與項目 + 台灣費用行情。</p>
+            </div>
+          </a>
+          <a class="article-card is-draft" href="cat-toxoplasma-pregnancy.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">❤️</span><img class="thumb-img" src="https://image.pollinations.ai/prompt/Cat%20being%20tested%20at%20veterinary%20clinic%2C%20toxoplasmosis%20awareness%2C%20safety%20during%20pregnancy%2C%20professional%20veterinary%20testing%2C%20professional%20pet%20photography%2C%20soft%20natural%20bokeh%20lighting%2C%20photorealistic%20high%20quality%2C%204K%20sharp%20focus%2C%20warm%20tones?width=800&height=450&nologo=true&model=flux-schnell&seed=42" alt="" loading="lazy" onerror="this.remove()"></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">預防保健</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-09</span></div>
+              <h2>孕婦可以養貓嗎？弓形蟲的真相與台灣實際風險</h2>
+              <p>「懷孕不能養貓」是常見誤解。弓形蟲的實際傳播途徑是生肉和生菜，不是貓咪本身。了解真實風險評估和預防措施，讓孕婦和貓咪安全共處。</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="subcat-section">
+        <div class="subcat-heading">急症辨識</div>
+        <div class="article-list">
+          <a class="article-card is-draft" href="cat-common-symptoms-taiwan.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">❤️</span></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">急症辨識</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-19</span></div>
+              <h2>貓常見症狀速查 — 嘔吐 / 便秘 / 體重下降何時就醫</h2>
+              <p>三大常見症狀識別與就醫判斷：嘔吐 vs 乾嘔 vs 反芻、便秘到巨結腸的進展、體重下降的鑑別診斷。</p>
+            </div>
+          </a>
+          <a class="article-card is-draft" href="cat-emergency-care-taiwan.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">❤️</span></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">急症辨識</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-19</span></div>
+              <h2>貓咪急診判斷與居家急救 SOP — 何時該衝醫院 + 路上能做什麼</h2>
+              <p>貓咪症狀紅黃橘綠四級判斷 + 中毒/骨折/出血/窒息/低體溫的就醫前處置 SOP。引用 ICatCare、VCA、ASPCA。</p>
+            </div>
+          </a>
+          <a class="article-card is-draft" href="male-cat-urethral-obstruction.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">❤️</span><img class="thumb-img" src="https://image.pollinations.ai/prompt/Male%20cat%20in%20emergency%20veterinary%20care%2C%20critical%20urinary%20care%2C%20urgent%20treatment%2C%20professional%20emergency%20animal%20hospital%2C%20professional%20pet%20photography%2C%20soft%20natural%20bokeh%20lighting%2C%20photorealistic%20high%20quality%2C%204K%20sharp%20focus%2C%20warm%20tones?width=800&height=450&nologo=true&model=flux-schnell&seed=42" alt="" loading="lazy" onerror="this.remove()"></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">急症辨識</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-08</span></div>
+              <h2>公貓尿道阻塞急症：症狀辨識與黃金救治時間</h2>
+              <p>尿道阻塞是公貓最常見的致命急症之一。一旦發生，24–48 小時內可能因腎衰竭和電解質失衡危及生命。許多飼主誤以為貓咪只是便秘，延誤就醫。本文幫助你在第一時間辨識症狀。</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="subcat-section">
+        <div class="subcat-heading">口腔健康</div>
+        <div class="article-list">
+          <a class="article-card is-draft" href="cat-dental-health-taiwan.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">❤️</span></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">口腔健康</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-19</span></div>
+              <h2>貓咪口腔健康完整指南 — 刷牙 / 洗牙 / 牙吸收症 / 費用</h2>
+              <p>3 歲以上貓 70% 有牙周病，30-60% 有 FORL 牙吸收症。3 週刷牙訓練 + 全麻洗牙必要性 + 台灣費用 + 何時要看獸醫。</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="cat-section" data-cat="飲食">
+      <h2 class="cat-heading">🍖 飲食 <span class="count">7 篇</span></h2>
+      <div class="subcat-section">
+        <div class="subcat-heading">飼料選擇</div>
+        <div class="article-list">
+          <a class="article-card is-draft" href="cat-food-selection-taiwan.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">🍖</span></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">飼料選擇</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-19</span></div>
+              <h2>貓飼料怎麼選 — 看懂標籤 / 品質指標 / 乾濕比較</h2>
+              <p>跳過行銷話術選飼料：5 個 WSAVA 品質指標 + 看懂標籤（乾基換算 / 原料順序 / 保證成分） + 乾濕比較 + 台灣市售推薦。</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="subcat-section">
+        <div class="subcat-heading">特殊需求</div>
+        <div class="article-list">
+          <a class="article-card is-draft" href="cat-treats-supplements-taiwan.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">🍖</span></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">特殊需求</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-19</span></div>
+              <h2>貓咪零食與保健品完整指南 — 怎麼選 + 安全劑量</h2>
+              <p>零食 10% 熱量原則 + 肉泥棒 / 凍乾選購重點 + 補充品實證等級 + Omega-3 / 益生菌 / 化毛膏正確劑量。</p>
+            </div>
+          </a>
+          <a class="article-card is-draft" href="cat-obesity-weight-management.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">🍖</span><img class="thumb-img" src="https://image.pollinations.ai/prompt/Cat%20sitting%20on%20veterinary%20scale%2C%20weight%20management%20consultation%2C%20slightly%20overweight%20cat%2C%20professional%20dietary%20assessment%2C%20professional%20pet%20photography%2C%20soft%20natural%20bokeh%20lighting%2C%20photorealistic%20high%20quality%2C%204K%20sharp%20focus%2C%20warm%20tones?width=800&height=450&nologo=true&model=flux-schnell&seed=42" alt="" loading="lazy" onerror="this.remove()"></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">特殊需求</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-09</span></div>
+              <h2>貓咪肥胖管理與減重指南：正確減重速度與常見錯誤</h2>
+              <p>貓肥胖極為普遍（北美調查逾六成過重）。了解如何評估體態（BCS 量表）、計算目標熱量，以及安全的減重速度——過快減重可能引發致命的肝脂肪沉積症。</p>
+            </div>
+          </a>
+          <a class="article-card is-draft" href="cat-food-by-life-stage.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">🍖</span><img class="thumb-img" src="https://image.pollinations.ai/prompt/Three%20cats%20of%20different%20ages%20eating%20appropriate%20food%2C%20kitten%20kitten%20adult%20senior%20cat%2C%20life%20stage%20nutrition%2C%20professional%20pet%20photography%2C%20soft%20natural%20bokeh%20lighting%2C%20photorealistic%20high%20quality%2C%204K%20sharp%20focus%2C%20warm%20tones?width=800&height=450&nologo=true&model=flux-schnell&seed=42" alt="" loading="lazy" onerror="this.remove()"></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">特殊需求</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-08</span></div>
+              <h2>貓咪不同年齡的飲食需求：幼貓、成貓、老貓全解析</h2>
+              <p>幼貓需要高熱量促進發育，老貓需要控制磷攝取保護腎臟。不同生命階段的飲食需求差異、換糧時機與方法。</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="subcat-section">
+        <div class="subcat-heading">毒物安全</div>
+        <div class="article-list">
+          <a class="article-card is-draft" href="cat-toxic-substances-taiwan.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">🍖</span></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">毒物安全</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-19</span></div>
+              <h2>貓咪危險物質速查 — 食物、植物、家用化學一次看</h2>
+              <p>貓誤食速查 — 真百合 18 小時治療窗、和平百合≠真百合、蔥蒜溶血機制、巧克力/木糖醇/葡萄無解藥。FDA / ASPCA / VCA / iCatCare 佐證。</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="subcat-section">
+        <div class="subcat-heading">特殊飲食</div>
+        <div class="article-list">
+          <a class="article-card is-draft" href="cat-water-urinary-health-taiwan.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">🍖</span></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">特殊飲食</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-19</span></div>
+              <h2>貓咪水分與泌尿道健康 — 預防 FLUTD 完整指南</h2>
+              <p>貓咪每日需水量計算 + 缺水判斷 + 增加飲水 5 法 + FLUTD 飲食預防 + 公貓尿道阻塞緊急信號。</p>
+            </div>
+          </a>
+          <a class="article-card is-draft" href="barf-raw-food-taiwan.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">🍖</span><img class="thumb-img" src="../images/articles/barf-raw-food-taiwan.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">特殊飲食</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-08</span></div>
+              <h2>BARF 生食飲食台灣版：好處、風險與安全實施方法</h2>
+              <p>BARF（骨頭和生食）在台灣逐漸流行，但風險不容忽視。了解生食的潛在好處、沙門氏菌等細菌風險，以及如何安全實施。</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="cat-section" data-cat="行為">
+      <h2 class="cat-heading">🐾 行為 <span class="count">8 篇</span></h2>
+      <div class="subcat-section">
+        <div class="subcat-heading">自然行為</div>
+        <div class="article-list">
+          <a class="article-card is-draft" href="cat-natural-behavior-taiwan.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">🐾</span></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">自然行為</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-19</span></div>
+              <h2>貓的自然行為解讀 — 肢體語言 / 梳理 / 玩耍</h2>
+              <p>讀懂貓 — 尾耳眼姿勢的情緒密碼 + 梳理行為的多重功能 + 狩獵循環玩耍法。避免誤讀導致抓咬，提升人貓關係。</p>
+            </div>
+          </a>
+          <a class="article-card is-draft" href="cat-zoomies-night-activity.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">🐾</span><img class="thumb-img" src="https://image.pollinations.ai/prompt/Energetic%20cat%20mid-leap%20doing%20zoomies%2C%20motion%20blur%2C%20playful%20nighttime%20activity%2C%20wild%20energy%20burst%2C%20indoor%20cat%2C%20professional%20pet%20photography%2C%20soft%20natural%20bokeh%20lighting%2C%20photorealistic%20high%20quality%2C%204K%20sharp%20focus%2C%20warm%20tones?width=800&height=450&nologo=true&model=flux-schnell&seed=42" alt="" loading="lazy" onerror="this.remove()"></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">自然行為</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-08</span></div>
+              <h2>貓咪夜間瘋跑（Zoomies）：原因解析與減少夜間吵鬧的方法</h2>
+              <p>貓咪為什麼總在半夜發瘋狂奔？了解貓咪黎明動物的生理節律、Zoomies 的原因，以及調整作息讓貓咪和你一起安眠的實用方法。</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="subcat-section">
+        <div class="subcat-heading">問題行為</div>
+        <div class="article-list">
+          <a class="article-card is-draft" href="cat-aggression-causes-treatment.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">🐾</span><img class="thumb-img" src="../images/articles/cat-aggression-causes-treatment.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">問題行為</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-08</span></div>
+              <h2>貓咪攻擊行為：常見類型、原因分析與有效處置方法</h2>
+              <p>貓咪攻擊行為分為多種類型，需要不同的處置策略。了解撫觸誘發攻擊、重新定向攻擊、恐懼攻擊的識別與處置，避免被咬後的感染風險。</p>
+            </div>
+          </a>
+          <a class="article-card is-draft" href="cat-anxiety-stress-management.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">🐾</span><img class="thumb-img" src="https://image.pollinations.ai/prompt/Cat%20hiding%20in%20cozy%20cave%20bed%2C%20stress%20relief%20environment%2C%20Feliway%20diffuser%20nearby%2C%20calm%20safe%20space%20for%20anxious%20cat%2C%20professional%20pet%20photography%2C%20soft%20natural%20bokeh%20lighting%2C%20photorealistic%20high%20quality%2C%204K%20sharp%20focus%2C%20warm%20tones?width=800&height=450&nologo=true&model=flux-schnell&seed=42" alt="" loading="lazy" onerror="this.remove()"></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">問題行為</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-08</span></div>
+              <h2>貓咪焦慮與壓力管理：識別信號、常見誘因與緩解方法</h2>
+              <p>貓咪的壓力可能引發膀胱炎、過度梳理、攻擊等問題。了解如何識別壓力信號、找出誘因，以及費洛蒙、環境改善等科學驗證的緩解方法。</p>
+            </div>
+          </a>
+          <a class="article-card is-draft" href="cat-inappropriate-elimination.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">🐾</span><img class="thumb-img" src="https://image.pollinations.ai/prompt/Clean%20modern%20covered%20litter%20box%2C%20behavioral%20consultation%20setup%2C%20inappropriate%20elimination%20problem%20solving%2C%20cat%20care%20environment%2C%20professional%20pet%20photography%2C%20soft%20natural%20bokeh%20lighting%2C%20photorealistic%20high%20quality%2C%204K%20sharp%20focus%2C%20warm%20tones?width=800&height=450&nologo=true&model=flux-schnell&seed=42" alt="" loading="lazy" onerror="this.remove()"></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">問題行為</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-08</span></div>
+              <h2>貓咪亂尿尿怎麼辦？完整排查與解決指南</h2>
+              <p>貓咪在貓砂盆以外排尿的完整排查流程：醫療原因 vs 行為原因，台灣飼主最常犯的錯誤，實際解決步驟。</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="subcat-section">
+        <div class="subcat-heading">多貓管理</div>
+        <div class="article-list">
+          <a class="article-card is-draft" href="multi-cat-household-taiwan.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">🐾</span></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">多貓管理</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-19</span></div>
+              <h2>多貓家庭完整指南 — 引介 / 空間規劃 / 衝突管理</h2>
+              <p>貓是孤獨獵人，多貓共處需人為管理。N+1 資源法則 + 10 天引介流程 + 垂直空間設計 + 隱性壓力辨識 + 費洛蒙輔助。</p>
+            </div>
+          </a>
+          <a class="article-card is-draft" href="cat-pheromone-products-guide.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">🐾</span><img class="thumb-img" src="https://image.pollinations.ai/prompt/Cat%20calmly%20resting%20near%20pheromone%20diffuser%2C%20stress%20relief%20for%20cats%2C%20calm%20home%20environment%2C%20professional%20pet%20photography%2C%20soft%20natural%20bokeh%20lighting%2C%20photorealistic%20high%20quality%2C%204K%20sharp%20focus%2C%20warm%20tones?width=800&height=450&nologo=true&model=flux-schnell&seed=42" alt="" loading="lazy" onerror="this.remove()"></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">多貓管理</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-09</span></div>
+              <h2>貓咪費洛蒙產品完整指南：Feliway 等合成費洛蒙的使用時機與效果</h2>
+              <p>費洛蒙擴散器和噴霧不是萬靈丹，但對特定壓力情境有明確效果。了解 Feliway Classic vs MultiCat 的差異、適用情境、台灣取得方式，以及費洛蒙無效時該怎麼辦。</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="subcat-section">
+        <div class="subcat-heading">心理健康</div>
+        <div class="article-list">
+          <a class="article-card is-draft" href="solo-cat-mental-health.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">🐾</span><img class="thumb-img" src="https://image.pollinations.ai/prompt/Single%20cat%20engaged%20with%20interactive%20puzzle%20toy%2C%20solo%20cat%20mental%20enrichment%2C%20independent%20play%2C%20stimulation%2C%20professional%20pet%20photography%2C%20soft%20natural%20bokeh%20lighting%2C%20photorealistic%20high%20quality%2C%204K%20sharp%20focus%2C%20warm%20tones?width=800&height=450&nologo=true&model=flux-schnell&seed=42" alt="" loading="lazy" onerror="this.remove()"></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">心理健康</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-08</span></div>
+              <h2>獨居貓的心理健康：如何豐富單貓家庭的生活</h2>
+              <p>一隻貓就夠了嗎？獨居貓可能面臨孤獨和無聊，但透過環境豐富化、固定互動和益智玩具，可以有效滿足牠的心理需求。</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="cat-section" data-cat="環境">
+      <h2 class="cat-heading">🏠 環境 <span class="count">6 篇</span></h2>
+      <div class="subcat-section">
+        <div class="subcat-heading">安全防護</div>
+        <div class="article-list">
+          <a class="article-card is-draft" href="cat-home-safety-taiwan.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">🏠</span></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">安全防護</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-19</span></div>
+              <h2>貓咪居家安全完整清單 — 室內危險 / 防墜 / 防逃脫</h2>
+              <p>新貓到家前必排查：電線/化學品/精油/小物件吞食 + 台灣高樓陽台防墜（防貓網/隱形鐵窗）+ 防逃脫雙重門禁 + 走失應對 SOP。</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="subcat-section">
+        <div class="subcat-heading">空間設計</div>
+        <div class="article-list">
+          <a class="article-card is-draft" href="cat-litter-box-guide.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">🏠</span><img class="thumb-img" src="https://image.pollinations.ai/prompt/Clean%20open%20litter%20box%20with%20fresh%20litter%2C%20ideal%20placement%2C%20multiple%20cat%20homes%20litter%20management%2C%20hygienic%20setup%2C%20professional%20pet%20photography%2C%20soft%20natural%20bokeh%20lighting%2C%20photorealistic%20high%20quality%2C%204K%20sharp%20focus%2C%20warm%20tones?width=800&height=450&nologo=true&model=flux-schnell&seed=42" alt="" loading="lazy" onerror="this.remove()"></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">空間設計</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-08</span></div>
+              <h2>貓砂盆選購指南：貓砂種類比較、清潔頻率、常見錯誤</h2>
+              <p>豆腐砂 vs 礦砂 vs 水晶砂完整比較，貓砂盆數量公式、清潔頻率、放置位置，台灣市售品牌推薦。</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="subcat-section">
+        <div class="subcat-heading">日常照料</div>
+        <div class="article-list">
+          <a class="article-card is-draft" href="cat-home-grooming-guide.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">🏠</span><img class="thumb-img" src="https://image.pollinations.ai/prompt/Owner%20brushing%20fluffy%20cat%20at%20home%2C%20home%20grooming%20session%2C%20deshedding%20brush%2C%20bonding%20time%2C%20relaxed%20cat%2C%20professional%20pet%20photography%2C%20soft%20natural%20bokeh%20lighting%2C%20photorealistic%20high%20quality%2C%204K%20sharp%20focus%2C%20warm%20tones?width=800&height=450&nologo=true&model=flux-schnell&seed=42" alt="" loading="lazy" onerror="this.remove()"></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">日常照料</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-09</span></div>
+              <h2>貓咪居家美容指南：梳毛、剪指甲、清耳朵的正確方法</h2>
+              <p>定期居家美容不只是外觀問題，更是健康監測的機會。了解梳毛頻率、剪指甲的安全方式，以及清耳朵和刷牙的正確步驟。</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="subcat-section">
+        <div class="subcat-heading">環境選擇</div>
+        <div class="article-list">
+          <a class="article-card is-draft" href="cat-leaving-home-taiwan.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">🏠</span></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">環境選擇</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-19</span></div>
+              <h2>貓咪離家怎麼辦 — 寄宿選擇完整指南</h2>
+              <p>上門保姆 vs 貓旅館 vs 動物醫院寄宿 vs 親友家：4 種方式的壓力、感染風險、適用情境完整比較，含出發前準備清單。</p>
+            </div>
+          </a>
+          <a class="article-card is-draft" href="cat-indoor-vs-outdoor-taiwan.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">🏠</span><img class="thumb-img" src="https://image.pollinations.ai/prompt/Indoor%20cat%20looking%20wistfully%20through%20window%20at%20outdoor%20garden%2C%20indoor%20outdoor%20lifestyle%20debate%2C%20safe%20indoor%20enrichment%2C%20Taiwan%20apartment%2C%20professional%20pet%20photography%2C%20soft%20natural%20bokeh%20lighting%2C%20photorealistic%20high%20quality%2C%204K%20sharp%20focus%2C%20warm%20tones?width=800&height=450&nologo=true&model=flux-schnell&seed=42" alt="" loading="lazy" onerror="this.remove()"></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">環境選擇</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-09</span></div>
+              <h2>室內飼養 vs 放養：台灣環境下的風險與決策</h2>
+              <p>台灣街道的車流、外來病毒和野動物使室外貓的平均壽命僅 2-5 年，而室內貓可達 12-15 年。了解如何讓室內生活豐富有趣，以及安全的「折衷方案」。</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="subcat-section">
+        <div class="subcat-heading">環境豐富化</div>
+        <div class="article-list">
+          <a class="article-card is-draft" href="cat-environment-enrichment-taiwan.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">🏠</span></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">環境豐富化</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-19</span></div>
+              <h2>貓咪環境豐富化與垂直空間 — 台灣公寓完整方案</h2>
+              <p>ISFM 5 大環境需求 + 台灣公寓垂直空間設計 + 貓跳台選購 + DIY 低成本方案 + 互動玩耍頻率與技巧。</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="cat-section" data-cat="階段">
+      <h2 class="cat-heading">⏳ 階段 <span class="count">5 篇</span></h2>
+      <div class="subcat-section">
+        <div class="subcat-heading">幼貓期</div>
+        <div class="article-list">
+          <a class="article-card is-draft" href="kitten-care-complete-taiwan.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">⏳</span></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">幼貓期</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-19</span></div>
+              <h2>幼貓 0-6 個月完整照顧（含斷奶）</h2>
+              <p>幼貓 0-6 月每階段重點：奶貓哺育（禁牛奶）、4-8 週斷奶、8-12 週疫苗、4-6 月結紮、台灣費用 + 用品清單。</p>
+            </div>
+          </a>
+          <a class="article-card is-draft" href="kitten-socialization.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">⏳</span><img class="thumb-img" src="https://image.pollinations.ai/prompt/Kitten%20being%20gently%20held%20and%20socialized%20by%20child%2C%20positive%20early%20handling%2C%20learning%20to%20trust%20humans%2C%20gentle%20interaction%2C%20professional%20pet%20photography%2C%20soft%20natural%20bokeh%20lighting%2C%20photorealistic%20high%20quality%2C%204K%20sharp%20focus%2C%20warm%20tones?width=800&height=450&nologo=true&model=flux-schnell&seed=42" alt="" loading="lazy" onerror="this.remove()"></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">幼貓期</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-08</span></div>
+              <h2>幼貓社會化期：2–7 週黃金窗口，錯過就難補</h2>
+              <p>貓咪社會化黃金期（2–7 週）的重要性、錯過後的影響、可以做什麼補救，附台灣領養建議。</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="subcat-section">
+        <div class="subcat-heading">成貓期</div>
+        <div class="article-list">
+          <a class="article-card is-draft" href="cat-life-stages-care-taiwan.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">⏳</span></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">成貓期</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-19</span></div>
+              <h2>成貓 + 老貓 完整照顧 — 1-7 歲到 15 歲分齡指南</h2>
+              <p>1-7 歲成貓黃金期 + 7-15+ 老貓分齡 + 7 大老貓常見病（CKD/甲亢/糖尿病/關節炎/高血壓） + 健檢頻率 + 居家監測。</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="subcat-section">
+        <div class="subcat-heading">懷孕與生產</div>
+        <div class="article-list">
+          <a class="article-card is-draft" href="cat-pregnancy-birth-nursing-taiwan.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">⏳</span></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">懷孕與生產</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-19</span></div>
+              <h2>母貓懷孕 / 生產 / 哺乳完整指南</h2>
+              <p>母貓 63-65 天懷孕全流程 + 飲食熱量需求（孕期 1.5x、哺乳 2-3x） + 產窩準備 + 難產急診信號 + 新生幼貓重點。</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="subcat-section">
+        <div class="subcat-heading">生命終結</div>
+        <div class="article-list">
+          <a class="article-card is-draft" href="cat-end-of-life-care-taiwan.html" data-quality="draft">
+            <div class="article-card-thumb"><span class="thumb-emoji">⏳</span></div>
+            <div class="article-card-body">
+              <div class="meta"><span class="subcat-pill">生命終結</span><span class="quality-badge q-draft">DRAFT 未審</span><span>📅 2026-04-19</span></div>
+              <h2>貓咪臨終照護與飼主哀傷 — 安寧照顧 / 安樂死決定 / 失喪走過</h2>
+              <p>末期貓的居家舒適管理 + HHHHHMM 生命品質量表 + 安樂死的倫理判斷 + 走過失喪的飼主自我照顧。</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    </div>
+  </main>
+
+  <aside class="site-ad-banner" aria-label="贊助廣告">
+    <div class="ad-card">
+      <div class="ad-label">贊助 Sponsored</div>
+      <div class="ad-slot"><span>Ad Slot · banner (responsive)</span></div>
+    </div>
+  </aside>
+
+  <footer class="site-footer">
+    <div class="f-nav">
+      <a class="f-home" href="../index.html">🏠 回首頁</a>
+      <a href="../library.html">📚 文獻庫</a>
+      <a href="../breeds.html">🐈 品種圖鑑</a>
+      <a href="../vets.html">🏥 獸醫院</a>
+      <a href="index.html">📝 文章</a>
+      <a href="../about.html">ℹ️ 關於本站</a>
+      <a href="../privacy.html">🔒 隱私政策</a>
+    </div>
+    <div class="f-meta">
+      貓健康站 · 學術來源：ISFM · WSAVA · IRIS · AAFP · ABCD · Cornell · PubMed OA<br>
+      本站內容僅供參考，不取代獸醫師診斷<br>
+      © 2026 · Built by <a href="https://github.com/Chen-MouChin" target="_blank" rel="noopener">Chen-MouChin</a>
+    </div>
+  </footer>
+
+  <aside class="site-ad-anchor" aria-label="贊助廣告">
+    <div class="ad-label">贊助</div>
+    <div class="ad-slot"><span>Ad Slot · anchor (sticky bottom)</span></div>
+    <button class="ad-close" aria-label="關閉廣告 24 小時" title="關閉 24 小時">✕</button>
+  </aside>
+  <script src="../js/ads.js"></script>
+  <script src="../js/meta.js"></script>
+  <script src="../js/i18n.js"></script>
+  <script>
+    var fd=document.getElementById('footer-date');if(fd&&typeof SITE_META!=='undefined')fd.textContent=SITE_META.data_updated;
+    // Category filter
+    (function(){
+      var sections = document.querySelectorAll('.cat-section');
+      var btns = document.querySelectorAll('.filter-btn');
+      function activate(cat) {
+        sections.forEach(function(s){ s.style.display = (cat==='全部'||s.dataset.cat===cat)?'':'none'; });
+        btns.forEach(function(b){ b.classList.toggle('active', b.dataset.cat===cat); });
+      }
+      btns.forEach(function(b){ b.addEventListener('click', function(){ activate(b.dataset.cat); }); });
+      var init = new URLSearchParams(location.search).get('cat') || '全部';
+      activate(init);
+    })();
+    // 文章搜尋（標題 / 描述 / 副分類）
+    (function(){
+      var input = document.getElementById('articleSearch');
+      if (!input) return;
+      var cards = document.querySelectorAll('.article-card');
+      function filter(q) {
+        q = (q||'').trim().toLowerCase();
+        cards.forEach(function(c){
+          var hay = c.textContent.toLowerCase();
+          c.style.display = (q === '' || hay.indexOf(q) !== -1) ? '' : 'none';
+        });
+        // 隱藏空的 subcat-section / cat-section
+        document.querySelectorAll('.subcat-section').forEach(function(sec){
+          var visible = sec.querySelectorAll('.article-card:not([style*="none"])').length;
+          sec.style.display = visible > 0 ? '' : 'none';
+        });
+        document.querySelectorAll('.cat-section').forEach(function(sec){
+          var visible = sec.querySelectorAll('.article-card:not([style*="none"])').length;
+          // 只有搜尋有內容時才隱藏空 cat-section（保留分類 filter 行為）
+          if (q) sec.style.display = visible > 0 ? '' : 'none';
+        });
+      }
+      input.addEventListener('input', function(){ filter(input.value); });
+      // 從 URL ?q= 預填（首頁搜尋框跳轉用）
+      var urlQ = new URLSearchParams(location.search).get('q');
+      if (urlQ) { input.value = urlQ; filter(urlQ); }
+    })();
+    // Quality filter (hide drafts)
+    (function(){
+      var cb = document.getElementById('hideDraftsCb');
+      var lbl = document.getElementById('qualityToggle');
+      var KEY = 'nekopedia_hide_drafts';
+      // 統計 reviewed 文章數 — 若 0 則隱藏此 toggle 避免使用者誤勾後一片空白
+      var reviewedCount = document.querySelectorAll('.article-card[data-quality="reviewed"], .article-card[data-quality="featured"]').length;
+      if (reviewedCount === 0) {
+        // 強制取消任何 localStorage 殘留 + 隱藏 toggle
+        document.body.classList.remove('hide-drafts');
+        localStorage.removeItem(KEY);
+        if (lbl) lbl.style.display = 'none';
+        return;
+      }
+      function apply(v) {
+        document.body.classList.toggle('hide-drafts', v);
+        lbl.classList.toggle('active', v);
+        localStorage.setItem(KEY, v ? '1' : '0');
+      }
+      var saved = localStorage.getItem(KEY) === '1';
+      cb.checked = saved;
+      apply(saved);
+      cb.addEventListener('change', function(){ apply(cb.checked); });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,263 @@
+/* Neko Pedia 全站共用導覽列與 footer
+ * 用法：每頁 <head> 加 <link rel="stylesheet" href="css/nav.css">
+ * 路徑為 ../css/nav.css 時用於 articles/ 子目錄頁面
+ *
+ * 結構：
+ * <nav class="site-nav">...</nav>
+ * <footer class="site-footer">...</footer>
+ *
+ * data-active 屬性標當前頁，CSS 自動高亮。
+ */
+
+/* ── 頂部導覽列 ── */
+.site-nav {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--bg-card, #fff);
+  border-bottom: 1px solid var(--border, #e5e5ea);
+  display: flex; align-items: center;
+  padding: 0.5rem 1rem;
+  gap: 0.6rem;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  background: rgba(255,255,255,0.92);
+}
+
+/* Logo button（含 emoji + 金色品牌字 + 🏠 提示）*/
+.site-nav .nav-brand {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  font-weight: 800; font-size: 1.05rem;
+  color: var(--text, #1d1d1f);
+  text-decoration: none;
+  padding: 0.35rem 0.75rem; border-radius: 18px;
+  border: 1px solid var(--border, #e5e5ea);
+  background: var(--bg-card, #fff);
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.site-nav .nav-brand .b-icon { font-size: 1.25rem; }
+/* 「Neko Pedia」金色 — 純金 fallback */
+.site-nav .nav-brand .brand-text {
+  color: #b8860b;  /* dark goldenrod，所有瀏覽器看得到 */
+  font-weight: 900;
+  letter-spacing: -0.01em;
+}
+/* 進階：metallic gradient（支援 background-clip:text 的瀏覽器才套）*/
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  .site-nav .nav-brand .brand-text {
+    background: linear-gradient(135deg,
+      #8a6020 0%,
+      #d4a52a 22%,
+      #ffd75f 50%,
+      #d4a52a 78%,
+      #8a6020 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+/* 常駐「🏠」icon — 非首頁時顯示，明確告訴使用者「這裡可以回首頁」*/
+.site-nav .nav-brand .brand-home {
+  font-size: 0.78rem; opacity: 0.55;
+  margin-left: 0.15rem;
+  transition: opacity 0.15s, transform 0.15s;
+}
+.site-nav .nav-brand.active .brand-home { display: none; }
+/* hover 強化：邊框變深 + 背景微亮 + 微浮起 + 🏠 變鮮明 */
+.site-nav .nav-brand:hover {
+  background: var(--accent-light, #f0ede6);
+  border-color: var(--accent, #1d1d1f);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px var(--shadow, rgba(0,0,0,0.06));
+}
+.site-nav .nav-brand:hover .brand-home { opacity: 1; transform: scale(1.15); }
+/* 首頁不需引導 — 邊框淡化 */
+.site-nav .nav-brand.active {
+  cursor: default; border-color: transparent; background: transparent;
+}
+.site-nav .nav-brand.active:hover {
+  background: transparent; border-color: transparent;
+  transform: none; box-shadow: none;
+}
+
+.site-nav .nav-links {
+  display: flex; gap: 0.3rem; align-items: center;
+  margin-left: auto;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.site-nav .nav-links::-webkit-scrollbar { display: none; }
+
+.site-nav .nav-link {
+  display: inline-flex; align-items: center; gap: 0.25rem;
+  padding: 0.4rem 0.7rem;
+  font-size: 0.86rem; color: var(--text-muted, #555);
+  text-decoration: none; border-radius: 16px;
+  transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+.site-nav .nav-link:hover { background: var(--bg, #f0f0f5); color: var(--text, #1d1d1f); }
+.site-nav .nav-link.active {
+  background: var(--accent, #1d1d1f); color: var(--accent-on, #fff);
+}
+.site-nav .nav-link.active:hover { background: var(--accent-hover, #424245); color: var(--accent-on, #fff); }
+
+/* 中型螢幕（平板）— 緊湊 */
+@media (max-width: 900px) {
+  .site-nav { padding: 0.45rem 0.8rem; gap: 0.4rem; }
+  .site-nav .nav-link { padding: 0.35rem 0.6rem; font-size: 0.83rem; }
+}
+
+/* 手機 — 縮 brand 但保留可見性（過去藏文字導致使用者不知能點回首頁）*/
+@media (max-width: 480px) {
+  .site-nav { padding: 0.4rem 0.6rem; gap: 0.25rem; }
+  .site-nav .nav-brand { font-size: 0.92rem; padding: 0.3rem 0.5rem; }
+  .site-nav .nav-brand .b-icon { font-size: 1.2rem; }
+  .site-nav .nav-link { font-size: 0.78rem; padding: 0.3rem 0.55rem; gap: 0.15rem; }
+  /* 手機沒 hover，提示常駐顯示但更小 */
+  .site-nav .nav-brand:not(.active)::after {
+    content: '🏠'; font-size: 0.85rem; opacity: 0.6;
+    background: none; padding: 0; margin-left: 0.2rem;
+  }
+}
+
+/* ── 共用 Footer ── */
+.site-footer {
+  margin-top: 3rem;
+  padding: 2rem 1.5rem 2.5rem;
+  border-top: 1px solid var(--border, #e5e5ea);
+  background: var(--bg, #fafafa);
+  text-align: center;
+}
+
+.site-footer .f-nav {
+  display: flex; flex-wrap: wrap; justify-content: center;
+  gap: 0.4rem 0.8rem;
+  margin-bottom: 1rem;
+}
+.site-footer .f-nav a {
+  display: inline-flex; align-items: center; gap: 0.3rem;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.85rem; color: var(--text, #333);
+  text-decoration: none; border-radius: 16px;
+  border: 1px solid var(--border, #e5e5ea);
+  background: var(--bg-card, #fff);
+  transition: all 0.15s;
+}
+.site-footer .f-nav a:hover {
+  background: var(--accent-light, #f0f0f3); color: var(--text, #1d1d1f); border-color: var(--border-strong, #d2d2d7);
+}
+.site-footer .f-nav a.f-home {
+  background: var(--accent, #1d1d1f); color: var(--accent-on, #fff); border-color: var(--accent, #1d1d1f); font-weight: 600;
+}
+.site-footer .f-nav a.f-home:hover { background: var(--accent-hover, #424245); color: var(--accent-on, #fff); border-color: var(--accent-hover, #424245); }
+
+.site-footer .f-meta {
+  font-size: 0.75rem; color: var(--text-muted, #888);
+  line-height: 1.6;
+}
+.site-footer .f-meta a { color: var(--text-muted, #666); }
+
+@media (max-width: 480px) {
+  .site-footer { padding: 1.5rem 1rem 2rem; }
+  .site-footer .f-nav a { font-size: 0.8rem; padding: 0.35rem 0.75rem; }
+}
+
+/* ── Footer 上方 Banner Ad（全站共用）─────────────── */
+.site-ad-banner {
+  max-width: 760px;
+  margin: 2rem auto 0;
+  padding: 0 1rem;
+}
+.site-ad-banner .ad-card {
+  background: var(--bg-card, #fff);
+  border: 1px solid var(--border, #e5e5ea);
+  border-radius: 12px;
+  padding: 0.7rem 1.2rem 1rem;
+}
+.site-ad-banner .ad-label {
+  font-size: 0.65rem; color: var(--text-faint, #a1a1a6);
+  letter-spacing: 0.08em; text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+.site-ad-banner .ad-slot {
+  background: var(--accent-light, #f0f0f3);
+  border: 1px dashed var(--border-strong, #d2d2d7);
+  border-radius: 8px;
+  min-height: 90px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text-faint, #a1a1a6); font-size: 0.78rem;
+}
+
+/* ── Sticky Bottom Anchor Ad（全站共用）──────────────
+ * AdSense Anchor 格式：黏在視窗底部，永遠可見
+ * - 桌機高 90px、手機 60px
+ * - 右上角 X 可關（24h localStorage 記住）
+ * - body 自動補底部 padding 避免擋到 footer
+ */
+.site-ad-anchor {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 200;
+  background: var(--bg-card, #fff);
+  border-top: 1px solid var(--border, #e5e5ea);
+  box-shadow: 0 -2px 8px var(--shadow, rgba(0,0,0,0.06));
+  padding: 0.4rem 0.7rem;
+  display: flex; align-items: center; gap: 0.5rem;
+  transition: transform 0.25s;
+}
+.site-ad-anchor.hidden { transform: translateY(100%); }
+.site-ad-anchor .ad-label {
+  font-size: 0.6rem; color: var(--text-faint, #a1a1a6);
+  letter-spacing: 0.08em; text-transform: uppercase;
+  writing-mode: vertical-rl; transform: rotate(180deg);
+  align-self: stretch; padding: 0.2rem 0;
+}
+.site-ad-anchor .ad-slot {
+  flex: 1; background: var(--accent-light, #f0f0f3);
+  border: 1px dashed var(--border-strong, #d2d2d7);
+  border-radius: 6px;
+  min-height: 70px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text-faint, #a1a1a6); font-size: 0.78rem;
+}
+.site-ad-anchor .ad-close {
+  background: transparent; border: none; cursor: pointer;
+  color: var(--text-muted, #6e6e73); font-size: 1rem;
+  padding: 0.3rem 0.5rem; border-radius: 4px; line-height: 1;
+  align-self: flex-start;
+}
+.site-ad-anchor .ad-close:hover { background: var(--accent-light, #f0f0f3); color: var(--text, #1d1d1f); }
+
+@media (min-width: 768px) {
+  .site-ad-anchor .ad-slot { min-height: 80px; }
+}
+
+/* ── Compact inline ad（library.html 關鍵詞/結果區用）─
+ * 同一個 banner unit ID，但用緊湊樣式插在 filter 區或結果列頂部
+ */
+.site-ad-compact {
+  max-width: 760px;
+  margin: 0.6rem auto 0.8rem;
+  padding: 0;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.site-ad-compact .ad-label {
+  font-size: 0.6rem; color: var(--text-faint, #a1a1a6);
+  letter-spacing: 0.08em; text-transform: uppercase;
+  flex-shrink: 0;
+}
+.site-ad-compact .ad-slot {
+  flex: 1;
+  background: var(--accent-light, #f0f0f3);
+  border: 1px dashed var(--border-strong, #d2d2d7);
+  border-radius: 6px;
+  min-height: 60px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text-faint, #a1a1a6); font-size: 0.75rem;
+}
+
+/* 為 sticky bottom ad 預留 body 底部空間 */
+body.has-anchor-ad { padding-bottom: 100px; }
+@media (min-width: 768px) {
+  body.has-anchor-ad { padding-bottom: 110px; }
+}
+body.has-anchor-ad.ad-dismissed { padding-bottom: 0; }
+

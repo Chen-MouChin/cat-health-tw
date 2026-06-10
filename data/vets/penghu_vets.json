@@ -1,0 +1,50 @@
+[
+  {
+    "name": "米克斯的動物醫院",
+    "city": "澎湖縣",
+    "district": "白沙鄉",
+    "address": "澎湖縣白沙鄉講美村138之1號",
+    "tel": "",
+    "business_hours": "",
+    "vet_name": "洪旭峯",
+    "license": "府授畜防字第1003900011號",
+    "source": "農業部 open data (data.gov.tw/dataset/8705)",
+    "crawled_at": "2026-04-20T17:32:42.077638+00:00"
+  },
+  {
+    "name": "小胖貓動物診所",
+    "city": "澎湖縣",
+    "district": "馬公市",
+    "address": "澎湖縣馬公市東衛里196號",
+    "tel": "(06)9228962",
+    "business_hours": "",
+    "vet_name": "李曉萍",
+    "license": "府授畜防字第1060001090號",
+    "source": "農業部 open data (data.gov.tw/dataset/8705)",
+    "crawled_at": "2026-04-20T17:32:42.077638+00:00"
+  },
+  {
+    "name": "湖光動物醫院",
+    "city": "澎湖縣",
+    "district": "馬公市",
+    "address": "澎湖縣馬公市惠民新村29、30號",
+    "tel": "(06)9269291",
+    "business_hours": "",
+    "vet_name": "洪惠雅",
+    "license": "府授畜防字第1120063763號",
+    "source": "農業部 open data (data.gov.tw/dataset/8705)",
+    "crawled_at": "2026-04-20T17:32:42.077638+00:00"
+  },
+  {
+    "name": "佑青動物醫院",
+    "city": "澎湖縣",
+    "district": "馬公市",
+    "address": "澎湖縣馬公市中華路308號",
+    "tel": "(06)9264442",
+    "business_hours": "",
+    "vet_name": "郭仁愰",
+    "license": "澎府農務字第47271號",
+    "source": "農業部 open data (data.gov.tw/dataset/8705)",
+    "crawled_at": "2026-04-20T17:32:42.077638+00:00"
+  }
+]

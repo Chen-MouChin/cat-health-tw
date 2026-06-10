@@ -1,0 +1,4025 @@
+{
+  "barf-raw-food-taiwan": [
+    {
+      "source_text": "WSAVA Global Nutrition Guidelines (2021): 不建議生食作為標準飲食，主要原因為細菌和寄生蟲污染風險以及營養失衡可能性",
+      "top_matches": [
+        {
+          "score": 47,
+          "cid": "WSAVA-NUTRITION-GUIDELINES-2022"
+        },
+        {
+          "score": 14,
+          "cid": "WSAVA-NUTRITION-COMMITTEE-2022"
+        },
+        {
+          "score": 14,
+          "cid": "WSAVA-NUTRITION-2011"
+        }
+      ],
+      "best_match": "WSAVA-NUTRITION-GUIDELINES-2022",
+      "confidence": "high"
+    },
+    {
+      "source_text": "ASPCA: Raw Food Diets for Cats — 沙門氏菌、李斯特菌、彎曲桿菌的人畜共通感染風險",
+      "top_matches": [
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-PLANTS"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-FOODS"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-CAT-PLANT-LIST-2024"
+        }
+      ],
+      "best_match": "ASPCA-TOXIC-PLANTS",
+      "confidence": "low"
+    },
+    {
+      "source_text": "ISFM: Raw Diets and Cats — 若選擇生食，需確保完整骨頭或磨碎骨頭的鈣磷比例正確",
+      "top_matches": [
+        {
+          "score": 4,
+          "cid": "SPARKES-2016-ISFM-CKD"
+        },
+        {
+          "score": 4,
+          "cid": "ISFM-DIABETES-2015"
+        },
+        {
+          "score": 4,
+          "cid": "ICATCARE-LILY-POISONING"
+        }
+      ],
+      "best_match": "SPARKES-2016-ISFM-CKD",
+      "confidence": "low"
+    }
+  ],
+  "cat-aggression-causes-treatment": [
+    {
+      "source_text": "ISFM Feline Behavioral Guidelines: 攻擊行為的分類（恐懼、領域、撫觸誘發、重新定向、狩獵）及行為治療原則",
+      "top_matches": [
+        {
+          "score": 8,
+          "cid": "WSAVA-RENAL-STANDARDIZATION-GUIDELIN-2022"
+        },
+        {
+          "score": 8,
+          "cid": "WSAVA-PROFESSIONAL-WELLNESS-GUIDELIN-2022"
+        },
+        {
+          "score": 8,
+          "cid": "WILHELMY-2016-BREED-COAT-BEHAVIOR"
+        }
+      ],
+      "best_match": "WSAVA-RENAL-STANDARDIZATION-GUIDELIN-2022",
+      "confidence": "low"
+    },
+    {
+      "source_text": "International Cat Care: Aggression in Cats — 避免懲罰，懲罰加劇恐懼攻擊",
+      "top_matches": [
+        {
+          "score": 4,
+          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+        },
+        {
+          "score": 4,
+          "cid": "AAFP-2012-FELINE-FRIENDLY-NURSING-CARE-2012"
+        }
+      ],
+      "best_match": "AAFP-2021-FELINE-SENIOR-CARE-2021",
+      "confidence": "low"
+    },
+    {
+      "source_text": "ASPCA: Aggression in Cats — 貓咬傷的細菌感染風險（巴氏桿菌、貓抓病）及傷口處理",
+      "top_matches": [
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-PLANTS"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-FOODS"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-CAT-PLANT-LIST-2024"
+        }
+      ],
+      "best_match": "ASPCA-TOXIC-PLANTS",
+      "confidence": "low"
+    }
+  ],
+  "cat-anxiety-stress-management": [
+    {
+      "source_text": "ISFM Feline Stress Guidelines: 壓力誘因（環境改變、多貓衝突、可預測性缺失）及緩解策略",
+      "top_matches": [
+        {
+          "score": 8,
+          "cid": "WSAVA-RENAL-STANDARDIZATION-GUIDELIN-2022"
+        },
+        {
+          "score": 8,
+          "cid": "WSAVA-PROFESSIONAL-WELLNESS-GUIDELIN-2022"
+        },
+        {
+          "score": 6,
+          "cid": "BUFFINGTON-2014-PANDORA-FLUTD"
+        }
+      ],
+      "best_match": "WSAVA-RENAL-STANDARDIZATION-GUIDELIN-2022",
+      "confidence": "low"
+    },
+    {
+      "source_text": "International Cat Care: Stress in Cats — 壓力的行為和生理症狀，費洛蒙（Feliway）的臨床證據",
+      "top_matches": [
+        {
+          "score": 6,
+          "cid": "BUFFINGTON-2014-PANDORA-FLUTD"
+        },
+        {
+          "score": 4,
+          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+        },
+        {
+          "score": 4,
+          "cid": "AAFP-2012-FELINE-FRIENDLY-NURSING-CARE-2012"
+        }
+      ],
+      "best_match": "BUFFINGTON-2014-PANDORA-FLUTD",
+      "confidence": "low"
+    },
+    {
+      "source_text": "VCA Animal Hospitals: Stress in Cats — 特發性膀胱炎與壓力的關聯（FIC 佔 FLUTD 55–65%）",
+      "top_matches": [
+        {
+          "score": 14,
+          "cid": "BUFFINGTON-2014-PANDORA-FLUTD"
+        },
+        {
+          "score": 8,
+          "cid": "CORNELL-FLUTD"
+        },
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022"
+        }
+      ],
+      "best_match": "BUFFINGTON-2014-PANDORA-FLUTD",
+      "confidence": "medium"
+    }
+  ],
+  "cat-ckd-complete-guide": [
+    {
+      "source_text": "IRIS (International Renal Interest Society) Staging of CKD 2023: 以血清肌酸酐、SDMA、UPC 等指標進行 1–4 期分期",
+      "top_matches": [
+        {
+          "score": 14,
+          "cid": "IRIS-CKD-2023"
+        },
+        {
+          "score": 7,
+          "cid": "SPARKES-2016-ISFM-CKD"
+        },
+        {
+          "score": 7,
+          "cid": "IRIS-CKD-TREATMENT-2023"
+        }
+      ],
+      "best_match": "IRIS-CKD-2023",
+      "confidence": "medium"
+    },
+    {
+      "source_text": "ISFM Consensus Guidelines on the Diagnosis and Management of Feline Chronic Kidney Disease — Sparkes 2016 / 2023 update: 飲食磷限制、水分補充、血壓控制的個人化臨床建議",
+      "top_matches": [
+        {
+          "score": 163,
+          "cid": "SPARKES-2016-ISFM-CKD"
+        },
+        {
+          "score": 8,
+          "cid": "WSAVA-RENAL-STANDARDIZATION-GUIDELIN-2022"
+        },
+        {
+          "score": 8,
+          "cid": "WSAVA-PROFESSIONAL-WELLNESS-GUIDELIN-2022"
+        }
+      ],
+      "best_match": "SPARKES-2016-ISFM-CKD",
+      "confidence": "high"
+    },
+    {
+      "source_text": "Chronic Kidney Disease — Cornell Feline Health Center: 多尿、多飲、體重下降的症狀識別與居家管理",
+      "top_matches": [
+        {
+          "score": 100,
+          "cid": "CORNELL-CKD"
+        },
+        {
+          "score": 22,
+          "cid": "SPARKES-2016-ISFM-CKD"
+        },
+        {
+          "score": 12,
+          "cid": "CORNELL-CORNELL-VETERINARY-EXPERTS-ADDRESS-FELIN-2024"
+        }
+      ],
+      "best_match": "CORNELL-CKD",
+      "confidence": "high"
+    },
+    {
+      "source_text": "AAFP 2013 Fluid Therapy Guidelines: 輸液治療的臨床基礎與長期 CKD 居家皮下輸液策略",
+      "top_matches": [
+        {
+          "score": 34,
+          "cid": "AAFP-2013-FLUID-THERAPY-2013"
+        },
+        {
+          "score": 13,
+          "cid": "AAFP-FLUID-2013"
+        },
+        {
+          "score": 8,
+          "cid": "WSAVA-RENAL-STANDARDIZATION-GUIDELIN-2022"
+        }
+      ],
+      "best_match": "AAFP-2013-FLUID-THERAPY-2013",
+      "confidence": "high"
+    },
+    {
+      "source_text": "WSAVA Renal Standardization Guidelines: 病理檢驗與分期判讀的全球標準化建議",
+      "top_matches": [
+        {
+          "score": 65,
+          "cid": "WSAVA-RENAL-STANDARDIZATION-GUIDELIN-2022"
+        },
+        {
+          "score": 13,
+          "cid": "WSAVA-PROFESSIONAL-WELLNESS-GUIDELIN-2022"
+        },
+        {
+          "score": 10,
+          "cid": "WSAVA-MICROCHIP-IDENTIFICATION-GUIDE-2022"
+        }
+      ],
+      "best_match": "WSAVA-RENAL-STANDARDIZATION-GUIDELIN-2022",
+      "confidence": "high"
+    },
+    {
+      "source_text": "VCA Animal Hospitals: Chronic Kidney Disease in Cats — 症狀識別（多尿、多飲、體重下降）與居家管理",
+      "top_matches": [
+        {
+          "score": 22,
+          "cid": "SPARKES-2016-ISFM-CKD"
+        },
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022"
+        },
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-COMMITTEE-2022"
+        }
+      ],
+      "best_match": "SPARKES-2016-ISFM-CKD",
+      "confidence": "high"
+    }
+  ],
+  "cat-diabetes-care": [
+    {
+      "source_text": "ISFM Consensus Guidelines on the Practical Management of Diabetes Mellitus in Cats (2015): 胰島素種類選擇（Glargine 優先）、監測頻率、緩解目標",
+      "top_matches": [
+        {
+          "score": 137,
+          "cid": "ISFM-DIABETES-2015"
+        },
+        {
+          "score": 11,
+          "cid": "CORNELL-DIABETES"
+        },
+        {
+          "score": 8,
+          "cid": "WSAVA-RENAL-STANDARDIZATION-GUIDELIN-2022"
+        }
+      ],
+      "best_match": "ISFM-DIABETES-2015",
+      "confidence": "high"
+    },
+    {
+      "source_text": "AAHA 2018 Diabetes Management Guidelines (Behrend et al.): 胰島素治療核心、低血糖辨識、控制良好定義；犬貓綜合臨床指引",
+      "top_matches": [
+        {
+          "score": 19,
+          "cid": "BEHREND-2018-AAHA-DIABETES"
+        },
+        {
+          "score": 11,
+          "cid": "ISFM-DIABETES-2015"
+        },
+        {
+          "score": 11,
+          "cid": "CORNELL-DIABETES"
+        }
+      ],
+      "best_match": "BEHREND-2018-AAHA-DIABETES",
+      "confidence": "medium"
+    },
+    {
+      "source_text": "Feline Diabetes — Cornell Feline Health Center: 多尿多飲多食與體重下降的症狀描述、診斷標準與居家照護",
+      "top_matches": [
+        {
+          "score": 101,
+          "cid": "CORNELL-DIABETES"
+        },
+        {
+          "score": 12,
+          "cid": "CORNELL-CORNELL-VETERINARY-EXPERTS-ADDRESS-FELIN-2024"
+        },
+        {
+          "score": 8,
+          "cid": "ISFM-DIABETES-2015"
+        }
+      ],
+      "best_match": "CORNELL-DIABETES",
+      "confidence": "high"
+    },
+    {
+      "source_text": "VCA Animal Hospitals: Diabetes Mellitus in Cats — 多尿多飲多食、體重下降的症狀描述與診斷標準",
+      "top_matches": [
+        {
+          "score": 8,
+          "cid": "ISFM-DIABETES-2015"
+        },
+        {
+          "score": 8,
+          "cid": "CORNELL-DIABETES"
+        },
+        {
+          "score": 8,
+          "cid": "BEHREND-2018-AAHA-DIABETES"
+        }
+      ],
+      "best_match": "ISFM-DIABETES-2015",
+      "confidence": "low"
+    },
+    {
+      "source_text": "ASPCA: Diabetes in Cats — 肥胖公貓中年以上為高風險族群",
+      "top_matches": [
+        {
+          "score": 8,
+          "cid": "ISFM-DIABETES-2015"
+        },
+        {
+          "score": 8,
+          "cid": "CORNELL-DIABETES"
+        },
+        {
+          "score": 8,
+          "cid": "BEHREND-2018-AAHA-DIABETES"
+        }
+      ],
+      "best_match": "ISFM-DIABETES-2015",
+      "confidence": "low"
+    }
+  ],
+  "cat-food-by-life-stage": [
+    {
+      "source_text": "WSAVA Life-stage Guidelines: 貓咪生命階段分類（幼貓、成貓、老貓）及對應的營養需求差異",
+      "top_matches": [
+        {
+          "score": 13,
+          "cid": "WSAVA-RENAL-STANDARDIZATION-GUIDELIN-2022"
+        },
+        {
+          "score": 13,
+          "cid": "WSAVA-PROFESSIONAL-WELLNESS-GUIDELIN-2022"
+        },
+        {
+          "score": 10,
+          "cid": "WSAVA-MICROCHIP-IDENTIFICATION-GUIDE-2022"
+        }
+      ],
+      "best_match": "WSAVA-RENAL-STANDARDIZATION-GUIDELIN-2022",
+      "confidence": "medium"
+    },
+    {
+      "source_text": "ISFM: Nutritional Requirements Across Life Stages in Cats — 老貓蛋白質消化率下降，需提高蛋白質攝取",
+      "top_matches": [
+        {
+          "score": 9,
+          "cid": "WSAVA-NUTRITION-GUIDELINES-2022"
+        },
+        {
+          "score": 9,
+          "cid": "WSAVA-NUTRITION-COMMITTEE-2022"
+        },
+        {
+          "score": 9,
+          "cid": "WSAVA-NUTRITION-2011"
+        }
+      ],
+      "best_match": "WSAVA-NUTRITION-GUIDELINES-2022",
+      "confidence": "low"
+    },
+    {
+      "source_text": "VCA Animal Hospitals: Feeding Your Cat — 換糧應在 7–10 天內逐步完成，避免腸胃不適",
+      "top_matches": [
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022"
+        },
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-COMMITTEE-2022"
+        },
+        {
+          "score": 4,
+          "cid": "CORNELL-TICKS-AND-YOUR-CAT-FAQS-2024"
+        }
+      ],
+      "best_match": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022",
+      "confidence": "low"
+    }
+  ],
+  "cat-hyperthyroidism-senior": [
+    {
+      "source_text": "AAFP/ISFM 2016 Hyperthyroidism Guidelines (Carney et al.): 診斷標準（T4 > 52 nmol/L）、治療選項比較、甲狀腺亢進與 CKD 的複雜關聯",
+      "top_matches": [
+        {
+          "score": 22,
+          "cid": "AAFP-HYPERTHYROIDISM-2016"
+        },
+        {
+          "score": 18,
+          "cid": "CORNELL-HYPERTHYROIDISM"
+        },
+        {
+          "score": 18,
+          "cid": "AAFP-2016-MANAGEMENT-OF-FELINE-HYPERTHYROIDIS-2016"
+        }
+      ],
+      "best_match": "AAFP-HYPERTHYROIDISM-2016",
+      "confidence": "high"
+    },
+    {
+      "source_text": "Hyperthyroidism in Cats — Cornell Feline Health Center: 老年貓最常見的內分泌疾病辨識、methimazole 治療流程與居家照護",
+      "top_matches": [
+        {
+          "score": 116,
+          "cid": "CORNELL-HYPERTHYROIDISM"
+        },
+        {
+          "score": 26,
+          "cid": "AAFP-HYPERTHYROIDISM-2016"
+        },
+        {
+          "score": 14,
+          "cid": "AAFP-2016-MANAGEMENT-OF-FELINE-HYPERTHYROIDIS-2016"
+        }
+      ],
+      "best_match": "CORNELL-HYPERTHYROIDISM",
+      "confidence": "high"
+    },
+    {
+      "source_text": "AAFP Senior Care Guidelines: 7 歲以上貓咪每年 T4 篩檢建議",
+      "top_matches": [
+        {
+          "score": 14,
+          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+        },
+        {
+          "score": 10,
+          "cid": "AAFP-SENIOR-2021"
+        },
+        {
+          "score": 8,
+          "cid": "WSAVA-RENAL-STANDARDIZATION-GUIDELIN-2022"
+        }
+      ],
+      "best_match": "AAFP-2021-FELINE-SENIOR-CARE-2021",
+      "confidence": "medium"
+    },
+    {
+      "source_text": "VCA Animal Hospitals: Hyperthyroidism in Cats — 症狀識別、治療流程",
+      "top_matches": [
+        {
+          "score": 15,
+          "cid": "CORNELL-HYPERTHYROIDISM"
+        },
+        {
+          "score": 15,
+          "cid": "AAFP-HYPERTHYROIDISM-2016"
+        },
+        {
+          "score": 14,
+          "cid": "AAFP-2016-MANAGEMENT-OF-FELINE-HYPERTHYROIDIS-2016"
+        }
+      ],
+      "best_match": "CORNELL-HYPERTHYROIDISM",
+      "confidence": "medium"
+    }
+  ],
+  "cat-inappropriate-elimination": [
+    {
+      "source_text": "VCA Animal Hospital: Inappropriate Elimination in Cats",
+      "top_matches": [
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022"
+        },
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-COMMITTEE-2022"
+        },
+        {
+          "score": 3,
+          "cid": "VCA-PLANTS-TOXIC-CATS"
+        }
+      ],
+      "best_match": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022",
+      "confidence": "low"
+    },
+    {
+      "source_text": "ASPCA: Litter Box Problems",
+      "top_matches": [
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-PLANTS"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-FOODS"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-CAT-PLANT-LIST-2024"
+        }
+      ],
+      "best_match": "ASPCA-TOXIC-PLANTS",
+      "confidence": "low"
+    },
+    {
+      "source_text": "International Cat Care: Toileting problems in cats",
+      "top_matches": [
+        {
+          "score": 4,
+          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+        },
+        {
+          "score": 4,
+          "cid": "AAFP-2012-FELINE-FRIENDLY-NURSING-CARE-2012"
+        }
+      ],
+      "best_match": "AAFP-2021-FELINE-SENIOR-CARE-2021",
+      "confidence": "low"
+    }
+  ],
+  "cat-litter-box-guide": [
+    {
+      "source_text": "ASPCA: Litter Box Tips",
+      "top_matches": [
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-PLANTS"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-FOODS"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-CAT-PLANT-LIST-2024"
+        }
+      ],
+      "best_match": "ASPCA-TOXIC-PLANTS",
+      "confidence": "low"
+    },
+    {
+      "source_text": "VCA Animal Hospital: Choosing the right litter",
+      "top_matches": [
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022"
+        },
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-COMMITTEE-2022"
+        },
+        {
+          "score": 3,
+          "cid": "VCA-PLANTS-TOXIC-CATS"
+        }
+      ],
+      "best_match": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022",
+      "confidence": "low"
+    },
+    {
+      "source_text": "International Cat Care: Cats and litter trays",
+      "top_matches": [
+        {
+          "score": 4,
+          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+        },
+        {
+          "score": 4,
+          "cid": "AAFP-2012-FELINE-FRIENDLY-NURSING-CARE-2012"
+        }
+      ],
+      "best_match": "AAFP-2021-FELINE-SENIOR-CARE-2021",
+      "confidence": "low"
+    }
+  ],
+  "cat-skin-allergies": [
+    {
+      "source_text": "ISFM: Feline Hypersensitivity Disorders — 三大過敏類型（食物、跳蚤、環境）的鑑別診斷",
+      "top_matches": [
+        {
+          "score": 5,
+          "cid": "CORNELL-CORNELL-VETERINARY-EXPERTS-ADDRESS-FELIN-2024"
+        },
+        {
+          "score": 4,
+          "cid": "SPARKES-2016-ISFM-CKD"
+        },
+        {
+          "score": 4,
+          "cid": "ISFM-DIABETES-2015"
+        }
+      ],
+      "best_match": "CORNELL-CORNELL-VETERINARY-EXPERTS-ADDRESS-FELIN-2024",
+      "confidence": "low"
+    },
+    {
+      "source_text": "VCA Animal Hospitals: Skin Allergies in Cats — 排除飲食試驗（8–12 週水解飼料）是食物過敏的標準診斷方法",
+      "top_matches": [
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022"
+        },
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-COMMITTEE-2022"
+        },
+        {
+          "score": 3,
+          "cid": "VCA-PLANTS-TOXIC-CATS"
+        }
+      ],
+      "best_match": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022",
+      "confidence": "low"
+    },
+    {
+      "source_text": "ASPCA: Allergies in Cats — 過敏引發的繼發性皮膚感染處理",
+      "top_matches": [
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-PLANTS"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-FOODS"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-CAT-PLANT-LIST-2024"
+        }
+      ],
+      "best_match": "ASPCA-TOXIC-PLANTS",
+      "confidence": "low"
+    }
+  ],
+  "cat-zoomies-night-activity": [
+    {
+      "source_text": "ISFM Feline Environmental Needs Guidelines: 貓咪的自然活動節律（晨昏性動物）及環境豐富化對行為的影響",
+      "top_matches": [
+        {
+          "score": 18,
+          "cid": "AAFP-2013-ENVIRONMENTAL-NEEDS-2013"
+        },
+        {
+          "score": 15,
+          "cid": "AAFP-CAT-FRIENDLY-VETERINARY-ENVIRONMENT-GUID-2020"
+        },
+        {
+          "score": 14,
+          "cid": "AAFP-ENVIRONMENT-2013"
+        }
+      ],
+      "best_match": "AAFP-2013-ENVIRONMENTAL-NEEDS-2013",
+      "confidence": "medium"
+    },
+    {
+      "source_text": "International Cat Care: Understanding Cat Behavior — Zoomies（FRAP）的生理背景和管理",
+      "top_matches": [
+        {
+          "score": 8,
+          "cid": "WILHELMY-2016-BREED-COAT-BEHAVIOR"
+        },
+        {
+          "score": 8,
+          "cid": "AAFP-2004-FELINE-BEHAVIOR-2004"
+        },
+        {
+          "score": 4,
+          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+        }
+      ],
+      "best_match": "WILHELMY-2016-BREED-COAT-BEHAVIOR",
+      "confidence": "low"
+    },
+    {
+      "source_text": "ASPCA: Cat Behavior Problems — 夜間行為問題的環境調整建議",
+      "top_matches": [
+        {
+          "score": 8,
+          "cid": "WILHELMY-2016-BREED-COAT-BEHAVIOR"
+        },
+        {
+          "score": 8,
+          "cid": "AAFP-2004-FELINE-BEHAVIOR-2004"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-PLANTS"
+        }
+      ],
+      "best_match": "WILHELMY-2016-BREED-COAT-BEHAVIOR",
+      "confidence": "low"
+    }
+  ],
+  "fiv-felv-management-taiwan": [
+    {
+      "source_text": "ABCD (European Advisory Board on Cat Diseases) FIV Guidelines: FIV 陽性貓的預後、管理及疫苗接種建議",
+      "top_matches": [
+        {
+          "score": 8,
+          "cid": "WSAVA-STRATEGIC-ADVISORY-COMMITTEE-2022"
+        },
+        {
+          "score": 8,
+          "cid": "WSAVA-RENAL-STANDARDIZATION-GUIDELIN-2022"
+        },
+        {
+          "score": 8,
+          "cid": "WSAVA-PROFESSIONAL-WELLNESS-GUIDELIN-2022"
+        }
+      ],
+      "best_match": "WSAVA-STRATEGIC-ADVISORY-COMMITTEE-2022",
+      "confidence": "low"
+    },
+    {
+      "source_text": "ABCD FeLV Guidelines: FeLV 進展性感染的預後，估計中位存活期 2–3 年",
+      "top_matches": [
+        {
+          "score": 8,
+          "cid": "WSAVA-RENAL-STANDARDIZATION-GUIDELIN-2022"
+        },
+        {
+          "score": 8,
+          "cid": "WSAVA-PROFESSIONAL-WELLNESS-GUIDELIN-2022"
+        },
+        {
+          "score": 5,
+          "cid": "WSAVA-MICROCHIP-IDENTIFICATION-GUIDE-2022"
+        }
+      ],
+      "best_match": "WSAVA-RENAL-STANDARDIZATION-GUIDELIN-2022",
+      "confidence": "low"
+    },
+    {
+      "source_text": "ISFM: Retroviral Infections in Cats — FIV/FeLV 篩檢建議、多貓家庭管理",
+      "top_matches": [
+        {
+          "score": 10,
+          "cid": "CORNELL-RESPIRATORY-INFECTIONS-2024"
+        },
+        {
+          "score": 7,
+          "cid": "AAFP-RETROVIRUS-2020"
+        },
+        {
+          "score": 4,
+          "cid": "SPARKES-2016-ISFM-CKD"
+        }
+      ],
+      "best_match": "CORNELL-RESPIRATORY-INFECTIONS-2024",
+      "confidence": "medium"
+    }
+  ],
+  "kitten-socialization": [
+    {
+      "source_text": "International Cat Care: The kitten socialisation period",
+      "top_matches": [
+        {
+          "score": 4,
+          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+        },
+        {
+          "score": 4,
+          "cid": "AAFP-2012-FELINE-FRIENDLY-NURSING-CARE-2012"
+        },
+        {
+          "score": 3,
+          "cid": "AAFP-2022-AAFP-EVERYCAT-FELINE-INFECTIOUS-PER-2022"
+        }
+      ],
+      "best_match": "AAFP-2021-FELINE-SENIOR-CARE-2021",
+      "confidence": "low"
+    },
+    {
+      "source_text": "ISFM: Feline behaviour",
+      "top_matches": [
+        {
+          "score": 9,
+          "cid": "SALONEN-2019-BREED-BEHAVIOUR"
+        },
+        {
+          "score": 5,
+          "cid": "CORNELL-CORNELL-VETERINARY-EXPERTS-ADDRESS-FELIN-2024"
+        },
+        {
+          "score": 4,
+          "cid": "SPARKES-2016-ISFM-CKD"
+        }
+      ],
+      "best_match": "SALONEN-2019-BREED-BEHAVIOUR",
+      "confidence": "low"
+    },
+    {
+      "source_text": "ASPCA: Cat Socialization",
+      "top_matches": [
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-PLANTS"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-FOODS"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-CAT-PLANT-LIST-2024"
+        }
+      ],
+      "best_match": "ASPCA-TOXIC-PLANTS",
+      "confidence": "low"
+    }
+  ],
+  "male-cat-urethral-obstruction": [
+    {
+      "source_text": "Feline Lower Urinary Tract Disease — Cornell Feline Health Center: FLUTD 病因、症狀辨識與緊急處置流程",
+      "top_matches": [
+        {
+          "score": 117,
+          "cid": "CORNELL-FLUTD"
+        },
+        {
+          "score": 24,
+          "cid": "BUFFINGTON-2014-PANDORA-FLUTD"
+        },
+        {
+          "score": 12,
+          "cid": "CORNELL-CORNELL-VETERINARY-EXPERTS-ADDRESS-FELIN-2024"
+        }
+      ],
+      "best_match": "CORNELL-FLUTD",
+      "confidence": "high"
+    },
+    {
+      "source_text": "Buffington 2014 — From FUS to Pandora syndrome (JFMS): FLUTD/FIC 病因觀念演進、Pandora 系統性壓力觀點",
+      "top_matches": [
+        {
+          "score": 29,
+          "cid": "BUFFINGTON-2014-PANDORA-FLUTD"
+        },
+        {
+          "score": 8,
+          "cid": "CORNELL-FLUTD"
+        },
+        {
+          "score": 5,
+          "cid": "AAFP-HOUSESOILING-2014"
+        }
+      ],
+      "best_match": "BUFFINGTON-2014-PANDORA-FLUTD",
+      "confidence": "high"
+    },
+    {
+      "source_text": "2014 ISFM/AAFP Guidelines for Diagnosing and Solving House-Soiling Behavior in Cats: 行為性排尿問題與環境壓力管理建議",
+      "top_matches": [
+        {
+          "score": 127,
+          "cid": "AAFP-HOUSESOILING-2014"
+        },
+        {
+          "score": 32,
+          "cid": "AAFP-2014-DIAGNOSING-AND-SOLVING-HOUSE-SOILIN-2014"
+        },
+        {
+          "score": 12,
+          "cid": "AAFP-2004-FELINE-BEHAVIOR-2004"
+        }
+      ],
+      "best_match": "AAFP-HOUSESOILING-2014",
+      "confidence": "high"
+    },
+    {
+      "source_text": "VCA Animal Hospitals — Cystitis and Lower Urinary Tract Disease in Cats: https://vcahospitals.com/know-your-pet/cystitis-and-lower-urinary-tract-disease-in-cats",
+      "top_matches": [
+        {
+          "score": 19,
+          "cid": "BUFFINGTON-2014-PANDORA-FLUTD"
+        },
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022"
+        },
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-COMMITTEE-2022"
+        }
+      ],
+      "best_match": "BUFFINGTON-2014-PANDORA-FLUTD",
+      "confidence": "medium"
+    },
+    {
+      "source_text": "VCA Animal Hospitals — Perineal Urethrostomy Surgery in Cats: https://vcahospitals.com/know-your-pet/perineal-urethrostomy-surgery-in-cats",
+      "top_matches": [
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022"
+        },
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-COMMITTEE-2022"
+        },
+        {
+          "score": 4,
+          "cid": "CORNELL-TICKS-AND-YOUR-CAT-FAQS-2024"
+        }
+      ],
+      "best_match": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022",
+      "confidence": "low"
+    }
+  ],
+  "mixed-breed-cats-taiwan": [
+    {
+      "source_text": "農業部 — 全國家犬貓飼養數量推估: https://www.moa.gov.tw/theme_data.php?theme=news&sub_theme=agri&id=9418",
+      "top_matches": [],
+      "best_match": null,
+      "confidence": "low"
+    },
+    {
+      "source_text": "農業部 — 110年度全國家犬貓數量調查: https://animal.moa.gov.tw/Frontend/Know/Detail/LT00000664?parentID=Tab0000004",
+      "top_matches": [
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022"
+        },
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-COMMITTEE-2022"
+        },
+        {
+          "score": 3,
+          "cid": "CORNELL-FIP-TREATMENT-GS-441524-NOW-AVAILABLE-IN-2024"
+        }
+      ],
+      "best_match": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022",
+      "confidence": "low"
+    },
+    {
+      "source_text": "EDH 寵物雲 — 米克斯貓簡介: https://pets.edh.tw/blog/mixed-breed-cat",
+      "top_matches": [
+        {
+          "score": 5,
+          "cid": "WILHELMY-2016-BREED-COAT-BEHAVIOR"
+        },
+        {
+          "score": 5,
+          "cid": "VCA-BREED-INFORMATION-2024"
+        },
+        {
+          "score": 5,
+          "cid": "SALONEN-2019-BREED-BEHAVIOUR"
+        }
+      ],
+      "best_match": "WILHELMY-2016-BREED-COAT-BEHAVIOR",
+      "confidence": "low"
+    }
+  ],
+  "new-cat-first-week-guide": [
+    {
+      "source_text": "ISFM Feline Environmental Needs Guidelines: 新貓引介程序（gradual introduction）的科學根據和步驟",
+      "top_matches": [
+        {
+          "score": 18,
+          "cid": "AAFP-2013-ENVIRONMENTAL-NEEDS-2013"
+        },
+        {
+          "score": 15,
+          "cid": "AAFP-CAT-FRIENDLY-VETERINARY-ENVIRONMENT-GUID-2020"
+        },
+        {
+          "score": 11,
+          "cid": "AAFP-ENVIRONMENT-2013"
+        }
+      ],
+      "best_match": "AAFP-2013-ENVIRONMENTAL-NEEDS-2013",
+      "confidence": "medium"
+    },
+    {
+      "source_text": "International Cat Care: Bringing Your New Cat Home — 安全房（safe room）的設置建議",
+      "top_matches": [
+        {
+          "score": 4,
+          "cid": "CORNELL-TICKS-AND-YOUR-CAT-FAQS-2024"
+        },
+        {
+          "score": 4,
+          "cid": "CORNELL-SAFE-TOYS-AND-GIFTS-2024"
+        },
+        {
+          "score": 4,
+          "cid": "CORNELL-GRIEVING-THE-LOSS-OF-YOUR-CAT-2024"
+        }
+      ],
+      "best_match": "CORNELL-TICKS-AND-YOUR-CAT-FAQS-2024",
+      "confidence": "low"
+    },
+    {
+      "source_text": "ASPCA: Adjusting to Your New Cat — 給貓咪適應時間的重要性，不要強迫互動",
+      "top_matches": [
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-PLANTS"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-FOODS"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-CAT-PLANT-LIST-2024"
+        }
+      ],
+      "best_match": "ASPCA-TOXIC-PLANTS",
+      "confidence": "low"
+    }
+  ],
+  "rehoming-cat-responsibly-taiwan": [
+    {
+      "source_text": "農業部動物保護資訊網：動物轉讓的法律義務（晶片、健康狀況揭露）",
+      "top_matches": [],
+      "best_match": null,
+      "confidence": "low"
+    },
+    {
+      "source_text": "ASPCA: Rehoming Your Pet — 負責任送養的步驟和認養人篩選建議",
+      "top_matches": [
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-PLANTS"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-FOODS"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-CAT-PLANT-LIST-2024"
+        }
+      ],
+      "best_match": "ASPCA-TOXIC-PLANTS",
+      "confidence": "low"
+    },
+    {
+      "source_text": "International Cat Care: Finding a New Home for Your Cat — 如何協助貓咪順利適應新環境",
+      "top_matches": [
+        {
+          "score": 4,
+          "cid": "CORNELL-TICKS-AND-YOUR-CAT-FAQS-2024"
+        },
+        {
+          "score": 4,
+          "cid": "CORNELL-GRIEVING-THE-LOSS-OF-YOUR-CAT-2024"
+        },
+        {
+          "score": 4,
+          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+        }
+      ],
+      "best_match": "CORNELL-TICKS-AND-YOUR-CAT-FAQS-2024",
+      "confidence": "low"
+    }
+  ],
+  "renting-with-cats-taiwan": [
+    {
+      "source_text": "台灣法律網 — 租屋養毛小孩: https://www.lawtw.com/archives/445490",
+      "top_matches": [],
+      "best_match": null,
+      "confidence": "low"
+    },
+    {
+      "source_text": "立法院 — 公寓大廈不得禁止飼養寵物議題之研析: https://www.ly.gov.tw/Pages/Detail.aspx?nodeid=6590&pid=163942",
+      "top_matches": [],
+      "best_match": null,
+      "confidence": "low"
+    },
+    {
+      "source_text": "農業部 — 動物保護法: https://law.moa.gov.tw/LawContent.aspx?id=FL014739",
+      "top_matches": [],
+      "best_match": null,
+      "confidence": "low"
+    }
+  ],
+  "scottish-fold-breed-guide-taiwan": [
+    {
+      "source_text": "ISFM: Pedigree Cat Health — 蘇格蘭折耳貓骨軟骨發育不全（Osteochondrodysplasia）的遺傳機制和臨床表現",
+      "top_matches": [
+        {
+          "score": 6,
+          "cid": "WSAVA-ONE-HEALTH-COMMITTEE-2022"
+        },
+        {
+          "score": 6,
+          "cid": "AAFP-2025-FELINEVMA-FELINE-ORAL-HEALTH-AND-DE-2025"
+        },
+        {
+          "score": 4,
+          "cid": "SPARKES-2016-ISFM-CKD"
+        }
+      ],
+      "best_match": "WSAVA-ONE-HEALTH-COMMITTEE-2022",
+      "confidence": "low"
+    },
+    {
+      "source_text": "International Cat Care: Scottish Fold — 明確建議停止繁育折耳貓，以防止動物受苦",
+      "top_matches": [
+        {
+          "score": 4,
+          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+        },
+        {
+          "score": 4,
+          "cid": "AAFP-2012-FELINE-FRIENDLY-NURSING-CARE-2012"
+        }
+      ],
+      "best_match": "AAFP-2021-FELINE-SENIOR-CARE-2021",
+      "confidence": "low"
+    },
+    {
+      "source_text": "VCA Animal Hospitals: Scottish Fold — 臨床症狀（疼痛、僵硬、跛行）及疼痛管理",
+      "top_matches": [
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022"
+        },
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-COMMITTEE-2022"
+        },
+        {
+          "score": 3,
+          "cid": "VCA-PLANTS-TOXIC-CATS"
+        }
+      ],
+      "best_match": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022",
+      "confidence": "low"
+    }
+  ],
+  "solo-cat-mental-health": [
+    {
+      "source_text": "ISFM Feline Environmental Needs Guidelines: 五大自由中的「心理健康自由」，環境豐富化（Environmental Enrichment）的類別與實施",
+      "top_matches": [
+        {
+          "score": 18,
+          "cid": "AAFP-2013-ENVIRONMENTAL-NEEDS-2013"
+        },
+        {
+          "score": 15,
+          "cid": "AAFP-CAT-FRIENDLY-VETERINARY-ENVIRONMENT-GUID-2020"
+        },
+        {
+          "score": 14,
+          "cid": "AAFP-ENVIRONMENT-2013"
+        }
+      ],
+      "best_match": "AAFP-2013-ENVIRONMENTAL-NEEDS-2013",
+      "confidence": "medium"
+    },
+    {
+      "source_text": "International Cat Care: Indoor Cats — 室內貓的行為需求，獨居與群居的比較",
+      "top_matches": [
+        {
+          "score": 4,
+          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+        },
+        {
+          "score": 4,
+          "cid": "AAFP-2012-FELINE-FRIENDLY-NURSING-CARE-2012"
+        },
+        {
+          "score": 3,
+          "cid": "AAFP-ENVIRONMENT-2013"
+        }
+      ],
+      "best_match": "AAFP-2021-FELINE-SENIOR-CARE-2021",
+      "confidence": "low"
+    },
+    {
+      "source_text": "ASPCA: Enrichment for Indoor Cats — 益智餵食玩具、感官刺激的科學依據",
+      "top_matches": [
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-PLANTS"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-FOODS"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-CAT-PLANT-LIST-2024"
+        }
+      ],
+      "best_match": "ASPCA-TOXIC-PLANTS",
+      "confidence": "low"
+    }
+  ],
+  "cat-cancer-tumors-guide": [
+    {
+      "source_text": "VCA Animal Hospitals: Cancer in Cats — 常見貓咪癌症類型、症狀、診斷與治療選項",
+      "top_matches": [
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022"
+        },
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-COMMITTEE-2022"
+        },
+        {
+          "score": 6,
+          "cid": "CORNELL-WARNING-SIGNS-OF-CANCER-2024"
+        }
+      ],
+      "best_match": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022",
+      "confidence": "low"
+    },
+    {
+      "source_text": "International Cat Care (icatcare.org): Cancer in Cats — 淋巴瘤、FISS、早期篩檢建議",
+      "top_matches": [
+        {
+          "score": 8,
+          "cid": "ICATCARE-LILY-POISONING"
+        },
+        {
+          "score": 6,
+          "cid": "CORNELL-WARNING-SIGNS-OF-CANCER-2024"
+        },
+        {
+          "score": 4,
+          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+        }
+      ],
+      "best_match": "ICATCARE-LILY-POISONING",
+      "confidence": "low"
+    },
+    {
+      "source_text": "ABCD: Feline Injection Site Sarcoma Guidelines — FISS 病理、預防、治療標準",
+      "top_matches": [
+        {
+          "score": 8,
+          "cid": "WSAVA-RENAL-STANDARDIZATION-GUIDELIN-2022"
+        },
+        {
+          "score": 8,
+          "cid": "WSAVA-PROFESSIONAL-WELLNESS-GUIDELIN-2022"
+        },
+        {
+          "score": 5,
+          "cid": "WSAVA-MICROCHIP-IDENTIFICATION-GUIDE-2022"
+        }
+      ],
+      "best_match": "WSAVA-RENAL-STANDARDIZATION-GUIDELIN-2022",
+      "confidence": "low"
+    },
+    {
+      "source_text": "ASPCA: Common Cat Cancers — 各類型腫瘤發生率與飼主識別指引",
+      "top_matches": [
+        {
+          "score": 6,
+          "cid": "CORNELL-WARNING-SIGNS-OF-CANCER-2024"
+        },
+        {
+          "score": 6,
+          "cid": "CORNELL-COMMON-CAT-HAZARDS-2024"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-PLANTS"
+        }
+      ],
+      "best_match": "CORNELL-WARNING-SIGNS-OF-CANCER-2024",
+      "confidence": "low"
+    }
+  ],
+  "cat-cognitive-dysfunction": [
+    {
+      "source_text": "ISFM: Feline Cognitive Dysfunction Syndrome — 流行率（11-15 歲 28%，16 歲以上 50%），DISHA 症狀量表",
+      "top_matches": [
+        {
+          "score": 5,
+          "cid": "CORNELL-CORNELL-VETERINARY-EXPERTS-ADDRESS-FELIN-2024"
+        },
+        {
+          "score": 4,
+          "cid": "SPARKES-2016-ISFM-CKD"
+        },
+        {
+          "score": 4,
+          "cid": "ISFM-DIABETES-2015"
+        }
+      ],
+      "best_match": "CORNELL-CORNELL-VETERINARY-EXPERTS-ADDRESS-FELIN-2024",
+      "confidence": "low"
+    },
+    {
+      "source_text": "VCA Animal Hospitals: Cognitive Dysfunction in Cats — 與其他老年病的鑑別診斷，藥物選項",
+      "top_matches": [
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022"
+        },
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-COMMITTEE-2022"
+        },
+        {
+          "score": 3,
+          "cid": "VCA-PLANTS-TOXIC-CATS"
+        }
+      ],
+      "best_match": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022",
+      "confidence": "low"
+    },
+    {
+      "source_text": "WSAVA Life-stage Guidelines: 老年貓（geriatric）的認知健康監測建議",
+      "top_matches": [
+        {
+          "score": 13,
+          "cid": "WSAVA-RENAL-STANDARDIZATION-GUIDELIN-2022"
+        },
+        {
+          "score": 13,
+          "cid": "WSAVA-PROFESSIONAL-WELLNESS-GUIDELIN-2022"
+        },
+        {
+          "score": 10,
+          "cid": "WSAVA-MICROCHIP-IDENTIFICATION-GUIDE-2022"
+        }
+      ],
+      "best_match": "WSAVA-RENAL-STANDARDIZATION-GUIDELIN-2022",
+      "confidence": "medium"
+    }
+  ],
+  "cat-fip-guide-taiwan": [
+    {
+      "source_text": "ABCD Guidelines on Feline Infectious Peritonitis (Advisory Board on Cat Diseases, 2019): FIP 病理機制、診斷標準、GS-441524 療效數據",
+      "top_matches": [
+        {
+          "score": 104,
+          "cid": "ABCD-FIP-2019"
+        },
+        {
+          "score": 41,
+          "cid": "PEDERSEN-2019-FIP-GS441524"
+        },
+        {
+          "score": 13,
+          "cid": "AAFP-2022-AAFP-EVERYCAT-FELINE-INFECTIOUS-PER-2022"
+        }
+      ],
+      "best_match": "ABCD-FIP-2019",
+      "confidence": "high"
+    },
+    {
+      "source_text": "AAFP/EveryCat Feline Infectious Peritonitis Diagnosis Guidelines (2022): FIP 確診流程、實驗室檢驗判讀標準",
+      "top_matches": [
+        {
+          "score": 111,
+          "cid": "AAFP-FIP-DIAGNOSIS-2022"
+        },
+        {
+          "score": 32,
+          "cid": "PEDERSEN-2019-FIP-GS441524"
+        },
+        {
+          "score": 25,
+          "cid": "AAFP-2022-AAFP-EVERYCAT-FELINE-INFECTIOUS-PER-2022"
+        }
+      ],
+      "best_match": "AAFP-FIP-DIAGNOSIS-2022",
+      "confidence": "high"
+    },
+    {
+      "source_text": "Pedersen 2019 (JFMS) — GS-441524 Efficacy and Safety in cats with naturally occurring feline infectious peritonitis: 31 隻自然感染 FIP 貓的療效資料，最佳劑量 4.0 mg/kg q24h ≥12 週",
+      "top_matches": [
+        {
+          "score": 53,
+          "cid": "PEDERSEN-2019-FIP-GS441524"
+        },
+        {
+          "score": 13,
+          "cid": "AAFP-2022-AAFP-EVERYCAT-FELINE-INFECTIOUS-PER-2022"
+        },
+        {
+          "score": 12,
+          "cid": "ABCD-FIP-2019"
+        }
+      ],
+      "best_match": "PEDERSEN-2019-FIP-GS441524",
+      "confidence": "high"
+    },
+    {
+      "source_text": "FIP treatment GS-441524 - now available in the U.S. — Cornell Feline Health Center: 美國 2024 合法化後的臨床更新",
+      "top_matches": [
+        {
+          "score": 113,
+          "cid": "CORNELL-FIP-TREATMENT-GS-441524-NOW-AVAILABLE-IN-2024"
+        },
+        {
+          "score": 12,
+          "cid": "PEDERSEN-2019-FIP-GS441524"
+        },
+        {
+          "score": 12,
+          "cid": "CORNELL-CORNELL-VETERINARY-EXPERTS-ADDRESS-FELIN-2024"
+        }
+      ],
+      "best_match": "CORNELL-FIP-TREATMENT-GS-441524-NOW-AVAILABLE-IN-2024",
+      "confidence": "high"
+    },
+    {
+      "source_text": "International Cat Care (icatcare.org): Feline Infectious Peritonitis (FIP) — 臨床表現、濕型乾型分類、飼主衛教",
+      "top_matches": [
+        {
+          "score": 32,
+          "cid": "PEDERSEN-2019-FIP-GS441524"
+        },
+        {
+          "score": 13,
+          "cid": "AAFP-2022-AAFP-EVERYCAT-FELINE-INFECTIOUS-PER-2022"
+        },
+        {
+          "score": 8,
+          "cid": "ICATCARE-LILY-POISONING"
+        }
+      ],
+      "best_match": "PEDERSEN-2019-FIP-GS441524",
+      "confidence": "high"
+    }
+  ],
+  "cat-hcm-heart-disease": [
+    {
+      "source_text": "ACVIM Consensus Statement: Guidelines for the Classification, Diagnosis, and Management of Cardiomyopathies in Cats (2020): HCM 分類、診斷標準（超音波）、治療選項和預後",
+      "top_matches": [
+        {
+          "score": 166,
+          "cid": "ACVIM-HCM-2020"
+        },
+        {
+          "score": 8,
+          "cid": "WSAVA-RENAL-STANDARDIZATION-GUIDELIN-2022"
+        },
+        {
+          "score": 8,
+          "cid": "WSAVA-PROFESSIONAL-WELLNESS-GUIDELIN-2022"
+        }
+      ],
+      "best_match": "ACVIM-HCM-2020",
+      "confidence": "high"
+    },
+    {
+      "source_text": "Hypertrophic Cardiomyopathy — Cornell Feline Health Center: 臨床症狀（呼吸困難、後肢突然癱瘓）與緊急處理",
+      "top_matches": [
+        {
+          "score": 105,
+          "cid": "CORNELL-HCM"
+        },
+        {
+          "score": 27,
+          "cid": "FOX-2018-HCM-REVEAL"
+        },
+        {
+          "score": 12,
+          "cid": "CORNELL-CORNELL-VETERINARY-EXPERTS-ADDRESS-FELIN-2024"
+        }
+      ],
+      "best_match": "CORNELL-HCM",
+      "confidence": "high"
+    },
+    {
+      "source_text": "Fox 2018 REVEAL Study (JVIM): 1,730 隻國際 cohort 的 HCM 預後資料 — CHF/ATE 累積發生率與長期存活分析",
+      "top_matches": [
+        {
+          "score": 22,
+          "cid": "FOX-2018-HCM-REVEAL"
+        },
+        {
+          "score": 3,
+          "cid": "CORNELL-HCM"
+        },
+        {
+          "score": 3,
+          "cid": "ACVIM-HCM-2020"
+        }
+      ],
+      "best_match": "FOX-2018-HCM-REVEAL",
+      "confidence": "high"
+    },
+    {
+      "source_text": "VCA Animal Hospitals: Hypertrophic Cardiomyopathy in Cats — 臨床症狀及緊急處理",
+      "top_matches": [
+        {
+          "score": 27,
+          "cid": "FOX-2018-HCM-REVEAL"
+        },
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022"
+        },
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-COMMITTEE-2022"
+        }
+      ],
+      "best_match": "FOX-2018-HCM-REVEAL",
+      "confidence": "high"
+    },
+    {
+      "source_text": "International Cat Care: HCM in Cats — 品種特異性基因突變（Maine Coon A31P、Ragdoll R820W）的篩檢建議",
+      "top_matches": [
+        {
+          "score": 4,
+          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+        },
+        {
+          "score": 4,
+          "cid": "AAFP-2012-FELINE-FRIENDLY-NURSING-CARE-2012"
+        },
+        {
+          "score": 3,
+          "cid": "FOX-2018-HCM-REVEAL"
+        }
+      ],
+      "best_match": "AAFP-2021-FELINE-SENIOR-CARE-2021",
+      "confidence": "low"
+    }
+  ],
+  "cat-hepatic-lipidosis": [
+    {
+      "source_text": "VCA Animal Hospitals: Hepatic Lipidosis in Cats — 病理機制、臨床症狀、診斷與治療（包含飼管餵食）",
+      "top_matches": [
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022"
+        },
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-COMMITTEE-2022"
+        },
+        {
+          "score": 3,
+          "cid": "VCA-PLANTS-TOXIC-CATS"
+        }
+      ],
+      "best_match": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022",
+      "confidence": "low"
+    },
+    {
+      "source_text": "International Cat Care (icatcare.org): Hepatic Lipidosis — 高風險族群、預防、預後評估",
+      "top_matches": [
+        {
+          "score": 8,
+          "cid": "ICATCARE-LILY-POISONING"
+        },
+        {
+          "score": 4,
+          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+        },
+        {
+          "score": 4,
+          "cid": "AAFP-2012-FELINE-FRIENDLY-NURSING-CARE-2012"
+        }
+      ],
+      "best_match": "ICATCARE-LILY-POISONING",
+      "confidence": "low"
+    },
+    {
+      "source_text": "ASPCA: Fatty Liver Disease in Cats — 飼主識別指引與緊急就醫時機",
+      "top_matches": [
+        {
+          "score": 5,
+          "cid": "WSAVA-LIVER-DISEASE-GUIDELINES-2022"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-PLANTS"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-FOODS"
+        }
+      ],
+      "best_match": "WSAVA-LIVER-DISEASE-GUIDELINES-2022",
+      "confidence": "low"
+    }
+  ],
+  "cat-home-grooming-guide": [
+    {
+      "source_text": "VCA Animal Hospitals: Grooming and Coat Care for Cats — 梳毛技術、工具選擇、打結處理",
+      "top_matches": [
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022"
+        },
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-COMMITTEE-2022"
+        },
+        {
+          "score": 4,
+          "cid": "WILHELMY-2016-BREED-COAT-BEHAVIOR"
+        }
+      ],
+      "best_match": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022",
+      "confidence": "low"
+    },
+    {
+      "source_text": "ASPCA: Cat Nail Trimming — 指甲解剖、血線位置、剪指甲步驟",
+      "top_matches": [
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-PLANTS"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-FOODS"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-CAT-PLANT-LIST-2024"
+        }
+      ],
+      "best_match": "ASPCA-TOXIC-PLANTS",
+      "confidence": "low"
+    },
+    {
+      "source_text": "ISFM: Preventive Healthcare in Cats — 居家健康監測作為定期護理的一部分",
+      "top_matches": [
+        {
+          "score": 6,
+          "cid": "WSAVA-ONE-HEALTH-COMMITTEE-2022"
+        },
+        {
+          "score": 6,
+          "cid": "AAFP-2025-FELINEVMA-FELINE-ORAL-HEALTH-AND-DE-2025"
+        },
+        {
+          "score": 4,
+          "cid": "SPARKES-2016-ISFM-CKD"
+        }
+      ],
+      "best_match": "WSAVA-ONE-HEALTH-COMMITTEE-2022",
+      "confidence": "low"
+    }
+  ],
+  "cat-ibd-intestinal-disease": [
+    {
+      "source_text": "ISFM: Chronic Gastrointestinal Disease in Cats — IBD 的定義、診斷（組織切片必要性）、與淋巴瘤的鑑別",
+      "top_matches": [
+        {
+          "score": 16,
+          "cid": "WSAVA-GASTROINTESTINAL-GUIDELINES-2022"
+        },
+        {
+          "score": 4,
+          "cid": "SPARKES-2016-ISFM-CKD"
+        },
+        {
+          "score": 4,
+          "cid": "ISFM-DIABETES-2015"
+        }
+      ],
+      "best_match": "WSAVA-GASTROINTESTINAL-GUIDELINES-2022",
+      "confidence": "medium"
+    },
+    {
+      "source_text": "VCA Animal Hospitals: Inflammatory Bowel Disease in Cats — 飲食試驗和類固醇治療的應用",
+      "top_matches": [
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022"
+        },
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-COMMITTEE-2022"
+        },
+        {
+          "score": 3,
+          "cid": "VCA-PLANTS-TOXIC-CATS"
+        }
+      ],
+      "best_match": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022",
+      "confidence": "low"
+    },
+    {
+      "source_text": "ASPCA: IBD in Cats — 症狀描述和就醫建議",
+      "top_matches": [
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-PLANTS"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-FOODS"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-CAT-PLANT-LIST-2024"
+        }
+      ],
+      "best_match": "ASPCA-TOXIC-PLANTS",
+      "confidence": "low"
+    }
+  ],
+  "cat-indoor-vs-outdoor-taiwan": [
+    {
+      "source_text": "ISFM Feline Environmental Needs Guidelines: 室內 vs 室外貓咪的健康風險比較與環境豐富化建議",
+      "top_matches": [
+        {
+          "score": 18,
+          "cid": "AAFP-2013-ENVIRONMENTAL-NEEDS-2013"
+        },
+        {
+          "score": 15,
+          "cid": "AAFP-CAT-FRIENDLY-VETERINARY-ENVIRONMENT-GUID-2020"
+        },
+        {
+          "score": 14,
+          "cid": "AAFP-ENVIRONMENT-2013"
+        }
+      ],
+      "best_match": "AAFP-2013-ENVIRONMENTAL-NEEDS-2013",
+      "confidence": "medium"
+    },
+    {
+      "source_text": "ASPCA: Indoor Cats vs. Outdoor Cats — 壽命差異的流行病學數據",
+      "top_matches": [
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-PLANTS"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-FOODS"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-CAT-PLANT-LIST-2024"
+        }
+      ],
+      "best_match": "ASPCA-TOXIC-PLANTS",
+      "confidence": "low"
+    },
+    {
+      "source_text": "International Cat Care: Keeping Cats Safe Outdoors — 安全室外活動設計（貓咪圍欄、牽繩散步）",
+      "top_matches": [
+        {
+          "score": 4,
+          "cid": "CORNELL-SAFE-TOYS-AND-GIFTS-2024"
+        },
+        {
+          "score": 4,
+          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+        },
+        {
+          "score": 4,
+          "cid": "AAFP-2012-FELINE-FRIENDLY-NURSING-CARE-2012"
+        }
+      ],
+      "best_match": "CORNELL-SAFE-TOYS-AND-GIFTS-2024",
+      "confidence": "low"
+    }
+  ],
+  "cat-obesity-weight-management": [
+    {
+      "source_text": "WSAVA Global Nutrition Guidelines (2021): 體態評分系統（BCS 1-9）及肥胖的定義（BCS ≥ 6 為過重）",
+      "top_matches": [
+        {
+          "score": 47,
+          "cid": "WSAVA-NUTRITION-GUIDELINES-2022"
+        },
+        {
+          "score": 21,
+          "cid": "WSAVA-NUTRITION-2011"
+        },
+        {
+          "score": 14,
+          "cid": "WSAVA-NUTRITION-COMMITTEE-2022"
+        }
+      ],
+      "best_match": "WSAVA-NUTRITION-GUIDELINES-2022",
+      "confidence": "high"
+    },
+    {
+      "source_text": "ISFM: Obesity in Cats — 減重速度建議（每週不超過體重 0.5-1%），肝脂肪沉積症（Hepatic Lipidosis）的風險",
+      "top_matches": [
+        {
+          "score": 4,
+          "cid": "SPARKES-2016-ISFM-CKD"
+        },
+        {
+          "score": 4,
+          "cid": "ISFM-DIABETES-2015"
+        },
+        {
+          "score": 4,
+          "cid": "ICATCARE-LILY-POISONING"
+        }
+      ],
+      "best_match": "SPARKES-2016-ISFM-CKD",
+      "confidence": "low"
+    },
+    {
+      "source_text": "VCA Animal Hospitals: Obesity in Cats — 測量體重、制定減重計劃的臨床建議",
+      "top_matches": [
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022"
+        },
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-COMMITTEE-2022"
+        },
+        {
+          "score": 3,
+          "cid": "VCA-PLANTS-TOXIC-CATS"
+        }
+      ],
+      "best_match": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022",
+      "confidence": "low"
+    }
+  ],
+  "cat-pheromone-products-guide": [
+    {
+      "source_text": "ISFM Feline Stress and Welfare Guidelines 2020: 合成費洛蒙在環境管理中的循證應用",
+      "top_matches": [
+        {
+          "score": 8,
+          "cid": "WSAVA-RENAL-STANDARDIZATION-GUIDELIN-2022"
+        },
+        {
+          "score": 8,
+          "cid": "WSAVA-PROFESSIONAL-WELLNESS-GUIDELIN-2022"
+        },
+        {
+          "score": 7,
+          "cid": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022"
+        }
+      ],
+      "best_match": "WSAVA-RENAL-STANDARDIZATION-GUIDELIN-2022",
+      "confidence": "low"
+    },
+    {
+      "source_text": "International Cat Care: Pheromone Therapy — F3/F4 費洛蒙機制、臨床研究回顧",
+      "top_matches": [
+        {
+          "score": 7,
+          "cid": "AAFP-2013-FLUID-THERAPY-2013"
+        },
+        {
+          "score": 4,
+          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+        },
+        {
+          "score": 4,
+          "cid": "AAFP-2012-FELINE-FRIENDLY-NURSING-CARE-2012"
+        }
+      ],
+      "best_match": "AAFP-2013-FLUID-THERAPY-2013",
+      "confidence": "low"
+    },
+    {
+      "source_text": "AAFP/ISFM Cat Friendly Practices Guidelines: 合成費洛蒙的醫院應用與居家建議",
+      "top_matches": [
+        {
+          "score": 16,
+          "cid": "AAFP-CAT-FRIENDLY-VETERINARY-INTERACTION-GUID-2020"
+        },
+        {
+          "score": 16,
+          "cid": "AAFP-CAT-FRIENDLY-VETERINARY-ENVIRONMENT-GUID-2020"
+        },
+        {
+          "score": 16,
+          "cid": "AAFP-2022-ISFM-AAFP-CAT-FRIENDLY-VETERINARY-E-2022"
+        }
+      ],
+      "best_match": "AAFP-CAT-FRIENDLY-VETERINARY-INTERACTION-GUID-2020",
+      "confidence": "medium"
+    }
+  ],
+  "cat-toxoplasma-pregnancy": [
+    {
+      "source_text": "ASPCA: Toxoplasmosis and Cats — 弓形蟲的主要感染來源（生肉佔 50% 以上），貓咪排卵的條件和時間",
+      "top_matches": [
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-PLANTS"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-FOODS"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-CAT-PLANT-LIST-2024"
+        }
+      ],
+      "best_match": "ASPCA-TOXIC-PLANTS",
+      "confidence": "low"
+    },
+    {
+      "source_text": "VCA Animal Hospitals: Toxoplasmosis in Cats — 貓咪初次感染後只排卵 1-3 週，此後終生免疫",
+      "top_matches": [
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022"
+        },
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-COMMITTEE-2022"
+        },
+        {
+          "score": 3,
+          "cid": "VCA-PLANTS-TOXIC-CATS"
+        }
+      ],
+      "best_match": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022",
+      "confidence": "low"
+    },
+    {
+      "source_text": "農業部防疫署：弓形蟲病防疫資訊 — 台灣孕婦的弓形蟲風險評估",
+      "top_matches": [],
+      "best_match": null,
+      "confidence": "low"
+    }
+  ],
+  "cat-upper-respiratory-infection": [
+    {
+      "source_text": "ABCD European Advisory Board on Cat Diseases: FHV-1 與 FCV 指引 — 傳播方式、臨床表現、疫苗效果",
+      "top_matches": [
+        {
+          "score": 8,
+          "cid": "WSAVA-STRATEGIC-ADVISORY-COMMITTEE-2022"
+        },
+        {
+          "score": 8,
+          "cid": "WSAVA-FINANCIAL-ADVISORY-COMMITTEE-2022"
+        },
+        {
+          "score": 4,
+          "cid": "ABCD-FIP-2019"
+        }
+      ],
+      "best_match": "WSAVA-STRATEGIC-ADVISORY-COMMITTEE-2022",
+      "confidence": "low"
+    },
+    {
+      "source_text": "VCA Animal Hospitals: Upper Respiratory Infection in Cats — 症狀描述、診斷和居家護理",
+      "top_matches": [
+        {
+          "score": 11,
+          "cid": "CORNELL-RESPIRATORY-INFECTIONS-2024"
+        },
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022"
+        },
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-COMMITTEE-2022"
+        }
+      ],
+      "best_match": "CORNELL-RESPIRATORY-INFECTIONS-2024",
+      "confidence": "medium"
+    },
+    {
+      "source_text": "ISFM: Prevention of Infectious Diseases in Cats — 疫苗接種是預防 URI 的關鍵，多貓環境的防控",
+      "top_matches": [
+        {
+          "score": 10,
+          "cid": "AAFP-2022-AAFP-EVERYCAT-FELINE-INFECTIOUS-PER-2022"
+        },
+        {
+          "score": 4,
+          "cid": "SPARKES-2016-ISFM-CKD"
+        },
+        {
+          "score": 4,
+          "cid": "ISFM-DIABETES-2015"
+        }
+      ],
+      "best_match": "AAFP-2022-AAFP-EVERYCAT-FELINE-INFECTIOUS-PER-2022",
+      "confidence": "medium"
+    }
+  ],
+  "cat-adoption-guide-taiwan": [
+    {
+      "source_text": "農業部動物保護資訊網: https://animal.moa.gov.tw/",
+      "top_matches": [
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022"
+        },
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-COMMITTEE-2022"
+        }
+      ],
+      "best_match": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022",
+      "confidence": "low"
+    },
+    {
+      "source_text": "International Cat Care: Adopting a Cat — https://icatcare.org/advice/getting-a-cat/",
+      "top_matches": [
+        {
+          "score": 8,
+          "cid": "ICATCARE-LILY-POISONING"
+        },
+        {
+          "score": 4,
+          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+        },
+        {
+          "score": 4,
+          "cid": "AAFP-2012-FELINE-FRIENDLY-NURSING-CARE-2012"
+        }
+      ],
+      "best_match": "ICATCARE-LILY-POISONING",
+      "confidence": "low"
+    },
+    {
+      "source_text": "International Cat Care: Adopting an Older Cat",
+      "top_matches": [
+        {
+          "score": 4,
+          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+        },
+        {
+          "score": 4,
+          "cid": "AAFP-2012-FELINE-FRIENDLY-NURSING-CARE-2012"
+        }
+      ],
+      "best_match": "AAFP-2021-FELINE-SENIOR-CARE-2021",
+      "confidence": "low"
+    },
+    {
+      "source_text": "ASPCA: Adopting a Cat from a Shelter",
+      "top_matches": [
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-PLANTS"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-FOODS"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-CAT-PLANT-LIST-2024"
+        }
+      ],
+      "best_match": "ASPCA-TOXIC-PLANTS",
+      "confidence": "low"
+    },
+    {
+      "source_text": "WSAVA Life-stage Guidelines（老齡貓監測）",
+      "top_matches": [
+        {
+          "score": 13,
+          "cid": "WSAVA-RENAL-STANDARDIZATION-GUIDELIN-2022"
+        },
+        {
+          "score": 13,
+          "cid": "WSAVA-PROFESSIONAL-WELLNESS-GUIDELIN-2022"
+        },
+        {
+          "score": 10,
+          "cid": "WSAVA-MICROCHIP-IDENTIFICATION-GUIDE-2022"
+        }
+      ],
+      "best_match": "WSAVA-RENAL-STANDARDIZATION-GUIDELIN-2022",
+      "confidence": "medium"
+    }
+  ],
+  "cat-common-symptoms-taiwan": [
+    {
+      "source_text": "VCA Animal Hospitals: Vomiting / Constipation / Weight Loss in Cats",
+      "top_matches": [
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022"
+        },
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-COMMITTEE-2022"
+        },
+        {
+          "score": 4,
+          "cid": "CORNELL-GRIEVING-THE-LOSS-OF-YOUR-CAT-2024"
+        }
+      ],
+      "best_match": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022",
+      "confidence": "low"
+    },
+    {
+      "source_text": "ASPCA: Cat Vomiting / Constipation",
+      "top_matches": [
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-PLANTS"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-FOODS"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-CAT-PLANT-LIST-2024"
+        }
+      ],
+      "best_match": "ASPCA-TOXIC-PLANTS",
+      "confidence": "low"
+    },
+    {
+      "source_text": "ISFM: Gastrointestinal Disease / Feline Megacolon / Hyperthyroidism",
+      "top_matches": [
+        {
+          "score": 16,
+          "cid": "WSAVA-GASTROINTESTINAL-GUIDELINES-2022"
+        },
+        {
+          "score": 15,
+          "cid": "CORNELL-HYPERTHYROIDISM"
+        },
+        {
+          "score": 15,
+          "cid": "AAFP-HYPERTHYROIDISM-2016"
+        }
+      ],
+      "best_match": "WSAVA-GASTROINTESTINAL-GUIDELINES-2022",
+      "confidence": "medium"
+    },
+    {
+      "source_text": "AAFP: Senior Cat Guidelines",
+      "top_matches": [
+        {
+          "score": 10,
+          "cid": "AAFP-SENIOR-2021"
+        },
+        {
+          "score": 10,
+          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+        },
+        {
+          "score": 8,
+          "cid": "WSAVA-RENAL-STANDARDIZATION-GUIDELIN-2022"
+        }
+      ],
+      "best_match": "AAFP-SENIOR-2021",
+      "confidence": "medium"
+    }
+  ],
+  "cat-cost-insurance-taiwan": [
+    {
+      "source_text": "ASPCA: The Real Cost of Pet Ownership",
+      "top_matches": [
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-PLANTS"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-FOODS"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-CAT-PLANT-LIST-2024"
+        }
+      ],
+      "best_match": "ASPCA-TOXIC-PLANTS",
+      "confidence": "low"
+    },
+    {
+      "source_text": "WSAVA Life-stage Guidelines（預防醫療投資）",
+      "top_matches": [
+        {
+          "score": 13,
+          "cid": "WSAVA-RENAL-STANDARDIZATION-GUIDELIN-2022"
+        },
+        {
+          "score": 13,
+          "cid": "WSAVA-PROFESSIONAL-WELLNESS-GUIDELIN-2022"
+        },
+        {
+          "score": 10,
+          "cid": "WSAVA-MICROCHIP-IDENTIFICATION-GUIDE-2022"
+        }
+      ],
+      "best_match": "WSAVA-RENAL-STANDARDIZATION-GUIDELIN-2022",
+      "confidence": "medium"
+    },
+    {
+      "source_text": "ICatCare: Pet Insurance",
+      "top_matches": [
+        {
+          "score": 8,
+          "cid": "ICATCARE-LILY-POISONING"
+        },
+        {
+          "score": 4,
+          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+        },
+        {
+          "score": 4,
+          "cid": "AAFP-2012-FELINE-FRIENDLY-NURSING-CARE-2012"
+        }
+      ],
+      "best_match": "ICATCARE-LILY-POISONING",
+      "confidence": "low"
+    },
+    {
+      "source_text": "農業部動物保護資訊網 / 金融監督管理委員會",
+      "top_matches": [],
+      "best_match": null,
+      "confidence": "low"
+    }
+  ],
+  "cat-dental-health-taiwan": [
+    {
+      "source_text": "ICatCare: Cat dental care",
+      "top_matches": [
+        {
+          "score": 8,
+          "cid": "ICATCARE-LILY-POISONING"
+        },
+        {
+          "score": 6,
+          "cid": "WSAVA-DENTAL-GUIDELINES-2022"
+        },
+        {
+          "score": 6,
+          "cid": "WSAVA-DENTAL-COMMITTEE-2022"
+        }
+      ],
+      "best_match": "ICATCARE-LILY-POISONING",
+      "confidence": "low"
+    },
+    {
+      "source_text": "VCA Animal Hospital: Dental Disease in Cats",
+      "top_matches": [
+        {
+          "score": 6,
+          "cid": "WSAVA-DENTAL-GUIDELINES-2022"
+        },
+        {
+          "score": 6,
+          "cid": "WSAVA-DENTAL-COMMITTEE-2022"
+        },
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022"
+        }
+      ],
+      "best_match": "WSAVA-DENTAL-GUIDELINES-2022",
+      "confidence": "low"
+    },
+    {
+      "source_text": "ASPCA: Cat Dental Care",
+      "top_matches": [
+        {
+          "score": 6,
+          "cid": "WSAVA-DENTAL-GUIDELINES-2022"
+        },
+        {
+          "score": 6,
+          "cid": "WSAVA-DENTAL-COMMITTEE-2022"
+        },
+        {
+          "score": 6,
+          "cid": "AAFP-DENTAL-2025"
+        }
+      ],
+      "best_match": "WSAVA-DENTAL-GUIDELINES-2022",
+      "confidence": "low"
+    },
+    {
+      "source_text": "ISFM: Feline Dental Disease Guidelines",
+      "top_matches": [
+        {
+          "score": 8,
+          "cid": "WSAVA-RENAL-STANDARDIZATION-GUIDELIN-2022"
+        },
+        {
+          "score": 8,
+          "cid": "WSAVA-PROFESSIONAL-WELLNESS-GUIDELIN-2022"
+        },
+        {
+          "score": 6,
+          "cid": "WSAVA-DENTAL-GUIDELINES-2022"
+        }
+      ],
+      "best_match": "WSAVA-RENAL-STANDARDIZATION-GUIDELIN-2022",
+      "confidence": "low"
+    },
+    {
+      "source_text": "AAFP: Feline Preventive Healthcare Guidelines",
+      "top_matches": [
+        {
+          "score": 10,
+          "cid": "AAFP-2025-FELINEVMA-FELINE-ORAL-HEALTH-AND-DE-2025"
+        },
+        {
+          "score": 8,
+          "cid": "WSAVA-RENAL-STANDARDIZATION-GUIDELIN-2022"
+        },
+        {
+          "score": 8,
+          "cid": "WSAVA-PROFESSIONAL-WELLNESS-GUIDELIN-2022"
+        }
+      ],
+      "best_match": "AAFP-2025-FELINEVMA-FELINE-ORAL-HEALTH-AND-DE-2025",
+      "confidence": "medium"
+    }
+  ],
+  "cat-emergency-care-taiwan": [
+    {
+      "source_text": "International Cat Care: When to take your cat to the vet — https://icatcare.org/advice/when-to-take-your-cat-to-the-vet/",
+      "top_matches": [
+        {
+          "score": 8,
+          "cid": "ICATCARE-LILY-POISONING"
+        },
+        {
+          "score": 4,
+          "cid": "CORNELL-TICKS-AND-YOUR-CAT-FAQS-2024"
+        },
+        {
+          "score": 4,
+          "cid": "CORNELL-GRIEVING-THE-LOSS-OF-YOUR-CAT-2024"
+        }
+      ],
+      "best_match": "ICATCARE-LILY-POISONING",
+      "confidence": "low"
+    },
+    {
+      "source_text": "VCA Animal Hospitals: First Aid for Cats",
+      "top_matches": [
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022"
+        },
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-COMMITTEE-2022"
+        },
+        {
+          "score": 3,
+          "cid": "VCA-PLANTS-TOXIC-CATS"
+        }
+      ],
+      "best_match": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022",
+      "confidence": "low"
+    },
+    {
+      "source_text": "ASPCA Animal Poison Control: Emergency Procedures",
+      "top_matches": [
+        {
+          "score": 9,
+          "cid": "VCA-EMERGENCY-SIGNS"
+        },
+        {
+          "score": 7,
+          "cid": "WSAVA-REPRODUCTION-CONTROL-GUIDELINE-2022"
+        },
+        {
+          "score": 7,
+          "cid": "WSAVA-REPRODUCTION-CONTROL-COMMITTEE-2022"
+        }
+      ],
+      "best_match": "VCA-EMERGENCY-SIGNS",
+      "confidence": "low"
+    },
+    {
+      "source_text": "ICatCare: Emergency Care for Cats",
+      "top_matches": [
+        {
+          "score": 9,
+          "cid": "VCA-EMERGENCY-SIGNS"
+        },
+        {
+          "score": 8,
+          "cid": "ICATCARE-LILY-POISONING"
+        },
+        {
+          "score": 4,
+          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+        }
+      ],
+      "best_match": "VCA-EMERGENCY-SIGNS",
+      "confidence": "low"
+    }
+  ],
+  "cat-end-of-life-care-taiwan": [
+    {
+      "source_text": "ISFM Consensus Guidelines: Management of Chronic Kidney Disease in Cats",
+      "top_matches": [
+        {
+          "score": 26,
+          "cid": "SPARKES-2016-ISFM-CKD"
+        },
+        {
+          "score": 8,
+          "cid": "WSAVA-RENAL-STANDARDIZATION-GUIDELIN-2022"
+        },
+        {
+          "score": 8,
+          "cid": "WSAVA-PROFESSIONAL-WELLNESS-GUIDELIN-2022"
+        }
+      ],
+      "best_match": "SPARKES-2016-ISFM-CKD",
+      "confidence": "high"
+    },
+    {
+      "source_text": "VCA Animal Hospitals: Palliative and Hospice Care for Cats",
+      "top_matches": [
+        {
+          "score": 15,
+          "cid": "AAFP-2023-AAFP-IAAHPC-FELINE-HOSPICE-PALLIATI-2023"
+        },
+        {
+          "score": 7,
+          "cid": "AAFP-HOSPICE-2023"
+        },
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022"
+        }
+      ],
+      "best_match": "AAFP-2023-AAFP-IAAHPC-FELINE-HOSPICE-PALLIATI-2023",
+      "confidence": "medium"
+    },
+    {
+      "source_text": "VCA: Coping with the Loss of Your Pet",
+      "top_matches": [
+        {
+          "score": 8,
+          "cid": "CORNELL-GRIEVING-THE-LOSS-OF-YOUR-CAT-2024"
+        },
+        {
+          "score": 4,
+          "cid": "CORNELL-TICKS-AND-YOUR-CAT-FAQS-2024"
+        },
+        {
+          "score": 3,
+          "cid": "VCA-PLANTS-TOXIC-CATS"
+        }
+      ],
+      "best_match": "CORNELL-GRIEVING-THE-LOSS-OF-YOUR-CAT-2024",
+      "confidence": "low"
+    },
+    {
+      "source_text": "ASPCA: Coping with Pet Loss",
+      "top_matches": [
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-PLANTS"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-FOODS"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-CAT-PLANT-LIST-2024"
+        }
+      ],
+      "best_match": "ASPCA-TOXIC-PLANTS",
+      "confidence": "low"
+    },
+    {
+      "source_text": "ICatCare: Bereavement Support",
+      "top_matches": [
+        {
+          "score": 8,
+          "cid": "ICATCARE-LILY-POISONING"
+        },
+        {
+          "score": 4,
+          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+        },
+        {
+          "score": 4,
+          "cid": "AAFP-2012-FELINE-FRIENDLY-NURSING-CARE-2012"
+        }
+      ],
+      "best_match": "ICATCARE-LILY-POISONING",
+      "confidence": "low"
+    },
+    {
+      "source_text": "WSAVA Life-stage Guidelines（End-of-life care 倫理框架）",
+      "top_matches": [
+        {
+          "score": 13,
+          "cid": "WSAVA-RENAL-STANDARDIZATION-GUIDELIN-2022"
+        },
+        {
+          "score": 13,
+          "cid": "WSAVA-PROFESSIONAL-WELLNESS-GUIDELIN-2022"
+        },
+        {
+          "score": 10,
+          "cid": "WSAVA-MICROCHIP-IDENTIFICATION-GUIDE-2022"
+        }
+      ],
+      "best_match": "WSAVA-RENAL-STANDARDIZATION-GUIDELIN-2022",
+      "confidence": "medium"
+    }
+  ],
+  "cat-environment-enrichment-taiwan": [
+    {
+      "source_text": "ISFM Feline Environmental Needs Guidelines",
+      "top_matches": [
+        {
+          "score": 18,
+          "cid": "AAFP-2013-ENVIRONMENTAL-NEEDS-2013"
+        },
+        {
+          "score": 15,
+          "cid": "AAFP-CAT-FRIENDLY-VETERINARY-ENVIRONMENT-GUID-2020"
+        },
+        {
+          "score": 11,
+          "cid": "AAFP-ENVIRONMENT-2013"
+        }
+      ],
+      "best_match": "AAFP-2013-ENVIRONMENTAL-NEEDS-2013",
+      "confidence": "medium"
+    },
+    {
+      "source_text": "ICatCare: Environmental Enrichment for Indoor Cats",
+      "top_matches": [
+        {
+          "score": 13,
+          "cid": "AAFP-2013-ENVIRONMENTAL-NEEDS-2013"
+        },
+        {
+          "score": 11,
+          "cid": "AAFP-ENVIRONMENT-2013"
+        },
+        {
+          "score": 11,
+          "cid": "AAFP-CAT-FRIENDLY-VETERINARY-ENVIRONMENT-GUID-2020"
+        }
+      ],
+      "best_match": "AAFP-2013-ENVIRONMENTAL-NEEDS-2013",
+      "confidence": "medium"
+    },
+    {
+      "source_text": "ASPCA: Enriching Your Cat's Life / Creating an Enriching Environment",
+      "top_matches": [
+        {
+          "score": 11,
+          "cid": "AAFP-ENVIRONMENT-2013"
+        },
+        {
+          "score": 11,
+          "cid": "AAFP-CAT-FRIENDLY-VETERINARY-ENVIRONMENT-GUID-2020"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-PLANTS"
+        }
+      ],
+      "best_match": "AAFP-ENVIRONMENT-2013",
+      "confidence": "medium"
+    }
+  ],
+  "cat-eye-ear-problems-taiwan": [
+    {
+      "source_text": "VCA Animal Hospitals: Eye Discharge / Ear Mites / Ear Infections in Cats",
+      "top_matches": [
+        {
+          "score": 10,
+          "cid": "CORNELL-RESPIRATORY-INFECTIONS-2024"
+        },
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022"
+        },
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-COMMITTEE-2022"
+        }
+      ],
+      "best_match": "CORNELL-RESPIRATORY-INFECTIONS-2024",
+      "confidence": "medium"
+    },
+    {
+      "source_text": "ASPCA: Eye Problems / Ear Infections in Cats",
+      "top_matches": [
+        {
+          "score": 10,
+          "cid": "CORNELL-RESPIRATORY-INFECTIONS-2024"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-PLANTS"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-FOODS"
+        }
+      ],
+      "best_match": "CORNELL-RESPIRATORY-INFECTIONS-2024",
+      "confidence": "medium"
+    },
+    {
+      "source_text": "ISFM: Feline Ocular Disease / Otic Disease",
+      "top_matches": [
+        {
+          "score": 5,
+          "cid": "CORNELL-CORNELL-VETERINARY-EXPERTS-ADDRESS-FELIN-2024"
+        },
+        {
+          "score": 4,
+          "cid": "SPARKES-2016-ISFM-CKD"
+        },
+        {
+          "score": 4,
+          "cid": "ISFM-DIABETES-2015"
+        }
+      ],
+      "best_match": "CORNELL-CORNELL-VETERINARY-EXPERTS-ADDRESS-FELIN-2024",
+      "confidence": "low"
+    }
+  ],
+  "cat-food-selection-taiwan": [
+    {
+      "source_text": "WSAVA Global Nutrition Guidelines (2021)",
+      "top_matches": [
+        {
+          "score": 47,
+          "cid": "WSAVA-NUTRITION-GUIDELINES-2022"
+        },
+        {
+          "score": 14,
+          "cid": "WSAVA-NUTRITION-COMMITTEE-2022"
+        },
+        {
+          "score": 14,
+          "cid": "WSAVA-NUTRITION-2011"
+        }
+      ],
+      "best_match": "WSAVA-NUTRITION-GUIDELINES-2022",
+      "confidence": "high"
+    },
+    {
+      "source_text": "ASPCA: Cat Nutrition Tips / Reading Pet Food Labels / Selecting Commercial Food",
+      "top_matches": [
+        {
+          "score": 9,
+          "cid": "WSAVA-NUTRITION-GUIDELINES-2022"
+        },
+        {
+          "score": 9,
+          "cid": "WSAVA-NUTRITION-COMMITTEE-2022"
+        },
+        {
+          "score": 9,
+          "cid": "WSAVA-NUTRITION-2011"
+        }
+      ],
+      "best_match": "WSAVA-NUTRITION-GUIDELINES-2022",
+      "confidence": "low"
+    },
+    {
+      "source_text": "VCA Animal Hospital: Reading Pet Food Labels / Feeding Your Cat",
+      "top_matches": [
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022"
+        },
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-COMMITTEE-2022"
+        },
+        {
+          "score": 4,
+          "cid": "CORNELL-TICKS-AND-YOUR-CAT-FAQS-2024"
+        }
+      ],
+      "best_match": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022",
+      "confidence": "low"
+    },
+    {
+      "source_text": "ICatCare: Feeding and obesity",
+      "top_matches": [
+        {
+          "score": 8,
+          "cid": "ICATCARE-LILY-POISONING"
+        },
+        {
+          "score": 4,
+          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+        },
+        {
+          "score": 4,
+          "cid": "AAFP-2018-HOW-TO-FEED-A-CAT-2018"
+        }
+      ],
+      "best_match": "ICATCARE-LILY-POISONING",
+      "confidence": "low"
+    }
+  ],
+  "cat-home-safety-taiwan": [
+    {
+      "source_text": "ASPCA Animal Poison Control / Indoor vs. Outdoor Cats / Preventing Lost",
+      "top_matches": [
+        {
+          "score": 7,
+          "cid": "WSAVA-REPRODUCTION-CONTROL-GUIDELINE-2022"
+        },
+        {
+          "score": 7,
+          "cid": "WSAVA-REPRODUCTION-CONTROL-COMMITTEE-2022"
+        },
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022"
+        }
+      ],
+      "best_match": "WSAVA-REPRODUCTION-CONTROL-GUIDELINE-2022",
+      "confidence": "low"
+    },
+    {
+      "source_text": "ICatCare: Hazards in the Home / Keeping Cats Safe / Microchipping",
+      "top_matches": [
+        {
+          "score": 9,
+          "cid": "WSAVA-MICROCHIP-IDENTIFICATION-GUIDE-2022"
+        },
+        {
+          "score": 8,
+          "cid": "ICATCARE-LILY-POISONING"
+        },
+        {
+          "score": 7,
+          "cid": "CORNELL-COMMON-CAT-HAZARDS-2024"
+        }
+      ],
+      "best_match": "WSAVA-MICROCHIP-IDENTIFICATION-GUIDE-2022",
+      "confidence": "low"
+    },
+    {
+      "source_text": "VCA Animal Hospitals: High-Rise Syndrome in Cats",
+      "top_matches": [
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022"
+        },
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-COMMITTEE-2022"
+        },
+        {
+          "score": 3,
+          "cid": "VCA-PLANTS-TOXIC-CATS"
+        }
+      ],
+      "best_match": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022",
+      "confidence": "low"
+    },
+    {
+      "source_text": "ISFM: Environmental Needs Guidelines",
+      "top_matches": [
+        {
+          "score": 18,
+          "cid": "AAFP-2013-ENVIRONMENTAL-NEEDS-2013"
+        },
+        {
+          "score": 15,
+          "cid": "AAFP-CAT-FRIENDLY-VETERINARY-ENVIRONMENT-GUID-2020"
+        },
+        {
+          "score": 11,
+          "cid": "AAFP-ENVIRONMENT-2013"
+        }
+      ],
+      "best_match": "AAFP-2013-ENVIRONMENTAL-NEEDS-2013",
+      "confidence": "medium"
+    },
+    {
+      "source_text": "農業部動物保護資訊網（晶片登記）: https://animal.moa.gov.tw/",
+      "top_matches": [
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022"
+        },
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-COMMITTEE-2022"
+        }
+      ],
+      "best_match": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022",
+      "confidence": "low"
+    }
+  ],
+  "cat-laws-taiwan": [
+    {
+      "source_text": "動物保護法全文 https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=M0120001",
+      "top_matches": [],
+      "best_match": null,
+      "confidence": "low"
+    },
+    {
+      "source_text": "農業部動物保護資訊網 https://animal.moa.gov.tw/",
+      "top_matches": [
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022"
+        },
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-COMMITTEE-2022"
+        }
+      ],
+      "best_match": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022",
+      "confidence": "low"
+    },
+    {
+      "source_text": "農業部寵物登記管理辦法",
+      "top_matches": [],
+      "best_match": null,
+      "confidence": "low"
+    },
+    {
+      "source_text": "ICatCare: Feral Cat Management（TNR 科學評估）",
+      "top_matches": [
+        {
+          "score": 8,
+          "cid": "ICATCARE-LILY-POISONING"
+        },
+        {
+          "score": 4,
+          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+        },
+        {
+          "score": 4,
+          "cid": "AAFP-2012-FELINE-FRIENDLY-NURSING-CARE-2012"
+        }
+      ],
+      "best_match": "ICATCARE-LILY-POISONING",
+      "confidence": "low"
+    }
+  ],
+  "cat-leaving-home-taiwan": [
+    {
+      "source_text": "ISFM Cat-Friendly Boarding Guidelines",
+      "top_matches": [
+        {
+          "score": 12,
+          "cid": "AAFP-CAT-FRIENDLY-VETERINARY-INTERACTION-GUID-2020"
+        },
+        {
+          "score": 12,
+          "cid": "AAFP-CAT-FRIENDLY-VETERINARY-ENVIRONMENT-GUID-2020"
+        },
+        {
+          "score": 12,
+          "cid": "AAFP-2022-ISFM-AAFP-CAT-FRIENDLY-VETERINARY-E-2022"
+        }
+      ],
+      "best_match": "AAFP-CAT-FRIENDLY-VETERINARY-INTERACTION-GUID-2020",
+      "confidence": "medium"
+    },
+    {
+      "source_text": "ICatCare: Caring for Cats When You're Away",
+      "top_matches": [
+        {
+          "score": 8,
+          "cid": "ICATCARE-LILY-POISONING"
+        },
+        {
+          "score": 4,
+          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+        },
+        {
+          "score": 4,
+          "cid": "AAFP-2012-FELINE-FRIENDLY-NURSING-CARE-2012"
+        }
+      ],
+      "best_match": "ICATCARE-LILY-POISONING",
+      "confidence": "low"
+    },
+    {
+      "source_text": "ASPCA: Choosing a Boarding Facility / Traveling with Your Cat",
+      "top_matches": [
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-PLANTS"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-FOODS"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-CAT-PLANT-LIST-2024"
+        }
+      ],
+      "best_match": "ASPCA-TOXIC-PLANTS",
+      "confidence": "low"
+    },
+    {
+      "source_text": "農業部動植物防疫檢疫署：輸入/出口犬貓防疫規定",
+      "top_matches": [],
+      "best_match": null,
+      "confidence": "low"
+    }
+  ],
+  "cat-life-stages-care-taiwan": [
+    {
+      "source_text": "WSAVA Life-stage Guidelines",
+      "top_matches": [
+        {
+          "score": 13,
+          "cid": "WSAVA-RENAL-STANDARDIZATION-GUIDELIN-2022"
+        },
+        {
+          "score": 13,
+          "cid": "WSAVA-PROFESSIONAL-WELLNESS-GUIDELIN-2022"
+        },
+        {
+          "score": 10,
+          "cid": "WSAVA-MICROCHIP-IDENTIFICATION-GUIDE-2022"
+        }
+      ],
+      "best_match": "WSAVA-RENAL-STANDARDIZATION-GUIDELIN-2022",
+      "confidence": "medium"
+    },
+    {
+      "source_text": "AAFP Feline Life Stage / Senior Cat Guidelines",
+      "top_matches": [
+        {
+          "score": 13,
+          "cid": "AAFP-2021-FELINE-LIFE-STAGE-2021"
+        },
+        {
+          "score": 10,
+          "cid": "AAFP-SENIOR-2021"
+        },
+        {
+          "score": 10,
+          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+        }
+      ],
+      "best_match": "AAFP-2021-FELINE-LIFE-STAGE-2021",
+      "confidence": "medium"
+    },
+    {
+      "source_text": "ICatCare: Adult Cat Care",
+      "top_matches": [
+        {
+          "score": 8,
+          "cid": "ICATCARE-LILY-POISONING"
+        },
+        {
+          "score": 4,
+          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+        },
+        {
+          "score": 4,
+          "cid": "AAFP-2012-FELINE-FRIENDLY-NURSING-CARE-2012"
+        }
+      ],
+      "best_match": "ICATCARE-LILY-POISONING",
+      "confidence": "low"
+    },
+    {
+      "source_text": "VCA Animal Hospitals: Senior Cat Care / Aging Gracefully",
+      "top_matches": [
+        {
+          "score": 10,
+          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+        },
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022"
+        },
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-COMMITTEE-2022"
+        }
+      ],
+      "best_match": "AAFP-2021-FELINE-SENIOR-CARE-2021",
+      "confidence": "medium"
+    },
+    {
+      "source_text": "IRIS Kidney: CKD Staging 2023 — https://www.iris-kidney.com/iris-staging-system",
+      "top_matches": [
+        {
+          "score": 22,
+          "cid": "IRIS-CKD-TREATMENT-2023"
+        },
+        {
+          "score": 22,
+          "cid": "IRIS-CKD-2023"
+        },
+        {
+          "score": 7,
+          "cid": "SPARKES-2016-ISFM-CKD"
+        }
+      ],
+      "best_match": "IRIS-CKD-TREATMENT-2023",
+      "confidence": "high"
+    }
+  ],
+  "cat-natural-behavior-taiwan": [
+    {
+      "source_text": "ISFM Feline Environmental Needs / Stress and Welfare Guidelines",
+      "top_matches": [
+        {
+          "score": 18,
+          "cid": "AAFP-2013-ENVIRONMENTAL-NEEDS-2013"
+        },
+        {
+          "score": 15,
+          "cid": "AAFP-CAT-FRIENDLY-VETERINARY-ENVIRONMENT-GUID-2020"
+        },
+        {
+          "score": 11,
+          "cid": "AAFP-ENVIRONMENT-2013"
+        }
+      ],
+      "best_match": "AAFP-2013-ENVIRONMENTAL-NEEDS-2013",
+      "confidence": "medium"
+    },
+    {
+      "source_text": "ICatCare: Cat Communication / Keeping Cats Stimulated",
+      "top_matches": [
+        {
+          "score": 8,
+          "cid": "ICATCARE-LILY-POISONING"
+        },
+        {
+          "score": 4,
+          "cid": "WSAVA-MEMBERSHIP-AND-NOMINATION-COMM-2022"
+        },
+        {
+          "score": 4,
+          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+        }
+      ],
+      "best_match": "ICATCARE-LILY-POISONING",
+      "confidence": "low"
+    },
+    {
+      "source_text": "ASPCA: Cat Body Language / Cat Behavior",
+      "top_matches": [
+        {
+          "score": 8,
+          "cid": "WILHELMY-2016-BREED-COAT-BEHAVIOR"
+        },
+        {
+          "score": 8,
+          "cid": "AAFP-2004-FELINE-BEHAVIOR-2004"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-PLANTS"
+        }
+      ],
+      "best_match": "WILHELMY-2016-BREED-COAT-BEHAVIOR",
+      "confidence": "low"
+    },
+    {
+      "source_text": "VCA Animal Hospitals: Psychogenic Alopecia in Cats",
+      "top_matches": [
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022"
+        },
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-COMMITTEE-2022"
+        },
+        {
+          "score": 3,
+          "cid": "VCA-PLANTS-TOXIC-CATS"
+        }
+      ],
+      "best_match": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022",
+      "confidence": "low"
+    }
+  ],
+  "cat-neutering-aftercare-taiwan": [
+    {
+      "source_text": "ASPCA: Spay/Neuter Your Pet",
+      "top_matches": [
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-PLANTS"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-FOODS"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-CAT-PLANT-LIST-2024"
+        }
+      ],
+      "best_match": "ASPCA-TOXIC-PLANTS",
+      "confidence": "low"
+    },
+    {
+      "source_text": "VCA Animal Hospital: Spaying and Neutering in Cats",
+      "top_matches": [
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022"
+        },
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-COMMITTEE-2022"
+        },
+        {
+          "score": 3,
+          "cid": "VCA-PLANTS-TOXIC-CATS"
+        }
+      ],
+      "best_match": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022",
+      "confidence": "low"
+    },
+    {
+      "source_text": "ICatCare: Neutering – sex hormones and cat neutering",
+      "top_matches": [
+        {
+          "score": 8,
+          "cid": "ICATCARE-LILY-POISONING"
+        },
+        {
+          "score": 4,
+          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+        },
+        {
+          "score": 4,
+          "cid": "AAFP-2012-FELINE-FRIENDLY-NURSING-CARE-2012"
+        }
+      ],
+      "best_match": "ICATCARE-LILY-POISONING",
+      "confidence": "low"
+    },
+    {
+      "source_text": "AAFP: Feline Neutering Guidelines（早期結紮安全性）",
+      "top_matches": [
+        {
+          "score": 8,
+          "cid": "WSAVA-RENAL-STANDARDIZATION-GUIDELIN-2022"
+        },
+        {
+          "score": 8,
+          "cid": "WSAVA-PROFESSIONAL-WELLNESS-GUIDELIN-2022"
+        },
+        {
+          "score": 8,
+          "cid": "AAFP-CAT-FRIENDLY-VETERINARY-INTERACTION-GUID-2020"
+        }
+      ],
+      "best_match": "WSAVA-RENAL-STANDARDIZATION-GUIDELIN-2022",
+      "confidence": "low"
+    },
+    {
+      "source_text": "WSAVA Life-stage Guidelines",
+      "top_matches": [
+        {
+          "score": 13,
+          "cid": "WSAVA-RENAL-STANDARDIZATION-GUIDELIN-2022"
+        },
+        {
+          "score": 13,
+          "cid": "WSAVA-PROFESSIONAL-WELLNESS-GUIDELIN-2022"
+        },
+        {
+          "score": 10,
+          "cid": "WSAVA-MICROCHIP-IDENTIFICATION-GUIDE-2022"
+        }
+      ],
+      "best_match": "WSAVA-RENAL-STANDARDIZATION-GUIDELIN-2022",
+      "confidence": "medium"
+    },
+    {
+      "source_text": "農業部動植物防疫檢疫署：TNVR 政策",
+      "top_matches": [],
+      "best_match": null,
+      "confidence": "low"
+    }
+  ],
+  "cat-parasite-prevention-taiwan": [
+    {
+      "source_text": "WSAVA: Vaccination & Parasite Guidelines",
+      "top_matches": [
+        {
+          "score": 16,
+          "cid": "WSAVA-VACCINATION-GUIDELINES-2022"
+        },
+        {
+          "score": 16,
+          "cid": "WSAVA-VACCINATION-COMMITTEE-2022"
+        },
+        {
+          "score": 16,
+          "cid": "WSAVA-VACCINATION-2024"
+        }
+      ],
+      "best_match": "WSAVA-VACCINATION-GUIDELINES-2022",
+      "confidence": "medium"
+    },
+    {
+      "source_text": "ASPCA: Fleas, Ticks & Parasites",
+      "top_matches": [
+        {
+          "score": 5,
+          "cid": "CORNELL-TICKS-AND-YOUR-CAT-FAQS-2024"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-PLANTS"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-FOODS"
+        }
+      ],
+      "best_match": "CORNELL-TICKS-AND-YOUR-CAT-FAQS-2024",
+      "confidence": "low"
+    },
+    {
+      "source_text": "VCA Animal Hospitals: Intestinal Parasites / Flea Control",
+      "top_matches": [
+        {
+          "score": 7,
+          "cid": "WSAVA-REPRODUCTION-CONTROL-GUIDELINE-2022"
+        },
+        {
+          "score": 7,
+          "cid": "WSAVA-REPRODUCTION-CONTROL-COMMITTEE-2022"
+        },
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022"
+        }
+      ],
+      "best_match": "WSAVA-REPRODUCTION-CONTROL-GUIDELINE-2022",
+      "confidence": "low"
+    },
+    {
+      "source_text": "ISFM: Parasite Control Guidelines",
+      "top_matches": [
+        {
+          "score": 8,
+          "cid": "WSAVA-RENAL-STANDARDIZATION-GUIDELIN-2022"
+        },
+        {
+          "score": 8,
+          "cid": "WSAVA-PROFESSIONAL-WELLNESS-GUIDELIN-2022"
+        },
+        {
+          "score": 7,
+          "cid": "WSAVA-REPRODUCTION-CONTROL-GUIDELINE-2022"
+        }
+      ],
+      "best_match": "WSAVA-RENAL-STANDARDIZATION-GUIDELIN-2022",
+      "confidence": "low"
+    },
+    {
+      "source_text": "農業部動植物防疫檢疫署",
+      "top_matches": [],
+      "best_match": null,
+      "confidence": "low"
+    }
+  ],
+  "cat-pregnancy-birth-nursing-taiwan": [
+    {
+      "source_text": "VCA Animal Hospitals: Pregnancy in Cats",
+      "top_matches": [
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022"
+        },
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-COMMITTEE-2022"
+        },
+        {
+          "score": 3,
+          "cid": "VCA-PLANTS-TOXIC-CATS"
+        }
+      ],
+      "best_match": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022",
+      "confidence": "low"
+    },
+    {
+      "source_text": "WSAVA Life-stage / Global Nutrition Guidelines",
+      "top_matches": [
+        {
+          "score": 14,
+          "cid": "WSAVA-NUTRITION-GUIDELINES-2022"
+        },
+        {
+          "score": 14,
+          "cid": "WSAVA-NUTRITION-COMMITTEE-2022"
+        },
+        {
+          "score": 14,
+          "cid": "WSAVA-NUTRITION-2011"
+        }
+      ],
+      "best_match": "WSAVA-NUTRITION-GUIDELINES-2022",
+      "confidence": "medium"
+    },
+    {
+      "source_text": "ASPCA: Cat Labor and Delivery / Pregnant and Nursing Cat Care",
+      "top_matches": [
+        {
+          "score": 11,
+          "cid": "AAFP-2012-FELINE-FRIENDLY-NURSING-CARE-2012"
+        },
+        {
+          "score": 5,
+          "cid": "WSAVA-LIVER-DISEASE-GUIDELINES-2022"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-PLANTS"
+        }
+      ],
+      "best_match": "AAFP-2012-FELINE-FRIENDLY-NURSING-CARE-2012",
+      "confidence": "medium"
+    }
+  ],
+  "cat-toxic-substances-taiwan": [
+    {
+      "source_text": "FDA Lovely Lilies and Curious Cats: A Dangerous Combination — https://www.fda.gov/animal-veterinary/animal-health-literacy/lovely-lilies-and-curious-cats-dangerous-combination",
+      "top_matches": [
+        {
+          "score": 104,
+          "cid": "FDA-LILIES-CATS-2024"
+        },
+        {
+          "score": 10,
+          "cid": "CORNELL-CORNELL-VETERINARY-EXPERTS-ADDRESS-FELIN-2024"
+        },
+        {
+          "score": 10,
+          "cid": "AAFP-CAT-FRIENDLY-VETERINARY-INTERACTION-GUID-2020"
+        }
+      ],
+      "best_match": "FDA-LILIES-CATS-2024",
+      "confidence": "high"
+    },
+    {
+      "source_text": "Pet Poison Helpline: Lilies Are Toxic To Cats — https://www.petpoisonhelpline.com/poison/lilies/",
+      "top_matches": [
+        {
+          "score": 25,
+          "cid": "PPH-LILIES-CATS"
+        },
+        {
+          "score": 6,
+          "cid": "ICATCARE-LILY-POISONING"
+        },
+        {
+          "score": 6,
+          "cid": "FDA-LILIES-CATS-2024"
+        }
+      ],
+      "best_match": "PPH-LILIES-CATS",
+      "confidence": "high"
+    },
+    {
+      "source_text": "VCA Animal Hospitals: Plants That are Toxic to Cats — https://vcahospitals.com/know-your-pet/plants-that-are-toxic-to-cats",
+      "top_matches": [
+        {
+          "score": 14,
+          "cid": "VCA-PLANTS-TOXIC-CATS"
+        },
+        {
+          "score": 11,
+          "cid": "ASPCA-TOXIC-PLANTS"
+        },
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022"
+        }
+      ],
+      "best_match": "VCA-PLANTS-TOXIC-CATS",
+      "confidence": "medium"
+    },
+    {
+      "source_text": "iCatCare: Lily poisoning in cats — https://icatcare.org/articles/lily-poisoning-in-cats",
+      "top_matches": [
+        {
+          "score": 21,
+          "cid": "ICATCARE-LILY-POISONING"
+        },
+        {
+          "score": 4,
+          "cid": "VCA-PLANTS-TOXIC-CATS"
+        },
+        {
+          "score": 4,
+          "cid": "PPH-LILIES-CATS"
+        }
+      ],
+      "best_match": "ICATCARE-LILY-POISONING",
+      "confidence": "high"
+    },
+    {
+      "source_text": "ASPCA Toxic and Non-Toxic Plants List — https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants",
+      "top_matches": [
+        {
+          "score": 16,
+          "cid": "ASPCA-TOXIC-PLANTS"
+        },
+        {
+          "score": 14,
+          "cid": "ASPCA-CAT-PLANT-LIST-2024"
+        },
+        {
+          "score": 11,
+          "cid": "VCA-PLANTS-TOXIC-CATS"
+        }
+      ],
+      "best_match": "ASPCA-TOXIC-PLANTS",
+      "confidence": "medium"
+    },
+    {
+      "source_text": "ASPCA People Foods to Avoid Feeding Your Pets — https://www.aspca.org/pet-care/animal-poison-control/people-foods-avoid-feeding-your-pets",
+      "top_matches": [
+        {
+          "score": 50,
+          "cid": "ASPCA-TOXIC-FOODS"
+        },
+        {
+          "score": 7,
+          "cid": "WSAVA-REPRODUCTION-CONTROL-GUIDELINE-2022"
+        },
+        {
+          "score": 7,
+          "cid": "WSAVA-REPRODUCTION-CONTROL-COMMITTEE-2022"
+        }
+      ],
+      "best_match": "ASPCA-TOXIC-FOODS",
+      "confidence": "high"
+    }
+  ],
+  "cat-treats-supplements-taiwan": [
+    {
+      "source_text": "WSAVA Global Nutrition Guidelines (2021)",
+      "top_matches": [
+        {
+          "score": 47,
+          "cid": "WSAVA-NUTRITION-GUIDELINES-2022"
+        },
+        {
+          "score": 14,
+          "cid": "WSAVA-NUTRITION-COMMITTEE-2022"
+        },
+        {
+          "score": 14,
+          "cid": "WSAVA-NUTRITION-2011"
+        }
+      ],
+      "best_match": "WSAVA-NUTRITION-GUIDELINES-2022",
+      "confidence": "high"
+    },
+    {
+      "source_text": "ASPCA: Treats and Your Cat",
+      "top_matches": [
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-PLANTS"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-FOODS"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-CAT-PLANT-LIST-2024"
+        }
+      ],
+      "best_match": "ASPCA-TOXIC-PLANTS",
+      "confidence": "low"
+    },
+    {
+      "source_text": "VCA Animal Hospitals: Cat Treats / Nutritional Supplements",
+      "top_matches": [
+        {
+          "score": 9,
+          "cid": "WSAVA-NUTRITION-GUIDELINES-2022"
+        },
+        {
+          "score": 9,
+          "cid": "WSAVA-NUTRITION-COMMITTEE-2022"
+        },
+        {
+          "score": 9,
+          "cid": "WSAVA-NUTRITION-2011"
+        }
+      ],
+      "best_match": "WSAVA-NUTRITION-GUIDELINES-2022",
+      "confidence": "low"
+    },
+    {
+      "source_text": "ISFM: Dietary Supplements in Cats",
+      "top_matches": [
+        {
+          "score": 4,
+          "cid": "SPARKES-2016-ISFM-CKD"
+        },
+        {
+          "score": 4,
+          "cid": "ISFM-DIABETES-2015"
+        },
+        {
+          "score": 4,
+          "cid": "ICATCARE-LILY-POISONING"
+        }
+      ],
+      "best_match": "SPARKES-2016-ISFM-CKD",
+      "confidence": "low"
+    }
+  ],
+  "cat-vaccination-wellness-taiwan": [
+    {
+      "source_text": "WSAVA Vaccination Guidelines 2022",
+      "top_matches": [
+        {
+          "score": 16,
+          "cid": "WSAVA-VACCINATION-GUIDELINES-2022"
+        },
+        {
+          "score": 16,
+          "cid": "WSAVA-VACCINATION-COMMITTEE-2022"
+        },
+        {
+          "score": 16,
+          "cid": "WSAVA-VACCINATION-2024"
+        }
+      ],
+      "best_match": "WSAVA-VACCINATION-GUIDELINES-2022",
+      "confidence": "medium"
+    },
+    {
+      "source_text": "AAFP Feline Life Stage Guidelines",
+      "top_matches": [
+        {
+          "score": 13,
+          "cid": "AAFP-2021-FELINE-LIFE-STAGE-2021"
+        },
+        {
+          "score": 8,
+          "cid": "WSAVA-RENAL-STANDARDIZATION-GUIDELIN-2022"
+        },
+        {
+          "score": 8,
+          "cid": "WSAVA-PROFESSIONAL-WELLNESS-GUIDELIN-2022"
+        }
+      ],
+      "best_match": "AAFP-2021-FELINE-LIFE-STAGE-2021",
+      "confidence": "medium"
+    },
+    {
+      "source_text": "ABCD: Feline Vaccination Guidelines",
+      "top_matches": [
+        {
+          "score": 11,
+          "cid": "WSAVA-VACCINATION-GUIDELINES-2022"
+        },
+        {
+          "score": 11,
+          "cid": "WSAVA-VACCINATION-COMMITTEE-2022"
+        },
+        {
+          "score": 11,
+          "cid": "WSAVA-VACCINATION-2024"
+        }
+      ],
+      "best_match": "WSAVA-VACCINATION-GUIDELINES-2022",
+      "confidence": "medium"
+    },
+    {
+      "source_text": "ICatCare: Vaccinating your cat",
+      "top_matches": [
+        {
+          "score": 8,
+          "cid": "ICATCARE-LILY-POISONING"
+        },
+        {
+          "score": 4,
+          "cid": "CORNELL-TICKS-AND-YOUR-CAT-FAQS-2024"
+        },
+        {
+          "score": 4,
+          "cid": "CORNELL-GRIEVING-THE-LOSS-OF-YOUR-CAT-2024"
+        }
+      ],
+      "best_match": "ICATCARE-LILY-POISONING",
+      "confidence": "low"
+    },
+    {
+      "source_text": "ISFM: Guidelines for the Preventive Care of Cats",
+      "top_matches": [
+        {
+          "score": 8,
+          "cid": "WSAVA-RENAL-STANDARDIZATION-GUIDELIN-2022"
+        },
+        {
+          "score": 8,
+          "cid": "WSAVA-PROFESSIONAL-WELLNESS-GUIDELIN-2022"
+        },
+        {
+          "score": 5,
+          "cid": "WSAVA-MICROCHIP-IDENTIFICATION-GUIDE-2022"
+        }
+      ],
+      "best_match": "WSAVA-RENAL-STANDARDIZATION-GUIDELIN-2022",
+      "confidence": "low"
+    },
+    {
+      "source_text": "VCA Animal Hospitals: Wellness Exams",
+      "top_matches": [
+        {
+          "score": 8,
+          "cid": "WSAVA-PROFESSIONAL-WELLNESS-GUIDELIN-2022"
+        },
+        {
+          "score": 8,
+          "cid": "WSAVA-PROFESSIONAL-WELLNESS-COMMITTE-2022"
+        },
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022"
+        }
+      ],
+      "best_match": "WSAVA-PROFESSIONAL-WELLNESS-GUIDELIN-2022",
+      "confidence": "low"
+    },
+    {
+      "source_text": "農業部動植物防疫檢疫署",
+      "top_matches": [],
+      "best_match": null,
+      "confidence": "low"
+    }
+  ],
+  "cat-water-urinary-health-taiwan": [
+    {
+      "source_text": "WSAVA Global Nutrition Guidelines (2021)",
+      "top_matches": [
+        {
+          "score": 47,
+          "cid": "WSAVA-NUTRITION-GUIDELINES-2022"
+        },
+        {
+          "score": 14,
+          "cid": "WSAVA-NUTRITION-COMMITTEE-2022"
+        },
+        {
+          "score": 14,
+          "cid": "WSAVA-NUTRITION-2011"
+        }
+      ],
+      "best_match": "WSAVA-NUTRITION-GUIDELINES-2022",
+      "confidence": "high"
+    },
+    {
+      "source_text": "VCA Animal Hospitals: Signs of Dehydration / FLUTD",
+      "top_matches": [
+        {
+          "score": 9,
+          "cid": "CORNELL-HYDRATION-2024"
+        },
+        {
+          "score": 8,
+          "cid": "VCA-EMERGENCY-SIGNS"
+        },
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022"
+        }
+      ],
+      "best_match": "CORNELL-HYDRATION-2024",
+      "confidence": "low"
+    },
+    {
+      "source_text": "ASPCA: Cats and Hydration",
+      "top_matches": [
+        {
+          "score": 9,
+          "cid": "CORNELL-HYDRATION-2024"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-PLANTS"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-FOODS"
+        }
+      ],
+      "best_match": "CORNELL-HYDRATION-2024",
+      "confidence": "low"
+    },
+    {
+      "source_text": "ISFM: Feline Lower Urinary Tract Disease",
+      "top_matches": [
+        {
+          "score": 19,
+          "cid": "BUFFINGTON-2014-PANDORA-FLUTD"
+        },
+        {
+          "score": 5,
+          "cid": "CORNELL-CORNELL-VETERINARY-EXPERTS-ADDRESS-FELIN-2024"
+        },
+        {
+          "score": 4,
+          "cid": "SPARKES-2016-ISFM-CKD"
+        }
+      ],
+      "best_match": "BUFFINGTON-2014-PANDORA-FLUTD",
+      "confidence": "medium"
+    }
+  ],
+  "kitten-care-complete-taiwan": [
+    {
+      "source_text": "ASPCA: Kitten Care + Orphaned Kittens",
+      "top_matches": [
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-PLANTS"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-FOODS"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-CAT-PLANT-LIST-2024"
+        }
+      ],
+      "best_match": "ASPCA-TOXIC-PLANTS",
+      "confidence": "low"
+    },
+    {
+      "source_text": "VCA Animal Hospital: Kitten Care Guide + Weaning Kittens",
+      "top_matches": [
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022"
+        },
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-COMMITTEE-2022"
+        },
+        {
+          "score": 5,
+          "cid": "WSAVA-MICROCHIP-IDENTIFICATION-GUIDE-2022"
+        }
+      ],
+      "best_match": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022",
+      "confidence": "low"
+    },
+    {
+      "source_text": "ICatCare: Caring for your kitten",
+      "top_matches": [
+        {
+          "score": 8,
+          "cid": "ICATCARE-LILY-POISONING"
+        },
+        {
+          "score": 4,
+          "cid": "CORNELL-TICKS-AND-YOUR-CAT-FAQS-2024"
+        },
+        {
+          "score": 4,
+          "cid": "CORNELL-GRIEVING-THE-LOSS-OF-YOUR-CAT-2024"
+        }
+      ],
+      "best_match": "ICATCARE-LILY-POISONING",
+      "confidence": "low"
+    },
+    {
+      "source_text": "WSAVA Global Nutrition Guidelines",
+      "top_matches": [
+        {
+          "score": 47,
+          "cid": "WSAVA-NUTRITION-GUIDELINES-2022"
+        },
+        {
+          "score": 14,
+          "cid": "WSAVA-NUTRITION-COMMITTEE-2022"
+        },
+        {
+          "score": 14,
+          "cid": "WSAVA-NUTRITION-2011"
+        }
+      ],
+      "best_match": "WSAVA-NUTRITION-GUIDELINES-2022",
+      "confidence": "high"
+    },
+    {
+      "source_text": "農業部動植物防疫檢疫署：寵物疫苗接種建議",
+      "top_matches": [],
+      "best_match": null,
+      "confidence": "low"
+    }
+  ],
+  "multi-cat-household-taiwan": [
+    {
+      "source_text": "ISFM: Multi-cat households / Feline Stress and Welfare Guidelines 2020 / Environmental Needs",
+      "top_matches": [
+        {
+          "score": 18,
+          "cid": "AAFP-2013-ENVIRONMENTAL-NEEDS-2013"
+        },
+        {
+          "score": 15,
+          "cid": "AAFP-CAT-FRIENDLY-VETERINARY-ENVIRONMENT-GUID-2020"
+        },
+        {
+          "score": 11,
+          "cid": "AAFP-ENVIRONMENT-2013"
+        }
+      ],
+      "best_match": "AAFP-2013-ENVIRONMENTAL-NEEDS-2013",
+      "confidence": "medium"
+    },
+    {
+      "source_text": "ICatCare: Managing a multi-cat household / Introducing a new cat / Living with Multiple Cats",
+      "top_matches": [
+        {
+          "score": 8,
+          "cid": "ICATCARE-LILY-POISONING"
+        },
+        {
+          "score": 5,
+          "cid": "AAFP-2014-DIAGNOSING-AND-SOLVING-HOUSE-SOILIN-2014"
+        },
+        {
+          "score": 4,
+          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+        }
+      ],
+      "best_match": "ICATCARE-LILY-POISONING",
+      "confidence": "low"
+    },
+    {
+      "source_text": "ASPCA: Cat-to-Cat Introductions / Multi-Cat Households",
+      "top_matches": [
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-PLANTS"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-FOODS"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-CAT-PLANT-LIST-2024"
+        }
+      ],
+      "best_match": "ASPCA-TOXIC-PLANTS",
+      "confidence": "low"
+    }
+  ],
+  "should-i-adopt-cat-decision-taiwan": [
+    {
+      "source_text": "International Cat Care: Are You Ready for a Cat? — https://icatcare.org/advice/getting-a-cat/",
+      "top_matches": [
+        {
+          "score": 8,
+          "cid": "ICATCARE-LILY-POISONING"
+        },
+        {
+          "score": 4,
+          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+        },
+        {
+          "score": 4,
+          "cid": "AAFP-2012-FELINE-FRIENDLY-NURSING-CARE-2012"
+        }
+      ],
+      "best_match": "ICATCARE-LILY-POISONING",
+      "confidence": "low"
+    },
+    {
+      "source_text": "ICatCare: Responsible Breeding vs. Adoption",
+      "top_matches": [
+        {
+          "score": 8,
+          "cid": "ICATCARE-LILY-POISONING"
+        },
+        {
+          "score": 5,
+          "cid": "WILHELMY-2016-BREED-COAT-BEHAVIOR"
+        },
+        {
+          "score": 5,
+          "cid": "VCA-BREED-INFORMATION-2024"
+        }
+      ],
+      "best_match": "ICATCARE-LILY-POISONING",
+      "confidence": "low"
+    },
+    {
+      "source_text": "ASPCA: Adopting a Cat — Lifelong commitment estimates",
+      "top_matches": [
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-PLANTS"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-FOODS"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-CAT-PLANT-LIST-2024"
+        }
+      ],
+      "best_match": "ASPCA-TOXIC-PLANTS",
+      "confidence": "low"
+    },
+    {
+      "source_text": "ASPCA: Should I Adopt or Shop for a Pet?",
+      "top_matches": [
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-PLANTS"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-TOXIC-FOODS"
+        },
+        {
+          "score": 5,
+          "cid": "ASPCA-CAT-PLANT-LIST-2024"
+        }
+      ],
+      "best_match": "ASPCA-TOXIC-PLANTS",
+      "confidence": "low"
+    },
+    {
+      "source_text": "農業部動物保護資訊網（特定寵物業管理）: https://animal.moa.gov.tw/",
+      "top_matches": [
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022"
+        },
+        {
+          "score": 6,
+          "cid": "WSAVA-ANIMAL-WELFARE-COMMITTEE-2022"
+        }
+      ],
+      "best_match": "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022",
+      "confidence": "low"
+    },
+    {
+      "source_text": "動物保護法全文: https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=M0120001",
+      "top_matches": [],
+      "best_match": null,
+      "confidence": "low"
+    }
+  ]
+}

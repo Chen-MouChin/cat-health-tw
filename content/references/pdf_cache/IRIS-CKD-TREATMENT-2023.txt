@@ -1,0 +1,982 @@
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+All treatments  for chronic  kidney  disease  (CKD) need  to be tailored to the 
+individual patient. The following  recommendations  are useful starting  
+points for the majority of cats at each  stage. Serial  monitoring  of these  
+patients  is ideal and treatment  should  be adapted  according  to the 
+response  to treatment.  Note that staging  of disease  is undertaken  
+following  diagnosis  of CKD – an increased  blood  creatinine  or 
+SDMA concentration  alone  is not diagnostic  of CKD.  
+ 
+Treatment recommendations  fall into two broad  categories, namely:  
+ 
+1. Those  that slow  progression  of CKD  and so preserve  remaining  kidney  
+function for longer  
+2. Those  that address  the quality  of life of the cat, addressing  the clinical 
+signs  of CKD  
+ 
+In general,  at the early  stages  of CKD  (stages  1 and 2), there  are few clinical  
+extra -renal  signs  of the disease  and the therapeutic  emphasis  is on slowing  
+progression.   From  stage  3 onwards, extra -renal signs  become  more  
+common  and more  severe. The importance  of administering  treatments  
+which  address the clinical signs of CKD and  improve  the cat’s quality  of life 
+assume  greater  importance  and exceeds  the importance  of treatments  
+designed  to slow progression  by stage  4. 
+Some  of the treatment recommendations  are not authorized  for use in all 
+geographical regions  and some  may not be authorized  for use in cats.  Such  
+recommended dose  rates  are therefore  empirical.  It is the treating  
+veterinarian’s  duty to make  a risk:benefit assessment for each  patient prior  
+to administering  any  treatment.  
+ 
+ 
+ 
+ 
+ 
+ 
+1 
+© 2019 International Renal  Interest Society  (IRIS)  Ltd. IRIS Ltd. is an independent non-profit  organization  limited  by guarantee in the UK (Registered  Number  10213173).   
+2019  (2023)
+2023
+Treatment  Recommendations  for CKD in Cats  (2019)  
+© 2019  International  Renal  Interest  Society  (IRIS)  Ltd. IRIS Ltd. is an independent  non-profit  organization  limited  by guarantee  in the UK (Registered  Number  10213173).   
+  
+ 
+ 
+Treatment  recommendations  for Cats with Chronic  Kidney  Disease  
+ 
+ 
+ 
+Stage  1 Feline  patients:  
+1. Discontinue  all potentially  nephrotoxic  drugs  if possible.  
+2. Identify  and treat any pre-renal  or post-renal  abnormalities.  
+3. Rule out any treatable  conditions like  pyelonephritis  and renal  urolithiasis  with 
+radiographs  and/or  ultrasonography.  
+4. Measure blood  pressure  and urine  protein  to creatinine  ratio (UP/C).  
+ 
+Management  of  dehydration:  
+In these  patients  urine  concentrating  ability  may be somewhat  impaired  and therefore  ensure:  
+ They have  fresh  water  available  at all times  for drinking  
+ If become ill for any reason that leads to fluid losses, correct clinical dehydration with 
+isotonic polyioinic replacement fluid solutions (e.g. lactated Ringer’s) IV or SQ, promptly 
+as needed  
+ 
+Systemic hypertension:  
+The blood  pressure  above  which  progressive  renal  injury  may be induced  is unknown.  
+Our goal is to reduce  systolic  blood  pressure  to <160  mm Hg and to minimize  the risk 
+of extra -renal  target  organ  damage  (CNS,  retinal,  cardiac  problems/damage).  If there  
+is no evidence of  such damage  but systolic  blood pressure  persistently  exceeds 160  
+mm Hg, increasing the risk of this occurring,  treatment  should  be instituted.  
+‘Persistence’  of increased  systolic  blood  pressure  should  be judged  on multiple  
+measurements  made  over the following  time-scales  in these  blood  pressure  
+substages:  
+• Hypertensive  (moderate  risk of future target  organ damage)  – systolic  blood  
+pressure  160 to 179 mm Hg measured  over 1 to 2 weeks  
+• Severely  hypertensive  (high  risk of future target  organ  damage)  – systolic  blood  
+pressure   180 mm Hg  measured over 1 to 2 weeks.  
+If evidence of target  organ  damage  exists,  cats should  be treated  without  the need  
+to demonstrate persistently  increased systolic  blood  pressure.  Reducing  blood  
+pressure  is a long term aim  in managing  the patient  with CKD  and a gradual  and 
+sustained  reduction  should  be the goal,  avoiding  any sudden  or severe  decreases  
+leading  to hypotension.  
+A logical  stepwise  approach  to managing  hypertension  is as follows:  
+1. Dietary  sodium  (Na) reduction  - there  is no evidence  that lowering  dietary  Na 
+will reduce  blood pressure.  If dietary  Na reduction  is attempted,  it should  be 
+accomplished  gradually  and in combination  with pharmacological  therapy.  
+2. Calcium  channel  blocker  (CCB),  such as amlodipine  (0.125  to 0.25 mg/kg  once  
+daily)  or angiotensin receptor blocker ( ARB), telmisartan (2 mg/kg once daily) . 
+ 
+ 
+2 
+1 
+2023(2023)
+ureteral obstruction with
+Treatment  Recommendations  for CKD in Cats  (2019)  
+© 2019  International  Renal  Interest  Society  (IRIS)  Ltd. IRIS Ltd. is an independent  non-profit  organization  limited  by guarantee  in the UK (Registered  Number  10213173).   
+  
+ 
+ 
+ 
+3. Double  the dose  of amlodipine  (0.25 to 0.5 mg/kg  once  daily)  if this is treatment selected. 
+Note tel misartan label does not advise a dose increase from 2 mg/kg once daily. 
+4. Combine  amlodipine and telmisartan if either drug alone  does not lead to 
+adequate control of blood pressure . 
+Note:  Take  care not to introduce  CCB/RAAS  inhibitor  treatment  to unstable  
+dehydrated  cats as glomerular  filtration  rate may drop precipitously  if these  drugs  
+are introduced  before  the patient  is adequately  hydrated.  
+Monitoring  response  to antihypertensive  treatment:  
+Hypertensive  cats normally  require lifelong therapy  and may require  treatment  
+adjustments.  Serial  monitoring  is essential.  After  stabilization,  monitoring  should  
+occur  at least  every  3 months.  
+Systolic  blood  pressure  <120  mm Hg and/or  clinical  signs  such as weakness  or 
+tachycardia indicate  hypotension,  which  is to be avoided.  
+Blood  creatinine  concentration  – reducing  blood  pressure  may lead to small  and 
+persistent  increases  in creatinine  concentration  (<45 µmol/l  or 0.5 mg/dl  increase)  
+or SDMA concentration (<2.0 µg/dl), but a marked  increase  suggests  an adverse  
+drug effect.  Progressively  increasing  concentrations  indicate  progressive  kidney  
+damage/disease.  
+ 
+Proteinuria:  
+Cats in Stage  1 with UP/C  >0.4 should be investigated  for disease  processes  leading  
+to proteinuria  (see 1 and 2 below)  and treated  with anti-proteinuric  measures  (see 3 
+and 4 below).  
+Those  with borderline  proteinuria  (UP/C  0.2 to 0.4) require  close  monitoring  (see 1 
+and 4 below).  
+1. Look  for any concurrent  associated  disease  process  that may be treated/corrected.  
+2. Consider  kidney  biopsy  as a means  of identifying  underlying  disease  (see 
+Appendix  and consult  experts  if unsure  of indications  for kidney  biopsy).  
+3. Administer  an RAAS  inhibitor  (ACEI  or ARB)  and feed a clinical  renal  diet. 
+4. Monitor  response  to treatment  / progression  of disease:  
+– stable  blood  creatinine  concentration  and decreasing UP/C  = good  response.  
+– serially  increasing  blood  creatinine  concentrations  and/or  increasing  UP/C  = 
+disease  is progressing.  
+Ordinarily  therapy  will be maintained  lifelong  unless  the underlying  disease  has been  
+resolved  in which  case  dose  reduction whilst  monitoring  UP/C  might  be considered.  
+Note:  
+a. The use of an RAAS  inhibitor  is contraindicated  in any cat that is clinically  
+dehydrated  or is showing  signs  of hypovolemia.  Correct  dehydration  before  
+using  these  drugs  otherwise  glomerular  filtration  rate may drop precipitously.  
+b. Cats with proteinuria and hypoalbuminemia  likely  share  the same  thromboembolic  
+ 
+ 
+ 
+ 
+3 
+1 
+2023(2023)
+Treatment  Recommendations  for CKD in Cats  (2019)  
+4 
+© 2019  International  Renal  Interest  Society  (IRIS)  Ltd. IRIS Ltd. is an independent  non-profit  organization  limited  by guarantee  in the UK (Registered  Number  10213173).   
+  
+ 
+ 
+ 
+risk as dogs  (although evidence is lacking in the published literature ), but aspirin  is 
+difficult  to use in cats to achieve a selective antiplatelet  effect.  A suggested dose  
+rate if plasma  albumin  is below  20 g/l (2 g/dl) is 1 mg/kg  every  72 hours  and an 
+alternative to aspirin is clopidogrel (10 to 18.75 mg/day) . 
+c. Cats with serum  phosphate  within  the IRIS target  (4.5 mg/dl or 1.5 mmol/l)  may be 
+at increased risk of developing  hypercalcemia  when  renal  diets  are introduced.  
+Monitor  serum  calcium  and if total calcium  exceeds  12 mg/dl  (3 mmol/l)  switch  the 
+cat to a senior  diet or mix renal  diet (50:50  by volume)  with standard  grocery  food.  
+d. If borderline proteinuria  persists,  antiproteinuric  treatment  could  be offered,  
+because  the association  between  progression  of CKD  and proteinuria  includes  
+the borderline  category.  However,  there  is at present  no evidence that 
+intervention with anti-proteinuric  drugs  slows  progression.  
+ 
+  
+1 
+2023(2023)
+risk as dogs (although evidence is lacking in the published literature), but aspirin is 
+diﬃcult to use in cats to achieve a selective antiplatelet eﬀect. If thromboembolic therapy 
+is deemed necessary, clopidogrel (10 to 18.75 mg/day is the drug of choice.  Aspirin (1 
+mg/kg every 72 h) is an alternative (but see above).
+c. Cats with serum phosphate within the IRIS target (4.5 mg/dl or 1.5 mmol/l) may be at 
+increased risk of developing hypercalcemia when renal diets are introduced. 
+Measurement of FGF23 may help to identify cats which would bene/f_it from dietary 
+phosphate restriction where plasma phosphate is in the target range.  FGF23 >400 pg/ml 
+in the absence of hypercalcaemia, anemia or marked in/f_lammatory disease is an 
+indication to start dietary phosphate restriction. Monitor serum calcium and if total 
+calcium exceeds 12 mg/dl (3 mmol/l) switch the cat to a less phosphate restricted diet. 
+d. If borderline proteinuria persists, antiproteinuric treatment could be oﬀered, because 
+the association between progression of CKD and proteinuria includes the borderline 
+category. However, there is at present no evidence that intervention with anti-proteinuric 
+drugs slows progression. 
+Treatment  Recommendations  for CKD in Cats  (2019)  
+5 
+© 2019  International  Renal  Interest  Society  (IRIS)  Ltd. IRIS Ltd. is an independent  non-profit  organization  limited  by guarantee  in the UK (Registered  Number  10213173).   
+  
+Stage  2 Feline  patients:  
+All of the above  listed  for Stage  1 (listed here again for convenience)  plus any additional  
+steps  indicated.  
+1. Discontinue  all potentially  nephrotoxic  drugs  if possible.  
+2. Identify  and treat any pre-renal  or post-renal  abnormalities.  
+3. Rule out any treatable  conditions like  pyelonephritis  and renal urolithiasis  with 
+radiographs  and/or  ultrasonography.  
+4. Measure blood  pressure  and urine  protein  to creatinine  ratio (UP/C).  
+5. Consider  feeding  a clinical  renal  diet: this may be accomplished  more  easily  
+early  in the course  of CKD,  before  inappetence  develops.  
+ 
+Management  of dehydration:  
+These  patients  often have  decreased  urine  concentrating  ability  and therefore  ensure:  
+• They have  fresh  water  available  at all times  for drinking  
+• If become ill for any reason that leads to fluid losses, correct clinical dehydration with 
+isotonic polyioinic replacement fluid solutions (e.g. lactated Ringer’s) IV or SQ, promptly 
+as needed  
+ 
+Systemic hypertension:  
+The blood  pressure  above  which  progressive  renal  injury  may be induced  is unknown.  
+Our goal is to reduce  systolic  blood  pressure  to <160  mm Hg and to minimize  the risk 
+of extra -renal  target  organ  damage  (CNS,  retinal,  cardiac  problems/damage).  If there  
+is no  evidence  of this but systolic  blood pressure  persistently  exceeds  160 mm Hg, 
+increasing  the risk of such  damage, treatment  should  be instituted.  
+‘Persistence’  of increased  systolic  blood  pressure  should  be judged  on multiple  
+measurements  made  over the following  time-scales  in these  blood  pressure  
+substages:  
+• Hypertensive  (moderate  risk of future target  organ damage)  – systolic  blood  
+pressure  160 to 179 mm Hg measured  over 1 to 2 weeks . 
+• Severely  hypertensive  (high  risk of future target  organ  damage)  – systolic  blood  
+pressure  180 mm Hg over 1 to 2 weeks.  
+If evidence of target  organ  damage  exists,  cats should  be treated  without  the need  to 
+demonstrate persistently4increased systolic blood pressure. Reducing blood pressure 
+is a long term aim in  managing  the patient with CKD  and a gradual  and sustained  
+reduction  should  be the goal, avoiding  any sudden  or severe  decreases  leading  to 
+hypotension.  
+ 
+A logical  stepwise  approach  to managing  hypertension  is as follows:  
+1. Dietary  sodium  (Na) reduction  - there  is no evidence  that lowering  dietary  Na 
+will reduce  blood pressure.  If dietary  Na reduction  is attempted,  it should  be 
+accomplished  gradually  and in combination  with pharmacological  therapy.  
+2. Calcium  channel  blocker  (CCB)  such  as amlodipine  (0.125  to 0.25  mg/kg  once  daily)  or 
+angiotensin receptor blocker (ARB), telmisartan (2 mg/kg once daily).  
+2 
+2023(2023)
+ureteral obstruction with
+Treatment  Recommendations  for CKD in Cats  (2019)  
+6 
+© 2019  International  Renal  Interest  Society  (IRIS)  Ltd. IRIS Ltd. is an independent  non-profit  organization  limited  by guarantee  in the UK (Registered  Number  10213173).   
+  
+3. Double  the dose  of amlodipine  (0.25 to 0.5 mg/kg  once  daily).  if this is treatment selected. 
+Note telmisartan label does not advise a dose increase from 2 mg/kg once daily.  
+4. Combine  amlodipine and telmisartan if either drug on its own does not lead to 
+adequate control of bloo d pressure  
+Take care not to introduce  CCB/RAAS  inhibitor  treatment  to unstable  dehydrated   
+cats as glomerular  filtration  rate may drop precipitously  if these drugs  are introduced  
+before  the patient is adequately  hydrated.  
+ 
+Monitoring  response  to antihypertensive  treatment:  
+Hypertensive  cats normally  require lifelong therapy  and may require  treatment  
+adjustments.  Serial  monitoring  is essential.  After  stabilization,  monitoring  should  
+occur  at least  every  3 months.  
+Systolic  blood  pressure  <120  mm Hg and/or  clinical  signs  such as weakness  or 
+tachycardia indicate  hypotension,  which  is to be avoided.  
+Blood  creatinine  concentration  – reducing  blood  pressure  may lead to small  and 
+persistent  increases  in creatinine  (<45 µmol/l  or 0.5 mg/dl  increase)  or SDMA 
+concentration (<2.0 µg/dl), but a marked  increase  suggests  an adverse  drug 
+effect.  Progressively  increasing  creatinine  concentrations  indicate  progressive  
+kidney  damage/disease.  
+ 
+Proteinuria:  
+Cats in Stage  2 with UP/C  >0.4 should be investigated  for disease  processes  
+leading  to proteinuria  (see 1 and 2 below)  and treated  with anti-proteinuric  
+measures  (see 3 and 4 below).  
+Those  with borderline  proteinuria  (0.2 to 0.4) require  close  monitoring  (see 1 
+and 4 below).  
+1. Look  for any concurrent  associated  disease  process  that may be treated/corrected.  
+2. Consider  kidney  biopsy  as a means  of identifying  underlying disease  (see 
+Appendix  and/or  consult  experts  if unsure  of indications  for kidney  biopsy).  
+3. Administer  an RAAS  inhibitor  (ACEI  or ARB)  and feed a clinical  renal  diet. 
+4. Monitor  response  to treatment/progression  of disease:  
+– stable  blood  creatinine  concentration  and decreasing  UP/C  = good  response.  
+– serially  increasing  creatinine  concentrations  and/or  increasing  UP/C  = 
+disease  is progressing.  
+– Ordinarily  therapy  will be maintained  lifelong unless  the underlying  
+disease has  been  resolved  in which case  dose  reduction while  
+monitoring UP/C  might  be considered.  
+Note:  
+a. Use of  an RAAS inhibitor  is contraindicated  in any animal  that is clinically  
+dehydrated  and/or  showing  signs  of hypovolemia.  Correct  dehydration  before  
+using  these drugs  otherwise  glomerular  filtration  rate may drop precipitously.  
+b. Cats with proteinuria  and hypoalbuminemia  likely  share  the same thromboembolic  
+risk as dogs,  (although evidence is lacking in the published literature), but aspirin is 
+difficult to use in cats to achieve a selective antiplatelet effect. A suggested dose rate 
+if plasma albumin is below 20 g/l  (2 g/dl) is 1 mg/kg every 72 hours and an alternative 
+to aspirin is clopidogr el (10 to 18.75 mg/day).  
+2 
+2023(2023)
+If thromboembolic therapy is deemed necessary, clopidogrel (10 to 18.75 mg/day is 
+the drug of choice.  Aspirin (1 mg/kg every 72 h) is an alternative (but see above).
+Treatment  Recommendations  for CKD in Cats  (2019)  
+7 
+© 2019  International  Renal  Interest  Society  (IRIS)  Ltd. IRIS Ltd. is an independent  non-profit  organization  limited  by guarantee  in the UK (Registered  Number  10213173).   
+  
+c. Cats with serum  phosphate  within  the IRIS target  may be at increased  risk of 
+developing  hypercalcemia  when  renal  diets  are introduced.  Monitor  serum  calcium  
+and if total calcium  exceeds  12 mg/dl  (3 mmol/l)  switch  the cat to a senior  diet or mix 
+renal  diet (50:50  by volume)  with standard  grocery  food.  
+d. If borderline proteinuria  is persistent,  antiproteinuric  treatment  could  be offered.  The 
+rationale for doing  so is that there  is an association  between  progression  of CKD  and 
+proteinuria which  extends  into the borderline  category.  There  is no evidence  
+that intervention  with anti-proteinuric  drugs slows  progression,  however.  
+ 
+Reduction  of phosphate  intake:  
+Many  cats in Stage  2 will have  normal  plasma  phosphate  concentrations  but will have  
+increased plasma  PTH concentration.  Evidence  suggests  that chronic  reduction  of 
+phosphate  intake  to maintain  a plasma  phosphate concentration  below  1.5 mmol/l  
+(but not less than 0.9 mmol/l;  <4.6 mg/dl  but >2.7 mg/dl)  is beneficial  to patients  with 
+CKD.  
+The following  measures  can be introduced  sequentially  in an attempt  to achieve  this: 
+ 
+1. Dietary  phosphate  restriction  (i.e., clinical  renal  diet therapy).  
+2. If plasma  phosphate  concentration  remains  above  1.5 mmol/l  (4.6 mg/dl)  after 
+dietary  restriction,  give enteric  phosphate  binders  (such  as aluminum  hydroxide,  
+aluminum  carbonate,  calcium  carbonate, calcium  acetate,  lanthanum  carbonate)  
+to effect,  starting  at 30-60 mg/kg/day  in divided  doses  to be mixed  with each  
+meal  (mixed  with the food).  The dose required  will vary according  to the amount  
+of phosphate being  fed and the stage  of kidney  disease.  Treatment  with 
+phosphate binders  should  be to  effect  (as outlined above),  with signs  of toxicity  
+limiting  the upper dose  rate possible  in a given  patient.  Monitor serum  calcium  
+and phosphate concentrations  every  4-6 weeks  until stable  and then every  12 
+weeks.  Microcytosis  and/or  generalized  muscle  weakness  and neurological 
+signs  suggest  aluminum  toxicity  if using  an aluminum  containing  binder  – switch  
+to another  form of phosphate  binder  should  this occur . It should be noted, 
+however, unlike the dog, aluminum toxicity has not been reported in the cat and it 
+is possible to measure blood  aluminum levels to confirm suspected cases . 
+Hypercalcemia  shou ld be avoided  – combinations  of aluminum  and calcium  
+containing  phosphate binders  may 
+be necessary  in some  cases. 
+ 
+Additional  recommendations  for Stage  2 patients:  
+ 
+If the  patient is hypokalemic,  then potassium  gluconate  or potassium citrate  should  
+be supplemented  to effect  (typically  1-2 mmol/kg/day).  
+ 
+Where there is a discrepancy between creatinine and SDMA:  
+If serum or plasma  SDMA  is persistently  >25 µg/dl  in a cat with serum creatinine 
+between 1.6 and 2.8 mg/dl (IRIS CKD Stage  2 based on creatinine) , stage and treat 
+this cat as and IRIS CKD  Stage  3 patient.  
+ 
+ 
+  
+2 
+2023(2023)
+c. Cats with serum phosphate within the IRIS target may be at increased risk of developing 
+hypercalcemia when renal diets are introduced. Measurement of FGF23 may help to identify cats 
+which would bene/f_it from dietary phosphate restriction where plasma phosphate is in the target 
+range.  FGF23 >400 pg/ml in the absence of hypercalcaemia, anemia or marked in/f_lammatory disease 
+is an indication to start dietary phosphate restriction. Monitor serum calcium and if total calcium 
+exceeds 12mg/dl (3mmol/l) switch the cat to a less phosphate restricted diet.
+d. If bor derline proteinuria is persistent, antiproteinuric treatment could be oﬀered. The rationale for 
+doing so is that there is an association between progression of CKD and proteinuria which extends into 
+the borderline category. There is no evidence that intervention with anti-proteinuric drugs slows 
+progression, however. 
+FGF23 concentration.
+Measurement of FGF23 may help to identify cats which would bene/f_it from dietary 
+phosphate restriction if plasma phosphate is within the IRIS target range.  FGF23 >400 
+pg/ml in the absence of hypercalcaemia, anemia or marked in/f_lammatory disease is an 
+indication to start dietary phosphate restriction.
+The following measures can be introduced sequentially in an attempt to achieve this:
+1. Dietary phosphate restriction (i.e., clinical renal diet therapy). 
+2. If plasma phosphate concentration remains above 1.5 mmol/l (4.6 mg/dl) after dietary 
+restriction, give enteric phosphate binders (such as aluminum hydroxide, aluminum 
+carbonate, calcium carbonate, calcium acetate, lanthanum carbonate) to eﬀect, starting at 
+30-60 mg/kg/day in divided doses to be mixed with each meal (mixed with the food). The 
+dose required will vary according to the amount of phosphate being fed and the stage of 
+kidney disease. Treatment with phosphate binders should be to eﬀect (as outlined above), 
+with signs of toxicity limiting the upper dose rate possible in a given patient. Monitor 
+serum calcium and phosphate concentrations every 4-6 weeks until stable and then every 
+12 weeks. Once serum phosphate is in the target range for stage 2 (<1.45 mmol/l or 4.5 
+mg/dl) measurement of serum FGF23 may assist in determining whether further 
+phosphate restriction would be bene/f_icial to the cat.  If FGF23 is >700 pg/ml, further 
+phopshate restriction should be applied (e.g. by increasing the dose of phosphate binder) 
+provided there is no evidence of hypercalcaemia, marked anemia or severe in/f_lammatory 
+disease (all of which can increase FGF23 independently of mineral bone disturbance). 
+Excellent control of mineral bone disturbance would be indicated by serum FGF23 of 
+<500 pg/ml. Microcytosis and/or generalized muscle weakness and neurological signs 
+suggest aluminum toxicity if using an aluminum containing binder – switch to another 
+form of phosphate binder should this occur. It should be noted, however, unlike the dog, 
+aluminum toxicity has not been reported in the cat and it is possible to measure blood 
+aluminum levels to con/f_irm suspected cases. Hypercalcemia should be avoided – 
+combinations of aluminum and calcium containing phosphate binders may be necessary 
+in some cases. 
+Treatment  Recommendations  for CKD in Cats  (2019)  
+7 
+© 2019  International  Renal  Interest  Society  (IRIS)  Ltd. IRIS Ltd. is an independent  non-profit  organization  limited  by guarantee  in the UK (Registered  Number  10213173).   
+  
+c. Cats with serum  phosphate  within  the IRIS target  may be at increased  risk of 
+developing  hypercalcemia  when  renal  diets  are introduced.  Monitor  serum  calcium  
+and if total calcium  exceeds  12 mg/dl  (3 mmol/l)  switch  the cat to a senior  diet or mix 
+renal  diet (50:50  by volume)  with standard  grocery  food.  
+d. If borderline proteinuria  is persistent,  antiproteinuric  treatment  could  be offered.  The 
+rationale for doing  so is that there  is an association  between  progression  of CKD  and 
+proteinuria which  extends  into the borderline  category.  There  is no evidence  
+that intervention  with anti-proteinuric  drugs slows  progression,  however.  
+ 
+Reduction  of phosphate  intake:  
+Many  cats in Stage  2 will have  normal  plasma  phosphate  concentrations  but will have  
+increased plasma  PTH concentration.  Evidence  suggests  that chronic  reduction  of 
+phosphate  intake  to maintain  a plasma  phosphate concentration  below  1.5 mmol/l  
+(but not less than 0.9 mmol/l;  <4.6 mg/dl  but >2.7 mg/dl)  is beneficial  to patients  with 
+CKD.  
+The following  measures  can be introduced  sequentially  in an attempt  to achieve  this: 
+ 
+1. Dietary  phosphate  restriction  (i.e., clinical  renal  diet therapy).  
+2. If plasma  phosphate  concentration  remains  above  1.5 mmol/l  (4.6 mg/dl)  after 
+dietary  restriction,  give enteric  phosphate  binders  (such  as aluminum  hydroxide,  
+aluminum  carbonate,  calcium  carbonate, calcium  acetate,  lanthanum  carbonate)  
+to effect,  starting  at 30-60 mg/kg/day  in divided  doses  to be mixed  with each  
+meal  (mixed  with the food).  The dose required  will vary according  to the amount  
+of phosphate being  fed and the stage  of kidney  disease.  Treatment  with 
+phosphate binders  should  be to  effect  (as outlined above),  with signs  of toxicity  
+limiting  the upper dose  rate possible  in a given  patient.  Monitor serum  calcium  
+and phosphate concentrations  every  4-6 weeks  until stable  and then every  12 
+weeks.  Microcytosis  and/or  generalized  muscle  weakness  and neurological 
+signs  suggest  aluminum  toxicity  if using  an aluminum  containing  binder  – switch  
+to another  form of phosphate  binder  should  this occur . It should be noted, 
+however, unlike the dog, aluminum toxicity has not been reported in the cat and it 
+is possible to measure blood  aluminum levels to confirm suspected cases . 
+Hypercalcemia  shou ld be avoided  – combinations  of aluminum  and calcium  
+containing  phosphate binders  may 
+be necessary  in some  cases. 
+ 
+Additional  recommendations  for Stage  2 patients:  
+ 
+If the  patient is hypokalemic,  then potassium  gluconate  or potassium citrate  should  
+be supplemented  to effect  (typically  1-2 mmol/kg/day).  
+ 
+Where there is a discrepancy between creatinine and SDMA:  
+If serum or plasma  SDMA  is persistently  >25 µg/dl  in a cat with serum creatinine 
+between 1.6 and 2.8 mg/dl (IRIS CKD Stage  2 based on creatinine) , stage and treat 
+this cat as and IRIS CKD  Stage  3 patient.  
+ 
+ 
+  
+2 (2023)
+Treat vomiting / decreased appetite / nausea / weight and/or muscle loss with an 
+antiemetic /appetite stimulant / antinausea agent (such as maropitant, ondansetron, oral 
+or transdermal mirtazapine, or capromorelin).
+If there is marked muscle loss, measure serum SDMA and base staging and treatment 
+recommendations on SDMA rather than creatinine as it is not aﬀected by muscle wasting. 
+In addition, evaluate for concurrent diseases leading to vomiting and weight loss.
+ 
+Evidence suggests oral mirtazapine (1.88 mg/cat every 48 h for 3 weeks) reduces 
+vomiting, improves appetite and leads to weight gain in cats showing signs of 
+inappetence and vomiting in this stage. Maropitant (1 mg/kg daily for 2 weeks) reduced 
+vomiting but did not lead to weight gain/ improved appetite. Further investigations are 
+needed on the use of these and other drugs to determine whether they are useful for 
+managing gastrointestinal disturbances in cats with CKD and uremia when administered 
+longer term. 
+Treatment  Recommendations  for CKD in Cats  (2019)  
+8 
+© 2019  International  Renal  Interest  Society  (IRIS)  Ltd. IRIS Ltd. is an independent  non-profit  organization  limited  by guarantee  in the UK (Registered  Number  10213173).   
+  
+Stage  3 Feline  patients:  
+The range  of presentations  for cats in Stage  3 is likely  to be wide, from no clinical  
+signs  to quite  marked  extra -renal  clinical  signs.  The main  treatments  mentioned  
+so far for stages  1 and 2 are aimed  at slowing  progression  of CKD  also apply  in 
+stage  3 and may be the only therapies  needed  for cats with no or mild extra -renal  
+signs.  However,  treatments  designed  to improve  the quality  of life of the cat 
+become more  important,  the more  extra -renal  signs  are present. These  include  
+treatments  to address  dehydration,  nausea  and vomiting,  anemia  and acidosis.  
+Treatments  include  all of the steps  listed  for Stage  1 and 2 (listed here again for 
+convenience) plus any additional  steps  indicated.  
+1. Discontinue  all potentially  nephrotoxic  drugs  if possible.  
+2. Identify  and treat any pre-renal  or post-renal  abnormalities.  
+3. Rule out any treatable  conditions like  pyelonephritis  (any urinary  tract infection  
+should  be regarded  as a potential  pyelonephritis  and treated appropriately)  and 
+renal  urolithiasis  with radiographs  and/or  ultrasonography.  
+4. Measure blood  pressure  and urine  protein  to creatinine  ratio (UP/C).  
+5. Feed  a clinical  renal  diet. 
+ 
+Management  of dehydration:  
+These  patients  have  decreased  urine  concentrating  ability  and therefore  
+• correct  clinical dehydration/hypovolemia  with isotonic,  polyionic  replacement  fluid 
+solutions  (e.g.,  lactated  Ringer’s)  IV or SQ as needed.  
+• have  fresh  water  available  at all times  for drinking.  
+• In addition, some of these cats may require maintenance fluids administered routinely to 
+maintain hydration (see below)  
+Systemic  hypertension:  
+The blood  pressure  above  which  progressive  renal  injury  may be induced  is unknown.  
+Our goal is to reduce  systolic  blood  pressure  to <160  mm Hg and to minimize  the risk 
+of extra -renal  target  organ  damage  (CNS,  retinal,  cardiac  problems/damage).  If there  
+is no  evidence  of this but systolic  blood pressure  persistently  exceeds  160 mm Hg 
+increasing  the risk of extra -renal  target  organ  damage,  treatment  should be instituted.  
+‘Persistence’  of increase  in systolic  blood  pressure  should  be judged  on multiple  
+measurements  made  over the following time-scales  in these  blood  pressure  
+substages:  
+Hypertensive  (moderate  risk of future target  organ damage)  – systolic  blood  
+pressure  160 to 179 mm Hg measured  over 1 to 2 weeks . 
+ 
+• Severely  hypertensive  (high  risk of future target  organ  damage)  – systolic  blood  
+pressure  180 mm Hg measured over 1 to 2 weeks.  
+If evidence of target  organ  damage  exists,  cats should  be treated  without  the need  to 
+demonstrate persistently  increased  systolic  blood  pressure.  Reducing blood  pressure  
+is a long term aim in  managing  the patient with CKD  and a gradual  and sustained  
+reduction  should  be the goal, avoiding  any sudden  or severe  decreases  leading  to 
+hypotension.  
+3 
+2023(2023)
+ureteral obstruction with radiographs and/or ultrasonography.
+Treatment  Recommendations  for CKD in Cats  (2019)  
+9 
+© 2019  International  Renal  Interest  Society  (IRIS)  Ltd. IRIS Ltd. is an independent  non-profit  organization  limited  by guarantee  in the UK (Registered  Number  10213173).   
+  
+A logical  stepwise  approach  to managing  hypertension  is as follows:  
+1. Dietary  sodium  (Na) reduction  – there  is no evidence  that lowering  dietary  Na 
+will reduce  blood  pressure.  If dietary  Na reduction is attempted, it should  be 
+accomplished  gradually  and in combination  with pharmacological  therapy.  
+2. Calcium  channel  blocker  (CCB)  such as amlodipine  (0.125  to 0.25 mg/kg  
+once  daily)  or angiotensin receptor blocker (ARB), telmisartan (2 mg/kg 
+once daily)  
+3. Double  the dose  of amlodipine  (0.25  to 0.5 mg/kg  once  daily)  if this is treatment selected. 
+Note telemisartan label does not advise a dose increase from 2 mg/kg once daily . 
+4. Combine  amlodipine and telmisartan if either drug on its own does not lead to 
+adequate control of blood pressure . 
+Note:  Take  care not to introduce  CCB/RAAS  inhibitor  treatment  to unstable  
+dehydrated  cats as glomerular  filtration  rate may drop precipitously  if these drugs  
+are introduced  before  the patient is adequately  hydrated  
+ 
+Monitoring  response  to antihypertensive  treatment:  
+Hypertensive  cats normally  require lifelong therapy  and may require  treatment  
+adjustments.  Serial  monitoring  is essential.  After  stabilization,  monitoring  should  
+occur  at least  every  3 months.  
+Systolic  blood  pressure  <120  mm Hg and/or  clinical  signs  such as weakness  or 
+tachycardia indicate  hypotension,  which  is to be avoided.  
+Blood  creatinine  concentration  – reducing  blood  pressure  may lead to small  and 
+persistent  increases  in creatinine  concentration  (<45 µmol/l  or 0.5 mg/dl  increase)  
+or SDMA concentration (<2.0 µg/dl), but a marked  increase  suggests  an adverse  
+drug effect.  Progressively  increasing  concentrations  indicate  progressive  kidney  
+damage/disease.  
+ 
+Proteinuria:  
+Cats in Stage  3 with urine  protein to creatinine  ratio (UP/C)  >0.4 should be 
+investigated  for disease  processes  leading  to proteinuria  (see 1 and 2 below)  and 
+treated  with anti-proteinuric  measures  (see 3 and 4 below). 
+ 
+Those  with borderline  proteinuria  (0.2 to 0.4) require  close  monitoring  (see 1 
+and 4 below).  
+1. Look  for any concurrent  associated  disease  process  that may be treated/corrected.  
+2. Consider  kidney  biopsy  as a means  of identifying  underlying disease  (see 
+Appendix  and/or  consult  experts  if unsure  of indications  for kidney  biopsy).  
+3. Administer  an RAAS  inhibitor  (ACEI  or ARB)  and feed a clinical  renal  diet. 
+4. Monitor  response  to treatment  / progression  of disease:  
+– stable  blood  creatinine  concentration  and decreasing  UP/C  = good  response.  
+– serially  increasing  creatinine  concentrations  and/or  increasing  UP/C  = 
+disease  is progressing.  
+Ordinarily  therapy  will be maintained  lifelong  unless  the underlying  disease  has been  
+resolved  in which  case  dose  reduction  whilst  monitoring  UP/C  might  be considered.  
+ 
+3 
+2023(2023)
+Treatment  Recommendations  for CKD in Cats  (2019)  
+10 
+© 2019  International  Renal  Interest  Society  (IRIS)  Ltd. IRIS Ltd. is an independent  non-profit  organization  limited  by guarantee  in the UK (Registered  Number  10213173).   
+  
+Note:  
+a. Use of  an RAAS inhibitor  is contraindicated  in any animal  that is clinically  
+dehydrated  and/or  is showing  signs  of hypovolemia.  Correct  dehydration  
+before  using  these drugs  otherwise glomerular  filtration  rate may  drop 
+precipitously.  
+ 
+b. Cats with proteinuria  and hypoalbuminemia  likely  share  the same  
+thromboembolic  risk as dogs,  (although evidence is lacking in the published 
+literature), but aspirin is difficult to use in cats to achieve a selective antiplatelet 
+effect. A suggested dose rate if plasma albumin is below 20 g/l  (2 g/dl) is 1 
+mg/kg every 72 hours and an alternative to aspirin is clopidogrel (10 to 18.75 
+mg/day).  
+c. Cats with serum phosphate  within  the IRIS target  may be at incre ased  risk of 
+developing  hypercalcemia  when  renal  diets  are introduced.  Monitor  serum  
+calcium  and if total  calcium  exceeds  12 mg/dl  (3 mmol/l)  switch  to a senior  diet 
+or mix  renal  diet (50:50  by volume)  with standard  grocery  food.  
+d. If borderline proteinuria  is persistent,  antiproteinuric  treatment  could  be 
+offered.  The rationale  for doing  so is that there  is an association  between  
+progression  of CKD  and proteinuria  which  extends  into the borderline 
+category.  However,  there  is at present no evidence  that intervention  with anti-
+proteinuric  drugs  slows  progression.  
+ 
+Reduction  of phosphate  intake:  
+Evidence  suggests  that chronic  reduction  of phosphate  intake  to maintain  a plasma  
+phosphate  concentration  below  1.5 mmol/l  (but not less than 0.9 mmol/l;  <4.6 mg/dl  
+but >2.7 mg/dl)  is beneficial  to patients  with CKD.  
+A more  realistic  post-treatment  target  plasma  phosphate  concentration  for cats at 
+Stage  3 is <1.6 mmol/l  (5.0 mg/dl).  
+The following  measures  can be introduced  sequentially  in an attempt  to achieve  this: 
+1. Dietary  phosphate  restriction  (i.e., clinical  renal  diet therapy).  
+2. If plasma  phosphate  concentration  remains  above  1.6 mmol/l  (4.6 mg/dl)  after 
+dietary  restriction,  give enteric  phosphate  binders  (such  as aluminum  hydroxide,  
+aluminum  carbonate,  calcium  carbonate,  calcium  acetate,  lanthanum  carbonate)   
+to effect, starting  at 30-60 mg/kg/day  in divided  doses  to be mixed  with each  meal  
+(mixed  with the food).  The dose  required  will vary according  to the amount of 
+phosphate  being  fed and the IRIS stage.  Treatment  with phosphate  binders  should  
+be to effect  (as outlined  above),  with signs  of toxicity  limiting  the upper  dose  rate 
+possible  in a given  patient. Monitor  serum  calcium  and phosphate  concentration s 
+3. every  4-6 weeks  until stable  and then every  12 weeks.  Microcytosis  and/or  
+generalized  muscle  weakness and neurological signs  suggest  aluminum  toxicity  if 
+using  an aluminum  containing  binder  – switch  to another  form of phosphate binder  
+should  this occur. It should be noted, however, unlike the dog, aluminum toxicity has 
+not been reported in the cat and it is possible to measure blood aluminum levels to 
+confirm suspected cases.  Hypercalcemia  should  be avoided  – combinations  of 
+aluminum  and calcium  containing  phosphate  binders  may be necessary  in some  
+cases.  
+ 
+3 
+2023(2023)
+Cats with proteinuria and hypoalbuminemia likely share the same thromboembolic 
+risk as dogs, (although evidence is lacking in the published literature), but aspirin is 
+diﬃcult to use in cats to achieve a selective antiplatelet eﬀect. If thromboembolic 
+therapy is deemed necessary, clopidogrel (10 to 18.75 mg/day is the drug of choice.  
+Aspirin (1 mg/kg every 72 h) is an alternative (but see above).
+Cats with serum phosphate within the IRIS target may be at increased risk of 
+developing hypercalcemia when renal diets are introduced. Monitor serum calcium 
+and if total calcium exceeds 12mg/dl (3mmol/l) switch to a less phosphate restricted 
+diet.
+1. Dietary phosphate restriction (i.e., clinical renal diet therapy). 
+2. If plasma phosphate concentration remains above 1.6 mmol/l (5 mg/dl) after dietary 
+restriction, give enteric phosphate binders (such as aluminum hydroxide, aluminum carbonate, 
+calcium carbonate, calcium acetate, lanthanum carbonate) to eﬀect, starting at 30-60 mg/kg/day 
+in divided doses to be mixed with each meal (mixed with the food). The dose required will vary 
+according to the amount of phosphate being fed and the IRIS stage. Treatment with phosphate 
+binders should be to eﬀect (as outlined above), with signs of toxicity limiting the upper dose rate 
+possible in a given patient. Monitor serum calcium and phosphate concentrations every 4-6 
+weeks until stable and then every 12 weeks. Once serum phosphate is in the target range for 
+stage 3 (<1.6 mmol/l or 5 mg/dl) measurement of serum FGF23 may assist in determining 
+whether further phosphate restriction would be bene/f_icial to the cat.  If FGF23 is >700 pg/ml, 
+further phosphate restriction should be applied (e.g. by increasing the dose of phosphate 
+binder) provided there is no evidence of hypercalcaemia, marked anemia or severe in/f_lammatory 
+disease (all of which can increase FGF23 independently of mineral bone disturbance). 
+Microcytosis and/or generalized muscle weakness and neurological signs suggest aluminum 
+toxicity if using an aluminum containing binder– switch to another form of phosphate binder 
+should this occur. It should be noted, however, unlike the dog, aluminum toxicity has not been 
+reported in the cat and it is possible to measure blood aluminum levels to con/f_irm suspected 
+cases. Hypercalcemia should be avoided – combinations of aluminum and calcium containing 
+phosphate binders may be necessary in some cases. 
+Treatment  Recommendations  for CKD in Cats  (2019)  
+11 
+© 2019  International  Renal  Interest  Society  (IRIS)  Ltd. IRIS Ltd. is an independent  non-profit  organization  limited  by guarantee  in the UK (Registered  Number  10213173).   
+ 2 
+2  
+4. Although  there  is evidence  that judicious  use of calcitriol  prolongs  survival in dogs  
+at IRIS Stage  3, beneficial effects  of ultra- low dose  calcitriol  have  not yet been  
+established  in cats.  
+ 
+ 
+Additional  recommendations  for Stage  2  and  3 patients:  
+1. If the patient  is hypokalemic,  then potassium  gluconate  or potassium  citrate  
+should  be supplemented  to effect  (typically  1-2 mmol/kg/day).  
+Additional recommendations for stage 3 patients  
+2. If metabolic  acidosis  exists  (blood bicarbonate  or total CO  <16 mmol/l)  once  the 
+patient is stabilized  on the diet of choice, supplement  with oral sodium  
+bicarbonate,  (or potassium  citrate  if hypokalemic)  to effect  to maintain  blood  
+bicarbonate  / total CO in the range  of 16-24 mmol/l.  
+3. Treat  vomiting  / decreased  appetite  / nausea  / weight  loss with an 
+antiemetic  /appetite stimulant  / antinausea  agent  (such  as maropitant,  
+ondansetron  or mirtazapine).  Evidence  suggests  mirtazapine  (1.88 mg/cat  
+every  48 h for 3 weeks)  reduces  vomiting,  improves  appetite  and leads  to 
+weight  gain in cats showing  signs  of inappetence  and vomiting  in this stage.  
+Maropitant  (1 mg/kg  daily for 2 weeks)  reduced  vomiting  but did not lead to 
+weight  gain/  improved  appetite.  Further  investigations  are needed  on the 
+use of these  and other  drugs  to determine whether  they are useful  for 
+managing  gastrointestinal  disturbances  in cats with CKD  and uremia  when  
+administered  longer  term.  
+4. Give appropriate  maintenance  fluids  parenterally  as necessary  to maintain  
+hydration  (see Footnote).  
+5. Drugs  that rely predominantly on renal function for their clearance from 
+the body should be used with caution in patients in Stage 3 CKD. It may 
+be necessary to adjust the dose of these drugs (depending on their 
+therapeutic indices) to avoid accumulation.  
+ 
+Wher e there is a discrepancy between creatinine and SDMA:  
+If serum or plasma SDMA  is persistently >35 µg/dl  in a cat with serum 
+creatinine between 2.8 and 5 mg/dl (IRIS CKD stage 3 based on 
+creatinine)  stage and treat the cat as an IRIS CKD Stage  4 patient.  
+ 
+ 
+ 
+3 
+2023(2023)
+Treat vomiting / decreased appetite / nausea / weight and/or muscle loss with an antiemetic 
+/appetite stimulant / antinausea agent (such as maropitant, ondansetron or oral or 
+transdermal mirtazapine or capromorelin). Evidence suggests mirtazapine (1.88 mg/cat every 
+48 h for 3 weeks) reduces vomiting, improves appetite and leads to weight gain in cats 
+showing signs of inappetence and vomiting in this stage. Maropitant (1 mg/kg daily for 2 
+weeks) reduced vomiting but did not lead to weight gain/ improved appetite. Further 
+investigations are needed on the use of these and other drugs to determine whether they are 
+useful for managing gastrointestinal disturbances in cats with CKD and uremia when 
+administered longer term.  If pharmacological management of appetite is ineﬀective and/or 
+supplemental hydration is required long-term, enteral feeding tube should be considered.
+Treatment  Recommendations  for CKD in Cats  (2019)  
+12 
+© 2019  International  Renal  Interest  Society  (IRIS)  Ltd. IRIS Ltd. is an independent  non-profit  organization  limited  by guarantee  in the UK (Registered  Number  10213173).   
+  
+Stage 4 Feline patients:  
+Most  cats with stage  4 CKD  have  many  extra -renal  signs  present.  Although  it is 
+still important  to administer  treatments  which  slow progression  of CKD,  the 
+importance  of improving  quality  of life for these  cats is greater  at this stage.  
+Therap ies directly addressing clinical signs and aimed at  improv ing quality  of life 
+include  management  of dehydration,  acidosis,  vomiting  and nausea  and anemia.  
+Treatments  include  all of the steps  listed  for listed  for Stages  1, 2 and 3 (listed 
+again for convenience)  plus any additional  steps  indicated.  
+1. Discontinue  all potentially  nephrotoxic  drugs  if possible.  
+2. Identify  and treat any pre-renal  or post-renal  abnormalities.  
+3. Rule out any treatable  conditions like  pyelonephritis  and renal  urolithiasis  with 
+radiographs  and/or  ultrasonography.  
+4. Measure blood  pressure  and urine  protein  to creatinine  ratio (UP/C).  
+5. Feed  a clinical  renal  diet. 
+ 
+Management  of  dehydration:  
+These  patients  have  decreased  urine  concentrating  ability  and therefore  ensure:  
+• correct  clinical dehydration/hypovolemia  with isotonic,  polyionic  replacement  
+fluid solutions  (e.g.,  lactated  Ringer’s)  IV or SQ, promptly  as needed.  
+• have  fresh  water  available  at all times  for drinking.  
+• In addition, these cats may require maintenance fluids administered routinely to maintain 
+hydration (see below)  
+ 
+Systemic  hypertension:  
+The blood  pressure  above  which  progressive  renal  injury  may be induced  is unknown.  
+Our goal is to reduce  systolic  blood  pressure  to <160  mm Hg and to minimize  the risk 
+of extra -renal  target  organ  damage  (CNS,  retinal,  cardiac  problems/damage).  If there  
+is no  evidence  of this but systolic  blood pressure  persistently  exceeds  160 mm Hg, 
+increasing  the risk of such  damage, treatment  should  be instituted.  
+‘Persistence’  of increase  in systolic  blood  pressure  should  be judged  on multiple  
+measurements  made  over the following  time-scales  in these  blood  pressure  
+substages:  
+• Hypertensive  (moderate  risk of future target  organ damage)  – systolic  blood  
+pressure  160 to 179 mm Hg measured  over 1 to 2 weeks . 
+• Severely  hypertensive  (high  risk of future target organ  damage)  – systolic  blood  
+pressure  180 mm Hg measured over 1 to 2 weeks  
+If evidence of target  organ  damage  exists,  cats should  be treated  without  the need  to 
+demonstrate persistently  increased  systolic  blood  pressure.  Reducing blood  pressure  
+is a long term aim in  managing  the patient with CKD  and a gradual  and sustained  
+reduction  should  be the goal, avoiding  any sudden  or severe  decreases  leading  to 
+hypotension.  
+A logical  stepwise  approach  to managing  hypertension  is as follows:  
+1. Dietary  sodium  (Na) reduction - there  is no evidence  that lowering  dietary  Na 
+4 
+2023(2023)
+ureteral obstruction with
+Treatment  Recommendations  for CKD in Cats  (2019)  
+13 
+© 2019  International  Renal  Interest  Society  (IRIS)  Ltd. IRIS Ltd. is an independent  non-profit  organization  limited  by guarantee  in the UK (Registered  Number  10213173).   
+  
+ 
+ 
+will reduce  blood  pressure.  If dietary  Na reduction  is attempted,  it should  be 
+accomplished  gradually  and in combination  with pharmacological  therapy.  
+2. Calcium  channel  blocker  (CCB)  such as amlodipine  (0.125  to 0.25 mg/kg  once  daily)  or 
+angiotensin receptor blocker (ARB), telmisartan (2 mg/kg once daily). . 
+3. Double  the dose  of amlodipine  (0.25 to 0.5 mg/kg  once  daily)  if this is treatment selected. 
+Note telemisartan label does not advise a dose increase from 2 mg/kg once daily . 
+4. Combine  amlodipine and telmisartan if either drug on its own does not lead to 
+adequate control of blood pressure . 
+Note:  Take  care not to introduce  CCB/RAAS  inhibitor  treatment  to unstable  
+dehydrated  cats as glomerular  filtration  rate may drop precipitously  if these  drugs  
+are introduced  before  the patient  is adequately  hydrated.   The benefit of 
+combining drugs to try to reduce blood p ressure to below the target should be 
+weighed against the high risk in a stage 4 cat of precipitating an azotemic crisis 
+should be carefully considered.  
+ 
+Monitoring  response  to antihypertensive  treatment:  
+Hypertensive  cats normally  require lifelong therapy  and may require  treatment  
+adjustments.  Serial  monitoring  is essential.  After  stabilization,  monitoring  should  
+occur  at least  every  3 months.  
+Systolic  blood  pressure  <120  mm Hg and/or  clinical  signs  such as weakness  or 
+tachycardia indicate  hypotension,  which  is to be avoided.  
+Blood  creatinine  concentration  – reducing  blood  pressure  may lead to small  and 
+persistent  increases  in creatinine  (<45 µmol/l  or 0.5 mg/dl  increase)  or SDMA 
+concentration (<2.0 µg/dl), but a marked  increase  suggests  an adverse  drug effect. 
+Progressively  increasing  concentrations  indicate  progressive  kidney  
+damage/disease.  
+ 
+Proteinuria:  
+Cats in Stage  4 with urine  protein to creatinine  ratio (UP/C)  >0.4 should be 
+investigated  for disease  processes  leading  to proteinuria  (see 1 and 2 below)  and 
+treated  with anti-proteinuric  measures  (see 3 and 4 below).  
+Those  with borderline  proteinuria  (0.2 to 0.4) require  close  monitoring  (see 1 
+and 4 below).  
+1. Look  for any concurrent  associated  disease  process  that may be treated/corrected.  
+2. Administer  an RAAS  inhibitor  (ACEI  or ARB)  and feed a clinical  renal  diet. 
+3. Monitor  response  to treatment  / progression  of disease:  
+– stable  blood  creatinine  concentration  and decreasing  UP/C  = good  response.  
+– serially  increasing  creatinine  concentrations  and/or  increasing  UP/C  = 
+disease  is progressing.  
+Ordinarily  therapy  will be maintained  lifelong  unless  the underlying  disease  has been  
+resolved,  in which  case  dose  reduction  whilst  monitoring  UP/C  might  be considered.  
+ 
+ 
+4 
+2023(2023)
+Treatment  Recommendations  for CKD in Cats  (2019)  
+14 
+© 2019  International  Renal  Interest  Society  (IRIS)  Ltd. IRIS Ltd. is an independent  non-profit  organization  limited  by guarantee  in the UK (Registered  Number  10213173).   
+  
+Note:  
+a. Use of an RAAS  inhibitor  is contraindicated  in any animal  that is clinically  
+dehydrated  and/or  is showing signs  of hypovolemia.  Correct  dehydration  
+before  using  these  drugs  otherwise  glomerular  filtration  rate may drop 
+precipitously.  
+b. Cats with proteinuria  and hypoalbuminemia  likely  share  the same thromboembolic  
+risk as dogs,  (although evidence is lack ing in the published literature) , but aspirin is difficult 
+to use in cats to achieve a selective antiplatelet effect. A suggested dose rate if plasma 
+albumin is below 20 g/l  (2 g/dl) is 1 mg/kg every 72 hours and an alternative to aspirin is 
+clopidogrel (10 to 18.75 mg/day).  
+c. Cats with serum  phosphate  within  the IRIS target  may be at increased risk of 
+developing hypercalcemia  when  renal  diets  are introduced.  Monit or serum  
+calcium  and if total calcium  exceeds  12 mg/dl  (3 mmol/l)  switch  to a senior  diet 
+or mix renal  diet (50:50  by volume)  with standard  grocery  food.  
+d. If borderline proteinuria  is persistent, antiproteinuric  treatment  could  be offered.  
+The rationale for doing  so is that there  is an association  between  progression  of 
+CKD  and proteinuria which  extends  into the borderline  category.  However,  
+there  is at present no evidence  that intervention  with anti-proteinuric  drugs  
+slows  progression.  
+ 
+Reduction  of phosphate  intake:  
+Evidence  suggests  that chronic  reduction  of phosphate  intake to maintain  a 
+plasmaphosphate  concentration  below  1.5 mmol/l (but not  less than 0.9 mmol/l;  
+<4.6 mg/dl  but >2.7 mg/dl)  is beneficial  to patients  with CKD.  
+A more  realistic  post-treatment  target  plasma  phosphate  concentration  for cats at 
+Stage  4 is <1.9 mmol/l  (6.0 mg/dl).  
+The following  measures  can be introduced  sequentially  in an attempt  to achieve  this: 
+1. Dietary  phosphate  restriction  (i.e., clinical  renal  diet therapy).  
+2. If plasma  phosphate  concentration  remains  above  1.9 mmol/l  (6.0 mg/dl)  after 
+dietary  restriction,  give enteric  phosphate  binders  (such  as aluminum  hydroxide,  
+aluminum  carbonate,  calcium  carbonate, calcium  acetate,  lanthanum  carbonate)  
+to effect,  starting  at 30-60 mg/kg/day  in divided  doses  to be mixed  with each  
+meal  (mixed  with the food).  The dose  required  will vary according  to the 
+amount  of phosphate  being  fed and the stage  of CKD.  Treatment  with phosphate  
+binders  should be to effect  (as outlined  above),  with signs  of toxicity  limiting  
+the upper  dose  rate possible  in a given  patient.  Monitor  serum  calcium  and 
+phosphate  concentrations  every  4-6 weeks  until stable  and then every  12 weeks.  
+Microcytosis  and/or  generalized  muscle  weakness and neurological signs  
+suggest  aluminum  toxicity  if using  an aluminum  containing  binder  – switch  to 
+another  form of phosphate  binder  should  this occur. It should be noted, however, 
+unlike the dog, aluminum toxicity has not been reported in the cat and it is 
+possible to measure blood aluminum levels to confirm suspected cases.  
+Hypercalcemia  should  be avoided  – combinations  
+of aluminum  and calcium  containing  phosphate  binders  may be necessary  in 
+some  cases.  
+3. Although  there  is evidence  that judicious  use of calcitriol  prolongs  survival in dogs  
+at IRIS Stage  4, beneficial effects  of ultra- low dose  calcitriol  have not  yet been  
+established  in cats.  
+4 
+2023(2023)
+Cats with proteinuria and hypoalbuminemia likely share the same thromboembolic 
+risk as dogs, (although evidence is lacking in the published literature), but aspirin is 
+diﬃcult to use in cats to achieve a selective antiplatelet eﬀect. If thromboembolic 
+therapy is deemed necessary, clopidogrel (10 to 18.75 mg/day is the drug of choice.  
+Aspirin (1 mg/kg every 72 h) is an alternative (but see above).
+Cats with serum phosphate within the IRIS target may be at increased risk of 
+developing hypercalcemia when renal diets are introduced. Monitor serum calcium 
+and if total calcium exceeds 12mg/dl (3mmol/l) switch to a less phosphate restricted 
+diet.
+1. Dietary phosphate restriction (i.e., clinical renal diet therapy). 
+2. If plasma phosphate concentration remains above 1.9 mmol/l (6.0 mg/dl) after dietary 
+restriction, give enteric phosphate binders (such as aluminum hydroxide, aluminum 
+carbonate, calcium carbonate, calcium acetate, lanthanum carbonate) to eﬀect, starting at 
+30-60 mg/kg/day in divided doses to be mixed with each meal (mixed with the food). The 
+dose required will vary according to the amount of phosphate being fed and the stage of CKD. 
+Treatment with phosphate binders should be to eﬀect (as outlined above), with signs of 
+toxicity limiting the upper dose rate possible in a given patient. Monitor serum calcium and 
+phosphate concentrations every 4-6 weeks until stable and then every 12 weeks. Once serum 
+phosphate is in the target range for stage 4 (<1.9 mmol/l or 6 mg/dl) measurement of serum 
+FGF23 may assist in determining whether further phosphate restriction would be bene/f_icial to 
+the cat.  If FGF23 is >700 pg/ml, further phosphate restriction should be applied (e.g. by 
+increasing the dose of phosphate binder) provided there is no evidence of hypercalcaemia, 
+marked anemia or severe in/f_lammatory disease (all of which can increase FGF23 
+independently of mineral bone disturbance).
+Microcytosis and/or generalized muscle weakness and neurological signs suggest aluminum 
+toxicity if using an aluminum containing binder – switch to another form of phosphate binder 
+should this occur. It should be noted, however, unlike the dog, aluminum toxicity has not been 
+reported in the cat and it is possible to measure blood aluminum levels to con/f_irm suspected 
+cases. Hypercalcemia should be avoided – combinations of aluminum and calcium containing 
+phosphate binders may be necessary in some cases. 
+Treatment  Recommendations  for CKD in Cats  (2019)  
+15 
+© 2019  International  Renal  Interest  Society  (IRIS)  Ltd. IRIS Ltd. is an independent  non-profit  organization  limited  by guarantee  in the UK (Registered  Number  10213173).   
+ 2  
+ 
+Additional  recommendations  for Stage  2,  3  and  4 patients:  
+1. If the patient  is hypokalemic,  then potassium  gluconate  or potassium  citrate  
+should  be supplemented  to effect  (typically  1-2 mmol/kg/day).  
+Additional recommendations for Stage 3 and 4 patients  
+2. If metabolic acidosis exists (blood bicarbonate or total CO2 <16 mmol/l) once the 
+patient is stabilized  on the diet of choice,  supplement  with oral sodium  bicarbonate  
+(or potassium  citrate  if hypokalemic)  to effect  to maintain blood  bicarbonate  / total 
+CO in the range  of 16-24 mmol/l.  
+3. Consider  treatment  for anemia  if it is affecting  the patient’s  quality  of life: typically  
+this occurs  when  the PCV is <0.20  l/l (20%).  Human  recombinant erythropoietin  is 
+the most  effective  treatment  but is not approved  for veterinary   use: darbepoetin  
+is preferable  as it is less antigenic  than epoetin  alfa. Anabolic  steroids  are of no 
+proven  benefit  and may be detrimental.  
+4. Treat  vomiting  / decreased  appetite / nausea / weight  loss with an antiemetic/  /appetite  
+stimulant  / antinausea  agent  (such  as maropitant,  ondansetron  or mirtazapine).    
+Evidence  suggests  mirtazapine  (1.88  mg/cat  every  48 h for 3 weeks)  reduces  vomiting,  
+improves  appetite  and leads  to weight  gain in cats showing signs  of inappetence  and 
+vomiting  in this stage.  Maropitant  (1 mg/kg daily for2 weeks)  reduced  vomiting  but did not 
+lead to weight  gain/ improved  appetite.  Further  investigations  are needed on the use of 
+these  and other  drugs  to determine  whether  they are useful  for managing  gastrointestinal  
+disturbances  in cats with CKD and uremia  when  administered  longer  term.  
+ 
+5. Give appropriate  maintenance  fluids  parenterally  as necessary  to 
+maintain  hydration  (see Footnote).  
+ 
+Additional recommendations for Stage 4 patients  
+6. Intensify  efforts  to prevent  protein  / calorie malnutrition.  Consider  feeding  
+tube intervention  (e.g.,  percutaneous  gastrostomy  tube).  
+7. Intensify  efforts  to prevent  dehydration.  Feeding  tubes  can be used  to 
+administer  fluids  as well as food.  
+8. Consider  dialysis  and/or  renal  transplantation.  
+Drugs  that rely predominantly  on renal  function  for their clearance  from the 
+body  should be used  with caution  in patients  in Stage  4 CKD.  It may be necessary  
+to adjust  the dose  of these  drugs  (depending  on their therapeutic  indices)  to avoid  
+accumulation.  
+ 
+ 
+ 
+4 
+2023(2023)
+Treat vomiting / decreased appetite / nausea / weight and/or muscle loss with an antiemetic / appetite 
+stimulant / antinausea agent (such as maropitant, ondansetron or 'oral or transdermal mirtazapine or 
+capromorelin). Evidence suggests oral mirtazapine (1.88 mg/cat every 48 h for 3 weeks) reduces vomiting, 
+improves appetite and leads to weight gain in cats showing signs of inappetence and vomiting in this 
+stage. Maropitant (1 mg/kg daily for2 weeks) reduced vomiting but did not lead to weight gain/ improved 
+appetite. Further investigations are needed on the use of these and other drugs to determine whether 
+they are useful for managing gastrointestinal disturbances in cats with CKD and uremia when 
+administered longer term. If pharmacological management of appetite is ineﬀective and/or supplemental 
+hydration is required long-term, enteral feeding tube should be considered.
+Consider omeprazole in cats in the uncommon situation where GI bleeding is 
+suspected (e.g. melena, iron de/f_iciency).8.
+9.
+Treatment  Recommendations  for CKD in Cats  (2019)  
+16 
+© 2019  International  Renal  Interest  Society  (IRIS)  Ltd. IRIS Ltd. is an independent  non-profit  organization  limited  by guarantee  in the UK (Registered  Number  10213173).   
+  
+ 
+ 
+Appendix 
+ 
+ 
+ 
+Reasons  for Undertaking  Renal  Biopsy  
+1. Renomegaly  
+2. CKD  in a young  patient  
+3. Persistent  and severe  proteinuria  (UP/C>2.0)  in a non-azotemic  patient  
+4. Worsening  proteinuria  in a CKD  patient  
+5. Acute  kidney  injury,  where  renal  biopsy  may provide  a prognostic  indicator  
+ 
+ 
+Footnote 
+ 
+ 
+ 
+Maintenance  fluids  to maintain  hydration  status  are low in sodium  (30-40 mmol/l)  and 
+ideally  have  added  potassium  (about  13 mmol/l)  to ensure  daily requirements  for  
+fluid and electrolytes  are met (e.g. Normosol -M® or 5% Dextrose  plus 0.18%  NaCl  
+with added  KCl).  
+ 
+ 
+Disclaimer  
+ 
+ 
+ 
+Although  every  effort  has been  made  to ensure  the completeness  and accuracy  of the 
+information  provided  herein,  the IRIS Board  assumes  no responsibility  for the 
+completeness  or accuracy  of the information.  All information  is provided  “as is” without  
+any warranties,  either  expressed  or implied.  
+2023(2023)

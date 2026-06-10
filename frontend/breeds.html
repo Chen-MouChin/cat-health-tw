@@ -1,0 +1,1554 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>貓咪品種圖鑑 — 貓健康站</title>
+<meta name="description" content="台灣常見貓咪品種圖鑑：性格、壽命、體型、健康注意事項。資料來自 TheCatAPI 與 Wikipedia。">
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/nav.css?v=20260420b">
+<script src="js/theme.js"></script>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: system-ui, "Noto Sans TC", sans-serif; background: var(--bg, #fafafa); color: var(--text, #1d1d1f); }
+
+.page-title { text-align: center; padding: 1.8rem 1rem 0.3rem; font-size: 1.6rem; font-weight: 700; color: var(--text); }
+.page-sub { text-align: center; font-size: 0.85rem; color: var(--text-muted, #6e6e73); padding-bottom: 0.8rem; }
+.page-sub strong { color: var(--text, #1d1d1f); font-weight: 600; }
+
+main { max-width: 1100px; margin: 0 auto; padding: 0 1rem 2rem; }
+
+/* 工具列 */
+.toolbar { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; align-items: center; }
+.toolbar input {
+  flex: 1; min-width: 200px;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--border, #d2d2d7); border-radius: 18px;
+  background: var(--bg-card, #fff); color: var(--text);
+  font-size: 0.9rem; outline: none;
+}
+.toolbar input:focus { border-color: var(--accent, #1d1d1f); }
+.toolbar select {
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--border, #d2d2d7); border-radius: 18px;
+  background: var(--bg-card, #fff); color: var(--text);
+  font-size: 0.85rem; cursor: pointer;
+}
+
+/* 比較選單（單品種 modal 內折疊式）*/
+.cmp-picker {
+  margin: 1rem 0;
+  border: 1px solid var(--border, #e5e5ea);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.cmp-picker > summary {
+  list-style: none; cursor: pointer;
+  padding: 0.7rem 1rem;
+  font-weight: 600; font-size: 0.9rem;
+  color: var(--text, #1d1d1f);
+  display: flex; align-items: center; gap: 0.5rem;
+  user-select: none;
+  background: var(--bg, #fafafa);
+}
+.cmp-picker > summary::-webkit-details-marker { display: none; }
+.cmp-picker > summary::after {
+  content: '▶'; font-size: 0.7rem; color: var(--text-muted, #6e6e73);
+  margin-left: auto; transition: transform 0.15s;
+}
+.cmp-picker[open] > summary::after { transform: rotate(90deg); }
+.cmp-picker > summary:hover { background: var(--accent-light, #f0f0f3); }
+.cmp-hint { font-size: 0.72rem; font-weight: 400; color: var(--text-muted, #6e6e73); }
+
+.cmp-body { padding: 0.8rem 1rem 1rem; background: var(--bg-card, #fff); }
+.cmp-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 0.4rem;
+  max-height: 320px; overflow-y: auto;
+  padding: 0.2rem;
+}
+.cmp-item {
+  display: flex; align-items: center; gap: 0.5rem;
+  padding: 0.35rem 0.5rem;
+  border: 1px solid var(--border, #e5e5ea);
+  border-radius: 6px;
+  cursor: pointer; user-select: none;
+  font-size: 0.82rem;
+  background: var(--bg-card, #fff);
+  transition: background 0.1s, border-color 0.1s;
+}
+.cmp-item:hover { background: var(--accent-light, #f0f0f3); }
+.cmp-item input { margin: 0; cursor: pointer; }
+.cmp-item input:checked ~ .cmp-name { font-weight: 600; }
+.cmp-item:has(input:checked) { border-color: var(--accent, #1d1d1f); background: var(--accent-light, #f0f0f3); }
+.cmp-thumb {
+  width: 28px; height: 28px; flex-shrink: 0;
+  border-radius: 4px; overflow: hidden;
+  background: var(--accent-light, #f0f0f3);
+}
+.cmp-thumb img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center 30%;
+  display: block;
+}
+.cmp-thumb .no-thumb {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text-faint); font-size: 0.7rem;
+}
+.cmp-name { flex: 1; line-height: 1.2; }
+
+.cmp-actions {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-top: 0.8rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid var(--border, #e5e5ea);
+}
+.cmp-status { font-size: 0.82rem; color: var(--text-muted, #6e6e73); }
+.cmp-actions button {
+  background: var(--accent, #1d1d1f); color: var(--accent-on, #fff);
+  border: none; border-radius: 16px;
+  padding: 0.45rem 1.1rem; font-size: 0.88rem; font-weight: 600;
+  cursor: pointer;
+}
+.cmp-actions button:hover { background: var(--accent-hover, #424245); }
+.cmp-actions button:disabled {
+  background: var(--border, #e5e5ea); color: var(--text-faint, #a1a1a6); cursor: not-allowed;
+}
+
+/* 並排比較表 — 整個用同一個 grid，欄寬保證對齊 */
+.cmp-table {
+  display: grid;
+  margin-top: 1rem;
+  border: 1px solid var(--border, #e5e5ea);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--bg-card, #fff);
+  /* grid-template-columns 由 inline style 設定 */
+}
+.cmp-cell {
+  padding: 0.5rem 0.7rem;
+  border-top: 1px solid var(--border, #e5e5ea);
+  border-left: 1px solid var(--border, #e5e5ea);
+  font-size: 0.84rem;
+  display: flex; align-items: center;
+  min-width: 0; /* 允許 grid item 收縮，避免溢出 */
+  word-break: break-word;
+}
+/* 第一行 (header) 不要 border-top */
+.cmp-cell.cmp-corner,
+.cmp-cell.cmp-h { border-top: none; }
+/* 第一欄 (label) 不要 border-left */
+.cmp-cell.cmp-corner,
+.cmp-cell.cmp-l { border-left: none; }
+
+.cmp-cell.cmp-h {
+  flex-direction: column; align-items: center; text-align: center;
+  padding: 0.6rem 0.5rem;
+  background: var(--bg, #fafafa);
+}
+.cmp-cell.cmp-h-img,
+.cmp-h-img {
+  width: 100%; aspect-ratio: 1/1; max-width: 110px;
+  border-radius: 6px; overflow: hidden;
+  background: var(--accent-light, #f0f0f3);
+  margin: 0 auto 0.4rem;
+}
+.cmp-h-img img {
+  width: 100%; height: 100%;
+  object-fit: contain;       /* 完整顯示不裁 — 比較表必須公平呈現每隻貓 */
+  display: block;
+}
+.cmp-h-name { font-weight: 700; font-size: 0.85rem; line-height: 1.3; }
+.cmp-h-en { font-size: 0.68rem; color: var(--text-muted, #6e6e73); margin-top: 2px; line-height: 1.2; }
+
+.cmp-cell.cmp-l {
+  background: var(--bg, #fafafa);
+  font-size: 0.78rem; color: var(--text-muted, #6e6e73);
+  font-weight: 500;
+}
+.cmp-cell.cmp-v { line-height: 1.5; }
+.cmp-warn {
+  display: inline-block; font-size: 0.78rem; padding: 2px 8px; border-radius: 10px;
+  line-height: 1.4;
+}
+.cmp-warn-severe { background: #f5e8e8; color: #5c2525; border: 1px solid #d4b0b0; }
+.cmp-warn-legal { background: #f5ede4; color: #6b3f15; border: 1px solid #d4bca0; }
+.cmp-warn-moderate { background: #f5f0e8; color: #5c4a25; border: 1px solid #d4c8b0; }
+.cmp-faint { color: var(--text-faint, #a1a1a6); font-size: 0.8rem; }
+.cmp-footnote { margin-top: 0.8rem; font-size: 0.75rem; color: var(--text-muted, #6e6e73); line-height: 1.5; }
+
+@media (max-width: 600px) {
+  .cmp-cell { padding: 0.4rem 0.5rem; font-size: 0.76rem; }
+  .cmp-h-name { font-size: 0.78rem; }
+}
+
+/* 篩選器列 */
+.filter-bar {
+  display: flex; flex-wrap: wrap; gap: 0.3rem 0.6rem;
+  align-items: center; margin-bottom: 1rem;
+  font-size: 0.8rem;
+}
+.filter-bar .filter-group {
+  display: flex; align-items: center; gap: 0.25rem;
+  padding-right: 0.4rem;
+  border-right: 1px solid var(--border, #e5e5ea);
+}
+.filter-bar .filter-group:last-of-type { border-right: none; }
+.filter-label { color: var(--text-muted, #6e6e73); margin-right: 0.2rem; }
+.filter-chip {
+  background: var(--bg-card, #fff);
+  border: 1px solid var(--border, #e5e5ea);
+  border-radius: 12px; padding: 0.2rem 0.65rem;
+  font-size: 0.76rem; cursor: pointer;
+  color: var(--text-muted, #6e6e73);
+  transition: all 0.12s;
+}
+.filter-chip:hover { border-color: var(--text-muted, #6e6e73); color: var(--text, #1d1d1f); }
+.filter-chip.active {
+  background: var(--accent, #1d1d1f); color: var(--accent-on, #fff);
+  border-color: var(--accent, #1d1d1f);
+}
+.filter-clear {
+  background: transparent; border: none;
+  color: var(--text-muted, #6e6e73); cursor: pointer;
+  font-size: 0.75rem; padding: 0.2rem 0.5rem;
+  margin-left: auto;
+}
+.filter-clear:hover { color: var(--text, #1d1d1f); }
+
+/* 低過敏警告橫條（當啟用該 filter 才顯示）*/
+.hypo-notice {
+  background: #f5f0e8; border: 1px solid #d4c8b0; border-left: 3px solid #8a7340;
+  color: #5c4a25;
+  padding: 0.7rem 1rem; margin-bottom: 1rem; border-radius: 6px;
+  font-size: 0.82rem; line-height: 1.6;
+}
+
+.compare-back {
+  background: transparent; border: 1px solid var(--border, #e5e5ea);
+  border-radius: 14px;
+  padding: 0.3rem 0.8rem; font-size: 0.8rem;
+  color: var(--text-muted, #6e6e73); cursor: pointer;
+  margin-bottom: 0.8rem;
+}
+.compare-back:hover { background: var(--accent-light, #f0f0f3); color: var(--text, #1d1d1f); }
+
+/* 卡片 grid */
+.breeds-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+.breed-card {
+  background: var(--bg-card, #fff);
+  border: 1px solid var(--border, #e5e5ea);
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: box-shadow 0.15s, transform 0.15s;
+  display: flex; flex-direction: column;
+  position: relative;
+}
+.breed-card:hover {
+  box-shadow: 0 4px 16px var(--shadow, rgba(0,0,0,0.08));
+  transform: translateY(-2px);
+}
+.breed-card .img-wrap {
+  width: 100%; aspect-ratio: 4/3;
+  background: var(--accent-light, #f0f0f3);
+  overflow: hidden;
+}
+.breed-card img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center top;  /* 真正優先保留頂部（貓頭/耳朵）*/
+  display: block;
+}
+.breed-card .body { padding: 0.8rem 1rem 1rem; flex: 1; display: flex; flex-direction: column; }
+.breed-card h3 {
+  font-size: 1rem; font-weight: 700;
+  display: flex; align-items: baseline; gap: 0.3rem; margin-bottom: 0.3rem;
+}
+.breed-card h3 .en { font-size: 0.75rem; font-weight: 400; color: var(--text-muted, #6e6e73); }
+.breed-card .meta {
+  font-size: 0.75rem; color: var(--text-muted, #6e6e73);
+  margin-bottom: 0.5rem;
+}
+.breed-card .tags {
+  display: flex; flex-wrap: wrap; gap: 0.25rem; margin-top: auto;
+}
+.breed-card .tag {
+  font-size: 0.68rem;
+  background: var(--accent-light, #f0f0f3); color: var(--text-muted, #6e6e73);
+  padding: 1px 7px; border-radius: 8px;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed; inset: 0; z-index: 300;
+  background: rgba(0,0,0,0.5);
+  align-items: center; justify-content: center;
+  padding: 1rem;
+}
+.modal.open { display: flex; }
+.modal-content {
+  background: var(--bg-card, #fff);
+  border-radius: 14px;
+  max-width: 720px; width: 100%; max-height: 90vh;
+  overflow-y: auto; position: relative;
+}
+.modal-close {
+  position: absolute; top: 0.6rem; right: 0.6rem;
+  width: 32px; height: 32px; border-radius: 50%;
+  background: rgba(255,255,255,0.9); border: 1px solid var(--border, #e5e5ea);
+  cursor: pointer; font-size: 1.1rem; line-height: 1;
+  display: flex; align-items: center; justify-content: center; z-index: 2;
+}
+.modal-nav {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  width: 40px; height: 40px; border-radius: 50%;
+  background: rgba(255,255,255,0.92); border: 1px solid var(--border, #e5e5ea);
+  cursor: pointer; font-size: 1.5rem; line-height: 1;
+  display: flex; align-items: center; justify-content: center; z-index: 2;
+  color: var(--text-muted, #6e6e73);
+}
+.modal-nav:hover { background: #fff; color: var(--text, #1d1d1f); box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.modal-prev { left: -52px; }
+.modal-next { right: -52px; }
+@media (max-width: 900px) {
+  /* 手機螢幕放不下外側按鈕，改到 modal 內部頂部 */
+  .modal-nav { top: 0.6rem; transform: none; width: 32px; height: 32px; font-size: 1.2rem; }
+  .modal-prev { left: 0.6rem; }
+  .modal-next { left: 3rem; right: auto; }
+  .modal-close { right: 0.6rem; }
+}
+.modal-hero {
+  width: 100%;
+  max-height: 420px;
+  object-fit: contain;          /* 完整顯示不裁頭 */
+  background: var(--accent-light, #f0f0f3);
+  display: block;
+}
+.modal-body { padding: 1.2rem 1.5rem 1.5rem; }
+.modal-body h2 {
+  font-size: 1.4rem; margin-bottom: 0.2rem;
+  display: flex; align-items: baseline; gap: 0.4rem; flex-wrap: wrap;
+}
+.modal-body h2 .en { font-size: 0.85rem; font-weight: 400; color: var(--text-muted, #6e6e73); }
+.modal-body .alt { font-size: 0.78rem; color: var(--text-faint, #a1a1a6); margin-bottom: 0.6rem; }
+
+.attr-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 0.6rem 1.2rem;
+  font-size: 0.85rem; margin: 0.8rem 0 1rem;
+}
+.attr-grid > div { display: flex; gap: 0.5rem; }
+.attr-grid .label { color: var(--text-muted, #6e6e73); white-space: nowrap; }
+.attr-grid .value { color: var(--text, #1d1d1f); font-weight: 500; }
+
+.temperament-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-bottom: 1rem; }
+.temperament-tags .t {
+  background: var(--accent-light, #f0f0f3); color: var(--text, #1d1d1f);
+  padding: 2px 9px; border-radius: 10px; font-size: 0.78rem;
+}
+
+.desc { font-size: 0.9rem; line-height: 1.7; color: var(--text, #333); margin-bottom: 1rem; }
+.desc.is-en { font-style: italic; color: var(--text-muted, #555); }
+.desc-toggle {
+  display: inline-block; margin-left: 0.4rem;
+  background: transparent; border: none; padding: 0;
+  font-size: 0.8rem; color: var(--text-muted, #6e6e73);
+  cursor: pointer; text-decoration: underline;
+}
+.desc-toggle:hover { color: var(--text, #1d1d1f); }
+.desc-status {
+  display: inline-block; font-size: 0.65rem; padding: 1px 7px; border-radius: 8px;
+  background: var(--accent-light, #f0f0f3); color: var(--text-muted, #6e6e73);
+  margin-bottom: 0.4rem;
+}
+
+/* 本筆資料來源（modal 內一行低調文字）*/
+.data-src-row {
+  font-size: 0.72rem;
+  color: var(--text-muted, #6e6e73);
+  margin: 0.4rem 0 1rem;
+  line-height: 1.55;
+}
+.data-src-row .label {
+  color: var(--text-faint, #a1a1a6);
+}
+.data-src-row a {
+  color: var(--text-muted, #6e6e73);
+  text-decoration: underline;
+}
+.data-src-row a:hover { color: var(--text, #1d1d1f); }
+.img-attr {
+  font-size: 0.65rem; color: var(--text-faint, #a1a1a6);
+  text-align: right; padding: 0.2rem 0.8rem;
+  background: var(--bg, #fafafa);
+  border-bottom: 1px solid var(--border, #e5e5ea);
+}
+.img-attr a { color: var(--text-muted, #6e6e73); text-decoration: underline; }
+.manual-notice {
+  background: var(--accent-light, #f0f0f3);
+  border: 1px solid var(--border, #e5e5ea);
+  border-left: 3px solid var(--text-muted, #6e6e73);
+  padding: 0.55rem 0.85rem; border-radius: 6px;
+  font-size: 0.75rem; color: var(--text-muted, #6e6e73);
+  margin: 0.5rem 0 1rem; line-height: 1.55;
+}
+.no-img {
+  display: flex; align-items: center; justify-content: center;
+  height: 100%;
+  color: var(--text-faint, #a1a1a6); font-size: 0.85rem;
+}
+
+/* 學術研究觀察區塊 */
+.acad-block {
+  background: var(--bg-card, #fff);
+  border: 1px solid var(--border, #e5e5ea);
+  border-left: 3px solid var(--accent, #1d1d1f);
+  border-radius: 6px;
+  padding: 0.7rem 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.84rem;
+}
+.acad-block.acad-na { border-left-color: var(--text-faint, #a1a1a6); opacity: 0.85; }
+.acad-block .acad-head {
+  font-weight: 600; color: var(--text, #1d1d1f);
+  margin-bottom: 0.45rem; font-size: 0.85rem;
+}
+.acad-block .acad-traits { color: var(--text, #1d1d1f); line-height: 1.6; }
+.acad-block .acad-cluster {
+  font-size: 0.78rem; color: var(--text-muted, #6e6e73);
+  margin-top: 0.3rem;
+}
+.acad-block .acad-cluster strong { color: var(--text, #1d1d1f); }
+.acad-block .acad-cite {
+  font-size: 0.72rem; color: var(--text-muted, #6e6e73);
+  margin-top: 0.5rem; padding-top: 0.4rem;
+  border-top: 1px dashed var(--border, #e5e5ea);
+  line-height: 1.5;
+}
+.acad-block .acad-cite a { color: var(--accent, #1d1d1f); text-decoration: underline; }
+.acad-block .acad-empty {
+  color: var(--text-muted, #6e6e73); font-style: italic;
+  font-size: 0.78rem; line-height: 1.55;
+}
+.acad-sub { padding: 0.4rem 0; }
+.acad-sub.acad-sub-thin .acad-traits { font-style: italic; color: var(--text-muted, #6e6e73); font-size: 0.78rem; }
+.acad-sub + .acad-sub {
+  border-top: 1px dashed var(--border, #e5e5ea);
+  margin-top: 0.4rem; padding-top: 0.6rem;
+}
+.acad-sub-head {
+  font-size: 0.75rem; color: var(--text-muted, #6e6e73);
+  font-weight: 600; margin-bottom: 0.3rem;
+  letter-spacing: 0.02em;
+}
+
+/* 警告 icon（在名稱前面） */
+.warn-icon { display: inline-block; font-size: 0.95em; cursor: help; }
+.warn-icon.warn-severe { filter: none; }
+.warn-icon.warn-legal { filter: none; }
+.warn-icon.warn-moderate { filter: grayscale(0.2); opacity: 0.85; }
+
+/* 警告框分三級 */
+.warn-box {
+  padding: 0.7rem 1rem; margin-bottom: 1rem; border-radius: 6px;
+  font-size: 0.84rem; line-height: 1.55;
+}
+.warn-box.warn-severe {
+  background: #f5e8e8; border: 1px solid #d4b0b0; border-left: 3px solid #8a4040;
+  color: #5c2525;
+}
+.warn-box.warn-legal {
+  background: #f5ede4; border: 1px solid #d4bca0; border-left: 3px solid #a06e30;
+  color: #6b3f15;
+}
+.warn-box.warn-moderate {
+  background: #f5f0e8; border: 1px solid #d4c8b0; border-left: 3px solid #8a7340;
+  color: #5c4a25;
+}
+.warn-article {
+  display: inline-block; margin-top: 0.5rem;
+  padding: 0.3rem 0.65rem; border-radius: 14px;
+  background: rgba(255,255,255,0.55);
+  font-size: 0.82rem; font-weight: 600;
+  text-decoration: none; color: inherit;
+  transition: background 0.15s;
+}
+.warn-article:hover { background: rgba(255,255,255,0.95); text-decoration: underline; }
+
+/* 米克斯按鈕 — 跟一般 filter 同色系，僅啟用時略顯眼 */
+.filter-chip.filter-special.active {
+  background: var(--accent, #1d1d1f); color: var(--accent-on, #fff);
+  border-color: var(--accent, #1d1d1f);
+}
+
+/* 米克斯文章引導 — 中性色，不喧賓奪主 */
+.mixed-notice {
+  background: var(--bg-card, #fff);
+  border: 1px solid var(--border, #e5e5ea);
+  border-left: 3px solid var(--text-muted, #6e6e73);
+  border-radius: 6px; padding: 0.75rem 1rem;
+  margin: 0.6rem 0 1rem;
+  font-size: 0.86rem; line-height: 1.55;
+  color: var(--text, #1d1d1f);
+}
+.mixed-notice strong { display: block; margin-bottom: 0.3rem; font-size: 0.9rem; }
+.mixed-notice p { margin: 0.2rem 0 0.55rem; color: var(--text-muted, #555); }
+.mixed-notice .mixed-cta {
+  display: inline-block; padding: 0.3rem 0.7rem;
+  border: 1px solid var(--border, #e5e5ea); border-radius: 14px;
+  font-size: 0.84rem; color: var(--text, #1d1d1f);
+  text-decoration: none;
+  transition: background 0.12s, border-color 0.12s;
+}
+.mixed-notice .mixed-cta:hover {
+  background: var(--bg, #f5f5f7);
+  border-color: var(--text-muted, #6e6e73);
+}
+
+.modal-links { display: flex; gap: 0.5rem; flex-wrap: wrap; font-size: 0.8rem; }
+.modal-links a {
+  color: var(--text-muted, #6e6e73); text-decoration: none;
+  border: 1px solid var(--border, #e5e5ea); border-radius: 14px;
+  padding: 0.3rem 0.8rem;
+}
+.modal-links a:hover { background: var(--accent-light, #f0f0f3); color: var(--text, #1d1d1f); }
+
+.empty {
+  text-align: center; padding: 3rem 1rem;
+  color: var(--text-muted, #6e6e73);
+}
+
+/* 圖例區塊 */
+.legend-box {
+  background: var(--bg-card, #fff);
+  border: 1px solid var(--border, #e5e5ea);
+  border-radius: 10px;
+  padding: 1.1rem 1.3rem;
+  margin-top: 2rem;
+  font-size: 0.84rem;
+  line-height: 1.6;
+}
+.legend-box h4 {
+  font-size: 0.78rem; color: var(--text-muted, #6e6e73);
+  margin-bottom: 0.7rem; font-weight: 600;
+  letter-spacing: 0.05em; text-transform: uppercase;
+}
+.legend-row { display: flex; gap: 0.7rem; align-items: flex-start; margin-bottom: 0.6rem; }
+.legend-row .lg-icon {
+  flex-shrink: 0; width: 1.6rem; text-align: center; font-size: 1.1rem; line-height: 1.4;
+}
+.legend-row .lg-text { flex: 1; color: var(--text, #1d1d1f); }
+.legend-row .lg-text strong { color: var(--text, #1d1d1f); }
+.legend-row .lg-text .desc { display: block; color: var(--text-muted, #6e6e73); font-size: 0.78rem; margin-top: 0.15rem; }
+.legend-meta {
+  margin-top: 0.8rem; padding-top: 0.8rem;
+  border-top: 1px dashed var(--border, #e5e5ea);
+  font-size: 0.75rem; color: var(--text-muted, #6e6e73); line-height: 1.6;
+}
+
+/* 頂部警示圖例 — 顯眼但不刺眼 */
+.alert-legend {
+  display: flex; flex-wrap: wrap; gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+.alert-row {
+  display: flex; align-items: flex-start; gap: 0.55rem;
+  flex: 1; min-width: 280px;
+  padding: 0.7rem 0.9rem;
+  border-radius: 8px;
+  font-size: 0.8rem; line-height: 1.5;
+}
+.alert-row.severe {
+  background: #f5e8e8; border-left: 3px solid #8a4040; color: #5c2525;
+}
+.alert-row.legal {
+  background: #f5ede4; border-left: 3px solid #a06e30; color: #6b3f15;
+}
+.alert-row.moderate {
+  background: #f5f0e8; border-left: 3px solid #8a7340; color: #5c4a25;
+}
+.alert-row .a-icon { font-size: 1.1rem; line-height: 1.3; flex-shrink: 0; }
+.alert-row strong { display: block; margin-bottom: 0.15rem; font-size: 0.85rem; }
+.alert-row .a-text { color: inherit; }
+
+@media (max-width: 600px) {
+  .alert-row { min-width: 100%; }
+}
+</style>
+  <meta property="og:title" content="貓咪品種圖鑑 — 貓健康站">
+  <meta property="og:description" content="68 種貓咪品種資料，含 Salonen 2019 學術研究觀察。可篩選、並排比較。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://chen-mouchin.github.io/cat-health-tw/breeds.html">
+  <link rel="canonical" href="https://chen-mouchin.github.io/cat-health-tw/breeds.html">
+</head>
+<body>
+
+<nav class="site-nav">
+  <a class="nav-brand" href="index.html" title="回首頁"><span class="b-icon">🐱</span><span class="brand-text">貓健康站</span><span class="brand-home" aria-hidden="true">🏠</span></a>
+  <div class="nav-links">
+    <a class="nav-link" href="library.html" data-nav="library">📚 文獻庫</a>
+    <a class="nav-link active" href="breeds.html" data-nav="breeds">🐈 品種</a>
+    <a class="nav-link" href="vets.html" data-nav="vets">🏥 獸醫院</a>
+    <a class="nav-link" href="articles/index.html" data-nav="articles">📝 文章</a>
+    <a class="nav-link" href="about.html" data-nav="about">ℹ️ 關於</a>
+  </div>
+</nav>
+
+<h1 class="page-title">🐈 貓咪品種圖鑑</h1>
+<p class="page-sub">台灣常見品種 · 資料來自 <strong>TheCatAPI</strong> + <strong>Wikipedia</strong> · 中文翻譯與台灣化資訊持續補充中</p>
+
+<main>
+  <!-- 名稱前 icon 的意義 — 進頁面就要看到 -->
+  <div class="alert-legend">
+    <div class="alert-row severe">
+      <span class="a-icon">🚨</span>
+      <div>
+        <strong>名字前 🚨 = 嚴重健康風險</strong>
+        <span class="a-text">基因問題必發病、無法用 DNA 排除。BVA / ISFM 等獸醫協會建議停止繁殖。</span>
+      </div>
+    </div>
+    <div class="alert-row legal">
+      <span class="a-icon">🌍</span>
+      <div>
+        <strong>名字前 🌍 = 法規 / 倫理限制</strong>
+        <span class="a-text">含野生動物血統，多國禁養或限制；繁殖倫理有持續爭議。本身可能健康，但飼養前須確認當地法規。</span>
+      </div>
+    </div>
+    <div class="alert-row moderate">
+      <span class="a-icon">⚠️</span>
+      <div>
+        <strong>名字前 ⚠️ = 品種疾病風險</strong>
+        <span class="a-text">為外觀刻意培育（如極端短頭顱）導致呼吸/淚溢/難產，或某些遺傳病盛行率明顯偏高。</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="toolbar">
+    <input id="q" type="search" placeholder="搜尋品種名（中英皆可）...">
+    <select id="sortBy">
+      <option value="name">依中文名</option>
+      <option value="lifespan">壽命長短</option>
+    </select>
+  </div>
+
+  <div class="filter-bar" id="filterBar">
+    <div class="filter-group">
+      <span class="filter-label">毛長</span>
+      <button class="filter-chip" data-filter="hair" data-value="short">短毛</button>
+      <button class="filter-chip" data-filter="hair" data-value="long">長毛</button>
+      <button class="filter-chip" data-filter="hair" data-value="rex">捲毛</button>
+    </div>
+    <div class="filter-group">
+      <span class="filter-label">體型</span>
+      <button class="filter-chip" data-filter="size" data-value="small" title="平均體重 &lt; 4 kg">小型</button>
+      <button class="filter-chip" data-filter="size" data-value="medium" title="平均體重 4-6 kg">中型</button>
+      <button class="filter-chip" data-filter="size" data-value="large" title="平均體重 &gt; 6 kg">大型</button>
+    </div>
+    <div class="filter-group">
+      <span class="filter-label">過敏原</span>
+      <button class="filter-chip" data-filter="hypo" data-value="true" title="Fel d 1 蛋白產量相對較低的品種清單（研究支持）">相對較低</button>
+    </div>
+    <div class="filter-group">
+      <button class="filter-chip filter-special" id="mixedBreedBtn" title="台灣 80% 家貓是米克斯，不是這 68 個品種">🐈‍⬛ 我家是米克斯</button>
+    </div>
+    <div class="filter-group">
+      <span class="filter-label">警示</span>
+      <button class="filter-chip" data-filter="warn" data-value="severe" title="基因必發病、無法 DNA 排除">🚨 嚴重</button>
+      <button class="filter-chip" data-filter="warn" data-value="legal" title="野生血統、多國禁養">🌍 法規</button>
+      <button class="filter-chip" data-filter="warn" data-value="moderate" title="特定遺傳病或刻意培育問題">⚠️ 中度</button>
+    </div>
+    <button class="filter-clear" id="filterClear" style="display:none">✕ 清除</button>
+  </div>
+
+  <!-- 米克斯文章引導（點米克斯按鈕後出現） -->
+  <div class="mixed-notice" id="mixedNotice" hidden>
+    <strong>🐈‍⬛ 米克斯不是品種 — 是基因混合的台灣家貓主流</strong>
+    <p>台灣超過 80% 家貓是米克斯（混血、無單一品種血統）。米克斯的健康、個性、花色都比純種更多元。</p>
+    <a href="articles/mixed-breed-cats-taiwan.html" class="mixed-cta">📖 閱讀完整米克斯指南 →</a>
+  </div>
+
+  <div class="hypo-notice" id="hypoNotice" hidden>
+    <strong>⚠️ 沒有 100% 低過敏的貓。</strong>
+    所謂「低過敏品種」只是 <strong>Fel d 1 蛋白產量相對較少</strong>（依部分研究），仍會引起過敏反應。
+    過敏體質者強烈建議：<strong>領養 / 認購前親自接觸該品種，確認自身反應再決定</strong>。
+  </div>
+
+  <div class="breeds-grid" id="grid"></div>
+
+  <!-- 資料來源與方法論（icon 圖例已移到頁面頂部）-->
+  <div class="legend-box">
+    <h4>📊 資料來源與方法論</h4>
+
+    <div class="legend-row">
+      <span class="lg-icon">📚</span>
+      <div class="lg-text">
+        <strong>學術研究觀察 — Salonen et al. 2019</strong>
+        <span class="desc">
+          <em>Scientific Reports</em>（IF 4.6, Q1 多學科）· n=5,726 隻芬蘭貓 · 19 品種 · 同儕審查 · 開放取用（Open Access，免費可讀全文）。
+          測 10 項行為（攻擊性 / 害羞 / 社交 / 活動量 / 過度梳理等）+ 遺傳力估算。
+          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6538663/" target="_blank" rel="noopener">PMC 全文</a>。<br>
+          <strong>本站收錄 TheCatAPI 67 品種 + 歐短手補 = 共 68 種</strong>。
+          Salonen 2019 / Wilhelmy 2016 只涵蓋其中 10-19 種常見純種；其他品種有 TheCatAPI 基本資料但無該論文學術觀察。
+          <strong>點品種卡可看「📚 學術研究觀察」區塊</strong>（若該品種被論文涵蓋）。
+        </span>
+      </div>
+    </div>
+
+    <div class="legend-row">
+      <span class="lg-icon">📚</span>
+      <div class="lg-text">
+        <strong>補充研究 — Wilhelmy et al. 2016</strong>
+        <span class="desc">
+          <em>Journal of Veterinary Behavior</em>（IF 2.0, Q2 獸醫科學）· n=574 · 12 品種 · 🔒 付費期刊（僅摘要公開）。
+          與 Salonen 互補：聚焦問題行為（攻擊性 / 分離焦慮 / 噪音恐懼 / 不當排尿）。
+          發現暹羅/東基尼斯分離焦慮率明顯較高。
+          <a href="https://www.sciencedirect.com/science/article/abs/pii/S1558787816300284" target="_blank" rel="noopener">摘要</a>
+        </span>
+      </div>
+    </div>
+
+    <div class="legend-row">
+      <span class="lg-icon">🧠</span>
+      <div class="lg-text">
+        <strong>個體貓格框架 — Litchfield et al. 2017「Feline Five」</strong>
+        <span class="desc">
+          <em>PLOS ONE</em>（IF 3.7, Q1）· n=2,802（澳紐）· 同儕審查 · 開放取用。
+          仿人類 Big Five 為貓歸納 5 大「貓格」維度：<strong>神經質 / 外向 / 支配 / 衝動 / 隨和</strong>。
+          <u>此為個體層級研究，不做品種比較</u>，提供「如何看單隻貓的個性」的學術框架。
+          <a href="https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0183455" target="_blank" rel="noopener">全文</a>
+        </span>
+      </div>
+    </div>
+
+    <div class="legend-row">
+      <span class="lg-icon">📋</span>
+      <div class="lg-text">
+        <strong>性格評分（11 維）— TheCatAPI 整合資料庫</strong>
+        <span class="desc">
+          僅供入門參考。<strong>無公開方法論、無同儕審查、無樣本量說明</strong>。
+          性格分數的編製方式與來源不明，可能反映普遍認知而非實證測量。
+        </span>
+      </div>
+    </div>
+
+    <div class="legend-meta">
+      <strong>關於 Impact Factor (IF)：</strong> 期刊影響因子是該期刊近兩年論文平均被引次數，並非單篇論文品質指標。
+      獸醫行為學領域 IF 普遍 2-5（人醫頂刊 IF 50+）— 因此 IF 4.6 在此領域屬中上水準。
+      評估單篇論文應同時看：樣本量、研究設計、利益衝突聲明、結果可重現性。<br>
+      <strong>沒有 icon 的品種</strong>不代表完全無風險（如布偶/緬因 HCM）— 但已有 DNA 檢測可篩，且非為外觀刻意培育的問題。
+      <strong>個體差異 &gt; 品種差異</strong>，實際飼養體驗請以個別貓咪為準。
+    </div>
+  </div>
+</main>
+
+<aside class="site-ad-banner" aria-label="贊助廣告">
+  <div class="ad-card">
+    <div class="ad-label">贊助 Sponsored</div>
+    <div class="ad-slot"><span>Ad Slot · banner (responsive)</span></div>
+  </div>
+</aside>
+
+<footer class="site-footer">
+  <div class="f-nav">
+    <a class="f-home" href="index.html">🏠 回首頁</a>
+    <a href="library.html">📚 文獻庫</a>
+    <a href="breeds.html">🐈 品種圖鑑</a>
+    <a href="vets.html">🏥 獸醫院</a>
+    <a href="articles/index.html">📝 文章</a>
+    <a href="about.html">ℹ️ 關於本站</a>
+    <a href="privacy.html">🔒 隱私政策</a>
+  </div>
+  <div class="f-meta">
+    貓健康站 · 品種資料 © TheCatAPI (CC0)<br>
+    本站內容僅供參考，不取代獸醫師診斷
+  </div>
+</footer>
+
+<aside class="site-ad-anchor" aria-label="贊助廣告">
+  <div class="ad-label">贊助</div>
+  <div class="ad-slot"><span>Ad Slot · anchor (sticky bottom)</span></div>
+  <button class="ad-close" aria-label="關閉廣告 24 小時" title="關閉 24 小時">✕</button>
+</aside>
+
+<!-- Modal -->
+<div class="modal" id="modal" onclick="if(event.target.id==='modal')closeModal()">
+  <div class="modal-content" id="modalContent"></div>
+</div>
+
+<script src="data/breeds.js"></script>
+<script src="js/ads.js"></script>
+<script>
+const data = (window.BREEDS && window.BREEDS.breeds) || [];
+
+// Salonen 2019 學術研究觀察 — 涵蓋 19 品種裡與本站重疊的 19 種
+// 引用：citations.json#SALONEN-2019-BREED-BEHAVIOUR
+// IF 4.6（Q1 多學科）/ n=5,726 / 19 品種 / Scientific Reports 2019
+// 4 個行為群集：溫和冷靜 / 活潑社交 / 敏感 / 易攻擊
+const SALONEN_BREEDS = {
+  // === 原 8 種（依論文事實校正）===
+  bsho: { traits: '活動量在 19 品種中最低之一；對陌生人較矜持；攻擊性低', cluster: '溫和冷靜' },
+  ragd: { traits: '活動量低；對陌生人較開放；攻擊性低', cluster: '溫和冷靜' },
+  pers: { traits: '活動量低；社交性中等；過度梳理機率略高', cluster: '溫和冷靜' },
+  siam: { traits: '社交性高；活動量高；對家人接觸需求高', cluster: '活潑社交' },
+  mcoo: { traits: '活動量中等；社交性中高；對陌生人較開放', cluster: '溫和冷靜（偏中間）' },
+  rblu: { traits: '對陌生人較矜持；活動量中等；攻擊性低', cluster: '溫和冷靜' },
+  esho: { traits: '活動量低（與波斯相似）；社交性中等', cluster: '溫和冷靜' },
+  beng: { traits: '活動量高；社交性高；對人類接觸需求高', cluster: '活潑社交' },
+
+  // === 新增 11 種（Salonen 涵蓋）===
+  abys: { traits: '主動尋求人類接觸（與舊研究結論相反）；活潑好動', cluster: '活潑社交' },
+  bure: { traits: '對陌生人害羞程度在 19 品種中最低；社交性極高', cluster: '活潑社交' },
+  buri: { traits: '與緬甸貓合併分析；行為特徵相近', cluster: '活潑社交' },
+  crex: { traits: '最活躍品種之一；對新奇物體害羞程度最低（最敢探索）', cluster: '活潑社交' },
+  drex: { traits: '19 品種中最積極尋求人類接觸；高度互動需求', cluster: '活潑社交' },
+  kora: { traits: '最活躍品種之一；同時最積極尋求人類接觸', cluster: '活潑社交' },
+  norw: { traits: '吸羊毛 / 吸布行為機率在 19 品種中最高；活動量低', cluster: '溫和冷靜' },
+  ocic: { traits: '與阿比西尼亞貓合併分析；活潑好動', cluster: '活潑社交' },
+  birm: { traits: '活動量在 19 品種中最低之一；溫和不易激動', cluster: '溫和冷靜' },
+  tang: { traits: '〔需注意〕對人類與其他貓表現攻擊性的機率最高', cluster: '易攻擊型' },
+  esha: { traits: '行為特徵接近一般家貓；活動量與社交性中等', cluster: '溫和冷靜' },
+
+  // asho 與 sfol 不在 Salonen 19 品種中
+};
+
+const SALONEN_META = {
+  citation: 'Salonen et al. 2019',
+  journal: 'Scientific Reports',
+  if: 4.6,
+  if_year: 2024,
+  quartile: 'Q1（多學科）',
+  n: 5726,
+  url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6538663/',
+};
+
+// Wilhelmy 2016（12 品種 / n=574 / J Vet Behav / 付費牆，摘要可讀）
+// 摘要僅明確指出：暹羅+東基尼斯分離焦慮較高、agouti 攻擊性較高、
+// 紅貓獵物興趣高、piebald 對陌生人攻擊性較低。
+// 其他品種有納入研究但具體結論在付費全文裡，不編造、誠實標記。
+const WILHELMY_BREEDS = {
+  siam: { kind: 'finding', text: '〔需注意〕分離焦慮機率明顯高於多數品種（摘要明確結論）' },
+  abys: { kind: 'included', text: '本研究有納入此品種，但具體結論在付費全文裡，摘要未公開' },
+  beng: { kind: 'included', text: '本研究有納入此品種，但具體結論在付費全文裡，摘要未公開' },
+  birm: { kind: 'included', text: '本研究有納入此品種，但具體結論在付費全文裡，摘要未公開' },
+  bure: { kind: 'included', text: '本研究有納入此品種，但具體結論在付費全文裡，摘要未公開' },
+  drex: { kind: 'included', text: '本研究有納入此品種，但具體結論在付費全文裡，摘要未公開' },
+  mcoo: { kind: 'included', text: '本研究有納入此品種，但具體結論在付費全文裡，摘要未公開' },
+  norw: { kind: 'included', text: '本研究有納入此品種，但具體結論在付費全文裡，摘要未公開' },
+  pers: { kind: 'included', text: '本研究有納入此品種，但具體結論在付費全文裡，摘要未公開' },
+  ragd: { kind: 'included', text: '本研究有納入此品種，但具體結論在付費全文裡，摘要未公開' },
+  // tonkinese 不在我們收錄品種中
+};
+
+const WILHELMY_META = {
+  citation: 'Wilhelmy et al. 2016',
+  journal: 'J Veterinary Behavior',
+  if: 2.0,
+  if_year: 2024,
+  quartile: 'Q2（獸醫科學）',
+  n: 574,
+  url: 'https://www.sciencedirect.com/science/article/abs/pii/S1558787816300284',
+  paywall: true,
+};
+
+// 人為培育造成的健康風險警示（3 級）
+// severe = 基因必發病或致命、CFA/GCCF 不承認、倫理爭議
+// legal  = 含野生血統，多國禁養或繁殖倫理爭議
+// moderate = 刻意培育外觀導致常見疾病、可選擇較健康來源
+const WARN_BREEDS = {
+  // ── SEVERE 嚴重 ──
+  sfol: {
+    level: 'severe', icon: '🚨',
+    short: '嚴重健康風險',
+    detail: '蘇格蘭摺耳貓的折耳基因（FGFR3 突變）同時導致全身骨關節軟骨發育異常（osteochondrodysplasia），所有摺耳貓都會在不同程度上發病，且無法用 DNA 檢測排除。英國皇家獸醫協會（BVA）、國際貓科醫學會（ISFM）、FIFe 等多個組織建議停止繁殖此品種。台灣可考慮領養已存在的，勸不買、勸不繁殖。',
+    article: 'articles/scottish-fold-breed-guide-taiwan.html',
+    articleLabel: '深度勸退文（FGFR3 機制 + 台灣繁殖場現況）',
+  },
+  munc: {
+    level: 'severe', icon: '🚨',
+    short: '基因爭議品種',
+    detail: '曼基短腿貓（Munchkin）來自 LRP4 顯性致病基因，純合子（兩條都帶）胚胎致死。常見脊椎前凸（lordosis）、漏斗胸（pectus excavatum）、關節炎風險。CFA 與 GCCF 不承認此品種，TICA 1995 承認但有持續倫理爭議。',
+  },
+
+  // ── MODERATE 中度 ──
+  pers: {
+    level: 'moderate', icon: '⚠️',
+    short: '短頭顱與多囊腎風險',
+    detail: '波斯貓為極端短頭顱品種（brachycephalic），常見呼吸困難、淚溢、咬合不正、難產。多囊腎（PKD）盛行率約 30-40%（DNA 可篩）。購買前應確認 PKD 檢測陰性、鼻孔不過度塌陷。長毛每日梳理必要。',
+  },
+  esho: {
+    level: 'moderate', icon: '⚠️',
+    short: '短頭顱與多囊腎風險',
+    detail: '異國短毛貓（俗稱加菲貓）為波斯貓短毛版本，繼承相同短頭顱問題：呼吸困難、淚溢。同樣有 PKD 風險，建議 DNA 檢測。短毛但仍需定期清理眼周。',
+  },
+  beng: {
+    level: 'moderate', icon: '⚠️',
+    short: '高需求品種與野生血統',
+    detail: '孟加拉貓含野生豹貓血統，需大量運動 + 環境豐富，不適合公寓單貓飼養。需求未滿足易亂尿 / 攻擊行為。早期 F1-F4 世代在美國紐約、夏威夷及部分國家禁養。HCM、PRA、PK Deficiency 遺傳風險。不適合新手飼主。',
+  },
+  mcoo: {
+    level: 'moderate', icon: '⚠️',
+    short: '心臟病基因風險',
+    detail: '緬因貓（Maine Coon）是 HCM 肥厚型心肌病最高風險品種之一，MyBPC3 突變基因可篩檢。CFA / TICA 已要求繁殖場做 HCM 基因檢測 + 心臟超音波。購買前必查父母貓檢測證明。大型品種需大空間 + 大水碗 + 大砂盆，髖關節發育不全也較常見。',
+  },
+  ragd: {
+    level: 'moderate', icon: '⚠️',
+    short: '心臟病基因風險',
+    detail: '布偶貓（Ragdoll）有專屬 HCM 突變 R820W，是 HCM 高風險品種之一。購買前必查父母貓 R820W 基因檢測 + 心臟超音波證明。長毛需定期梳理，台灣熱門品種繁殖場品質差異大。',
+  },
+  bsho: {
+    level: 'moderate', icon: '⚠️',
+    short: '心臟病與肥胖傾向',
+    detail: '英國短毛貓 HCM 肥厚型心肌病風險中等，可詢問父母貓心臟超音波證明。容易過重 — 結紮後代謝下降，需嚴控食量。台灣熱門品種，繁殖場品質差異大。',
+  },
+  sphy: {
+    level: 'moderate', icon: '⚠️',
+    short: '特殊照顧需求',
+    detail: '無毛貓（Sphynx）需每週洗澡 — 無毛吸不掉皮脂，累積會引發皮膚問題。體溫調節差，冬天需衣服 / 加熱毛毯。皮膚直接曝光易曬傷。HCM 風險中等。整體照顧成本與時間遠高於有毛貓。',
+  },
+
+  // ── ROUND 2 SEVERE 嚴重 ──
+  manx: {
+    level: 'severe', icon: '🚨',
+    short: 'Manx Syndrome 脊椎風險',
+    detail: '曼島貓的無尾基因為顯性致死（純合子胚胎死亡），雜合子可導致 Manx Syndrome — 脊椎裂、神經損傷、大小便失禁、後肢癱瘓。GCCF 要求繁殖場避免「rumpy×rumpy」（無尾配無尾）。購買前確認父母貓 X 光、避免完全無尾型（rumpy）幼貓。',
+  },
+  sava: {
+    level: 'legal', icon: '🌍',
+    short: '野生血統 + 法規限制',
+    detail: 'Savannah 含非洲薩凡那貓（Serval）血統。F1-F4 早期世代體型大、需求極高，多國禁養（澳洲全境、美國紐約/喬治亞/夏威夷等）。F5+ 才較接近家貓但仍需大空間 + 大量運動。HCM、PRA 風險，飼養前確認當地法規。',
+  },
+
+  // ── ROUND 2 MODERATE 中度 ──
+  siam: {
+    level: 'moderate', icon: '⚠️',
+    short: '基因疾病與斜視傾向',
+    detail: '暹羅貓有 PRA（漸進性視網膜萎縮）品種特異風險，部分線可基因篩。傳統暹羅常見**先天性斜視**（與色點基因連鎖，多無視力影響）與**進展性扁桃腺結石**。Modern（短臉）型可能有呼吸問題，Traditional（Apple-head）較健康。Hypoallergenic 標籤無確切證據。',
+  },
+  abys: {
+    level: 'moderate', icon: '⚠️',
+    short: '基因疾病高風險',
+    detail: '阿比西尼亞貓有兩個重要遺傳病可篩：(1) PRA-rdAc — 隱性遺傳漸進性失明，DNA 可篩；(2) PK Deficiency 丙酮酸激酶缺乏 — 慢性貧血，DNA 可篩。購買前必查父母貓兩項基因檢測陰性證明。',
+  },
+  norw: {
+    level: 'moderate', icon: '⚠️',
+    short: 'GSD IV 致命基因病',
+    detail: '挪威森林貓有 Glycogen Storage Disease type IV（肝醣儲積症 IV 型）品種特異基因，純合子胎兒多死產或數月內死亡。DNA 可篩。購買前必查父母貓 GSD IV 檢測陰性證明。HCM 風險也偏高。',
+  },
+  tang: {
+    level: 'moderate', icon: '⚠️',
+    short: '純白藍眼貓耳聾風險',
+    detail: '土耳其安哥拉貓的純白色（Dominant White, W gene）與藍眼睛強烈關聯**先天性耳聾**。CFA 統計：純白藍眼安哥拉約 60-80% 單側或雙側耳聾。購買前要求做 BAER 聽力測試。非純白色或非藍眼個體無此問題。',
+  },
+  tonk: {
+    level: 'moderate', icon: '⚠️',
+    short: '繼承親代基因病',
+    detail: '東奇尼貓（Tonkinese）= Burmese × Siamese 雜交，繼承雙方基因病風險：PRA、Burmese 頭部畸形綜合症（少見但嚴重）、扁桃腺結石。購買前查父母貓基因檢測。',
+  },
+  char: {
+    level: 'moderate', icon: '⚠️',
+    short: '髖關節與 PKD 風險',
+    detail: '沙特爾貓（Chartreux）為大型品種，**髖關節發育不全**（Hip dysplasia）發生率較高。**PKD 多囊腎**有部分線可篩。購買前可詢問父母貓髖關節 X 光與 PKD DNA 檢測。Hypoallergenic 標籤無科學支持。',
+  },
+  drex: {
+    level: 'moderate', icon: '⚠️',
+    short: '皮膚敏感與毛囊脆弱',
+    detail: '德文捲毛貓（Devon Rex）的捲毛來自**毛囊發育異常**（KRT71 突變），毛少且脆弱、皮膚分泌油脂過多 — 需每 2-4 週擦澡或洗澡防止皮脂累積。Hypoallergenic 標籤證據有限（雖然脫毛少，Fel d 1 量未必低）。HCM 中等風險，可篩 MyBPC3。',
+  },
+  crex: {
+    level: 'moderate', icon: '⚠️',
+    short: '皮膚敏感與體溫調節',
+    detail: '康瓦耳捲毛貓（Cornish Rex）只有 down hair（內層細捲毛），無外層保護毛。皮膚直接曝光，**冬天怕冷需衣服或暖墊、夏天易曬傷**。每月需擦澡防止皮脂累積。Hypoallergenic 標籤證據有限。',
+  },
+
+  sibe: {
+    level: 'moderate', icon: '⚠️',
+    short: 'HCM + GSD IV 基因病風險',
+    detail: '西伯利亞貓有 **HCM 心肌病** 與部分線 **GSD IV** 基因病風險（不如 Norwegian Forest 普遍但仍存在）。購買前詢問父母貓 HCM 心臟超音波。\n\n附註：是少數有研究支持的低致敏品種之一（Russian Blue、Balinese 同列），但個體差異大，過敏者投入前應實際接觸測試。',
+  },
+
+  // ── ROUND 3 派生品種（繼承父品種風險，常被忽略）──
+  bamb: {
+    level: 'severe', icon: '🚨',
+    short: '雙重健康風險（無毛+短腿）',
+    detail: 'Bambino = Sphynx × Munchkin 雜交，**同時繼承雙親兩種風險**：(1) 無毛 — 每週洗澡、體溫調節差、易曬傷、HCM；(2) LRP4 短腿基因 — 純合子致死、脊椎前凸、漏斗胸。CFA 與 GCCF 不承認。建議避免支持這類雜交。',
+  },
+  chau: {
+    level: 'legal', icon: '🌍',
+    short: '野生血統 + 法規限制',
+    detail: 'Chausie = 叢林貓（Jungle Cat / Felis chaus）× 家貓雜交。F1-F4 早期世代體型大、活動量極高，部分國家管制（澳洲、英國某些州）。家庭環境難滿足需求 → 行為問題。F5+ 才較接近家貓。飼養前確認當地法規。',
+  },
+  cymr: {
+    level: 'severe', icon: '🚨',
+    short: 'Manx Syndrome 長毛版',
+    detail: 'Cymric = Manx 長毛變種，**繼承相同無尾基因（顯性致死）與 Manx Syndrome 風險**（脊椎裂、神經損傷、後肢癱瘓、大小便失禁）。避免「rumpy×rumpy」配種。購買前查父母 X 光。',
+  },
+  soma: {
+    level: 'moderate', icon: '⚠️',
+    short: '繼承阿比西尼亞基因病',
+    detail: 'Somali = Abyssinian 長毛版，**繼承相同兩個重要基因病**：PRA-rdAc（漸進性視網膜萎縮）+ PK Deficiency（丙酮酸激酶缺乏 / 慢性貧血）。兩者都有 DNA 篩。購買前查父母貓兩項檢測陰性。長毛需定期梳理。',
+  },
+  bali: {
+    level: 'moderate', icon: '⚠️',
+    short: '繼承暹羅基因病',
+    detail: 'Balinese = 暹羅長毛版，**繼承相同 PRA、先天性斜視（多無視力影響）、進展性扁桃腺結石**。Hypoallergenic 標籤無確切證據（與 Siberian/Russian Blue 同列「有爭議」）。長毛需定期梳理。',
+  },
+  java: {
+    level: 'moderate', icon: '⚠️',
+    short: '繼承暹羅基因病',
+    detail: 'Javanese = Balinese 變種（特定毛色），**同樣繼承暹羅基因病**：PRA、斜視、扁桃腺結石。需求高活動量。',
+  },
+  csho: {
+    level: 'moderate', icon: '⚠️',
+    short: '繼承暹羅基因病',
+    detail: 'Colorpoint Shorthair = 暹羅貓 × 美短雜交產生的色點品種，**繼承暹羅 PRA 與斜視風險**。CFA 與 TICA 對其品種地位定義不同（CFA 視為獨立、TICA 視為暹羅子類）。',
+  },
+  snow: {
+    level: 'moderate', icon: '⚠️',
+    short: '繼承暹羅基因病',
+    detail: 'Snowshoe = 暹羅 × 美短雜交（白色腳掌特徵），**繼承暹羅 PRA 與斜視傾向**。1960s 才出現，仍是相對新的品種，繁殖場品質差異大。',
+  },
+  bomb: {
+    level: 'moderate', icon: '⚠️',
+    short: '繼承緬甸貓基因',
+    detail: 'Bombay = 黑化緬甸貓（Burmese × American Shorthair Black），**繼承部分 Burmese 健康問題**：頭部畸形綜合症（少見但嚴重）、扁桃腺結石、眼部問題。Hypoallergenic 標籤無確切證據。',
+  },
+  buri: {
+    level: 'moderate', icon: '⚠️',
+    short: '繼承父系疾病風險',
+    detail: 'Burmilla = Burmese × Chinchilla Persian，可能繼承 Burmese 頭部畸形、Persian PKD（多囊腎）風險。購買前可詢問 PKD DNA 檢測。',
+  },
+  dons: {
+    level: 'moderate', icon: '⚠️',
+    short: '無毛貓特殊照顧',
+    detail: 'Donskoy（俄羅斯無毛貓）跟 Sphynx 無毛基因不同（Donskoy 為顯性、Sphynx 為隱性），**照顧需求類似 Sphynx**：每週擦澡、體溫調節差、易曬傷。較罕見，繁殖場品質差異大。HCM 風險中等。',
+  },
+};
+
+// 比較功能：放在單品種 modal 內折疊式選單，不再佔卡片視覺
+let compareSrcId = null; // 從哪個品種開的比較
+let currentModalId = null; // 目前 modal 顯示的品種 id
+
+// 長毛品種清單（TheCatAPI 無此欄位，手動標記）
+const LONG_HAIR_BREEDS = new Set([
+  'pers', 'mcoo', 'ragd', 'norw', 'birm', 'tang', 'hima', 'tvan',
+  'nebe', 'bali', 'lape', 'cymr', 'java', 'soma', 'bslo', 'raga',
+  'sibe', 'ctif', 'srex'
+]);
+// 捲毛（rex）品種 — 屬短毛但特殊，也可獨立標
+const REX_BREEDS = new Set(['crex', 'drex', 'lape', 'srex']);
+// 無毛
+const HAIRLESS_BREEDS = new Set(['sphy', 'bamb', 'dons']);
+
+// 低過敏原品種（Fel d 1 蛋白產量相對較低，有獸醫文獻支持）
+// 來源：多篇貓過敏原研究 — 俄藍、西伯利亞、峇里、捲毛系、無毛系
+// 注意：沒有 100% 低過敏的貓，只是「相對較低」，不代表過敏者一定安全
+const HYPOALLERGENIC_BREEDS = new Set([
+  'rblu', 'sibe', 'bali', 'java',  // Fel d 1 相對低的長毛品種
+  'crex', 'drex', 'lape', 'srex',  // 捲毛（脫毛量少 → Fel d 1 散佈少）
+  'sphy', 'bamb', 'dons',          // 無毛（同上）
+  'bure'                            // 緬甸（有研究提及）
+]);
+
+function getHairLength(id) {
+  if (LONG_HAIR_BREEDS.has(id)) return 'long';
+  if (REX_BREEDS.has(id)) return 'rex';
+  return 'short';
+}
+
+// 篩選狀態 — 全部基於可驗證的事實或研究清單
+const filters = {
+  hair: null,         // 'short' / 'long' / 'rex'（可觀察事實）
+  size: null,         // 'small' / 'medium' / 'large'（體重範圍的事實）
+  hypo: false,        // 低過敏原（Fel d 1 研究支持的品種清單）
+  warn: null,         // 'severe' / 'legal' / 'moderate'（警示等級）
+};
+
+function getBodySize(b) {
+  const w = b.weight_kg;
+  if (!w || w.length !== 2) return null;
+  const avg = (w[0] + w[1]) / 2;
+  if (avg < 4) return 'small';
+  if (avg > 6) return 'large';
+  return 'medium';
+}
+
+function escapeHtml(s) {
+  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function imageUrl(img) {
+  return typeof img === 'string' ? img : (img && img.url) || '';
+}
+
+// 單筆資料用到的來源（只列有的，不並列 emoji）
+function renderDataSources(b) {
+  const parts = [];
+  if (b.data_source === 'thecatapi') {
+    parts.push(`<a href="${escapeHtml(b.thecatapi_url)}" target="_blank" rel="noopener">TheCatAPI</a>`);
+  }
+  if (b.wikipedia_url_en || b.wikipedia_url_zh) {
+    const url = b.wikipedia_url_zh || b.wikipedia_url_en;
+    parts.push(`<a href="${escapeHtml(url)}" target="_blank" rel="noopener">Wikipedia</a>`);
+  }
+  if (b.id in SALONEN_BREEDS) {
+    parts.push(`<a href="${SALONEN_META.url}" target="_blank" rel="noopener">Salonen 2019</a>（學術論文）`);
+  }
+  if (b.id in WILHELMY_BREEDS) {
+    parts.push(`<a href="${WILHELMY_META.url}" target="_blank" rel="noopener">Wilhelmy 2016</a>（學術論文，付費）`);
+  }
+  if (!parts.length) return '';
+  return `<div class="data-src-row"><span class="label">本筆資料來源：</span>${parts.join(' · ')}</div>`;
+}
+
+function renderCard(b) {
+  const firstImg = imageUrl(b.images[0]);
+  const lifeRange = b.life_span_years.length === 2 ? `${b.life_span_years[0]}-${b.life_span_years[1]} 年` : '—';
+  const tagsHtml = (b.temperament_zh || []).slice(0,3).map(t => `<span class="tag">${escapeHtml(t)}</span>`).join('');
+  const warn = WARN_BREEDS[b.id];
+  const iconPrefix = warn ? `<span class="warn-icon warn-${warn.level}" title="${escapeHtml(warn.short)}">${warn.icon}</span> ` : '';
+  return `
+    <div class="breed-card" data-id="${b.id}" onclick="openModal('${b.id}')">
+      <div class="img-wrap">${firstImg?`<img src="${escapeHtml(firstImg)}" alt="${escapeHtml(b.name_zh)}" loading="lazy" onerror="this.outerHTML='<div class=\\'no-img\\'>圖片載入失敗</div>'">`:`<div class="no-img">無圖片</div>`}</div>
+      <div class="body">
+        <h3>${iconPrefix}${escapeHtml(b.name_zh)} <span class="en">${escapeHtml(b.name_en)}</span></h3>
+        <div class="meta">📍 ${escapeHtml(b.origin)} · ⏳ ${lifeRange}</div>
+        <div class="tags">${tagsHtml}</div>
+      </div>
+    </div>
+  `;
+}
+
+// 當前篩選+排序結果（modal 上下切換要用同一份）
+let currentList = [];
+
+function computeList() {
+  const q = document.getElementById('q').value.trim().toLowerCase();
+  const sortBy = document.getElementById('sortBy').value;
+  let list = data.filter(b => {
+    if (q && !((b.name_zh + ' ' + b.name_en + ' ' + (b.alt_names||[]).join(' ')).toLowerCase().includes(q))) return false;
+    // 毛長（可觀察事實）
+    if (filters.hair && getHairLength(b.id) !== filters.hair) return false;
+    // 體型（體重範圍的事實）
+    if (filters.size && getBodySize(b) !== filters.size) return false;
+    // 低過敏原（Fel d 1 研究支持的清單）
+    if (filters.hypo && !HYPOALLERGENIC_BREEDS.has(b.id)) return false;
+    // 警示等級（severe / legal / moderate）
+    if (filters.warn && WARN_BREEDS[b.id]?.level !== filters.warn) return false;
+    return true;
+  });
+  list.sort((a,b) => {
+    if (sortBy === 'warn') {
+      // 警示權重：severe=2, moderate=1, 無=0
+      const wt = x => (WARN_BREEDS[x.id]?.level === 'severe' ? 2 : WARN_BREEDS[x.id]?.level === 'moderate' ? 1 : 0);
+      const diff = wt(b) - wt(a);
+      if (diff) return diff;
+      return a.name_zh.localeCompare(b.name_zh, 'zh-TW');
+    }
+    if (sortBy === 'lifespan') {
+      return (b.life_span_years[1]||0) - (a.life_span_years[1]||0);
+    }
+    return a.name_zh.localeCompare(b.name_zh, 'zh-TW');
+  });
+  return list;
+}
+
+function render() {
+  currentList = computeList();
+  const grid = document.getElementById('grid');
+  if (!currentList.length) {
+    grid.innerHTML = '<div class="empty">沒有符合的品種</div>';
+    return;
+  }
+  grid.innerHTML = currentList.map(renderCard).join('');
+}
+
+// Modal 上/下一隻切換
+function navModal(dir) {
+  if (!currentModalId || !currentList.length) return;
+  const idx = currentList.findIndex(b => b.id === currentModalId);
+  if (idx < 0) return;
+  const newIdx = (idx + dir + currentList.length) % currentList.length;
+  openModal(currentList[newIdx].id);
+}
+
+// 從 modal 內的比較選單觸發：current 品種 + 勾選的 1-2 隻
+function startCompare(currentId) {
+  const checks = document.querySelectorAll('#comparePicker input:checked');
+  const ids = [currentId, ...Array.from(checks).map(c => c.value)];
+  if (ids.length < 2) {
+    alert('請至少勾選 1 隻其他品種');
+    return;
+  }
+  compareSrcId = currentId;
+  const breeds = ids.map(id => data.find(b => b.id === id)).filter(Boolean);
+  showCompareModal(breeds);
+}
+
+function backToBreed() {
+  if (compareSrcId) openModal(compareSrcId);
+  else closeModal();
+}
+
+// 限制最多 +2 個額外勾選
+function onCompareCheck(ev) {
+  const checks = document.querySelectorAll('#comparePicker input:checked');
+  if (checks.length > 2) {
+    ev.target.checked = false;
+    return;
+  }
+  document.getElementById('compareCount').textContent = checks.length;
+  document.getElementById('compareGoBtn').disabled = checks.length === 0;
+}
+
+function showCompareModal(breeds) {
+  const modal = document.getElementById('modal');
+  const content = document.getElementById('modalContent');
+  const cols = breeds.length;
+
+  // 整個比較表用同一個 CSS grid，欄寬保證對齊
+  const cells = [];
+  // 第一列：左上空白 + 各品種 header（圖+名）
+  cells.push('<div class="cmp-cell cmp-corner"></div>');
+  breeds.forEach(b => {
+    const w = WARN_BREEDS[b.id];
+    const ic = w ? `<span class="warn-icon warn-${w.level}">${w.icon}</span> ` : '';
+    const img = imageUrl(b.images[0]);
+    cells.push(`
+      <div class="cmp-cell cmp-h">
+        <div class="cmp-h-img">${img?`<img src="${escapeHtml(img)}" alt="">`:''}</div>
+        <div class="cmp-h-name">${ic}${escapeHtml(b.name_zh)}</div>
+        <div class="cmp-h-en">${escapeHtml(b.name_en)}</div>
+      </div>
+    `);
+  });
+
+  // 資料列（移除 TheCatAPI 主觀評分；改放可驗證的事實 + 警示）
+  const HAIR_LABEL = { short: '短毛', long: '長毛', rex: '捲毛' };
+  const SIZE_LABEL = { small: '小型', medium: '中型', large: '大型' };
+  const rows = [
+    ['警示', breeds.map(b => {
+      const w = WARN_BREEDS[b.id];
+      if (!w) return '<span class="cmp-faint">— 無已知警示</span>';
+      return `<span class="cmp-warn cmp-warn-${w.level}">${w.icon} ${escapeHtml(w.short)}</span>`;
+    })],
+    ['原產', breeds.map(b => escapeHtml(b.origin || '—'))],
+    ['壽命', breeds.map(b => b.life_span_years.length===2?`${b.life_span_years[0]}-${b.life_span_years[1]} 年`:'—')],
+    ['體重', breeds.map(b => b.weight_kg.length===2?`${b.weight_kg[0]}-${b.weight_kg[1]} kg`:'—')],
+    ['體型', breeds.map(b => SIZE_LABEL[getBodySize(b)] || '—')],
+    ['毛長', breeds.map(b => HAIR_LABEL[getHairLength(b.id)] || '—')],
+    ['低過敏', breeds.map(b => HYPOALLERGENIC_BREEDS.has(b.id) ? '相對較低 *' : '—')],
+    ['性格', breeds.map(b => escapeHtml((b.temperament_zh||[]).join('、') || '—'))],
+    ['別名', breeds.map(b => escapeHtml((b.alt_names||[]).slice(0,3).join('、') || '—'))],
+  ];
+  rows.forEach(([label, vals]) => {
+    cells.push(`<div class="cmp-cell cmp-l">${escapeHtml(label)}</div>`);
+    vals.forEach(v => cells.push(`<div class="cmp-cell cmp-v">${v}</div>`));
+  });
+
+  const srcName = compareSrcId ? (data.find(b => b.id === compareSrcId)?.name_zh || '') : '';
+  const backBtn = compareSrcId
+    ? `<button class="compare-back" onclick="backToBreed()">← 返回 ${escapeHtml(srcName)}</button>`
+    : '';
+
+  content.innerHTML = `
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-body">
+      ${backBtn}
+      <h2>並排比較（${cols} 隻）</h2>
+      <div class="cmp-table" style="grid-template-columns: 90px repeat(${cols}, minmax(0, 1fr))">
+        ${cells.join('')}
+      </div>
+      <p class="cmp-footnote">* 低過敏：Fel d 1 蛋白量相對較低，並非完全無過敏原；個體差異大，過敏者投入前應實際接觸測試。</p>
+    </div>
+  `;
+  modal.classList.add('open');
+}
+
+// 比較選單 — 折疊式，在 modal 內
+function renderComparePicker(currentId) {
+  const others = data.filter(b => b.id !== currentId);
+  const items = others.map(b => {
+    const ic = WARN_BREEDS[b.id] ? WARN_BREEDS[b.id].icon : '';
+    const img = imageUrl(b.images[0]);
+    const thumb = img
+      ? `<img src="${escapeHtml(img)}" alt="" loading="lazy">`
+      : `<div class="no-thumb">—</div>`;
+    return `
+      <label class="cmp-item">
+        <input type="checkbox" value="${escapeHtml(b.id)}" onchange="onCompareCheck(event)">
+        <span class="cmp-thumb">${thumb}</span>
+        <span class="cmp-name">${ic} ${escapeHtml(b.name_zh)}</span>
+      </label>
+    `;
+  }).join('');
+  return `
+    <details class="cmp-picker">
+      <summary>📊 與其他品種比較 <span class="cmp-hint">最多選 2 隻</span></summary>
+      <div class="cmp-body">
+        <div id="comparePicker" class="cmp-grid">${items}</div>
+        <div class="cmp-actions">
+          <span class="cmp-status">已選 <strong id="compareCount">0</strong> / 2</span>
+          <button id="compareGoBtn" onclick="startCompare('${escapeHtml(currentId)}')" disabled>並排比較</button>
+        </div>
+      </div>
+    </details>
+  `;
+}
+
+function renderAcademicBlock(id) {
+  const s = SALONEN_BREEDS[id];
+  const w = WILHELMY_BREEDS[id];
+
+  // 都沒有 → 空區塊說明
+  if (!s && !w) {
+    return `<div class="acad-block acad-na">
+      <div class="acad-head">📚 學術研究觀察</div>
+      <div class="acad-body">
+        <div class="acad-empty">此品種未涵蓋於 Salonen 2019（5,726 隻芬蘭貓）或 Wilhelmy 2016（574 隻美國貓）樣本。</div>
+      </div>
+    </div>`;
+  }
+
+  const salonenBlock = s ? `
+    <div class="acad-sub">
+      <div class="acad-sub-head">🇫🇮 Salonen 2019 — 活動量 / 社交 / 攻擊性</div>
+      <div class="acad-traits">${escapeHtml(s.traits)}</div>
+      <div class="acad-cluster">行為群集：<strong>${escapeHtml(s.cluster)}</strong></div>
+      <div class="acad-cite">
+        <a href="${SALONEN_META.url}" target="_blank" rel="noopener">${SALONEN_META.citation}</a>
+        · <em>${SALONEN_META.journal}</em>
+        · IF ${SALONEN_META.if}（${SALONEN_META.quartile}）
+        · n=${SALONEN_META.n.toLocaleString()} · OA
+      </div>
+    </div>
+  ` : '';
+
+  const wilhelmyBlock = w ? `
+    <div class="acad-sub ${w.kind==='included'?'acad-sub-thin':''}">
+      <div class="acad-sub-head">🇺🇸 Wilhelmy 2016 — 問題行為 / 焦慮</div>
+      <div class="acad-traits">${escapeHtml(w.text)}</div>
+      <div class="acad-cite">
+        <a href="${WILHELMY_META.url}" target="_blank" rel="noopener">${WILHELMY_META.citation}</a>
+        · <em>${WILHELMY_META.journal}</em>
+        · IF ${WILHELMY_META.if}（${WILHELMY_META.quartile}）
+        · n=${WILHELMY_META.n} · 🔒 付費期刊
+      </div>
+    </div>
+  ` : '';
+
+  return `<div class="acad-block">
+    <div class="acad-head">📚 學術研究觀察</div>
+    <div class="acad-body">
+      ${salonenBlock}
+      ${wilhelmyBlock}
+    </div>
+  </div>`;
+}
+
+function openModal(id, opts) {
+  opts = opts || {};
+  const b = data.find(x => x.id === id);
+  if (!b) return;
+  // 同步 URL（支援分享/書籤/back-forward）
+  if (!opts.skipHistory) {
+    const u = new URL(location.href);
+    u.searchParams.set('id', id);
+    if (history.state && history.state.breedId) {
+      history.replaceState({breedId: id}, '', u);
+    } else {
+      history.pushState({breedId: id}, '', u);
+    }
+  }
+  currentModalId = id;
+  const modal = document.getElementById('modal');
+  const content = document.getElementById('modalContent');
+  const lifeRange = b.life_span_years.length === 2 ? `${b.life_span_years[0]}-${b.life_span_years[1]} 年` : '—';
+  const weightRange = b.weight_kg.length === 2 ? `${b.weight_kg[0]}-${b.weight_kg[1]} kg` : '—';
+  const tempHtml = (b.temperament_zh||[]).map(t => `<span class="t">${escapeHtml(t)}</span>`).join('');
+  const altHtml = (b.alt_names && b.alt_names.length) ? `<div class="alt">別名：${b.alt_names.map(escapeHtml).join('、')}</div>` : '';
+  const w = WARN_BREEDS[b.id];
+  // 極簡 markdown：**xxx** → <strong>xxx</strong>（先 escapeHtml 再轉粗體確保安全）
+  const renderBold = s => escapeHtml(s).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+  const articleLink = (w && w.article)
+    ? ` <a class="warn-article" href="${escapeHtml(w.article)}">📖 ${escapeHtml(w.articleLabel || '深度文章')} →</a>`
+    : '';
+  const warn = w
+    ? `<div class="warn-box warn-${w.level}"><strong>${escapeHtml(w.short)}：</strong>${renderBold(w.detail)}${articleLink}</div>`
+    : '';
+  const titleIcon = w ? `<span class="warn-icon warn-${w.level}">${w.icon}</span> ` : '';
+  const desc = (() => {
+    const zh = b.description_zh;
+    const en = b.description_en || '';
+    const src = zh || en;
+    const isEn = !zh && !!en;
+    const LONG = 200;
+    if (src.length <= LONG) {
+      return zh
+        ? `<div class="desc">${escapeHtml(zh)}</div>`
+        : `<div class="desc-status">原文，中文翻譯待補</div><div class="desc is-en">${escapeHtml(en)}</div>`;
+    }
+    const short = src.slice(0, LONG) + '…';
+    const statusLine = isEn ? `<div class="desc-status">原文，中文翻譯待補</div>` : '';
+    return `
+      ${statusLine}
+      <div class="desc ${isEn?'is-en':''}">
+        <span class="desc-short">${escapeHtml(short)}</span>
+        <span class="desc-full" hidden>${escapeHtml(src)}</span>
+        <button type="button" class="desc-toggle" onclick="toggleDesc(this)">展開更多</button>
+      </div>
+    `;
+  })();
+  const linksHtml = `
+    ${b.wikipedia_url_zh?`<a href="${escapeHtml(b.wikipedia_url_zh)}" target="_blank" rel="noopener">中文 Wikipedia</a>`:''}
+    ${b.wikipedia_url_en?`<a href="${escapeHtml(b.wikipedia_url_en)}" target="_blank" rel="noopener">English Wikipedia</a>`:''}
+    ${b.thecatapi_url?`<a href="${escapeHtml(b.thecatapi_url)}" target="_blank" rel="noopener">TheCatAPI</a>`:''}
+  `;
+  const heroImg = b.images[0];
+  const heroUrl = imageUrl(heroImg);
+  const heroAttr = (heroImg && heroImg.author)
+    ? `<div class="img-attr">圖片：<a href="${escapeHtml(heroImg.source||'')}" target="_blank" rel="noopener">${escapeHtml(heroImg.author)}</a> · ${escapeHtml(heroImg.license||'')}</div>`
+    : (b.data_source === 'thecatapi' ? `<div class="img-attr">圖片：<a href="https://thecatapi.com" target="_blank" rel="noopener">TheCatAPI</a> · CC0</div>` : '');
+  const manualNotice = renderDataSources(b);
+  content.innerHTML = `
+    <button class="modal-close" onclick="closeModal()" aria-label="關閉">✕</button>
+    <button class="modal-nav modal-prev" onclick="navModal(-1)" aria-label="上一隻" title="上一隻（← 鍵）">‹</button>
+    <button class="modal-nav modal-next" onclick="navModal(1)" aria-label="下一隻" title="下一隻（→ 鍵）">›</button>
+    ${heroUrl?`<img class="modal-hero" src="${escapeHtml(heroUrl)}" alt="${escapeHtml(b.name_zh)}" onerror="this.style.display='none'">${heroAttr}`:''}
+    <div class="modal-body">
+      <h2>${titleIcon}${escapeHtml(b.name_zh)} <span class="en">${escapeHtml(b.name_en)}</span></h2>
+      ${manualNotice}
+      ${altHtml}
+      <div class="attr-grid">
+        <div><span class="label">📍 原產：</span><span class="value">${escapeHtml(b.origin)}</span></div>
+        <div><span class="label">⏳ 壽命：</span><span class="value">${lifeRange}</span></div>
+        <div><span class="label">⚖️ 體重：</span><span class="value">${weightRange}</span></div>
+        <div><span class="label">💗 代表性格：</span><span class="value">${(b.temperament_zh||[]).slice(0,2).join('、')}</span></div>
+      </div>
+      ${warn}
+      <div class="temperament-tags">${tempHtml}</div>
+      ${renderAcademicBlock(b.id)}
+      ${desc}
+      ${renderComparePicker(b.id)}
+      <div class="modal-links">${linksHtml}</div>
+    </div>
+  `;
+  modal.classList.add('open');
+}
+
+function toggleDesc(btn) {
+  const wrap = btn.parentElement;
+  const short = wrap.querySelector('.desc-short');
+  const full = wrap.querySelector('.desc-full');
+  const showFull = short.style.display !== 'none' && !short.hasAttribute('hidden');
+  if (showFull) {
+    short.setAttribute('hidden', '');
+    full.removeAttribute('hidden');
+    btn.textContent = '收起';
+  } else {
+    short.removeAttribute('hidden');
+    full.setAttribute('hidden', '');
+    btn.textContent = '展開更多';
+  }
+}
+
+function closeModal() {
+  document.getElementById('modal').classList.remove('open');
+  currentModalId = null;
+  compareSrcId = null;
+  // 清掉 URL 的 ?id=
+  if (new URL(location.href).searchParams.has('id')) {
+    const u = new URL(location.href);
+    u.searchParams.delete('id');
+    history.pushState({}, '', u);
+  }
+}
+
+// 讀 URL ?id= 自動開 modal（直連/分享用）
+function openFromURL() {
+  const id = new URL(location.href).searchParams.get('id');
+  if (id && data.find(x => x.id === id)) {
+    openModal(id, { skipHistory: true });
+  }
+}
+
+// 瀏覽器 back/forward 觸發
+window.addEventListener('popstate', () => {
+  const id = new URL(location.href).searchParams.get('id');
+  if (id) {
+    openModal(id, { skipHistory: true });
+  } else {
+    document.getElementById('modal').classList.remove('open');
+    currentModalId = null;
+  }
+});
+
+document.getElementById('q').addEventListener('input', render);
+document.getElementById('sortBy').addEventListener('change', render);
+
+// 篩選器互動
+document.getElementById('filterBar').addEventListener('click', (e) => {
+  const btn = e.target.closest('.filter-chip[data-filter]');
+  if (!btn) return;  // 米克斯特殊按鈕無 data-filter，由它自己的 handler 處理
+  const key = btn.dataset.filter;
+  const val = btn.dataset.value;
+  if (key === 'hypo') {
+    filters.hypo = !filters.hypo;
+  } else {
+    filters[key] = filters[key] === val ? null : val;
+  }
+  refreshFilterUI();
+  render();
+});
+document.getElementById('filterClear').addEventListener('click', () => {
+  filters.hair = filters.size = filters.warn = null;
+  filters.hypo = false;
+  // 米克斯按鈕也清掉
+  const mb = document.getElementById('mixedBreedBtn');
+  const mn = document.getElementById('mixedNotice');
+  if (mb) mb.classList.remove('active');
+  if (mn) mn.hidden = true;
+  refreshFilterUI();
+  render();
+});
+
+// 米克斯按鈕：toggle 顯示米克斯文章引導（不影響 grid 過濾）
+document.getElementById('mixedBreedBtn').addEventListener('click', () => {
+  const mb = document.getElementById('mixedBreedBtn');
+  const mn = document.getElementById('mixedNotice');
+  const open = !mb.classList.contains('active');
+  mb.classList.toggle('active', open);
+  mn.hidden = !open;
+});
+
+function refreshFilterUI() {
+  document.querySelectorAll('#filterBar .filter-chip[data-filter]').forEach(btn => {
+    const key = btn.dataset.filter;
+    const val = btn.dataset.value;
+    const on = (key === 'hypo') ? filters.hypo : filters[key] === val;
+    btn.classList.toggle('active', on);
+  });
+  const anyActive = filters.hair || filters.size || filters.hypo || filters.warn;
+  document.getElementById('filterClear').style.display = anyActive ? 'inline' : 'none';
+  // 低過敏警告橫條 — 只有啟用該 filter 才顯示
+  const hn = document.getElementById('hypoNotice');
+  if (hn) hn.hidden = !filters.hypo;
+}
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeModal();
+  if (!currentModalId) return;
+  if (e.key === 'ArrowLeft') navModal(-1);
+  if (e.key === 'ArrowRight') navModal(1);
+});
+
+render();
+openFromURL();
+</script>
+</body>
+</html>

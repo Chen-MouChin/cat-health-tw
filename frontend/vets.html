@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>獸醫院查詢 — 貓健康站</title>
+<meta name="description" content="全台 22 縣市動物醫院查詢：本島 21 縣市 + 澎湖金門共 2,001 家（基於農業部公開登記）。可篩 24h 急診 + 貓專科。">
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/nav.css?v=20260420b">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CollectionPage","name":"獸醫院查詢 — 貓健康站","description":"全台 22 縣市 2,001 家動物醫院查詢（本島完整 + 澎湖金門）。可篩 24h 急診 + 貓專科。資料來源：農業部動保司。","url":"https://chen-mouchin.github.io/cat-health-tw/vets.html","inLanguage":"zh-TW"}
+</script>
+<script src="js/theme.js"></script>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: system-ui, "Noto Sans TC", sans-serif; background: var(--bg, #f9f6f0); color: var(--text, #1d1d1f); }
+
+.page-title { text-align: center; padding: 1.8rem 1rem 0.3rem; font-size: 1.6rem; font-weight: 700; }
+.page-sub { text-align: center; font-size: 0.85rem; color: var(--text-muted, #6e6e73); padding-bottom: 0.8rem; }
+.data-quality-badge {
+  display: inline-block; padding: 0.1rem 0.5rem;
+  font-size: 0.75rem; font-weight: 600;
+  background: #e5f0e8; color: #2e6b3f;
+  border-radius: 10px; text-decoration: none;
+  border: 1px solid #b8d4c2;
+}
+.data-quality-badge:hover { background: #d4e8d8; }
+
+main { max-width: 960px; margin: 0 auto; padding: 0 1rem 2rem; }
+
+/* 工具列 */
+.toolbar { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.8rem; align-items: center; }
+.toolbar input, .toolbar select {
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--border, #d2d2d7); border-radius: 18px;
+  background: var(--bg-card, #fff); color: var(--text);
+  font-size: 0.9rem; outline: none;
+}
+.toolbar input { flex: 1; min-width: 200px; }
+.toolbar select { cursor: pointer; }
+.toolbar input:focus, .toolbar select:focus { border-color: var(--accent, #1d1d1f); }
+
+/* 城市快速選 */
+.city-chips { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-bottom: 1rem; }
+.city-chip {
+  background: var(--bg-card, #fff); border: 1px solid var(--border, #e5e5ea);
+  border-radius: 14px; padding: 0.25rem 0.8rem; font-size: 0.8rem;
+  cursor: pointer; color: var(--text-muted, #6e6e73);
+  transition: all 0.12s;
+}
+.city-chip:hover { border-color: var(--text-muted, #6e6e73); color: var(--text, #1d1d1f); }
+.city-chip.active {
+  background: var(--accent, #1d1d1f); color: var(--accent-on, #fff);
+  border-color: var(--accent, #1d1d1f);
+}
+.city-chip .cnt { opacity: 0.7; margin-left: 0.25rem; font-size: 0.7rem; }
+
+.hint {
+  font-size: 0.8rem; color: var(--text-muted, #6e6e73);
+  margin: 0.4rem 0 0.8rem;
+}
+
+/* 結果列表 */
+.vet-list { display: flex; flex-direction: column; gap: 0.5rem; }
+.vet-card {
+  background: var(--bg-card, #fff);
+  border: 1px solid var(--border, #e5e5ea);
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+  display: flex; flex-direction: column; gap: 0.25rem;
+}
+.vet-card:hover { border-color: var(--border-strong, #d2d2d7); }
+.vet-name {
+  font-weight: 600; font-size: 0.95rem;
+  color: var(--text, #1d1d1f);
+}
+.vet-name .pos {
+  font-size: 0.7rem; color: var(--text-faint, #a1a1a6);
+  font-weight: 400; margin-left: 0.4rem;
+}
+.vet-meta {
+  display: flex; flex-wrap: wrap; gap: 0.5rem 1rem;
+  font-size: 0.82rem; color: var(--text-muted, #6e6e73);
+}
+.vet-meta a {
+  color: var(--text-muted, #6e6e73); text-decoration: none;
+}
+.vet-meta a:hover { color: var(--text, #1d1d1f); text-decoration: underline; }
+.vet-tel { font-variant-numeric: tabular-nums; }
+.vet-hours {
+  font-size: 0.75rem; color: var(--text-faint, #a1a1a6);
+  white-space: pre-line;
+}
+.vet-actions {
+  display: flex; gap: 0.4rem; margin-top: 0.2rem;
+}
+.vet-actions a {
+  font-size: 0.75rem; padding: 0.25rem 0.7rem;
+  border: 1px solid var(--border, #e5e5ea);
+  border-radius: 12px;
+  color: var(--text-muted, #6e6e73); text-decoration: none;
+  background: var(--bg, #f9f6f0);
+}
+.vet-actions a:hover { background: var(--accent, #1d1d1f); color: var(--accent-on, #fff); border-color: var(--accent, #1d1d1f); }
+
+.empty {
+  text-align: center; padding: 3rem 1rem;
+  color: var(--text-muted, #6e6e73);
+}
+
+.load-more {
+  display: block; margin: 1rem auto;
+  background: var(--accent, #1d1d1f); color: var(--accent-on, #fff);
+  border: none; border-radius: 18px;
+  padding: 0.55rem 1.4rem; font-size: 0.9rem; font-weight: 600;
+  cursor: pointer;
+}
+.load-more:hover { background: var(--accent-hover, #424245); }
+
+.disclaimer {
+  background: #f5f0e8; border: 1px solid #d4c8b0; border-left: 3px solid #8a7340;
+  color: #5c4a25;
+  padding: 0.65rem 1rem; margin-bottom: 1rem; border-radius: 6px;
+  font-size: 0.8rem; line-height: 1.55;
+}
+
+/* 我的位置 + 24h 切換 */
+.toolbar2 {
+  display: flex; flex-wrap: wrap; gap: 0.5rem;
+  margin-bottom: 0.8rem; align-items: center;
+}
+.btn-loc, .btn-toggle {
+  padding: 0.45rem 0.9rem; border-radius: 18px;
+  border: 1px solid var(--border, #d2d2d7);
+  background: var(--bg-card, #fff); color: var(--text, #1d1d1f);
+  font-size: 0.85rem; cursor: pointer;
+  display: inline-flex; align-items: center; gap: 0.3rem;
+}
+.btn-loc:hover, .btn-toggle:hover { border-color: var(--accent, #1d1d1f); }
+.btn-loc.active, .btn-toggle.active {
+  background: var(--accent, #1d1d1f); color: var(--accent-on, #fff);
+  border-color: var(--accent, #1d1d1f);
+}
+.btn-loc[disabled] { opacity: 0.5; cursor: wait; }
+.loc-status {
+  font-size: 0.75rem; color: var(--text-muted, #6e6e73);
+}
+
+/* filter 啟用時的補充說明（避免使用者誤解 filter 結果）*/
+.filter-hint {
+  background: #f5ede4; border-left: 3px solid #a06e30;
+  color: #6b3f15;
+  padding: 0.55rem 0.95rem; margin-bottom: 0.8rem; border-radius: 6px;
+  font-size: 0.83rem; line-height: 1.55;
+}
+.filter-hint strong { color: #4f2e0d; }
+
+/* 24h 標記 + 距離 */
+.badge-24h {
+  display: inline-block; font-size: 0.68rem; font-weight: 600;
+  background: #d8463b; color: white;
+  padding: 0.1rem 0.45rem; border-radius: 8px;
+  margin-left: 0.4rem; vertical-align: middle;
+}
+.badge-cat {
+  display: inline-block; font-size: 0.68rem; font-weight: 600;
+  background: #5b8a6e; color: white;
+  padding: 0.1rem 0.45rem; border-radius: 8px;
+  margin-left: 0.4rem; vertical-align: middle;
+}
+.vet-distance {
+  font-size: 0.78rem; color: var(--accent, #1d1d1f);
+  font-weight: 600; font-variant-numeric: tabular-nums;
+}
+</style>
+  <meta property="og:title" content="獸醫院查詢 — 貓健康站">
+  <meta property="og:description" content="全台 22 縣市 2,001 家動物醫院查詢 · 可篩 24h 急診 + 貓專科。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://chen-mouchin.github.io/cat-health-tw/vets.html">
+  <link rel="canonical" href="https://chen-mouchin.github.io/cat-health-tw/vets.html">
+</head>
+<body>
+
+<nav class="site-nav">
+  <a class="nav-brand" href="index.html" title="回首頁"><span class="b-icon">🐱</span><span class="brand-text">貓健康站</span><span class="brand-home" aria-hidden="true">🏠</span></a>
+  <div class="nav-links">
+    <a class="nav-link" href="library.html" data-nav="library">📚 文獻庫</a>
+    <a class="nav-link" href="breeds.html" data-nav="breeds">🐈 品種</a>
+    <a class="nav-link active" href="vets.html" data-nav="vets">🏥 獸醫院</a>
+    <a class="nav-link" href="articles/index.html" data-nav="articles">📝 文章</a>
+    <a class="nav-link" href="about.html" data-nav="about">ℹ️ 關於</a>
+  </div>
+</nav>
+
+<h1 class="page-title">🏥 獸醫院查詢</h1>
+<p class="page-sub">
+  全台 22 縣市共 <strong id="totalCount">—</strong> 家動物醫院 · 資料來源：農業部動保司
+  · <a href="about.html#data-quality" class="data-quality-badge" title="100% 有地址 + GPS 座標 — 點看資料補洞細節">✓ 100% 有座標</a>
+</p>
+
+<main>
+  <div class="disclaimer">
+    本清單為政府公開登記資料，不等於推薦。<strong>請自行確認營業狀態</strong>（部分可能已停業）、專業領域、口碑。緊急狀況請優先找已確認有 24hr 急診服務的醫院。
+  </div>
+
+  <div class="toolbar">
+    <input id="q" type="search" placeholder="搜尋院名 / 地址 / 區...">
+  </div>
+
+  <div class="toolbar2">
+    <button id="btnLoc" class="btn-loc" onclick="requestLocation()">📍 用我的位置排距離</button>
+    <button id="btn24h" class="btn-toggle" onclick="toggle24h()">🚨 只看 24h 急診</button>
+    <button id="btnCat" class="btn-toggle" onclick="toggleCat()">🐈 只看貓專科</button>
+    <span class="loc-status" id="locStatus"></span>
+  </div>
+
+  <div class="filter-hint" id="filterHint" hidden></div>
+
+  <div class="city-chips" id="cityChips"></div>
+
+  <div class="hint" id="hint">載入中...</div>
+  <div class="vet-list" id="list"></div>
+  <button class="load-more" id="loadMore" style="display:none" onclick="loadMore()">顯示更多</button>
+</main>
+
+<aside class="site-ad-banner" aria-label="贊助廣告">
+  <div class="ad-card">
+    <div class="ad-label">贊助 Sponsored</div>
+    <div class="ad-slot"><span>Ad Slot · banner (responsive)</span></div>
+  </div>
+</aside>
+
+<footer class="site-footer">
+  <div class="f-nav">
+    <a class="f-home" href="index.html">🏠 回首頁</a>
+    <a href="library.html">📚 文獻庫</a>
+    <a href="breeds.html">🐈 品種圖鑑</a>
+    <a href="vets.html">🏥 獸醫院</a>
+    <a href="articles/index.html">📝 文章</a>
+    <a href="about.html">ℹ️ 關於本站</a>
+    <a href="privacy.html">🔒 隱私政策</a>
+  </div>
+  <div class="f-meta">
+    貓健康站 · 獸醫院資料 © 農業部動保司公開名冊<br>
+    本站內容僅供參考，不取代獸醫師診斷
+  </div>
+</footer>
+
+<aside class="site-ad-anchor" aria-label="贊助廣告">
+  <div class="ad-label">贊助</div>
+  <div class="ad-slot"><span>Ad Slot · anchor (sticky bottom)</span></div>
+  <button class="ad-close" aria-label="關閉廣告 24 小時" title="關閉 24 小時">✕</button>
+</aside>
+
+<script src="data/vets.js"></script>
+<script src="js/ads.js"></script>
+<script>
+const DATA = window.VETS || [];
+// 由北往南＋東部 + 離島排序（全台 22 縣市覆蓋）
+const CITIES = [
+  '基隆市', '台北市', '新北市', '桃園市', '新竹市', '新竹縣',
+  '苗栗縣', '台中市', '彰化縣', '南投縣', '雲林縣',
+  '嘉義市', '嘉義縣', '台南市', '高雄市', '屏東縣',
+  '宜蘭縣', '花蓮縣', '台東縣',
+  '澎湖縣', '金門縣', '連江縣'
+];
+const PAGE_SIZE = 30;
+
+let filters = { city: '', district: '', q: '', only24h: false, onlyCat: false };
+
+// URL 參數預先套用篩選（從文章端跳轉用）
+(function applyUrlFilters() {
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('only24h') === '1' || params.get('e') === '1') filters.only24h = true;
+  if (params.get('cat') === '1') filters.onlyCat = true;
+  if (params.get('city')) filters.city = params.get('city');
+})();
+let myLoc = null;  // {lat, lng} 取得後才填
+let shown = PAGE_SIZE;
+
+// Haversine 距離（km）
+function distKm(lat1, lng1, lat2, lng2) {
+  const R = 6371;
+  const dLat = (lat2 - lat1) * Math.PI / 180;
+  const dLng = (lng2 - lng1) * Math.PI / 180;
+  const a = Math.sin(dLat/2)**2 + Math.cos(lat1*Math.PI/180) * Math.cos(lat2*Math.PI/180) * Math.sin(dLng/2)**2;
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+}
+
+function requestLocation() {
+  const btn = document.getElementById('btnLoc');
+  const status = document.getElementById('locStatus');
+  if (!navigator.geolocation) {
+    status.textContent = '此瀏覽器不支援定位';
+    return;
+  }
+  if (myLoc) {
+    // 再次點擊 = 取消定位
+    myLoc = null;
+    btn.classList.remove('active');
+    btn.textContent = '📍 用我的位置排距離';
+    status.textContent = '';
+    render();
+    return;
+  }
+  btn.disabled = true;
+  btn.textContent = '📍 取得位置中...';
+  status.textContent = '';
+  navigator.geolocation.getCurrentPosition(
+    (pos) => {
+      myLoc = { lat: pos.coords.latitude, lng: pos.coords.longitude };
+      btn.disabled = false;
+      btn.classList.add('active');
+      btn.textContent = '📍 已取得位置（再次點擊取消）';
+      const geocodedCount = DATA.filter(v => v.lat && v.lng).length;
+      status.textContent = `按距離排序 · ${geocodedCount}/${DATA.length} 家有座標`;
+      render();
+    },
+    (err) => {
+      btn.disabled = false;
+      btn.textContent = '📍 用我的位置排距離';
+      status.textContent = '無法取得位置：' + (err.code === 1 ? '權限被拒' : err.message);
+    },
+    { timeout: 10000, enableHighAccuracy: false, maximumAge: 60000 }
+  );
+}
+
+function toggleCat() {
+  filters.onlyCat = !filters.onlyCat;
+  const btn = document.getElementById('btnCat');
+  btn.classList.toggle('active', filters.onlyCat);
+  updateFilterHint();
+  shown = PAGE_SIZE;
+  refreshAll();
+}
+
+function toggle24h() {
+  filters.only24h = !filters.only24h;
+  const btn = document.getElementById('btn24h');
+  btn.classList.toggle('active', filters.only24h);
+  updateFilterHint();
+  shown = PAGE_SIZE;
+  render();
+}
+
+// filter 啟用時顯示說明 — 避免使用者誤會偵測結果
+function updateFilterHint() {
+  const hint = document.getElementById('filterHint');
+  if (!hint) return;
+  let html = '';
+  if (filters.onlyCat && filters.only24h) {
+    html = '<strong>⚠️ 兩者交集在台灣極少（僅 1 家）</strong><br>'
+         + '貓專科多為日間獨立診所；24h 急診多為綜合醫院。'
+         + '半夜貓出狀況請優先用 <strong>🚨 24h 急診</strong>，'
+         + '即使非貓專科，多數有處理貓的能力。';
+  } else if (filters.onlyCat) {
+    html = '<strong>關於「貓專科」</strong>：'
+         + '多為日間經營的單一物種診所（避免狗叫聲讓貓緊迫）。'
+         + '半夜急診請改點 <strong>🚨 只看 24h 急診</strong>。<br>'
+         + '<span style="font-size:0.78rem;opacity:0.8">'
+         + '※ 偵測來源：名字含「貓」字 + 已知貓專科名單。'
+         + '部分 ISFM Cat Friendly 認證醫院（含 24h）名單建置中，目前可能漏。'
+         + '</span>';
+  } else if (filters.only24h) {
+    html = '<strong>關於「24h 急診」</strong>：'
+         + '名單來自人工維護 + 名字含「24/急診/夜間」偵測，可能仍有漏。'
+         + '緊急狀況建議先電話確認當下是否值班。';
+  }
+  if (html) {
+    hint.innerHTML = html;
+    hint.hidden = false;
+  } else {
+    hint.hidden = true;
+  }
+}
+
+function escapeHtml(s) {
+  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function buildCityChips() {
+  const box = document.getElementById('cityChips');
+  box.innerHTML = '';  // 防止 refreshAll() 重複追加
+  // 全部
+  const total = DATA.length;
+  const all = document.createElement('button');
+  all.className = 'city-chip' + (filters.city === '' ? ' active' : '');
+  all.innerHTML = `全部<span class="cnt">${total}</span>`;
+  all.onclick = () => { filters.city = ''; filters.district = ''; shown = PAGE_SIZE; refreshAll(); };
+  box.appendChild(all);
+
+  CITIES.forEach(c => {
+    const n = DATA.filter(v => v.c === c).length;
+    if (!n) return;
+    const btn = document.createElement('button');
+    btn.className = 'city-chip' + (filters.city === c ? ' active' : '');
+    btn.innerHTML = `${c}<span class="cnt">${n}</span>`;
+    btn.onclick = () => { filters.city = c; filters.district = ''; shown = PAGE_SIZE; refreshAll(); };
+    box.appendChild(btn);
+  });
+}
+
+// districtSel 已砍 — 區的篩選改靠搜尋框輸入區名
+
+function compute() {
+  const q = filters.q.trim().toLowerCase();
+  let list = DATA.filter(v => {
+    if (filters.city && v.c !== filters.city) return false;
+    if (filters.district && v.d !== filters.district) return false;
+    if (filters.only24h && v.e !== 1) return false;
+    if (filters.onlyCat && v.cat !== 1) return false;
+    if (q) {
+      const hay = (v.n + ' ' + v.a + ' ' + (v.d||'')).toLowerCase();
+      if (!hay.includes(q)) return false;
+    }
+    return true;
+  });
+
+  // 距離排序：取得位置後啟用，沒座標的排最後
+  if (myLoc) {
+    list = list.map(v => {
+      const d = (v.lat && v.lng) ? distKm(myLoc.lat, myLoc.lng, v.lat, v.lng) : null;
+      return { ...v, _d: d };
+    }).sort((a, b) => {
+      if (a._d == null && b._d == null) return 0;
+      if (a._d == null) return 1;
+      if (b._d == null) return -1;
+      return a._d - b._d;
+    });
+  }
+  return list;
+}
+
+function render() {
+  const list = compute();
+  const container = document.getElementById('list');
+  const hint = document.getElementById('hint');
+  const moreBtn = document.getElementById('loadMore');
+
+  if (!list.length) {
+    container.innerHTML = '';
+    hint.innerHTML = '<div class="empty">沒有符合條件的獸醫院</div>';
+    moreBtn.style.display = 'none';
+    return;
+  }
+
+  hint.textContent = `共 ${list.length} 家` + (list.length > shown ? `（目前顯示 ${shown}）` : '');
+  moreBtn.style.display = list.length > shown ? 'block' : 'none';
+
+  const subset = list.slice(0, shown);
+  container.innerHTML = subset.map(renderCard).join('');
+}
+
+function renderCard(v) {
+  const badge24 = v.e === 1 ? `<span class="badge-24h">24h 急診</span>` : '';
+  const badgeCat = v.cat === 1 ? `<span class="badge-cat">🐈 貓專科</span>` : '';
+  const pos = v.d ? `<span class="pos">${escapeHtml(v.c)} · ${escapeHtml(v.d)}</span>` : `<span class="pos">${escapeHtml(v.c)}</span>`;
+  const dist = (v._d != null) ? `<span class="vet-distance">📏 ${v._d < 1 ? Math.round(v._d*1000)+' m' : v._d.toFixed(1)+' km'}</span>` : '';
+  const telLink = v.t ? `<a href="tel:${escapeHtml(v.t)}" class="vet-tel">📞 ${escapeHtml(v.t)}</a>` : '';
+  const addr = v.a ? `<span>📍 ${escapeHtml(v.a)}</span>` : '';
+  const hours = v.h ? `<div class="vet-hours">🕐 ${escapeHtml(v.h)}</div>` : '';
+  const gmaps = v.g ? `<a href="${escapeHtml(v.g)}" target="_blank" rel="noopener">🗺️ Google 地圖</a>` : '';
+  const search = `<a href="https://www.google.com/search?q=${encodeURIComponent(v.n + ' ' + v.c)}" target="_blank" rel="noopener">🔎 搜尋評價</a>`;
+  return `
+    <div class="vet-card">
+      <div class="vet-name">${escapeHtml(v.n)}${badge24}${badgeCat}${pos}${dist}</div>
+      <div class="vet-meta">${telLink}${addr}</div>
+      ${hours}
+      <div class="vet-actions">${gmaps}${search}</div>
+    </div>
+  `;
+}
+
+function refreshAll() {
+  buildCityChips();
+  render();
+}
+
+function loadMore() {
+  shown += PAGE_SIZE;
+  render();
+}
+
+document.getElementById('totalCount').textContent = DATA.length.toLocaleString();
+document.getElementById('q').addEventListener('input', (e) => {
+  filters.q = e.target.value; shown = PAGE_SIZE; render();
+});
+
+// 同步 URL 參數 → 按鈕 active 狀態
+if (filters.only24h) document.getElementById('btn24h').classList.add('active');
+if (filters.onlyCat) document.getElementById('btnCat').classList.add('active');
+updateFilterHint();  // URL 帶參數進來時也要顯示對應 hint
+
+refreshAll();
+</script>
+</body>
+</html>

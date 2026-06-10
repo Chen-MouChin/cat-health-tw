@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[MOCKUP] 文章 UX 改造範例 — 貓健康站</title>
+  <link rel="stylesheet" href="../css/theme.css">
+  <link rel="stylesheet" href="../css/nav.css?v=20260420b">
+  <script src="../js/theme.js"></script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: system-ui, "Noto Sans TC", sans-serif; background: var(--bg, #f9f6f0); color: var(--text, #1d1d1f); line-height: 1.7; }
+
+  /* MOCKUP banner */
+  .mockup-banner {
+    background: linear-gradient(135deg, #ff6b6b, #ffa940);
+    color: white; text-align: center;
+    padding: 0.5rem 1rem; font-size: 0.85rem; font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+  .mockup-banner .small { font-weight: 400; opacity: 0.95; margin-left: 0.5rem; }
+
+  article { max-width: 760px; margin: 2rem auto; padding: 0 1.5rem; }
+  article h1 { font-size: 1.7rem; line-height: 1.3; margin-bottom: 0.6rem; color: var(--accent, #1d1d1f); }
+  article h2 { font-size: 1.25rem; margin: 2rem 0 0.8rem; color: var(--accent, #1d1d1f); border-bottom: 2px solid var(--accent-light, #f0ede6); padding-bottom: 0.3rem; }
+  article h3 { font-size: 1.05rem; margin: 1.5rem 0 0.5rem; }
+  article p { margin: 0.8rem 0; }
+  article ul, article ol { margin: 0.8rem 0 0.8rem 1.5rem; }
+  article li { margin: 0.3rem 0; }
+  article table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; }
+  article th { background: var(--accent-light, #f0ede6); padding: 0.5rem 0.7rem; text-align: left; font-weight: 600; }
+  article td { padding: 0.4rem 0.7rem; border-top: 1px solid var(--border, #e8e4db); }
+  article tr:nth-child(even) td { background: var(--bg, #f9f6f0); }
+  article blockquote {
+    border-left: 4px solid var(--accent, #1d1d1f); margin: 1rem 0;
+    padding: 0.6rem 1rem; background: var(--accent-light, #f0ede6); color: var(--text-muted, #5e5e63);
+  }
+
+  .article-meta {
+    color: var(--text-muted, #6e6e73); font-size: 0.85rem;
+    margin-bottom: 1.2rem; display: flex; gap: 0.7rem; flex-wrap: wrap; align-items: center;
+  }
+  .article-meta .cat-badge {
+    background: var(--accent-light, #f0ede6); color: var(--accent, #1d1d1f);
+    padding: 0.18rem 0.65rem; border-radius: 12px; font-size: 0.78rem; font-weight: 600;
+  }
+
+  /* === ✨ NEW: TL;DR Box === */
+  .tldr-box {
+    background: linear-gradient(135deg, #fff8e1, #fff3cd);
+    border: 1px solid #ffe28a;
+    border-left: 4px solid #f59e0b;
+    border-radius: 12px;
+    padding: 1.2rem 1.4rem;
+    margin: 1.5rem 0;
+  }
+  .tldr-box .lbl {
+    font-size: 0.78rem; font-weight: 700;
+    color: #b45309; letter-spacing: 0.08em;
+    display: flex; align-items: center; gap: 0.4rem;
+    margin-bottom: 0.7rem;
+  }
+  .tldr-box .lbl .icon { font-size: 1.1rem; }
+  .tldr-box ul { margin: 0; padding-left: 1.2rem; list-style: none; }
+  .tldr-box li {
+    padding: 0.25rem 0; position: relative;
+    font-size: 0.95rem; line-height: 1.55;
+    color: #5b3617;
+  }
+  .tldr-box li::before {
+    content: "→"; position: absolute; left: -1.2rem;
+    color: #f59e0b; font-weight: 700;
+  }
+
+  /* === ✨ NEW: Key Facts Grid === */
+  .key-facts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.7rem;
+    margin: 1.5rem 0;
+  }
+  @media (max-width: 600px) {
+    .key-facts { grid-template-columns: repeat(2, 1fr); }
+  }
+  .key-fact {
+    background: var(--bg-card, #fff);
+    border: 1px solid var(--border, #e8e4db);
+    border-radius: 10px;
+    padding: 0.9rem 0.8rem;
+    text-align: center;
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .key-fact:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  }
+  .key-fact .value {
+    font-size: 1.5rem; font-weight: 700;
+    color: var(--accent, #1d1d1f);
+    font-variant-numeric: tabular-nums;
+    line-height: 1.1; margin-bottom: 0.25rem;
+  }
+  .key-fact .label {
+    font-size: 0.78rem; font-weight: 600;
+    color: var(--text, #1d1d1f);
+    margin-bottom: 0.15rem;
+  }
+  .key-fact .note {
+    font-size: 0.7rem;
+    color: var(--text-muted, #6e6e73);
+    line-height: 1.3;
+  }
+  .key-fact.danger .value { color: #d8463b; }
+  .key-fact.danger { border-color: #f4c4c0; background: #fff5f4; }
+
+  /* === ✨ NEW: Related Reading === */
+  .related-section {
+    background: var(--bg-card, #fff);
+    border: 1px solid var(--border, #e8e4db);
+    border-radius: 10px;
+    padding: 1rem 1.2rem;
+    margin: 1.2rem 0;
+  }
+  .related-section .lbl {
+    font-size: 0.78rem; font-weight: 700;
+    color: var(--text-muted, #6e6e73); letter-spacing: 0.05em;
+    margin-bottom: 0.6rem;
+    display: flex; align-items: center; gap: 0.4rem;
+  }
+  .related-section ul {
+    list-style: none; padding: 0; margin: 0;
+    display: flex; flex-direction: column; gap: 0.35rem;
+  }
+  .related-section li { margin: 0; }
+  .related-section a {
+    color: var(--text, #1d1d1f); text-decoration: none;
+    display: flex; align-items: center; gap: 0.5rem;
+    padding: 0.35rem 0.5rem; border-radius: 6px;
+    transition: background 0.12s;
+    font-size: 0.92rem;
+  }
+  .related-section a:hover { background: var(--accent-light, #f0ede6); }
+  .related-section a .icon { color: var(--text-muted, #999); font-size: 0.85rem; }
+  .related-section a .desc { color: var(--text-muted, #6e6e73); font-size: 0.78rem; margin-left: auto; }
+
+  /* === Existing styles === */
+  .disclaimer {
+    background: #f5f0e8; border-left: 4px solid #8a7340;
+    padding: 0.6rem 1rem; margin: 1.5rem 0; font-size: 0.88rem; color: #5c4a25;
+  }
+  .sources-box {
+    background: var(--bg-card, #fff); border-radius: 8px; padding: 1rem 1.2rem;
+    margin-top: 2rem; font-size: 0.85rem; color: var(--text-muted, #6e6e73);
+  }
+  .sources-box h3 { color: var(--text-muted, #6e6e73); margin-bottom: 0.5rem; font-size: 0.9rem; }
+
+  /* Compare Toggle */
+  .compare-toggle {
+    position: fixed; bottom: 1rem; right: 1rem; z-index: 1000;
+    background: white; border: 1px solid var(--border, #e8e4db); border-radius: 24px;
+    padding: 0.5rem 0.9rem; font-size: 0.85rem; cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+  .compare-toggle:hover { background: var(--accent, #1d1d1f); color: white; border-color: var(--accent); }
+</style>
+</head>
+<body>
+
+<div class="mockup-banner">
+  ⚡ MOCKUP — 文章頁 UX 改造預覽
+  <span class="small">（純預覽不影響正式頁面 / 改完滿意才動 build.py）</span>
+</div>
+
+<nav class="site-nav">
+  <a class="nav-brand" href="../index.html" title="回首頁"><span class="b-icon">🐱</span><span class="brand-text">貓健康站</span><span class="brand-home" aria-hidden="true">🏠</span></a>
+  <div class="nav-links">
+    <a class="nav-link" href="../library.html">📚 文獻庫</a>
+    <a class="nav-link" href="../breeds.html">🐈 品種</a>
+    <a class="nav-link" href="../vets.html">🏥 獸醫院</a>
+    <a class="nav-link active" href="index.html">📝 文章</a>
+    <a class="nav-link" href="../about.html">ℹ️ 關於</a>
+  </div>
+</nav>
+
+<article>
+  <div class="article-meta">
+    <span class="cat-badge">🍖 飲食 · 毒物安全</span>
+    <span>📅 2026-04-19 更新</span>
+    <span>⏱ 約 5 分鐘讀完</span>
+  </div>
+
+  <h1>貓咪危險物質速查 — 食物、植物、家用化學一次看</h1>
+
+  <!-- ✨ NEW: TL;DR Box -->
+  <div class="tldr-box">
+    <div class="lbl"><span class="icon">✨</span>3 秒看重點</div>
+    <ul>
+      <li>百合花是貓咪第一殺手 — 連花瓶水都致命，6 小時內就醫，超過 18 小時腎衰竭多不可逆</li>
+      <li>滷肉飯的滷汁含蔥蒜會破壞紅血球 — 生熟皆毒、少量累積一樣危險</li>
+      <li>誤食「不要催吐」 — 立刻打電話給獸醫並帶包裝就醫</li>
+    </ul>
+  </div>
+
+  <!-- ✨ NEW: Key Facts Grid -->
+  <div class="key-facts">
+    <div class="key-fact danger">
+      <div class="value">6h</div>
+      <div class="label">百合中毒就醫黃金</div>
+      <div class="note">超過 18h 腎衰竭多不可逆</div>
+    </div>
+    <div class="key-fact danger">
+      <div class="value">少量</div>
+      <div class="label">蔥蒜累積致毒</div>
+      <div class="note">生熟皆毒，粉末更濃</div>
+    </div>
+    <div class="key-fact">
+      <div class="value">11</div>
+      <div class="label">高危物質清單</div>
+      <div class="note">食物 + 植物 + 化學</div>
+    </div>
+  </div>
+
+  <p style="background: #fff5f4; border-left: 4px solid #d8463b; padding: 0.7rem 1rem; border-radius: 4px;">
+    <strong>⚠️ 懷疑中毒立即就醫</strong>，不要等症狀出現。部分毒物（如百合、葡萄）超過治療窗口即無法逆轉。
+  </p>
+
+  <h2>🚨 兩件最該記住的事</h2>
+
+  <p><strong>1. 百合花 = 貓咪第一殺手</strong><br>
+  不只葉花，<strong>花粉、插花的水</strong>都致命。台灣節慶花束常含百合，最佳就醫時間 6 小時內，超過 18 小時腎衰竭多不可逆。</p>
+
+  <p><strong>2. 蔥、蒜、洋蔥、韭菜 = 滷肉飯陷阱</strong><br>
+  台灣家常滷汁、炒蛋、炒飯都含蔥蒜。生熟皆毒，粉末更濃，少量長期累積一樣會破壞紅血球。</p>
+
+  <h2>速查表 — 致命優先序</h2>
+
+  <h3>🔴 最高危險（接觸即就醫）</h3>
+  <table>
+    <thead><tr><th>物質</th><th>哪裡會遇到</th><th>主要傷害</th></tr></thead>
+    <tbody>
+      <tr><td>🌸 <strong>百合</strong>（Lilium / 金針花屬）</td><td>節慶花束、陽台盆栽</td><td>急性腎衰竭（無解藥）</td></tr>
+      <tr><td>🧅 <strong>蔥蒜韭菜</strong>（蔥屬）</td><td>滷肉飯、炒飯、蒜蓉醬</td><td>溶血性貧血</td></tr>
+      <tr><td>🍇 <strong>葡萄 / 葡萄乾</strong></td><td>麵包、燕麥棒、零食</td><td>急性腎衰竭</td></tr>
+      <tr><td>🍫 <strong>巧克力</strong>（黑巧最毒）</td><td>任何巧克力製品</td><td>心律不整 / 癲癇</td></tr>
+      <tr><td>🍬 <strong>木糖醇</strong></td><td>無糖口香糖、人用牙膏</td><td>肝損傷</td></tr>
+    </tbody>
+  </table>
+
+  <p style="color: #999; font-style: italic; text-align: center; margin: 2rem 0;">[... 文章中段省略，詳見正式文章 ...]</p>
+
+  <h2>🚑 誤食後 SOP</h2>
+  <ol>
+    <li><strong>不要催吐</strong>（除非獸醫指示）— 部分腐蝕性毒物催吐反而二次傷害</li>
+    <li><strong>立刻打給獸醫</strong>（<a href="../vets.html">查最近獸醫院</a>）</li>
+    <li><strong>帶樣本就醫</strong> — 包裝、植物殘片、嘔吐物拍照</li>
+    <li>台灣沒有 24h 動物毒物熱線，直接衝有 24h 急診的動物醫院</li>
+  </ol>
+
+  <!-- ✨ NEW: External Resources -->
+  <div class="related-section">
+    <div class="lbl">🔗 延伸閱讀（外部權威）</div>
+    <ul>
+      <li><a href="https://www.aspca.org/pet-care/animal-poison-control/toxic-and-non-toxic-plants" target="_blank" rel="noopener">
+        <span class="icon">🌐</span>
+        <span>ASPCA 完整有毒/無毒植物資料庫（可搜任何植物）</span>
+        <span class="desc">英文 · 2000+ 條</span>
+      </a></li>
+      <li><a href="https://icatcare.org/advice/lilies-and-other-toxic-plants/" target="_blank" rel="noopener">
+        <span class="icon">🌐</span>
+        <span>ICatCare：百合與其他有毒植物</span>
+        <span class="desc">英文</span>
+      </a></li>
+      <li><a href="https://www.fda.gov/animal-veterinary/animal-health-literacy/lovely-lilies-and-curious-cats-dangerous-combination" target="_blank" rel="noopener">
+        <span class="icon">🌐</span>
+        <span>FDA：百合花與貓咪的致命組合</span>
+        <span class="desc">英文 · 美國 FDA</span>
+      </a></li>
+    </ul>
+  </div>
+
+  <!-- ✨ NEW: Internal Related -->
+  <div class="related-section">
+    <div class="lbl">📚 站內相關文章</div>
+    <ul>
+      <li><a href="cat-emergency-care-taiwan.html">
+        <span class="icon">📖</span>
+        <span>急診判斷與居家急救 SOP</span>
+        <span class="desc">同主題</span>
+      </a></li>
+      <li><a href="cat-home-safety-taiwan.html">
+        <span class="icon">📖</span>
+        <span>居家安全完整清單</span>
+        <span class="desc">預防角度</span>
+      </a></li>
+      <li><a href="../vets.html">
+        <span class="icon">🏥</span>
+        <span>找最近的 24h 急診醫院</span>
+        <span class="desc">工具</span>
+      </a></li>
+    </ul>
+  </div>
+
+  <div class="disclaimer">
+    <strong>免責聲明</strong>：本文整理自 ASPCA / VCA / FDA / ICatCare 公開資料，提供一般風險認知，不取代獸醫師臨床診斷。任何中毒疑慮以獸醫判斷為準。
+  </div>
+
+  <div class="sources-box">
+    <h3>📌 資料來源</h3>
+    <ul>
+      <li>ASPCA Animal Poison Control: People Foods to Avoid Feeding Your Pets</li>
+      <li>ASPCA Toxic and Non-Toxic Plants List</li>
+      <li>VCA Animal Hospitals: Lily Toxicity in Cats</li>
+      <li>Pet Poison Helpline: Lily Toxicity</li>
+    </ul>
+  </div>
+</article>
+
+<a href="cat-toxic-substances-taiwan.html" class="compare-toggle">
+  ↔ 對照原版
+</a>
+
+</body>
+</html>

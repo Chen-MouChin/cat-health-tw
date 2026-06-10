@@ -1,0 +1,97 @@
+/* ============================================================
+   廣告位樣式 — Neko Pedia
+   原則：小而不礙讀、在視線動線上、不遮擋核心內容
+   上線後將 .ad-slot 內的註解替換為 Google AdSense script
+   ============================================================ */
+
+.ad-slot {
+  text-align: center;
+  background: #f5f5f5;
+  border: 1px dashed #d8d8d8;
+  color: #c0c0c0;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── 置頂 / 置底橫幅：468×60（比 728×90 小，不壓迫）──── */
+.ad-slot--leaderboard {
+  width: 100%;
+  max-width: 468px;
+  height: 60px;
+  margin: 0.5rem auto;
+}
+
+/* ── 文章內浮動小塊：200×150，靠右浮動 ─────────────── */
+/* 放在文章開頭段落旁，讀者視線自然掃過 */
+.ad-slot--article-float {
+  width: 180px;
+  height: 120px;
+  float: right;
+  margin: 0.2rem 0 1rem 1.2rem;
+  clear: right;
+}
+
+/* ── 商品格間插入：全寬但矮，跨 grid 列 ────────────── */
+.ad-slot--inline {
+  width: 100%;
+  height: 72px;
+  grid-column: 1 / -1;
+}
+
+/* ── 文章段落間水平條：不浮動，接在內文 h2 下方 ──── */
+.ad-slot--strip {
+  width: 100%;
+  max-width: 468px;
+  height: 60px;
+  margin: 1.2rem auto;
+  clear: both;
+}
+
+/* ============================================================
+   Footer 共用樣式
+   ============================================================ */
+
+footer {
+  text-align: center;
+  padding: 1.5rem 1.5rem 2rem;
+  color: #999;
+  font-size: 0.82rem;
+  border-top: 1px solid #eee;
+  margin-top: 1rem;
+}
+.footer-nav {
+  margin-bottom: 0.6rem;
+}
+.footer-nav a {
+  color: #888;
+  text-decoration: none;
+  margin: 0 0.3rem;
+}
+.footer-nav a:hover { color: var(--accent, #1d1d1f); }
+.footer-legal {
+  color: #aaa;
+  font-size: 0.78rem;
+  line-height: 1.6;
+  max-width: 640px;
+  margin: 0 auto 0.6rem;
+}
+.footer-legal strong { color: #888; }
+.footer-meta {
+  font-size: 0.78rem;
+  color: #bbb;
+}
+.footer-meta a { color: #aaa; text-decoration: none; }
+.footer-meta a:hover { color: var(--accent, #1d1d1f); }
+
+/* 行動版：全部縮更小 */
+@media (max-width: 640px) {
+  .ad-slot--leaderboard { height: 50px; }
+  .ad-slot--article-float { width: 130px; height: 90px; margin-left: 0.8rem; }
+  .ad-slot--inline { height: 56px; }
+  .ad-slot--strip { height: 50px; }
+}

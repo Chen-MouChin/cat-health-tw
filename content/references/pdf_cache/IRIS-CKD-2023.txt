@@ -1,0 +1,342 @@
+1 
+© 2019 International  Renal Interest  Society  (IRIS)  Ltd. IRIS Ltd. is an independent non-profit  organization  limited  by guarantee in the UK (Registered  
+Number  10213173).    
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+2 
+ 
+ 
+ 
+1. Staging  of CKD based  on blood  creatinine  and SDMA concentration s 
+ 
+ 
+Staging  is undertaken  following  diagnosis  of chronic  kidney  disease  (CKD)  in order  to 
+facilitate  appropriate  treatment  and monitoring  of the canine or feline  patient.  
+Staging  is based  initially  on fasting  blood  creatinine or fasting blood  SDMA  
+concentration or (preferably) both  assessed  on at least two occasions  in a 
+hydrated, stable  patient.  The dog or cat  is then substaged  based  on proteinuria  
+and blood  pressure.  
+Using  these  criteria, some  empirical  recommendations  can be made  about  the type of 
+treatment  it would  be logical  to use for these  cases.  In addition, predictions  based  on 
+clinical experience  might  be made  about  the likely response to treatment. 
+ 
+ 
+Stage        Blood creatinine * 
+µmol/l 
+                                                                                                                           mg/dl  
+ 
+          SDMA#µg/dl 
+Dogs  Cats 
+ 
+Comments  
+ 
+1 <125 
+<1.4 
+ 
+<18 <140 
+<1.6 
+ 
+<18 Normal blood creatinine or normal or mild increase 
+blood SDMA . Some  other  renal abnormality  present  
+(such  as, inadequate  urinary  concentrating  ability  
+without  identifiable  non-renal cause  (in cats not dogs) , 
+abnormal  renal palpation  or renal imaging  findings,  
+proteinuria  of renal origin,  abnormal  renal biopsy  
+results,  increasing  blood  creatinine  or SDMA  
+concentrations  in samples  collected  serially).  Persistently 
+elevated blood SDMA concentration (>14 µg/dl)  may be 
+used to diagnose early CKD
+                                                                                    2           125 –250 
+                                                                           1.4 – 2.8 
+ 
+ 
+    18 - 35             
+ 
+ 
+ 
+                                                                                   3          251 – 440 
+                                                                              2.9 – 5.0 
+ 
+                                                                        36 - 54          
+ 
+ 
+ 
+ 
+4 >440 
+>5.0 
+ 
+>54 140 – 250 
+1.6 – 2.8 
+ 
+ 
+    18 - 25 
+ 
+ 
+ 
+251 – 440 
+2.9 – 5.0 
+ 
+ 26 - 38 
+ 
+ 
+ 
+ 
+>440  
+>5.0 
+ 
+>38 Normal or mildly increased creatinine, mild  renal azotemia  
+(lower  end of the range  lies within  reference  ranges  for 
+creatinine  for many  laboratories,  but the insensitivity  of 
+creatinine  concentration  as a screening  test means  that 
+patients  with creatinine  values  close to the upper  
+reference  limit often  have excretory  failure) .  Mildly 
+increased SDMA .Clinical  signs usually  mild or absent.  
+Moderate  renal azotemia.  Many  extrarenal  signs may be 
+present,  but their extent  and severity  may vary. If signs 
+are absent,  the case could  be considered  as early Stage  
+3, while  presence  of many  or marked  systemic  signs 
+might  justify  classification  as late Stage  3. 
+ 
+Increasing  risk of systemic  clinical  signs and uremic  
+crises  
+ 
+ 
+ 
+*The  blood  creatinine concentrations  apply  to average  size dogs  – those  of extreme  size may  vary.     #The recommendations for SDMA are based on published literature                                                                                                                 
+which utilizes proprietary IDEXX  technology for measuring SDMA. At this time, it is not known if other assays will provide equivalent results.  
+(modified in 2023)
+2023
+2 
+© 2019 International  Renal Interest  Society  (IRIS)  Ltd. IRIS Ltd. is an independent non-profit  organization  limited  by guarantee in the UK (Registered  
+Number  10213173).  
+IRIS Staging of CKD (modified 2019 )  
+  
+ 
+Discrepancies between creatinine and SDMA   
+ 
+IRIS CKD staging  is based  on fasting  blood  creatinine  concentration and blood 
+SDMA  concentration . SDMA may be a more sensitive marker that is less impacted 
+by loss of lean body mass.  
+ 
+DOGS:  
+If serum or plasma SDMA is  persistently  >18 µg/dl in a dog whose creatinine is <1.4 
+mg/dl (IRIS CKD stage 1 based on creatinine), this canine patient should be staged 
+and treated  as an IRIS CKD Stage 2 patient . 
+ 
+If serum or plasma SDMA is  persistently  >35 µg/dl in a dog whose creatinine is 
+between 1.4 and 2.8 mg/dl (IRIS CKD stage 2 based on creatinine), this canine 
+patient should be staged and treated  as an IRIS CKD Stage 3 patient . 
+ 
+If serum or plasma SDMA is  persistently  >54 µg/dl in a dog whose creatinine is 
+between 2.9 and 5.0 mg/dl (IRIS CKD stage 3 based on creatinine), this canine 
+patient should be staged and treated  as an IRIS CKD Stage 4 patient . 
+ 
+ 
+CATS:  
+If serum or plasma SDMA is  persistently >18 µg/dl in a cat whose creatinine is <1.6 
+mg/dl (IRIS CKD stage 1 based on creatinine), this feline patient should be staged 
+and treated  as an IRIS CKD Stage 2 patient . 
+ 
+If serum or plasma SDMA i s persistently  >25 µg/dl in a  cat whose creatinine is 
+between 1. 6 and 2.8 mg/dl (IRIS CKD stage 2 based on creatinine), this feline  patient 
+should be staged and treated  as an IRIS CKD Stage 3 patient . 
+ 
+If serum or plasma SDMA is  persistently  >38 µg/dl in a cat whose creatinine is 
+between 2.9 and 5.0 mg/dl (IRIS CKD stage 3 based on creatinine), this feline patient 
+should be staged and treated  as an IRIS CKD Stage 4 patient . 
+ 
+ 
+ 
+SDMA  assays  are offered  by a number  of laboratories  throughout  the world.  The 
+methodology  used has not yet been standardized  and the recommendations  made  
+above  are based  on the proprietary methodology  offered  by IDEXX  Laboratories.  
+ 
+These recommendations are based on current state of knowledge where SDMA 
+appears to be a more sensitive indicator of early stage CKD in the dog and cat.  The 
+specificity of SDMA has not been tested in large scale prospective studies to enable all 
+the factors influencing specificity to be understood. We expect these guidelines to be 
+updated wit h further recommendations that will assist the use of SDMA in the 
+diagnosis and staging of CKD in the future . (modified in 2023)
+SDMA assays are offered by a number of laboratories throughout the world. The methodology used 
+has not yet been standardized and the recommendations made above are based on the proprietary 
+methodology offered by IDEXX Laboratories. 
+These recommendations are based on current state of knowledge where SDMA appears to be a 
+more sensitive indicator of early stage CKD in the dog and cat. 
+Data are starting to emerge on conditions where SDMA may be elevated without a reduction in GFR, 
+where serum creatinine values are unaffected.  Lymphoma in dogs and cats is one such example.  
+This illustrates the value of having two biomarkers which are surrogate markers for GFR which can 
+be interpreted together. 
+Breed and size associated effects on serum creatinine and SDMA
+Healthy Birman cats and greyhound dogs have been found to have higher serum SDMA values than 
+other breeds.  Both these breeds also have higher serum creatinine values taking some healthy 
+individuals (up to 20% of Birman cats) outside laboratory reference intervals. 
+For further details on SDMA and creatinine as surrogate markers of GFR please refer to the education article entitled 'Utility of 
+Creatinine, UPC, and SDMA in the Early Diagnosis of CKD' which provides more detailed information. 
+2023
+3 
+© 2019 International  Renal Interest  Society  (IRIS)  Ltd. IRIS Ltd. is an independent non-profit  organization  limited  by guarantee in the UK (Registered  
+Number  10213173).  
+IRIS Staging of CKD (modified 2019 )  
+  
+ 
+ 
+2a. Substaging  by Proteinuria  
+ 
+ 
+ 
+The goal is to identify  renal proteinuria  having  ruled out post-renal and 
+pre-renal causes. 
+ 
+Standard  urine dipsticks  can give rise to false positives  therefore  practitioners should  
+consider  using a more specific  screening  test such as the urine protein to creatinine 
+ratio (UP/C) of a species -specific albuminuria assay.   
+ 
+The UP/C should  be measured  in all dogs and cats with CKD , provided  there is no 
+evidence  of urinary  tract inflammation  or hemorrhage  and the routine  measurement  
+of plasma  proteins  has ruled out dysproteinemias.  Ideally  substaging  should  be done 
+on the basis of at least two urine samples  collected  over a period  of at least 2  weeks.  
+ 
+ 
+UP/C  value  Substage  
+ 
+Dogs Cats  
+<0.2 
+0.2 to 0.5 
+>0.5 <0.2 
+0.2 to 0.4 
+>0.4 Non-proteinuric  
+Borderline  proteinuric  
+Proteinuric  
+ 
+Canine and feline patients  that are persistently  borderline  proteinuric  should  be re-
+evaluated  within  2 months  and re-classified  as appropriate.  
+ 
+UP/Cs  in the non-proteinuric  or borderline  proteinuric  range  may be categorized  as 
+‘microalbuminuric’.  The significance  of microalbuminuria  in predicting  future  renal 
+health  is not completely understood  at present.  IRIS’ recommendation  is to continue  to 
+monitor  this level of proteinuria  (dogs). Veterinarians might offer treatment for cats 
+persistently in the borderline proteinuric or microalbuminuric range considering the 
+association with proteinuria of this level and progressive kidney disease in the cat (see 
+treatment guidelines) . 
+ 
+Proteinuria  may decline  as renal dysfunction  worsens  and so may be less frequent  
+in dogs and cats  in Stages  3 and 4. 
+ 
+Response  to any treatment  given  to reduce  glomerular  hypertension,  filtration  
+pressure,  and proteinuria,  should  be monitored  at intervals  using UP/C.  (modified in 2023)
+2023
+4 
+© 2019 International  Renal Interest  Society  (IRIS)  Ltd. IRIS Ltd. is an independent non-profit  organization  limited  by guarantee in the UK (Registered  
+Number  10213173).  
+2b. Substaging  by Arterial  Blood  Pressure  
+IRIS Staging of CKD (modified 2019)  
+  
+ 
+ 
+ 
+2b. Substaging  by Blood  pressure  
+ 
+ 
+ 
+Canine and feline patients  should  be acclimatized  to the measurement  conditions  
+and multiple  measurements  taken.  The final classification should  rely upon multiple  
+systolic  blood  pressure  determinations,  preferably  done during  repeated  patient  
+visits to the clinic on separate  days, but acceptable  if during  the same  visit with at 
+least 2   hours  separating  determinations.  Patients  are substaged  by systolic  blood  
+pressure  according to the degree  of risk of target  organ  damage,  and whether  there 
+is evidence  of target  organ  damage  or complications.  
+ 
+For most dogs  and all cats , the IRIS blood  pressure  substages  are as follows:  
+ 
+Systolic  Blood  Pressure  
+mm Hg Blood  Pressure  
+Substage  Risk of Future  Target  
+Organ  Damage  
+<140 Normotensive  Minimal  
+140 – 159 Prehypertensive  Low 
+160 – 179 Hypertensive  Moderate  
+ 180 Severely  hypertensive  High 
+ 
+However,  some  breeds  of dog , particularly  sight hounds,  tend to have higher  blood  
+pressure  than other breeds.  It is preferable  to use breed -specific  reference  ranges  if 
+available.  The classification  of risk of future  target  organ  damage  in “high-pressure  
+breeds”  might  be adjusted  as follows:  
+Minimal  risk – systolic  pressure  <10 mm Hg above  the breed -specific  
+reference range  
+Low risk – systolic  pressure  10-20 mm Hg above  the breed -specific  reference  range  
+Moderate  risk – systolic  pressure  20-40 mm Hg above  the breed -specific  
+reference range  
+High  risk – systolic  pressure  >40 mm Hg above  the breed -specific  reference  range. 
+ 
+As with proteinuria,  in the absence  of evidence  of existing  target  organ  damage,  
+demonstration  of persistence  of blood  pressure  readings  within  a particular  
+category is important.  ‘Persistence’  of increase  here should  be judged  on multiple  
+measurements  made  over the following  timescales  in these  blood  pressure  
+substages:  
+Hypertensive  – systolic blood pressure  160 to 179 mm Hg measured  
+over 1 to 2 weeks 
+Severely  hypertensive  – systolic  blood  pressure  180 mm Hg measured  over 1 to 
+2 weeks.  (modified in 2023)
+2023
+2b. Substaging  by Arterial  Blood  Pressure  
+IRIS Staging of CKD (modified 2019 )  
+ 3. Revision  of staging  and substaging  after treatment  
+ 
+ 
+The stage  and substages  assigned  to the patient  should  be revised  appropriately  as 
+changes  occur.  For example,  a substantial  increase  in blood creatinine  or SDMA  
+concentration  might  warrant  reassignment  to a higher  stage  to reflect  the new 
+situation.  
+ 
+Similarly,  if antihypertensive  (or antiproteinuric)  treatment  has been instituted,  the 
+patient’s  classification  on re-evaluation  should  be adjusted  if necessary  to reflect  the 
+new blood  pressure  (or UP/C)  rather  than the original  status,  with the addition  of an 
+indication  that the current  classification  is affected  by treatment.  
+ 
+The following  two examples  illustrate  the process  of revision,  where  ‘treating’  
+is used as an indicator  of ongoing  treatment.  
+ 
+Example  1 
+ 
+Euvolemic c at with stable renal function  
+Creatinine  200 µmol/l  (2.3 mg/dl)  
+SDMA 22 µg/dl 
+UP/C 0.32 
+Systolic  blood  pressure  200 mm Hg 
+Classification  – IRIS CKD  Stage  2, borderline  proteinuric,  severely  hypertensive.  
+Same  cat after antihypertensive  treatment  
+Creatinine  220 µmol/l  (2.5 mg/dl)  
+SDMA 24 µg/dl 
+UP/C 0.12 
+Systolic  blood  pressure  155 mm Hg 
+New classification  – IRIS CKD  Stage  2, non-proteinuric,  prehypertensive  (treating).  
+ 
+Example  2 
+Euvolemic dog  with stable renal function  
+Creatinine  230 µmol/l (2.6 mg/dl)  
+SDMA 39  µg/dl 
+UP/C 0.8 
+Systolic  blood  pressure  155 mm Hg 
+Classification  – IRIS CKD  Stage  3,, proteinuric,  prehypertensive  
+Note: As described above in the Discrepancies between creatinine and SDMA  section, 
+if blood SDMA is  persistently  >35 µg/dl in a canine patient whose blood creatinine is between 
+1.4 and 2.8 mg/dl (IRIS CKD stage 2 based on creatinine), this dog should be staged and 
+treated as an IRIS CKD Stage 3 patien t 
+Same  dog after antiproteinuric  treatment  
+Creatinine  240 µmol/l  (2.7  mg/dl)  
+SDMA 42 µg/dl 
+UP/C 0.4 
+Systolic  blood  pressure  155 mm Hg 
+New classification  – IRIS CKD  Stage  3, borderline  proteinuric  (treating),  
+prehypertensive.  
+ 
+ 
+ 
+ 
+ (modified in 2023)

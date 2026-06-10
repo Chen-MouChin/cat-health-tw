@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>關於本站 — 貓健康站</title>
+  <meta name="description" content="貓健康站 是台灣養貓人一站式資訊平台，提供獸醫學術背書的知識庫、學術文獻索引與品種圖鑑。">
+  <link rel="stylesheet" href="css/ads.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/nav.css?v=20260420b">
+  <script src="js/theme.js"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, "Noto Sans TC", sans-serif; background: var(--bg, #fafafa); color: var(--text, #333); line-height: 1.7; }
+    .page-title { text-align: center; padding: 1.8rem 1rem 0.5rem; font-size: 1.6rem; color: var(--text); font-weight: 700; }
+    main { max-width: 760px; margin: 1.5rem auto; padding: 0 1.5rem; }
+    h2 { font-size: 1.2rem; color: var(--text, #1d1d1f); margin: 2rem 0 0.8rem; border-bottom: 1px solid var(--border, #e5e5ea); padding-bottom: 0.3rem; }
+    p { margin: 0.8rem 0; color: var(--text, #444); }
+    ul { margin: 0.6rem 0 0.8rem 1.5rem; }
+    li { margin: 0.3rem 0; }
+    .source-table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; }
+    .source-table th { background: var(--accent-light, #f0f0f3); padding: 0.5rem 0.7rem; text-align: left; }
+    .source-table td { padding: 0.4rem 0.7rem; border-top: 1px solid var(--border, #eee); }
+    .contact-box { background: var(--bg-card, #f5f5f5); border-radius: 8px; padding: 1rem 1.2rem; margin-top: 1rem; font-size: 0.9rem; }
+
+    /* 意見回饋表單（折疊式 <details>） */
+    .feedback-details {
+      background: var(--bg-card, #fff);
+      border: 1px solid var(--border, #e5e5ea);
+      border-radius: 12px;
+      margin-top: 1rem;
+      overflow: hidden;
+    }
+    .feedback-details > summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 0.9rem 1.2rem;
+      display: flex; align-items: center; gap: 0.5rem;
+      font-size: 0.95rem; font-weight: 600;
+      color: var(--text, #1d1d1f);
+      user-select: none;
+    }
+    .feedback-details > summary::-webkit-details-marker { display: none; }
+    .feedback-details > summary::before {
+      content: '▶'; font-size: 0.7rem;
+      color: var(--text-muted, #6e6e73);
+      transition: transform 0.15s;
+    }
+    .feedback-details[open] > summary::before { transform: rotate(90deg); }
+    .feedback-details > summary:hover { background: var(--accent-light, #f0f0f3); }
+    .feedback-details .summary-hint {
+      margin-left: auto; font-size: 0.75rem; color: var(--text-muted, #6e6e73); font-weight: 400;
+    }
+    .feedback-box {
+      padding: 0.4rem 1.2rem 1.2rem;
+    }
+    .feedback-box .fb-row { margin-bottom: 0.8rem; }
+    .feedback-box label {
+      display: block; font-size: 0.82rem; color: var(--text-muted, #6e6e73);
+      margin-bottom: 0.3rem; font-weight: 500;
+    }
+    .feedback-box select, .feedback-box input, .feedback-box textarea {
+      width: 100%; padding: 0.5rem 0.7rem;
+      font-family: inherit; font-size: 0.92rem;
+      border: 1px solid var(--border, #d2d2d7); border-radius: 6px;
+      background: var(--bg, #fafafa); color: var(--text, #1d1d1f);
+      outline: none; transition: border-color 0.15s;
+      box-sizing: border-box;
+    }
+    .feedback-box select:focus, .feedback-box input:focus, .feedback-box textarea:focus {
+      border-color: var(--accent, #1d1d1f);
+    }
+    .feedback-box textarea { resize: vertical; min-height: 100px; line-height: 1.5; }
+    .feedback-box .fb-actions {
+      display: flex; gap: 0.6rem; align-items: center; flex-wrap: wrap;
+      margin-top: 0.8rem;
+    }
+    .feedback-box .fb-submit {
+      padding: 0.55rem 1.2rem; background: var(--accent, #1d1d1f);
+      color: var(--accent-on, #fff); border: none; border-radius: 18px;
+      font-size: 0.9rem; font-weight: 600; cursor: pointer;
+    }
+    .feedback-box .fb-submit:hover { background: var(--accent-hover, #424245); }
+    .feedback-box .fb-alt {
+      font-size: 0.8rem; color: var(--text-muted, #6e6e73);
+    }
+    .feedback-box .fb-alt a { color: var(--text, #1d1d1f); text-decoration: underline; }
+    .feedback-box .fb-hint {
+      font-size: 0.75rem; color: var(--text-faint, #a1a1a6); margin-top: 0.5rem;
+    }
+    .fb-copy-btn {
+      background: transparent; border: 1px solid var(--border, #d2d2d7);
+      border-radius: 14px; padding: 0.3rem 0.7rem;
+      font-size: 0.78rem; cursor: pointer; color: var(--text-muted, #6e6e73);
+    }
+    .fb-copy-btn:hover { background: var(--accent-light, #f0f0f3); color: var(--text, #1d1d1f); }
+    .fb-copy-btn.copied { background: var(--accent, #1d1d1f); color: var(--accent-on, #fff); border-color: var(--accent, #1d1d1f); }
+    footer { text-align: center; padding: 1.5rem 2rem 2rem; color: var(--text-muted, #999); font-size: 0.85rem; }
+  </style>
+  <meta property="og:title" content="關於本站 — 貓健康站">
+  <meta property="og:description" content="台灣貓健康學術文獻庫的創建目的、資料來源、倫理原則。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://chen-mouchin.github.io/cat-health-tw/about.html">
+  <link rel="canonical" href="https://chen-mouchin.github.io/cat-health-tw/about.html">
+</head>
+<body>
+  <nav class="site-nav">
+  <a class="nav-brand" href="index.html" title="回首頁"><span class="b-icon">🐱</span><span class="brand-text">貓健康站</span><span class="brand-home" aria-hidden="true">🏠</span></a>
+  <div class="nav-links">
+    <a class="nav-link" href="library.html" data-nav="library">📚 文獻庫</a>
+    <a class="nav-link" href="breeds.html" data-nav="breeds">🐈 品種</a>
+    <a class="nav-link" href="vets.html" data-nav="vets">🏥 獸醫院</a>
+    <a class="nav-link" href="articles/index.html" data-nav="articles">📝 文章</a>
+    <a class="nav-link active" href="about.html" data-nav="about">ℹ️ 關於</a>
+  </div>
+</nav>
+
+  <h1 class="page-title">關於 貓健康站</h1>
+
+  <main>
+    <h2>本站介紹</h2>
+    <p>
+      <strong>貓健康站（貓咪大全）</strong> 是一個為台灣養貓人設計的一站式資訊平台，
+      整合幾條主線：
+    </p>
+    <ul>
+      <li><strong>學術文獻庫</strong>：113 筆 ISFM / AAFP / IRIS / WSAVA 等權威指引索引，每筆回溯原文核實。</li>
+      <li><strong>知識庫文章</strong>：以學術來源為基礎的貓咪健康與行為文章（人工審核中，僅核可的會公開）。</li>
+      <li><strong>品種圖鑑</strong>：68 種貓咪品種，含遺傳病風險警示與並排比較。資料來源：TheCatAPI + Wikipedia。</li>
+      <li><strong>獸醫院查詢</strong>：全台 22 縣市 2,001 家動物醫院（台灣本島完整 + 澎湖金門），可篩 24h 急診、貓專科、依縣市/區搜尋。</li>
+    </ul>
+
+    <h2>資料來源與倫理原則</h2>
+    <table class="source-table">
+      <thead>
+        <tr><th>資料類型</th><th>來源</th><th>更新頻率</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>學術文獻庫</td><td>ISFM / AAFP / IRIS / WSAVA / ABCD / Cornell / PubMed OA</td><td>每筆人工核實後加入</td></tr>
+        <tr><td>知識庫文章</td><td>同上學術來源</td><td>手動審稿後發佈</td></tr>
+        <tr><td>品種圖鑑</td><td>TheCatAPI（thecatapi.com）</td><td>資料庫版本更新時</td></tr>
+        <tr><td>獸醫院列表</td><td>農業部公開資料</td><td>年度更新</td></tr>
+      </tbody>
+    </table>
+
+    <h2 id="data-quality">資料品質實況</h2>
+    <p>
+      政府 open data 是好東西，但不同部門 / 縣市的格式與完整度不一。本站不只是「轉貼」，
+      而是會做交叉比對與補洞。例：
+    </p>
+    <ul>
+      <li>
+        <strong>台北市 46 筆動物醫院只有名字、無地址</strong>（data.taipei stub 條目）→
+        用農業部全國 API 依名字對應補齊地址、電話、行政區、執照字號等資料。
+      </li>
+      <li>
+        <strong>1 筆來源資料拼字錯誤</strong>「復興<u>獸</u>動物醫院」實際為「復興動物醫院」
+        （fuzzy 比對農業部名單發現）→ 修正後成功補齊。
+      </li>
+      <li>
+        <strong>地址解析（geocoding）</strong>：用 OSM Nominatim 補 lat/lng，
+        全台 2,001 家 100% 有座標，可在前端按距離排序。
+      </li>
+      <li>
+        <strong>避免重複洗 geocode</strong>：merge 邏輯保留既有 lat/lng（不會每次更新都重跑 OSM 30 分鐘）。
+      </li>
+    </ul>
+    <p style="font-size:0.88rem;color:var(--text-muted,#6e6e73)">
+      <strong>結果</strong>：基於農業部全國公開登記，全台 22 縣市共 2,001 家動物醫院，
+      全部完成地址補齊與 GPS 座標標記，可在前端做縣市篩選與距離排序。
+    </p>
+    <p style="font-size:0.78rem;color:var(--text-faint,#a1a1a6);margin-top:0.6rem">
+      <strong>本站不是動物醫院的最完整資料庫</strong> — Google Maps 涵蓋更廣（含未登記、評論、照片、即時營業時間）。
+      本站的價值在於：基於官方公開登記資料，做了「24h 急診 / 貓專科」這兩個切角的偵測與標記，
+      讓飼主在「找救命急診」「找貓友善醫院」這兩個情境能快速縮小範圍。
+    </p>
+
+    <h2>本站如何維持運作</h2>
+    <p>
+      貓健康站 是個人開發的非商業專案。這裡公開站運的金錢面：
+    </p>
+    <table class="source-table">
+      <thead>
+        <tr><th>項目</th><th>做不做</th><th>說明</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>業配 / 贊助文</strong></td>
+          <td>❌ 不做</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td><strong>聯盟行銷（affiliate）</strong></td>
+          <td>❌ 不做</td>
+          <td>不放「點此購買」之類的傭金連結。</td>
+        </tr>
+        <tr>
+          <td><strong>Google AdSense 聯播廣告</strong></td>
+          <td>✅ 內容頁有</td>
+          <td>由 Google 自動投放第三方廣告（首頁無）。每頁上限 2 個 ad units。廣告內容由 Google 演算法決定，不受本站編輯介入。</td>
+        </tr>
+        <tr>
+          <td><strong>讀者自願贊助（Ko-fi）</strong></td>
+          <td>🔜 規劃中</td>
+          <td>未來會在文章尾部加 Ko-fi 連結，讓覺得內容有用的讀者可以小額贊助（不強制、不擋內容）。</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>免責聲明</h2>
+    <p>
+      知識庫文章<strong>僅供健康教育參考，不構成獸醫診療建議</strong>。
+      貓咪健康問題請諮詢持照獸醫師，緊急狀況請立即就醫。
+    </p>
+
+    <h2>關於開發者</h2>
+    <p>
+      本站由 <a href="https://github.com/Chen-MouChin" target="_blank" rel="noopener">Chen-MouChin</a>
+      個人開發維護，開放原始碼精神，技術棧以靜態 HTML + Python 爬蟲為主。
+    </p>
+
+    <h2>意見回饋</h2>
+    <details class="feedback-details">
+      <summary>
+        💬 留言給我們
+        <span class="summary-hint">資料錯誤・建議・合作</span>
+      </summary>
+      <form class="feedback-box" id="fbForm" onsubmit="return submitFeedback(event)">
+      <div class="fb-row">
+        <label for="fb-topic">主題</label>
+        <select id="fb-topic" required>
+          <option value="">— 請選擇 —</option>
+          <option value="資料錯誤">資料錯誤（醫療數據、引用、術語）</option>
+          <option value="缺漏建議">缺漏建議（希望加哪個主題/文獻）</option>
+          <option value="一般意見">一般意見</option>
+          <option value="合作洽詢">合作洽詢</option>
+          <option value="其他">其他</option>
+        </select>
+      </div>
+      <div class="fb-row">
+        <label for="fb-message">訊息 <span style="color:var(--text-faint,#a1a1a6);font-weight:400">（必填）</span></label>
+        <textarea id="fb-message" required placeholder="如果是資料錯誤，請附上文章 / 文獻 ID 與正確資訊；如果是建議，請說明你想看到什麼內容..."></textarea>
+      </div>
+      <div class="fb-row">
+        <label for="fb-email">你的 Email <span style="color:var(--text-faint,#a1a1a6);font-weight:400">（選填，留下會回覆你）</span></label>
+        <input type="email" id="fb-email" placeholder="optional@example.com">
+      </div>
+      <!-- honeypot：機器人會填這欄 -->
+      <input type="text" id="fb-hp" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+      <div class="fb-actions">
+        <button type="submit" class="fb-submit">📧 送出（開信件 App）</button>
+        <span class="fb-alt">
+          或
+          <a href="https://github.com/Chen-MouChin/cat-health-tw/issues/new" target="_blank" rel="noopener">在 GitHub 開 Issue</a>
+        </span>
+      </div>
+      <div class="fb-hint">
+        送出按鈕會打開你的信件 App，預填好內容寄到開發者信箱。
+        <button type="button" class="fb-copy-btn" id="fbCopyBtn" onclick="copyEmail()" style="margin-left:0.4rem">📋 複製信箱</button>
+      </div>
+      </form>
+    </details>
+  </main>
+
+  <script>
+    // Email 拆字組裝 — 避簡單爬蟲收集
+    const FB_TO = 'https://chen-mouchin.github.io/cat-health-tw/about.html';
+
+    function submitFeedback(ev) {
+      ev.preventDefault();
+      // honeypot 檢查
+      if (document.getElementById('fb-hp').value) return false;
+      const topic = document.getElementById('fb-topic').value;
+      const msg = document.getElementById('fb-message').value.trim();
+      const email = document.getElementById('fb-email').value.trim();
+      if (!topic || !msg) return false;
+      const subject = `[貓健康站 回饋] ${topic}`;
+      const body = [
+        msg,
+        '',
+        '---',
+        email ? `回覆 Email：${email}` : '（未提供 email）',
+        `來源頁面：${location.href}`,
+        `時間：${new Date().toISOString()}`,
+      ].join('\n');
+      const url = `mailto:${FB_TO}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      window.location.href = url;
+      return false;
+    }
+
+    function copyEmail() {
+      const btn = document.getElementById('fbCopyBtn');
+      navigator.clipboard.writeText(FB_TO).then(() => {
+        btn.classList.add('copied');
+        const orig = btn.textContent;
+        btn.textContent = '✓ 已複製';
+        setTimeout(() => { btn.classList.remove('copied'); btn.textContent = orig; }, 1500);
+      }).catch(() => {
+        alert('複製失敗，請手動記下：' + FB_TO);
+      });
+    }
+  </script>
+
+  <aside class="site-ad-banner" aria-label="贊助廣告">
+    <div class="ad-card">
+      <div class="ad-label">贊助 Sponsored</div>
+      <div class="ad-slot"><span>Ad Slot · banner (responsive)</span></div>
+    </div>
+  </aside>
+
+  <footer class="site-footer">
+    <div class="f-nav">
+    <a class="f-home" href="index.html">🏠 回首頁</a>
+    <a href="library.html">📚 文獻庫</a>
+    <a href="breeds.html">🐈 品種圖鑑</a>
+    <a href="vets.html">🏥 獸醫院</a>
+    <a href="articles/index.html">📝 文章</a>
+    <a href="about.html">ℹ️ 關於本站</a>
+    <a href="privacy.html">🔒 隱私政策</a>
+  </div>
+    <div class="f-meta">
+      貓健康站 · 學術來源：ISFM · WSAVA · IRIS · AAFP · ABCD · Cornell · PubMed OA<br>
+      本站內容僅供參考，不取代獸醫師診斷<br>
+      © 2026 · Built by <a href="https://github.com/Chen-MouChin" target="_blank" rel="noopener">Chen-MouChin</a>
+    </div>
+  </footer>
+
+  <aside class="site-ad-anchor" aria-label="贊助廣告">
+    <div class="ad-label">贊助</div>
+    <div class="ad-slot"><span>Ad Slot · anchor (sticky bottom)</span></div>
+    <button class="ad-close" aria-label="關閉廣告 24 小時" title="關閉 24 小時">✕</button>
+  </aside>
+  <script src="js/ads.js"></script>
+  <script src="js/meta.js"></script>
+  <script src="js/i18n.js"></script>
+  <script>var fd=document.getElementById('footer-date');if(fd&&typeof SITE_META!=='undefined')fd.textContent=SITE_META.data_updated;</script>
+</body>
+</html>

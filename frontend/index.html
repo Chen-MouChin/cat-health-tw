@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>貓健康站 — 台灣貓健康知識庫</title>
+  <meta name="description" content="台灣貓健康知識庫：57 篇深度文章、2,001 家動物醫院、68 種品種圖鑑、113 筆學術引用。每筆引用回溯 ISFM/AAFP/IRIS 原文，無業配。">
+  <meta property="og:title" content="貓健康站 — 台灣貓健康知識庫">
+  <meta property="og:description" content="找獸醫、查症狀、學品種、看文獻 — 一站搞定，引用回溯原文。">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/nav.css?v=20260420b">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "貓健康站",
+    "alternateName": "貓咪大全",
+    "url": "https://chen-mouchin.github.io/cat-health-tw/",
+    "description": "台灣貓健康知識庫：57 篇深度文章、2,001 家動物醫院、68 種品種圖鑑、113 筆學術引用。",
+    "inLanguage": "zh-TW",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://chen-mouchin.github.io/cat-health-tw/articles/index.html?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "貓健康站",
+      "url": "https://chen-mouchin.github.io/cat-health-tw/"
+    }
+  }
+  </script>
+  <script src="js/theme.js"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, "Noto Sans TC", sans-serif; background: var(--bg, #fafafa); color: var(--text, #1d1d1f); min-height: 100vh; }
+
+    header { text-align: center; padding: 1.8rem 1.5rem 0.4rem; }
+    header .logo { font-size: 2rem; font-weight: 700; letter-spacing: -0.02em; }
+    header .tagline { font-size: 0.95rem; color: var(--text-muted, #666); margin-top: 0.4rem; max-width: 460px; margin-left: auto; margin-right: auto; line-height: 1.55; }
+
+    main { max-width: 720px; margin: 0 auto; padding: 0 1.5rem 1.2rem; }
+
+    /* === A: 主搜尋框 === */
+    .home-search {
+      margin: 0.8rem 0 0.5rem;
+      position: relative;
+    }
+    .home-search input {
+      width: 100%; padding: 1.1rem 1.2rem 1.1rem 3rem; font-size: 1.05rem;
+      border: 1px solid var(--border-strong, #d2d2d7); border-radius: 30px;
+      background: var(--bg-card, #fff); color: var(--text, #333);
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .home-search input:focus {
+      outline: none; border-color: var(--accent, #1d1d1f);
+      box-shadow: 0 0 0 4px rgba(0,0,0,0.06);
+    }
+    .home-search::before {
+      content: '🔍'; position: absolute; left: 1.1rem; top: 50%;
+      transform: translateY(-50%); font-size: 1.1rem; pointer-events: none; opacity: 0.55;
+    }
+    .search-hint {
+      font-size: 0.78rem; color: var(--text-faint, #888); padding: 0 0.5rem 0;
+      margin-bottom: 1.2rem; line-height: 1.6;
+    }
+    .search-hint a {
+      color: var(--text-muted, #6e6e73); text-decoration: none;
+      border-bottom: 1px dotted var(--border-strong, #c2c2c7);
+      margin-right: 0.5rem;
+    }
+    .search-hint a:hover { color: var(--accent, #1d1d1f); border-bottom-color: var(--accent, #1d1d1f); }
+
+    /* === B: 緊急 strip === */
+    .emergency-strip {
+      display: flex; align-items: center; justify-content: space-between; gap: 0.8rem;
+      background: #fbeeec; border: 1px solid #e6c0b8; border-left: 3px solid #c0392b;
+      border-radius: 8px; padding: 0.6rem 1rem; margin-bottom: 1.2rem;
+      font-size: 0.9rem; color: #7c2618;
+    }
+    .emergency-strip .e-left { display: flex; align-items: center; gap: 0.5rem; }
+    .emergency-strip .e-icon { font-size: 1.1rem; }
+    .emergency-strip a {
+      background: #c0392b; color: #fff; text-decoration: none;
+      padding: 0.4rem 0.85rem; border-radius: 16px; font-weight: 600;
+      font-size: 0.83rem; white-space: nowrap;
+    }
+    .emergency-strip a:hover { background: #a02b1f; }
+
+    /* === Disclaimer (top tiny notice) === */
+    .disclaimer {
+      text-align: center; font-size: 0.72rem; color: var(--text-faint, #999);
+      padding: 0.3rem 1rem; margin-top: 0.8rem;
+      line-height: 1.4;
+    }
+    .disclaimer .d-icon { opacity: 0.6; }
+
+    /* === C: 入口卡片（按飼主意圖排序） === */
+    .entry-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; margin-bottom: 1rem;
+    }
+    .entry-card {
+      display: block; text-decoration: none; color: var(--text, #1d1d1f);
+      background: var(--bg-card, #fff); border: 1px solid var(--border-strong, #d2d2d7);
+      border-radius: 12px; padding: 1.2rem 1.1rem;
+      transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+    }
+    .entry-card:hover {
+      transform: translateY(-1px);
+      border-color: var(--accent, #1d1d1f);
+      box-shadow: 0 3px 12px var(--shadow, rgba(0,0,0,0.06));
+    }
+    .entry-card .e-icon { font-size: 1.6rem; margin-bottom: 0.3rem; }
+    .entry-card h2 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.3rem; }
+    .entry-card .e-desc { font-size: 0.82rem; color: var(--text-muted, #6e6e73); line-height: 1.5; min-height: 2.5em; }
+    .entry-card .e-meta { font-size: 0.74rem; color: var(--text-faint, #999); margin-top: 0.5rem; }
+
+    /* 主推卡片（前 2 個飼主常用） */
+    .entry-card.primary { border-color: var(--accent, #1d1d1f); }
+    .entry-card.primary .e-meta { color: var(--accent, #1d1d1f); font-weight: 600; }
+
+    @media (max-width: 540px) {
+      .entry-grid { grid-template-columns: 1fr; }
+      .emergency-strip { flex-direction: column; align-items: stretch; text-align: center; }
+    }
+
+    .why-box {
+      background: var(--bg-card, #f5f5f7); border-radius: 8px;
+      padding: 0.85rem 1.1rem; margin-bottom: 0;
+      font-size: 0.83rem; color: var(--text-muted, #555); line-height: 1.6;
+    }
+    /* 首頁專用：壓縮 footer 留白（覆蓋共用 nav.css 的 .site-footer） */
+    body > .site-footer { margin-top: 1rem; padding: 1.2rem 1.5rem 1.5rem; }
+    .why-box strong { color: var(--text, #1d1d1f); }
+    .why-box a { color: var(--text, #1d1d1f); text-decoration: underline; text-decoration-color: var(--border-strong, #d2d2d7); text-underline-offset: 3px; }
+
+  </style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a class="nav-brand active" href="index.html" title="回首頁"><span class="b-icon">🐱</span><span class="brand-text">貓健康站</span><span class="brand-home" aria-hidden="true">🏠</span></a>
+  <div class="nav-links">
+    <a class="nav-link" href="library.html" data-nav="library">📚 文獻庫</a>
+    <a class="nav-link" href="breeds.html" data-nav="breeds">🐈 品種</a>
+    <a class="nav-link" href="vets.html" data-nav="vets">🏥 獸醫院</a>
+    <a class="nav-link" href="articles/index.html" data-nav="articles">📝 文章</a>
+    <a class="nav-link" href="about.html" data-nav="about">ℹ️ 關於</a>
+  </div>
+</nav>
+
+<header>
+  <div class="logo">🐱 貓健康站</div>
+  <p class="tagline">台灣貓健康知識庫 · 引用回溯原文 · 無業配</p>
+</header>
+
+<main>
+
+  <!-- 免責聲明（小字置頂） -->
+  <p class="disclaimer">
+    <span class="d-icon">⚠️</span> 本站為知識索引與獸醫院查詢，不取代獸醫師診斷。貓咪有異狀請立即就醫。
+  </p>
+
+  <!-- A: 主搜尋框 -->
+  <form class="home-search" action="articles/index.html" method="get" role="search">
+    <input type="search" name="q" placeholder="我家貓最近... (例：腎指數高、亂尿尿、半夜亂叫)" autocomplete="off" autofocus>
+  </form>
+
+  <!-- B: 緊急狀況入口 -->
+  <div class="emergency-strip">
+    <div class="e-left">
+      <span class="e-icon">🚨</span>
+      <span>半夜貓出狀況？尿不出來、呼吸急促、抽搐、誤食 — 不要等天亮</span>
+    </div>
+    <a href="vets.html?only24h=1">找 24h 急診 →</a>
+  </div>
+
+  <!-- C: 主入口（飼主意圖排序：找獸醫 → 看文章 → 學品種 → 學文獻） -->
+  <div class="entry-grid">
+    <a class="entry-card primary" href="vets.html">
+      <div class="e-icon">🏥</div>
+      <h2>找獸醫院</h2>
+      <p class="e-desc">全台 22 縣市 2,001 家。可篩 24h 急診、貓專科、依縣市/區搜尋。</p>
+      <div class="e-meta">最常用 · 含 GPS 距離排序</div>
+    </a>
+    <a class="entry-card primary" href="articles/index.html">
+      <div class="e-icon">📝</div>
+      <h2>查症狀 / 看文章</h2>
+      <p class="e-desc">CKD、糖尿、FIP、行為問題、急診判斷。引用 ISFM/AAFP 原文。</p>
+      <div class="e-meta">57 篇文章 · 含台灣本土資訊</div>
+    </a>
+    <a class="entry-card" href="breeds.html">
+      <div class="e-icon">🐈</div>
+      <h2>品種圖鑑</h2>
+      <p class="e-desc">68 種品種，遺傳病風險警示（摺耳/曼基/無毛...）+ 並排比較。</p>
+      <div class="e-meta">含 Salonen 2019 學術數據</div>
+    </a>
+    <a class="entry-card" href="library.html">
+      <div class="e-icon">📚</div>
+      <h2>學術文獻庫</h2>
+      <p class="e-desc">ISFM / AAFP / IRIS / WSAVA 指引索引，每筆原文連結 + 中文摘要。</p>
+      <div class="e-meta">113 筆 · 進階使用者</div>
+    </a>
+  </div>
+
+  <!-- 本站做什麼 -->
+  <div class="why-box">
+    <strong>本站做的事：</strong>每筆數據都回溯原文核實，學術來源以獸醫專業組織指引為主（ISFM / AAFP / IRIS / WSAVA）。<strong>不 SEO 內容農場、業配與聯盟行銷</strong>。
+    <a href="about.html">→ 完整原則</a>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="f-nav">
+    <a class="f-home" href="index.html">🏠 回首頁</a>
+    <a href="library.html">📚 文獻庫</a>
+    <a href="breeds.html">🐈 品種圖鑑</a>
+    <a href="vets.html">🏥 獸醫院</a>
+    <a href="articles/index.html">📝 文章</a>
+    <a href="about.html">ℹ️ 關於本站</a>
+    <a href="privacy.html">🔒 隱私政策</a>
+  </div>
+  <div class="f-meta">
+    貓健康站 · 學術來源：ISFM · WSAVA · IRIS · AAFP · ABCD · Cornell · PubMed OA<br>
+    本站內容僅供參考，不取代獸醫師診斷
+  </div>
+</footer>
+
+</body>
+</html>

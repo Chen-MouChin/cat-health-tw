@@ -1,0 +1,126 @@
+{
+  "_meta": {
+    "description": "文獻來源清單 — crawler.py 讀取此檔逐一爬取",
+    "last_updated": "2026-04-16"
+  },
+
+  "aafp": {
+    "name": "AAFP (American Association of Feline Practitioners)",
+    "guidelines_url": "https://catvets.com/guidelines",
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "robots_ok": true,
+    "notes": "已確認可爬，標準 HTML"
+  },
+
+  "cornell": {
+    "name": "Cornell Feline Health Center",
+    "index_url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics",
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "robots_ok": true,
+    "notes": "每個疾病一頁，URL 結構規律"
+  },
+
+  "iris": {
+    "name": "IRIS (International Renal Interest Society)",
+    "index_url": "http://www.iris-kidney.com/guidelines.html",
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "robots_ok": true,
+    "notes": "CKD/AKI 分期 + 治療建議"
+  },
+
+  "abcd": {
+    "name": "ABCD (European Advisory Board on Cat Diseases)",
+    "index_url": "https://www.abcdcatsvets.org/guidelines/",
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "robots_ok": false,
+    "notes": "403 blocked WebFetch，可能需要 requests + 真實 UA"
+  },
+
+  "icatcare": {
+    "name": "iCatCare / ISFM",
+    "index_url": "https://icatcare.org/advice/",
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "robots_ok": false,
+    "notes": "403 blocked WebFetch，robots.txt 全開但有 WAF"
+  },
+
+  "vca": {
+    "name": "VCA Animal Hospitals",
+    "index_url": "https://vcahospitals.com/know-your-pet/cat",
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "robots_ok": true,
+    "notes": "1000+ 文章，需要 cat-specific 篩選"
+  },
+
+  "wsava": {
+    "name": "WSAVA",
+    "index_url": "https://wsava.org/committees/",
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "robots_ok": true,
+    "notes": "指引分散在各 committee 頁面"
+  },
+
+  "aspca_toxins": {
+    "name": "ASPCA Animal Poison Control",
+    "index_url": "https://www.aspca.org/pet-care/animal-poison-control",
+    "type": "database",
+    "language": "en",
+    "open_access": true,
+    "robots_ok": true,
+    "notes": "植物+食物毒性資料庫"
+  },
+
+  "jvms_jstage": {
+    "name": "JVMS (J-STAGE)",
+    "index_url": "https://www.jstage.jst.go.jp/browse/jvms",
+    "type": "journal",
+    "language": "en",
+    "open_access": true,
+    "robots_ok": true,
+    "notes": "日本獸醫學會期刊，全 OA，搜 feline/cat"
+  },
+
+  "kdcat": {
+    "name": "KDCAT 台灣腎貓協會",
+    "index_url": "https://www.kdcat.org.tw/",
+    "type": "educational",
+    "language": "zh-TW",
+    "open_access": true,
+    "robots_ok": true,
+    "notes": "CKD 中文資源，Wix 網站"
+  },
+
+  "moa_animal_protection": {
+    "name": "農業部動物保護司",
+    "index_url": "https://animal.moa.gov.tw/",
+    "type": "government",
+    "language": "zh-TW",
+    "open_access": true,
+    "robots_ok": true,
+    "notes": "動保法規、TNR 政策"
+  },
+
+  "petfood_moa": {
+    "name": "寵物食品申報網",
+    "index_url": "https://petfood.moa.gov.tw/",
+    "type": "database",
+    "language": "zh-TW",
+    "open_access": true,
+    "robots_ok": true,
+    "notes": "飼料成分登記查詢"
+  }
+}

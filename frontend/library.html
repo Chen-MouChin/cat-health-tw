@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>學術文獻庫 — 貓健康站</title>
+<meta name="description" content="貓健康知識的學術引用文獻庫，每筆來自 ISFM/AAFP/IRIS/Cornell 等權威來源，逐字核實">
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/nav.css?v=20260420b">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CollectionPage","name":"學術文獻庫 — 貓健康站","description":"貓健康國際權威指引索引：ISFM/AAFP/IRIS/WSAVA/ABCD/Cornell。每筆回溯原文核實。","url":"https://chen-mouchin.github.io/cat-health-tw/library.html","inLanguage":"zh-TW"}
+</script>
+<script src="js/theme.js"></script>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: system-ui, "Noto Sans TC", sans-serif; background: var(--bg, #fafafa); color: var(--text, #1d1d1f); min-height: 100vh; padding-bottom: 2rem; }
+
+header { text-align: center; padding: 1.5rem 1rem 0.8rem; position: relative; }
+header h1 { font-size: 1.6rem; }
+header p { font-size: 0.85rem; color: var(--text-muted, #666); margin-top: 0.4rem; }
+header .stats { display: inline-flex; gap: 0.6rem; margin-top: 0.6rem; font-size: 0.8rem; flex-wrap: wrap; justify-content: center; }
+header .stat { padding: 0.25rem 0.7rem; background: var(--bg-card, #fff); border: 1px solid var(--border, #e5e5ea); border-radius: 14px; }
+header .stat strong { color: var(--accent, var(--accent, #1d1d1f)); }
+
+.lang-toggle { position: absolute; top: 1rem; right: 1rem; display: flex; gap: 4px; }
+.lang-toggle button { padding: 0.25rem 0.6rem; font-size: 0.75rem; border: 1px solid var(--border, #d2d2d7); background: var(--bg-card, #fff); color: var(--text-muted, #666); border-radius: 12px; cursor: pointer; }
+.lang-toggle button.active { background: var(--accent, #1d1d1f); color: #fff; border-color: var(--accent, #1d1d1f); }
+
+main { max-width: 900px; margin: 0 auto; padding: 0 1rem; }
+
+.controls { display: flex; gap: 0.5rem; margin: 1rem 0 0.5rem; flex-wrap: wrap; align-items: center; }
+.controls input { flex: 1; min-width: 200px; padding: 0.5rem 0.9rem; font-size: 0.9rem; border: 1px solid var(--border, #d2d2d7); border-radius: 18px; background: var(--bg-card, #fff); color: var(--text); outline: none; }
+.controls input:focus { border-color: var(--accent, #1d1d1f); }
+
+.filter-group { margin-bottom: 0.5rem; background: var(--bg-card, #fff); border: 1px solid var(--border, #e5e5ea); border-radius: 10px; overflow: hidden; }
+.filter-header { padding: 0.5rem 0.9rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer; user-select: none; font-size: 0.85rem; }
+.filter-header:hover { background: var(--bg, #f5f5f7); }
+.filter-header .label { color: var(--text-muted, #666); font-weight: 500; }
+.filter-header .count { font-size: 0.7rem; color: var(--text-muted, #999); margin-left: auto; margin-right: 0.5rem; }
+.filter-header .arrow { transition: transform 0.2s; font-size: 0.75rem; color: var(--text-muted, #888); }
+.filter-group.open .arrow { transform: rotate(90deg); }
+
+.filter-body { padding: 0 0.7rem 0.7rem; display: none; flex-wrap: wrap; gap: 0.35rem; }
+.filter-group.open .filter-body { display: flex; }
+
+.filter-btn { padding: 0.25rem 0.7rem; font-size: 0.75rem; background: transparent; border: 1px solid var(--border, #d2d2d7); border-radius: 14px; cursor: pointer; color: var(--text-muted, #666); white-space: nowrap; }
+.filter-btn.active { background: var(--accent, #1d1d1f); color: #fff; border-color: var(--accent, #1d1d1f); }
+.filter-btn:hover { border-color: var(--accent, #1d1d1f); }
+
+.hint { font-size: 0.8rem; color: var(--text-muted, #888); margin: 0.4rem 0 0.6rem; }
+
+.card { background: var(--bg-card, #fff); border: 1px solid var(--border, #e5e5ea); border-radius: 12px; padding: 1rem 1.2rem; margin-bottom: 0.8rem; }
+.card-header { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; margin-bottom: 0.4rem; }
+.cid { font-family: 'Courier New', monospace; font-size: 0.7rem; color: var(--text-muted, #888); }
+.badge { font-size: 0.65rem; padding: 1px 6px; border-radius: 8px; }
+.badge-approved { background: #e8efe8; color: #3d5a3d; }
+.badge-pending { background: #f5f0e0; color: #6b5d2e; }
+.badge-rejected { background: #f0e0e0; color: #8a3030; }
+.badge-oa { background: #e8eef2; color: #3d5a72; }
+.badge-paid { background: #f0f0f0; color: #666; }
+.badge-verified { background: #e8eef2; color: #3d5a72; font-size: 0.6rem; }
+.badge-untranslated { background: #f0e0e0; color: #8a3030; font-size: 0.6rem; }
+.badge-no-abstract { background: #f0e8d8; color: #7d5a30; font-size: 0.6rem; }
+.badge-cited {
+  background: var(--accent-light, #f0ede6); color: var(--text, #1d1d1f);
+  cursor: pointer; font-weight: 600;
+  border: 1px solid var(--border-strong, #d4cfc3);
+}
+.badge-cited:hover { background: var(--accent, #1d1d1f); color: var(--accent-on, #fff); }
+
+.cited-by {
+  background: var(--accent-light, #f0ede6); border-left: 3px solid var(--text-muted, #6e6e73);
+  padding: 0.6rem 0.8rem; margin: 0.5rem 0;
+  border-radius: 0 6px 6px 0;
+  font-size: 0.82rem;
+}
+.cited-by-label { color: var(--text-muted, #6e6e73); font-size: 0.75rem; margin-bottom: 0.3rem; }
+.cited-by ul { margin: 0; padding-left: 1.3rem; }
+.cited-by li { margin: 0.2rem 0; }
+.cited-by a { color: var(--text, #1d1d1f); }
+.cited-by a:hover { color: var(--accent, #1d1d1f); }
+
+/* URL 深連結高亮 */
+.card.citation-highlight {
+  animation: citeHighlight 3s ease-out;
+}
+@keyframes citeHighlight {
+  0% { background: #fff3cd; box-shadow: 0 0 0 3px rgba(138, 115, 64, 0.3); }
+  100% { background: var(--bg-card, #fff); box-shadow: none; }
+}
+
+.card-title { font-weight: 600; font-size: 1rem; margin-bottom: 0.2rem; }
+.card-title-zh { font-size: 0.95rem; color: var(--text-muted, #555); margin-bottom: 0.4rem; }
+.card-meta { font-size: 0.75rem; color: var(--text-muted, #888); margin-bottom: 0.4rem; }
+.card-abstract { font-size: 0.85rem; line-height: 1.6; white-space: pre-wrap; max-height: 8em; overflow: hidden; position: relative; transition: max-height 0.3s; cursor: pointer; padding: 0.4rem 0.6rem; background: var(--bg, #fafafa); border-radius: 6px; margin: 0.4rem 0; }
+.card-abstract.expanded { max-height: 9999px; }
+.card-abstract::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2em; background: linear-gradient(transparent, var(--bg, #fafafa)); pointer-events: none; }
+.card-abstract.expanded::after { display: none; }
+.card-keywords { display: flex; gap: 0.3rem; flex-wrap: wrap; margin-top: 0.4rem; }
+.keyword { font-size: 0.7rem; padding: 1px 6px; background: var(--bg, #f0f0f5); border-radius: 8px; color: var(--text-muted, #666); cursor: pointer; }
+.keyword:hover { background: var(--accent, #1d1d1f); color: #fff; }
+.card-link { font-size: 0.75rem; margin-top: 0.4rem; }
+.card-link a { color: var(--accent, #1d1d1f); text-decoration: none; word-break: break-all; }
+.card-link a:hover { text-decoration: underline; }
+.card-notes { font-size: 0.7rem; color: var(--text-muted, #888); margin-top: 0.3rem; font-style: italic; }
+
+footer { text-align: center; padding: 1.5rem 1rem; font-size: 0.75rem; color: var(--text-muted, #888); }
+footer a { color: var(--text-muted, #888); }
+
+.clear-btn { font-size: 0.7rem; color: #8a3030; margin-left: 0.5rem; cursor: pointer; }
+
+/* 專業術語庫 */
+.terms-body {
+  display: none;
+  padding: 0.6rem 0.9rem 0.9rem;
+}
+.filter-group.open .terms-body { display: block; }
+
+.term-cat-bar { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-bottom: 0.7rem; }
+
+.term-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+}
+@media (min-width: 700px) {
+  .term-grid { grid-template-columns: 1fr 1fr; }
+}
+
+.term-card {
+  border: 1px solid var(--border, #e5e5ea);
+  border-radius: 8px;
+  padding: 0.6rem 0.8rem;
+  background: var(--bg, #fafafa);
+  cursor: pointer;
+  transition: box-shadow 0.15s;
+}
+.term-card:hover { box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+.term-card.highlight { border-color: var(--accent, #1d1d1f); box-shadow: 0 0 0 2px rgba(0,0,0,0.08); }
+
+.term-head { display: flex; align-items: baseline; gap: 0.5rem; flex-wrap: wrap; }
+.term-key { font-family: 'Courier New', monospace; color: var(--accent, #1d1d1f); font-weight: 700; font-size: 0.92rem; }
+/* 分類 badge — 統一中性灰，靠文字區別（避免高飽和色相衝突） */
+.term-cat { font-size: 0.6rem; padding: 1px 6px; border-radius: 8px; background: var(--accent-light, #f0f0f3); color: var(--text-muted, #6e6e73); border: 1px solid var(--border, #e5e5ea); }
+.term-cat.disease, .term-cat.pathogen { background: var(--bg, #fafafa); color: var(--text, #1d1d1f); border-color: var(--border-strong, #d2d2d7); }
+.term-cat.drug, .term-cat.vaccine { background: var(--accent-light, #f0f0f3); color: var(--text, #1d1d1f); }
+.term-cat.organization, .term-cat.journal { background: var(--accent-light, #f0f0f3); color: var(--text-muted, #6e6e73); }
+.term-cat.physiology, .term-cat.citation_type, .term-cat.lab_marker { background: var(--accent-light, #f0f0f3); color: var(--text-muted, #6e6e73); }
+
+.term-full { font-size: 0.72rem; color: var(--text-muted, #666); margin-top: 0.15rem; line-height: 1.4; }
+.term-def { font-size: 0.78rem; color: var(--text, #333); line-height: 1.55; margin-top: 0.4rem; }
+.term-points { display: none; margin-top: 0.4rem; padding-top: 0.4rem; border-top: 1px dashed var(--border, #e5e5ea); }
+.term-card.expanded .term-points { display: block; }
+.term-points ul { margin-left: 1.1rem; font-size: 0.74rem; color: var(--text-muted, #555); line-height: 1.6; }
+.term-related { font-size: 0.68rem; color: var(--text-muted, #888); margin-top: 0.3rem; }
+.term-related a { color: var(--accent, #1d1d1f); text-decoration: none; cursor: pointer; }
+.term-related a:hover { text-decoration: underline; }
+
+/* In-feed ad card（卡片格式，每 5 筆插一張） */
+.ad-card-inline {
+  background: var(--bg-card, #fff);
+  border: 1px solid var(--border, #e5e5ea);
+  border-radius: 12px;
+  padding: 0.6rem 1rem 0.8rem;
+  margin-bottom: 0.8rem;
+}
+.ad-card-inline .ad-label {
+  font-size: 0.6rem; color: var(--text-faint, #a1a1a6);
+  letter-spacing: 0.08em; text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+.ad-card-inline .ad-slot {
+  background: var(--accent-light, #f0f0f3);
+  border: 1px dashed var(--border-strong, #d2d2d7);
+  border-radius: 6px;
+  min-height: 80px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text-faint, #a1a1a6); font-size: 0.78rem;
+}
+
+/* 摘要中自動偵測的術語 */
+.term-tag {
+  background: var(--accent-light, #f0f0f3);
+  border-bottom: 1px dashed var(--accent, #1d1d1f);
+  cursor: help;
+  padding: 0 1px;
+  border-radius: 2px;
+}
+.term-tag:hover { background: var(--border-strong, #d2d2d7); }
+</style>
+  <meta property="og:title" content="學術文獻庫 — 貓健康站">
+  <meta property="og:description" content="貓健康國際權威指引索引：ISFM/AAFP/IRIS/WSAVA/ABCD/Cornell。每筆回溯原文核實。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://chen-mouchin.github.io/cat-health-tw/library.html">
+  <link rel="canonical" href="https://chen-mouchin.github.io/cat-health-tw/library.html">
+</head>
+<body>
+
+<nav class="site-nav">
+  <a class="nav-brand" href="index.html" title="回首頁"><span class="b-icon">🐱</span><span class="brand-text">貓健康站</span><span class="brand-home" aria-hidden="true">🏠</span></a>
+  <div class="nav-links">
+    <a class="nav-link active" href="library.html" data-nav="library">📚 文獻庫</a>
+    <a class="nav-link" href="breeds.html" data-nav="breeds">🐈 品種</a>
+    <a class="nav-link" href="vets.html" data-nav="vets">🏥 獸醫院</a>
+    <a class="nav-link" href="articles/index.html" data-nav="articles">📝 文章</a>
+    <a class="nav-link" href="about.html" data-nav="about">ℹ️ 關於</a>
+  </div>
+</nav>
+
+<header>
+  <div class="lang-toggle">
+    <button onclick="setLang('zh')" id="lang-zh" class="active">中</button>
+    <button onclick="setLang('en')" id="lang-en">EN</button>
+  </div>
+  <h1 data-i18n="title">學術文獻庫</h1>
+  <div class="stats">
+    <div class="stat"><span data-i18n="total">總計</span> <strong id="stat-total">-</strong></div>
+    <div class="stat"><span data-i18n="approved">已審核</span> <strong id="stat-approved">-</strong></div>
+    <div class="stat"><span data-i18n="free">免費</span> <strong id="stat-oa">-</strong></div>
+  </div>
+</header>
+
+<main>
+  <div class="controls">
+    <input id="q" type="search" data-i18n-attr="placeholder|search_placeholder" placeholder="搜尋標題、關鍵字、摘要...">
+  </div>
+
+  <!-- 專業術語庫（含組織/期刊/疾病/藥物/檢驗/文獻類型 — 統一維護） -->
+  <div class="filter-group" data-group="terms">
+    <div class="filter-header" onclick="toggleGroup('terms')">
+      <span class="label" data-i18n="filter_terms">📚 專業術語庫（SDMA / CKD / FIP...）</span>
+      <span class="count" id="count-terms"></span>
+      <span class="arrow">▶</span>
+    </div>
+    <div class="filter-body terms-body" id="filter-terms"></div>
+  </div>
+
+  <!-- 疾病主題快速選 -->
+  <div class="filter-group open" data-group="topic">
+    <div class="filter-header" onclick="toggleGroup('topic')">
+      <span class="label" data-i18n="filter_topic">🏷️ 主題</span>
+      <span class="count" id="count-topic"></span>
+      <span class="arrow">▶</span>
+    </div>
+    <div class="filter-body" id="filter-topic"></div>
+  </div>
+
+  <!-- 來源（多選）-->
+  <div class="filter-group" data-group="source">
+    <div class="filter-header" onclick="toggleGroup('source')">
+      <span class="label" data-i18n="filter_source">📚 來源（可複選）</span>
+      <span class="count" id="count-source"></span>
+      <span class="arrow">▶</span>
+    </div>
+    <div class="filter-body" id="filter-source"></div>
+  </div>
+
+  <!-- 審核狀態 -->
+  <div class="filter-group" data-group="status">
+    <div class="filter-header" onclick="toggleGroup('status')">
+      <span class="label" data-i18n="filter_status">✅ 審核狀態</span>
+      <span class="count" id="count-status"></span>
+      <span class="arrow">▶</span>
+    </div>
+    <div class="filter-body" id="filter-status"></div>
+  </div>
+
+  <!-- 語言 / 類型 -->
+  <div class="filter-group" data-group="meta">
+    <div class="filter-header" onclick="toggleGroup('meta')">
+      <span class="label" data-i18n="filter_meta">🌐 語言 / 類型</span>
+      <span class="count" id="count-meta"></span>
+      <span class="arrow">▶</span>
+    </div>
+    <div class="filter-body" id="filter-meta"></div>
+  </div>
+
+  <div class="hint" id="hint">
+    <span id="hint-text">載入中...</span>
+    <span class="clear-btn" id="clear-btn" onclick="clearFilters()" style="display:none">✕ <span data-i18n="clear">清除全部</span></span>
+  </div>
+
+  <aside class="site-ad-compact" aria-label="贊助廣告">
+    <div class="ad-label">贊助</div>
+    <div class="ad-slot"><span>Ad Slot · compact (responsive)</span></div>
+  </aside>
+
+  <div id="results"></div>
+</main>
+
+<aside class="site-ad-banner" aria-label="贊助廣告">
+  <div class="ad-card">
+    <div class="ad-label">贊助 Sponsored</div>
+    <div class="ad-slot"><span>Ad Slot · banner (responsive)</span></div>
+  </div>
+</aside>
+
+<footer class="site-footer">
+  <div class="f-nav">
+    <a class="f-home" href="index.html">🏠 回首頁</a>
+    <a href="library.html">📚 文獻庫</a>
+    <a href="breeds.html">🐈 品種圖鑑</a>
+    <a href="vets.html">🏥 獸醫院</a>
+    <a href="articles/index.html">📝 文章</a>
+    <a href="about.html">ℹ️ 關於本站</a>
+    <a href="privacy.html">🔒 隱私政策</a>
+  </div>
+  <div class="f-meta">
+    貓健康站 · 學術來源：ISFM · WSAVA · IRIS · AAFP · ABCD · Cornell · PubMed OA<br>
+    本站內容僅供參考，不取代獸醫師診斷
+  </div>
+</footer>
+
+<aside class="site-ad-anchor" aria-label="贊助廣告">
+  <div class="ad-label">贊助</div>
+  <div class="ad-slot"><span>Ad Slot · anchor (sticky bottom)</span></div>
+  <button class="ad-close" aria-label="關閉廣告 24 小時" title="關閉 24 小時">✕</button>
+</aside>
+<script src="js/ads.js"></script>
+
+<script>
+// ─────────────────────────────────────────────────────────────
+// i18n
+// ─────────────────────────────────────────────────────────────
+const I18N = {
+  zh: {
+    title: '學術文獻庫',
+    total: '總計', approved: '已審核', free: '免費',
+    search_placeholder: '搜尋標題、關鍵字、摘要...',
+    filter_topic: '🏷️ 主題', filter_source: '📚 來源（可複選）',
+    filter_status: '✅ 審核狀態', filter_meta: '🌐 語言 / 類型（可複選）',
+    filter_terms: '📚 專業術語庫（組織/期刊/疾病/藥物/檢驗/文獻類型）',
+    cat_lab_marker: '檢驗指標', cat_disease: '疾病', cat_pathogen: '病原',
+    cat_drug: '藥物', cat_vaccine: '疫苗', cat_organization: '組織', cat_journal: '期刊', cat_physiology: '生理', cat_citation_type: '文獻類型',
+    cat_all: '全部', term_more: '展開重點 ▼', term_less: '收起 ▲',
+    term_related: '相關：',
+    clear: '清除全部', back_home: '← 回首頁', footer_workflow: '流程說明見',
+    s_all: '全部', s_approved: '已審核', s_pending: '待審', s_rejected: '已駁回',
+    no_results: '沒有符合的文獻',
+    badge_approved: '已審核', badge_pending: '待審', badge_rejected: '已駁回',
+    badge_oa: 'OA 免費', badge_paid: '付費', badge_verified: 'URL ✓',
+    badge_untranslated: '未翻譯', badge_no_abstract: '缺摘要',
+    found: '筆',
+    only_untranslated: '只看未翻譯', only_no_abstract: '只看缺摘要',
+  },
+  en: {
+    title: 'Citation Library',
+    total: 'Total', approved: 'Approved', free: 'Free',
+    search_placeholder: 'Search title, keywords, abstract...',
+    filter_topic: '🏷️ Topic', filter_source: '📚 Source (multi)',
+    filter_status: '✅ Status', filter_meta: '🌐 Language / Type (multi)',
+    filter_terms: '📚 Glossary (Orgs/Journals/Diseases/Drugs/Labs/Citation Types)',
+    cat_lab_marker: 'Lab Markers', cat_disease: 'Diseases', cat_pathogen: 'Pathogens',
+    cat_drug: 'Drugs', cat_vaccine: 'Vaccines', cat_organization: 'Organizations', cat_journal: 'Journals', cat_physiology: 'Physiology', cat_citation_type: 'Citation Types',
+    cat_all: 'All', term_more: 'Expand ▼', term_less: 'Collapse ▲',
+    term_related: 'Related:',
+    clear: 'Clear all', back_home: '← Home', footer_workflow: 'See workflow:',
+    s_all: 'All', s_approved: 'Approved', s_pending: 'Pending', s_rejected: 'Rejected',
+    no_results: 'No matching citations',
+    badge_approved: 'Approved', badge_pending: 'Pending', badge_rejected: 'Rejected',
+    badge_oa: 'Open Access', badge_paid: 'Paywall', badge_verified: 'URL ✓',
+    badge_untranslated: 'No ZH', badge_no_abstract: 'No abstract',
+    found: 'records',
+    only_untranslated: 'Untranslated only', only_no_abstract: 'Missing abstract only',
+  }
+};
+
+// 文獻類型對照（學術術語有國際標準，翻譯不會偏誤）
+// 來源縮寫（AAFP/ISFM/IRIS...）已併入 glossary.json 的 organization/journal 分類
+// → 統一在「📚 專業術語庫」維護，避免兩處重複
+//
+// data 中 source 別名 → glossary.json key 的映射（僅處理對不上的別名）
+const SOURCE_KEY_MAP = {
+  'JVMS (J-STAGE)': 'JVMS',
+  'Applied Animal Behaviour Science': 'AABS',
+  'iris-kidney.com': 'IRIS',
+};
+
+const TOPIC_LABELS = {
+  zh: {
+    ckd: '腎病 CKD', diabetes: '糖尿病', flutd: '下泌尿道', fip: '傳腹 FIP',
+    hcm: '心臟病', hyperthyroidism: '甲亢', emergency: '急診', dental: '牙科',
+    senior_care: '老貓照護', vaccination: '疫苗', felv: '貓白血病', fiv: '貓愛滋',
+    behavior: '行為', enrichment: '環境豐富化', nutrition: '營養', pain: '疼痛',
+    arthritis: '關節炎', palliative: '安寧', toxicology: '毒物', vet_visit: '看診',
+    fluid_therapy: '輸液', regulation: '法規',
+  },
+  en: {
+    ckd: 'CKD', diabetes: 'Diabetes', flutd: 'FLUTD', fip: 'FIP',
+    hcm: 'HCM Heart', hyperthyroidism: 'Hyperthyroid', emergency: 'Emergency', dental: 'Dental',
+    senior_care: 'Senior', vaccination: 'Vaccination', felv: 'FeLV', fiv: 'FIV',
+    behavior: 'Behavior', enrichment: 'Enrichment', nutrition: 'Nutrition', pain: 'Pain',
+    arthritis: 'Arthritis', palliative: 'Palliative', toxicology: 'Toxicology', vet_visit: 'Vet Visit',
+    fluid_therapy: 'Fluid Therapy', regulation: 'Regulation',
+  }
+};
+
+let currentLang = localStorage.getItem('library_lang') || 'zh';
+
+function t(key) { return I18N[currentLang][key] || key; }
+function tt(key) { return TOPIC_LABELS[currentLang][key] || key; }
+
+function applyI18n() {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.dataset.i18n;
+    if (I18N[currentLang][key]) el.textContent = I18N[currentLang][key];
+  });
+  document.querySelectorAll('[data-i18n-attr]').forEach(el => {
+    const [attr, key] = el.dataset.i18nAttr.split('|');
+    if (I18N[currentLang][key]) el.setAttribute(attr, I18N[currentLang][key]);
+  });
+  document.documentElement.lang = currentLang === 'zh' ? 'zh-TW' : 'en';
+}
+
+function setLang(lang) {
+  currentLang = lang;
+  localStorage.setItem('library_lang', lang);
+  document.getElementById('lang-zh').classList.toggle('active', lang === 'zh');
+  document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+  applyI18n();
+  buildFilters();
+  if (Object.keys(glossary).length) buildTerms();
+  render();
+}
+
+// ─────────────────────────────────────────────────────────────
+// State
+// ─────────────────────────────────────────────────────────────
+let citations = {};
+let glossary = {};
+let termRegex = null; // 自動偵測摘要中的術語
+let termCategoryFilter = 'all';
+let filters = {
+  status: 'all',
+  sources: new Set(),
+  topics: new Set(),
+  languages: new Set(),
+  types: new Set(),
+  untranslated: false,
+  noAbstract: false,
+};
+
+function toggleGroup(name) {
+  document.querySelectorAll(`.filter-group[data-group="${name}"]`).forEach(g => g.classList.toggle('open'));
+}
+
+function clearFilters() {
+  filters = { status:'all', sources:new Set(), topics:new Set(), languages:new Set(), types:new Set(), untranslated:false, noAbstract:false };
+  document.getElementById('q').value = '';
+  buildFilters();
+  render();
+}
+
+// ─────────────────────────────────────────────────────────────
+// Load
+// ─────────────────────────────────────────────────────────────
+async function load() {
+  const [citResp, glossResp] = await Promise.all([
+    fetch('./data/citations.json'),
+    fetch('./data/glossary.json'),
+  ]);
+  const data = await citResp.json();
+  delete data._meta;
+  citations = data;
+
+  const gdata = await glossResp.json();
+  delete gdata._meta;
+  glossary = gdata;
+  buildTermRegex();
+
+  const entries = Object.values(citations);
+  document.getElementById('stat-total').textContent = entries.length;
+  document.getElementById('stat-approved').textContent = entries.filter(e => e.status === 'approved').length;
+  document.getElementById('stat-oa').textContent = entries.filter(e => e.open_access).length;
+
+  document.getElementById('q').addEventListener('input', render);
+
+  // 從 URL ?q= 預填搜尋（首頁搜尋框跳轉用）
+  const urlQ = new URL(location.href).searchParams.get('q');
+  if (urlQ) document.getElementById('q').value = urlQ;
+
+  applyI18n();
+  buildFilters();
+  buildTerms();
+  render();
+  openCitationFromURL();
+}
+
+function buildTermRegex() {
+  // 收集所有術語別名（排除 citation_type — 那是 metadata，不該在摘要中亂標）
+  const aliases = new Set();
+  Object.entries(glossary).forEach(([k, g]) => {
+    if (g.category !== 'citation_type') aliases.add(k);
+  });
+  Object.keys(SOURCE_KEY_MAP).forEach(k => aliases.add(k));
+  // 按長度倒排，避免短詞先匹配（如 IRIS 不會被 IR 截斷）
+  const sorted = [...aliases].sort((a, b) => b.length - a.length);
+  const escaped = sorted.map(s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+  termRegex = new RegExp('\\b(' + escaped.join('|') + ')\\b', 'g');
+}
+
+// 別名 → glossary key
+function resolveTermKey(alias) {
+  if (glossary[alias]) return alias;
+  if (SOURCE_KEY_MAP[alias] && glossary[SOURCE_KEY_MAP[alias]]) return SOURCE_KEY_MAP[alias];
+  return null;
+}
+
+function buildFilters() {
+  const entries = Object.values(citations);
+
+  // Status
+  const sf = document.getElementById('filter-status');
+  sf.innerHTML = '';
+  ['all','approved','pending_review','rejected'].forEach(s => {
+    const labelKey = {all:'s_all', approved:'s_approved', pending_review:'s_pending', rejected:'s_rejected'}[s];
+    const cnt = s==='all' ? entries.length : entries.filter(e=>e.status===s).length;
+    const b = mkBtn(`${t(labelKey)} (${cnt})`, filters.status===s);
+    b.onclick = () => { filters.status = s; buildFilters(); render(); };
+    sf.appendChild(b);
+  });
+  // 分隔
+  const sep1 = document.createElement('span');
+  sep1.style.cssText = 'color:#ccc;margin:0 0.3rem;font-size:0.75rem;align-self:center';
+  sep1.textContent = '|';
+  sf.appendChild(sep1);
+  // 快速：未翻譯
+  const untrCnt = entries.filter(e => !e.title_zh).length;
+  const bUntr = mkBtn(`⏳ ${t('only_untranslated')} (${untrCnt})`, filters.untranslated);
+  bUntr.onclick = () => { filters.untranslated = !filters.untranslated; buildFilters(); render(); };
+  sf.appendChild(bUntr);
+  // 快速：缺摘要
+  const noAbsCnt = entries.filter(e => !e.abstract_zh).length;
+  const bNoAbs = mkBtn(`📝 ${t('only_no_abstract')} (${noAbsCnt})`, filters.noAbstract);
+  bNoAbs.onclick = () => { filters.noAbstract = !filters.noAbstract; buildFilters(); render(); };
+  sf.appendChild(bNoAbs);
+
+  // Source（多選）
+  const srcCounts = {};
+  entries.forEach(e => { srcCounts[e.source] = (srcCounts[e.source]||0)+1; });
+  const sources = Object.entries(srcCounts).sort((a,b)=>b[1]-a[1]);
+  const srcDiv = document.getElementById('filter-source');
+  srcDiv.innerHTML = '';
+  sources.forEach(([src, cnt]) => {
+    const b = mkBtn(`${src} (${cnt})`, filters.sources.has(src));
+    b.onclick = () => {
+      filters.sources.has(src) ? filters.sources.delete(src) : filters.sources.add(src);
+      buildFilters(); render();
+    };
+    srcDiv.appendChild(b);
+  });
+
+  // Topic（多選）
+  const topicCounts = {};
+  entries.forEach(e => (e.disease_tags||[]).forEach(t => { topicCounts[t] = (topicCounts[t]||0)+1; }));
+  const topics = Object.entries(topicCounts).sort((a,b)=>b[1]-a[1]);
+  const tDiv = document.getElementById('filter-topic');
+  tDiv.innerHTML = '';
+  topics.forEach(([topic, cnt]) => {
+    const b = mkBtn(`${tt(topic)} (${cnt})`, filters.topics.has(topic));
+    b.onclick = () => {
+      filters.topics.has(topic) ? filters.topics.delete(topic) : filters.topics.add(topic);
+      buildFilters(); render();
+    };
+    tDiv.appendChild(b);
+  });
+
+  // Meta: language + type（皆多選 + 點擊取消）
+  const mDiv = document.getElementById('filter-meta');
+  mDiv.innerHTML = '';
+  const langs = [...new Set(entries.map(e=>e.language))].filter(Boolean).sort();
+  const langLabel = {zh: {'en':'英文','zh-TW':'繁中','ja':'日文','zh':'中文'}, en: {'en':'English','zh-TW':'Traditional Chinese','ja':'Japanese','zh':'Chinese'}};
+  langs.forEach(l => {
+    const cnt = entries.filter(e=>e.language===l).length;
+    const lbl = (langLabel[currentLang] && langLabel[currentLang][l]) || l;
+    const b = mkBtn(`${lbl} (${cnt})`, filters.languages.has(l));
+    b.onclick = () => {
+      filters.languages.has(l) ? filters.languages.delete(l) : filters.languages.add(l);
+      buildFilters(); render();
+    };
+    mDiv.appendChild(b);
+  });
+  // Separator
+  const sep = document.createElement('span');
+  sep.style.cssText = 'color:#ccc;margin:0 0.3rem;font-size:0.75rem;align-self:center';
+  sep.textContent = '|';
+  mDiv.appendChild(sep);
+  const types = [...new Set(entries.map(e=>e.type))].filter(Boolean).sort();
+  types.forEach(ty => {
+    const cnt = entries.filter(e=>e.type===ty).length;
+    const tg = glossary[ty]; // 文獻類型也在 glossary.json 中
+    const lbl = tg ? (currentLang === 'zh' ? tg.full_zh : tg.full_en) : ty;
+    const b = mkBtn(`${lbl} (${cnt})`, filters.types.has(ty));
+    b.title = tg ? `${tg.full_en} / ${tg.full_zh}\n${tg.definition_zh || ''}` : ty;
+    b.onclick = () => {
+      filters.types.has(ty) ? filters.types.delete(ty) : filters.types.add(ty);
+      buildFilters(); render();
+    };
+    mDiv.appendChild(b);
+  });
+
+  // Update counts in headers
+  updateGroupCount('topic', filters.topics.size);
+  updateGroupCount('source', filters.sources.size);
+  updateGroupCount('status', (filters.status === 'all' ? 0 : 1) + (filters.untranslated?1:0) + (filters.noAbstract?1:0));
+  updateGroupCount('meta', filters.languages.size + filters.types.size);
+
+  // Show/hide clear button
+  const hasFilters = filters.status!=='all' || filters.sources.size || filters.topics.size
+                     || filters.languages.size || filters.types.size
+                     || filters.untranslated || filters.noAbstract
+                     || document.getElementById('q').value;
+  document.getElementById('clear-btn').style.display = hasFilters ? 'inline' : 'none';
+}
+
+function updateGroupCount(name, n) {
+  const el = document.getElementById(`count-${name}`);
+  if (el) el.textContent = n > 0 ? `· ${n}` : '';
+}
+
+function buildTerms() {
+  const container = document.getElementById('filter-terms');
+  container.innerHTML = '';
+  const entries = Object.entries(glossary);
+
+  // Category counts
+  const catCounts = {};
+  entries.forEach(([_, g]) => { catCounts[g.category] = (catCounts[g.category]||0)+1; });
+  const cats = ['all', ...Object.keys(catCounts).sort()];
+
+  // Category bar
+  const bar = document.createElement('div');
+  bar.className = 'term-cat-bar';
+  cats.forEach(c => {
+    const lbl = c === 'all'
+      ? `${t('cat_all')} (${entries.length})`
+      : `${t('cat_' + c) || c} (${catCounts[c]})`;
+    const b = mkBtn(lbl, termCategoryFilter === c);
+    b.onclick = () => { termCategoryFilter = c; buildTerms(); };
+    bar.appendChild(b);
+  });
+  container.appendChild(bar);
+
+  // Term grid
+  const grid = document.createElement('div');
+  grid.className = 'term-grid';
+  const filtered = entries.filter(([_, g]) =>
+    termCategoryFilter === 'all' || g.category === termCategoryFilter
+  );
+  filtered.forEach(([key, g]) => grid.appendChild(renderTermCard(key, g)));
+  container.appendChild(grid);
+
+  document.getElementById('count-terms').textContent = `· ${entries.length}`;
+}
+
+function renderTermCard(key, g) {
+  const card = document.createElement('div');
+  card.className = 'term-card';
+  card.id = `term-${key}`;
+  const points = (g.key_points_zh || []).map(p => `<li>${escapeHtml(p)}</li>`).join('');
+  const related = (g.related || []).map(r =>
+    `<a data-term="${escapeHtml(r)}">${escapeHtml(r)}</a>`
+  ).join(' · ');
+
+  card.innerHTML = `
+    <div class="term-head">
+      <span class="term-key">${escapeHtml(g.term || key)}</span>
+      <span class="term-cat ${g.category}">${escapeHtml(t('cat_' + g.category) || g.category)}</span>
+    </div>
+    <div class="term-full">${escapeHtml(g.full_en || '')} ｜ ${escapeHtml(g.full_zh || '')}</div>
+    <div class="term-def">${escapeHtml(g.definition_zh || '')}</div>
+    <div class="term-points">
+      ${points ? `<ul>${points}</ul>` : ''}
+      ${related ? `<div class="term-related">${t('term_related')} ${related}</div>` : ''}
+    </div>
+  `;
+  card.onclick = (ev) => {
+    if (ev.target.tagName === 'A' && ev.target.dataset.term) {
+      ev.stopPropagation();
+      jumpToTerm(ev.target.dataset.term);
+      return;
+    }
+    card.classList.toggle('expanded');
+  };
+  return card;
+}
+
+function jumpToTerm(key) {
+  if (!glossary[key]) return;
+  // 開啟術語區
+  const grp = document.querySelector('.filter-group[data-group="terms"]');
+  if (grp && !grp.classList.contains('open')) grp.classList.add('open');
+  // 切到該分類
+  termCategoryFilter = glossary[key].category;
+  buildTerms();
+  setTimeout(() => {
+    const el = document.getElementById(`term-${key}`);
+    if (el) {
+      el.classList.add('expanded', 'highlight');
+      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      setTimeout(() => el.classList.remove('highlight'), 2000);
+    }
+  }, 50);
+}
+
+// 把摘要中出現的術語包成可點 tooltip
+function highlightTerms(text) {
+  if (!termRegex || !text) return escapeHtml(text || '');
+  const escaped = escapeHtml(text);
+  return escaped.replace(termRegex, (m) => {
+    const key = resolveTermKey(m);
+    if (!key) return m;
+    const g = glossary[key];
+    const tip = `${g.full_en} | ${g.full_zh}\n${g.definition_zh}`;
+    return `<span class="term-tag" data-term="${escapeHtml(key)}" title="${escapeHtml(tip)}">${m}</span>`;
+  });
+}
+
+function mkBtn(label, active) {
+  const b = document.createElement('span');
+  b.className = 'filter-btn' + (active ? ' active' : '');
+  b.textContent = label;
+  return b;
+}
+
+// ─────────────────────────────────────────────────────────────
+// Render
+// ─────────────────────────────────────────────────────────────
+function render() {
+  const q = document.getElementById('q').value.trim().toLowerCase();
+  let filtered = Object.entries(citations);
+
+  if (filters.status !== 'all') {
+    filtered = filtered.filter(([_, e]) => e.status === filters.status);
+  }
+  if (filters.sources.size) {
+    filtered = filtered.filter(([_, e]) => filters.sources.has(e.source));
+  }
+  if (filters.topics.size) {
+    filtered = filtered.filter(([_, e]) => (e.disease_tags||[]).some(t => filters.topics.has(t)));
+  }
+  if (filters.languages.size) {
+    filtered = filtered.filter(([_, e]) => filters.languages.has(e.language));
+  }
+  if (filters.types.size) {
+    filtered = filtered.filter(([_, e]) => filters.types.has(e.type));
+  }
+  if (filters.untranslated) {
+    filtered = filtered.filter(([_, e]) => !e.title_zh);
+  }
+  if (filters.noAbstract) {
+    filtered = filtered.filter(([_, e]) => !e.abstract_zh);
+  }
+  if (q) {
+    filtered = filtered.filter(([cid, e]) => {
+      const text = (cid + ' ' + (e.title||'') + ' ' + (e.title_zh||'') + ' ' + (e.abstract_zh||'') + ' ' + (e.keywords||[]).join(' ')).toLowerCase();
+      return text.includes(q);
+    });
+  }
+
+  filtered.sort(([, a], [, b]) => {
+    const sa = a.status === 'approved' ? 0 : 1;
+    const sb = b.status === 'approved' ? 0 : 1;
+    if (sa !== sb) return sa - sb;
+    return (b.year || 0) - (a.year || 0);
+  });
+
+  document.getElementById('hint-text').textContent = `${filtered.length} ${t('found')}`;
+  buildFilters(); // refresh clear button state
+
+  // 產卡片 + 每 10 筆插一張廣告卡（總筆數 > 10 才啟用）
+  const cards = filtered.map(([cid, e]) => renderCard(cid, e));
+  let html;
+  if (cards.length > 10) {
+    const interleaved = [];
+    cards.forEach((card, i) => {
+      interleaved.push(card);
+      // 第 10、20、30... 之後插廣告，但最後一筆後不插
+      if ((i + 1) % 10 === 0 && i < cards.length - 1) {
+        interleaved.push(renderAdInFeed());
+      }
+    });
+    html = interleaved.join('');
+  } else {
+    html = cards.join('');
+  }
+  document.getElementById('results').innerHTML = html || `<div class="hint">${t('no_results')}</div>`;
+
+  document.querySelectorAll('.card-abstract').forEach(el => {
+    el.onclick = (ev) => {
+      // 點擊術語 tag → 跳到術語庫，不展開摘要
+      if (ev.target.classList.contains('term-tag') && ev.target.dataset.term) {
+        ev.stopPropagation();
+        jumpToTerm(ev.target.dataset.term);
+        return;
+      }
+      el.classList.toggle('expanded');
+    };
+  });
+  document.querySelectorAll('.keyword[data-kw]').forEach(el => {
+    el.onclick = () => {
+      document.getElementById('q').value = el.dataset.kw;
+      render();
+    };
+  });
+}
+
+function escapeHtml(s) {
+  return (s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+// 每 5 筆插一張廣告卡（同 banner ad unit，不同樣式）
+function renderAdInFeed() {
+  const lbl = currentLang === 'zh' ? '贊助' : 'Sponsored';
+  return `
+    <div class="ad-card-inline" data-ad-slot="banner">
+      <div class="ad-label">${lbl}</div>
+      <div class="ad-slot"><span>Ad Slot · in-feed (responsive)</span></div>
+    </div>
+  `;
+}
+
+function renderCard(cid, e) {
+  const statusBadge = {
+    approved: `<span class="badge badge-approved">${t('badge_approved')}</span>`,
+    pending_review: `<span class="badge badge-pending">${t('badge_pending')}</span>`,
+    rejected: `<span class="badge badge-rejected">${t('badge_rejected')}</span>`,
+  }[e.status] || '';
+  const oaBadge = e.open_access
+    ? `<span class="badge badge-oa">${t('badge_oa')}</span>`
+    : `<span class="badge badge-paid">${t('badge_paid')}</span>`;
+  const verifiedBadge = e.url_verified ? `<span class="badge badge-verified">${t('badge_verified')}</span>` : '';
+  const untranslatedBadge = (currentLang === 'zh' && !e.title_zh) ? `<span class="badge badge-untranslated">${t('badge_untranslated')}</span>` : '';
+  const noAbstractBadge = !e.abstract_zh ? `<span class="badge badge-no-abstract">${t('badge_no_abstract')}</span>` : '';
+
+  // cited_by badge + 展開列表
+  const citedBy = e.cited_by || [];
+  const citedBadge = citedBy.length
+    ? `<span class="badge badge-cited" onclick="toggleCitedBy(event, '${cid}')" title="被 ${citedBy.length} 篇文章引用">📚 ×${citedBy.length}</span>`
+    : '';
+
+  const keywords = (e.keywords || []).map(k => `<span class="keyword" data-kw="${escapeHtml(k)}">${escapeHtml(k)}</span>`).join('');
+  const journal = e.journal ? ` · ${escapeHtml(e.journal)}` : '';
+
+  // 中英顯示策略：currentLang=zh 時優先 zh 標題，en 時用英文
+  const primaryTitle = currentLang === 'zh' ? (e.title_zh || e.title) : e.title;
+  const secondaryTitle = currentLang === 'zh'
+    ? (e.title_zh && e.title_zh !== e.title ? e.title : '')
+    : (e.title_zh || '');
+
+  return `
+    <div class="card" id="citation-${cid}" data-cid="${cid}">
+      <div class="card-header">
+        <span class="cid">${escapeHtml(cid)}</span>
+        ${statusBadge} ${oaBadge} ${verifiedBadge} ${untranslatedBadge} ${noAbstractBadge} ${citedBadge}
+      </div>
+      <div class="card-title">${escapeHtml(primaryTitle || '')}</div>
+      ${secondaryTitle ? `<div class="card-title-zh">${escapeHtml(secondaryTitle)}</div>` : ''}
+      <div class="card-meta">${escapeHtml(e.authors || '')} · ${escapeHtml(e.source || '')}${journal} · ${e.year || ''}</div>
+      ${e.abstract_zh ? `<div class="card-abstract">${highlightTerms(e.abstract_zh)}</div>` : ''}
+      ${keywords ? `<div class="card-keywords">${keywords}</div>` : ''}
+      ${citedBy.length ? `<div class="cited-by" id="cited-by-${cid}" hidden>${renderCitedByList(citedBy)}</div>` : ''}
+      ${e.url ? `<div class="card-link">🔗 <a href="${escapeHtml(e.url)}" target="_blank" rel="noopener">${escapeHtml(e.url)}</a></div>` : ''}
+      ${e.notes ? `<div class="card-notes">${escapeHtml(e.notes)}</div>` : ''}
+    </div>
+  `;
+}
+
+function renderCitedByList(slugs) {
+  const label = currentLang === 'zh' ? '被以下文章引用：' : 'Cited by:';
+  const items = slugs.map(s => `<li><a href="articles/${escapeHtml(s)}.html" target="_blank" rel="noopener">${escapeHtml(s)}</a></li>`).join('');
+  return `<div class="cited-by-label">${label}</div><ul>${items}</ul>`;
+}
+
+function toggleCitedBy(ev, cid) {
+  ev.stopPropagation();
+  const el = document.getElementById('cited-by-' + cid);
+  if (el) el.hidden = !el.hidden;
+}
+
+// ?id=XXX URL 深連結：自動捲動 + 高亮
+function openCitationFromURL() {
+  const id = new URL(location.href).searchParams.get('id');
+  if (!id) return;
+  // 需等 render 完
+  setTimeout(() => {
+    const el = document.getElementById('citation-' + id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      el.classList.add('citation-highlight');
+      setTimeout(() => el.classList.remove('citation-highlight'), 3000);
+    }
+  }, 100);
+}
+
+setLang(currentLang);
+load();
+</script>
+</body>
+</html>

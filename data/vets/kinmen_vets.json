@@ -1,0 +1,62 @@
+[
+  {
+    "name": "育宸動物醫院",
+    "city": "金門縣",
+    "district": "金城鎮",
+    "address": "金門縣金城鎮民族路219號",
+    "tel": "(082)371628",
+    "business_hours": "",
+    "vet_name": "許丕林",
+    "license": "(102)疫政字第1號",
+    "source": "農業部 open data (data.gov.tw/dataset/8705)",
+    "crawled_at": "2026-04-20T17:32:46.842160+00:00"
+  },
+  {
+    "name": "金門同伴動物醫院",
+    "city": "金門縣",
+    "district": "金湖鎮",
+    "address": "金門縣金湖鎮山外里下莊光武路22號",
+    "tel": "(082)331090",
+    "business_hours": "",
+    "vet_name": "徐曉萍",
+    "license": "(104)疫政字第2號",
+    "source": "農業部 open data (data.gov.tw/dataset/8705)",
+    "crawled_at": "2026-04-20T17:32:46.842160+00:00"
+  },
+  {
+    "name": "旺旺動物醫院",
+    "city": "金門縣",
+    "district": "金城鎮",
+    "address": "金門縣金城鎮民權路30巷2弄1號",
+    "tel": "",
+    "business_hours": "",
+    "vet_name": "呂榮集",
+    "license": "(106)疫政字第1號",
+    "source": "農業部 open data (data.gov.tw/dataset/8705)",
+    "crawled_at": "2026-04-20T17:32:46.842160+00:00"
+  },
+  {
+    "name": "金門縣野生動物救傷站",
+    "city": "金門縣",
+    "district": "金湖鎮",
+    "address": "金門縣金湖鎮南雄30號",
+    "tel": "",
+    "business_hours": "",
+    "vet_name": "陳亭",
+    "license": "(111)疫政字第1號",
+    "source": "農業部 open data (data.gov.tw/dataset/8705)",
+    "crawled_at": "2026-04-20T17:32:46.842160+00:00"
+  },
+  {
+    "name": "小宏動物醫院",
+    "city": "金門縣",
+    "district": "金寧鄉",
+    "address": "金門縣金寧鄉慈湖路一段113號",
+    "tel": "",
+    "business_hours": "",
+    "vet_name": "莊友宏",
+    "license": "(114)疫政字第1號",
+    "source": "農業部 open data (data.gov.tw/dataset/8705)",
+    "crawled_at": "2026-04-20T17:32:46.842160+00:00"
+  }
+]

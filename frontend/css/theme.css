@@ -1,0 +1,80 @@
+/* theme.css — Neko Pedia 簡約中性配色
+ * 設計原則：
+ *   - 低飽和度，無廣色域
+ *   - 灰階為主，accent 用近黑
+ *   - 警示色（draft 紅、ad 灰）保留功能性
+ *   - sRGB 安全範圍
+ */
+
+:root {
+  --bg: #f9f6f0;                 /* 溫暖奶油米色 — 保留原本的溫潤感 */
+  --bg-card: #ffffff;
+  --text: #1d1d1f;
+  --text-muted: #6e6e73;
+  --text-faint: #a1a1a6;
+
+  /* accent = 近黑，無色相 */
+  --accent: #1d1d1f;
+  --accent-hover: #424245;
+  --accent-light: #f0ede6;       /* 淺米灰（配合 bg 調暖調）*/
+  --accent-on: #ffffff;
+
+  --border: #e8e4db;             /* 暖米邊框（原本 #e5e5ea 過冷）*/
+  --border-strong: #d4cfc3;
+  --shadow: rgba(0, 0, 0, 0.06);
+
+  /* 純色塊（無字）— 進度條/圖表/雷達圖等可用，避免在文字容器使用 */
+  --bar-fill: #5b8a6e;        /* 低飽和苔綠，視覺有節奏不刺眼 */
+  --bar-fill-bg: #e5e5ea;     /* 槽底 = border 色 */
+
+  /* 為相容舊樣式保留，但同步調為中性 */
+  --header-bg: #f5f5f7;
+  --header-text: #1d1d1f;
+}
+
+
+/* Header controls：theme + lang switcher
+ * 改用中性色，不依賴 header 是否為彩色背景
+ */
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+
+#themeBtn {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--text);
+  line-height: 1;
+}
+
+#themeBtn:hover {
+  background: var(--accent-light);
+}
+
+.lang-btn {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 3px 8px;
+  cursor: pointer;
+  color: var(--text);
+  font-size: 0.78rem;
+}
+
+.lang-btn:hover {
+  background: var(--accent-light);
+}
+
+.lang-btn.active {
+  background: var(--accent);
+  color: var(--accent-on);
+  border-color: var(--accent);
+  font-weight: 600;
+}

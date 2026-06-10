@@ -1,0 +1,22 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# 品種圖鑑（首次執行 scrapers/thecatapi.py 後產生，可大）
+data/breeds_en.json
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# 機密（如未來放 API key）
+*secret*.json
+.env
+
+# 內部檢核/研究筆記（不公開）
+research/

@@ -1,0 +1,4052 @@
+{
+  "_meta": {
+    "source": "thecatapi.com",
+    "fetched_at": "2026-04-18 22:46:48",
+    "count": 67,
+    "api_key_used": false
+  },
+  "breeds": {
+    "abys": {
+      "id": "abys",
+      "name_en": "Abyssinian",
+      "name_zh_hint": "阿比西尼亞貓",
+      "alt_names": [],
+      "origin": "Egypt",
+      "country_code": "EG",
+      "description_en": "The Abyssinian is easy to care for, and a joy to have in your home. They’re affectionate cats and love both people and other animals.",
+      "temperament_en": [
+        "Active",
+        "Energetic",
+        "Independent",
+        "Intelligent",
+        "Gentle"
+      ],
+      "life_span": "14 - 15",
+      "weight": {
+        "imperial": "7  -  10",
+        "metric": "3 - 5"
+      },
+      "scores": {
+        "energy": 5,
+        "grooming": 1,
+        "intelligence": 5,
+        "affection": 5,
+        "child_friendly": 3,
+        "stranger_friendly": 5,
+        "social_needs": 5,
+        "vocalisation": 1,
+        "health_issues": 2,
+        "shedding": 2,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": true,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": true
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Abyssinian_(cat)",
+      "images": [
+        "https://cdn2.thecatapi.com/images/xnzzM6MBI.jpg",
+        "https://cdn2.thecatapi.com/images/EHG3sOpAM.jpg",
+        "https://cdn2.thecatapi.com/images/unPP08xOZ.jpg",
+        "https://cdn2.thecatapi.com/images/N-94oSJ5T.jpg",
+        "https://cdn2.thecatapi.com/images/itfFA4NWS.jpg",
+        "https://cdn2.thecatapi.com/images/9x1zk_Qdr.jpg",
+        "https://cdn2.thecatapi.com/images/Kq8__jmkT.jpg",
+        "https://cdn2.thecatapi.com/images/TGuAku7fM.jpg",
+        "https://cdn2.thecatapi.com/images/MJWtDz75E.jpg",
+        "https://cdn2.thecatapi.com/images/g1j3wRjgx.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:41:49"
+    },
+    "aege": {
+      "id": "aege",
+      "name_en": "Aegean",
+      "name_zh_hint": "愛琴海貓",
+      "alt_names": [],
+      "origin": "Greece",
+      "country_code": "GR",
+      "description_en": "Native to the Greek islands known as the Cyclades in the Aegean Sea, these are natural cats, meaning they developed without humans getting involved in their breeding. As a breed, Aegean Cats are rare, although they are numerous on their home islands. They are generally friendly toward people and can be excellent cats for families with children.",
+      "temperament_en": [
+        "Affectionate",
+        "Social",
+        "Intelligent",
+        "Playful",
+        "Active"
+      ],
+      "life_span": "9 - 12",
+      "weight": {
+        "imperial": "7 - 10",
+        "metric": "3 - 5"
+      },
+      "scores": {
+        "energy": 3,
+        "grooming": 3,
+        "intelligence": 3,
+        "affection": 4,
+        "child_friendly": 4,
+        "stranger_friendly": 4,
+        "social_needs": 4,
+        "vocalisation": 3,
+        "health_issues": 1,
+        "shedding": 3,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": false,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": false
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Aegean_cat",
+      "images": [
+        "https://cdn2.thecatapi.com/images/ozEvzdVM-.jpg",
+        "https://cdn2.thecatapi.com/images/h19-vtIeX.jpg",
+        "https://cdn2.thecatapi.com/images/ks5wRxZmP.jpg",
+        "https://cdn2.thecatapi.com/images/uvt2Psd9O.jpg",
+        "https://cdn2.thecatapi.com/images/Hb2N6tYTJ.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:41:54"
+    },
+    "abob": {
+      "id": "abob",
+      "name_en": "American Bobtail",
+      "name_zh_hint": "美國短尾貓",
+      "alt_names": [],
+      "origin": "United States",
+      "country_code": "US",
+      "description_en": "American Bobtails are loving and incredibly intelligent cats possessing a distinctive wild appearance. They are extremely interactive cats that bond with their human family with great devotion.",
+      "temperament_en": [
+        "Intelligent",
+        "Interactive",
+        "Lively",
+        "Playful",
+        "Sensitive"
+      ],
+      "life_span": "11 - 15",
+      "weight": {
+        "imperial": "7 - 16",
+        "metric": "3 - 7"
+      },
+      "scores": {
+        "energy": 3,
+        "grooming": 1,
+        "intelligence": 5,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 3,
+        "social_needs": 3,
+        "vocalisation": 3,
+        "health_issues": 1,
+        "shedding": 3,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": false,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": true,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": true
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/American_Bobtail",
+      "images": [
+        "https://cdn2.thecatapi.com/images/d55E_KMKZ.jpg",
+        "https://cdn2.thecatapi.com/images/8r4M61iyS.jpg",
+        "https://cdn2.thecatapi.com/images/hBXicehMA.jpg",
+        "https://cdn2.thecatapi.com/images/gVrhv_yAY.jpg",
+        "https://cdn2.thecatapi.com/images/vH0bd0YDH.jpg",
+        "https://cdn2.thecatapi.com/images/r_njVlaSz.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:41:58"
+    },
+    "acur": {
+      "id": "acur",
+      "name_en": "American Curl",
+      "name_zh_hint": "美國捲耳貓",
+      "alt_names": [],
+      "origin": "United States",
+      "country_code": "US",
+      "description_en": "Distinguished by truly unique ears that curl back in a graceful arc, offering an alert, perky, happily surprised expression, they cause people to break out into a big smile when viewing their first Curl. Curls are very people-oriented, faithful, affectionate soulmates, adjusting remarkably fast to other pets, children, and new situations.",
+      "temperament_en": [
+        "Affectionate",
+        "Curious",
+        "Intelligent",
+        "Interactive",
+        "Lively",
+        "Playful",
+        "Social"
+      ],
+      "life_span": "12 - 16",
+      "weight": {
+        "imperial": "5 - 10",
+        "metric": "2 - 5"
+      },
+      "scores": {
+        "energy": 3,
+        "grooming": 2,
+        "intelligence": 3,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 3,
+        "social_needs": 3,
+        "vocalisation": 3,
+        "health_issues": 1,
+        "shedding": 3,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": false,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": true
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/American_Curl",
+      "images": [
+        "https://cdn2.thecatapi.com/images/TBA3JzB9P.jpg",
+        "https://cdn2.thecatapi.com/images/vJB8rwfdX.jpg",
+        "https://cdn2.thecatapi.com/images/zeKI28A21.jpg",
+        "https://cdn2.thecatapi.com/images/xnsqonbjW.jpg",
+        "https://cdn2.thecatapi.com/images/kdfcmTWJL.jpg",
+        "https://cdn2.thecatapi.com/images/ji-5E0VwY.jpg",
+        "https://cdn2.thecatapi.com/images/HVP1wfZF0.jpg",
+        "https://cdn2.thecatapi.com/images/ZZmFRKWZZ.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:42:03"
+    },
+    "asho": {
+      "id": "asho",
+      "name_en": "American Shorthair",
+      "name_zh_hint": "美國短毛貓",
+      "alt_names": [
+        "Domestic Shorthair"
+      ],
+      "origin": "United States",
+      "country_code": "US",
+      "description_en": "The American Shorthair is known for its longevity, robust health, good looks, sweet personality, and amiability with children, dogs, and other pets.",
+      "temperament_en": [
+        "Active",
+        "Curious",
+        "Easy Going",
+        "Playful",
+        "Calm"
+      ],
+      "life_span": "15 - 17",
+      "weight": {
+        "imperial": "8 - 15",
+        "metric": "4 - 7"
+      },
+      "scores": {
+        "energy": 3,
+        "grooming": 1,
+        "intelligence": 3,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 3,
+        "social_needs": 4,
+        "vocalisation": 3,
+        "health_issues": 3,
+        "shedding": 3,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": true,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": true
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/American_Shorthair",
+      "images": [
+        "https://cdn2.thecatapi.com/images/SCHe-SekW.jpg",
+        "https://cdn2.thecatapi.com/images/8NdgktL3E.jpg",
+        "https://cdn2.thecatapi.com/images/MuEGe1-Sz.jpg",
+        "https://cdn2.thecatapi.com/images/JFPROfGtQ.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:42:07"
+    },
+    "awir": {
+      "id": "awir",
+      "name_en": "American Wirehair",
+      "name_zh_hint": "美國硬毛貓",
+      "alt_names": [],
+      "origin": "United States",
+      "country_code": "US",
+      "description_en": "The American Wirehair tends to be a calm and tolerant cat who takes life as it comes. His favorite hobby is bird-watching from a sunny windowsill, and his hunting ability will stand you in good stead if insects enter the house.",
+      "temperament_en": [
+        "Affectionate",
+        "Curious",
+        "Gentle",
+        "Intelligent",
+        "Interactive",
+        "Lively",
+        "Loyal",
+        "Playful",
+        "Sensible",
+        "Social"
+      ],
+      "life_span": "14 - 18",
+      "weight": {
+        "imperial": "8 - 15",
+        "metric": "4 - 7"
+      },
+      "scores": {
+        "energy": 3,
+        "grooming": 1,
+        "intelligence": 3,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 3,
+        "social_needs": 3,
+        "vocalisation": 3,
+        "health_issues": 3,
+        "shedding": 1,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": false,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": true
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/American_Wirehair",
+      "images": [
+        "https://cdn2.thecatapi.com/images/bTo6m3PVg.jpg",
+        "https://cdn2.thecatapi.com/images/kxUakBB2o.jpg",
+        "https://cdn2.thecatapi.com/images/Q6TDnfM_O.jpg",
+        "https://cdn2.thecatapi.com/images/8D--jCd21.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:42:12"
+    },
+    "amau": {
+      "id": "amau",
+      "name_en": "Arabian Mau",
+      "name_zh_hint": "阿拉伯梅奧貓",
+      "alt_names": [
+        "Alley cat"
+      ],
+      "origin": "United Arab Emirates",
+      "country_code": "AE",
+      "description_en": "Arabian Mau cats are social and energetic. Due to their energy levels, these cats do best in homes where their owners will be able to provide them with plenty of playtime, attention and interaction from their owners. These kitties are friendly, intelligent, and adaptable, and will even get along well with other pets and children.",
+      "temperament_en": [
+        "Affectionate",
+        "Agile",
+        "Curious",
+        "Independent",
+        "Playful",
+        "Loyal"
+      ],
+      "life_span": "12 - 14",
+      "weight": {
+        "imperial": "8 - 16",
+        "metric": "4 - 7"
+      },
+      "scores": {
+        "energy": 4,
+        "grooming": 1,
+        "intelligence": 3,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 3,
+        "social_needs": 3,
+        "vocalisation": 1,
+        "health_issues": 1,
+        "shedding": 1,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": true,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": false
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Arabian_Mau",
+      "images": [
+        "https://cdn2.thecatapi.com/images/z_k-oJ8xG.jpg",
+        "https://cdn2.thecatapi.com/images/m1TeHn2dH.jpg",
+        "https://cdn2.thecatapi.com/images/cZHbIzC_l.jpg",
+        "https://cdn2.thecatapi.com/images/zlpgGWqN7.jpg",
+        "https://cdn2.thecatapi.com/images/k71ULYfRr.jpg",
+        "https://cdn2.thecatapi.com/images/mnD88Lsjd.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:42:16"
+    },
+    "amis": {
+      "id": "amis",
+      "name_en": "Australian Mist",
+      "name_zh_hint": "澳洲霧貓",
+      "alt_names": [
+        "Spotted Mist"
+      ],
+      "origin": "Australia",
+      "country_code": "AU",
+      "description_en": "The Australian Mist thrives on human companionship. Tolerant of even the youngest of children, these friendly felines enjoy playing games and being part of the hustle and bustle of a busy household. They make entertaining companions for people of all ages, and are happy to remain indoors between dusk and dawn or to be wholly indoor pets.",
+      "temperament_en": [
+        "Lively",
+        "Social",
+        "Fun-loving",
+        "Relaxed",
+        "Affectionate"
+      ],
+      "life_span": "12 - 16",
+      "weight": {
+        "imperial": "7 - 15",
+        "metric": "3 - 7"
+      },
+      "scores": {
+        "energy": 4,
+        "grooming": 3,
+        "intelligence": 4,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 4,
+        "social_needs": 4,
+        "vocalisation": 3,
+        "health_issues": 1,
+        "shedding": 3,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": false,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": true
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Australian_Mist",
+      "images": [
+        "https://cdn2.thecatapi.com/images/_6x-3TiCA.jpg",
+        "https://cdn2.thecatapi.com/images/weHGBmpb0.jpg",
+        "https://cdn2.thecatapi.com/images/7-1CtKMRr.jpg",
+        "https://cdn2.thecatapi.com/images/zTiuUpmqf.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:42:21"
+    },
+    "bali": {
+      "id": "bali",
+      "name_en": "Balinese",
+      "name_zh_hint": "峇里貓",
+      "alt_names": [
+        "Long-haired Siamese"
+      ],
+      "origin": "United States",
+      "country_code": "US",
+      "description_en": "Balinese are curious, outgoing, intelligent cats with excellent communication skills. They are known for their chatty personalities and are always eager to tell you their views on life, love, and what you’ve served them for dinner. ",
+      "temperament_en": [
+        "Affectionate",
+        "Intelligent",
+        "Playful"
+      ],
+      "life_span": "10 - 15",
+      "weight": {
+        "imperial": "4 - 10",
+        "metric": "2 - 5"
+      },
+      "scores": {
+        "energy": 5,
+        "grooming": 3,
+        "intelligence": 5,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 5,
+        "social_needs": 5,
+        "vocalisation": 5,
+        "health_issues": 3,
+        "shedding": 3,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": false,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": true,
+        "indoor": false,
+        "lap": false
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Balinese_(cat)",
+      "images": [
+        "https://cdn2.thecatapi.com/images/DBmIBhhyv.jpg",
+        "https://cdn2.thecatapi.com/images/4ndvXwCiI.jpg",
+        "https://cdn2.thecatapi.com/images/FJ89mXP4p.jpg",
+        "https://cdn2.thecatapi.com/images/aU69p2mTT.jpg",
+        "https://cdn2.thecatapi.com/images/OaTQfIktG.jpg",
+        "https://cdn2.thecatapi.com/images/wEg45kYmd.jpg",
+        "https://cdn2.thecatapi.com/images/13MkvUreZ.jpg",
+        "https://cdn2.thecatapi.com/images/obRjvWv-e.jpg",
+        "https://cdn2.thecatapi.com/images/mCbyxNhMR.jpg",
+        "https://cdn2.thecatapi.com/images/CvhOrd3S_.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:42:25"
+    },
+    "bamb": {
+      "id": "bamb",
+      "name_en": "Bambino",
+      "name_zh_hint": "矮腳貓（Bambino）",
+      "alt_names": [],
+      "origin": "United States",
+      "country_code": "US",
+      "description_en": "The Bambino is a breed of cat that was created as a cross between the Sphynx and the Munchkin breeds. The Bambino cat has short legs, large upright ears, and is usually hairless. They love to be handled and cuddled up on the laps of their family members.",
+      "temperament_en": [
+        "Affectionate",
+        "Lively",
+        "Friendly",
+        "Intelligent"
+      ],
+      "life_span": "12 - 14",
+      "weight": {
+        "imperial": "4 - 9",
+        "metric": "2 - 4"
+      },
+      "scores": {
+        "energy": 5,
+        "grooming": 1,
+        "intelligence": 5,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 3,
+        "social_needs": 3,
+        "vocalisation": 3,
+        "health_issues": 1,
+        "shedding": 1,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": true,
+        "natural": false,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": true,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": true
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Bambino_cat",
+      "images": [
+        "https://cdn2.thecatapi.com/images/s42I_BL-a.jpg",
+        "https://cdn2.thecatapi.com/images/Oaoo1ky3A.jpg",
+        "https://cdn2.thecatapi.com/images/MizM7dBMU.jpg",
+        "https://cdn2.thecatapi.com/images/p46ys1bGF.jpg",
+        "https://cdn2.thecatapi.com/images/jUY0Dt5iB.jpg",
+        "https://cdn2.thecatapi.com/images/wiHVRle1m.jpg",
+        "https://cdn2.thecatapi.com/images/lClcFEjwx.jpg",
+        "https://cdn2.thecatapi.com/images/wFQIf01uy.jpg",
+        "https://cdn2.thecatapi.com/images/5AdhMjeEu.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:42:30"
+    },
+    "beng": {
+      "id": "beng",
+      "name_en": "Bengal",
+      "name_zh_hint": "孟加拉貓",
+      "alt_names": [],
+      "origin": "United States",
+      "country_code": "US",
+      "description_en": "Bengals are a lot of fun to live with, but they're definitely not the cat for everyone, or for first-time cat owners. Extremely intelligent, curious and active, they demand a lot of interaction and woe betide the owner who doesn't provide it.",
+      "temperament_en": [
+        "Alert",
+        "Agile",
+        "Energetic",
+        "Demanding",
+        "Intelligent"
+      ],
+      "life_span": "12 - 15",
+      "weight": {
+        "imperial": "6 - 12",
+        "metric": "3 - 7"
+      },
+      "scores": {
+        "energy": 5,
+        "grooming": 1,
+        "intelligence": 5,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 3,
+        "social_needs": 5,
+        "vocalisation": 5,
+        "health_issues": 3,
+        "shedding": 3,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": false,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": true,
+        "indoor": false,
+        "lap": false
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Bengal_(cat)",
+      "images": [
+        "https://cdn2.thecatapi.com/images/J2PmlIizw.jpg",
+        "https://cdn2.thecatapi.com/images/8ciqdpaO5.jpg",
+        "https://cdn2.thecatapi.com/images/byQhFO7iV.jpg",
+        "https://cdn2.thecatapi.com/images/UhqCZ7tC4.jpg",
+        "https://cdn2.thecatapi.com/images/O3btzLlsO.png",
+        "https://cdn2.thecatapi.com/images/dN6eoeLjY.jpg",
+        "https://cdn2.thecatapi.com/images/H_UWbOfra.jpg",
+        "https://cdn2.thecatapi.com/images/bz15V3Kvg.jpg",
+        "https://cdn2.thecatapi.com/images/NwMUoJYmT.jpg",
+        "https://cdn2.thecatapi.com/images/udZiLDG_E.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:42:34"
+    },
+    "birm": {
+      "id": "birm",
+      "name_en": "Birman",
+      "name_zh_hint": "伯曼貓",
+      "alt_names": [
+        "Sacred Birman",
+        " Sacred Cat Of Burma"
+      ],
+      "origin": "France",
+      "country_code": "FR",
+      "description_en": "The Birman is a docile, quiet cat who loves people and will follow them from room to room. Expect the Birman to want to be involved in what you’re doing. He communicates in a soft voice, mainly to remind you that perhaps it’s time for dinner or maybe for a nice cuddle on the sofa. He enjoys being held and will relax in your arms like a furry baby.",
+      "temperament_en": [
+        "Affectionate",
+        "Active",
+        "Gentle",
+        "Social"
+      ],
+      "life_span": "14 - 15",
+      "weight": {
+        "imperial": "6 - 15",
+        "metric": "3 - 7"
+      },
+      "scores": {
+        "energy": 3,
+        "grooming": 2,
+        "intelligence": 3,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 3,
+        "social_needs": 4,
+        "vocalisation": 1,
+        "health_issues": 1,
+        "shedding": 3,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": false,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": true
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Birman",
+      "images": [
+        "https://cdn2.thecatapi.com/images/OhTkBTPnD.jpg",
+        "https://cdn2.thecatapi.com/images/Dm0H1zSK1.jpg",
+        "https://cdn2.thecatapi.com/images/xRMeDCybn.jpg",
+        "https://cdn2.thecatapi.com/images/3rK7HGo7r.jpg",
+        "https://cdn2.thecatapi.com/images/2LEN_GHmx.jpg",
+        "https://cdn2.thecatapi.com/images/XLLAS_R9F.jpg",
+        "https://cdn2.thecatapi.com/images/HOrX5gwLS.jpg",
+        "https://cdn2.thecatapi.com/images/qg0_IodJp.png",
+        "https://cdn2.thecatapi.com/images/yZE2JpeXz.jpg",
+        "https://cdn2.thecatapi.com/images/Kjf-Z_8YE.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:42:39"
+    },
+    "bomb": {
+      "id": "bomb",
+      "name_en": "Bombay",
+      "name_zh_hint": "孟買貓",
+      "alt_names": [
+        "Small black Panther"
+      ],
+      "origin": "United States",
+      "country_code": "US",
+      "description_en": "The the golden eyes and the shiny black coa of the Bopmbay is absolutely striking. Likely to bond most with one family member, the Bombay will follow you from room to room and will almost always have something to say about what you are doing, loving attention and to be carried around, often on his caregiver's shoulder.",
+      "temperament_en": [
+        "Affectionate",
+        "Dependent",
+        "Gentle",
+        "Intelligent",
+        "Playful"
+      ],
+      "life_span": "12 - 16",
+      "weight": {
+        "imperial": "6 - 11",
+        "metric": "3 - 5"
+      },
+      "scores": {
+        "energy": 3,
+        "grooming": 1,
+        "intelligence": 5,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 4,
+        "social_needs": 4,
+        "vocalisation": 5,
+        "health_issues": 3,
+        "shedding": 3,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": false,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": true
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Bombay_(cat)",
+      "images": [
+        "https://cdn2.thecatapi.com/images/BkksyH95Z.jpg",
+        "https://cdn2.thecatapi.com/images/5iYq9NmT1.jpg",
+        "https://cdn2.thecatapi.com/images/Bc0CMLOjz.jpg",
+        "https://cdn2.thecatapi.com/images/aZii7hC77.jpg",
+        "https://cdn2.thecatapi.com/images/Z6mrcccZv.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:42:43"
+    },
+    "bslo": {
+      "id": "bslo",
+      "name_en": "British Longhair",
+      "name_zh_hint": "英國長毛貓",
+      "alt_names": [],
+      "origin": "United Kingdom",
+      "country_code": "GB",
+      "description_en": "The British Longhair is a very laid-back relaxed cat, often perceived to be very independent although they will enjoy the company of an equally relaxed and likeminded cat. They are an affectionate breed, but very much on their own terms and tend to prefer to choose to come and sit with their owners rather than being picked up.",
+      "temperament_en": [
+        "Affectionate",
+        "Easy Going",
+        "Independent",
+        "Intelligent",
+        "Loyal",
+        "Social"
+      ],
+      "life_span": "12 - 14",
+      "weight": {
+        "imperial": "8 - 18",
+        "metric": "4 - 8"
+      },
+      "scores": {
+        "energy": 4,
+        "grooming": 5,
+        "intelligence": 5,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 4,
+        "social_needs": 3,
+        "vocalisation": 1,
+        "health_issues": 1,
+        "shedding": 1,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": false,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": false
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/British_Longhair",
+      "images": [
+        "https://cdn2.thecatapi.com/images/7isAO4Cav.jpg",
+        "https://cdn2.thecatapi.com/images/YZGOUtRQ1.jpg",
+        "https://cdn2.thecatapi.com/images/JWOrjbhum.jpg",
+        "https://cdn2.thecatapi.com/images/laq3GvUgh.jpg",
+        "https://cdn2.thecatapi.com/images/re7uO34hz.jpg",
+        "https://cdn2.thecatapi.com/images/xplMlG1PT.jpg",
+        "https://cdn2.thecatapi.com/images/i-j1kCi3b.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:42:48"
+    },
+    "bsho": {
+      "id": "bsho",
+      "name_en": "British Shorthair",
+      "name_zh_hint": "英國短毛貓",
+      "alt_names": [
+        "Highlander",
+        " Highland Straight",
+        " Britannica"
+      ],
+      "origin": "United Kingdom",
+      "country_code": "GB",
+      "description_en": "The British Shorthair is a very pleasant cat to have as a companion, ans is easy going and placid. The British is a fiercely loyal, loving cat and will attach herself to every one of her family members. While loving to play, she doesn't need hourly attention. If she is in the mood to play, she will find someone and bring a toy to that person. The British also plays well by herself, and thus is a good companion for single people.",
+      "temperament_en": [
+        "Affectionate",
+        "Easy Going",
+        "Gentle",
+        "Loyal",
+        "Patient",
+        "calm"
+      ],
+      "life_span": "12 - 17",
+      "weight": {
+        "imperial": "12 - 20",
+        "metric": "5 - 9"
+      },
+      "scores": {
+        "energy": 2,
+        "grooming": 2,
+        "intelligence": 3,
+        "affection": 4,
+        "child_friendly": 4,
+        "stranger_friendly": 2,
+        "social_needs": 3,
+        "vocalisation": 1,
+        "health_issues": 2,
+        "shedding": 4,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": true,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": true
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/British_Shorthair",
+      "images": [
+        "https://cdn2.thecatapi.com/images/qXypILClv.jpg",
+        "https://cdn2.thecatapi.com/images/GrPErz7EA.jpg",
+        "https://cdn2.thecatapi.com/images/xNuSF5YWY.jpg",
+        "https://cdn2.thecatapi.com/images/IouWtnMl2.jpg",
+        "https://cdn2.thecatapi.com/images/N8bl5RjPG.jpg",
+        "https://cdn2.thecatapi.com/images/b6Co9acGP.jpg",
+        "https://cdn2.thecatapi.com/images/_7U4xGLO_.jpg",
+        "https://cdn2.thecatapi.com/images/BborJBuoW.jpg",
+        "https://cdn2.thecatapi.com/images/2b2pFY0-t.jpg",
+        "https://cdn2.thecatapi.com/images/s4wQfYoEk.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:42:52"
+    },
+    "bure": {
+      "id": "bure",
+      "name_en": "Burmese",
+      "name_zh_hint": "緬甸貓",
+      "alt_names": [],
+      "origin": "Burma",
+      "country_code": "MM",
+      "description_en": "Burmese love being with people, playing with them, and keeping them entertained. They crave close physical contact and abhor an empty lap. They will follow their humans from room to room, and sleep in bed with them, preferably under the covers, cuddled as close as possible. At play, they will turn around to see if their human is watching and being entertained by their crazy antics.",
+      "temperament_en": [
+        "Curious",
+        "Intelligent",
+        "Gentle",
+        "Social",
+        "Interactive",
+        "Playful",
+        "Lively"
+      ],
+      "life_span": "15 - 16",
+      "weight": {
+        "imperial": "6 - 12",
+        "metric": "3 - 5"
+      },
+      "scores": {
+        "energy": 4,
+        "grooming": 1,
+        "intelligence": 5,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 5,
+        "social_needs": 5,
+        "vocalisation": 5,
+        "health_issues": 3,
+        "shedding": 3,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": false,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": true,
+        "indoor": false,
+        "lap": true
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Burmese_(cat)",
+      "images": [
+        "https://cdn2.thecatapi.com/images/92D9NZLs0.jpg",
+        "https://cdn2.thecatapi.com/images/4lXnnfxac.jpg",
+        "https://cdn2.thecatapi.com/images/hj7Oh-SRY.jpg",
+        "https://cdn2.thecatapi.com/images/Mdr6QqID0.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:42:57"
+    },
+    "buri": {
+      "id": "buri",
+      "name_en": "Burmilla",
+      "name_zh_hint": "緬甸玳瑁貓",
+      "alt_names": [],
+      "origin": "United Kingdom",
+      "country_code": "GB",
+      "description_en": "The Burmilla is a fairly placid cat. She tends to be an easy cat to get along with, requiring minimal care. The Burmilla is affectionate and sweet and makes a good companion, the Burmilla is an ideal companion to while away a lonely evening. Loyal, devoted, and affectionate, this cat will stay by its owner, always keeping them company.",
+      "temperament_en": [
+        "Easy Going",
+        "Friendly",
+        "Intelligent",
+        "Lively",
+        "Playful",
+        "Social"
+      ],
+      "life_span": "10 - 15",
+      "weight": {
+        "imperial": "6 - 13",
+        "metric": "3 - 6"
+      },
+      "scores": {
+        "energy": 3,
+        "grooming": 3,
+        "intelligence": 3,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 3,
+        "social_needs": 4,
+        "vocalisation": 5,
+        "health_issues": 3,
+        "shedding": 3,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": false,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": true
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Burmilla",
+      "images": [
+        "https://cdn2.thecatapi.com/images/r530zDuJU.jpg",
+        "https://cdn2.thecatapi.com/images/jvg3XfEdC.jpg",
+        "https://cdn2.thecatapi.com/images/3Wjx1Tq7X.jpg",
+        "https://cdn2.thecatapi.com/images/wgoLPWPZQ.jpg",
+        "https://cdn2.thecatapi.com/images/J4Jv10E7O.jpg",
+        "https://cdn2.thecatapi.com/images/p2U4ZXgKL.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:43:01"
+    },
+    "cspa": {
+      "id": "cspa",
+      "name_en": "California Spangled",
+      "name_zh_hint": "加州閃亮貓",
+      "alt_names": [
+        "Spangle"
+      ],
+      "origin": "United States",
+      "country_code": "US",
+      "description_en": "Perhaps the only thing about the California spangled cat that isn’t wild-like is its personality. Known to be affectionate, gentle and sociable, this breed enjoys spending a great deal of time with its owners. They are very playful, often choosing to perch in high locations and show off their acrobatic skills.",
+      "temperament_en": [
+        "Affectionate",
+        "Curious",
+        "Intelligent",
+        "Loyal",
+        "Social"
+      ],
+      "life_span": "10 - 14",
+      "weight": {
+        "imperial": "10 - 15",
+        "metric": "5 - 7"
+      },
+      "scores": {
+        "energy": 5,
+        "grooming": 1,
+        "intelligence": 5,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 4,
+        "social_needs": 3,
+        "vocalisation": 1,
+        "health_issues": 1,
+        "shedding": 1,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": false,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": false
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/California_Spangled",
+      "images": [
+        "https://cdn2.thecatapi.com/images/B1ERTmgph.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:43:06"
+    },
+    "ctif": {
+      "id": "ctif",
+      "name_en": "Chantilly-Tiffany",
+      "name_zh_hint": "香緹蒂芬妮貓",
+      "alt_names": [
+        "Chantilly",
+        " Foreign Longhair"
+      ],
+      "origin": "United States",
+      "country_code": "US",
+      "description_en": "The Chantilly is a devoted companion and prefers company to being left alone. While the Chantilly is not demanding, she will \"chirp\" and \"talk\" as if having a conversation. This breed is affectionate, with a sweet temperament. It can stay still for extended periods, happily lounging in the lap of its loved one. This quality makes the Tiffany an ideal traveling companion, and an ideal house companion for senior citizens and the physically handicapped.",
+      "temperament_en": [
+        "Affectionate",
+        "Demanding",
+        "Interactive",
+        "Loyal"
+      ],
+      "life_span": "14 - 16",
+      "weight": {
+        "imperial": "7 - 12",
+        "metric": "3 - 5"
+      },
+      "scores": {
+        "energy": 4,
+        "grooming": 5,
+        "intelligence": 5,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 4,
+        "social_needs": 3,
+        "vocalisation": 5,
+        "health_issues": 1,
+        "shedding": 5,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": false,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": true
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Chantilly-Tiffany",
+      "images": [
+        "https://cdn2.thecatapi.com/images/INXwfT_cp.jpg",
+        "https://cdn2.thecatapi.com/images/E4j4aBDx9.jpg",
+        "https://cdn2.thecatapi.com/images/TR-5nAd_S.jpg",
+        "https://cdn2.thecatapi.com/images/XAvnPwmqZ.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:43:10"
+    },
+    "char": {
+      "id": "char",
+      "name_en": "Chartreux",
+      "name_zh_hint": "沙特爾貓",
+      "alt_names": [],
+      "origin": "France",
+      "country_code": "FR",
+      "description_en": "The Chartreux is generally silent but communicative. Short play sessions, mixed with naps and meals are their perfect day. Whilst appreciating any attention you give them, they are not demanding, content instead to follow you around devotedly, sleep on your bed and snuggle with you if you’re not feeling well.",
+      "temperament_en": [
+        "Affectionate",
+        "Loyal",
+        "Intelligent",
+        "Social",
+        "Lively",
+        "Playful"
+      ],
+      "life_span": "12 - 15",
+      "weight": {
+        "imperial": "6 - 15",
+        "metric": "3 - 7"
+      },
+      "scores": {
+        "energy": 2,
+        "grooming": 1,
+        "intelligence": 4,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 5,
+        "social_needs": 5,
+        "vocalisation": 1,
+        "health_issues": 2,
+        "shedding": 3,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": false,
+        "rare": false,
+        "rex": true,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": true,
+        "indoor": false,
+        "lap": true
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Chartreux",
+      "images": [
+        "https://cdn2.thecatapi.com/images/j6oFGLpRG.jpg",
+        "https://cdn2.thecatapi.com/images/Y4YIOqGKb.jpg",
+        "https://cdn2.thecatapi.com/images/SpioNJPsd.jpg",
+        "https://cdn2.thecatapi.com/images/qinVu0VLV.jpg",
+        "https://cdn2.thecatapi.com/images/ZSV_8HqoS.jpg",
+        "https://cdn2.thecatapi.com/images/3-DZDkDGa.jpg",
+        "https://cdn2.thecatapi.com/images/OUZlUVIco.jpg",
+        "https://cdn2.thecatapi.com/images/EYtB_5RrB.jpg",
+        "https://cdn2.thecatapi.com/images/K3eHRIQXM.jpg",
+        "https://cdn2.thecatapi.com/images/8cXEkQQwc.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:43:15"
+    },
+    "chau": {
+      "id": "chau",
+      "name_en": "Chausie",
+      "name_zh_hint": "喬西貓",
+      "alt_names": [
+        "Nile Cat"
+      ],
+      "origin": "Egypt",
+      "country_code": "EG",
+      "description_en": "For those owners who desire a feline capable of evoking the great outdoors, the strikingly beautiful Chausie retains a bit of the wild in its appearance but has the house manners of our friendly, familiar moggies. Very playful, this cat needs a large amount of space to be able to fully embrace its hunting instincts.",
+      "temperament_en": [
+        "Affectionate",
+        "Intelligent",
+        "Playful",
+        "Social"
+      ],
+      "life_span": "12 - 14",
+      "weight": {
+        "imperial": "7 - 15",
+        "metric": "3 - 7"
+      },
+      "scores": {
+        "energy": 4,
+        "grooming": 3,
+        "intelligence": 5,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 4,
+        "social_needs": 3,
+        "vocalisation": 1,
+        "health_issues": 1,
+        "shedding": 3,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": false,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": false
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Chausie",
+      "images": [
+        "https://cdn2.thecatapi.com/images/cPDuEX5tZ.jpg",
+        "https://cdn2.thecatapi.com/images/5i_-8rPKS.jpg",
+        "https://cdn2.thecatapi.com/images/r0s90j0I8.jpg",
+        "https://cdn2.thecatapi.com/images/ZaZwqFsgj.jpg",
+        "https://cdn2.thecatapi.com/images/VT9NOyJqk.jpg",
+        "https://cdn2.thecatapi.com/images/zly78vxmW.jpg",
+        "https://cdn2.thecatapi.com/images/snxE5_PPX.jpg",
+        "https://cdn2.thecatapi.com/images/KLpZzAE_a.jpg",
+        "https://cdn2.thecatapi.com/images/vJ3lEYgXr.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:43:19"
+    },
+    "chee": {
+      "id": "chee",
+      "name_en": "Cheetoh",
+      "name_zh_hint": "奇多貓",
+      "alt_names": [
+        " "
+      ],
+      "origin": "United States",
+      "country_code": "US",
+      "description_en": "The Cheetoh has a super affectionate nature and real love for their human companions; they are intelligent with the ability to learn quickly. You can expect that a Cheetoh will be a fun-loving kitty who enjoys playing, running, and jumping through every room in your house.",
+      "temperament_en": [
+        "Affectionate",
+        "Gentle",
+        "Intelligent",
+        "Social"
+      ],
+      "life_span": "12 - 14",
+      "weight": {
+        "imperial": "8 - 15",
+        "metric": "4 - 7"
+      },
+      "scores": {
+        "energy": 4,
+        "grooming": 1,
+        "intelligence": 5,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 4,
+        "social_needs": 3,
+        "vocalisation": 5,
+        "health_issues": 1,
+        "shedding": 1,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": false,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": false
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Bengal_cat#Cheetoh",
+      "images": [
+        "https://cdn2.thecatapi.com/images/djnExlK9y.jpg",
+        "https://cdn2.thecatapi.com/images/L-aDi29wP.jpg",
+        "https://cdn2.thecatapi.com/images/hV2A_LW2n.jpg",
+        "https://cdn2.thecatapi.com/images/mNOdlAkXR.jpg",
+        "https://cdn2.thecatapi.com/images/yPmEpKmnR.jpg",
+        "https://cdn2.thecatapi.com/images/U-B3L9JWm.jpg",
+        "https://cdn2.thecatapi.com/images/BjIppqbNI.jpg",
+        "https://cdn2.thecatapi.com/images/LX9uvE3dl.jpg",
+        "https://cdn2.thecatapi.com/images/EhOq2RbaI.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:43:24"
+    },
+    "csho": {
+      "id": "csho",
+      "name_en": "Colorpoint Shorthair",
+      "name_zh_hint": "重點色短毛貓",
+      "alt_names": [],
+      "origin": "United States",
+      "country_code": "US",
+      "description_en": "Colorpoint Shorthairs are an affectionate breed, devoted and loyal to their people. Sensitive to their owner’s moods, Colorpoints are more than happy to sit at your side or on your lap and purr words of encouragement on a bad day. They will constantly seek out your lap whenever it is open and in the moments when your lap is preoccupied they will stretch out in sunny spots on the ground.",
+      "temperament_en": [
+        "Affectionate",
+        "Intelligent",
+        "Playful",
+        "Social"
+      ],
+      "life_span": "12 - 16",
+      "weight": {
+        "imperial": "4 - 10",
+        "metric": "2 - 5"
+      },
+      "scores": {
+        "energy": 4,
+        "grooming": 2,
+        "intelligence": 5,
+        "affection": 4,
+        "child_friendly": 4,
+        "stranger_friendly": 2,
+        "social_needs": 4,
+        "vocalisation": 5,
+        "health_issues": 2,
+        "shedding": 3,
+        "adaptability": 3
+      },
+      "tags": {
+        "hairless": false,
+        "natural": false,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": true
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Colorpoint_Shorthair",
+      "images": [
+        "https://cdn2.thecatapi.com/images/aAf-WmnRl.jpg",
+        "https://cdn2.thecatapi.com/images/lOl0J96On.jpg",
+        "https://cdn2.thecatapi.com/images/1nOZPY4uI.jpg",
+        "https://cdn2.thecatapi.com/images/oSpqGyUDS.jpg",
+        "https://cdn2.thecatapi.com/images/BDMOZo668.jpg",
+        "https://cdn2.thecatapi.com/images/Il3qBc63U.jpg",
+        "https://cdn2.thecatapi.com/images/yUhSG7Vv7.jpg",
+        "https://cdn2.thecatapi.com/images/ohy1YBZtD.png"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:43:28"
+    },
+    "crex": {
+      "id": "crex",
+      "name_en": "Cornish Rex",
+      "name_zh_hint": "康瓦耳捲毛貓",
+      "alt_names": [],
+      "origin": "United Kingdom",
+      "country_code": "GB",
+      "description_en": "This is a confident cat who loves people and will follow them around, waiting for any opportunity to sit in a lap or give a kiss. He enjoys being handled, making it easy to take him to the veterinarian or train him for therapy work. The Cornish Rex stay in kitten mode most of their lives and well into their senior years. ",
+      "temperament_en": [
+        "Affectionate",
+        "Intelligent",
+        "Active",
+        "Curious",
+        "Playful"
+      ],
+      "life_span": "11 - 14",
+      "weight": {
+        "imperial": "5 - 9",
+        "metric": "2 - 4"
+      },
+      "scores": {
+        "energy": 5,
+        "grooming": 1,
+        "intelligence": 5,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 3,
+        "social_needs": 5,
+        "vocalisation": 1,
+        "health_issues": 2,
+        "shedding": 1,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": false,
+        "rare": false,
+        "rex": true,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": true,
+        "indoor": false,
+        "lap": true
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Cornish_Rex",
+      "images": [
+        "https://cdn2.thecatapi.com/images/8CuEPFNuD.jpg",
+        "https://cdn2.thecatapi.com/images/kOAHCDEzA.jpg",
+        "https://cdn2.thecatapi.com/images/bAiN3T-rs.jpg",
+        "https://cdn2.thecatapi.com/images/DmP9GCClC.jpg",
+        "https://cdn2.thecatapi.com/images/unX21IBVB.jpg",
+        "https://cdn2.thecatapi.com/images/4-GdyX_fu.jpg",
+        "https://cdn2.thecatapi.com/images/gMjW5RYB0.jpg",
+        "https://cdn2.thecatapi.com/images/A5JigBZjG.jpg",
+        "https://cdn2.thecatapi.com/images/yqcbOxkWK.jpg",
+        "https://cdn2.thecatapi.com/images/_I6AsfuMg.png"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:43:33"
+    },
+    "cymr": {
+      "id": "cymr",
+      "name_en": "Cymric",
+      "name_zh_hint": "曼島長毛貓",
+      "alt_names": [
+        "Spangle"
+      ],
+      "origin": "Canada",
+      "country_code": "CA",
+      "description_en": "The Cymric is a placid, sweet cat. They do not get too upset about anything that happens in their world. They are loving companions and adore people. They are smart and dexterous, capable of using his paws to get into cabinets or to open doors.",
+      "temperament_en": [
+        "Gentle",
+        "Loyal",
+        "Intelligent",
+        "Playful"
+      ],
+      "life_span": "8 - 14",
+      "weight": {
+        "imperial": "8 - 13",
+        "metric": "4 - 6"
+      },
+      "scores": {
+        "energy": 5,
+        "grooming": 3,
+        "intelligence": 5,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 3,
+        "social_needs": 5,
+        "vocalisation": 3,
+        "health_issues": 3,
+        "shedding": 5,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": false,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": true,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": true
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Cymric_(cat)",
+      "images": [
+        "https://cdn2.thecatapi.com/images/dSiKP0JWG.jpg",
+        "https://cdn2.thecatapi.com/images/3dbtapCWM.jpg",
+        "https://cdn2.thecatapi.com/images/WXcD6qZEn.jpg",
+        "https://cdn2.thecatapi.com/images/OLP-tyC2i.jpg",
+        "https://cdn2.thecatapi.com/images/GQ61BDToD.jpg",
+        "https://cdn2.thecatapi.com/images/-y_6SBPrw.jpg",
+        "https://cdn2.thecatapi.com/images/CKVhCI0bz.jpg",
+        "https://cdn2.thecatapi.com/images/lF3ZTucYp.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:43:38"
+    },
+    "cypr": {
+      "id": "cypr",
+      "name_en": "Cyprus",
+      "name_zh_hint": "塞普勒斯貓",
+      "alt_names": [
+        "Cypriot cat"
+      ],
+      "origin": "Cyprus",
+      "country_code": "CY",
+      "description_en": "Loving, loyal, social and inquisitive, the Cyprus cat forms strong ties with their families and love nothing more than to be involved in everything that goes on in their surroundings. They are not overly active by nature which makes them the perfect companion for people who would like to share their homes with a laid-back relaxed feline companion. ",
+      "temperament_en": [
+        "Affectionate",
+        "Social"
+      ],
+      "life_span": "12 - 15",
+      "weight": {
+        "imperial": "8 - 16",
+        "metric": "4 - 7"
+      },
+      "scores": {
+        "energy": 4,
+        "grooming": 3,
+        "intelligence": 3,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 4,
+        "social_needs": 3,
+        "vocalisation": 3,
+        "health_issues": 1,
+        "shedding": 3,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": true,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": true
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Cyprus_cat",
+      "images": [
+        "https://cdn2.thecatapi.com/images/S97Qj5YYO.jpg",
+        "https://cdn2.thecatapi.com/images/tJbzb7FKo.jpg",
+        "https://cdn2.thecatapi.com/images/cruhNBsv1.jpg",
+        "https://cdn2.thecatapi.com/images/_PEqOH17A.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:43:42"
+    },
+    "drex": {
+      "id": "drex",
+      "name_en": "Devon Rex",
+      "name_zh_hint": "德文捲毛貓",
+      "alt_names": [
+        "Pixie cat",
+        " Alien cat",
+        " Poodle cat"
+      ],
+      "origin": "United Kingdom",
+      "country_code": "GB",
+      "description_en": "The favourite perch of the Devon Rex is right at head level, on the shoulder of her favorite person. She takes a lively interest in everything that is going on and refuses to be left out of any activity. Count on her to stay as close to you as possible, occasionally communicating his opinions in a quiet voice. She loves people and welcomes the attentions of friends and family alike.",
+      "temperament_en": [
+        "Highly interactive",
+        "Mischievous",
+        "Loyal",
+        "Social",
+        "Playful"
+      ],
+      "life_span": "10 - 15",
+      "weight": {
+        "imperial": "5 - 10",
+        "metric": "2 - 5"
+      },
+      "scores": {
+        "energy": 5,
+        "grooming": 1,
+        "intelligence": 5,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 5,
+        "social_needs": 5,
+        "vocalisation": 1,
+        "health_issues": 3,
+        "shedding": 1,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": false,
+        "rare": false,
+        "rex": true,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": true,
+        "indoor": false,
+        "lap": true
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Devon_Rex",
+      "images": [
+        "https://cdn2.thecatapi.com/images/lJHXU7DlQ.jpg",
+        "https://cdn2.thecatapi.com/images/uUGt0UBzF.jpg",
+        "https://cdn2.thecatapi.com/images/jnqO9lwG2.jpg",
+        "https://cdn2.thecatapi.com/images/udJaUVCHZ.jpg",
+        "https://cdn2.thecatapi.com/images/4RzEwvyzz.png",
+        "https://cdn2.thecatapi.com/images/Zhv2xfZFH.jpg",
+        "https://cdn2.thecatapi.com/images/LT13Rnq3P.jpg",
+        "https://cdn2.thecatapi.com/images/yFwzO96ds.jpg",
+        "https://cdn2.thecatapi.com/images/_BhPUA-L-.jpg",
+        "https://cdn2.thecatapi.com/images/hTswm_D5S.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:43:47"
+    },
+    "dons": {
+      "id": "dons",
+      "name_en": "Donskoy",
+      "name_zh_hint": "頓斯科伊貓",
+      "alt_names": [],
+      "origin": "Russia",
+      "country_code": "RU",
+      "description_en": "Donskoy are affectionate, intelligent, and easy-going. They demand lots of attention and interaction. The Donskoy also gets along well with other pets. It is now thought the same gene that causes degrees of hairlessness in the Donskoy also causes alterations in cat personality, making them calmer the less hair they have.",
+      "temperament_en": [
+        "Playful",
+        "affectionate",
+        "loyal",
+        "social"
+      ],
+      "life_span": "12 - 15",
+      "weight": {
+        "imperial": "10 - 12",
+        "metric": "5 - 6"
+      },
+      "scores": {
+        "energy": 4,
+        "grooming": 2,
+        "intelligence": 3,
+        "affection": 4,
+        "child_friendly": 3,
+        "stranger_friendly": 5,
+        "social_needs": 5,
+        "vocalisation": 2,
+        "health_issues": 3,
+        "shedding": 1,
+        "adaptability": 4
+      },
+      "tags": {
+        "hairless": true,
+        "natural": false,
+        "rare": true,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": false
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Donskoy_(cat)",
+      "images": [
+        "https://cdn2.thecatapi.com/images/KWVenr3Pq.jpg",
+        "https://cdn2.thecatapi.com/images/3KG57GfMW.jpg",
+        "https://cdn2.thecatapi.com/images/Z9zxhFVdw.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:43:51"
+    },
+    "lihu": {
+      "id": "lihu",
+      "name_en": "Dragon Li",
+      "name_zh_hint": "中國狸花貓",
+      "alt_names": [
+        "Chinese Lia Hua",
+        " Lí hua māo (貍花貓)",
+        " Li Hua"
+      ],
+      "origin": "China",
+      "country_code": "CN",
+      "description_en": "The Dragon Li is loyal, but not particularly affectionate. They are known to be very intelligent, and their natural breed status means that they're very active. She is is gentle with people, and has a reputation as a talented hunter of rats and other vermin.",
+      "temperament_en": [
+        "Intelligent",
+        "Friendly",
+        "Gentle",
+        "Loving",
+        "Loyal"
+      ],
+      "life_span": "12 - 15",
+      "weight": {
+        "imperial": "9 - 12",
+        "metric": "4 - 6"
+      },
+      "scores": {
+        "energy": 3,
+        "grooming": 1,
+        "intelligence": 3,
+        "affection": 3,
+        "child_friendly": 3,
+        "stranger_friendly": 3,
+        "social_needs": 4,
+        "vocalisation": 3,
+        "health_issues": 1,
+        "shedding": 3,
+        "adaptability": 3
+      },
+      "tags": {
+        "hairless": false,
+        "natural": true,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": true,
+        "lap": false
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Dragon_Li",
+      "images": [
+        "https://cdn2.thecatapi.com/images/DUxU01IY5.jpg",
+        "https://cdn2.thecatapi.com/images/KrDYENsA3.jpg",
+        "https://cdn2.thecatapi.com/images/BQMSld0A0.jpg",
+        "https://cdn2.thecatapi.com/images/xYLoht4o_.jpg",
+        "https://cdn2.thecatapi.com/images/POPfuPq8t.jpg",
+        "https://cdn2.thecatapi.com/images/mjeF1hs8v.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:43:56"
+    },
+    "emau": {
+      "id": "emau",
+      "name_en": "Egyptian Mau",
+      "name_zh_hint": "埃及貓",
+      "alt_names": [
+        "Pharaoh Cat"
+      ],
+      "origin": "Egypt",
+      "country_code": "EG",
+      "description_en": "The Egyptian Mau is gentle and reserved. She loves her people and desires attention and affection from them but is wary of others. Early, continuing socialization is essential with this sensitive and sometimes shy cat, especially if you plan to show or travel with her. Otherwise, she can be easily startled by unexpected noises or events.",
+      "temperament_en": [
+        "Agile",
+        "Dependent",
+        "Gentle",
+        "Intelligent",
+        "Lively",
+        "Loyal",
+        "Playful"
+      ],
+      "life_span": "18 - 20",
+      "weight": {
+        "imperial": "6 - 14",
+        "metric": "3 - 6"
+      },
+      "scores": {
+        "energy": 5,
+        "grooming": 1,
+        "intelligence": 4,
+        "affection": 5,
+        "child_friendly": 3,
+        "stranger_friendly": 2,
+        "social_needs": 4,
+        "vocalisation": 3,
+        "health_issues": 3,
+        "shedding": 3,
+        "adaptability": 2
+      },
+      "tags": {
+        "hairless": false,
+        "natural": true,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": true
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Egyptian_Mau",
+      "images": [
+        "https://cdn2.thecatapi.com/images/TuSyTkt2n.jpg",
+        "https://cdn2.thecatapi.com/images/Y2MO5GWHO.jpg",
+        "https://cdn2.thecatapi.com/images/4iJauwTck.jpg",
+        "https://cdn2.thecatapi.com/images/AJxcCRZeO.jpg",
+        "https://cdn2.thecatapi.com/images/ARDeFqhkl.jpg",
+        "https://cdn2.thecatapi.com/images/EzYYrmFp7.jpg",
+        "https://cdn2.thecatapi.com/images/AH61b9ziS.jpg",
+        "https://cdn2.thecatapi.com/images/4_AdeyZUv.jpg",
+        "https://cdn2.thecatapi.com/images/tp0nHtyze.jpg",
+        "https://cdn2.thecatapi.com/images/oxuem0v7U.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:44:00"
+    },
+    "ebur": {
+      "id": "ebur",
+      "name_en": "European Burmese",
+      "name_zh_hint": "歐洲緬甸貓",
+      "alt_names": [],
+      "origin": "Burma",
+      "country_code": "MM",
+      "description_en": "The European Burmese is a very affectionate, intelligent, and loyal cat. They thrive on companionship and will want to be with you, participating in everything you do. While they might pick a favorite family member, chances are that they will interact with everyone in the home, as well as any visitors that come to call. They are inquisitive and playful, even as adults. ",
+      "temperament_en": [
+        "Sweet",
+        "Affectionate",
+        "Loyal"
+      ],
+      "life_span": "10 - 15",
+      "weight": {
+        "imperial": "7 - 14",
+        "metric": "3 - 6"
+      },
+      "scores": {
+        "energy": 4,
+        "grooming": 1,
+        "intelligence": 5,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 5,
+        "social_needs": 5,
+        "vocalisation": 4,
+        "health_issues": 4,
+        "shedding": 3,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": false,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": true
+      },
+      "wikipedia_url": "",
+      "images": [
+        "https://cdn2.thecatapi.com/images/DZzcGANt5.jpg",
+        "https://cdn2.thecatapi.com/images/d8sbdRtLJ.jpg",
+        "https://cdn2.thecatapi.com/images/5hmYjVhib.jpg",
+        "https://cdn2.thecatapi.com/images/oLtx9gsxx.jpg",
+        "https://cdn2.thecatapi.com/images/YOjBThApG.jpg",
+        "https://cdn2.thecatapi.com/images/daHxeTPgZ.jpg",
+        "https://cdn2.thecatapi.com/images/uvyjW5KIG.jpg",
+        "https://cdn2.thecatapi.com/images/ATYs2BetM.jpg",
+        "https://cdn2.thecatapi.com/images/GI062lGTf.png",
+        "https://cdn2.thecatapi.com/images/pK_t-KYIi.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:44:05"
+    },
+    "esho": {
+      "id": "esho",
+      "name_en": "Exotic Shorthair",
+      "name_zh_hint": "異國短毛貓",
+      "alt_names": [
+        "Exotic"
+      ],
+      "origin": "United States",
+      "country_code": "US",
+      "description_en": "The Exotic Shorthair is a gentle friendly cat that has the same personality as the Persian. They love having fun, don’t mind the company of other cats and dogs, also love to curl up for a sleep in a safe place. Exotics love their own people, but around strangers they are cautious at first. Given time, they usually warm up to visitors.",
+      "temperament_en": [
+        "Affectionate",
+        "Sweet",
+        "Loyal",
+        "Quiet",
+        "Peaceful"
+      ],
+      "life_span": "12 - 15",
+      "weight": {
+        "imperial": "7 - 14",
+        "metric": "3 - 6"
+      },
+      "scores": {
+        "energy": 3,
+        "grooming": 2,
+        "intelligence": 3,
+        "affection": 5,
+        "child_friendly": 3,
+        "stranger_friendly": 2,
+        "social_needs": 4,
+        "vocalisation": 1,
+        "health_issues": 3,
+        "shedding": 2,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": false,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": true
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Exotic_Shorthair",
+      "images": [
+        "https://cdn2.thecatapi.com/images/YnPrYEmfe.jpg",
+        "https://cdn2.thecatapi.com/images/ySzdVwyb1.jpg",
+        "https://cdn2.thecatapi.com/images/2N4PhyqTG.jpg",
+        "https://cdn2.thecatapi.com/images/u3V0SSE-F.jpg",
+        "https://cdn2.thecatapi.com/images/m3V8x5tde.jpg",
+        "https://cdn2.thecatapi.com/images/HT902S6ra.jpg",
+        "https://cdn2.thecatapi.com/images/u2Ezm_CgQ.jpg",
+        "https://cdn2.thecatapi.com/images/apl8POz9w.jpg",
+        "https://cdn2.thecatapi.com/images/YyLhgyzy5.jpg",
+        "https://cdn2.thecatapi.com/images/EEf-L2ubj.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:44:09"
+    },
+    "hbro": {
+      "id": "hbro",
+      "name_en": "Havana Brown",
+      "name_zh_hint": "哈瓦那棕貓",
+      "alt_names": [
+        "Havana",
+        " HB"
+      ],
+      "origin": "United Kingdom",
+      "country_code": "GB",
+      "description_en": "The Havana Brown is human oriented, playful, and curious. She has a strong desire to spend time with her people and involve herself in everything they do. Being naturally inquisitive, the Havana Brown reaches out with a paw to touch and feel when investigating curiosities in its environment. They are truly sensitive by nature and frequently gently touch their human companions as if they are extending a paw of friendship.",
+      "temperament_en": [
+        "Affectionate",
+        "Curious",
+        "Demanding",
+        "Friendly",
+        "Intelligent",
+        "Playful"
+      ],
+      "life_span": "10 - 15",
+      "weight": {
+        "imperial": "6 - 10",
+        "metric": "3 - 5"
+      },
+      "scores": {
+        "energy": 3,
+        "grooming": 1,
+        "intelligence": 5,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 3,
+        "social_needs": 5,
+        "vocalisation": 1,
+        "health_issues": 1,
+        "shedding": 3,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": false,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": true
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Havana_Brown",
+      "images": [
+        "https://cdn2.thecatapi.com/images/njK25knLH.jpg",
+        "https://cdn2.thecatapi.com/images/gQggWSR5I.jpg",
+        "https://cdn2.thecatapi.com/images/iFH9iWpDg.jpg",
+        "https://cdn2.thecatapi.com/images/gLfmOKHCA.jpg",
+        "https://cdn2.thecatapi.com/images/9JisqWsnL.jpg",
+        "https://cdn2.thecatapi.com/images/L6d7rFyt1.jpg",
+        "https://cdn2.thecatapi.com/images/wWZPyq5Jm.jpg",
+        "https://cdn2.thecatapi.com/images/2-AuRFDa9.jpg",
+        "https://cdn2.thecatapi.com/images/eJUcA5Wt-.jpg",
+        "https://cdn2.thecatapi.com/images/bGUQ04k2E.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:44:14"
+    },
+    "hima": {
+      "id": "hima",
+      "name_en": "Himalayan",
+      "name_zh_hint": "喜馬拉雅貓",
+      "alt_names": [
+        "Himalayan Persian",
+        " Colourpoint Persian",
+        " Longhaired Colourpoint",
+        " Himmy"
+      ],
+      "origin": "United States",
+      "country_code": "US",
+      "description_en": "Calm and devoted, Himalayans make excellent companions, though they prefer a quieter home. They are playful in a sedate kind of way and enjoy having an assortment of toys. The Himalayan will stretch out next to you, sleep in your bed and even sit on your lap when she is in the mood.",
+      "temperament_en": [
+        "Dependent",
+        "Gentle",
+        "Intelligent",
+        "Quiet",
+        "Social"
+      ],
+      "life_span": "9 - 15",
+      "weight": {
+        "imperial": "7 - 14",
+        "metric": "3 - 6"
+      },
+      "scores": {
+        "energy": 1,
+        "grooming": 5,
+        "intelligence": 3,
+        "affection": 5,
+        "child_friendly": 2,
+        "stranger_friendly": 2,
+        "social_needs": 4,
+        "vocalisation": 1,
+        "health_issues": 3,
+        "shedding": 4,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": false,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": true
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Himalayan_(cat)",
+      "images": [
+        "https://cdn2.thecatapi.com/images/ajWdNxBwN.jpg",
+        "https://cdn2.thecatapi.com/images/me56sI74P.jpg",
+        "https://cdn2.thecatapi.com/images/PG-4j7axo.jpg",
+        "https://cdn2.thecatapi.com/images/2xlxL0oI_.jpg",
+        "https://cdn2.thecatapi.com/images/z77nP6EHh.jpg",
+        "https://cdn2.thecatapi.com/images/uywhSIAHr.jpg",
+        "https://cdn2.thecatapi.com/images/7TcOPE3SC.jpg",
+        "https://cdn2.thecatapi.com/images/TdxQ2VvJK.jpg",
+        "https://cdn2.thecatapi.com/images/hYG6uIRWL.jpg",
+        "https://cdn2.thecatapi.com/images/CDhOtM-Ig.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:44:18"
+    },
+    "jbob": {
+      "id": "jbob",
+      "name_en": "Japanese Bobtail",
+      "name_zh_hint": "日本短尾貓",
+      "alt_names": [
+        "Japanese Truncated Cat"
+      ],
+      "origin": "Japan",
+      "country_code": "JP",
+      "description_en": "The Japanese Bobtail is an active, sweet, loving and highly intelligent breed. They love to be with people and play seemingly endlessly. They learn their name and respond to it. They bring toys to people and play fetch with a favorite toy for hours. Bobtails are social and are at their best when in the company of people. They take over the house and are not intimidated. If a dog is in the house, Bobtails assume Bobtails are in charge.",
+      "temperament_en": [
+        "Active",
+        "Agile",
+        "Clever",
+        "Easy Going",
+        "Intelligent",
+        "Lively",
+        "Loyal",
+        "Playful",
+        "Social"
+      ],
+      "life_span": "14 - 16",
+      "weight": {
+        "imperial": "5 - 10",
+        "metric": "2 - 5"
+      },
+      "scores": {
+        "energy": 5,
+        "grooming": 1,
+        "intelligence": 5,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 5,
+        "social_needs": 5,
+        "vocalisation": 5,
+        "health_issues": 1,
+        "shedding": 3,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": true,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": true,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": true
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Japanese_Bobtail",
+      "images": [
+        "https://cdn2.thecatapi.com/images/-tm9-znzl.jpg",
+        "https://cdn2.thecatapi.com/images/PN0d8Zqg7.jpg",
+        "https://cdn2.thecatapi.com/images/R68eywp-W.jpg",
+        "https://cdn2.thecatapi.com/images/86jwAC0vv.jpg",
+        "https://cdn2.thecatapi.com/images/StMwZZnDP.jpg",
+        "https://cdn2.thecatapi.com/images/QCcTOaIQW.jpg",
+        "https://cdn2.thecatapi.com/images/Sw_EWWLW-.jpg",
+        "https://cdn2.thecatapi.com/images/d8AjzQxLp.jpg",
+        "https://cdn2.thecatapi.com/images/RfdGhgEf3.jpg",
+        "https://cdn2.thecatapi.com/images/CrZtoDsgj.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:44:23"
+    },
+    "java": {
+      "id": "java",
+      "name_en": "Javanese",
+      "name_zh_hint": "爪哇貓",
+      "alt_names": [
+        " "
+      ],
+      "origin": "United States",
+      "country_code": "US",
+      "description_en": "Javanese are endlessly interested, intelligent and active. They tend to enjoy jumping to great heights, playing with fishing pole-type or other interactive toys and just generally investigating their surroundings. He will attempt to copy things you do, such as opening doors or drawers.",
+      "temperament_en": [
+        "Active",
+        "Devoted",
+        "Intelligent",
+        "Playful"
+      ],
+      "life_span": "10 - 12",
+      "weight": {
+        "imperial": "5 - 10",
+        "metric": "2 - 5"
+      },
+      "scores": {
+        "energy": 5,
+        "grooming": 1,
+        "intelligence": 5,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 3,
+        "social_needs": 5,
+        "vocalisation": 5,
+        "health_issues": 3,
+        "shedding": 2,
+        "adaptability": 4
+      },
+      "tags": {
+        "hairless": false,
+        "natural": false,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": true,
+        "indoor": false,
+        "lap": false
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Javanese_cat",
+      "images": [
+        "https://cdn2.thecatapi.com/images/BTiGuPOqW.jpg",
+        "https://cdn2.thecatapi.com/images/fWbeAxpQH.jpg",
+        "https://cdn2.thecatapi.com/images/j8Z2_Alac.jpg",
+        "https://cdn2.thecatapi.com/images/P-Zyb-4BZ.jpg",
+        "https://cdn2.thecatapi.com/images/xoI_EpOKe.jpg",
+        "https://cdn2.thecatapi.com/images/tZYP8bcem.jpg",
+        "https://cdn2.thecatapi.com/images/V00qLe4Gw.jpg",
+        "https://cdn2.thecatapi.com/images/u0xeq3HjW.jpg",
+        "https://cdn2.thecatapi.com/images/DsrXa-v2g.jpg",
+        "https://cdn2.thecatapi.com/images/O1X8xKt_H.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:44:28"
+    },
+    "khao": {
+      "id": "khao",
+      "name_en": "Khao Manee",
+      "name_zh_hint": "暹羅玉貓",
+      "alt_names": [
+        "Diamond Eye cat"
+      ],
+      "origin": "Thailand",
+      "country_code": "TH",
+      "description_en": "The Khao Manee is highly intelligent, with an extrovert and inquisitive nature, however they are also very calm and relaxed, making them an idea lap cat.",
+      "temperament_en": [
+        "Calm",
+        "Relaxed",
+        "Talkative",
+        "Playful",
+        "Warm"
+      ],
+      "life_span": "10 - 12",
+      "weight": {
+        "imperial": "8 - 12",
+        "metric": "4 - 6"
+      },
+      "scores": {
+        "energy": 3,
+        "grooming": 3,
+        "intelligence": 4,
+        "affection": 4,
+        "child_friendly": 3,
+        "stranger_friendly": 3,
+        "social_needs": 3,
+        "vocalisation": 5,
+        "health_issues": 1,
+        "shedding": 3,
+        "adaptability": 4
+      },
+      "tags": {
+        "hairless": false,
+        "natural": false,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": true
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Khao_Manee",
+      "images": [
+        "https://cdn2.thecatapi.com/images/165ok6ESN.jpg",
+        "https://cdn2.thecatapi.com/images/iyFN2mF8l.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:44:32"
+    },
+    "kora": {
+      "id": "kora",
+      "name_en": "Korat",
+      "name_zh_hint": "科拉特貓",
+      "alt_names": [],
+      "origin": "Thailand",
+      "country_code": "TH",
+      "description_en": "The Korat is a natural breed, and one of the oldest stable cat breeds. They are highly intelligent and confident cats that can be fearless, although they are startled by loud sounds and sudden movements. Korats form strong bonds with their people and like to cuddle and stay nearby.",
+      "temperament_en": [
+        "Active",
+        "Loyal",
+        "highly intelligent",
+        "Expressive",
+        "Trainable"
+      ],
+      "life_span": "10 - 15",
+      "weight": {
+        "imperial": "7 - 11",
+        "metric": "3 - 5"
+      },
+      "scores": {
+        "energy": 3,
+        "grooming": 1,
+        "intelligence": 5,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 2,
+        "social_needs": 5,
+        "vocalisation": 3,
+        "health_issues": 1,
+        "shedding": 3,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": false,
+        "rare": true,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": false
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Korat",
+      "images": [
+        "https://cdn2.thecatapi.com/images/1TcC-kiI1.jpg",
+        "https://cdn2.thecatapi.com/images/k8T7xGG5O.jpg",
+        "https://cdn2.thecatapi.com/images/CWGNkdpA7.jpg",
+        "https://cdn2.thecatapi.com/images/xPuWATvp9.jpg",
+        "https://cdn2.thecatapi.com/images/BbsNPAeop.jpg",
+        "https://cdn2.thecatapi.com/images/OfIuuOv07.jpg",
+        "https://cdn2.thecatapi.com/images/DbwiefiaY.png"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:44:37"
+    },
+    "kuri": {
+      "id": "kuri",
+      "name_en": "Kurilian",
+      "name_zh_hint": "千島貓",
+      "alt_names": [],
+      "origin": "Russia",
+      "country_code": "RU",
+      "description_en": "The character of the Kurilian Bobtail is independent, highly intelligent, clever, inquisitive, sociable, playful, trainable, absent of aggression and very gentle. They are devoted to their humans and when allowed are either on the lap of or sleeping in bed with their owners.",
+      "temperament_en": [
+        "Independent",
+        "highly intelligent",
+        "clever",
+        "inquisitive",
+        "sociable",
+        "playful",
+        "trainable"
+      ],
+      "life_span": "15 - 20",
+      "weight": {
+        "imperial": "8 - 15",
+        "metric": "4 - 7"
+      },
+      "scores": {
+        "energy": 5,
+        "grooming": 1,
+        "intelligence": 5,
+        "affection": 5,
+        "child_friendly": 5,
+        "stranger_friendly": 5,
+        "social_needs": 5,
+        "vocalisation": 3,
+        "health_issues": 1,
+        "shedding": 2,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": true,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": true,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": false
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Kurilian_Bobtail",
+      "images": [
+        "https://cdn2.thecatapi.com/images/NZpO4pU56M.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:44:41"
+    },
+    "lape": {
+      "id": "lape",
+      "name_en": "LaPerm",
+      "name_zh_hint": "拉邦貓",
+      "alt_names": [
+        "Si-Sawat"
+      ],
+      "origin": "Thailand",
+      "country_code": "TH",
+      "description_en": "LaPerms are gentle and affectionate but also very active. Unlike many active breeds, the LaPerm is also quite content to be a lap cat. The LaPerm will often follow your lead; that is, if they are busy playing and you decide to sit and relax, simply pick up your LaPerm and sit down with it, and it will stay in your lap, devouring the attention you give it.",
+      "temperament_en": [
+        "Affectionate",
+        "Friendly",
+        "Gentle",
+        "Intelligent",
+        "Playful",
+        "Quiet"
+      ],
+      "life_span": "10 - 15",
+      "weight": {
+        "imperial": "6 - 10",
+        "metric": "3 - 5"
+      },
+      "scores": {
+        "energy": 4,
+        "grooming": 1,
+        "intelligence": 5,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 4,
+        "social_needs": 4,
+        "vocalisation": 3,
+        "health_issues": 1,
+        "shedding": 3,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": false,
+        "rare": false,
+        "rex": true,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": true,
+        "indoor": false,
+        "lap": true
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/LaPerm",
+      "images": [
+        "https://cdn2.thecatapi.com/images/g4vhUKcZX.jpg",
+        "https://cdn2.thecatapi.com/images/in-CD5LH5.jpg",
+        "https://cdn2.thecatapi.com/images/4hZdbV_8E.jpg",
+        "https://cdn2.thecatapi.com/images/fA-hvyvz1.jpg",
+        "https://cdn2.thecatapi.com/images/bL3lrUi1A.jpg",
+        "https://cdn2.thecatapi.com/images/w6CQYXYjy.jpg",
+        "https://cdn2.thecatapi.com/images/VuxDCG8hV.jpg",
+        "https://cdn2.thecatapi.com/images/VYfvpfuU7.jpg",
+        "https://cdn2.thecatapi.com/images/MxaS9brW9.jpg",
+        "https://cdn2.thecatapi.com/images/XWqBv4Dnh.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:44:46"
+    },
+    "mcoo": {
+      "id": "mcoo",
+      "name_en": "Maine Coon",
+      "name_zh_hint": "緬因貓",
+      "alt_names": [
+        "Coon Cat",
+        " Maine Cat",
+        " Maine Shag",
+        " Snowshoe Cat",
+        " American Longhair",
+        " The Gentle Giants"
+      ],
+      "origin": "United States",
+      "country_code": "US",
+      "description_en": "They are known for their size and luxurious long coat Maine Coons are considered a gentle giant. The good-natured and affable Maine Coon adapts well to many lifestyles and personalities. She likes being with people and has the habit of following them around, but isn’t needy. Most Maine Coons love water and they can be quite good swimmers.",
+      "temperament_en": [
+        "Adaptable",
+        "Intelligent",
+        "Loving",
+        "Gentle",
+        "Independent"
+      ],
+      "life_span": "12 - 15",
+      "weight": {
+        "imperial": "12 - 18",
+        "metric": "5 - 8"
+      },
+      "scores": {
+        "energy": 3,
+        "grooming": 3,
+        "intelligence": 5,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 5,
+        "social_needs": 3,
+        "vocalisation": 1,
+        "health_issues": 3,
+        "shedding": 3,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": true,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": true
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Maine_Coon",
+      "images": [
+        "https://cdn2.thecatapi.com/images/MmiojCuKC.jpg",
+        "https://cdn2.thecatapi.com/images/PoZIVJ124.jpg",
+        "https://cdn2.thecatapi.com/images/EwApDDFZR.jpg",
+        "https://cdn2.thecatapi.com/images/PKblw2RPe.jpg",
+        "https://cdn2.thecatapi.com/images/VuFcqjORh.jpg",
+        "https://cdn2.thecatapi.com/images/vXb2jdNoo.jpg",
+        "https://cdn2.thecatapi.com/images/LIQSvUemz.jpg",
+        "https://cdn2.thecatapi.com/images/-8roc4viS.jpg",
+        "https://cdn2.thecatapi.com/images/ftmw29QPb.jpg",
+        "https://cdn2.thecatapi.com/images/agwTe5TSe.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:44:50"
+    },
+    "mala": {
+      "id": "mala",
+      "name_en": "Malayan",
+      "name_zh_hint": "馬來亞貓",
+      "alt_names": [
+        "Asian"
+      ],
+      "origin": "United Kingdom",
+      "country_code": "GB",
+      "description_en": "Malayans love to explore and even enjoy traveling by way of a cat carrier. They are quite a talkative and rather loud cat with an apparent strong will. These cats will make sure that you give it the attention it seeks and always seem to want to be held and hugged. They will constantly interact with people, even strangers. They love to play and cuddle.",
+      "temperament_en": [
+        "Affectionate",
+        "Interactive",
+        "Playful",
+        "Social"
+      ],
+      "life_span": "12 - 18",
+      "weight": {
+        "imperial": "6 - 13",
+        "metric": "3 - 6"
+      },
+      "scores": {
+        "energy": 5,
+        "grooming": 1,
+        "intelligence": 3,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 3,
+        "social_needs": 3,
+        "vocalisation": 5,
+        "health_issues": 1,
+        "shedding": 1,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": false,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": false
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Asian_cat",
+      "images": [],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:44:55"
+    },
+    "manx": {
+      "id": "manx",
+      "name_en": "Manx",
+      "name_zh_hint": "曼島貓",
+      "alt_names": [
+        "Manks",
+        " Stubbin",
+        " Rumpy"
+      ],
+      "origin": "Isle of Man",
+      "country_code": "IM",
+      "description_en": "The Manx is a placid, sweet cat that is gentle and playful. She never seems to get too upset about anything. She is a loving companion and adores being with people.",
+      "temperament_en": [
+        "Easy Going",
+        "Intelligent",
+        "Loyal",
+        "Playful",
+        "Social"
+      ],
+      "life_span": "12 - 14",
+      "weight": {
+        "imperial": "7 - 13",
+        "metric": "3 - 6"
+      },
+      "scores": {
+        "energy": 5,
+        "grooming": 1,
+        "intelligence": 5,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 3,
+        "social_needs": 5,
+        "vocalisation": 3,
+        "health_issues": 3,
+        "shedding": 5,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": true,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": true,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": true
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Manx_(cat)",
+      "images": [
+        "https://cdn2.thecatapi.com/images/gU5wUcOuo.jpg",
+        "https://cdn2.thecatapi.com/images/Rscv6E1c5.jpg",
+        "https://cdn2.thecatapi.com/images/AoDtRhYcL.jpg",
+        "https://cdn2.thecatapi.com/images/i9HsL15nJ.jpg",
+        "https://cdn2.thecatapi.com/images/P2NukwZ0n.jpg",
+        "https://cdn2.thecatapi.com/images/OXMyfVPcP.jpg",
+        "https://cdn2.thecatapi.com/images/oKgfW90l6.jpg",
+        "https://cdn2.thecatapi.com/images/fhYh2PDcC.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:44:59"
+    },
+    "munc": {
+      "id": "munc",
+      "name_en": "Munchkin",
+      "name_zh_hint": "曼赤肯短腿貓",
+      "alt_names": [],
+      "origin": "United States",
+      "country_code": "US",
+      "description_en": "The Munchkin is an outgoing cat who enjoys being handled. She has lots of energy and is faster and more agile than she looks. The shortness of their legs does not seem to interfere with their running and leaping abilities.",
+      "temperament_en": [
+        "Agile",
+        "Easy Going",
+        "Intelligent",
+        "Playful"
+      ],
+      "life_span": "10 - 15",
+      "weight": {
+        "imperial": "5 - 9",
+        "metric": "2 - 4"
+      },
+      "scores": {
+        "energy": 4,
+        "grooming": 2,
+        "intelligence": 5,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 5,
+        "social_needs": 5,
+        "vocalisation": 3,
+        "health_issues": 3,
+        "shedding": 3,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": false,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": true,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": true
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Munchkin_(cat)",
+      "images": [
+        "https://cdn2.thecatapi.com/images/mZZzMlywy.jpg",
+        "https://cdn2.thecatapi.com/images/a1g4Ycw-z.jpg",
+        "https://cdn2.thecatapi.com/images/wBbqm3pJa.jpg",
+        "https://cdn2.thecatapi.com/images/pzIURJPra.jpg",
+        "https://cdn2.thecatapi.com/images/B1dwPGuL0.jpg",
+        "https://cdn2.thecatapi.com/images/eDsBV6sYe.jpg",
+        "https://cdn2.thecatapi.com/images/106hayhS4.jpg",
+        "https://cdn2.thecatapi.com/images/mpcBi2Utm.jpg",
+        "https://cdn2.thecatapi.com/images/W3fUcHI8z.jpg",
+        "https://cdn2.thecatapi.com/images/Hxf2tUHL6.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:45:04"
+    },
+    "nebe": {
+      "id": "nebe",
+      "name_en": "Nebelung",
+      "name_zh_hint": "尼比隆貓",
+      "alt_names": [
+        "Longhaired Russian Blue"
+      ],
+      "origin": "United States",
+      "country_code": "US",
+      "description_en": "The Nebelung may have a reserved nature, but she loves to play (being especially fond of retrieving) and enjoys jumping or climbing to high places where she can study people and situations at her leisure before making up her mind about whether she wants to get involved.",
+      "temperament_en": [
+        "Gentle",
+        "Quiet",
+        "Shy",
+        "Playful"
+      ],
+      "life_span": "11 - 16",
+      "weight": {
+        "imperial": "7 - 11",
+        "metric": "3 - 5"
+      },
+      "scores": {
+        "energy": 3,
+        "grooming": 3,
+        "intelligence": 5,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 3,
+        "social_needs": 3,
+        "vocalisation": 1,
+        "health_issues": 2,
+        "shedding": 3,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": false,
+        "rare": true,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": true
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Nebelung",
+      "images": [
+        "https://cdn2.thecatapi.com/images/C2JowzG1O.jpg",
+        "https://cdn2.thecatapi.com/images/OGTWqNNOt.jpg",
+        "https://cdn2.thecatapi.com/images/xObEK7X1-.jpg",
+        "https://cdn2.thecatapi.com/images/qtgE7qRvw.jpg",
+        "https://cdn2.thecatapi.com/images/FotU1pOJT.jpg",
+        "https://cdn2.thecatapi.com/images/8Xczzmo2j.jpg",
+        "https://cdn2.thecatapi.com/images/GwRBXx7-w.jpg",
+        "https://cdn2.thecatapi.com/images/0VDLLByGi.jpg",
+        "https://cdn2.thecatapi.com/images/Fb9fWJuJq.jpg",
+        "https://cdn2.thecatapi.com/images/KpHqQPUPW.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:45:08"
+    },
+    "norw": {
+      "id": "norw",
+      "name_en": "Norwegian Forest Cat",
+      "name_zh_hint": "挪威森林貓",
+      "alt_names": [
+        "Skogkatt / Skaukatt",
+        " Norsk Skogkatt / Norsk Skaukatt",
+        " Weegie"
+      ],
+      "origin": "Norway",
+      "country_code": "NO",
+      "description_en": "The Norwegian Forest Cat is a sweet, loving cat. She appreciates praise and loves to interact with her parent. She makes a loving companion and bonds with her parents once she accepts them for her own. She is still a hunter at heart. She loves to chase toys as if they are real. She is territorial and patrols several times each day to make certain that all is fine.",
+      "temperament_en": [
+        "Sweet",
+        "Active",
+        "Intelligent",
+        "Social",
+        "Playful",
+        "Lively",
+        "Curious"
+      ],
+      "life_span": "12 - 16",
+      "weight": {
+        "imperial": "8 - 16",
+        "metric": "4 - 7"
+      },
+      "scores": {
+        "energy": 3,
+        "grooming": 2,
+        "intelligence": 4,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 5,
+        "social_needs": 5,
+        "vocalisation": 1,
+        "health_issues": 3,
+        "shedding": 3,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": true,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": false
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Norwegian_Forest_Cat",
+      "images": [
+        "https://cdn2.thecatapi.com/images/ZUumV9qmY.jpg",
+        "https://cdn2.thecatapi.com/images/qQNpoUTW1.jpg",
+        "https://cdn2.thecatapi.com/images/L_H7aef7m.jpg",
+        "https://cdn2.thecatapi.com/images/IvIKQQqSP.jpg",
+        "https://cdn2.thecatapi.com/images/bsr5KQSJ6.jpg",
+        "https://cdn2.thecatapi.com/images/BtoHr0-4b.jpg",
+        "https://cdn2.thecatapi.com/images/ORMN4W_9X.jpg",
+        "https://cdn2.thecatapi.com/images/2JgKj4y4B.jpg",
+        "https://cdn2.thecatapi.com/images/rBuGgH_Wj.jpg",
+        "https://cdn2.thecatapi.com/images/Wi9RoSlCM.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:45:13"
+    },
+    "ocic": {
+      "id": "ocic",
+      "name_en": "Ocicat",
+      "name_zh_hint": "歐西貓",
+      "alt_names": [],
+      "origin": "United States",
+      "country_code": "US",
+      "description_en": "Loyal and devoted to their owners, the Ocicat is intelligent, confident, outgoing, and seems to have many dog traits. They can be trained to fetch toys, walk on a lead, taught to 'speak', come when called, and follow other commands. ",
+      "temperament_en": [
+        "Active",
+        "Agile",
+        "Curious",
+        "Demanding",
+        "Friendly",
+        "Gentle",
+        "Lively",
+        "Playful",
+        "Social"
+      ],
+      "life_span": "12 - 14",
+      "weight": {
+        "imperial": "7 - 15",
+        "metric": "3 - 7"
+      },
+      "scores": {
+        "energy": 5,
+        "grooming": 1,
+        "intelligence": 5,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 5,
+        "social_needs": 5,
+        "vocalisation": 3,
+        "health_issues": 3,
+        "shedding": 3,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": false,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": true,
+        "indoor": false,
+        "lap": false
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Ocicat",
+      "images": [
+        "https://cdn2.thecatapi.com/images/JAx-08Y0n.jpg",
+        "https://cdn2.thecatapi.com/images/jMZuST3W6.jpg",
+        "https://cdn2.thecatapi.com/images/N9XTfbgI6.jpg",
+        "https://cdn2.thecatapi.com/images/fLJYKez7P.jpg",
+        "https://cdn2.thecatapi.com/images/qzmA6FAUs.jpg",
+        "https://cdn2.thecatapi.com/images/Z5Wd0A-r_.jpg",
+        "https://cdn2.thecatapi.com/images/TboUiIDUO.jpg",
+        "https://cdn2.thecatapi.com/images/A_G4pf_T3.jpg",
+        "https://cdn2.thecatapi.com/images/0vXzg857G.jpg",
+        "https://cdn2.thecatapi.com/images/VQ_DGs4R8.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:45:17"
+    },
+    "orie": {
+      "id": "orie",
+      "name_en": "Oriental",
+      "name_zh_hint": "東方貓",
+      "alt_names": [
+        "Foreign Type"
+      ],
+      "origin": "United States",
+      "country_code": "US",
+      "description_en": "Orientals are passionate about the people in their lives. They become extremely attached to their humans, so be prepared for a lifetime commitment. When you are not available to entertain her, an Oriental will divert herself by jumping on top of the refrigerator, opening drawers, seeking out new hideaways.",
+      "temperament_en": [
+        "Energetic",
+        "Affectionate",
+        "Intelligent",
+        "Social",
+        "Playful",
+        "Curious"
+      ],
+      "life_span": "12 - 14",
+      "weight": {
+        "imperial": "5 - 10",
+        "metric": "2 - 5"
+      },
+      "scores": {
+        "energy": 5,
+        "grooming": 1,
+        "intelligence": 5,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 3,
+        "social_needs": 5,
+        "vocalisation": 5,
+        "health_issues": 3,
+        "shedding": 3,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": false,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": true,
+        "indoor": false,
+        "lap": true
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Oriental_Shorthair",
+      "images": [
+        "https://cdn2.thecatapi.com/images/0eVXT8_lb.jpg",
+        "https://cdn2.thecatapi.com/images/UYp1-LQxI.jpg",
+        "https://cdn2.thecatapi.com/images/Mt-cUeiUY.jpg",
+        "https://cdn2.thecatapi.com/images/6y4uxeRjW.jpg",
+        "https://cdn2.thecatapi.com/images/rWWY0_rWU.jpg",
+        "https://cdn2.thecatapi.com/images/xbW2bsXfK.jpg",
+        "https://cdn2.thecatapi.com/images/jVu6K43F7.jpg",
+        "https://cdn2.thecatapi.com/images/NTsRW30uC.jpg",
+        "https://cdn2.thecatapi.com/images/O7FnoegHR.jpg",
+        "https://cdn2.thecatapi.com/images/f6TE5pt6f.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:45:22"
+    },
+    "pers": {
+      "id": "pers",
+      "name_en": "Persian",
+      "name_zh_hint": "波斯貓",
+      "alt_names": [
+        "Longhair",
+        " Persian Longhair",
+        " Shiraz",
+        " Shirazi"
+      ],
+      "origin": "Iran (Persia)",
+      "country_code": "IR",
+      "description_en": "Persians are sweet, gentle cats that can be playful or quiet and laid-back. Great with families and children, they absolutely love to lounge around the house. While they don’t mind a full house or active kids, they’ll usually hide when they need some alone time.",
+      "temperament_en": [
+        "Affectionate",
+        "loyal",
+        "Sedate",
+        "Quiet"
+      ],
+      "life_span": "14 - 15",
+      "weight": {
+        "imperial": "9 - 14",
+        "metric": "4 - 6"
+      },
+      "scores": {
+        "energy": 1,
+        "grooming": 5,
+        "intelligence": 3,
+        "affection": 5,
+        "child_friendly": 2,
+        "stranger_friendly": 2,
+        "social_needs": 4,
+        "vocalisation": 1,
+        "health_issues": 3,
+        "shedding": 4,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": true,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": true
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Persian_(cat)",
+      "images": [
+        "https://cdn2.thecatapi.com/images/d_RzH-Zft.jpg",
+        "https://cdn2.thecatapi.com/images/zFm4AbO-d.jpg",
+        "https://cdn2.thecatapi.com/images/2Jn-xmTIP.jpg",
+        "https://cdn2.thecatapi.com/images/tt01SNoSH.png",
+        "https://cdn2.thecatapi.com/images/J2qM5HR5K.jpg",
+        "https://cdn2.thecatapi.com/images/Pqtwt4FCq.jpg",
+        "https://cdn2.thecatapi.com/images/28JWnlpYH.jpg",
+        "https://cdn2.thecatapi.com/images/MjEa4UzfB.jpg",
+        "https://cdn2.thecatapi.com/images/iRMmnkFTl.png",
+        "https://cdn2.thecatapi.com/images/nT3k2rSnU.png"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:45:26"
+    },
+    "pixi": {
+      "id": "pixi",
+      "name_en": "Pixie-bob",
+      "name_zh_hint": "狸貓（Pixie-bob）",
+      "alt_names": [],
+      "origin": "United States",
+      "country_code": "US",
+      "description_en": "Companionable and affectionate, the Pixie-bob wants to be an integral part of the family. The Pixie-Bob’s ability to bond with their humans along with their patient personas make them excellent companions for children.",
+      "temperament_en": [
+        "Affectionate",
+        "Social",
+        "Intelligent",
+        "Loyal"
+      ],
+      "life_span": "13 - 16",
+      "weight": {
+        "imperial": "8 - 17",
+        "metric": "4 - 8"
+      },
+      "scores": {
+        "energy": 4,
+        "grooming": 1,
+        "intelligence": 5,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 4,
+        "social_needs": 4,
+        "vocalisation": 1,
+        "health_issues": 2,
+        "shedding": 3,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": false,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": true,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": true
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Pixiebob",
+      "images": [
+        "https://cdn2.thecatapi.com/images/fAYgJmLM8.jpg",
+        "https://cdn2.thecatapi.com/images/vjJDjiXQQ.jpg",
+        "https://cdn2.thecatapi.com/images/n6iJQcVtD.jpg",
+        "https://cdn2.thecatapi.com/images/HxENheThN.jpg",
+        "https://cdn2.thecatapi.com/images/qk67_tUAZ.jpg",
+        "https://cdn2.thecatapi.com/images/b4paC3RGM.jpg",
+        "https://cdn2.thecatapi.com/images/U0UIFP2CA.jpg",
+        "https://cdn2.thecatapi.com/images/z7fJRNeN6.jpg",
+        "https://cdn2.thecatapi.com/images/UFao82MoD.jpg",
+        "https://cdn2.thecatapi.com/images/zEpUrnbJg.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:45:31"
+    },
+    "raga": {
+      "id": "raga",
+      "name_en": "Ragamuffin",
+      "name_zh_hint": "襤褸貓",
+      "alt_names": [],
+      "origin": "United States",
+      "country_code": "US",
+      "description_en": "The Ragamuffin is calm, even tempered and gets along well with all family members. Changes in routine generally do not upset her. She is an ideal companion for those in apartments, and with children due to her patient nature.",
+      "temperament_en": [
+        "Affectionate",
+        "Friendly",
+        "Gentle",
+        "Calm"
+      ],
+      "life_span": "12 - 16",
+      "weight": {
+        "imperial": "8 - 20",
+        "metric": "4 - 9"
+      },
+      "scores": {
+        "energy": 3,
+        "grooming": 3,
+        "intelligence": 5,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 5,
+        "social_needs": 3,
+        "vocalisation": 1,
+        "health_issues": 3,
+        "shedding": 3,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": false,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": true
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Ragamuffin_cat",
+      "images": [
+        "https://cdn2.thecatapi.com/images/sWvKIFxBM.jpg",
+        "https://cdn2.thecatapi.com/images/THXQ9Nqie.jpg",
+        "https://cdn2.thecatapi.com/images/iIxCVTJc8.jpg",
+        "https://cdn2.thecatapi.com/images/4G_bcp35K.jpg",
+        "https://cdn2.thecatapi.com/images/zIcb1-MhH.jpg",
+        "https://cdn2.thecatapi.com/images/trgTS8szc.jpg",
+        "https://cdn2.thecatapi.com/images/mK0P2HlfO.jpg",
+        "https://cdn2.thecatapi.com/images/YXjvj-hjW.jpg",
+        "https://cdn2.thecatapi.com/images/jI2dXfp26.png",
+        "https://cdn2.thecatapi.com/images/nG2rFqXai.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:45:35"
+    },
+    "ragd": {
+      "id": "ragd",
+      "name_en": "Ragdoll",
+      "name_zh_hint": "布偶貓",
+      "alt_names": [
+        "Rag doll"
+      ],
+      "origin": "United States",
+      "country_code": "US",
+      "description_en": "Ragdolls love their people, greeting them at the door, following them around the house, and leaping into a lap or snuggling in bed whenever given the chance. They are the epitome of a lap cat, enjoy being carried and collapsing into the arms of anyone who holds them.",
+      "temperament_en": [
+        "Affectionate",
+        "Friendly",
+        "Gentle",
+        "Quiet",
+        "Easygoing"
+      ],
+      "life_span": "12 - 17",
+      "weight": {
+        "imperial": "12 - 20",
+        "metric": "5 - 9"
+      },
+      "scores": {
+        "energy": 3,
+        "grooming": 2,
+        "intelligence": 3,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 3,
+        "social_needs": 5,
+        "vocalisation": 1,
+        "health_issues": 3,
+        "shedding": 3,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": false,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": true
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Ragdoll",
+      "images": [
+        "https://cdn2.thecatapi.com/images/bCHc9dHit.jpg",
+        "https://cdn2.thecatapi.com/images/Sy9SgPE0B.jpg",
+        "https://cdn2.thecatapi.com/images/bju16uKfD.jpg",
+        "https://cdn2.thecatapi.com/images/aB3eTwbRQ.jpg",
+        "https://cdn2.thecatapi.com/images/WEgQATxKa.jpg",
+        "https://cdn2.thecatapi.com/images/CeQSKi526.jpg",
+        "https://cdn2.thecatapi.com/images/QZYN75HxN.jpg",
+        "https://cdn2.thecatapi.com/images/yHZ1Cr6fd.jpg",
+        "https://cdn2.thecatapi.com/images/qBqs3R_w4.jpg",
+        "https://cdn2.thecatapi.com/images/3b2FeMj3s.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:45:40"
+    },
+    "rblu": {
+      "id": "rblu",
+      "name_en": "Russian Blue",
+      "name_zh_hint": "俄羅斯藍貓",
+      "alt_names": [
+        "Archangel Blue",
+        " Archangel Cat"
+      ],
+      "origin": "Russia",
+      "country_code": "RU",
+      "description_en": "Russian Blues are very loving and reserved. They do not like noisy households but they do like to play and can be quite active when outdoors. They bond very closely with their owner and are known to be compatible with other pets.",
+      "temperament_en": [
+        "Active",
+        "Dependent",
+        "Easy Going",
+        "Gentle",
+        "Intelligent",
+        "Loyal",
+        "Playful",
+        "Quiet"
+      ],
+      "life_span": "10 - 16",
+      "weight": {
+        "imperial": "5 - 11",
+        "metric": "2 - 5"
+      },
+      "scores": {
+        "energy": 3,
+        "grooming": 3,
+        "intelligence": 3,
+        "affection": 3,
+        "child_friendly": 3,
+        "stranger_friendly": 1,
+        "social_needs": 3,
+        "vocalisation": 1,
+        "health_issues": 1,
+        "shedding": 3,
+        "adaptability": 3
+      },
+      "tags": {
+        "hairless": false,
+        "natural": true,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": true,
+        "indoor": false,
+        "lap": true
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Russian_Blue",
+      "images": [
+        "https://cdn2.thecatapi.com/images/Rhj-JsTLP.jpg",
+        "https://cdn2.thecatapi.com/images/DdmsQrCAv.jpg",
+        "https://cdn2.thecatapi.com/images/zK-7AFYVn.jpg",
+        "https://cdn2.thecatapi.com/images/4B7MJpywg.jpg",
+        "https://cdn2.thecatapi.com/images/dK0max215.jpg",
+        "https://cdn2.thecatapi.com/images/ErPMMvcv2.jpg",
+        "https://cdn2.thecatapi.com/images/iPMgEn50-.jpg",
+        "https://cdn2.thecatapi.com/images/LIoOlcalr.jpg",
+        "https://cdn2.thecatapi.com/images/bpZGfNLW1.png",
+        "https://cdn2.thecatapi.com/images/tHKLZkKZG.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:45:45"
+    },
+    "sava": {
+      "id": "sava",
+      "name_en": "Savannah",
+      "name_zh_hint": "沙瓦娜貓",
+      "alt_names": [],
+      "origin": "United States",
+      "country_code": "US",
+      "description_en": "Savannah is the feline version of a dog. Actively seeking social interaction, they are given to pouting if left out. Remaining kitten-like through life. Profoundly loyal to immediate family members whilst questioning the presence of strangers. Making excellent companions that are loyal, intelligent and eager to be involved.",
+      "temperament_en": [
+        "Curious",
+        "Social",
+        "Intelligent",
+        "Loyal",
+        "Outgoing",
+        "Adventurous",
+        "Affectionate"
+      ],
+      "life_span": "17 - 20",
+      "weight": {
+        "imperial": "8 - 25",
+        "metric": "4 - 11"
+      },
+      "scores": {
+        "energy": 5,
+        "grooming": 1,
+        "intelligence": 5,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 5,
+        "social_needs": 5,
+        "vocalisation": 1,
+        "health_issues": 1,
+        "shedding": 3,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": false,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": false
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Savannah_cat",
+      "images": [
+        "https://cdn2.thecatapi.com/images/qf6MhNS8z.jpg",
+        "https://cdn2.thecatapi.com/images/62Onx4gRb.jpg",
+        "https://cdn2.thecatapi.com/images/zPterbCcd.jpg",
+        "https://cdn2.thecatapi.com/images/A54VUs7Q6.jpg",
+        "https://cdn2.thecatapi.com/images/a8nIYvs6S.jpg",
+        "https://cdn2.thecatapi.com/images/xBR2jSIG7.jpg",
+        "https://cdn2.thecatapi.com/images/IOjBCPLXA.jpg",
+        "https://cdn2.thecatapi.com/images/wu1YzlB9q.jpg",
+        "https://cdn2.thecatapi.com/images/G_2zGI5Wu.jpg",
+        "https://cdn2.thecatapi.com/images/ie5eM6OOa.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:45:49"
+    },
+    "sfol": {
+      "id": "sfol",
+      "name_en": "Scottish Fold",
+      "name_zh_hint": "蘇格蘭摺耳貓",
+      "alt_names": [
+        "Scot Fold"
+      ],
+      "origin": "United Kingdom",
+      "country_code": "GB",
+      "description_en": "The Scottish Fold is a sweet, charming breed. She is an easy cat to live with and to care for. She is affectionate and is comfortable with all members of her family. Her tail should be handled gently. Folds are known for sleeping on their backs, and for sitting with their legs stretched out and their paws on their belly. This is called the \"Buddha Position\".",
+      "temperament_en": [
+        "Affectionate",
+        "Intelligent",
+        "Loyal",
+        "Playful",
+        "Social",
+        "Sweet",
+        "Loving"
+      ],
+      "life_span": "11 - 14",
+      "weight": {
+        "imperial": "5 - 11",
+        "metric": "2 - 5"
+      },
+      "scores": {
+        "energy": 3,
+        "grooming": 1,
+        "intelligence": 3,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 3,
+        "social_needs": 3,
+        "vocalisation": 1,
+        "health_issues": 4,
+        "shedding": 3,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": false,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": false
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Scottish_Fold",
+      "images": [
+        "https://cdn2.thecatapi.com/images/IOqJ6RK7L.jpg",
+        "https://cdn2.thecatapi.com/images/OlCMYSMZD.jpg",
+        "https://cdn2.thecatapi.com/images/TOozwr2OD.jpg",
+        "https://cdn2.thecatapi.com/images/4UTnt4f74.jpg",
+        "https://cdn2.thecatapi.com/images/O4zh8w0vB.jpg",
+        "https://cdn2.thecatapi.com/images/fntFSZi2V.jpg",
+        "https://cdn2.thecatapi.com/images/Z6d8vsYAo.jpg",
+        "https://cdn2.thecatapi.com/images/6xLEBwiUS.png",
+        "https://cdn2.thecatapi.com/images/rCpfoEpQY.jpg",
+        "https://cdn2.thecatapi.com/images/_GVSjXZ4i.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:45:54"
+    },
+    "srex": {
+      "id": "srex",
+      "name_en": "Selkirk Rex",
+      "name_zh_hint": "塞爾凱克捲毛貓",
+      "alt_names": [
+        "Shepherd Cat"
+      ],
+      "origin": "United States",
+      "country_code": "US",
+      "description_en": "The Selkirk Rex is an incredibly patient, loving, and tolerant breed. The Selkirk also has a silly side and is sometimes described as clownish. She loves being a lap cat and will be happy to chat with you in a quiet voice if you talk to her. ",
+      "temperament_en": [
+        "Active",
+        "Affectionate",
+        "Dependent",
+        "Gentle",
+        "Patient",
+        "Playful",
+        "Quiet",
+        "Social"
+      ],
+      "life_span": "14 - 15",
+      "weight": {
+        "imperial": "6 - 16",
+        "metric": "3 - 7"
+      },
+      "scores": {
+        "energy": 3,
+        "grooming": 2,
+        "intelligence": 3,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 3,
+        "social_needs": 3,
+        "vocalisation": 3,
+        "health_issues": 4,
+        "shedding": 1,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": false,
+        "rare": false,
+        "rex": true,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": true,
+        "indoor": false,
+        "lap": true
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Selkirk_Rex",
+      "images": [
+        "https://cdn2.thecatapi.com/images/l-LrP1VY4.jpg",
+        "https://cdn2.thecatapi.com/images/0Vz3XgaPM.jpg",
+        "https://cdn2.thecatapi.com/images/enV_ZqSpp.jpg",
+        "https://cdn2.thecatapi.com/images/0dR5LpzNO.jpg",
+        "https://cdn2.thecatapi.com/images/uGWCE3F8u.jpg",
+        "https://cdn2.thecatapi.com/images/-ATvkFxvA.jpg",
+        "https://cdn2.thecatapi.com/images/5dF28H7__.jpg",
+        "https://cdn2.thecatapi.com/images/xfkK4cQvp.jpg",
+        "https://cdn2.thecatapi.com/images/B2YB13Ydq.jpg",
+        "https://cdn2.thecatapi.com/images/II9dOZmrw.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:45:58"
+    },
+    "siam": {
+      "id": "siam",
+      "name_en": "Siamese",
+      "name_zh_hint": "暹羅貓",
+      "alt_names": [
+        "Siam",
+        " Thai Cat"
+      ],
+      "origin": "Thailand",
+      "country_code": "TH",
+      "description_en": "While Siamese cats are extremely fond of their people, they will follow you around and supervise your every move, being talkative and opinionated. They are a demanding and social cat, that do not like being left alone for long periods.",
+      "temperament_en": [
+        "Active",
+        "Agile",
+        "Clever",
+        "Sociable",
+        "Loving",
+        "Energetic"
+      ],
+      "life_span": "12 - 15",
+      "weight": {
+        "imperial": "8 - 15",
+        "metric": "4 - 7"
+      },
+      "scores": {
+        "energy": 5,
+        "grooming": 1,
+        "intelligence": 5,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 5,
+        "social_needs": 5,
+        "vocalisation": 5,
+        "health_issues": 1,
+        "shedding": 2,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": false,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": true,
+        "indoor": false,
+        "lap": true
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Siamese_(cat)",
+      "images": [
+        "https://cdn2.thecatapi.com/images/__tqyLW91.jpg",
+        "https://cdn2.thecatapi.com/images/DFHMMPNcD.jpg",
+        "https://cdn2.thecatapi.com/images/O2aNhFGU-.jpg",
+        "https://cdn2.thecatapi.com/images/Xwp-MBOtI.jpg",
+        "https://cdn2.thecatapi.com/images/stVqmJmi7.jpg",
+        "https://cdn2.thecatapi.com/images/nwrkX6GhX.jpg",
+        "https://cdn2.thecatapi.com/images/O4yjcTJOh.jpg",
+        "https://cdn2.thecatapi.com/images/uTG1YFzJV.jpg",
+        "https://cdn2.thecatapi.com/images/84-HSUBbt.jpg",
+        "https://cdn2.thecatapi.com/images/-AiX8QA5I.png"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:46:03"
+    },
+    "sibe": {
+      "id": "sibe",
+      "name_en": "Siberian",
+      "name_zh_hint": "西伯利亞貓",
+      "alt_names": [
+        "Moscow Semi-longhair",
+        " HairSiberian Forest Cat"
+      ],
+      "origin": "Russia",
+      "country_code": "RU",
+      "description_en": "The Siberians dog like temperament and affection makes the ideal lap cat and will live quite happily indoors. Very agile and powerful, the Siberian cat can easily leap and reach high places, including the tops of refrigerators and even doors. ",
+      "temperament_en": [
+        "Curious",
+        "Intelligent",
+        "Loyal",
+        "Sweet",
+        "Agile",
+        "Playful",
+        "Affectionate"
+      ],
+      "life_span": "12 - 15",
+      "weight": {
+        "imperial": "8 - 16",
+        "metric": "4 - 7"
+      },
+      "scores": {
+        "energy": 5,
+        "grooming": 2,
+        "intelligence": 5,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 3,
+        "social_needs": 4,
+        "vocalisation": 1,
+        "health_issues": 2,
+        "shedding": 3,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": true,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": true,
+        "indoor": false,
+        "lap": true
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Siberian_(cat)",
+      "images": [
+        "https://cdn2.thecatapi.com/images/dv2BqDVGr.jpg",
+        "https://cdn2.thecatapi.com/images/bvG8QGrnU.jpg",
+        "https://cdn2.thecatapi.com/images/9K-Lvmafl.jpg",
+        "https://cdn2.thecatapi.com/images/rEcqVVVto.jpg",
+        "https://cdn2.thecatapi.com/images/mOUZSsI8a.jpg",
+        "https://cdn2.thecatapi.com/images/N5RX2nuGB.jpg",
+        "https://cdn2.thecatapi.com/images/3bkZAjRh1.jpg",
+        "https://cdn2.thecatapi.com/images/TlOXRrSiK.jpg",
+        "https://cdn2.thecatapi.com/images/QAWwhRFCG.jpg",
+        "https://cdn2.thecatapi.com/images/IJyPTBLyU.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:46:07"
+    },
+    "sing": {
+      "id": "sing",
+      "name_en": "Singapura",
+      "name_zh_hint": "新加坡貓",
+      "alt_names": [
+        "Drain Cat",
+        " Kucinta",
+        " Pura"
+      ],
+      "origin": "Singapore",
+      "country_code": "SP",
+      "description_en": "The Singapura is usually cautious when it comes to meeting new people, but loves attention from his family so much that she sometimes has the reputation of being a pest. This is a highly active, curious and affectionate cat. She may be small, but she knows she’s in charge",
+      "temperament_en": [
+        "Affectionate",
+        "Curious",
+        "Easy Going",
+        "Intelligent",
+        "Interactive",
+        "Lively",
+        "Loyal"
+      ],
+      "life_span": "12 - 15",
+      "weight": {
+        "imperial": "5 - 8",
+        "metric": "2 - 4"
+      },
+      "scores": {
+        "energy": 5,
+        "grooming": 1,
+        "intelligence": 5,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 5,
+        "social_needs": 5,
+        "vocalisation": 1,
+        "health_issues": 1,
+        "shedding": 3,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": false,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": true
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Singapura_(cat)",
+      "images": [
+        "https://cdn2.thecatapi.com/images/_PH33O5FA.jpg",
+        "https://cdn2.thecatapi.com/images/bYlsJYWKg.jpg",
+        "https://cdn2.thecatapi.com/images/GOvziuOyw.jpg",
+        "https://cdn2.thecatapi.com/images/VGzO6r82_.jpg",
+        "https://cdn2.thecatapi.com/images/6jbkliQh5.jpg",
+        "https://cdn2.thecatapi.com/images/0THCGrAZj.jpg",
+        "https://cdn2.thecatapi.com/images/YoFolZlv5.jpg",
+        "https://cdn2.thecatapi.com/images/Qtncp2nRe.jpg",
+        "https://cdn2.thecatapi.com/images/1R_sq6SyF.jpg",
+        "https://cdn2.thecatapi.com/images/4Q5bRarQO.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:46:12"
+    },
+    "snow": {
+      "id": "snow",
+      "name_en": "Snowshoe",
+      "name_zh_hint": "雪鞋貓",
+      "alt_names": [],
+      "origin": "United States",
+      "country_code": "US",
+      "description_en": "The Snowshoe is a vibrant, energetic, affectionate and intelligent cat. They love being around people which makes them ideal for families, and becomes unhappy when left alone for long periods of time. Usually attaching themselves to one person, they do whatever they can to get your attention.",
+      "temperament_en": [
+        "Affectionate",
+        "Social",
+        "Intelligent",
+        "Sweet-tempered"
+      ],
+      "life_span": "14 - 19",
+      "weight": {
+        "imperial": "7 - 12",
+        "metric": "3 - 5"
+      },
+      "scores": {
+        "energy": 4,
+        "grooming": 3,
+        "intelligence": 5,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 4,
+        "social_needs": 4,
+        "vocalisation": 5,
+        "health_issues": 1,
+        "shedding": 3,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": false,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": true
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Snowshoe_(cat)",
+      "images": [
+        "https://cdn2.thecatapi.com/images/kkBIQnncT.jpg",
+        "https://cdn2.thecatapi.com/images/_qUK20W2d.jpg",
+        "https://cdn2.thecatapi.com/images/QTV5QVt_L.jpg",
+        "https://cdn2.thecatapi.com/images/uTFc4z0wP.jpg",
+        "https://cdn2.thecatapi.com/images/rEV4IdCH5.jpg",
+        "https://cdn2.thecatapi.com/images/OmNwBvvUm.jpg",
+        "https://cdn2.thecatapi.com/images/4d4V586nt.jpg",
+        "https://cdn2.thecatapi.com/images/7LsPJSIuO.jpg",
+        "https://cdn2.thecatapi.com/images/013-iJFrO.jpg",
+        "https://cdn2.thecatapi.com/images/twAFKVYGQ.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:46:16"
+    },
+    "soma": {
+      "id": "soma",
+      "name_en": "Somali",
+      "name_zh_hint": "索馬利貓",
+      "alt_names": [
+        "Fox Cat",
+        " Long-Haired Abyssinian"
+      ],
+      "origin": "Somalia",
+      "country_code": "SO",
+      "description_en": "The Somali lives life to the fullest. He climbs higher, jumps farther, plays harder. Nothing escapes the notice of this highly intelligent and inquisitive cat. Somalis love the company of humans and other animals.",
+      "temperament_en": [
+        "Mischievous",
+        "Tenacious",
+        "Intelligent",
+        "Affectionate",
+        "Gentle",
+        "Interactive",
+        "Loyal"
+      ],
+      "life_span": "12 - 16",
+      "weight": {
+        "imperial": "6 - 12",
+        "metric": "3 - 5"
+      },
+      "scores": {
+        "energy": 5,
+        "grooming": 3,
+        "intelligence": 5,
+        "affection": 5,
+        "child_friendly": 3,
+        "stranger_friendly": 5,
+        "social_needs": 5,
+        "vocalisation": 1,
+        "health_issues": 2,
+        "shedding": 4,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": false,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": false
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Somali_(cat)",
+      "images": [
+        "https://cdn2.thecatapi.com/images/klJJYDl2B.jpg",
+        "https://cdn2.thecatapi.com/images/v63sbirkC.jpg",
+        "https://cdn2.thecatapi.com/images/yLnM69IIz.jpg",
+        "https://cdn2.thecatapi.com/images/qwYvuuMxz.jpg",
+        "https://cdn2.thecatapi.com/images/eNCZ_R4yG.jpg",
+        "https://cdn2.thecatapi.com/images/AllGB9l57.jpg",
+        "https://cdn2.thecatapi.com/images/bzTBNgVLM.jpg",
+        "https://cdn2.thecatapi.com/images/EPF2ejNS0.jpg",
+        "https://cdn2.thecatapi.com/images/0lKfGvesZ.jpg",
+        "https://cdn2.thecatapi.com/images/nN4B8YFbb.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:46:21"
+    },
+    "sphy": {
+      "id": "sphy",
+      "name_en": "Sphynx",
+      "name_zh_hint": "斯芬克斯無毛貓",
+      "alt_names": [
+        "Canadian Hairless",
+        " Canadian Sphynx"
+      ],
+      "origin": "Canada",
+      "country_code": "CA",
+      "description_en": "The Sphynx is an intelligent, inquisitive, extremely friendly people-oriented breed. Sphynx commonly greet their owners  at the front door, with obvious excitement and happiness. She has an unexpected sense of humor that is often at odds with her dour expression.",
+      "temperament_en": [
+        "Loyal",
+        "Inquisitive",
+        "Friendly",
+        "Quiet",
+        "Gentle"
+      ],
+      "life_span": "12 - 14",
+      "weight": {
+        "imperial": "6 - 12",
+        "metric": "3 - 5"
+      },
+      "scores": {
+        "energy": 3,
+        "grooming": 2,
+        "intelligence": 5,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 5,
+        "social_needs": 5,
+        "vocalisation": 5,
+        "health_issues": 4,
+        "shedding": 1,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": true,
+        "natural": false,
+        "rare": true,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": true,
+        "indoor": false,
+        "lap": true
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Sphynx_(cat)",
+      "images": [
+        "https://cdn2.thecatapi.com/images/Y_z-aBHvf.jpg",
+        "https://cdn2.thecatapi.com/images/cIFwPWy84.jpg",
+        "https://cdn2.thecatapi.com/images/h8dnuSch3.jpg",
+        "https://cdn2.thecatapi.com/images/J-vpF8e1N.jpg",
+        "https://cdn2.thecatapi.com/images/Br8qCwbS9.jpg",
+        "https://cdn2.thecatapi.com/images/BedvI_ovc.jpg",
+        "https://cdn2.thecatapi.com/images/bRLzjs5nf.jpg",
+        "https://cdn2.thecatapi.com/images/LHOfWpFZa.jpg",
+        "https://cdn2.thecatapi.com/images/XwNRjN7JF.jpg",
+        "https://cdn2.thecatapi.com/images/bSu2exlkB.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:46:26"
+    },
+    "tonk": {
+      "id": "tonk",
+      "name_en": "Tonkinese",
+      "name_zh_hint": "東奇尼貓",
+      "alt_names": [
+        "Tonk"
+      ],
+      "origin": "Canada",
+      "country_code": "CA",
+      "description_en": "Intelligent and generous with their affection, a Tonkinese will supervise all activities with curiosity. Loving, social, active, playful, yet content to be a lap cat",
+      "temperament_en": [
+        "Curious",
+        "Intelligent",
+        "Social",
+        "Lively",
+        "Outgoing",
+        "Playful",
+        "Affectionate"
+      ],
+      "life_span": "14 - 16",
+      "weight": {
+        "imperial": "6 - 12",
+        "metric": "3 - 5"
+      },
+      "scores": {
+        "energy": 5,
+        "grooming": 1,
+        "intelligence": 5,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 5,
+        "social_needs": 5,
+        "vocalisation": 5,
+        "health_issues": 1,
+        "shedding": 3,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": false,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": true
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Tonkinese_(cat)",
+      "images": [
+        "https://cdn2.thecatapi.com/images/_np7TW9Iq.jpg",
+        "https://cdn2.thecatapi.com/images/t8oArUO-L.jpg",
+        "https://cdn2.thecatapi.com/images/5qNv0jHXW.jpg",
+        "https://cdn2.thecatapi.com/images/ECqe13G5B.jpg",
+        "https://cdn2.thecatapi.com/images/KBroiVNCM.jpg",
+        "https://cdn2.thecatapi.com/images/q95bpC4ct.jpg",
+        "https://cdn2.thecatapi.com/images/NuSl1fmU9.jpg",
+        "https://cdn2.thecatapi.com/images/6vPgXY9tb.jpg",
+        "https://cdn2.thecatapi.com/images/A7Dsj7g1x.png",
+        "https://cdn2.thecatapi.com/images/ciYIfAoze.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:46:30"
+    },
+    "toyg": {
+      "id": "toyg",
+      "name_en": "Toyger",
+      "name_zh_hint": "玩具虎貓",
+      "alt_names": [],
+      "origin": "United States",
+      "country_code": "US",
+      "description_en": "The Toyger has a sweet, calm personality and is generally friendly. He's outgoing enough to walk on a leash, energetic enough to play fetch and other interactive games, and confident enough to get along with other cats and friendly dogs.",
+      "temperament_en": [
+        "Playful",
+        "Social",
+        "Intelligent"
+      ],
+      "life_span": "12 - 15",
+      "weight": {
+        "imperial": "7 - 15",
+        "metric": "3 - 7"
+      },
+      "scores": {
+        "energy": 5,
+        "grooming": 1,
+        "intelligence": 5,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 5,
+        "social_needs": 3,
+        "vocalisation": 5,
+        "health_issues": 2,
+        "shedding": 3,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": false,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": true
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Toyger",
+      "images": [
+        "https://cdn2.thecatapi.com/images/nHrt_0PV3.jpg",
+        "https://cdn2.thecatapi.com/images/O3F3_S1XN.jpg",
+        "https://cdn2.thecatapi.com/images/Qjb0fsrDo.jpg",
+        "https://cdn2.thecatapi.com/images/NoQGHgPl7.jpg",
+        "https://cdn2.thecatapi.com/images/_rnhm7vpT.jpg",
+        "https://cdn2.thecatapi.com/images/5Esmfiggi.jpg",
+        "https://cdn2.thecatapi.com/images/Zi4jfH3c6.jpg",
+        "https://cdn2.thecatapi.com/images/afc0MNLCE.jpg",
+        "https://cdn2.thecatapi.com/images/2CL5AqIfV.png",
+        "https://cdn2.thecatapi.com/images/NfXOA9VEf.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:46:35"
+    },
+    "tang": {
+      "id": "tang",
+      "name_en": "Turkish Angora",
+      "name_zh_hint": "土耳其安哥拉貓",
+      "alt_names": [
+        "Ankara"
+      ],
+      "origin": "Turkey",
+      "country_code": "TR",
+      "description_en": "This is a smart and intelligent cat which bonds well with humans. With its affectionate and playful personality the Angora is a top choice for families. The Angora gets along great with other pets in the home, but it will make clear who is in charge, and who the house belongs to",
+      "temperament_en": [
+        "Affectionate",
+        "Agile",
+        "Clever",
+        "Gentle",
+        "Intelligent",
+        "Playful",
+        "Social"
+      ],
+      "life_span": "15 - 18",
+      "weight": {
+        "imperial": "5 - 10",
+        "metric": "2 - 5"
+      },
+      "scores": {
+        "energy": 5,
+        "grooming": 2,
+        "intelligence": 5,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 5,
+        "social_needs": 5,
+        "vocalisation": 3,
+        "health_issues": 2,
+        "shedding": 2,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": true,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": false
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Turkish_Angora",
+      "images": [
+        "https://cdn2.thecatapi.com/images/oR3LMBqEZ.jpg",
+        "https://cdn2.thecatapi.com/images/GIpj4xxPA.jpg",
+        "https://cdn2.thecatapi.com/images/c1OwKLEdL.jpg",
+        "https://cdn2.thecatapi.com/images/58mi0uCwO.jpg",
+        "https://cdn2.thecatapi.com/images/cSzaNCgq2.jpg",
+        "https://cdn2.thecatapi.com/images/Vkc_4BECE.jpg",
+        "https://cdn2.thecatapi.com/images/Ak9enJjbC.jpg",
+        "https://cdn2.thecatapi.com/images/ZGoY_Ivly.jpg",
+        "https://cdn2.thecatapi.com/images/GlwgzUMan.jpg",
+        "https://cdn2.thecatapi.com/images/ZDIuYg5UZ.png"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:46:39"
+    },
+    "tvan": {
+      "id": "tvan",
+      "name_en": "Turkish Van",
+      "name_zh_hint": "土耳其梵貓",
+      "alt_names": [
+        "Turkish Cat",
+        " Swimming cat"
+      ],
+      "origin": "Turkey",
+      "country_code": "TR",
+      "description_en": "While the Turkish Van loves to jump and climb, play with toys, retrieve and play chase, she is is big and ungainly; this is one cat who doesn’t always land on his feet. While not much of a lap cat, the Van will be happy to cuddle next to you and sleep in your bed. ",
+      "temperament_en": [
+        "Agile",
+        "Intelligent",
+        "Loyal",
+        "Playful",
+        "Energetic"
+      ],
+      "life_span": "12 - 17",
+      "weight": {
+        "imperial": "7 - 20",
+        "metric": "3 - 9"
+      },
+      "scores": {
+        "energy": 5,
+        "grooming": 2,
+        "intelligence": 5,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 4,
+        "social_needs": 4,
+        "vocalisation": 5,
+        "health_issues": 1,
+        "shedding": 3,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": true,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": false
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/Turkish_Van",
+      "images": [
+        "https://cdn2.thecatapi.com/images/rEHfYqWUM.jpg",
+        "https://cdn2.thecatapi.com/images/AhN6mXcc3.jpg",
+        "https://cdn2.thecatapi.com/images/rpZCEzgiR.jpg",
+        "https://cdn2.thecatapi.com/images/dLrzJVXo1.jpg",
+        "https://cdn2.thecatapi.com/images/YyxE3DfnS.jpg",
+        "https://cdn2.thecatapi.com/images/5C9ONTPeY.jpg",
+        "https://cdn2.thecatapi.com/images/klLnMZy3q.jpg",
+        "https://cdn2.thecatapi.com/images/5Kx7zbLN0.jpg",
+        "https://cdn2.thecatapi.com/images/sxIXJax6h.jpg",
+        "https://cdn2.thecatapi.com/images/RvfGGt00v.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:46:44"
+    },
+    "ycho": {
+      "id": "ycho",
+      "name_en": "York Chocolate",
+      "name_zh_hint": "約克巧克力貓",
+      "alt_names": [
+        "York"
+      ],
+      "origin": "United States",
+      "country_code": "US",
+      "description_en": "York Chocolate cats are known to be true lap cats with a sweet temperament. They love to be cuddled and petted. Their curious nature makes them follow you all the time and participate in almost everything you do, even if it's related to water: unlike many other cats, York Chocolates love it.",
+      "temperament_en": [
+        "Playful",
+        "Social",
+        "Intelligent",
+        "Curious",
+        "Friendly"
+      ],
+      "life_span": "13 - 15",
+      "weight": {
+        "imperial": "12 - 18",
+        "metric": "5 - 8"
+      },
+      "scores": {
+        "energy": 5,
+        "grooming": 3,
+        "intelligence": 5,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 4,
+        "social_needs": 4,
+        "vocalisation": 5,
+        "health_issues": 1,
+        "shedding": 3,
+        "adaptability": 5
+      },
+      "tags": {
+        "hairless": false,
+        "natural": false,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": true
+      },
+      "wikipedia_url": "https://en.wikipedia.org/wiki/York_Chocolate",
+      "images": [
+        "https://cdn2.thecatapi.com/images/sNSYauLG8.jpg",
+        "https://cdn2.thecatapi.com/images/LzVDEMYIv.jpg",
+        "https://cdn2.thecatapi.com/images/PlvdElgfk.jpg",
+        "https://cdn2.thecatapi.com/images/bqTGCEECv.jpg",
+        "https://cdn2.thecatapi.com/images/7pCnjXd47.jpg",
+        "https://cdn2.thecatapi.com/images/y9e6zClik.jpg",
+        "https://cdn2.thecatapi.com/images/Yt4_Z0aDC.jpg",
+        "https://cdn2.thecatapi.com/images/xIICfnlNm.jpg",
+        "https://cdn2.thecatapi.com/images/0SxW2SQ_S.jpg",
+        "https://cdn2.thecatapi.com/images/7_rjG2-pc.jpg"
+      ],
+      "_source": "thecatapi.com",
+      "_fetched_at": "2026-04-18 22:46:48"
+    }
+  }
+}
