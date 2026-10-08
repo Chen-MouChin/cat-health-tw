@@ -9,205 +9,66 @@
   <meta property="og:image" content="https://chen-mouchin.github.io/cat-health-tw/images/og-default.png">
 <title>獸醫院查詢 — 貓健康站</title>
 <meta name="description" content="全台 22 縣市動物醫院查詢：本島 19 縣市 + 澎湖、金門共 2,001 家（基於農業部公開登記；連江縣無登記動物醫院）。可篩 24h 急診 + 貓專科，手機可定位找附近最近的醫院。">
-<link rel="stylesheet" href="css/theme.css">
-<link rel="stylesheet" href="css/nav.css?v=20260420b">
+<link rel="stylesheet" href="css/theme.css?v=20260929">
+<link rel="stylesheet" href="css/site.css?v=20261009">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"CollectionPage","name":"獸醫院查詢 — 貓健康站","description":"全台 22 縣市 2,001 家動物醫院查詢（本島完整 + 澎湖金門）。可篩 24h 急診 + 貓專科。資料來源：農業部動保司。","url":"https://chen-mouchin.github.io/cat-health-tw/vets.html","inLanguage":"zh-TW"}
 </script>
 <script src="js/theme.js"></script>
 <style>
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: system-ui, "Noto Sans TC", sans-serif; background: var(--bg, #f9f6f0); color: var(--text, #1d1d1f); }
+/* 獸醫院查詢｜共用外殼在 site.css；這裡只放查詢工具自己的版面。
+   紅色不用在這頁：24h 只是資料標籤，判斷交給獸醫。 */
+.vets-col { max-width: 760px; margin: 0 auto; }
+.page-head .meta-line { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; margin-top: 10px; font-size: 14px; color: var(--text-muted); }
+.page-head .meta-line strong { color: var(--text); }
+.data-quality-badge { font-weight: 600; }
 
-.page-title { text-align: center; padding: 1.8rem 1rem 0.3rem; font-size: 1.6rem; font-weight: 700; }
-.page-sub { text-align: center; font-size: 0.85rem; color: var(--text-muted, #6e6e73); padding-bottom: 0.8rem; }
-.data-quality-badge {
-  display: inline-block; padding: 0.1rem 0.5rem;
-  font-size: 0.75rem; font-weight: 600;
-  background: #e5f0e8; color: #2e6b3f;
-  border-radius: 10px; text-decoration: none;
-  border: 1px solid #b8d4c2;
-}
-.data-quality-badge:hover { background: #d4e8d8; }
-
-main { max-width: 960px; margin: 0 auto; padding: 0 1rem 2rem; }
-
-/* 工具列 */
-.toolbar { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.8rem; align-items: center; }
-.toolbar input, .toolbar select {
-  padding: 0.5rem 0.9rem;
-  border: 1px solid var(--border, #d2d2d7); border-radius: 18px;
-  background: var(--bg-card, #fff); color: var(--text);
-  font-size: 0.9rem;
-}
-.toolbar input { flex: 1; min-width: 200px; }
-.toolbar select { cursor: pointer; }
-.toolbar input:focus, .toolbar select:focus { border-color: var(--accent, #1d1d1f); }
-
-/* 城市快速選 */
-.city-chips { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-bottom: 1rem; }
-.city-chip {
-  background: var(--bg-card, #fff); border: 1px solid var(--border, #e5e5ea);
-  border-radius: 14px; padding: 0.25rem 0.8rem; font-size: 0.8rem;
-  cursor: pointer; color: var(--text-muted, #6e6e73);
-  transition: all 0.12s;
-}
-.city-chip:hover { border-color: var(--text-muted, #6e6e73); color: var(--text, #1d1d1f); }
-.city-chip.active {
-  background: var(--accent, #1d1d1f); color: var(--accent-on, #fff);
-  border-color: var(--accent, #1d1d1f);
-}
-.city-chip .cnt { opacity: 0.7; margin-left: 0.25rem; font-size: 0.7rem; }
-
-.hint {
-  font-size: 0.8rem; color: var(--text-muted, #6e6e73);
-  margin: 0.4rem 0 0.8rem;
-}
-
-/* 結果列表 */
-.vet-list { display: flex; flex-direction: column; gap: 0.5rem; }
-.vet-card {
-  background: var(--bg-card, #fff);
-  border: 1px solid var(--border, #e5e5ea);
-  border-radius: 8px;
-  padding: 0.7rem 1rem;
-  display: flex; flex-direction: column; gap: 0.25rem;
-}
-.vet-card:hover { border-color: var(--border-strong, #d2d2d7); }
-.vet-name {
-  font-weight: 600; font-size: 0.95rem;
-  color: var(--text, #1d1d1f);
-}
-.vet-name .pos {
-  font-size: 0.7rem; color: var(--text-faint, #a1a1a6);
-  font-weight: 400; margin-left: 0.4rem;
-}
-.vet-meta {
-  display: flex; flex-wrap: wrap; gap: 0.5rem 1rem;
-  font-size: 0.82rem; color: var(--text-muted, #6e6e73);
-}
-.vet-meta a {
-  color: var(--text-muted, #6e6e73); text-decoration: none;
-}
-.vet-meta a:hover { color: var(--text, #1d1d1f); text-decoration: underline; }
-.vet-tel { font-variant-numeric: tabular-nums; }
-.vet-hours {
-  font-size: 0.75rem; color: var(--text-faint, #a1a1a6);
-  white-space: pre-line;
-}
-.vet-actions {
-  display: flex; gap: 0.4rem; margin-top: 0.2rem;
-}
-.vet-actions a {
-  font-size: 0.75rem; padding: 0.25rem 0.7rem;
-  border: 1px solid var(--border, #e5e5ea);
-  border-radius: 12px;
-  color: var(--text-muted, #6e6e73); text-decoration: none;
-  background: var(--bg, #f9f6f0);
-}
-.vet-actions a:hover { background: var(--accent, #1d1d1f); color: var(--accent-on, #fff); border-color: var(--accent, #1d1d1f); }
-
-.empty {
-  text-align: center; padding: 3rem 1rem;
-  color: var(--text-muted, #6e6e73);
-}
-
-.load-more {
-  display: block; margin: 1rem auto;
-  background: var(--accent, #1d1d1f); color: var(--accent-on, #fff);
-  border: none; border-radius: 18px;
-  padding: 0.55rem 1.4rem; font-size: 0.9rem; font-weight: 600;
-  cursor: pointer;
-}
-.load-more:hover { background: var(--accent-hover, #424245); }
-
-.disclaimer {
-  background: #f5f0e8; border: 1px solid #d4c8b0; border-left: 3px solid #8a7340;
-  color: #5c4a25;
-  padding: 0.65rem 1rem; margin-bottom: 1rem; border-radius: 6px;
-  font-size: 0.8rem; line-height: 1.55;
-}
-
-/* 我的位置 + 24h 切換 */
-.toolbar2 {
-  display: flex; flex-wrap: wrap; gap: 0.5rem;
-  margin-bottom: 0.8rem; align-items: center;
-}
-.btn-loc, .btn-toggle {
-  padding: 0.45rem 0.9rem; border-radius: 18px;
-  border: 1px solid var(--border, #d2d2d7);
-  background: var(--bg-card, #fff); color: var(--text, #1d1d1f);
-  font-size: 0.85rem; cursor: pointer;
-  display: inline-flex; align-items: center; gap: 0.3rem;
-}
-.btn-loc:hover, .btn-toggle:hover { border-color: var(--accent, #1d1d1f); }
-.btn-loc.active, .btn-toggle.active {
-  background: var(--accent, #1d1d1f); color: var(--accent-on, #fff);
-  border-color: var(--accent, #1d1d1f);
-}
-.btn-loc[disabled] { opacity: 0.5; cursor: wait; }
-.loc-status {
-  flex-basis: 100%;
-  font-size: 0.75rem; color: var(--text-muted, #6e6e73); line-height: 1.55;
-}
+.notice { margin: 0 0 16px; }
+.toolbar { margin: 0 0 12px; }
+.toolbar .field { width: 100%; }
+.toolbar2 { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 0 0 12px; }
+.btn[disabled] { opacity: 0.6; cursor: wait; }
+.loc-status { flex-basis: 100%; font-size: 14px; color: var(--text-2); line-height: 1.6; }
 .loc-status:empty { display: none; }
 
-/* 附近模式：範圍切換 + 定位說明 */
-.near-panel {
-  background: var(--bg-card, #fff);
-  border: 1px solid var(--border, #e5e5ea); border-radius: 8px;
-  padding: 0.6rem 0.8rem; margin-bottom: 0.8rem;
-  scroll-margin-top: 4.5rem;  /* 導覽列是 sticky，捲過來時別被蓋住 */
-}
-.near-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.3rem; }
-.near-label { font-size: 0.8rem; color: var(--text-muted, #6e6e73); margin-right: 0.2rem; }
-.btn-relocate {
-  padding: 0.2rem 0; white-space: nowrap;
-  background: none; border: none; cursor: pointer;
-  font-size: 0.75rem; color: var(--text-muted, #6e6e73); text-decoration: underline;
-}
-.near-note {
-  font-size: 0.75rem; color: var(--text-muted, #6e6e73);
-  margin-top: 0.45rem; line-height: 1.55;
-}
-.near-note .warn { color: #8a4b12; }
+.near-panel { margin: 0 0 14px; padding: 12px 14px; border: 1px solid var(--border-strong); border-radius: 14px; background: var(--bg-card); scroll-margin-top: 1rem; }
+.near-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.near-label { font-size: 14px; font-weight: 700; color: var(--text-2); margin-right: 2px; }
+.near-note { margin-top: 8px; font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+.near-note .warn { color: var(--draft-text); }
+.btn-relocate { padding: 0; border: 0; background: none; color: var(--primary); font: inherit; font-weight: 600; text-decoration: underline; cursor: pointer; }
 
-/* 手機觸控：放大點擊區 */
-@media (pointer: coarse) {
-  .city-chip { padding: 0.4rem 0.85rem; font-size: 0.85rem; }
-  .vet-actions a { padding: 0.45rem 0.9rem; font-size: 0.82rem; }
-}
+.filter-hint { margin: 0 0 14px; }
+.city-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 16px; }
+.city-chip { display: inline-flex; align-items: center; gap: 4px; min-height: 40px; padding: 0 14px; border: 0; border-radius: var(--r-pill); background: var(--gold-pale); color: var(--text); font: 600 15px/1.2 var(--ui); cursor: pointer; white-space: nowrap; }
+.city-chip:hover { background: var(--gold-pale-deep); }
+.city-chip.active { background: var(--primary); color: var(--accent-on); }
+.city-chip .cnt { font-weight: 400; font-size: 13px; opacity: 0.75; }
 
-/* filter 啟用時的補充說明（避免使用者誤解 filter 結果）*/
-.filter-hint {
-  background: #f5ede4; border-left: 3px solid #a06e30;
-  color: #6b3f15;
-  padding: 0.55rem 0.95rem; margin-bottom: 0.8rem; border-radius: 6px;
-  font-size: 0.83rem; line-height: 1.55;
-}
-.filter-hint strong { color: #4f2e0d; }
+.hint { margin: 4px 0 10px; font-size: 15px; color: var(--text-2); }
+.vet-list { display: grid; gap: 10px; }
+.vet-card { display: flex; flex-direction: column; gap: 6px; padding: 14px 16px; border: 1px solid var(--border-strong); border-radius: 16px; background: var(--bg-card); }
+.vet-name { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px; font-size: 18px; font-weight: 700; line-height: 1.4; color: var(--text); }
+.vet-name .pos { font-size: 14px; font-weight: 400; color: var(--text-muted); }
+.badge-24h, .badge-cat { display: inline-flex; align-items: center; padding: 0 8px; border-radius: 6px; font-size: 13px; font-weight: 700; line-height: 1.75; }
+.badge-24h { background: var(--gold-pale); color: var(--draft-text); }
+.badge-cat { background: var(--primary-pale); color: var(--primary-deep); }
+.vet-distance { margin-left: auto; font-size: 15px; font-weight: 700; color: var(--primary-deep); font-variant-numeric: tabular-nums; }
+.vet-distance .approx { margin-left: 4px; font-size: 13px; font-weight: 400; color: var(--text-muted); }
+.vet-meta { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 15px; color: var(--text-2); }
+.vet-meta .i, .vet-hours .i { width: 16px; height: 16px; vertical-align: -3px; margin-right: 4px; color: var(--text-muted); }
+.vet-tel { font-variant-numeric: tabular-nums; font-weight: 600; }
+.vet-hours { font-size: 14px; color: var(--text-muted); white-space: pre-line; line-height: 1.6; }
+.vet-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+.vet-actions a { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 0 14px; border-radius: var(--r-pill); background: var(--bg-card); color: var(--primary-deep); font-size: 15px; font-weight: 700; text-decoration: none; box-shadow: inset 0 0 0 2px var(--primary-pale); }
+.vet-actions a:hover { box-shadow: inset 0 0 0 2px var(--primary); }
+.vet-actions .i { width: 18px; height: 18px; }
 
-/* 24h 標記 + 距離 */
-.badge-24h {
-  display: inline-block; font-size: 0.68rem; font-weight: 600;
-  background: #b93a2e; color: white;  /* 白字 5.7:1（原 #d8463b 只有 4.3）*/
-  padding: 0.1rem 0.45rem; border-radius: 8px;
-  margin-left: 0.4rem; vertical-align: middle;
-}
-.badge-cat {
-  display: inline-block; font-size: 0.68rem; font-weight: 600;
-  background: #3b6a50; color: white;  /* 白字 6.2:1（原 #5b8a6e 只有 4.0）*/
-  padding: 0.1rem 0.45rem; border-radius: 8px;
-  margin-left: 0.4rem; vertical-align: middle;
-}
-.vet-distance {
-  font-size: 0.78rem; color: var(--accent, #1d1d1f);
-  font-weight: 600; font-variant-numeric: tabular-nums;
-  margin-left: 0.4rem;
-}
-.vet-distance .approx {
-  font-size: 0.7rem; font-weight: 400; color: var(--text-faint, #a1a1a6);
-  margin-left: 0.25rem;
+.empty { padding: 32px 0; text-align: center; color: var(--text-muted); }
+.load-more { display: flex; margin: 16px auto 0; }
+
+@media (min-width: 880px) {
+  .vet-list { grid-template-columns: 1fr; }
 }
 </style>
   <meta property="og:title" content="獸醫院查詢 — 貓健康站">
@@ -218,36 +79,41 @@ main { max-width: 960px; margin: 0 auto; padding: 0 1rem 2rem; }
 </head>
 <body>
 
-<nav class="site-nav">
-  <a class="nav-brand" href="index.html" title="回首頁"><svg class="brand-logo" viewBox="0 0 180 47" aria-label="貓健康站" role="img"><g transform="translate(0,15.2) scale(0.750)" fill="currentColor"><path d="M4 20 V2 L14 10 Z"/><path d="M36 20 V2 L26 10 Z"/><circle cx="13" cy="18" r="2.2"/><circle cx="27" cy="18" r="2.2"/></g><g transform="translate(40.0,0) scale(0.340)"><path fill="currentColor" d="M79.79 93.26 65.04 93.46 49.61 93.65 48.24 93.75H41.21L40.72 64.45L40.82 45.31L45.21 44.73V44.63H46.00L46.48 44.53L48.83 44.43L61.13 43.95H81.25L89.16 44.73L91.89 46.78L92.48 64.84L92.29 85.94L91.89 93.75H85.74ZM59.08 65.43 58.79 57.91 54.59 58.01V60.35L54.69 65.53ZM71.78 65.23 77.05 65.33 76.95 57.91H71.88ZM59.08 82.71V76.95L54.98 77.15L55.08 82.71H58.40ZM71.97 82.62H76.95L77.15 77.54V76.86H71.88ZM17.58 85.45 24.41 85.16 25.68 81.35 20.21 84.28ZM68.85 9.96 76.37 9.67 83.98 10.55 83.79 19.63 92.68 19.92V27.25L91.80 33.30L83.01 32.91L82.91 35.25L82.52 41.50L73.24 41.02L68.85 40.43L68.95 32.62L60.06 32.81L60.45 40.33L51.56 41.11L46.97 41.41L46.29 33.30L40.62 33.59L39.75 27.54L39.65 20.61L45.41 20.31L45.02 12.30L52.83 10.84L58.89 10.94L59.38 19.73L69.14 19.34V16.50ZM32.62 8.89 36.23 13.38 39.26 20.21 32.81 23.14 22.17 27.25 7.71 31.84 5.86 27.44 4.79 20.02 15.04 17.09 23.73 13.67ZM6.15 35.94 10.64 32.91 15.72 30.66 18.16 35.45 20.61 41.11 16.41 43.46 11.82 45.70 9.47 41.80ZM19.24 30.96 24.71 27.15 29.49 25.29 32.23 29.98 34.18 34.08 36.72 31.74 41.11 36.43 44.53 42.77 37.21 47.17 33.20 49.22 37.01 56.54 40.14 70.51 38.87 84.77 36.43 91.41 32.23 94.73 24.51 95.12 19.14 94.24 18.55 89.45 16.80 85.74 10.74 88.38 8.79 85.35 7.13 78.42 16.31 74.51 23.05 70.80 26.17 68.36 25.68 66.41 19.92 69.63 11.82 73.14 10.06 70.70 7.71 63.57 19.53 58.20 22.17 56.45 21.29 54.69 19.53 55.47 10.35 58.69 8.20 54.98 6.15 47.85 13.96 45.51 25.59 40.23 30.18 37.30 29.30 37.70 24.22 39.16 21.48 34.47ZM134.08 77.73 129.88 75.20 129.78 83.20ZM153.12 68.36 150.97 73.05 153.80 74.51ZM177.44 28.12H180.95L180.86 25.49L177.54 25.29ZM177.44 41.02 180.76 41.21 180.86 38.28H177.44ZM165.13 75.29 156.54 75.49 165.13 78.22ZM136.62 44.53 138.96 38.67 136.52 38.38 132.22 38.57 131.44 33.01 128.80 40.92 126.36 46.58 130.66 48.05 130.07 62.40 129.98 68.46 134.57 62.79 140.04 66.60 141.99 61.23 139.35 60.74 135.25 60.35 134.27 55.18 133.88 49.51ZM164.35 7.71 173.73 7.62 178.12 8.69 177.93 13.87H185.64L191.99 14.55L194.33 17.09L194.23 28.32L199.61 28.42V35.45L198.73 39.06L194.04 38.87L193.16 50.78H187.40L185.93 50.59L177.44 50.29L177.54 52.64L191.89 53.12L191.99 59.18L191.30 63.18L185.05 62.60L177.63 62.50V65.14L189.55 65.33L197.16 65.82V71.78L196.38 76.46L186.52 75.49L177.73 75.20L177.83 79.20L171.09 79.00L165.72 78.42L167.38 78.91L181.44 80.86L195.60 81.45L195.21 89.06L194.14 94.43L176.56 92.77L164.35 90.53L151.17 86.72L145.11 83.89L142.77 87.79L137.59 94.24L131.93 89.84L129.78 86.72L129.88 94.53H122.85L117.38 93.75L117.77 72.56V65.72L115.52 70.31L109.57 66.21L105.66 61.23L111.03 50.49L116.60 35.84L120.50 22.75L123.34 9.86L132.61 12.01L137.59 14.94L134.18 25.20L142.87 25.00L148.82 25.49L151.17 31.64L152.05 38.28L150.48 42.87L146.97 49.22L151.07 49.41L153.61 50.29L155.17 56.25L155.46 61.33L154.39 65.62L165.23 65.23V62.50L157.91 62.79L156.93 58.30L157.22 52.93L165.23 52.73V50.29L155.27 50.49L154.59 46.78L154.68 41.21L165.04 41.11V38.28L153.61 38.38L152.83 32.71L153.02 28.12L164.94 28.03L164.84 25.39L155.37 25.49L154.49 21.00L154.39 14.16L164.55 13.96ZM271.09 42.87Q275.58 42.87 279.97 42.77Q280.07 41.41 280.17 40.14Q275.68 39.94 271.18 39.75Q271.09 40.62 271.09 41.50ZM271.18 54.10H279.58Q279.58 52.73 279.68 51.37Q279.29 51.37 278.80 51.37Q274.99 51.46 271.09 51.46Q271.18 52.83 271.18 54.10ZM271.28 70.02 279.29 66.99 286.12 64.06 287.79 63.09H286.42H279.29V62.60L271.28 62.70H271.18ZM273.53 73.34 271.28 70.31V72.75ZM255.36 6.35 266.40 8.40 270.79 9.08 270.50 15.14Q275.58 15.23 280.66 15.33H299.31L299.11 22.17L298.43 27.64L277.34 26.66L262.10 26.37L266.01 27.54L272.06 28.52Q271.96 29.88 271.87 31.15H280.46L292.47 32.13L294.91 34.28L294.62 43.16L302.82 43.36L302.14 48.05L301.95 52.05L294.33 51.86L293.64 63.09H290.91L293.06 66.60L296.96 71.58L291.50 74.22L287.30 75.78Q286.22 76.07 285.15 76.46L294.04 80.66L301.85 84.28L298.53 89.94L295.79 94.73L288.86 90.53L280.56 86.43L271.48 83.20Q271.57 87.01 271.67 90.92L270.11 92.97L265.03 94.82L255.07 95.21L253.31 91.02L251.26 87.21L254.88 86.91L257.61 86.23L257.32 76.66V73.63Q257.32 68.16 257.22 62.70H256.24L240.03 62.89L239.64 58.69L238.96 54.30H257.22L257.12 51.66Q253.61 51.66 250.19 51.76L236.12 51.86L235.44 46.78L234.95 43.07Q245.89 43.07 256.83 42.97V40.04L254.29 40.14H239.64L239.05 35.45L238.27 31.25L251.75 31.15H256.54L256.34 26.27Q255.07 26.27 253.90 26.17L230.27 26.56L235.54 28.12L233.98 53.71L232.12 68.46L228.70 83.98L225.48 94.04L219.91 91.31L212.49 88.87L216.11 75.78L218.25 64.65L219.82 53.22L220.40 38.18L220.99 24.32H221.09L220.79 21.09L220.01 15.43L231.44 15.04L255.85 14.84Q255.66 10.64 255.36 6.35ZM231.24 82.91 236.71 80.47 242.47 78.81 246.96 77.15 242.38 75.49 232.71 73.34 234.07 68.46 235.83 63.18 246.57 65.62 254.97 68.26 252.82 73.05 251.65 75.39 253.61 74.61 255.07 80.47 256.63 84.28 250.09 86.23 235.44 92.97 233.39 87.79ZM390.03 81.45Q390.12 78.52 390.22 75.68V69.04L379.68 68.65Q376.26 68.75 372.74 68.85Q372.74 71.68 372.84 74.51Q372.94 78.03 372.94 81.45Q375.96 81.54 378.99 81.64ZM328.21 15.82 336.32 15.72 342.66 16.70 342.08 24.02 341.98 29.30Q343.74 29.30 345.59 29.20H356.53V36.04L356.14 43.07L344.42 42.77L329.48 42.97L316.30 43.36L315.91 36.82L315.71 30.27L326.36 29.59H328.41V27.44ZM317.86 46.88 324.79 45.61 330.95 45.21 332.21 60.55 333.00 68.26 320.98 70.41 319.32 59.38ZM316.10 71.97 333.19 70.02 343.05 68.95 337.49 68.07 338.66 59.57 339.83 43.55 346.86 44.34 354.29 46.78 351.36 62.40 349.89 68.16 355.26 67.58 356.04 75.49 356.73 80.47 331.34 83.30 317.18 84.96 316.79 79.10ZM370.98 11.33 379.58 11.13 387.29 12.11 386.51 24.61V29.49L387.98 29.39L404.58 28.52L404.87 35.35L404.68 41.99L391.79 41.89Q389.15 41.99 386.41 42.09Q386.41 44.43 386.41 46.88V54.39L402.33 54.69L406.04 56.93V82.32L405.85 94.04L398.62 93.85L378.99 93.46Q374.50 93.46 370.01 93.46L364.54 93.75L358.58 93.65L358.19 90.62L358.09 73.54L357.80 54.98L364.44 54.79Q365.22 54.79 365.91 54.79Q365.91 54.69 365.91 54.59Q368.93 54.49 371.96 54.49Q371.86 45.41 371.77 36.33Z"/></g><g transform="translate(40.0,36.7) scale(0.579)"><path d="M0 9 H56 L61 9 L65 2 L70 15 L75 9 H150" fill="none" stroke="#b8860b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g></svg><span class="brand-home" aria-hidden="true">🏠</span></a>
-  <div class="nav-links">
-    <a class="nav-link" href="library.html" data-nav="library">📚 文獻庫</a>
-    <a class="nav-link" href="breeds.html" data-nav="breeds">🐈 品種</a>
-    <a class="nav-link active" href="vets.html" data-nav="vets">🏥 獸醫院</a>
-    <a class="nav-link" href="articles/index.html" data-nav="articles">📝 文章</a>
-    <a class="nav-link" href="about.html" data-nav="about">ℹ️ 關於</a>
-  </div>
-</nav>
+<div class="page">
+<!-- site-head -->
+<a class="skip" href="#main">跳到主要內容</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21.5s-7-6-7-11.5a7 7 0 0 1 14 0c0 5.5-7 11.5-7 11.5z"/><path d="M12 7v6M9 10h6"/></symbol><symbol id="i-locate" viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2.5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></symbol><symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></symbol><symbol id="i-route" viewBox="0 0 24 24"><path d="M3 11l18-8-8 18-2-8z"/></symbol><symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></symbol><symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol><symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></symbol></svg>
+<header class="site-head">
+  <a class="brand" href="index.html" aria-label="貓健康站首頁"><svg viewBox="0 0 180 47" aria-hidden="true" focusable="false"><g transform="translate(0,15.2) scale(0.750)" fill="currentColor"><path d="M4 20 V2 L14 10 Z"/><path d="M36 20 V2 L26 10 Z"/><circle cx="13" cy="18" r="2.2"/><circle cx="27" cy="18" r="2.2"/></g><g transform="translate(40.0,0) scale(0.340)"><path fill="currentColor" d="M79.79 93.26 65.04 93.46 49.61 93.65 48.24 93.75H41.21L40.72 64.45L40.82 45.31L45.21 44.73V44.63H46.00L46.48 44.53L48.83 44.43L61.13 43.95H81.25L89.16 44.73L91.89 46.78L92.48 64.84L92.29 85.94L91.89 93.75H85.74ZM59.08 65.43 58.79 57.91 54.59 58.01V60.35L54.69 65.53ZM71.78 65.23 77.05 65.33 76.95 57.91H71.88ZM59.08 82.71V76.95L54.98 77.15L55.08 82.71H58.40ZM71.97 82.62H76.95L77.15 77.54V76.86H71.88ZM17.58 85.45 24.41 85.16 25.68 81.35 20.21 84.28ZM68.85 9.96 76.37 9.67 83.98 10.55 83.79 19.63 92.68 19.92V27.25L91.80 33.30L83.01 32.91L82.91 35.25L82.52 41.50L73.24 41.02L68.85 40.43L68.95 32.62L60.06 32.81L60.45 40.33L51.56 41.11L46.97 41.41L46.29 33.30L40.62 33.59L39.75 27.54L39.65 20.61L45.41 20.31L45.02 12.30L52.83 10.84L58.89 10.94L59.38 19.73L69.14 19.34V16.50ZM32.62 8.89 36.23 13.38 39.26 20.21 32.81 23.14 22.17 27.25 7.71 31.84 5.86 27.44 4.79 20.02 15.04 17.09 23.73 13.67ZM6.15 35.94 10.64 32.91 15.72 30.66 18.16 35.45 20.61 41.11 16.41 43.46 11.82 45.70 9.47 41.80ZM19.24 30.96 24.71 27.15 29.49 25.29 32.23 29.98 34.18 34.08 36.72 31.74 41.11 36.43 44.53 42.77 37.21 47.17 33.20 49.22 37.01 56.54 40.14 70.51 38.87 84.77 36.43 91.41 32.23 94.73 24.51 95.12 19.14 94.24 18.55 89.45 16.80 85.74 10.74 88.38 8.79 85.35 7.13 78.42 16.31 74.51 23.05 70.80 26.17 68.36 25.68 66.41 19.92 69.63 11.82 73.14 10.06 70.70 7.71 63.57 19.53 58.20 22.17 56.45 21.29 54.69 19.53 55.47 10.35 58.69 8.20 54.98 6.15 47.85 13.96 45.51 25.59 40.23 30.18 37.30 29.30 37.70 24.22 39.16 21.48 34.47ZM134.08 77.73 129.88 75.20 129.78 83.20ZM153.12 68.36 150.97 73.05 153.80 74.51ZM177.44 28.12H180.95L180.86 25.49L177.54 25.29ZM177.44 41.02 180.76 41.21 180.86 38.28H177.44ZM165.13 75.29 156.54 75.49 165.13 78.22ZM136.62 44.53 138.96 38.67 136.52 38.38 132.22 38.57 131.44 33.01 128.80 40.92 126.36 46.58 130.66 48.05 130.07 62.40 129.98 68.46 134.57 62.79 140.04 66.60 141.99 61.23 139.35 60.74 135.25 60.35 134.27 55.18 133.88 49.51ZM164.35 7.71 173.73 7.62 178.12 8.69 177.93 13.87H185.64L191.99 14.55L194.33 17.09L194.23 28.32L199.61 28.42V35.45L198.73 39.06L194.04 38.87L193.16 50.78H187.40L185.93 50.59L177.44 50.29L177.54 52.64L191.89 53.12L191.99 59.18L191.30 63.18L185.05 62.60L177.63 62.50V65.14L189.55 65.33L197.16 65.82V71.78L196.38 76.46L186.52 75.49L177.73 75.20L177.83 79.20L171.09 79.00L165.72 78.42L167.38 78.91L181.44 80.86L195.60 81.45L195.21 89.06L194.14 94.43L176.56 92.77L164.35 90.53L151.17 86.72L145.11 83.89L142.77 87.79L137.59 94.24L131.93 89.84L129.78 86.72L129.88 94.53H122.85L117.38 93.75L117.77 72.56V65.72L115.52 70.31L109.57 66.21L105.66 61.23L111.03 50.49L116.60 35.84L120.50 22.75L123.34 9.86L132.61 12.01L137.59 14.94L134.18 25.20L142.87 25.00L148.82 25.49L151.17 31.64L152.05 38.28L150.48 42.87L146.97 49.22L151.07 49.41L153.61 50.29L155.17 56.25L155.46 61.33L154.39 65.62L165.23 65.23V62.50L157.91 62.79L156.93 58.30L157.22 52.93L165.23 52.73V50.29L155.27 50.49L154.59 46.78L154.68 41.21L165.04 41.11V38.28L153.61 38.38L152.83 32.71L153.02 28.12L164.94 28.03L164.84 25.39L155.37 25.49L154.49 21.00L154.39 14.16L164.55 13.96ZM271.09 42.87Q275.58 42.87 279.97 42.77Q280.07 41.41 280.17 40.14Q275.68 39.94 271.18 39.75Q271.09 40.62 271.09 41.50ZM271.18 54.10H279.58Q279.58 52.73 279.68 51.37Q279.29 51.37 278.80 51.37Q274.99 51.46 271.09 51.46Q271.18 52.83 271.18 54.10ZM271.28 70.02 279.29 66.99 286.12 64.06 287.79 63.09H286.42H279.29V62.60L271.28 62.70H271.18ZM273.53 73.34 271.28 70.31V72.75ZM255.36 6.35 266.40 8.40 270.79 9.08 270.50 15.14Q275.58 15.23 280.66 15.33H299.31L299.11 22.17L298.43 27.64L277.34 26.66L262.10 26.37L266.01 27.54L272.06 28.52Q271.96 29.88 271.87 31.15H280.46L292.47 32.13L294.91 34.28L294.62 43.16L302.82 43.36L302.14 48.05L301.95 52.05L294.33 51.86L293.64 63.09H290.91L293.06 66.60L296.96 71.58L291.50 74.22L287.30 75.78Q286.22 76.07 285.15 76.46L294.04 80.66L301.85 84.28L298.53 89.94L295.79 94.73L288.86 90.53L280.56 86.43L271.48 83.20Q271.57 87.01 271.67 90.92L270.11 92.97L265.03 94.82L255.07 95.21L253.31 91.02L251.26 87.21L254.88 86.91L257.61 86.23L257.32 76.66V73.63Q257.32 68.16 257.22 62.70H256.24L240.03 62.89L239.64 58.69L238.96 54.30H257.22L257.12 51.66Q253.61 51.66 250.19 51.76L236.12 51.86L235.44 46.78L234.95 43.07Q245.89 43.07 256.83 42.97V40.04L254.29 40.14H239.64L239.05 35.45L238.27 31.25L251.75 31.15H256.54L256.34 26.27Q255.07 26.27 253.90 26.17L230.27 26.56L235.54 28.12L233.98 53.71L232.12 68.46L228.70 83.98L225.48 94.04L219.91 91.31L212.49 88.87L216.11 75.78L218.25 64.65L219.82 53.22L220.40 38.18L220.99 24.32H221.09L220.79 21.09L220.01 15.43L231.44 15.04L255.85 14.84Q255.66 10.64 255.36 6.35ZM231.24 82.91 236.71 80.47 242.47 78.81 246.96 77.15 242.38 75.49 232.71 73.34 234.07 68.46 235.83 63.18 246.57 65.62 254.97 68.26 252.82 73.05 251.65 75.39 253.61 74.61 255.07 80.47 256.63 84.28 250.09 86.23 235.44 92.97 233.39 87.79ZM390.03 81.45Q390.12 78.52 390.22 75.68V69.04L379.68 68.65Q376.26 68.75 372.74 68.85Q372.74 71.68 372.84 74.51Q372.94 78.03 372.94 81.45Q375.96 81.54 378.99 81.64ZM328.21 15.82 336.32 15.72 342.66 16.70 342.08 24.02 341.98 29.30Q343.74 29.30 345.59 29.20H356.53V36.04L356.14 43.07L344.42 42.77L329.48 42.97L316.30 43.36L315.91 36.82L315.71 30.27L326.36 29.59H328.41V27.44ZM317.86 46.88 324.79 45.61 330.95 45.21 332.21 60.55 333.00 68.26 320.98 70.41 319.32 59.38ZM316.10 71.97 333.19 70.02 343.05 68.95 337.49 68.07 338.66 59.57 339.83 43.55 346.86 44.34 354.29 46.78 351.36 62.40 349.89 68.16 355.26 67.58 356.04 75.49 356.73 80.47 331.34 83.30 317.18 84.96 316.79 79.10ZM370.98 11.33 379.58 11.13 387.29 12.11 386.51 24.61V29.49L387.98 29.39L404.58 28.52L404.87 35.35L404.68 41.99L391.79 41.89Q389.15 41.99 386.41 42.09Q386.41 44.43 386.41 46.88V54.39L402.33 54.69L406.04 56.93V82.32L405.85 94.04L398.62 93.85L378.99 93.46Q374.50 93.46 370.01 93.46L364.54 93.75L358.58 93.65L358.19 90.62L358.09 73.54L357.80 54.98L364.44 54.79Q365.22 54.79 365.91 54.79Q365.91 54.69 365.91 54.59Q368.93 54.49 371.96 54.49Q371.86 45.41 371.77 36.33Z"/></g><g transform="translate(40.0,36.7) scale(0.579)"><path d="M0 9 H56 L61 9 L65 2 L70 15 L75 9 H150" fill="none" stroke="#b8860b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g></svg></a>
+  <a class="er-pill" href="vets.html?only24h=1&amp;near=1"><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>24h 急診</a>
+  <nav class="main-nav" aria-label="主要分頁">
+    <a href="articles/index.html">文章</a>
+    <a href="vets.html" aria-current="page">獸醫院</a>
+    <a href="library.html">文獻庫</a>
+    <a href="breeds.html">品種</a>
+    <a href="about.html">關於</a>
+  </nav>
+</header>
+<!-- /site-head -->
 
-<h1 class="page-title">🏥 獸醫院查詢</h1>
-<p class="page-sub">
-  全台 22 縣市共 <strong id="totalCount">—</strong> 家動物醫院 · 資料來源：農業部動保司
-  · <a href="about.html#data-quality" class="data-quality-badge" title="100% 有地址；99% 有可用 GPS 座標，部分只精確到街道或行政區 — 點看資料補洞細節">✓ 99% 有座標</a>
-</p>
-
-<main>
-  <div class="disclaimer">
-    本清單為政府公開登記資料，不等於推薦。<strong>請自行確認營業狀態</strong>（部分可能已停業）、專業領域、口碑。緊急狀況請優先找已確認有 24hr 急診服務的醫院。
+<main id="main" class="vets-col">
+  <div class="page-head">
+    <h1>獸醫院查詢</h1>
+    <p class="lede">全台 22 縣市共 <strong id="totalCount">—</strong> 家動物醫院，資料來自農業部動保司的公開登記。</p>
+    <p class="meta-line"><a href="about.html#data-quality" class="data-quality-badge" title="100% 有地址；99% 有可用 GPS 座標，部分只精確到街道或行政區">99% 有座標，看資料怎麼補的</a></p>
   </div>
+
+  <p class="note-box notice">本清單是政府公開登記資料，不是推薦。營業狀態、專長與夜間是否值班，建議出門前先打電話確認。</p>
 
   <div class="toolbar">
-    <input id="q" type="search" placeholder="搜尋院名 / 地址 / 區...">
+    <label class="vh" for="q">搜尋院名、地址或區名</label>
+    <input class="field" id="q" type="search" placeholder="搜尋院名、地址或區名" autocomplete="off" enterkeyhint="search">
   </div>
 
   <div class="toolbar2">
-    <button id="btnLoc" class="btn-loc" onclick="requestLocation()">📍 找我附近的獸醫院</button>
-    <button id="btn24h" class="btn-toggle" onclick="toggle24h()">🚨 只看 24h 急診</button>
-    <button id="btnCat" class="btn-toggle" onclick="toggleCat()">🐈 只看貓專科</button>
+    <button id="btnLoc" class="btn" type="button" onclick="requestLocation()"><svg class="i" aria-hidden="true"><use href="#i-locate"/></svg>找我附近的獸醫院</button>
+    <button id="btn24h" class="btn btn-quiet" type="button" onclick="toggle24h()">只看 24 小時</button>
+    <button id="btnCat" class="btn btn-quiet" type="button" onclick="toggleCat()">只看貓專科</button>
     <span class="loc-status" id="locStatus" role="status"></span>
   </div>
 
@@ -256,47 +122,46 @@ main { max-width: 960px; margin: 0 auto; padding: 0 1rem 2rem; }
     <div class="near-note" id="nearNote"></div>
   </div>
 
-  <div class="filter-hint" id="filterHint" hidden></div>
+  <div class="note-box filter-hint" id="filterHint" hidden></div>
 
   <div class="city-chips" id="cityChips"></div>
 
   <div class="hint" id="hint">載入中...</div>
   <div class="vet-list" id="list"></div>
-  <button class="load-more" id="loadMore" style="display:none" onclick="loadMore()">顯示更多</button>
+  <button class="btn btn-quiet load-more" id="loadMore" type="button" style="display:none" onclick="loadMore()">顯示更多</button>
+
+  <aside class="ad" aria-label="贊助" hidden>
+    <span class="ad-label">贊助</span>
+  </aside>
 </main>
 
-<aside class="site-ad-banner" aria-label="贊助廣告">
-  <div class="ad-card">
-    <div class="ad-label">贊助 Sponsored</div>
-    <div class="ad-slot"><span>Ad Slot · banner (responsive)</span></div>
-  </div>
-</aside>
-
-<footer class="site-footer">
-  <div class="f-nav">
-    <a class="f-home" href="index.html">🏠 回首頁</a>
-    <a href="library.html">📚 文獻庫</a>
-    <a href="breeds.html">🐈 品種圖鑑</a>
-    <a href="vets.html">🏥 獸醫院</a>
-    <a href="articles/index.html">📝 文章</a>
-    <a href="about.html">ℹ️ 關於本站</a>
-    <a href="editorial.html">📋 編輯方針</a>
-    <a href="privacy.html">🔒 隱私政策</a>
-  </div>
-  <div class="f-meta">
-    貓健康站 · 獸醫院資料 © 農業部動保司公開名冊<br>
-    本站內容僅供參考，不取代獸醫師診斷
-  </div>
+<!-- site-foot -->
+<footer class="foot">
+  <div class="foot-cat" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path class="cat-body" d="M12 36C12 36 10 26 15 22C19 18.8 24 21 28 22C32 23 37 20 40 23C42 25 41 33 36 36H12Z"/>
+      <path d="M14 23L12 16L18 19"/>
+      <path d="M22 19L27 16L26 22"/>
+      <path d="M40 26C43 23 45 16 41 13C38 10 35 15 37 19"/>
+      <circle cx="15.6" cy="26.3" r="1.15" fill="currentColor" stroke="none"/>
+      <circle cx="21.6" cy="26.3" r="1.15" fill="currentColor" stroke="none"/>
+      <path class="cat-nose" d="M17.5 28.2H19.7L18.6 29.7Z"/>
+    </svg></div>
+  <nav aria-label="頁尾">
+    <a href="articles/index.html">文章</a>
+    <a href="vets.html">獸醫院</a>
+    <a href="library.html">文獻庫</a>
+    <a href="breeds.html">品種</a>
+    <a href="about.html">關於</a>
+    <a href="editorial.html">編輯方針</a>
+    <a href="privacy.html">隱私權政策</a>
+  </nav>
+  <p>本站內容僅供參考，不取代獸醫師診斷。</p>
+  <p class="foot-src">學術來源：ISFM · WSAVA · IRIS · AAFP · ABCD · Cornell · PubMed OA</p>
 </footer>
-
-<aside class="site-ad-anchor" aria-label="贊助廣告">
-  <div class="ad-label">贊助</div>
-  <div class="ad-slot"><span>Ad Slot · anchor (sticky bottom)</span></div>
-  <button class="ad-close" aria-label="關閉廣告 24 小時" title="關閉 24 小時">✕</button>
-</aside>
+<!-- /site-foot -->
+</div>
 
 <script src="data/vets.js"></script>
-<script src="js/ads.js"></script>
 <script>
 const DATA = window.VETS || [];
 // 由北往南＋東部 + 離島排序（全台 22 縣市覆蓋）
@@ -352,7 +217,7 @@ function setLocButton() {
   const btn = document.getElementById('btnLoc');
   btn.disabled = false;
   btn.classList.toggle('active', !!myLoc);
-  btn.textContent = myLoc ? '📍 附近模式（再按一次關閉）' : '📍 找我附近的獸醫院';
+  btn.innerHTML = '<svg class="i" aria-hidden="true"><use href="#i-locate"/></svg>' + (myLoc ? '附近模式（再按一次關閉）' : '找我附近的獸醫院');
 }
 
 function requestLocation() {
@@ -372,7 +237,7 @@ function locate(fresh) {
   }
   const btn = document.getElementById('btnLoc');
   btn.disabled = true;
-  btn.textContent = '📍 定位中…';
+  btn.innerHTML = '<svg class="i" aria-hidden="true"><use href="#i-locate"/></svg>定位中…';
   setLocStatus('');
   const attempt = (highAccuracy) => navigator.geolocation.getCurrentPosition(
     onLocated,
@@ -444,9 +309,9 @@ function updateNearNote() {
   if (!myLoc) { note.textContent = ''; return; }
   const acc = myLoc.acc >= 1000 ? (myLoc.acc / 1000).toFixed(1) + ' km' : Math.round(myLoc.acc) + ' m';
   let html = `你的位置精度約 ±${acc} · 距離是直線距離，實際路程會更遠 · 位置只在你的裝置上計算，不會上傳`
-    + ' · <button class="btn-relocate" onclick="locate(true)">🔄 重新定位</button>';
+    + ' · <button class="btn-relocate" type="button" onclick="locate(true)">重新定位</button>';
   if (myLoc.acc > 1000) {
-    html += '<br><span class="warn">⚠️ 精度偏低（可能是用網路 IP 推估），距離僅供參考。手機請打開定位服務後按「重新定位」。</span>';
+    html += '<br><span class="warn">精度偏低（可能是用網路 IP 推估），距離僅供參考。手機請打開定位服務後按「重新定位」。</span>';
   }
   note.innerHTML = html;
 }
@@ -475,22 +340,22 @@ function updateFilterHint() {
   if (!hint) return;
   let html = '';
   if (filters.onlyCat && filters.only24h) {
-    html = '<strong>⚠️ 兩者交集在台灣極少（僅 1 家）</strong><br>'
-         + '貓專科多為日間獨立診所；24h 急診多為綜合醫院。'
-         + '半夜貓出狀況請優先用 <strong>🚨 24h 急診</strong>，'
-         + '即使非貓專科，多數有處理貓的能力。';
+    html = '<strong>兩者都符合的醫院在台灣很少（目前 1 家）</strong><br>'
+         + '貓專科多是日間診所，24 小時醫院多是綜合醫院。'
+         + '夜間需要看診時，可以只開「只看 24 小時」，'
+         + '多數綜合醫院也能處理貓。';
   } else if (filters.onlyCat) {
     html = '<strong>關於「貓專科」</strong>：'
          + '多為日間經營的單一物種診所（避免狗叫聲讓貓緊迫）。'
-         + '半夜急診請改點 <strong>🚨 只看 24h 急診</strong>。<br>'
+         + '夜間看診可改點 <strong>只看 24 小時</strong>。<br>'
          + '<span style="font-size:0.78rem;opacity:0.8">'
          + '※ 偵測來源：名字含「貓」字 + 已知貓專科名單。'
          + '部分 ISFM Cat Friendly 認證醫院（含 24h）名單建置中，目前可能漏。'
          + '</span>';
   } else if (filters.only24h) {
-    html = '<strong>關於「24h 急診」</strong>：'
-         + '名單來自人工維護 + 名字含「24/急診/夜間」偵測，可能仍有漏。'
-         + '緊急狀況建議先電話確認當下是否值班。';
+    html = '<strong>關於「24 小時」</strong>：'
+         + '名單來自人工維護，加上名字含「24／急診／夜間」的自動判斷，可能有漏。'
+         + '建議出發前先打電話確認當下有沒有值班。';
   }
   if (html) {
     hint.innerHTML = html;
@@ -587,8 +452,8 @@ function render() {
   let text;
   if (myLoc) {
     text = fallback
-      ? `⚠️ ${radiusKm} km 內沒有符合條件的醫院，改列出最近的 ${list.length} 家`
-        + (filters.only24h ? '。24h 名單可能漏列，也可以關掉「只看 24h」看附近所有醫院' : '')
+      ? `${radiusKm} km 內沒有符合條件的醫院，改列出最近的 ${list.length} 家`
+        + (filters.only24h ? '。24 小時名單可能漏列，也可以關掉「只看 24 小時」看附近所有醫院' : '')
       : `${radiusKm ? radiusKm + ' km 內' : ''}共 ${list.length} 家，由近到遠`;
     if (list.length > shown) text += `（先列最近 ${shown} 家）`;
     if (noCoord) text += ` · 另有 ${noCoord} 家座標疑似有誤，沒列入`;
@@ -603,20 +468,20 @@ function render() {
 }
 
 function renderCard(v) {
-  const badge24 = v.e === 1 ? `<span class="badge-24h">24h 急診</span>` : '';
-  const badgeCat = v.cat === 1 ? `<span class="badge-cat">🐈 貓專科</span>` : '';
+  const badge24 = v.e === 1 ? `<span class="badge-24h">24 小時</span>` : '';
+  const badgeCat = v.cat === 1 ? `<span class="badge-cat">貓專科</span>` : '';
   const pos = v.d ? `<span class="pos">${escapeHtml(v.c)} · ${escapeHtml(v.d)}</span>` : `<span class="pos">${escapeHtml(v.c)}</span>`;
   // ap=1：座標只精確到街道或行政區中心，距離標「約」
   const dist = (v._d != null)
-    ? `<span class="vet-distance">📏 ${v.ap === 1 ? '約 ' : ''}${fmtKm(v._d)}${v.ap === 1 ? '<span class="approx">位置為估計</span>' : ''}</span>`
+    ? `<span class="vet-distance">${v.ap === 1 ? '約 ' : ''}${fmtKm(v._d)}${v.ap === 1 ? '<span class="approx">位置為估計</span>' : ''}</span>`
     : '';
-  const telLink = v.t ? `<a href="tel:${escapeHtml(v.t)}" class="vet-tel">📞 ${escapeHtml(v.t)}</a>` : '';
-  const addr = v.a ? `<span>📍 ${escapeHtml(v.a)}</span>` : '';
-  const hours = v.h ? `<div class="vet-hours">🕐 ${escapeHtml(v.h)}</div>` : '';
+  const telLink = v.t ? `<a href="tel:${escapeHtml(v.t)}" class="vet-tel"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg>${escapeHtml(v.t)}</a>` : '';
+  const addr = v.a ? `<span><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>${escapeHtml(v.a)}</span>` : '';
+  const hours = v.h ? `<div class="vet-hours"><svg class="i" aria-hidden="true"><use href="#i-clock"/></svg>${escapeHtml(v.h)}</div>` : '';
   // 導航用文字地址交給 Google 解析，不用本站座標（本站座標有些只到街道或區）
-  const nav = v.a ? `<a href="https://www.google.com/maps/dir/?api=1&amp;destination=${encodeURIComponent(v.n + ' ' + fullAddr(v))}" target="_blank" rel="noopener">🧭 導航</a>` : '';
-  const gmaps = v.g ? `<a href="${escapeHtml(v.g)}" target="_blank" rel="noopener">🗺️ Google 地圖</a>` : '';
-  const search = `<a href="https://www.google.com/search?q=${encodeURIComponent(v.n + ' ' + v.c)}" target="_blank" rel="noopener">🔎 搜尋評價</a>`;
+  const nav = v.a ? `<a href="https://www.google.com/maps/dir/?api=1&amp;destination=${encodeURIComponent(v.n + ' ' + fullAddr(v))}" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-route"/></svg>導航</a>` : '';
+  const gmaps = v.g ? `<a href="${escapeHtml(v.g)}" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>Google 地圖</a>` : '';
+  const search = `<a href="https://www.google.com/search?q=${encodeURIComponent(v.n + ' ' + v.c)}" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-search"/></svg>搜尋評價</a>`;
   return `
     <div class="vet-card">
       <div class="vet-name">${escapeHtml(v.n)}${badge24}${badgeCat}${pos}${dist}</div>

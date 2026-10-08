@@ -427,6 +427,77 @@ CAT_SVG = """<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-w
       <path class="cat-nose" d="M17.5 28.2H19.7L18.6 29.7Z"/>
     </svg>"""
 
+
+# 首頁以外各頁共用的頁首頁尾。prefix 是到網站根目錄的相對路徑（文章頁 "../"，根目錄頁 ""）；
+# active 是目前所在分頁（articles / vets / library / breeds / about），讓分頁列標出 aria-current
+SITE_NAV = [("articles", "articles/index.html", "文章"), ("vets", "vets.html", "獸醫院"),
+            ("library", "library.html", "文獻庫"), ("breeds", "breeds.html", "品種"), ("about", "about.html", "關於")]
+ICON_SPRITE = (
+    '<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">'
+    '<symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21.5s-7-6-7-11.5a7 7 0 0 1 14 0c0 5.5-7 11.5-7 11.5z"/><path d="M12 7v6M9 10h6"/></symbol>'
+    '<symbol id="i-locate" viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2.5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></symbol>'
+    '<symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></symbol>'
+    '<symbol id="i-route" viewBox="0 0 24 24"><path d="M3 11l18-8-8 18-2-8z"/></symbol>'
+    '<symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></symbol>'
+    '<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>'
+    '<symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></symbol>'
+    '</svg>'
+)
+
+
+def site_head(prefix: str, active: str) -> str:
+    nav = "\n    ".join(
+        f'<a href="{prefix}{href}"' + (' aria-current="page"' if key == active else "") + f'>{label}</a>'
+        for key, href, label in SITE_NAV
+    )
+    return (
+        '<a class="skip" href="#main">跳到主要內容</a>\n'
+        f'{ICON_SPRITE}\n'
+        '<header class="site-head">\n'
+        f'  <a class="brand" href="{prefix}index.html" aria-label="貓健康站首頁">{BRAND_SVG}</a>\n'
+        f'  <a class="er-pill" href="{prefix}vets.html?only24h=1&amp;near=1"><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>24h 急診</a>\n'
+        '  <nav class="main-nav" aria-label="主要分頁">\n'
+        f'    {nav}\n'
+        '  </nav>\n'
+        '</header>'
+    )
+
+
+def site_foot(prefix: str) -> str:
+    links = [("articles/index.html", "文章"), ("vets.html", "獸醫院"), ("library.html", "文獻庫"),
+             ("breeds.html", "品種"), ("about.html", "關於"), ("editorial.html", "編輯方針"), ("privacy.html", "隱私權政策")]
+    nav = "\n    ".join(f'<a href="{prefix}{h}">{l}</a>' for h, l in links)
+    return (
+        '<footer class="foot">\n'
+        f'  <div class="foot-cat" aria-hidden="true">{CAT_SVG}</div>\n'
+        '  <nav aria-label="頁尾">\n'
+        f'    {nav}\n'
+        '  </nav>\n'
+        '  <p>本站內容僅供參考，不取代獸醫師診斷。</p>\n'
+        '  <p class="foot-src">學術來源：ISFM · WSAVA · IRIS · AAFP · ABCD · Cornell · PubMed OA</p>\n'
+        '</footer>'
+    )
+
+
+# 手寫頁（vets.html、library.html）的頁首頁尾放在標記之間，每次 build 依上面兩個函式重寫，與文章頁保持一致
+SHELL_PAGES = {"vets.html": "vets", "library.html": "library"}
+
+
+def inject_shell():
+    for name, active in SHELL_PAGES.items():
+        path = FRONTEND_DIR / name
+        if not path.exists():
+            continue
+        src = path.read_text(encoding="utf-8")
+        html = re.sub(r"<!-- site-head -->.*?<!-- /site-head -->",
+                      lambda m: "<!-- site-head -->\n" + site_head("", active) + "\n<!-- /site-head -->", src, flags=re.S)
+        html = re.sub(r"<!-- site-foot -->.*?<!-- /site-foot -->",
+                      lambda m: "<!-- site-foot -->\n" + site_foot("") + "\n<!-- /site-foot -->", html, flags=re.S)
+        if html != src:
+            path.write_text(html, encoding="utf-8")
+            print(f"  {name}：頁首頁尾已同步")
+
+
 ARTICLE_TEMPLATE = """\
 <!DOCTYPE html>
 <html lang="zh-TW">
@@ -454,32 +525,12 @@ ARTICLE_TEMPLATE = """\
   }}
   </script>
   <link rel="stylesheet" href="../css/theme.css?v=20260929">
+  <link rel="stylesheet" href="../css/site.css?v=20261009">
   <script src="../js/theme.js"></script>
   <style>
     /* 文章頁｜套首頁的「溫暖插畫 × 公共服務」：同一個頁首頁尾、同一組色票與圓角。
        內文欄 720px 以內（一行約 38 字），文獻區用襯線體的期刊排版。 */
-    :root {{ --ui: -apple-system, BlinkMacSystemFont, "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif; --serif: "Noto Serif TC", "Source Han Serif TC", "PMingLiU", Georgia, serif; --r-card: 18px; --r-pill: 999px; }}
-    * {{ box-sizing: border-box; }}
-    body {{ margin: 0; background: var(--bg); color: var(--text); font: 17px/1.8 var(--ui); -webkit-font-smoothing: antialiased; }}
-    .page {{ max-width: 600px; margin: 0 auto; padding: 0 20px 24px; }}
-    .vh {{ position: absolute !important; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; border: 0; }}
-    .i {{ width: 24px; height: 24px; flex: none; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }}
-    .skip {{ position: absolute; left: 12px; top: -60px; z-index: 5; padding: 8px 12px; }}
-    .skip:focus-visible {{ top: 8px; }}
-
-    /* 頁首：與首頁相同 */
-    .site-head {{ display: grid; grid-template-columns: 1fr auto; grid-template-areas: "brand er" "nav nav"; align-items: center; column-gap: 12px; padding-top: 12px; }}
-    .brand {{ grid-area: brand; display: inline-flex; justify-self: start; color: var(--text); border-radius: 6px; }}
-    .brand svg {{ display: block; height: 38px; width: auto; }}
-    .er-pill {{ grid-area: er; display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 16px 0 12px; border-radius: var(--r-pill); background: var(--primary); color: var(--accent-on); font-size: 16px; font-weight: 700; text-decoration: none; box-shadow: 0 2px 0 var(--primary-deep); }}
-    .er-pill:hover {{ background: var(--primary-deep); color: var(--accent-on); }}
-    .er-pill .i {{ width: 20px; height: 20px; }}
-    .main-nav {{ grid-area: nav; display: flex; gap: 22px; margin-top: 6px; overflow-x: auto; border-bottom: 2px solid var(--primary-pale); scrollbar-width: none; }}
-    .main-nav::-webkit-scrollbar {{ display: none; }}
-    .main-nav a {{ display: flex; align-items: center; min-height: 46px; color: var(--text); font-size: 16px; font-weight: 600; text-decoration: none; white-space: nowrap; }}
-    .main-nav a:hover {{ color: var(--primary); text-decoration: underline; }}
-    .main-nav a[aria-current] {{ color: var(--primary-deep); box-shadow: inset 0 -3px 0 var(--primary); }}
-    .main-nav a:focus-visible {{ outline-offset: -3px; }}
+    body {{ line-height: 1.8; }}
 
     /* 文章欄 */
     .article-col {{ max-width: 720px; margin: 0 auto; }}
@@ -573,24 +624,7 @@ ARTICLE_TEMPLATE = """\
     .key-fact .kf-note {{ margin-top: 2px; font-size: 13px; color: var(--text-muted); line-height: 1.4; }}
     .related-products {{ display: none; }}
 
-    /* 廣告位：AdSense 上線前先隱藏 */
-    .ad {{ margin-top: 32px; }}
-    .ad-label {{ display: block; margin-bottom: 4px; font-size: 13px; letter-spacing: 0.1em; color: var(--text-muted); }}
-
-    /* 頁尾：與首頁相同 */
-    .foot {{ display: grid; gap: 10px; margin-top: 48px; padding-top: 20px; border-top: 2px solid var(--primary-pale); font-size: 15px; color: var(--text-2); }}
-    .foot-cat {{ width: 64px; color: var(--primary); }}
-    .foot-cat svg {{ display: block; width: 100%; height: auto; }}
-    .cat-body {{ fill: var(--bg-card); }}
-    .cat-nose {{ fill: var(--blush); stroke: var(--blush); stroke-width: 0.8; stroke-linejoin: round; }}
-    .foot nav {{ display: flex; flex-wrap: wrap; column-gap: 18px; }}
-    .foot nav a {{ display: inline-flex; align-items: center; min-height: 44px; font-weight: 400; }}
-    .foot-src {{ font-size: 13px; color: var(--text-muted); }}
-
     @media (min-width: 880px) {{
-      .page {{ max-width: 1000px; padding: 0 32px 32px; }}
-      .site-head {{ grid-template-columns: auto 1fr auto; grid-template-areas: "brand nav er"; padding: 16px 0; border-bottom: 2px solid var(--primary-pale); }}
-      .main-nav {{ justify-content: flex-end; margin: 0 8px 0 0; border: 0; }}
       .crumb {{ margin-top: 32px; }}
       article h1 {{ font-size: 40px; }}
       article h2 {{ font-size: 24px; }}
@@ -601,28 +635,13 @@ ARTICLE_TEMPLATE = """\
 </head>
 <body>
 <div class="page">
-<a class="skip" href="#main">跳到主要內容</a>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21.5s-7-6-7-11.5a7 7 0 0 1 14 0c0 5.5-7 11.5-7 11.5z"/><path d="M12 7v6M9 10h6"/></symbol>
-</svg>
-
-<header class="site-head">
-  <a class="brand" href="../index.html" aria-label="貓健康站首頁">{brand_svg}</a>
-  <a class="er-pill" href="../vets.html?only24h=1&amp;near=1"><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>24h 急診</a>
-  <nav class="main-nav" aria-label="主要分頁">
-    <a href="index.html" aria-current="page">文章</a>
-    <a href="../vets.html">獸醫院</a>
-    <a href="../library.html">文獻庫</a>
-    <a href="../breeds.html">品種</a>
-    <a href="../about.html">關於</a>
-  </nav>
-</header>
+{site_head}
 
 <main id="main" class="article-col">
   <nav class="crumb" aria-label="你在這裡">
     <a href="../index.html">首頁</a><span aria-hidden="true">›</span>
     <a href="index.html">文章</a><span aria-hidden="true">›</span>
-    <span class="cat-badge">{cat_emoji} {category}</span>
+    <span class="cat-badge">{category}</span>
   </nav>
   <article>
     <h1>{title}</h1>
@@ -653,20 +672,7 @@ ARTICLE_TEMPLATE = """\
   </aside>
 </main>
 
-<footer class="foot">
-  <div class="foot-cat" aria-hidden="true">{cat_svg}</div>
-  <nav aria-label="頁尾">
-    <a href="index.html">文章</a>
-    <a href="../vets.html">獸醫院</a>
-    <a href="../library.html">文獻庫</a>
-    <a href="../breeds.html">品種</a>
-    <a href="../about.html">關於</a>
-    <a href="../editorial.html">編輯方針</a>
-    <a href="../privacy.html">隱私權政策</a>
-  </nav>
-  <p>本站內容僅供參考，不取代獸醫師診斷。</p>
-  <p class="foot-src">學術來源：ISFM · WSAVA · IRIS · AAFP · ABCD · Cornell · PubMed OA</p>
-</footer>
+{site_foot}
 </div>
   <script src="../js/meta.js"></script>
   <script>
@@ -706,247 +712,126 @@ ARTICLES_INDEX_TEMPLATE = """\
   <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
   <link rel="apple-touch-icon" href="../favicon-180.png">
   <meta property="og:image" content="https://chen-mouchin.github.io/cat-health-tw/images/og-default.png">
-  <title>貓咪知識庫文章列表 — 貓健康站</title>
-  <meta name="description" content="台灣養貓人完整知識庫：飲食、醫療、行為、居家環境，全部文章均佐證學術來源。">
-  <link rel="stylesheet" href="../css/ads.css">
-  <link rel="stylesheet" href="../css/theme.css">
-  <link rel="stylesheet" href="../css/nav.css?v=20260420b">
+  <title>文章 — 貓健康站</title>
+  <meta name="description" content="貓健康站已審核的文章：疾病、飲食、行為、居家環境。每個數字附出處，回溯 ISFM、AAFP、IRIS 等原文。">
+  <link rel="canonical" href="https://chen-mouchin.github.io/cat-health-tw/articles/index.html">
+  <link rel="stylesheet" href="../css/theme.css?v=20260929">
+  <link rel="stylesheet" href="../css/site.css?v=20261009">
   <script src="../js/theme.js"></script>
   <style>
-    * {{ box-sizing: border-box; margin: 0; padding: 0; }}
-    body {{ font-family: system-ui, "Noto Sans TC", sans-serif; background: var(--bg, #fafafa); color: var(--text, #333); }}
-    header {{ background: var(--header-bg, #1d1d1f); color: var(--header-text, #fff); padding: 1rem 2rem; display: flex; align-items: center; gap: 1rem; }}
-    header a {{ color: var(--header-text, #fff); text-decoration: none; opacity: 0.8; }}
-    header h1 {{ font-size: 1.3rem; flex: 1; }}
-    .ad-wrap {{ background: var(--bg-card, #fff); border-top: 1px solid var(--border, #eee); border-bottom: 1px solid var(--border, #eee); padding: 0.4rem 0; }}
-    main {{ max-width: 960px; margin: 2rem auto; padding: 0 1.5rem; }}
-    /* Filter bar */
-    .search-bar {{ margin-bottom: 1rem; }}
-    .search-bar input {{
-      width: 100%; padding: 0.85rem 1.1rem; font-size: 1rem;
-      border: 1px solid var(--border, #e0e0e0); border-radius: 24px;
-      background: var(--bg-card, #fff); color: var(--text, #333);
-      transition: border-color 0.15s, box-shadow 0.15s;
+    /* 文章列表｜和文章頁同一個外殼；卡片沿用首頁「推薦文章」的樣式 */
+    .search-row {{ display: flex; gap: 8px; margin: 0 0 14px; }}
+    .search-row .field {{ flex: 1; min-width: 0; }}
+    .filter-row {{ margin: 0 0 18px; }}
+    .pending-note {{ margin: 0 0 8px; }}
+    .cat-section .sec-h {{ margin-top: 30px; }}
+    .subcat-section {{ margin: 0 0 18px; }}
+    .subcat-heading {{ margin: 0 0 8px; font-size: 15px; font-weight: 700; color: var(--text-muted); }}
+    .article-list {{ display: grid; gap: 12px; }}
+    .article-card {{ display: grid; grid-template-columns: 1fr; overflow: hidden; border: 1px solid var(--border-strong); border-radius: var(--r-card); background: var(--bg-card); color: var(--text); font-weight: 400; text-decoration: none; }}
+    .article-card:hover {{ border-color: var(--primary); }}
+    .article-card:hover h2 {{ text-decoration: underline; }}
+    .article-card-thumb {{ position: relative; aspect-ratio: 16 / 9; background: var(--primary-pale); overflow: hidden; }}
+    .article-card-thumb .thumb-emoji {{ display: none; }}
+    .article-card-thumb .thumb-img {{ position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }}
+    .article-card-body {{ display: flex; flex-direction: column; gap: 6px; padding: 14px 16px 16px; }}
+    .article-card .meta {{ display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; font-size: 14px; color: var(--text-muted); }}
+    .article-card h2 {{ margin: 0; font-size: 18px; line-height: 1.45; color: var(--primary-deep); text-underline-offset: 0.22em; }}
+    .article-card p {{ margin: 0; font-size: 15px; line-height: 1.65; color: var(--text-2); }}
+    .subcat-pill {{ font-weight: 600; color: var(--text-2); }}
+    .empty-note {{ padding: 24px 0; color: var(--text-muted); }}
+    @media (min-width: 640px) {{
+      .article-list {{ grid-template-columns: 1fr 1fr; }}
     }}
-    .search-bar input:focus {{
-      border-color: var(--accent, #1d1d1f);
-      box-shadow: 0 0 0 3px rgba(0,0,0,0.05);
+    @media (min-width: 880px) {{
+      .article-list {{ grid-template-columns: repeat(3, 1fr); }}
     }}
-    .filter-bar {{ display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2rem; }}
-    .filter-btn {{
-      padding: 0.35rem 0.9rem; border: 1px solid var(--border, #ccc); border-radius: 20px;
-      background: var(--bg-card, #fff); cursor: pointer; font-size: 0.88rem; text-decoration: none; color: var(--text, #333);
-    }}
-    .filter-btn.active, .filter-btn:hover {{ background: var(--accent, #1d1d1f); color: #fff; border-color: var(--accent, #1d1d1f); }}
-    /* Category sections */
-    .cat-section {{ margin-bottom: 2.5rem; }}
-    .cat-heading {{
-      font-size: 1.3rem; font-weight: 800; color: var(--accent, #1d1d1f);
-      border-bottom: 2px solid var(--accent, #1d1d1f); padding-bottom: 0.4rem; margin-bottom: 1.2rem;
-      display: flex; align-items: center; gap: 0.5rem;
-    }}
-    .cat-heading .count {{
-      font-size: 0.85rem; font-weight: 400; color: var(--text-muted, #888);
-      background: var(--accent-light, #f0f0f3); border-radius: 20px; padding: 0.1rem 0.5rem;
-    }}
-    /* Subcategory sections */
-    .subcat-section {{ margin-bottom: 1.5rem; }}
-    .subcat-heading {{
-      font-size: 0.9rem; font-weight: 700; color: var(--text-muted, #666);
-      text-transform: uppercase; letter-spacing: 0.06em;
-      padding: 0.25rem 0.7rem; margin-bottom: 0.8rem;
-      border-left: 3px solid var(--accent, #1d1d1f);
-      background: var(--accent-light, #f0faf4);
-    }}
-    /* Article cards */
-    .article-list {{ display: flex; flex-direction: column; gap: 0.7rem; }}
-    .article-card {{
-      background: var(--bg-card, #fff); border: 1px solid var(--border, #e0e0e0); border-radius: 10px;
-      overflow: hidden; text-decoration: none; color: var(--text, inherit);
-      display: flex; flex-direction: row; align-items: stretch;
-      transition: box-shadow 0.15s; gap: 0;
-    }}
-    .article-card:hover {{ box-shadow: 0 4px 12px var(--shadow, rgba(0,0,0,0.1)); }}
-    .article-card-thumb {{
-      width: 130px; min-width: 130px; max-width: 130px; height: 90px;
-      background-color: var(--accent-light, #f0f0f3);
-      flex-shrink: 0; align-self: stretch;
-      position: relative; overflow: hidden;
-      display: flex; align-items: center; justify-content: center;
-    }}
-    .thumb-emoji {{ font-size: 2rem; z-index: 0; }}  /* 底層 emoji placeholder */
-    .thumb-img {{
-      position: absolute; inset: 0; width: 100%; height: 100%;
-      object-fit: cover; z-index: 1;  /* 蓋在 emoji 上 */
-    }}
-    .article-card-body {{ padding: 0.8rem 1rem; flex: 1 1 auto; min-width: 0; }}
-    .article-card .meta {{ font-size: 0.78rem; color: var(--text-muted, #888); margin-bottom: 0.3rem; display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; }}
-    .article-card .subcat-pill {{
-      background: var(--border, #eee); color: var(--text-muted, #666); padding: 0.05rem 0.45rem;
-      border-radius: 10px; font-size: 0.72rem;
-    }}
-    .article-card h2 {{ font-size: 1rem; font-weight: 700; margin-bottom: 0.25rem; color: var(--accent, #1d1d1f); }}
-    .article-card p {{ font-size: 0.85rem; color: var(--text-muted, #666); line-height: 1.45; }}
-    /* Quality badges (Phase 1B) */
-    .quality-badge {{ font-size: 0.7rem; padding: 1px 6px; border-radius: 8px; }}
-    .q-draft {{ background: #f5f0e8; color: #735f33; border: 1px solid #d4c8b0; }}
-    .q-reviewed {{ background: #f0f0f3; color: #1d1d1f; border: 1px solid #d2d2d7; }}
-    .q-featured {{ background: #1d1d1f; color: #fff; }}
-    .article-card.is-draft {{ opacity: 0.65; }}
-    .article-card.is-draft:hover {{ opacity: 1; }}
-    body.hide-drafts .article-card.is-draft {{ display: none; }}
-    .pending-note {{ font-size: 0.9rem; color: var(--text-muted, #636368); background: var(--bg-card, #fff); border: 1px solid var(--border, #e5e5ea); border-radius: 8px; padding: 0.6rem 0.9rem; margin: 0 0 1.2rem; }}
-    .quality-toggle {{
-      display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.85rem;
-      padding: 0.35rem 0.9rem; border: 1px solid var(--border, #ccc); border-radius: 20px;
-      background: var(--bg-card, #fff); cursor: pointer;
-    }}
-    .quality-toggle.active {{ background: var(--accent, #1d1d1f); color: var(--accent-on, #fff); border-color: var(--accent, #1d1d1f); }}
-    @media (max-width: 600px) {{
-      .article-card-thumb {{ width: 90px; min-width: 90px; height: 72px; }}
-      .article-card h2 {{ font-size: 0.95rem; }}
-    }}
-    footer {{ text-align: center; padding: 1.5rem 2rem 2rem; color: var(--text-muted, #999); font-size: 0.85rem; }}
   </style>
 </head>
 <body>
-  <nav class="site-nav">
-    <a class="nav-brand" href="../index.html" title="回首頁"><svg class="brand-logo" viewBox="0 0 180 47" aria-label="貓健康站" role="img"><g transform="translate(0,15.2) scale(0.750)" fill="currentColor"><path d="M4 20 V2 L14 10 Z"/><path d="M36 20 V2 L26 10 Z"/><circle cx="13" cy="18" r="2.2"/><circle cx="27" cy="18" r="2.2"/></g><g transform="translate(40.0,0) scale(0.340)"><path fill="currentColor" d="M79.79 93.26 65.04 93.46 49.61 93.65 48.24 93.75H41.21L40.72 64.45L40.82 45.31L45.21 44.73V44.63H46.00L46.48 44.53L48.83 44.43L61.13 43.95H81.25L89.16 44.73L91.89 46.78L92.48 64.84L92.29 85.94L91.89 93.75H85.74ZM59.08 65.43 58.79 57.91 54.59 58.01V60.35L54.69 65.53ZM71.78 65.23 77.05 65.33 76.95 57.91H71.88ZM59.08 82.71V76.95L54.98 77.15L55.08 82.71H58.40ZM71.97 82.62H76.95L77.15 77.54V76.86H71.88ZM17.58 85.45 24.41 85.16 25.68 81.35 20.21 84.28ZM68.85 9.96 76.37 9.67 83.98 10.55 83.79 19.63 92.68 19.92V27.25L91.80 33.30L83.01 32.91L82.91 35.25L82.52 41.50L73.24 41.02L68.85 40.43L68.95 32.62L60.06 32.81L60.45 40.33L51.56 41.11L46.97 41.41L46.29 33.30L40.62 33.59L39.75 27.54L39.65 20.61L45.41 20.31L45.02 12.30L52.83 10.84L58.89 10.94L59.38 19.73L69.14 19.34V16.50ZM32.62 8.89 36.23 13.38 39.26 20.21 32.81 23.14 22.17 27.25 7.71 31.84 5.86 27.44 4.79 20.02 15.04 17.09 23.73 13.67ZM6.15 35.94 10.64 32.91 15.72 30.66 18.16 35.45 20.61 41.11 16.41 43.46 11.82 45.70 9.47 41.80ZM19.24 30.96 24.71 27.15 29.49 25.29 32.23 29.98 34.18 34.08 36.72 31.74 41.11 36.43 44.53 42.77 37.21 47.17 33.20 49.22 37.01 56.54 40.14 70.51 38.87 84.77 36.43 91.41 32.23 94.73 24.51 95.12 19.14 94.24 18.55 89.45 16.80 85.74 10.74 88.38 8.79 85.35 7.13 78.42 16.31 74.51 23.05 70.80 26.17 68.36 25.68 66.41 19.92 69.63 11.82 73.14 10.06 70.70 7.71 63.57 19.53 58.20 22.17 56.45 21.29 54.69 19.53 55.47 10.35 58.69 8.20 54.98 6.15 47.85 13.96 45.51 25.59 40.23 30.18 37.30 29.30 37.70 24.22 39.16 21.48 34.47ZM134.08 77.73 129.88 75.20 129.78 83.20ZM153.12 68.36 150.97 73.05 153.80 74.51ZM177.44 28.12H180.95L180.86 25.49L177.54 25.29ZM177.44 41.02 180.76 41.21 180.86 38.28H177.44ZM165.13 75.29 156.54 75.49 165.13 78.22ZM136.62 44.53 138.96 38.67 136.52 38.38 132.22 38.57 131.44 33.01 128.80 40.92 126.36 46.58 130.66 48.05 130.07 62.40 129.98 68.46 134.57 62.79 140.04 66.60 141.99 61.23 139.35 60.74 135.25 60.35 134.27 55.18 133.88 49.51ZM164.35 7.71 173.73 7.62 178.12 8.69 177.93 13.87H185.64L191.99 14.55L194.33 17.09L194.23 28.32L199.61 28.42V35.45L198.73 39.06L194.04 38.87L193.16 50.78H187.40L185.93 50.59L177.44 50.29L177.54 52.64L191.89 53.12L191.99 59.18L191.30 63.18L185.05 62.60L177.63 62.50V65.14L189.55 65.33L197.16 65.82V71.78L196.38 76.46L186.52 75.49L177.73 75.20L177.83 79.20L171.09 79.00L165.72 78.42L167.38 78.91L181.44 80.86L195.60 81.45L195.21 89.06L194.14 94.43L176.56 92.77L164.35 90.53L151.17 86.72L145.11 83.89L142.77 87.79L137.59 94.24L131.93 89.84L129.78 86.72L129.88 94.53H122.85L117.38 93.75L117.77 72.56V65.72L115.52 70.31L109.57 66.21L105.66 61.23L111.03 50.49L116.60 35.84L120.50 22.75L123.34 9.86L132.61 12.01L137.59 14.94L134.18 25.20L142.87 25.00L148.82 25.49L151.17 31.64L152.05 38.28L150.48 42.87L146.97 49.22L151.07 49.41L153.61 50.29L155.17 56.25L155.46 61.33L154.39 65.62L165.23 65.23V62.50L157.91 62.79L156.93 58.30L157.22 52.93L165.23 52.73V50.29L155.27 50.49L154.59 46.78L154.68 41.21L165.04 41.11V38.28L153.61 38.38L152.83 32.71L153.02 28.12L164.94 28.03L164.84 25.39L155.37 25.49L154.49 21.00L154.39 14.16L164.55 13.96ZM271.09 42.87Q275.58 42.87 279.97 42.77Q280.07 41.41 280.17 40.14Q275.68 39.94 271.18 39.75Q271.09 40.62 271.09 41.50ZM271.18 54.10H279.58Q279.58 52.73 279.68 51.37Q279.29 51.37 278.80 51.37Q274.99 51.46 271.09 51.46Q271.18 52.83 271.18 54.10ZM271.28 70.02 279.29 66.99 286.12 64.06 287.79 63.09H286.42H279.29V62.60L271.28 62.70H271.18ZM273.53 73.34 271.28 70.31V72.75ZM255.36 6.35 266.40 8.40 270.79 9.08 270.50 15.14Q275.58 15.23 280.66 15.33H299.31L299.11 22.17L298.43 27.64L277.34 26.66L262.10 26.37L266.01 27.54L272.06 28.52Q271.96 29.88 271.87 31.15H280.46L292.47 32.13L294.91 34.28L294.62 43.16L302.82 43.36L302.14 48.05L301.95 52.05L294.33 51.86L293.64 63.09H290.91L293.06 66.60L296.96 71.58L291.50 74.22L287.30 75.78Q286.22 76.07 285.15 76.46L294.04 80.66L301.85 84.28L298.53 89.94L295.79 94.73L288.86 90.53L280.56 86.43L271.48 83.20Q271.57 87.01 271.67 90.92L270.11 92.97L265.03 94.82L255.07 95.21L253.31 91.02L251.26 87.21L254.88 86.91L257.61 86.23L257.32 76.66V73.63Q257.32 68.16 257.22 62.70H256.24L240.03 62.89L239.64 58.69L238.96 54.30H257.22L257.12 51.66Q253.61 51.66 250.19 51.76L236.12 51.86L235.44 46.78L234.95 43.07Q245.89 43.07 256.83 42.97V40.04L254.29 40.14H239.64L239.05 35.45L238.27 31.25L251.75 31.15H256.54L256.34 26.27Q255.07 26.27 253.90 26.17L230.27 26.56L235.54 28.12L233.98 53.71L232.12 68.46L228.70 83.98L225.48 94.04L219.91 91.31L212.49 88.87L216.11 75.78L218.25 64.65L219.82 53.22L220.40 38.18L220.99 24.32H221.09L220.79 21.09L220.01 15.43L231.44 15.04L255.85 14.84Q255.66 10.64 255.36 6.35ZM231.24 82.91 236.71 80.47 242.47 78.81 246.96 77.15 242.38 75.49 232.71 73.34 234.07 68.46 235.83 63.18 246.57 65.62 254.97 68.26 252.82 73.05 251.65 75.39 253.61 74.61 255.07 80.47 256.63 84.28 250.09 86.23 235.44 92.97 233.39 87.79ZM390.03 81.45Q390.12 78.52 390.22 75.68V69.04L379.68 68.65Q376.26 68.75 372.74 68.85Q372.74 71.68 372.84 74.51Q372.94 78.03 372.94 81.45Q375.96 81.54 378.99 81.64ZM328.21 15.82 336.32 15.72 342.66 16.70 342.08 24.02 341.98 29.30Q343.74 29.30 345.59 29.20H356.53V36.04L356.14 43.07L344.42 42.77L329.48 42.97L316.30 43.36L315.91 36.82L315.71 30.27L326.36 29.59H328.41V27.44ZM317.86 46.88 324.79 45.61 330.95 45.21 332.21 60.55 333.00 68.26 320.98 70.41 319.32 59.38ZM316.10 71.97 333.19 70.02 343.05 68.95 337.49 68.07 338.66 59.57 339.83 43.55 346.86 44.34 354.29 46.78 351.36 62.40 349.89 68.16 355.26 67.58 356.04 75.49 356.73 80.47 331.34 83.30 317.18 84.96 316.79 79.10ZM370.98 11.33 379.58 11.13 387.29 12.11 386.51 24.61V29.49L387.98 29.39L404.58 28.52L404.87 35.35L404.68 41.99L391.79 41.89Q389.15 41.99 386.41 42.09Q386.41 44.43 386.41 46.88V54.39L402.33 54.69L406.04 56.93V82.32L405.85 94.04L398.62 93.85L378.99 93.46Q374.50 93.46 370.01 93.46L364.54 93.75L358.58 93.65L358.19 90.62L358.09 73.54L357.80 54.98L364.44 54.79Q365.22 54.79 365.91 54.79Q365.91 54.69 365.91 54.59Q368.93 54.49 371.96 54.49Q371.86 45.41 371.77 36.33Z"/></g><g transform="translate(40.0,36.7) scale(0.579)"><path d="M0 9 H56 L61 9 L65 2 L70 15 L75 9 H150" fill="none" stroke="#b8860b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g></svg><span class="brand-home" aria-hidden="true">🏠</span></a>
-    <div class="nav-links">
-      <a class="nav-link" href="../library.html" data-nav="library">📚 文獻庫</a>
-      <a class="nav-link" href="../breeds.html" data-nav="breeds">🐈 品種</a>
-      <a class="nav-link" href="../vets.html" data-nav="vets">🏥 獸醫院</a>
-      <a class="nav-link active" href="index.html" data-nav="articles">📝 文章</a>
-      <a class="nav-link" href="../about.html" data-nav="about">ℹ️ 關於</a>
-    </div>
-  </nav>
+<div class="page">
+{site_head}
 
-  <main>
-    <div class="search-bar">
-      <input type="search" id="articleSearch" placeholder="🔍 搜尋文章標題或內容（例：腎指數、亂尿尿、結紮）">
-    </div>
-    <div class="filter-bar">
-      <button class="filter-btn" data-cat="全部">全部</button>
-      <button class="filter-btn" data-cat="入門">🆕 入門</button>
-      <button class="filter-btn" data-cat="健康">❤️ 健康</button>
-      <button class="filter-btn" data-cat="飲食">🍖 飲食</button>
-      <button class="filter-btn" data-cat="行為">🐾 行為</button>
-      <button class="filter-btn" data-cat="環境">🏠 環境</button>
-      <button class="filter-btn" data-cat="階段">⏳ 階段</button>
-      <span style="margin-left:auto"></span>
-      <label class="quality-toggle" id="qualityToggle">
-        <input type="checkbox" id="hideDraftsCb" style="margin:0">
-        <span>只看已審核</span>
-      </label>
-    </div>
+<main id="main">
+  <div class="page-head">
+    <h1>文章</h1>
+    <p class="lede">每篇都經人工審核才公開，數字句尾有編號，點了看原始文獻。</p>
+  </div>
+  <form class="search-row" role="search" onsubmit="return false">
+    <label class="vh" for="articleSearch">搜尋文章</label>
+    <input class="field" type="search" id="articleSearch" placeholder="搜尋標題或內容，例：腎指數、甲亢" autocomplete="off" enterkeyhint="search">
+  </form>
+  <div class="chips filter-row" role="group" aria-label="分類">
+    <button type="button" class="chip filter-btn" data-cat="全部">全部</button>
+    <button type="button" class="chip filter-btn" data-cat="入門">入門</button>
+    <button type="button" class="chip filter-btn" data-cat="健康">健康</button>
+    <button type="button" class="chip filter-btn" data-cat="飲食">飲食</button>
+    <button type="button" class="chip filter-btn" data-cat="行為">行為</button>
+    <button type="button" class="chip filter-btn" data-cat="環境">環境</button>
+    <button type="button" class="chip filter-btn" data-cat="階段">階段</button>
+  </div>
 {pending_note}
-    <div id="articleSections">
+  <div id="articleSections">
 {article_sections}
-    </div>
-  </main>
+  </div>
+  <p class="empty-note" id="emptyNote" hidden>沒有符合的文章。審核中的文章上架後會出現在這裡。</p>
 
-  <aside class="site-ad-banner" aria-label="贊助廣告">
-    <div class="ad-card">
-      <div class="ad-label">贊助 Sponsored</div>
-      <div class="ad-slot"><span>Ad Slot · banner (responsive)</span></div>
-    </div>
+  <aside class="ad" aria-label="贊助" hidden>
+    <span class="ad-label">贊助</span>
   </aside>
+</main>
 
-  <footer class="site-footer">
-    <div class="f-nav">
-      <a class="f-home" href="../index.html">🏠 回首頁</a>
-      <a href="../library.html">📚 文獻庫</a>
-      <a href="../breeds.html">🐈 品種圖鑑</a>
-      <a href="../vets.html">🏥 獸醫院</a>
-      <a href="index.html">📝 文章</a>
-      <a href="../about.html">ℹ️ 關於本站</a>
-      <a href="../editorial.html">📋 編輯方針</a>
-      <a href="../privacy.html">🔒 隱私政策</a>
-    </div>
-    <div class="f-meta">
-      貓健康站 · 學術來源：ISFM · WSAVA · IRIS · AAFP · ABCD · Cornell · PubMed OA<br>
-      本站內容僅供參考，不取代獸醫師診斷<br>
-      © 2026 · Built by <a href="https://github.com/Chen-MouChin" target="_blank" rel="noopener">Chen-MouChin</a>
-    </div>
-  </footer>
-
-  <aside class="site-ad-anchor" aria-label="贊助廣告">
-    <div class="ad-label">贊助</div>
-    <div class="ad-slot"><span>Ad Slot · anchor (sticky bottom)</span></div>
-    <button class="ad-close" aria-label="關閉廣告 24 小時" title="關閉 24 小時">✕</button>
-  </aside>
-  <script src="../js/ads.js"></script>
+{site_foot}
+</div>
   <script src="../js/meta.js"></script>
-  <script src="../js/i18n.js"></script>
   <script>
-    var fd=document.getElementById('footer-date');if(fd&&typeof SITE_META!=='undefined')fd.textContent=SITE_META.data_updated;
-    // Category filter
+    // 分類篩選：沒有文章的分類按鈕藏起來，免得點了一片空白
     (function(){{
       var sections = document.querySelectorAll('.cat-section');
       var btns = document.querySelectorAll('.filter-btn');
+      var has = {{}};
+      sections.forEach(function(s){{ has[s.dataset.cat] = true; }});
+      btns.forEach(function(b){{ if (b.dataset.cat !== '全部' && !has[b.dataset.cat]) b.hidden = true; }});
       function activate(cat) {{
         sections.forEach(function(s){{ s.style.display = (cat==='全部'||s.dataset.cat===cat)?'':'none'; }});
-        btns.forEach(function(b){{ b.classList.toggle('active', b.dataset.cat===cat); }});
+        btns.forEach(function(b){{ var on = b.dataset.cat===cat; b.classList.toggle('active', on); b.setAttribute('aria-pressed', on ? 'true' : 'false'); }});
       }}
       btns.forEach(function(b){{ b.addEventListener('click', function(){{ activate(b.dataset.cat); }}); }});
       var init = new URLSearchParams(location.search).get('cat') || '全部';
-      activate(init);
+      activate(has[init] ? init : '全部');
     }})();
     // 文章搜尋（標題 / 描述 / 副分類）
     (function(){{
       var input = document.getElementById('articleSearch');
+      var empty = document.getElementById('emptyNote');
       if (!input) return;
       var cards = document.querySelectorAll('.article-card');
       function filter(q) {{
         q = (q||'').trim().toLowerCase();
+        var shown = 0;
         cards.forEach(function(c){{
-          var hay = c.textContent.toLowerCase();
-          c.style.display = (q === '' || hay.indexOf(q) !== -1) ? '' : 'none';
+          var ok = (q === '' || c.textContent.toLowerCase().indexOf(q) !== -1);
+          c.style.display = ok ? '' : 'none';
+          if (ok) shown++;
         }});
-        // 隱藏空的 subcat-section / cat-section
         document.querySelectorAll('.subcat-section').forEach(function(sec){{
-          var visible = sec.querySelectorAll('.article-card:not([style*="none"])').length;
-          sec.style.display = visible > 0 ? '' : 'none';
+          sec.style.display = sec.querySelectorAll('.article-card:not([style*="none"])').length ? '' : 'none';
         }});
         document.querySelectorAll('.cat-section').forEach(function(sec){{
-          var visible = sec.querySelectorAll('.article-card:not([style*="none"])').length;
-          // 只有搜尋有內容時才隱藏空 cat-section（保留分類 filter 行為）
-          if (q) sec.style.display = visible > 0 ? '' : 'none';
+          if (q) sec.style.display = sec.querySelectorAll('.article-card:not([style*="none"])').length ? '' : 'none';
         }});
+        if (empty) empty.hidden = shown > 0;
       }}
       input.addEventListener('input', function(){{ filter(input.value); }});
       // 從 URL ?q= 預填（首頁搜尋框跳轉用）
       var urlQ = new URLSearchParams(location.search).get('q');
       if (urlQ) {{ input.value = urlQ; filter(urlQ); }}
     }})();
-    // Quality filter (hide drafts)
-    (function(){{
-      var cb = document.getElementById('hideDraftsCb');
-      var lbl = document.getElementById('qualityToggle');
-      var KEY = 'nekopedia_hide_drafts';
-      // 統計 reviewed 文章數 — 若 0 則隱藏此 toggle 避免使用者誤勾後一片空白
-      var reviewedCount = document.querySelectorAll('.article-card[data-quality="reviewed"], .article-card[data-quality="featured"]').length;
-      if (reviewedCount === 0) {{
-        // 強制取消任何 localStorage 殘留 + 隱藏 toggle
-        document.body.classList.remove('hide-drafts');
-        localStorage.removeItem(KEY);
-        if (lbl) lbl.style.display = 'none';
-        return;
-      }}
-      function apply(v) {{
-        document.body.classList.toggle('hide-drafts', v);
-        lbl.classList.toggle('active', v);
-        localStorage.setItem(KEY, v ? '1' : '0');
-      }}
-      var saved = localStorage.getItem(KEY) === '1';
-      cb.checked = saved;
-      apply(saved);
-      cb.addEventListener('change', function(){{ apply(cb.checked); }});
-    }})();
   </script>
 </body>
 </html>
 """
+
 
 CATEGORY_RELATED: dict[str, str] = {
     "飲食": "乾糧",
@@ -1177,6 +1062,8 @@ def build_articles() -> list[dict]:
         output = ARTICLE_TEMPLATE.format(
             brand_svg=BRAND_SVG,
             cat_svg=CAT_SVG,
+            site_head=site_head("../", "articles"),
+            site_foot=site_foot("../"),
             title=title,
             title_json=json.dumps(title),
             description=description,
@@ -1338,13 +1225,13 @@ def build_articles_index(articles: list[dict], n_pending: int = 0):
         # Draft / quality badge (Phase 1B)
         q = a.get("quality", "draft")
         if q == "draft":
-            quality_badge = '<span class="quality-badge q-draft">DRAFT 未審</span>'
+            quality_badge = '<span class="tag tag-draft">草稿</span>'
             extra_class = " is-draft"
         elif q == "reviewed":
-            quality_badge = '<span class="quality-badge q-reviewed">已審核</span>'
+            quality_badge = '<span class="tag tag-reviewed">已審核</span>'
             extra_class = ""
         elif q == "featured":
-            quality_badge = '<span class="quality-badge q-featured">精選</span>'
+            quality_badge = '<span class="tag tag-reviewed">精選</span>'
             extra_class = ""
         elif q == "ai-reviewed":
             quality_badge = '<span class="quality-badge q-ai-reviewed">AI 初審</span>'
@@ -1356,7 +1243,7 @@ def build_articles_index(articles: list[dict], n_pending: int = 0):
             f'          <a class="article-card{extra_class}" href="{a["slug"]}.html" data-quality="{q}">\n'
             f'            {thumb_html}\n'
             f'            <div class="article-card-body">\n'
-            f'              <div class="meta">{subcat_pill}{quality_badge}<span>📅 {a["date"]}</span></div>\n'
+            f'              <div class="meta">{subcat_pill}{quality_badge}<span>{a["date"]}</span></div>\n'
             f'              <h2>{a["title"]}</h2>\n'
             f'              <p>{a["description"]}</p>\n'
             f'            </div>\n'
@@ -1392,16 +1279,17 @@ def build_articles_index(articles: list[dict], n_pending: int = 0):
 
         sections_html.append(
             f'    <div class="cat-section" data-cat="{cat}">\n'
-            f'      <h2 class="cat-heading">{cat_emoji} {cat} <span class="count">{total} 篇</span></h2>\n'
+            f'      <h2 class="sec-h">{cat}<span class="count">{total} 篇</span></h2>\n'
             + "\n".join(subcat_sections) + "\n"
             f'    </div>'
         )
 
     pending_note = (
-        f'    <p class="pending-note">目前公開 {len(articles)} 篇。另有 {n_pending} 篇完成撰寫、正在逐篇審核，通過後陸續上架。</p>'
+        f'  <p class="note-box pending-note">目前公開 {len(articles)} 篇。另有 {n_pending} 篇完成撰寫、正在逐篇審核，通過後陸續上架。</p>'
         if n_pending else ""
     )
-    html = ARTICLES_INDEX_TEMPLATE.format(article_sections="\n".join(sections_html), pending_note=pending_note)
+    html = ARTICLES_INDEX_TEMPLATE.format(article_sections="\n".join(sections_html), pending_note=pending_note,
+                                          site_head=site_head("../", "articles"), site_foot=site_foot("../"))
     out = ARTICLES_DIR / "index.html"
     out.write_text(html, encoding="utf-8")
     print(f"  → {out} ({len(articles)} articles)")
@@ -1804,6 +1692,7 @@ def main():
     ALL_ARTICLES_JS.parent.mkdir(parents=True, exist_ok=True)
     ALL_ARTICLES_JS.write_text("window.ARTICLES_INDEX = " + json.dumps(articles, ensure_ascii=False) + ";\n", encoding="utf-8")
     sanitize_hand_pages({a["slug"] for a in public_articles})
+    inject_shell()
     build_404()
 
     # --- Breeds data ---

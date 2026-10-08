@@ -1,0 +1,96 @@
+/* site.css — 首頁以外各頁共用的外殼與元件（2026-10-09 起）
+   主調「溫暖插畫 × 公共服務」：頁首頁尾、按鈕、篩選膠囊、卡片、金色脈搏記號。
+   色票一律用 theme.css 的 token；首頁自己有一份內嵌樣式，數值和這裡對齊。
+   頁首頁尾的 HTML 由 build.py 產生（文章、列表直接套模板；獸醫院、文獻庫在標記區塊內注入）。 */
+
+:root {
+  --ui: -apple-system, BlinkMacSystemFont, "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+  --serif: "Noto Serif TC", "Source Han Serif TC", "PMingLiU", Georgia, serif;
+  --r-card: 18px;
+  --r-pill: 999px;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.75 var(--ui); -webkit-font-smoothing: antialiased; }
+.vh { position: absolute !important; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; border: 0; }
+.i { width: 24px; height: 24px; flex: none; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.skip { position: absolute; left: 12px; top: -60px; z-index: 5; padding: 8px 12px; }
+.skip:focus-visible { top: 8px; }
+.page { max-width: 600px; margin: 0 auto; padding: 0 20px 24px; }
+
+/* 頁首：與首頁相同 */
+.site-head { display: grid; grid-template-columns: 1fr auto; grid-template-areas: "brand er" "nav nav"; align-items: center; column-gap: 12px; padding-top: 12px; }
+.brand { grid-area: brand; display: inline-flex; justify-self: start; color: var(--text); border-radius: 6px; }
+.brand svg { display: block; height: 38px; width: auto; }
+.er-pill { grid-area: er; display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 16px 0 12px; border-radius: var(--r-pill); background: var(--primary); color: var(--accent-on); font-size: 16px; font-weight: 700; text-decoration: none; box-shadow: 0 2px 0 var(--primary-deep); }
+.er-pill:hover { background: var(--primary-deep); color: var(--accent-on); }
+.er-pill .i { width: 20px; height: 20px; }
+.main-nav { grid-area: nav; display: flex; gap: 22px; margin-top: 6px; overflow-x: auto; border-bottom: 2px solid var(--primary-pale); scrollbar-width: none; }
+.main-nav::-webkit-scrollbar { display: none; }
+.main-nav a { display: flex; align-items: center; min-height: 46px; color: var(--text); font-size: 16px; font-weight: 600; text-decoration: none; white-space: nowrap; }
+.main-nav a:hover { color: var(--primary); text-decoration: underline; }
+.main-nav a[aria-current] { color: var(--primary-deep); box-shadow: inset 0 -3px 0 var(--primary); }
+.main-nav a:focus-visible { outline-offset: -3px; }
+
+/* 頁面標題區 */
+.page-head { margin: 26px 0 18px; }
+.page-head h1 { margin: 0; font-size: 30px; line-height: 1.3; text-wrap: balance; }
+.page-head .lede { margin: 8px 0 0; color: var(--text-2); font-size: 16px; line-height: 1.65; }
+
+/* 區塊標題：金色脈搏記號 */
+.sec-h { display: flex; align-items: center; gap: 10px; margin: 36px 0 12px; font-size: 22px; line-height: 1.35; }
+.sec-h::before { content: ""; width: 30px; height: 14px; flex: none; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 14' fill='none' stroke='%23b8860b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 7.5h9l2.2-5 3.6 9.5 3-7.5 1.7 3H29'/%3E%3C/svg%3E") no-repeat center / contain; }
+.sec-h .count { margin-left: 4px; font-size: 15px; font-weight: 600; color: var(--text-muted); }
+
+/* 按鈕 */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; padding: 0 20px; border: 0; border-radius: var(--r-pill); background: var(--primary); color: var(--accent-on); font: 700 16px/1.2 var(--ui); text-decoration: none; cursor: pointer; box-shadow: 0 3px 0 var(--primary-deep); }
+.btn:hover { background: var(--primary-deep); color: var(--accent-on); }
+.btn:active { transform: translateY(3px); box-shadow: none; }
+.btn .i { width: 20px; height: 20px; }
+.btn-quiet { background: var(--bg-card); color: var(--primary-deep); box-shadow: inset 0 0 0 2px var(--primary); }
+.btn-quiet:hover { background: var(--primary-pale); color: var(--primary-deep); }
+.btn-quiet[aria-pressed="true"], .btn-quiet.active { background: var(--primary); color: var(--accent-on); box-shadow: 0 3px 0 var(--primary-deep); }
+
+/* 篩選膠囊：未選淺金、選中苔綠 */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 0 14px; border: 0; border-radius: var(--r-pill); background: var(--gold-pale); color: var(--text); font: 600 15px/1.2 var(--ui); text-decoration: none; cursor: pointer; white-space: nowrap; }
+.chip:hover { background: var(--gold-pale-deep); color: var(--text); }
+.chip.active, .chip[aria-pressed="true"] { background: var(--primary); color: var(--accent-on); }
+.chip .cnt { font-weight: 400; opacity: 0.75; font-size: 13px; }
+
+/* 輸入框 */
+.field { width: 100%; min-height: 52px; padding: 0 14px; border: 2px solid var(--text); border-radius: 14px; background: var(--bg-card); color: var(--text); font: 17px var(--ui); -webkit-appearance: none; appearance: none; }
+.field::placeholder { color: var(--text-muted); opacity: 1; }
+
+/* 卡片與說明框 */
+.panel { padding: 16px 18px; border: 1px solid var(--border-strong); border-radius: var(--r-card); background: var(--bg-card); }
+.note-box { padding: 12px 16px; border-radius: 12px; background: var(--gold-pale); color: var(--text-2); font-size: 15px; line-height: 1.65; }
+.note-box strong { color: var(--text); }
+.tag { display: inline-flex; align-items: center; padding: 0 8px; border-radius: 6px; font-size: 13px; font-weight: 700; line-height: 1.75; white-space: nowrap; }
+.tag-reviewed { background: var(--primary-pale); color: var(--primary-deep); }
+.tag-draft { background: var(--gold-pale); color: var(--draft-text); }
+.tag-quiet { background: var(--accent-light); color: var(--text-2); }
+
+/* 廣告位：AdSense 上線前先隱藏 */
+.ad { margin-top: 32px; }
+.ad-label { display: block; margin-bottom: 4px; font-size: 13px; letter-spacing: 0.1em; color: var(--text-muted); }
+
+/* 頁尾：與首頁相同 */
+.foot { display: grid; gap: 10px; margin-top: 48px; padding-top: 20px; border-top: 2px solid var(--primary-pale); font-size: 15px; color: var(--text-2); }
+.foot p { margin: 0; }
+.foot-cat { width: 64px; color: var(--primary); }
+.foot-cat svg { display: block; width: 100%; height: auto; }
+.cat-body { fill: var(--bg-card); }
+.cat-nose { fill: var(--blush); stroke: var(--blush); stroke-width: 0.8; stroke-linejoin: round; }
+.foot nav { display: flex; flex-wrap: wrap; column-gap: 18px; }
+.foot nav a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 400; }
+.foot-src { font-size: 13px; color: var(--text-muted); }
+
+@media (min-width: 880px) {
+  .page { max-width: 1000px; padding: 0 32px 32px; }
+  .site-head { grid-template-columns: auto 1fr auto; grid-template-areas: "brand nav er"; padding: 16px 0; border-bottom: 2px solid var(--primary-pale); }
+  .main-nav { justify-content: flex-end; margin: 0 8px 0 0; border: 0; }
+  .page-head { margin: 36px 0 22px; }
+  .page-head h1 { font-size: 40px; }
+  .sec-h { font-size: 24px; }
+}
