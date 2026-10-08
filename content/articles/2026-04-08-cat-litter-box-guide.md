@@ -32,7 +32,7 @@ last_reviewed: null
 - 一再進出砂盆，每次只尿幾滴或完全沒有尿[^CORNELL-FLUTD]
 - 尿裡有血，或砂上的尿塊是粉紅色[^CORNELL-FLUTD]
 - 蹲砂盆時哀叫、用力，看起來很痛[^CORNELL-FLUTD]
-- 公貓蹲砂盆沒有尿，這是急症，請讀[公貓尿道阻塞](male-cat-urethral-obstruction.html)並立刻找醫院
+- 公貓蹲砂盆沒有尿，這是急症，請讀[公貓尿道阻塞](male-cat-urethral-obstruction.html)並建議盡快聯絡獸醫
 
 這些症狀的成因包括特發性膀胱炎、結石、感染與尿道阻塞[^CORNELL-FLUTD]。貓在砂盆外排尿但沒有上述症狀時，排查順序寫在[貓咪亂尿尿怎麼辦](cat-inappropriate-elimination.html)。找醫院可用本站[獸醫院查詢](../vets.html)。
 

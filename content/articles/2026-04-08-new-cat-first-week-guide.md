@@ -4,7 +4,7 @@ slug: new-cat-first-week-guide
 date: 2026-04-08
 category: 入門
 tags: [新貓, 到家, 適應, 隔離, 第一週]
-description: "新貓到家不要立刻放出來探索！了解「安全房」設置、逐步擴大領域的正確節奏，以及如何讓貓咪和家中原有成員安全認識。"
+description: "新貓到家先別急著放出來探索。了解「安全房」設置、逐步擴大領域的正確節奏，以及如何讓貓咪和家中原有成員安全認識。"
 sources:
   - "ISFM Feline Environmental Needs Guidelines: 新貓引介程序（gradual introduction）的科學根據和步驟"
   - "International Cat Care: Bringing Your New Cat Home — 安全房（safe room）的設置建議"
@@ -15,7 +15,7 @@ last_reviewed: null
 ---
 # 新貓到家第一週：逐日安置指南
 
-很多人把新貓帶回家後，立刻打開籠子讓牠四處探索，這是最常見的錯誤。貓咪需要時間以自己的節奏探索和建立安全感，急於「讓牠熟悉環境」反而適得其反。
+很多人把新貓帶回家後，一到家就打開籠子讓牠四處探索，這是最常見的錯誤。貓咪需要時間以自己的節奏探索和建立安全感，急於「讓牠熟悉環境」反而適得其反。
 
 ## 事前準備：「安全房」設置
 

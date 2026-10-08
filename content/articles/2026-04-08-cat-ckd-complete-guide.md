@@ -4,7 +4,7 @@ slug: cat-ckd-complete-guide
 date: 2026-04-08
 category: 健康
 tags: [CKD, 腎病, 慢性腎衰竭, 老貓, 飲食管理, IRIS]
-description: "十歲以上的貓有三到四成罹患慢性腎病。這篇說明 IRIS 2023 分期怎麼看、哪些症狀該立刻就醫、低磷飲食與補水為什麼是最有證據的居家措施，以及回診要追蹤什麼。"
+description: "十歲以上的貓有三到四成罹患慢性腎病。這篇說明 IRIS 2023 分期怎麼看、哪些症狀建議請獸醫看看、低磷飲食與補水為什麼是最有證據的居家措施，以及回診要追蹤什麼。"
 sources:
   - "IRIS (International Renal Interest Society) Staging of CKD 2023: 以血清肌酸酐、SDMA、UPC 等指標進行 1–4 期分期"
   - "IRIS Treatment Recommendations for CKD in Cats 2023: 各分期的血磷目標、血壓與蛋白尿處置"
@@ -28,7 +28,7 @@ review_notes: "已加入 2024 AAHA 最新輸液指引，並更新皮下輸液的
 
 ## 哪些情況建議請獸醫看看
 
-以下任一情況，不要等下次回診：
+以下任一情況，建議提早聯絡獸醫，不必等到下次回診：
 
 - 超過 24 小時完全不吃不喝
 - 一天嘔吐超過三次，或嘔吐物帶血

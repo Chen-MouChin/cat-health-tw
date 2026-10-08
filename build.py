@@ -471,8 +471,8 @@ ARTICLE_TEMPLATE = """\
     .site-head {{ display: grid; grid-template-columns: 1fr auto; grid-template-areas: "brand er" "nav nav"; align-items: center; column-gap: 12px; padding-top: 12px; }}
     .brand {{ grid-area: brand; display: inline-flex; justify-self: start; color: var(--text); border-radius: 6px; }}
     .brand svg {{ display: block; height: 38px; width: auto; }}
-    .er-pill {{ grid-area: er; display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 16px 0 12px; border-radius: var(--r-pill); background: var(--emergency); color: var(--accent-on); font-size: 16px; font-weight: 700; text-decoration: none; box-shadow: 0 2px 0 var(--emergency-deep); }}
-    .er-pill:hover {{ background: var(--emergency-deep); color: var(--accent-on); }}
+    .er-pill {{ grid-area: er; display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 16px 0 12px; border-radius: var(--r-pill); background: var(--primary); color: var(--accent-on); font-size: 16px; font-weight: 700; text-decoration: none; box-shadow: 0 2px 0 var(--primary-deep); }}
+    .er-pill:hover {{ background: var(--primary-deep); color: var(--accent-on); }}
     .er-pill .i {{ width: 20px; height: 20px; }}
     .main-nav {{ grid-area: nav; display: flex; gap: 22px; margin-top: 6px; overflow-x: auto; border-bottom: 2px solid var(--primary-pale); scrollbar-width: none; }}
     .main-nav::-webkit-scrollbar {{ display: none; }}
@@ -603,12 +603,12 @@ ARTICLE_TEMPLATE = """\
 <div class="page">
 <a class="skip" href="#main">跳到主要內容</a>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21.5s-7-6-7-11.5a7 7 0 0 1 14 0c0 5.5-7 11.5-7 11.5z"/><path d="M12 7v6M9 10h6"/></symbol>
 </svg>
 
 <header class="site-head">
   <a class="brand" href="../index.html" aria-label="貓健康站首頁">{brand_svg}</a>
-  <a class="er-pill" href="../vets.html?only24h=1&amp;near=1"><svg class="i" aria-hidden="true"><use href="#i-alert"/></svg>24h 急診</a>
+  <a class="er-pill" href="../vets.html?only24h=1&amp;near=1"><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>24h 急診</a>
   <nav class="main-nav" aria-label="主要分頁">
     <a href="index.html" aria-current="page">文章</a>
     <a href="../vets.html">獸醫院</a>

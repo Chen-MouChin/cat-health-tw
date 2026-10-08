@@ -27,7 +27,7 @@ last_reviewed: null
 
 ## 哪些情況建議請獸醫看看
 
-🚨 貓張口呼吸、呼吸時肚子用力起伏，不要等。上呼吸道感染可能往下惡化成肺炎與呼吸困難[^CORNELL-RESPIRATORY-INFECTIONS-2024]，而呼吸困難本身就在急診清單上[^VCA-EMERGENCY-SIGNS]。深夜或假日可用本站[獸醫院查詢](../vets.html?only24h=1)篩選全天開放急診的醫院。
+貓張口呼吸、呼吸時肚子用力起伏，建議盡快聯絡獸醫。上呼吸道感染可能往下惡化成肺炎與呼吸困難[^CORNELL-RESPIRATORY-INFECTIONS-2024]，而呼吸困難本身就在急診清單上[^VCA-EMERGENCY-SIGNS]。深夜或假日可用本站[獸醫院查詢](../vets.html?only24h=1)篩選全天開放急診的醫院。
 
 以下任一情況出現，當天就要看診，不要只靠居家護理：
 
