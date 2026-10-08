@@ -115,10 +115,10 @@ scripts/build_vets_js.py → frontend/data/vets.js（短鍵 n/t/a/c/d/g/h/e/cat/
 - 新版外殼（2026-10-09）：文章頁、文章列表、獸醫院、文獻庫共用 `css/site.css`（頁首、頁尾、按鈕、篩選膠囊、卡片、金色記號）；頁首頁尾 HTML 由 build.py 的 `site_head()`／`site_foot()` 產生，vets.html、library.html 在 `<!-- site-head -->`、`<!-- site-foot -->` 標記之間由 `inject_shell()` 每次重寫，不要手改標記內的內容。首頁自己有內嵌樣式。about、editorial、privacy、breeds 與 68 個品種單頁也已套用（2026-10-09）；`nav.css`、`ads.css`、`ads.js` 已沒有頁面使用。新手寫頁要套外殼：頁名加進 `SHELL_PAGES`、補上兩組標記。
 - 文章封面圖：`COVER_PLACEHOLDER = True` 時一律用線條貓佔位圖（AI 生成的封面上線前不用）。真圖到位後改 False，frontmatter 的 `cover_image` 就會生效。
 - 全站語氣是建議、不渲染急迫：不用紅色與警示圖示，「24h 急診」入口用主色（見 SKILL.md「語氣」節）。
-- 改版色票在 `theme.css`：`--primary` 深苔綠（連結、主按鈕、選取）、`--emergency`（只給急診）、`--gold`（只給脈搏線與記號）、`--focus` 等。`--link` 已全站換主色；`--accent` 仍是近黑（build.py 的文章標題在用），其他頁改版時再拆。首頁只載 `theme.css`，頁首頁尾是首頁專用，其他頁仍用 `nav.css` 的舊導覽列。
+- 改版色票在 `theme.css`：`--primary` 深苔綠（連結、主按鈕、選取）、`--emergency`（只給急診）、`--gold`（只給脈搏線與記號）、`--focus` 等。`--link` 已全站換主色；`--accent` 仍是近黑（build.py 的文章標題在用），其他頁改版時再拆。首頁只載 `theme.css`，其他頁另載 `site.css`。
 - 鍵盤焦點：`theme.css` 的全站 `:focus-visible` 是 3px 近黑外框，連結加黃底。元件不要寫 `outline: none`，會把它蓋掉。
 - `search.js` 的計分（title 10 / tags 5 / description 3 / body 1）與分隔符正規化在 `test_search.py` 有一份 Python 鏡像。**改 search.js 的演算法必須同步改 test_search.py**。
-- `test_search.py` 目前有 45 筆既有失敗：它仍假設 103 篇文章，並查找已移進 `_archived/` 的 slug（波斯貓、跳蚤、TNR 等）。改動搜尋前先把這些案例更新到現有 56 篇，否則分不出新舊失敗。
+- `test_search.py` 讀 build 產的 `build/articles-data-all.js`（含草稿的全集），117/117 通過；線上的 `articles-data.js` 只有已審文章。先跑 `python build.py` 再跑測試。
 - 文章頁的編輯揭露（`✍️ 編輯 Chen-MouChin · AI 協助起草`）與 JSON-LD 的 `author: Person`、`publishingPrinciples` 由 build.py 產生；有 `last_reviewed` 日期時會多顯示「✅ 審核」並寫入 `dateModified`。方針內容在 `frontend/editorial.html`（手寫，不由 build 產生）。
 - `library.html` 讀 `frontend/data/citations.json`＋`glossary.json`（文獻庫，目前唯一被 sitemap 視為可信的內容頁）。
 - `vets.html` 附近模式：瀏覽器定位（先 GPS、失敗退回網路定位）→ 直線距離 → 範圍 `RADII` 篩選、先列 `NEAR_PAGE` 家；`?near=1` 進站即定位、`&r=` 指定範圍。`vets.js` 的 `ap=1` 距離標「約」，`ap=2` 沒有座標、不列入。位置不離開瀏覽器（隱私政策有寫）。
