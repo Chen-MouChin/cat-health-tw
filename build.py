@@ -165,7 +165,7 @@ def _md_to_html(md_text: str) -> str:
     lines = md_text.split("\n")
     fixed = []
     for i, line in enumerate(lines):
-        if i and re.match(r"^\s*(?:[-*+]|\d+\.)\s", line) and lines[i - 1].strip() and not re.match(r"^\s*(?:[-*+]|\d+\.|>|\|)", lines[i - 1]) and not lines[i - 1].lstrip().startswith("#"):
+        if i and re.match(r"^\s*(?:[-*+]|\d+\.)\s", line) and lines[i - 1].strip() and not re.match(r"^\s*(?:[-*+]\s|\d+\.\s|>|\|)", lines[i - 1]) and not lines[i - 1].lstrip().startswith("#"):
             fixed.append("")
         fixed.append(line)
     md_text = "\n".join(fixed)
