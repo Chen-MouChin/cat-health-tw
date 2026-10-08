@@ -25,6 +25,15 @@
 
 ---
 
+## 2026-10-09（下午）
+
+**全站流程順過：不會再產生壞頁，工具可信**
+- 盤點結果見 ROADMAP「未處理領域」。做掉的：手寫頁連到草稿會 404（breeds.html 一處、首頁 10 處）、文章列表只剩 2 篇沒說明、about 數字手寫過期、smoke test 誤報、perf_audit 寫死路徑、test_search 失效、沒有 404 頁、品種頁未審卻可被索引。
+- build.py 新增：`sanitize_hand_pages`（手寫頁的草稿連結拆成 `<span data-draft-link>`，審過自動還原）、`build_404`、about.html `data-stat` 回填、列表頁「另有 N 篇審核中」、`BREEDS_INDEXABLE=False`（品種頁 noindex、不進 sitemap）、`build/articles-data-all.js` 全集索引。
+- 工具：smoke_test 本機 10 頁 0 死連結、sitemap 8/8；test_search 117/117（原 78/123）；perf_audit 可跑。
+- 工作檯 13 項調整（見 workbench/README.md）；三組重複文獻 key 合併，文獻 110 筆。
+- 已部署：線上 404 頁、品種頁 noindex、列表說明都確認生效。
+
 ## 2026-10-09
 
 **30 篇批次修稿（AI 改稿，人審核）**

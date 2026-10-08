@@ -60,7 +60,12 @@
 
 ## 技術債
 
-- [ ] `test_search.py` 失敗更多了：`articles-data.js` 現在只含已審文章（2 篇），測試案例要改成只查已審 slug，或讓測試讀 `build/drafts/` 的全集
+- [x] `test_search.py` 改讀 `build/articles-data-all.js` 全集、案例更新到現有 56 篇，117/117（2026-10-09）
+- [ ] **上線基礎（等你決定）**：analytics 用哪家（Plausible／Umami 無 cookie，或 GA4）；Google Search Console 驗證（HTML 檔放 frontend/ 即可）；網域
+- [ ] 品種圖鑑 68 頁目前 noindex、不進 sitemap（`build.py` 的 `BREEDS_INDEXABLE`）；審過品種中文名與內容再打開
+- [ ] 獸醫院資料：2026-06-10 後沒更新；gmaps/rating/website 三欄全空（第二、三層爬蟲沒跑完）；24h 89 家、貓專科 71 家是名字猜的，要人工核；每季重跑 layer1
+- [ ] 文章頁、列表、獸醫院、文獻庫、about 套首頁風格（先出文章頁草稿）
+- [ ] 隱私政策接 AdSense 後補 Google 要求條款；文章頁加授權聲明（可否轉載）
 - [ ] `research/quality_dashboard.py` 獸醫院門檻是六都時代的，資料已是 22 縣市
 - [ ] `library.html` 有 3 個廣告位，超過每頁 2 個的自訂上限
 - [ ] `frontend/data/vets.json` 是舊的雙北檔，`vets.html` 實際讀 `vets.js`，
