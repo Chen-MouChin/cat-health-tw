@@ -61,7 +61,12 @@
 ## 技術債
 
 - [x] `test_search.py` 改讀 `build/articles-data-all.js` 全集、案例更新到現有 56 篇，117/117（2026-10-09）
-- [ ] **上線基礎（等你決定）**：analytics 用哪家（Plausible／Umami 無 cookie，或 GA4）；Google Search Console 驗證（HTML 檔放 frontend/ 即可）；網域
+- [ ] **Analytics：Umami Cloud**（2026-10-09 定案）。等你：到 cloud.umami.is 註冊，新增網站 Domain 填 `chen-mouchin.github.io`，把 Website ID 給我。我接著做：
+      1. build.py 加 `UMAMI_WEBSITE_ID`，文章／列表／品種三個模板與七個手寫頁注入 `<script defer src="https://cloud.umami.is/script.js" data-website-id=… data-domains="chen-mouchin.github.io">`（localhost 與工作檯預覽不送資料）
+      2. 自訂事件：vets.html 的 `vets_locate`（成功／拒絕／逾時）、`vets_filter`（24h／貓專科／縣市）、`vets_action`（撥號／導航／地圖）；首頁急診按鈕與搜尋送出；文章頁捲到底、點找獸醫、點參考文獻；外連自動記
+      3. privacy.html 補「流量統計」一段（Umami 無 cookie、IP 雜湊、不存個資）
+      4. 部署後隔天看儀表板有數字才算完成；免費方案 10 萬事件／月、1 個網站、留 6 個月，超過再評估自架
+- [ ] Google Search Console 驗證（HTML 檔放 frontend/ 即可）；網域
 - [ ] 品種圖鑑 68 頁目前 noindex、不進 sitemap（`build.py` 的 `BREEDS_INDEXABLE`）；審過品種中文名與內容再打開
 - [ ] 獸醫院資料：2026-06-10 後沒更新；gmaps/rating/website 三欄全空（第二、三層爬蟲沒跑完）；24h 89 家、貓專科 71 家是名字猜的，要人工核；每季重跑 layer1
 - [ ] 文章頁、列表、獸醫院、文獻庫、about 套首頁風格（先出文章頁草稿）
