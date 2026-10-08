@@ -54,6 +54,7 @@
       --r-pill: 999px;
     }
     * { box-sizing: border-box; }
+    [hidden] { display: none !important; } /* .post 的 display:flex 會蓋掉 hidden，草稿卡要真的藏起來 */
     body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.75 var(--ui); -webkit-font-smoothing: antialiased; }
     .page { max-width: 600px; margin: 0 auto; padding: 0 20px 24px; }
     h1, h2, h3 { margin: 0; line-height: 1.3; text-wrap: balance; }
@@ -318,7 +319,7 @@
       <article class="post">
         <p class="post-meta"><span>健康 › 常見疾病</span><span class="tag-reviewed" data-quality-of="cat-ckd-complete-guide">已審核</span></p>
         <h3><a href="articles/cat-ckd-complete-guide.html">貓咪慢性腎病（CKD）：分期、飲食與居家照護</a></h3>
-        <p>IRIS 2023 分期怎麼看、哪些症狀該立刻就醫、低磷飲食與補水。</p>
+        <p>IRIS 2023 分期怎麼看、哪些症狀建議請獸醫看看、低磷飲食與補水。</p>
       </article>
     </div>
     <a class="more" href="articles/index.html">看全部 2 篇文章<svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
