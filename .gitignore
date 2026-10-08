@@ -23,3 +23,6 @@ research/
 
 # 本機試驗沙盒（不公開、不追蹤）
 sandbox/
+
+# build.py 產出的草稿 HTML（工作檯預覽用，不上線）
+build/

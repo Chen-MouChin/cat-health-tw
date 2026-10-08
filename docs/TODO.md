@@ -61,7 +61,7 @@
 
 ## 技術債
 
-- [ ] `test_search.py` 45 筆失敗：仍假設 103 篇文章、查找已歸檔的 slug
+- [ ] `test_search.py` 失敗更多了：`articles-data.js` 現在只含已審文章（2 篇），測試案例要改成只查已審 slug，或讓測試讀 `build/drafts/` 的全集
 - [ ] `research/quality_dashboard.py` 獸醫院門檻是六都時代的，資料已是 22 縣市
 - [ ] `library.html` 有 3 個廣告位，超過每頁 2 個的自訂上限
 - [ ] `frontend/data/vets.json` 是舊的雙北檔，`vets.html` 實際讀 `vets.js`，

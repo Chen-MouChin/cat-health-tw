@@ -15,6 +15,7 @@
 {"@context":"https://schema.org","@type":"CollectionPage","name":"學術文獻庫 — 貓健康站","description":"貓健康國際權威指引索引：ISFM/AAFP/IRIS/WSAVA/ABCD/Cornell。每筆回溯原文核實。","url":"https://chen-mouchin.github.io/cat-health-tw/library.html","inLanguage":"zh-TW"}
 </script>
 <script src="js/theme.js"></script>
+<script src="js/articles-data.js"></script>
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: system-ui, "Noto Sans TC", sans-serif; background: var(--bg, #fafafa); color: var(--text, #1d1d1f); min-height: 100vh; padding-bottom: 2rem; }
@@ -873,7 +874,11 @@ function renderCard(cid, e) {
 
 function renderCitedByList(slugs) {
   const label = currentLang === 'zh' ? '被以下文章引用：' : 'Cited by:';
-  const items = slugs.map(s => `<li><a href="articles/${escapeHtml(s)}.html" target="_blank" rel="noopener">${escapeHtml(s)}</a></li>`).join('');
+  // 未審核的文章線上沒有頁面，只列 slug 不給連結
+  const live = new Set((window.ARTICLES_INDEX || []).map(a => a.slug));
+  const items = slugs.map(s => live.has(s)
+    ? `<li><a href="articles/${escapeHtml(s)}.html" target="_blank" rel="noopener">${escapeHtml(s)}</a></li>`
+    : `<li>${escapeHtml(s)}（審核中）</li>`).join('');
   return `<div class="cited-by-label">${label}</div><ul>${items}</ul>`;
 }
 

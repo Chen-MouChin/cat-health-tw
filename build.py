@@ -38,6 +38,10 @@ CONTENT_DIR = ROOT / "content" / "articles"
 FRONTEND_DIR = ROOT / "frontend"
 ARTICLES_DIR = FRONTEND_DIR / "articles"
 SITEMAP_XML = FRONTEND_DIR / "sitemap.xml"
+# 未審核文章不上線：只有這些 quality 的文章會寫進 frontend/（進 git、進 Pages）
+PUBLISHED_QUALITIES = ("reviewed", "featured")
+# 草稿的 HTML 寫到這裡（.gitignore），給工作檯本機預覽用；線上永遠看不到
+DRAFTS_DIR = ROOT / "build" / "drafts" / "articles"
 SITE_URL = "https://chen-mouchin.github.io/cat-health-tw"  # update when deployed
 
 
@@ -951,8 +955,9 @@ def build_articles() -> list[dict]:
     mds = sorted(CONTENT_DIR.glob("*.md"))
     articles_meta = []
 
-    # Pass 1: 收集 slug → title，給 related 反向連結用
+    # Pass 1: 收集 slug → title，給 related 反向連結用；同時記下哪些 slug 已審核可上線
     slug_to_title: dict[str, str] = {}
+    public_slugs: set[str] = set()
     for md_path in mds:
         if md_path.name == "README.md":
             continue
@@ -960,8 +965,17 @@ def build_articles() -> list[dict]:
             _m, _ = _parse_front_matter(md_path.read_text(encoding="utf-8"))
             _slug = _m.get("slug") or md_path.stem
             slug_to_title[_slug] = _m.get("title", _slug)
+            if (_m.get("quality") or "draft").strip().lower() in PUBLISHED_QUALITIES:
+                public_slugs.add(_slug)
         except Exception:
             continue
+
+    def strip_links_to_drafts(html: str) -> str:
+        """已審文章內文若連到未審文章，拿掉 <a> 只留文字，線上才不會 404。"""
+        def repl(m):
+            target = m.group("slug")
+            return m.group(0) if (target in public_slugs or target == "index") else m.group("text")
+        return re.sub(r'<a\b[^>]*href="(?:\./)?(?P<slug>[\w-]+)\.html(?:#[^"]*)?"[^>]*>(?P<text>.*?)</a>', repl, html, flags=re.S)
 
     for md_path in mds:
         if md_path.name == "README.md":
@@ -976,10 +990,13 @@ def build_articles() -> list[dict]:
         category = meta.get("category", "")
         sources = meta.get("sources", [])
         quality = (meta.get("quality") or "draft").strip().lower()
+        is_public = quality in PUBLISHED_QUALITIES
         last_reviewed = meta.get("last_reviewed", "")
 
         body_md, references_html, cited_keys = _process_footnotes(body_md, slug)
         body_html = _md_to_html(body_md)
+        if is_public:
+            body_html = strip_links_to_drafts(body_html)
         # 內文開頭的「# 標題」改由模板的 <h1> 顯示，這裡拿掉以免重複
         # （toc 擴充會替標題加 id，所以要容許 <h1 id="...">）
         body_html = re.sub(r"^\s*<h1\b[^>]*>.*?</h1>\s*", "", body_html, count=1, flags=re.S)
@@ -1126,6 +1143,8 @@ def build_articles() -> list[dict]:
                 rel_slug = rel_slug.strip()
                 if not rel_slug:
                     continue
+                if is_public and rel_slug not in public_slugs:
+                    continue  # 上線的文章不列未審的相關文
                 rel_title = slug_to_title.get(rel_slug, rel_slug)
                 rel_items.append(
                     f'        <li><a href="./{rel_slug}.html">{_escape_html(rel_title)}</a></li>'
@@ -1162,11 +1181,13 @@ def build_articles() -> list[dict]:
             related_html=related_html,
         )
 
-        out_path = ARTICLES_DIR / f"{slug}.html"
-        out_path.write_text(output, encoding="utf-8")
+        out_dir = ARTICLES_DIR if is_public else DRAFTS_DIR
+        out_dir.mkdir(parents=True, exist_ok=True)
+        (out_dir / f"{slug}.html").write_text(output, encoding="utf-8")
         subcategory = SUBCATEGORY_MAP.get(slug, meta.get("subcategory", ""))
         articles_meta.append({
             "slug": slug,
+            "public": is_public,
             "title": title,
             "description": description,
             "date": str(date),
@@ -1180,7 +1201,19 @@ def build_articles() -> list[dict]:
             "body_text": re.sub(r"<[^>]+>", "", body_html)[:800],
         })
 
-    print(f"  Built {len(articles_meta)} articles → {ARTICLES_DIR}/")
+    # 清掉已下架或改回草稿的舊 HTML，frontend/articles/ 只能有已審文章
+    removed = 0
+    for old in ARTICLES_DIR.glob("*.html"):
+        if old.name != "index.html" and not old.name.startswith("_") and old.stem not in public_slugs:
+            old.unlink()
+            removed += 1
+    for old in DRAFTS_DIR.glob("*.html"):
+        if old.stem in public_slugs or old.stem not in slug_to_title:
+            old.unlink()
+    n_pub = len(public_slugs)
+    print(f"  Built {len(articles_meta)} articles：{n_pub} 篇已審 → {ARTICLES_DIR}/，"
+          f"{len(articles_meta) - n_pub} 篇草稿 → {DRAFTS_DIR}/（不進 git）"
+          + (f"；移除 {removed} 個未審 HTML" if removed else ""))
     return articles_meta
 
 
@@ -1515,7 +1548,7 @@ def build_sitemap(articles: list[dict], breeds: list[dict] = None):
 HOME_STAT_UNITS = {"篇": "articles", "筆": "citations", "種": "breeds", "家": "vets"}
 
 
-def sync_home_stats(articles: list, n_breeds: int):
+def sync_home_stats(articles: list, n_breeds: int, n_public: int | None = None):
     """首頁 index.html 是手寫的，但上面的數字與草稿標籤由這裡依實際資料寫入，文章或文獻增刪後不必手改。
     - data-stat="vets|articles|citations|breeds" 的元素：改內文與 data-to（數字跑碼的終點）
     - 其他「數字＋單位」的文字（meta 描述、結構化資料、報讀器說明句、「看全部 N 篇」）：直接改數字
@@ -1526,7 +1559,8 @@ def sync_home_stats(articles: list, n_breeds: int):
     home = FRONTEND_DIR / "index.html"
     if not home.exists():
         return
-    actual = {"articles": len(articles), "breeds": n_breeds}
+    # 首頁的「N 篇」是線上看得到的篇數（已審），不是全部草稿
+    actual = {"articles": len(articles) if n_public is None else n_public, "breeds": n_breeds}
     try:
         cites = json.loads((ROOT / "content" / "references" / "citations.json").read_text(encoding="utf-8"))
         actual["citations"] = len([k for k in cites if not k.startswith("_")])
@@ -1583,6 +1617,29 @@ def sync_home_stats(articles: list, n_breeds: int):
 
     html = re.sub(r'<span class="tag-(?:draft|reviewed)" data-quality-of="(?P<slug>[\w-]+)">[^<]*</span>', quality_tag, html)
 
+    # 未審文章線上沒有頁面：主題捷徑的 <li> 加 hidden、推薦文章的標題連結改成純文字；審核通過後自動還原
+    def pill(m):
+        slug = m.group("slug")
+        if slug not in quality:
+            return m.group(0)
+        if quality[slug] in PUBLISHED_QUALITIES:
+            return f'<li>{m.group("a")}'
+        return f'<li hidden data-draft-of="{slug}">{m.group("a")}'
+    html2 = re.sub(r'<li(?: hidden data-draft-of="[\w-]+")?>(?P<a><a class="pill" href="articles/(?P<slug>[\w-]+)\.html">)', pill, html)
+
+    def card(m):
+        slug, text = m.group("slug") or m.group("slug2"), m.group("text")
+        if slug not in quality:
+            return m.group(0)
+        if quality[slug] in PUBLISHED_QUALITIES:
+            return f'<h3><a href="articles/{slug}.html">{text}</a></h3>'
+        return f'<h3><span data-draft-link="articles/{slug}.html">{text}</span></h3>'
+    html2 = re.sub(r'<h3>(?:<a href="articles/(?P<slug>[\w-]+)\.html">|<span data-draft-link="articles/(?P<slug2>[\w-]+)\.html">)'
+                   r'(?P<text>[^<]*)</(?:a|span)></h3>', card, html2)
+    if html2 != html:
+        changed.append("未審文章的首頁連結已隱藏或改為純文字")
+        html = html2
+
     if html != src:
         home.write_text(html, encoding="utf-8")
         print("  index.html 已依實際資料更新：" + "；".join(dict.fromkeys(changed)))
@@ -1617,8 +1674,10 @@ def main():
     # --- Articles ---
     print("\n[Articles]")
     articles = build_articles()
-    build_articles_index(articles)
-    build_search_index(articles)
+    # 列表、搜尋索引、首頁數字只看已審文章；sitemap 與首頁標籤自己會依 quality 判斷
+    public_articles = [a for a in articles if a.get("public")]
+    build_articles_index(public_articles)
+    build_search_index(public_articles)
 
     # --- Breeds data ---
     breeds_src = ROOT / "data" / "breeds_en.json"
@@ -1641,7 +1700,7 @@ def main():
 
     # --- 首頁數字檢查 ---
     print("\n[Home stats]")
-    sync_home_stats(articles, len(breeds))
+    sync_home_stats(articles, len(breeds), n_public=len(public_articles))
 
     print("\nDone.")
 

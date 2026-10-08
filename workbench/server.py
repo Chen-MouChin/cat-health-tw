@@ -342,6 +342,11 @@ class Handler(SimpleHTTPRequestHandler):
                     return self.send_error(403)
                 if target.is_dir():
                     target = target / "index.html"
+                # 草稿不進 frontend/，build.py 把它們寫到 build/drafts/，預覽時從那裡補
+                if not target.exists() and rel.startswith("articles/"):
+                    draft = (ROOT / "build" / "drafts" / rel).resolve()
+                    if draft.exists():
+                        target = draft
                 return self._file(target)
             if path == "/api/overview":
                 return self._json(overview())

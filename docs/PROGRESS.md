@@ -35,6 +35,7 @@
 - 本機與遠端 2026-09-29 的 13 個 commit 同步完成，無衝突。
 - commit 歷史壓成 4 批（init／09-06／09-29／10-08），之後 commit 都加 Co-Authored-By: Claude。
 - repo 改 public，GitHub Pages 開通並部署成功，舊的失敗 run 刪除。網站上線。
+- **未審文章不上線**：build.py 只把 reviewed／featured 寫進 `frontend/articles/`，54 篇草稿改產到 `build/drafts/`（gitignore，工作檯預覽自動補）。列表、搜尋索引、首頁篇數只算已審；首頁連到草稿的捷徑加 `hidden`、推薦卡標題改純文字；已審文內連到草稿的連結拆成文字；文獻庫 cited_by 對草稿只列名不連結。線上現在只有 CKD、甲亢兩篇。
 - 課程作業「貓咪急診判斷器」另開公開 repo：https://github.com/Chen-MouChin/cat-emergency-triage ，線上版 https://chen-mouchin.github.io/cat-emergency-triage/ 。內容取自急診文與毒物文，規格書副本在 research/。
 
 ## 2026-09-29

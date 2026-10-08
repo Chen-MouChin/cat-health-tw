@@ -65,7 +65,8 @@ content/references/citations.json, glossary.json ─┤
 data/breeds/breeds.json ─┘
         │  python build.py
         ▼
-frontend/articles/{slug}.html      每篇文章（含 nav / ad slots / 免責 / 找獸醫 CTA）
+frontend/articles/{slug}.html      只有 quality ∈ {reviewed, featured} 的文章（含 nav / ad slots / 免責 / 找獸醫 CTA）
+build/drafts/articles/{slug}.html  其餘草稿（.gitignore，工作檯 /site/articles/ 預覽時自動補上；線上永遠沒有）
 frontend/articles/index.html       分類 → 子分類列表，有 draft 隱藏切換
 frontend/js/articles-data.js       window.ARTICLES_INDEX（search.js 與 test_search.py 共用）
 frontend/js/meta.js                build 時間（footer 用）
@@ -89,7 +90,7 @@ frontend/sitemap.xml               只收 quality ∈ {reviewed, featured} 的�
 | 欄位 | 用途 |
 |---|---|
 | `slug` | 輸出檔名；缺省用檔名 stem |
-| `quality` | `draft`（預設）/ `reviewed` / `featured` / `archived`。draft 頁面頂端顯示「未審」警語、列表半透明、**不進 sitemap** |
+| `quality` | `draft`（預設）/ `reviewed` / `featured` / `archived`。**只有 reviewed / featured 會寫進 `frontend/` 上線**；draft 只產到 `build/drafts/`，不進列表、搜尋索引、sitemap，首頁連到它的捷徑會被 build 加 `hidden`，已審文章內文連到它的 `<a>` 會被拆成純文字 |
 | `sources` | 自由文字列表；`scripts/link_sources_to_citations.py` 用 fuzzy match 對到 `citations.json` 的 key 並回填 `cited_by` |
 | `find_vet` | `cat_only` / `emergency` / `both` → 文末「找獸醫」CTA 樣式 |
 | `related` | 站內相關盒用 slug 列表；內文已有「## 相關文章」一節時不另外顯示 |
