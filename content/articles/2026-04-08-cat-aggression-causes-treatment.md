@@ -1,5 +1,5 @@
 ---
-title: "貓咪為什麼會有攻擊行為"
+title: "貓咪為什麼會有攻擊行為：原因與處理方法"
 slug: cat-aggression-causes-treatment
 date: 2026-04-08
 category: 行為
@@ -13,7 +13,7 @@ cover_image: images/articles/cat-aggression-causes-treatment.jpg
 quality: draft
 last_reviewed: null
 ---
-# 貓咪攻擊行為：類型、原因與處置
+# 貓咪為什麼會有攻擊行為：原因與處理方法
 
 貓咪攻擊行為是飼主最常抱怨的行為問題之一，也是人貓關係最大的挑戰。重要的前提：**大多數貓咪攻擊都是有原因的，且可以改善**。
 
