@@ -1636,8 +1636,15 @@ def sync_home_stats(articles: list, n_breeds: int, n_public: int | None = None):
         return f'<h3><span data-draft-link="articles/{slug}.html">{text}</span></h3>'
     html2 = re.sub(r'<h3>(?:<a href="articles/(?P<slug>[\w-]+)\.html">|<span data-draft-link="articles/(?P<slug2>[\w-]+)\.html">)'
                    r'(?P<text>[^<]*)</(?:a|span)></h3>', card, html2)
+    # 推薦文章整張卡：草稿就整個 hidden，不只拿掉連結
+    def post_card(m):
+        inner = m.group("inner")
+        slugs = re.findall(r'data-quality-of="([\w-]+)"', inner)
+        is_draft = any(quality.get(s, "draft") not in PUBLISHED_QUALITIES for s in slugs)
+        return f'<article class="post"{" hidden" if is_draft else ""}>{inner}</article>'
+    html2 = re.sub(r'<article class="post"(?: hidden)?>(?P<inner>.*?)</article>', post_card, html2, flags=re.S)
     if html2 != html:
-        changed.append("未審文章的首頁連結已隱藏或改為純文字")
+        changed.append("未審文章的首頁捷徑與推薦卡已隱藏")
         html = html2
 
     if html != src:
