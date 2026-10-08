@@ -431,15 +431,23 @@
   (function(){
     var q=new URLSearchParams(location.search).get('q');
     if(!q)return;
-    var terms=q.split(/\s+/).filter(Boolean);
+    // 網址參數是外部輸入：只用 textContent 與 createElement 組節點，不經過 innerHTML
+    var terms=q.split(/\s+/).filter(Boolean).slice(0,5).map(function(x){return x.slice(0,40);});
+    if(!terms.length)return;
+    var re=new RegExp('('+terms.map(function(x){return x.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');}).join('|')+')','g');
     function walk(n){
       if(n.nodeType===3){
-        var h=n.textContent,changed=false;
-        for(var i=0;i<terms.length;i++){
-          var e=terms[i].replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
-          if(new RegExp(e).test(h)){h=h.replace(new RegExp(e,'g'),'<mark>'+terms[i]+'</mark>');changed=true;}
+        var h=n.textContent;
+        if(!re.test(h))return;
+        re.lastIndex=0;
+        var frag=document.createDocumentFragment(),last=0,m;
+        while((m=re.exec(h))){
+          if(m.index>last)frag.appendChild(document.createTextNode(h.slice(last,m.index)));
+          var mk=document.createElement('mark');mk.textContent=m[0];frag.appendChild(mk);
+          last=m.index+m[0].length;
         }
-        if(changed){var s=document.createElement('span');s.innerHTML=h;n.parentNode.replaceChild(s,n);}
+        if(last<h.length)frag.appendChild(document.createTextNode(h.slice(last)));
+        n.parentNode.replaceChild(frag,n);
       }else if(n.nodeType===1&&['SCRIPT','STYLE','MARK'].indexOf(n.tagName)<0){
         var kids=Array.from(n.childNodes);for(var j=0;j<kids.length;j++)walk(kids[j]);
       }
