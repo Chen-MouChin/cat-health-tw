@@ -20,6 +20,7 @@
     F  dash-arrow      正文出現 —— — → ≠（表格列除外）
     F  emoji-heading   標題含 emoji
     F  absolute-word   絕對化用語（絕對不、永遠不、一定能、保證、必定、毫無疑問）
+    W  urgent-tone     急迫語氣（立刻、馬上、現在就、不要等、衝急診、緊急狀況）
     F  ai-phrase       AI 慣用句（值得注意的是、讓我們、不只是…更是、總而言之）
     F  quoted-para     引號包住的整句中文轉述（疑似偽直接引句）
     F  html-block      正文含 <div>/<span> 等 HTML 區塊
@@ -73,6 +74,8 @@ BRANDS = [
 BRAND_RE = re.compile("|".join(re.escape(b) for b in BRANDS), re.I)
 
 # 只抓語氣加強型的絕對化；「不一定能」「保證成分」「仍非絕對」「所有貓咪腫瘤」屬正常用法
+# 急迫語氣：本站只建議找獸醫，不替讀者判斷急迫程度
+URGENT_RE = re.compile(r"立刻|馬上|現在就|不要等|衝急診|衝醫院|緊急狀況|🚨|‼")
 ABSOLUTE_RE = re.compile(r"絕對(?:不|禁止|避免|能|要|會)|永遠(?!有食物)|(?<!不)一定能|保證(?!金|成分)|必定|毫無疑問|從不(?!吃)")
 AI_PHRASE_RE = re.compile(r"值得注意的是|重要的是|讓我們|一起來|不只是[^，。]{1,20}更是|總而言之|換句話說|這意味著|毫無疑問|你有沒有想過")
 DASH_RE = re.compile(r"——|—|→|≠")
@@ -181,6 +184,11 @@ def lint_one(path: Path, citations: dict, known_slugs: set[str]) -> dict:
         if line.startswith("#") and EMOJI_RE.search(line):
             fails.append(("emoji-heading", f"L{i}: {line.strip()[:40]}"))
 
+    # urgent tone
+    urgent_hits = [m.group(0) for line in lines for m in URGENT_RE.finditer(line)]
+    if urgent_hits:
+        warns.append(("urgent-tone", f"急迫語氣 {len(urgent_hits)} 處：{'、'.join(dict.fromkeys(urgent_hits))}"))
+
     # absolute words / AI phrases
     for i, line in enumerate(lines, 1):
         for m in ABSOLUTE_RE.finditer(line):
@@ -213,11 +221,11 @@ def lint_one(path: Path, citations: dict, known_slugs: set[str]) -> dict:
 
     # sections
     cat = fm.get("category", "")
-    has_urgent = bool(re.search(r"^##+ .*(就醫|急診)", body, re.M))
+    has_urgent = bool(re.search(r"^##+ .*(獸醫看看|就醫|急診)", body, re.M))
     has_key = bool(re.search(r"^##+ .*(重點|最該記住|最該知道|最該先想)", body, re.M))
     has_faq = bool(re.search(r"^##+ .*(常見問題|FAQ)", body, re.M))
     if cat in MEDICAL_CATEGORIES and not has_urgent:
-        warns.append(("section", "缺「何時該立刻就醫」段"))
+        warns.append(("section", "缺「哪些情況建議請獸醫看看」段"))
     if not has_key:
         warns.append(("section", "缺「30 秒重點」段"))
     if not has_faq:

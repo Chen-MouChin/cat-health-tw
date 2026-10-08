@@ -515,17 +515,9 @@ ARTICLE_TEMPLATE = """\
     .article-hero {{ width: 100%; aspect-ratio: 16/9; max-height: 380px; object-fit: cover; border-radius: var(--r-card); margin: 18px 0 6px; display: block; background: var(--primary-pale); }}
     .article-hero[src=""], .article-hero:not([src]) {{ display: none; }}
 
-    /* 「何時該立刻就醫」：首頁急診區塊同款（NHS），不加動畫 */
-    .er-box {{ margin: 32px 0 8px; padding: 18px 20px 20px; border-radius: var(--r-card); background: var(--emergency); color: var(--accent-on); }}
-    .er-box h2 {{ margin: 0 0 8px; color: var(--accent-on); }}
-    .er-box h2::before {{ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z'/%3E%3Cpath d='M12 9v4'/%3E%3Cpath d='M12 17h.01'/%3E%3C/svg%3E"); width: 24px; height: 24px; }}
-    .er-box p, .er-box li {{ color: var(--accent-on); }}
-    .er-box ul {{ padding-left: 1.1em; }}
-    .er-box li::marker {{ color: var(--accent-on); }}
-    .er-box a {{ color: var(--accent-on); }}
-    .er-box table {{ border-color: rgba(255,255,255,0.4); }}
-    .er-box th {{ background: rgba(255,255,255,0.16); color: var(--accent-on); }}
-    .er-box td {{ border-top-color: rgba(255,255,255,0.25); }}
+    /* 「哪些情況建議請獸醫看看」：白卡加苔綠邊，語氣是建議，不用紅色、不用警示圖示 */
+    .er-box {{ margin: 32px 0 8px; padding: 18px 20px 20px; border: 1px solid var(--border-strong); border-left: 4px solid var(--primary); border-radius: var(--r-card); background: var(--bg-card); }}
+    .er-box h2 {{ margin: 0 0 8px; color: var(--primary-deep); }}
     .er-box p:last-child, .er-box ul:last-child, .er-box table:last-child {{ margin-bottom: 0; }}
 
     /* 「30 秒重點」：淺苔綠色塊 */
@@ -1021,7 +1013,7 @@ def build_articles() -> list[dict]:
             body_html,
             flags=re.S,
         )
-        # 固定兩節包成色塊：「何時該立刻就醫」用急診紅（同首頁急診區塊），「30 秒重點」用淺苔綠；範圍到下一個 h2 為止
+        # 固定兩節包成色塊：「哪些情況建議請獸醫看看」白卡苔綠邊，「30 秒重點」淺苔綠；範圍到下一個 h2 為止
         def _wrap_section(html: str, heading_re: str, cls: str) -> str:
             m = re.search(r'<h2\b[^>]*>\s*' + heading_re + r'\s*</h2>', html)
             if not m:
@@ -1029,7 +1021,7 @@ def build_articles() -> list[dict]:
             nxt = re.search(r'<h2\b', html[m.end():])
             end = m.end() + nxt.start() if nxt else len(html)
             return html[:m.start()] + f'<section class="{cls}">' + html[m.start():end].rstrip() + '</section>\n' + html[end:]
-        body_html = _wrap_section(body_html, r'(?:🚨\s*)?何時該立刻就醫', "er-box")
+        body_html = _wrap_section(body_html, r'(?:哪些情況建議請獸醫看看|何時該立刻就醫|何時需要就醫[？?]?)', "er-box")
         body_html = _wrap_section(body_html, r'30\s*秒重點', "key-box")
 
         # Auto-generate description from first <p> if not in front matter
@@ -1091,23 +1083,23 @@ def build_articles() -> list[dict]:
         if find_vet == "cat_only":
             find_vet_html = (
                 '<div class="find-vet-cta">'
-                '<span class="label">📍 需要找獸醫？</span>'
+                '<span class="label">需要找獸醫？</span>'
                 '<a href="../vets.html?cat=1">🐈 找台灣貓專科獸醫院 →</a>'
                 '</div>'
             )
         elif find_vet == "emergency":
             find_vet_html = (
                 '<div class="find-vet-cta">'
-                '<span class="label">🚨 緊急狀況？</span>'
-                '<a href="../vets.html?only24h=1&amp;near=1">找附近的 24h 急診動物醫院 →</a>'
+                '<span class="label">需要找獸醫？</span>'
+                '<a href="../vets.html?only24h=1&amp;near=1">查附近的 24 小時動物醫院</a>'
                 '</div>'
             )
         elif find_vet == "both":
             find_vet_html = (
                 '<div class="find-vet-cta">'
-                '<span class="label">📍 需要找獸醫？</span>'
-                '<a href="../vets.html?cat=1">🐈 貓專科 →</a>'
-                '<a href="../vets.html?only24h=1&amp;near=1">🚨 附近 24h 急診 →</a>'
+                '<span class="label">需要找獸醫？</span>'
+                '<a href="../vets.html?cat=1">查貓專科醫院</a>'
+                '<a href="../vets.html?only24h=1&amp;near=1">查附近 24 小時醫院</a>'
                 '</div>'
             )
 
@@ -1304,7 +1296,7 @@ def build_404():
     <li><a href="{base}/vets.html?only24h=1">找 24 小時急診動物醫院</a></li>
     <li><a href="{base}/library.html">學術文獻庫</a></li>
   </ul>
-  <p>緊急狀況請直接聯絡附近的動物醫院，不要在網站上等。</p>
+  <p>貓有狀況的話，建議直接聯絡附近的動物醫院。</p>
 </main>
 </body>
 </html>

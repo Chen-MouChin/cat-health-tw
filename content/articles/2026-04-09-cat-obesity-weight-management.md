@@ -22,7 +22,7 @@ related: [cat-hepatic-lipidosis, cat-diabetes-care, cat-neutering-aftercare-taiw
 
 過重是室內貓很常見的營養問題，也是飼主最能自己改變的風險因子。Cornell 貓健康中心把肥胖列為貓糖尿病最主要的風險因子[^CORNELL-DIABETES]，過重也會加重關節與泌尿系統的負擔。但貓的減重跟人或狗不一樣，熱量砍太兇、或貓因此不肯吃，反而會引發[脂肪肝](cat-hepatic-lipidosis.html)。這篇幫你做三件事：用手摸判斷貓是否過重、從目標體重算出每日熱量、知道減重期間什麼情況要停下來找獸醫。
 
-## 何時該立刻就醫
+## 哪些情況建議請獸醫看看
 
 減重期間出現以下任一情況，當天帶去看獸醫，不要等下一次量體重：
 
