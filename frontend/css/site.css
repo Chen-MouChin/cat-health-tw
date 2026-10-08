@@ -71,6 +71,12 @@ body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.75 var
 .tag-draft { background: var(--gold-pale); color: var(--draft-text); }
 .tag-quiet { background: var(--accent-light); color: var(--text-2); }
 
+/* 封面佔位圖：淺苔綠底、線條貓、分類名（真正的封面圖到位前先用這個） */
+.cover-ph { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; background: var(--primary-pale); color: var(--primary); }
+.cover-ph-cat { display: block; width: 64px; }
+.cover-ph-cat svg { display: block; width: 100%; height: auto; }
+.cover-ph-label { font-size: 14px; font-weight: 700; color: var(--primary-deep); letter-spacing: 0.08em; }
+
 /* 廣告位：AdSense 上線前先隱藏 */
 .ad { margin-top: 32px; }
 .ad-label { display: block; margin-bottom: 4px; font-size: 13px; letter-spacing: 0.1em; color: var(--text-muted); }

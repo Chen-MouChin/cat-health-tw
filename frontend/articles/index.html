@@ -28,6 +28,7 @@
     .article-card:hover h2 { text-decoration: underline; }
     .article-card-thumb { position: relative; aspect-ratio: 16 / 9; background: var(--primary-pale); overflow: hidden; }
     .article-card-thumb .thumb-emoji { display: none; }
+    .article-card-thumb.cover-ph { aspect-ratio: auto; height: 120px; }
     .article-card-thumb .thumb-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
     .article-card-body { display: flex; flex-direction: column; gap: 6px; padding: 14px 16px 16px; }
     .article-card .meta { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; font-size: 14px; color: var(--text-muted); }
@@ -85,7 +86,15 @@
         <div class="subcat-heading">常見疾病</div>
         <div class="article-list">
           <a class="article-card" href="cat-ckd-complete-guide.html" data-quality="reviewed">
-            <div class="article-card-thumb"><span class="thumb-emoji">❤️</span><img class="thumb-img" src="../images/articles/cat-ckd-complete-guide.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+            <div class="article-card-thumb cover-ph" aria-hidden="true"><span class="cover-ph-cat"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path class="cat-body" d="M12 36C12 36 10 26 15 22C19 18.8 24 21 28 22C32 23 37 20 40 23C42 25 41 33 36 36H12Z"/>
+      <path d="M14 23L12 16L18 19"/>
+      <path d="M22 19L27 16L26 22"/>
+      <path d="M40 26C43 23 45 16 41 13C38 10 35 15 37 19"/>
+      <circle cx="15.6" cy="26.3" r="1.15" fill="currentColor" stroke="none"/>
+      <circle cx="21.6" cy="26.3" r="1.15" fill="currentColor" stroke="none"/>
+      <path class="cat-nose" d="M17.5 28.2H19.7L18.6 29.7Z"/>
+    </svg></span><span class="cover-ph-label">健康</span></div>
             <div class="article-card-body">
               <div class="meta"><span class="subcat-pill">常見疾病</span><span class="tag tag-reviewed">已審核</span><span>2026-04-08</span></div>
               <h2>貓咪慢性腎病（CKD）：分期、飲食與居家照護</h2>
@@ -93,7 +102,15 @@
             </div>
           </a>
           <a class="article-card" href="cat-hyperthyroidism-senior.html" data-quality="reviewed">
-            <div class="article-card-thumb"><span class="thumb-emoji">❤️</span><img class="thumb-img" src="https://image.pollinations.ai/prompt/Senior%20cat%20at%20veterinary%20examination%2C%20thyroid%20health%20monitoring%2C%20elderly%20cat%20wellness%20check%2C%20professional%20vet%20with%20stethoscope%2C%20professional%20pet%20photography%2C%20soft%20natural%20bokeh%20lighting%2C%20photorealistic%20high%20quality%2C%204K%20sharp%20focus%2C%20warm%20tones?width=800&height=450&nologo=true&model=flux-schnell&seed=42" alt="" loading="lazy" onerror="this.remove()"></div>
+            <div class="article-card-thumb cover-ph" aria-hidden="true"><span class="cover-ph-cat"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path class="cat-body" d="M12 36C12 36 10 26 15 22C19 18.8 24 21 28 22C32 23 37 20 40 23C42 25 41 33 36 36H12Z"/>
+      <path d="M14 23L12 16L18 19"/>
+      <path d="M22 19L27 16L26 22"/>
+      <path d="M40 26C43 23 45 16 41 13C38 10 35 15 37 19"/>
+      <circle cx="15.6" cy="26.3" r="1.15" fill="currentColor" stroke="none"/>
+      <circle cx="21.6" cy="26.3" r="1.15" fill="currentColor" stroke="none"/>
+      <path class="cat-nose" d="M17.5 28.2H19.7L18.6 29.7Z"/>
+    </svg></span><span class="cover-ph-label">健康</span></div>
             <div class="article-card-body">
               <div class="meta"><span class="subcat-pill">常見疾病</span><span class="tag tag-reviewed">已審核</span><span>2026-04-08</span></div>
               <h2>甲狀腺亢進：症狀、診斷與四種治療的取捨</h2>

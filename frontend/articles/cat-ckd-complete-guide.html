@@ -64,7 +64,8 @@
     mark { background: var(--focus); padding: 0 2px; border-radius: 3px; }
     article h2[id], article h3[id] { scroll-margin-top: 1rem; }
     .article-hero { width: 100%; aspect-ratio: 16/9; max-height: 380px; object-fit: cover; border-radius: var(--r-card); margin: 18px 0 6px; display: block; background: var(--primary-pale); }
-    .article-hero[src=""], .article-hero:not([src]) { display: none; }
+    img.article-hero[src=""], img.article-hero:not([src]) { display: none; }
+    .article-hero.cover-ph { display: flex; aspect-ratio: auto; height: 140px; margin-bottom: 18px; }
 
     /* 「哪些情況建議請獸醫看看」：白卡加苔綠邊，語氣是建議，不用紅色、不用警示圖示 */
     .er-box { margin: 32px 0 8px; padding: 18px 20px 20px; border: 1px solid var(--border-strong); border-left: 4px solid var(--primary); border-radius: var(--r-card); background: var(--bg-card); }
@@ -163,7 +164,15 @@
       <span>✅ 審核 2026-09-09</span>
     </div>
 
-    <img class="article-hero" src="../images/articles/cat-ckd-complete-guide.jpg" alt="貓咪慢性腎病（CKD）：分期、飲食與居家照護" loading="lazy" onerror="this.style.display='none'">
+    <div class="article-hero cover-ph" aria-hidden="true"><span class="cover-ph-cat"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path class="cat-body" d="M12 36C12 36 10 26 15 22C19 18.8 24 21 28 22C32 23 37 20 40 23C42 25 41 33 36 36H12Z"/>
+      <path d="M14 23L12 16L18 19"/>
+      <path d="M22 19L27 16L26 22"/>
+      <path d="M40 26C43 23 45 16 41 13C38 10 35 15 37 19"/>
+      <circle cx="15.6" cy="26.3" r="1.15" fill="currentColor" stroke="none"/>
+      <circle cx="21.6" cy="26.3" r="1.15" fill="currentColor" stroke="none"/>
+      <path class="cat-nose" d="M17.5 28.2H19.7L18.6 29.7Z"/>
+    </svg></span><span class="cover-ph-label">健康</span></div>
 
 
 
