@@ -1,61 +1,47 @@
-# 審核工作檯 (Workbench)
+# 審核工作檯
 
-給人工審核用的單頁後台。採用 Python 標準庫伺服器 + Vue 3 (CDN)，不需要 npm，改完 `index.html` 重新整理即可。
+給人工審核用的單頁後台。Python 標準庫伺服器加 Vue 3（CDN），不需要 npm；改完 `index.html` 重新整理就生效。
 
-## 啟動方式
+## 啟動
 
 ```bash
-python workbench/server.py          # 預設綁定 0.0.0.0:8010，支援同區網連入
+python workbench/server.py                 # http://127.0.0.1:8010/，只給本機
 python workbench/server.py --port 9000
-python workbench/server.py --host 127.0.0.1  # 限制僅本機存取
+python workbench/server.py --host 0.0.0.0  # 開給同區網的手機或同事；寫入 API 也會一起開，用完就關
 ```
 
-啟動後，本機可以透過 `http://127.0.0.1:8010/` 存取；同網路（區網）內的其他電腦或手機可以透過這台電腦的 IP 連入，例如 `http://192.168.x.x:8010/`。
+## 審核流程
 
----
+1. **儀表板**先看三個數字：核心 10 篇審了幾篇、全站 reviewed 幾篇、上線 blocker（已審文章引用但還沒 approved 的文獻）有幾筆。blocker 可以直接點進文獻核對。
+2. **文章審核**：左側清單預設「未審優先」，核心文章標「核心」，title 與 H1 不一致的標「≠H1」。選一篇後右欄最上面是「這篇要注意什麼」，內容來自 `research/review-batch-*.md`：AI 改稿時刪掉的數字、需要人判斷的點。中間是渲染後的文章，草稿從 `build/drafts/` 讀，和上線版同一個模板。
+3. 看完按 `r` 兩次通過（防誤觸）、`d` 退回並留備註、`x` 淘汰、`n`/`p` 上下篇。任何一種都會自動重建，不用再跑建置。
+4. **文獻核對**：被引用的文獻先打開原文，核對摘要有沒有寫錯，勾「url 已驗證」才能 approve。沒勾的 approve 按鈕是灰的，後端也會擋。
+5. **建置與發佈**：commit（先 fetch，落後就 rebase，不 stash；衝突會停下來交給人）、push（只推到 GitHub）、**部署到 Pages**（這才是上線，跑 GitHub Actions，約 1 到 2 分鐘）。卡片會顯示本機、遠端、線上三個 commit 短碼，哪一段還沒推一眼看得出來。
 
-## 👨‍⚕️ 審核人員使用手冊 (Reviewer Guide)
+## 編輯內文
 
-此工具專為確保文章內容準確性與文獻合規性所設計。
+文章審核頁右上「編輯內文」可以直接改 Markdown。儲存時先跑 lint，有 FAIL 不會存、會列出哪裡錯；過了才 build。
 
-### 核心工作流程
-1. **開啟「文章審核」分頁**：在左側列表選擇一篇待審核的 `draft` 文章。
-2. **對照文獻**：文章渲染畫面右側會列出所有引用的文獻，請確保每一個引用都有提供真實可查的原文連結。
-3. **查核文獻庫**：若有新的文獻，請至「文獻核對」分頁核對文獻的中文標題、摘要，並按下 approve。
-4. **通過審核**：確認無誤後，於文章審核頁按下快捷鍵 `r` (Review 通過)，系統會自動標記 `quality: reviewed`。
-5. **發佈與上線**：前往「建置與發佈」分頁，依序點擊重建、Lint (確保無錯誤)、Commit (提交更動)、Push (推送至 GitHub)，數分鐘後正式網站即會更新。
+## 技術
 
-### 快捷鍵說明 (文章審核頁)
-- `r`：通過 (Reviewed)
-- `f`：設為精選 (Featured)
-- `d`：退回草稿 (Draft)
-- `x`：淘汰並移至封存 (Archived)
-- `n` / `p`：切換至下/上一篇
+- 後端 `server.py`：`ThreadingHTTPServer`。讀寫 `content/articles/*.md` 的 frontmatter（quality、last_reviewed、review_notes）、`content/references/citations.json`；透過 subprocess 跑 `build.py`、`scripts/sync_cited_by.py`、`scripts/lint_articles.py`、`scrapers/literature/verify_citation.py`、git、gh。
+- 前端 `index.html`：Vue 3 單檔，沒有其他框架。
+- `/site/` 只能讀 `frontend/`；`/site/articles/` 找不到的草稿從 `build/drafts/articles/` 補。
+- 所有 POST 要帶 `X-Workbench: 1` 標頭，擋跨站表單。
+- 部署用 gh CLI，第一次要在終端機 `gh auth login`。沒裝的話 winget 的預設位置 `C:\Program Files\GitHub CLI\gh.exe` 也會找。
+- commit 訊息自動加 `Co-Authored-By: Claude`。
 
----
+## API
 
-## 💻 開發人員使用手冊 (Developer Guide)
-
-本工具為純本地端伺服器，直接讀寫檔案與執行系統指令，無使用者權限管理。
-
-### 技術架構
-- **後端**：`server.py` 使用 Python 內建的 `ThreadingHTTPServer`。
-- **前端**：`index.html` 內嵌 Vue 3 (CDN)、Bootstrap (CDN)，無需編譯打包。
-- **依賴腳本**：
-  - `scripts/lint_articles.py`：使用其中的 `lint_one` 進行格式與規範檢查。
-  - `build.py`、`scripts/sync_cited_by.py`、`scrapers/literature/verify_citation.py`：透過 `subprocess` 呼叫執行。
-
-### 安全與網路機制
-- **X-Workbench 標頭**：所有的 POST 請求都必須夾帶 `X-Workbench: 1`，用以防止瀏覽器跨站請求偽造 (CSRF) 攻擊。
-- **Git 保護**：在 commit 之前會自動執行 `git fetch`，若落後遠端則 `pull --rebase`；若遇到衝突將自動中止並復原，確保不產生難以挽回的狀態。
-- **預設公開綁定**：預設綁定 `0.0.0.0` 允許同網域存取。若要限制存取，建議使用 `--host 127.0.0.1`。
-- **靜態檔服務**：`/site/` 路徑會被正規化並嚴格限制只能讀取 `frontend/` 目錄下的檔案，避免路徑穿越攻擊 (Path Traversal)。
-
-### 四個主要分頁與對應修改目標
-
-| 分頁 | 系統操作 | 讀寫目標 |
+| 方法 | 路徑 | 做什麼 |
 |---|---|---|
-| **儀表板** | 統計 reviewed 篇數、lint FAIL、文獻 approved 等狀態。 | 唯讀 |
-| **文章審核** | 渲染文章內容，提供審核狀態修改介面。 | 修改 `content/articles/*.md` 內的 `quality`、`last_reviewed`、`review_notes`；淘汰的文章會被搬移至 `_archived/`。 |
-| **文獻核對** | 編輯文獻內容、呼叫 `verify_citation.py` 驗證連結。 | 修改 `content/references/citations.json` |
-| **建置與發佈** | 執行外部腳本進行 build、lint、git commit 與 push。 | 寫入 `frontend/`，並執行 Git 指令。 |
+| GET | `/api/overview` | 統計、blocker、git 狀態 |
+| GET | `/api/articles` | 清單（含 core、has_notes、title_h1_mismatch） |
+| GET | `/api/articles/<slug>` | 單篇：frontmatter、lint、引用文獻與上下文、改稿備註 |
+| GET/POST | `/api/articles/<slug>/raw` | 讀寫 Markdown 原文；POST 先 lint |
+| POST | `/api/articles/<slug>/quality` | 改 quality，順手 build |
+| GET/POST | `/api/citations[/<key>]` | 文獻清單與修改；approve 需 url_verified |
+| POST | `/api/verify/<key>` | 跑 verify_citation.py |
+| POST | `/api/build`、`/api/lint` | 重建、全站 lint |
+| GET | `/api/git`、POST `/api/git/commit`、`/api/git/push` | git |
+| GET | `/api/deploy/status`、POST `/api/deploy` | 部署狀態、觸發部署 |
