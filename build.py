@@ -552,10 +552,10 @@ ARTICLE_TEMPLATE = """\
     .draft-warning {{ display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; margin: 16px 0 0; padding: 12px 16px; border-radius: 12px; background: var(--gold-pale); color: var(--text-2); font-size: 15px; line-height: 1.6; }}
     .draft-warning .lbl {{ padding: 0 8px; border-radius: 6px; background: var(--gold-pale-deep); color: var(--draft-text); font-size: 13px; font-weight: 700; line-height: 1.7; }}
     .disclaimer {{ margin: 28px 0 0; font-size: 14px; line-height: 1.6; color: var(--text-muted); }}
-    .find-vet-cta {{ display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; margin: 32px 0 0; padding: 18px 20px; border-radius: var(--r-card); background: var(--emergency-pale); }}
-    .find-vet-cta .label {{ font-weight: 700; color: var(--emergency-deep); }}
-    .find-vet-cta a {{ display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border-radius: var(--r-pill); background: var(--emergency); color: var(--accent-on); font-weight: 700; text-decoration: none; box-shadow: 0 2px 0 var(--emergency-deep); }}
-    .find-vet-cta a:hover {{ background: var(--emergency-deep); color: var(--accent-on); }}
+    .find-vet-cta {{ display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; margin: 32px 0 0; padding: 18px 20px; border-radius: var(--r-card); background: var(--primary-pale); }}
+    .find-vet-cta .label {{ font-weight: 700; color: var(--primary-deep); }}
+    .find-vet-cta a {{ display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border-radius: var(--r-pill); background: var(--primary); color: var(--accent-on); font-weight: 700; text-decoration: none; box-shadow: 0 2px 0 var(--primary-deep); }}
+    .find-vet-cta a:hover {{ background: var(--primary-deep); color: var(--accent-on); }}
     .find-vet-cta a:active {{ transform: translateY(2px); box-shadow: none; }}
     .related-box {{ margin: 32px 0 0; }}
     .related-box h3 {{ display: flex; align-items: center; gap: 10px; margin: 0 0 10px; font-size: 20px; color: var(--text); }}
@@ -1084,7 +1084,7 @@ def build_articles() -> list[dict]:
             find_vet_html = (
                 '<div class="find-vet-cta">'
                 '<span class="label">需要找獸醫？</span>'
-                '<a href="../vets.html?cat=1">🐈 找台灣貓專科獸醫院 →</a>'
+                '<a href="../vets.html?cat=1">查貓專科醫院</a>'
                 '</div>'
             )
         elif find_vet == "emergency":
