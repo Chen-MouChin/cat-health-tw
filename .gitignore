@@ -20,3 +20,6 @@ Thumbs.db
 
 # 內部檢核/研究筆記（不公開）
 research/
+
+# 本機試驗沙盒（不公開、不追蹤）
+sandbox/

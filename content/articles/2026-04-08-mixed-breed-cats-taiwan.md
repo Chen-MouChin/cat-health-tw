@@ -9,7 +9,9 @@ sources:
   - 農業部 — 110年度全國家犬貓數量調查: https://animal.moa.gov.tw/Frontend/Know/Detail/LT00000664?parentID=Tab0000004
   - EDH 寵物雲 — 米克斯貓簡介: https://pets.edh.tw/blog/mixed-breed-cat
 created: 2026-04-08
+date: 2026-04-08
 cover_image: https://image.pollinations.ai/prompt/Adorable%20mixed%20breed%20domestic%20shorthair%20cat%2C%20orange%20tabby%20street%20cat%2C%20affectionate%20and%20curious%2C%20Taiwan%20cityscape%20background%2C%20professional%20pet%20photography%2C%20soft%20natural%20bokeh%20lighting%2C%20photorealistic%20high%20quality%2C%204K%20sharp%20focus%2C%20warm%20tones?width=800&height=450&nologo=true&model=flux-schnell&seed=42
+description: "台灣米克斯貓的常見花色與遺傳事實、花色與個性的科學證據、領養管道與健康檢查清單，並比較米克斯與純種貓的差異。"
 quality: draft
 last_reviewed: null
 ---
@@ -21,11 +23,11 @@ last_reviewed: null
 
 ## 台灣有多少隻貓？米克斯佔多少？
 
-根據農業部調查：
+根據農業部調查[^MOA-PET-POPULATION-2021]：
 - **2021 年全台家貓總數：約 87 萬隻**（市話電訪推估，實際數量可能更高）
 - **2021 年起**，每年新登記的貓隻數量首度超越狗
 - **家貓絕育率：82.8%**（台灣飼主絕育觀念相對成熟）
-- **晶片登記率：58.4%**，2025 年起貓咪納入強制登記
+- **晶片登記率：58.4%**（調查當時貓尚未強制登記。2025 年 1 月起貓納入應登記寵物，2026 年 1 月起未登記可罰[^MOA-CAT-REGISTRATION-2024]）
 
 官方統計未區分純種貓與米克斯，但根據台灣收容所入籍數量推估，**約 70-80% 的台灣家貓為米克斯**（此為間接推估，無精確普查數字）。
 
@@ -37,7 +39,7 @@ last_reviewed: null
 
 **和純種貓的核心差異：**
 
-| | 米克斯 | 純種貓 |
+| 否 | 米克斯 | 純種貓 |
 |--|-------|-------|
 | 遺傳多樣性 | 高（雜交優勢）| 低（近親選育）|
 | 遺傳性疾病風險 | 較低 | 較高（品種特有病症）|
@@ -107,14 +109,14 @@ last_reviewed: null
 
 ## 米克斯的基因多樣性
 
-混種動物因基因庫較廣，**特定品種的遺傳病**（如 HCM、PKD、PRA-rdAc）發生率通常低於純種貓 — 這是繁殖機制差異的結果，不是「米克斯一定健康」。
+混種動物因基因庫較廣，**特定品種的遺傳病**（如 HCM、PKD、PRA-rdAc）發生率通常低於純種貓，這是繁殖機制差異的結果，不是「米克斯一定健康」。
 
 **仍會發生的疾病**：
 - 不分品種的常見病（牙周病、CKD 慢性腎病、甲亢）
 - FIV / FeLV 等傳染病
 - 隨年齡增加的腫瘤
 
-「雜交優勢（hybrid vigor）」一詞常被用於形容此現象，但學術定義較嚴格 — 飼養米克斯仍需完整年度健檢與預防醫療。
+「雜交優勢（hybrid vigor）」一詞常被用於形容此現象，但學術定義較嚴格，飼養米克斯仍需完整年度健檢與預防醫療。
 
 ---
 
@@ -151,46 +153,15 @@ last_reviewed: null
 | 品種特異遺傳病 | 較低 | 較高（部分品種有專屬基因病） |
 | 個性預測性 | 個體差異主導 | 品種傾向有參考性，仍非絕對 |
 | 等待期 | 多數可立即領養 | 熱門品種可能需排等 |
-| 台灣收容狀況 | 每年約 2-3 萬隻貓進入收容所 | — |
+| 台灣收容狀況 | 每年約 2-3 萬隻貓進入收容所 |，|
 
 詳細認養 vs 購買的倫理考量見 [should-i-adopt-cat-decision-taiwan.html](should-i-adopt-cat-decision-taiwan.html)。
 
 ---
 
-> 📌 **資料來源**
-> - 農業部 — [全國家犬貓飼養數量最新推估結果](https://www.moa.gov.tw/theme_data.php?theme=news&sub_theme=agri&id=9418)
-> - 農業部動物保護資訊網 — [110年度全國家犬貓數量調查](https://animal.moa.gov.tw/Frontend/Know/Detail/LT00000664?parentID=Tab0000004)
-> - EDH 寵物雲 — [米克斯貓簡介](https://pets.edh.tw/blog/mixed-breed-cat)
+> **資料來源**
+> - 農業部，[全國家犬貓飼養數量最新推估結果](https://www.moa.gov.tw/theme_data.php?theme=news&sub_theme=agri&id=9418)
+> - 農業部動物保護資訊網，[110年度全國家犬貓數量調查](https://animal.moa.gov.tw/Frontend/Know/Detail/LT00000664?parentID=Tab0000004)
+> - EDH 寵物雲，[米克斯貓簡介](https://pets.edh.tw/blog/mixed-breed-cat)
 >
 > **免責聲明：** 本文提供一般資訊，不取代獸醫師專業診斷。
-
-<!--
-🔗 改寫參考連結（AI 為你備好，改完後請刪除本註解整塊）
-
-== 台灣統計 / 官方 ==
-- 農業部動保資訊網 — 全國家犬貓數量調查
-  https://animal.moa.gov.tw/
-- 農業部寵物登記管理資訊網
-  https://www.pet.gov.tw/
-- 台灣動物緊急救援小組
-  https://www.tacs.tw/
-
-== 台灣領養平台 ==
-- 毛孩子—領養配對平台
-  https://www.meethepets.com/
-- 動物之家全國名單
-  https://animal.moa.gov.tw/Frontend/Know/Detail/LT00001140
-
-== 米克斯基礎知識 ==
-- Wikipedia: Domestic short-haired cat
-  https://en.wikipedia.org/wiki/Domestic_short-haired_cat
-- Wikipedia: Tortoiseshell cat（玳瑁花色遺傳）
-  https://en.wikipedia.org/wiki/Tortoiseshell_cat
-- Wikipedia: Tabby cat
-  https://en.wikipedia.org/wiki/Tabby_cat
-
-== 橘貓、三花、賓士花色個性（網路印象 vs 研究） ==
-- Delgado et al. 2012 飼主問卷（個性與毛色關聯研究）
-  https://www.appliedanimalbehaviour.com/article/S0168-1591(12)00275-4/abstract
-- 這類研究多為飼主主觀印象，並非定論 — 引用時請標明
--->

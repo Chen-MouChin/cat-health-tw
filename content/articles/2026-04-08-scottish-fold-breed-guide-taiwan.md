@@ -15,19 +15,19 @@ last_reviewed: null
 ---
 # 蘇格蘭折耳貓：可愛外表背後的基因疾病問題
 
-⚠️ **重要警示**：本文包含台灣養貓社群中常被忽略的重要醫學資訊。蘇格蘭折耳貓的折耳不是「自然的多樣性」，而是一種會導致慢性疼痛的遺傳缺陷。
+ **重要警示**：本文包含台灣養貓社群中常被忽略的重要醫學資訊。蘇格蘭折耳貓的折耳不是「自然的多樣性」，而是一種會導致慢性疼痛的遺傳缺陷。
 
 ## 折耳的原因：Fd 基因突變
 
-蘇格蘭折耳貓的標誌性折耳，是由 **Fd（Folded）基因突變**造成的軟骨發育缺陷。這個基因同時影響全身的軟骨組織，不只是耳朵。
+蘇格蘭折耳貓的標誌性折耳，是由 **Fd（Folded）基因突變**造成的軟骨發育缺陷；2016 年的研究確認這個突變位於 TRPV4 基因[^GANDOLFI-2016-TRPV4]。這個基因同時影響全身的軟骨組織，不只是耳朵。
 
 **關鍵事實**：
 - Fd/Fd（純合子，雙份折耳基因）= 嚴重骨軟骨發育不全，早期出現明顯疼痛
 - Fd/fd（雜合子，一份折耳基因，即所有現售折耳貓的情況）= 程度不等的骨軟骨疾病，多數在成年後出現症狀
 
-**這意味著：所有折耳貓（折耳個體）都攜帶這個基因，都有發展出骨軟骨疾病的風險。**
+**也就是說，所有折耳個體都帶有這個基因，也都有發展出骨軟骨疾病的風險。**
 
-## 骨軟骨發育不全（Osteochondrodysplasia，OCD）
+## 骨軟骨發育不全（Osteochondrodysplasia：OCD）
 
 這不是「如果」，而是「什麼時候」和「嚴重程度」的問題：
 
@@ -45,9 +45,7 @@ last_reviewed: null
 
 多個主要獸醫組織明確反對繁育蘇格蘭折耳貓：
 
-> **International Cat Care（ICC）**：「我們不支持蘇格蘭折耳的繁育，因為這個品種的遺傳問題會導致慢性疼痛和苦難。」
-
-> **ISFM**：建議停止繁殖折耳表現型，以防止動物受苦。
+International Cat Care 明確表示不支持繁育蘇格蘭折耳貓，理由是此品種的遺傳問題會造成慢性疼痛。ISFM 同樣建議停止繁殖折耳表現型，以避免動物受苦。
 
 部分國家（如德國）已立法禁止繁育折耳貓。
 
@@ -55,9 +53,9 @@ last_reviewed: null
 
 儘管有明確的科學和倫理問題，折耳貓在台灣的需求仍然很高，網路上隨處可見折耳貓的銷售廣告。這是一個動物福利和市場需求之間的真實衝突。
 
-## 我已經有一隻折耳貓，怎麼辦？
+## 我已經有一隻折耳貓：怎麼辦？
 
-若你已經擁有一隻折耳貓，這不是要你愧疚——而是要你成為一個**對這隻貓負責的飼主**。
+若你已經擁有一隻折耳貓，這不是要你愧疚，而是要你成為一個**對這隻貓負責的飼主**。
 
 ### 主動監測
 
@@ -80,42 +78,14 @@ last_reviewed: null
 
 ### 不要繁殖
 
-若你的折耳貓是母貓，**請不要讓牠繁育**——無論配對對象是否為折耳，幼貓仍然會帶有 Fd 基因。
+若你的折耳貓是母貓，**請不要讓牠繁育**，無論配對對象是否為折耳，幼貓仍然會帶有 Fd 基因。
 
 ---
 
 ## 選購時的建議
 
-若你正在考慮購買折耳貓，我們的建議是：考慮蘇格蘭直耳貓（Scottish Straight）——同樣的圓臉體型、溫和個性，但沒有折耳基因帶來的骨軟骨問題。
+若你正在考慮購買折耳貓，我們的建議是：考慮蘇格蘭直耳貓（Scottish Straight），同樣的圓臉體型、溫和個性，但沒有折耳基因帶來的骨軟骨問題。
 
 或者，考慮認養需要家庭的成年貓咪。
 
 > **免責聲明**：本文僅供參考，不構成獸醫診療建議。如有健康疑慮，請諮詢專業獸醫師。
-
-<!--
-🔗 改寫參考連結（AI 為你備好，改完後請刪除本註解整塊）
-
-== 官方獸醫協會立場（勸退依據）==
-- British Veterinary Association (BVA) — Scottish Fold stop breeding statement
-  https://www.bva.co.uk/news-and-blog/news-article/bva-urges-breeders-to-stop-breeding-scottish-folds/
-- International Cat Care (ISFM) — Scottish Fold position
-  https://icatcare.org/advice/scottish-fold/
-
-== 基因與骨科疾病 ==
-- Wikipedia: Scottish Fold + osteochondrodysplasia 段落
-  https://en.wikipedia.org/wiki/Scottish_Fold
-- Gandolfi et al. 2016, 〈A dominant TRPV4 variant underlies osteochondrodysplasia in Scottish fold cats〉
-  PubMed: https://pubmed.ncbi.nlm.nih.gov/26911261/
-  開放取用：https://www.sciencedirect.com/science/article/pii/S1063458416000728
-
-== 台灣現況 ==
-- 農業部寵物登記系統（看摺耳登記數量）
-  https://www.pet.gov.tw/
-- 台灣獸醫師公會 — 若有官方立場可查
-  https://www.vet.org.tw/
-
-== 核心訊息提醒 ==
-1. 所有摺耳貓都會發病（有些嚴重、有些輕微，都會）
-2. 無法用 DNA 檢測排除
-3. 建議停止購買 / 繁殖，現有的認養照顧好
--->

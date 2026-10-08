@@ -3,20 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>貓咪慢性腎病（CKD）完整指南：分期、飲食管理與日常照護 — 貓健康站</title>
-  <meta name="description" content="貓咪 CKD 是老貓最常見的疾病之一，IRIS 2023 分期指引、低磷飲食策略、水分補充方法，讓你陪貓咪走好每一步。">
-  <meta property="og:title" content="貓咪慢性腎病（CKD）完整指南：分期、飲食管理與日常照護">
-  <meta property="og:description" content="貓咪 CKD 是老貓最常見的疾病之一，IRIS 2023 分期指引、低磷飲食策略、水分補充方法，讓你陪貓咪走好每一步。">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+  <link rel="apple-touch-icon" href="../favicon-180.png">
+  <meta property="og:image" content="https://chen-mouchin.github.io/cat-health-tw/images/og-default.png">
+  <title>貓咪慢性腎病（CKD）：分期、飲食與居家照護 — 貓健康站</title>
+  <meta name="description" content="十歲以上的貓有三到四成罹患慢性腎病。這篇說明 IRIS 2023 分期怎麼看、哪些症狀該立刻就醫、低磷飲食與補水為什麼是最有證據的居家措施，以及回診要追蹤什麼。">
+  <meta property="og:title" content="貓咪慢性腎病（CKD）：分期、飲食與居家照護">
+  <meta property="og:description" content="十歲以上的貓有三到四成罹患慢性腎病。這篇說明 IRIS 2023 分期怎麼看、哪些症狀該立刻就醫、低磷飲食與補水為什麼是最有證據的居家措施，以及回診要追蹤什麼。">
   <meta property="og:type" content="article">
   <link rel="canonical" href="https://chen-mouchin.github.io/cat-health-tw/articles/cat-ckd-complete-guide.html">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "\u8c93\u54aa\u6162\u6027\u814e\u75c5\uff08CKD\uff09\u5b8c\u6574\u6307\u5357\uff1a\u5206\u671f\u3001\u98f2\u98df\u7ba1\u7406\u8207\u65e5\u5e38\u7167\u8b77",
+    "headline": "\u8c93\u54aa\u6162\u6027\u814e\u75c5\uff08CKD\uff09\uff1a\u5206\u671f\u3001\u98f2\u98df\u8207\u5c45\u5bb6\u7167\u8b77",
     "datePublished": "2026-04-08",
-    "author": {"@type": "Organization", "name": "貓健康站"},
-    "publisher": {"@type": "Organization", "name": "貓健康站", "url": "https://chen-mouchin.github.io/cat-health-tw"}
+    "author": {"@type": "Person", "name": "Chen-MouChin", "url": "https://github.com/Chen-MouChin"},
+    "publisher": {"@type": "Organization", "name": "貓健康站", "url": "https://chen-mouchin.github.io/cat-health-tw", "publishingPrinciples": "https://chen-mouchin.github.io/cat-health-tw/editorial.html"}
   }
   </script>
   <link rel="stylesheet" href="../css/ads.css">
@@ -66,6 +70,18 @@
       margin-top: 2rem; font-size: 0.85rem; color: var(--text-muted, #666);
     }
     .sources-box h3 { color: var(--text-muted, #555); margin-bottom: 0.5rem; font-size: 0.9rem; }
+    /* 句內註腳與參考文獻 */
+    sup.fn { font-size: 0.7em; line-height: 0; vertical-align: super; margin-left: 1px; }
+    sup.fn a { color: var(--accent, #1d1d1f); text-decoration: none; padding: 0 2px; border-radius: 3px; background: var(--accent-light, #f0f0f3); }
+    sup.fn a:hover { background: var(--accent, #1d1d1f); color: var(--accent-on, #fff); }
+    .references ol { margin: 0.4rem 0 0 1.4rem; padding: 0; }
+    .references li { margin: 0.45rem 0; line-height: 1.5; }
+    .references .ref-title { color: var(--text, #333); font-weight: 600; text-decoration: none; }
+    .references .ref-title:hover { text-decoration: underline; }
+    .references .ref-url { font-size: 0.8em; margin-left: 0.4rem; color: var(--text-muted, #888); }
+    .references .ref-en { font-size: 0.85em; color: var(--text-muted, #777); }
+    .references .ref-meta { font-size: 0.8em; color: var(--text-faint, #999); }
+    .references .ref-hint { margin-top: 0.6rem; font-size: 0.78em; color: var(--text-faint, #aaa); }
     .disclaimer {
       background: #fff8e1; border-left: 4px solid #ffc107;
       padding: 0.6rem 1rem; margin: 1.5rem 0; font-size: 0.88rem; color: #555;
@@ -175,7 +191,7 @@
 </head>
 <body>
   <nav class="site-nav">
-    <a class="nav-brand" href="../index.html" title="回首頁"><span class="b-icon">🐱</span><span class="brand-text">貓健康站</span><span class="brand-home" aria-hidden="true">🏠</span></a>
+    <a class="nav-brand" href="../index.html" title="回首頁"><svg class="brand-logo" viewBox="0 0 180 47" aria-label="貓健康站" role="img"><g transform="translate(0,15.2) scale(0.750)" fill="currentColor"><path d="M4 20 V2 L14 10 Z"/><path d="M36 20 V2 L26 10 Z"/><circle cx="13" cy="18" r="2.2"/><circle cx="27" cy="18" r="2.2"/></g><g transform="translate(40.0,0) scale(0.340)"><path fill="currentColor" d="M79.79 93.26 65.04 93.46 49.61 93.65 48.24 93.75H41.21L40.72 64.45L40.82 45.31L45.21 44.73V44.63H46.00L46.48 44.53L48.83 44.43L61.13 43.95H81.25L89.16 44.73L91.89 46.78L92.48 64.84L92.29 85.94L91.89 93.75H85.74ZM59.08 65.43 58.79 57.91 54.59 58.01V60.35L54.69 65.53ZM71.78 65.23 77.05 65.33 76.95 57.91H71.88ZM59.08 82.71V76.95L54.98 77.15L55.08 82.71H58.40ZM71.97 82.62H76.95L77.15 77.54V76.86H71.88ZM17.58 85.45 24.41 85.16 25.68 81.35 20.21 84.28ZM68.85 9.96 76.37 9.67 83.98 10.55 83.79 19.63 92.68 19.92V27.25L91.80 33.30L83.01 32.91L82.91 35.25L82.52 41.50L73.24 41.02L68.85 40.43L68.95 32.62L60.06 32.81L60.45 40.33L51.56 41.11L46.97 41.41L46.29 33.30L40.62 33.59L39.75 27.54L39.65 20.61L45.41 20.31L45.02 12.30L52.83 10.84L58.89 10.94L59.38 19.73L69.14 19.34V16.50ZM32.62 8.89 36.23 13.38 39.26 20.21 32.81 23.14 22.17 27.25 7.71 31.84 5.86 27.44 4.79 20.02 15.04 17.09 23.73 13.67ZM6.15 35.94 10.64 32.91 15.72 30.66 18.16 35.45 20.61 41.11 16.41 43.46 11.82 45.70 9.47 41.80ZM19.24 30.96 24.71 27.15 29.49 25.29 32.23 29.98 34.18 34.08 36.72 31.74 41.11 36.43 44.53 42.77 37.21 47.17 33.20 49.22 37.01 56.54 40.14 70.51 38.87 84.77 36.43 91.41 32.23 94.73 24.51 95.12 19.14 94.24 18.55 89.45 16.80 85.74 10.74 88.38 8.79 85.35 7.13 78.42 16.31 74.51 23.05 70.80 26.17 68.36 25.68 66.41 19.92 69.63 11.82 73.14 10.06 70.70 7.71 63.57 19.53 58.20 22.17 56.45 21.29 54.69 19.53 55.47 10.35 58.69 8.20 54.98 6.15 47.85 13.96 45.51 25.59 40.23 30.18 37.30 29.30 37.70 24.22 39.16 21.48 34.47ZM134.08 77.73 129.88 75.20 129.78 83.20ZM153.12 68.36 150.97 73.05 153.80 74.51ZM177.44 28.12H180.95L180.86 25.49L177.54 25.29ZM177.44 41.02 180.76 41.21 180.86 38.28H177.44ZM165.13 75.29 156.54 75.49 165.13 78.22ZM136.62 44.53 138.96 38.67 136.52 38.38 132.22 38.57 131.44 33.01 128.80 40.92 126.36 46.58 130.66 48.05 130.07 62.40 129.98 68.46 134.57 62.79 140.04 66.60 141.99 61.23 139.35 60.74 135.25 60.35 134.27 55.18 133.88 49.51ZM164.35 7.71 173.73 7.62 178.12 8.69 177.93 13.87H185.64L191.99 14.55L194.33 17.09L194.23 28.32L199.61 28.42V35.45L198.73 39.06L194.04 38.87L193.16 50.78H187.40L185.93 50.59L177.44 50.29L177.54 52.64L191.89 53.12L191.99 59.18L191.30 63.18L185.05 62.60L177.63 62.50V65.14L189.55 65.33L197.16 65.82V71.78L196.38 76.46L186.52 75.49L177.73 75.20L177.83 79.20L171.09 79.00L165.72 78.42L167.38 78.91L181.44 80.86L195.60 81.45L195.21 89.06L194.14 94.43L176.56 92.77L164.35 90.53L151.17 86.72L145.11 83.89L142.77 87.79L137.59 94.24L131.93 89.84L129.78 86.72L129.88 94.53H122.85L117.38 93.75L117.77 72.56V65.72L115.52 70.31L109.57 66.21L105.66 61.23L111.03 50.49L116.60 35.84L120.50 22.75L123.34 9.86L132.61 12.01L137.59 14.94L134.18 25.20L142.87 25.00L148.82 25.49L151.17 31.64L152.05 38.28L150.48 42.87L146.97 49.22L151.07 49.41L153.61 50.29L155.17 56.25L155.46 61.33L154.39 65.62L165.23 65.23V62.50L157.91 62.79L156.93 58.30L157.22 52.93L165.23 52.73V50.29L155.27 50.49L154.59 46.78L154.68 41.21L165.04 41.11V38.28L153.61 38.38L152.83 32.71L153.02 28.12L164.94 28.03L164.84 25.39L155.37 25.49L154.49 21.00L154.39 14.16L164.55 13.96ZM271.09 42.87Q275.58 42.87 279.97 42.77Q280.07 41.41 280.17 40.14Q275.68 39.94 271.18 39.75Q271.09 40.62 271.09 41.50ZM271.18 54.10H279.58Q279.58 52.73 279.68 51.37Q279.29 51.37 278.80 51.37Q274.99 51.46 271.09 51.46Q271.18 52.83 271.18 54.10ZM271.28 70.02 279.29 66.99 286.12 64.06 287.79 63.09H286.42H279.29V62.60L271.28 62.70H271.18ZM273.53 73.34 271.28 70.31V72.75ZM255.36 6.35 266.40 8.40 270.79 9.08 270.50 15.14Q275.58 15.23 280.66 15.33H299.31L299.11 22.17L298.43 27.64L277.34 26.66L262.10 26.37L266.01 27.54L272.06 28.52Q271.96 29.88 271.87 31.15H280.46L292.47 32.13L294.91 34.28L294.62 43.16L302.82 43.36L302.14 48.05L301.95 52.05L294.33 51.86L293.64 63.09H290.91L293.06 66.60L296.96 71.58L291.50 74.22L287.30 75.78Q286.22 76.07 285.15 76.46L294.04 80.66L301.85 84.28L298.53 89.94L295.79 94.73L288.86 90.53L280.56 86.43L271.48 83.20Q271.57 87.01 271.67 90.92L270.11 92.97L265.03 94.82L255.07 95.21L253.31 91.02L251.26 87.21L254.88 86.91L257.61 86.23L257.32 76.66V73.63Q257.32 68.16 257.22 62.70H256.24L240.03 62.89L239.64 58.69L238.96 54.30H257.22L257.12 51.66Q253.61 51.66 250.19 51.76L236.12 51.86L235.44 46.78L234.95 43.07Q245.89 43.07 256.83 42.97V40.04L254.29 40.14H239.64L239.05 35.45L238.27 31.25L251.75 31.15H256.54L256.34 26.27Q255.07 26.27 253.90 26.17L230.27 26.56L235.54 28.12L233.98 53.71L232.12 68.46L228.70 83.98L225.48 94.04L219.91 91.31L212.49 88.87L216.11 75.78L218.25 64.65L219.82 53.22L220.40 38.18L220.99 24.32H221.09L220.79 21.09L220.01 15.43L231.44 15.04L255.85 14.84Q255.66 10.64 255.36 6.35ZM231.24 82.91 236.71 80.47 242.47 78.81 246.96 77.15 242.38 75.49 232.71 73.34 234.07 68.46 235.83 63.18 246.57 65.62 254.97 68.26 252.82 73.05 251.65 75.39 253.61 74.61 255.07 80.47 256.63 84.28 250.09 86.23 235.44 92.97 233.39 87.79ZM390.03 81.45Q390.12 78.52 390.22 75.68V69.04L379.68 68.65Q376.26 68.75 372.74 68.85Q372.74 71.68 372.84 74.51Q372.94 78.03 372.94 81.45Q375.96 81.54 378.99 81.64ZM328.21 15.82 336.32 15.72 342.66 16.70 342.08 24.02 341.98 29.30Q343.74 29.30 345.59 29.20H356.53V36.04L356.14 43.07L344.42 42.77L329.48 42.97L316.30 43.36L315.91 36.82L315.71 30.27L326.36 29.59H328.41V27.44ZM317.86 46.88 324.79 45.61 330.95 45.21 332.21 60.55 333.00 68.26 320.98 70.41 319.32 59.38ZM316.10 71.97 333.19 70.02 343.05 68.95 337.49 68.07 338.66 59.57 339.83 43.55 346.86 44.34 354.29 46.78 351.36 62.40 349.89 68.16 355.26 67.58 356.04 75.49 356.73 80.47 331.34 83.30 317.18 84.96 316.79 79.10ZM370.98 11.33 379.58 11.13 387.29 12.11 386.51 24.61V29.49L387.98 29.39L404.58 28.52L404.87 35.35L404.68 41.99L391.79 41.89Q389.15 41.99 386.41 42.09Q386.41 44.43 386.41 46.88V54.39L402.33 54.69L406.04 56.93V82.32L405.85 94.04L398.62 93.85L378.99 93.46Q374.50 93.46 370.01 93.46L364.54 93.75L358.58 93.65L358.19 90.62L358.09 73.54L357.80 54.98L364.44 54.79Q365.22 54.79 365.91 54.79Q365.91 54.69 365.91 54.59Q368.93 54.49 371.96 54.49Q371.86 45.41 371.77 36.33Z"/></g><g transform="translate(40.0,36.7) scale(0.579)"><path d="M0 9 H56 L61 9 L65 2 L70 15 L75 9 H150" fill="none" stroke="#b8860b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g></svg><span class="brand-home" aria-hidden="true">🏠</span></a>
     <div class="nav-links">
       <a class="nav-link" href="../library.html" data-nav="library">📚 文獻庫</a>
       <a class="nav-link" href="../breeds.html" data-nav="breeds">🐈 品種</a>
@@ -189,28 +205,44 @@
     <div class="article-meta">
       <span class="cat-badge">❤️ 健康</span>
       <span>📅 2026-04-08</span>
+      <span>✍️ 編輯 <a href="https://github.com/Chen-MouChin" target="_blank" rel="noopener">Chen-MouChin</a> · AI 協助起草 · <a href="../editorial.html">編輯方針</a></span>
     </div>
-    <h1>貓咪慢性腎病（CKD）完整指南：分期、飲食管理與日常照護</h1>
+    <h1>貓咪慢性腎病（CKD）：分期、飲食與居家照護</h1>
     <div class="draft-warning"><span class="lbl">DRAFT</span>本文為 AI 草稿，尚未經人工審核校對，醫療資訊請務必再次與獸醫師確認，勿據此自行診斷或用藥。</div>
-    <img class="article-hero" src="../images/articles/cat-ckd-complete-guide.jpg" alt="貓咪慢性腎病（CKD）完整指南：分期、飲食管理與日常照護" loading="lazy" onerror="this.style.display='none'">
+    <img class="article-hero" src="../images/articles/cat-ckd-complete-guide.jpg" alt="貓咪慢性腎病（CKD）：分期、飲食與居家照護" loading="lazy" onerror="this.style.display='none'">
 
 
 
-    <h1 id="ckd">貓咪慢性腎病（CKD）完整指南</h1>
-<p>慢性腎病（Chronic Kidney Disease，CKD）是老年貓咪最常見的疾病，估計 <strong>10 歲以上貓咪中高達 40%、15 歲以上高達 80% 不同程度罹患 CKD</strong>（Cornell Feline Health Center）。雖然 CKD 無法治癒，但透過早期發現、飲食管理和適當治療，貓咪可以維持良好生活品質多年。</p>
-<h2 id="ckd_1">什麼是 CKD？</h2>
-<p>腎臟負責過濾血液中的廢物、調節電解質、維持血壓、製造紅血球生成素（EPO）。CKD 是腎臟功能不可逆的慢性衰退，腎元（nephron）逐漸損壞後無法再生。</p>
-<p><strong>常見病因</strong>：<br />
-- 長期慢性間質性腎炎（最常見）<br />
-- 腎臟淋巴瘤<br />
-- 高血壓腎損傷<br />
-- 多囊腎（波斯貓遺傳性）</p>
-<h2 id="iris-2023">IRIS 2023 分期系統</h2>
-<p>國際腎臟病研究學會（IRIS）是全球 CKD 管理的標準依據。</p>
+    <h1 id="ckd">貓咪慢性腎病（CKD）：分期、飲食與居家照護</h1>
+<p>慢性腎病（Chronic Kidney Disease，CKD）是老貓最常見的慢性病。Cornell 貓健康中心估計，10 歲以上的貓約有三到四成罹患不同程度的 CKD，15 歲以上更高<sup class="fn"><a href="../library.html?id=CORNELL-CKD" title="慢性腎病 — Cornell 貓健康中心" data-cite="CORNELL-CKD">1</a></sup>。CKD 無法治癒，但它進展得慢，早期發現後靠飲食、補水和定期回診，多數貓可以維持不錯的生活品質好幾年。這篇幫你看懂檢驗報告上的分期、判斷哪些狀況不能等，以及回家後真正做得到的事。</p>
+<h2 id="_1">何時該立刻就醫</h2>
+<p>以下任一情況，不要等下次回診：</p>
+<ul>
+<li>超過 24 小時完全不吃不喝</li>
+<li>一天嘔吐超過三次，或嘔吐物帶血</li>
+<li>突然看不見，瞳孔放大且對光沒有反應（高血壓造成視網膜剝離的典型表現）</li>
+<li>精神極差、幾乎叫不醒，或走路搖晃</li>
+<li>呼吸急促或張口呼吸</li>
+<li>尿量突然大減，或完全沒有尿</li>
+</ul>
+<h2 id="30">30 秒重點</h2>
+<ol>
+<li><strong>CKD 的診斷與治療都跟著 IRIS 分期走。</strong> 分期依血清肌酸酐與 SDMA 兩個數值，再用血壓和蛋白尿細分，獸醫的用藥與飲食建議都由此決定<sup class="fn"><a href="../library.html?id=IRIS-CKD-2023" title="IRIS 貓慢性腎病分期系統（2023 修訂版）" data-cite="IRIS-CKD-2023">2</a></sup>。</li>
+<li><strong>控磷與補水是最有證據的居家措施。</strong> IRIS 建議從第 2 期開始使用腎臟處方飲食，把血磷控制在目標範圍內<sup class="fn"><a href="../library.html?id=IRIS-CKD-TREATMENT-2023" title="IRIS 貓慢性腎病治療建議" data-cite="IRIS-CKD-TREATMENT-2023">3</a></sup>。</li>
+<li><strong>蛋白質不是越低越好。</strong> ISFM 共識指出過度限制蛋白質會讓貓肌肉流失，反而惡化，重點是高品質、易消化的蛋白質<sup class="fn"><a href="../library.html?id=SPARKES-2016-ISFM-CKD" title="ISFM 貓慢性腎病診斷與管理共識指引（2016）" data-cite="SPARKES-2016-ISFM-CKD">4</a></sup>。</li>
+</ol>
+<h2 id="_2">腎臟壞了會發生什麼事</h2>
+<p>腎臟負責過濾血液中的廢物、調節電解質與血壓、製造刺激紅血球生成的荷爾蒙。CKD 是腎臟功能不可逆的慢性衰退，腎元一旦損壞就不會再生。</p>
+<p>常見病因包括長期的慢性間質性腎炎（最常見）、腎臟淋巴瘤、高血壓造成的腎損傷，以及波斯貓與異國短毛貓的遺傳性多囊腎。多數老貓的 CKD 找不到單一原因。</p>
+<h2 id="_3">為什麼早期幾乎看不出來</h2>
+<p>貓的腎臟儲備能力很強。肌酸酐要等到大部分腎功能已經喪失才會明顯上升，所以只看肌酸酐，發現時往往已經是第 2 期以後。SDMA 是較新的腎功能指標，能在更早的階段偵測到功能下降，而且較不受肌肉量影響，對瘦弱的老貓特別有用<sup class="fn"><a href="../library.html?id=CORNELL-CKD" title="慢性腎病 — Cornell 貓健康中心" data-cite="CORNELL-CKD">1</a></sup>。這是為什麼 7 歲以後的健檢建議把 SDMA 和尿液檢查一起做。</p>
+<h2 id="iris-2023">IRIS 2023 分期怎麼看</h2>
+<p>國際腎臟病研究學會（IRIS）的分期是全球通用的標準，2023 年修訂版如下<sup class="fn"><a href="../library.html?id=IRIS-CKD-2023" title="IRIS 貓慢性腎病分期系統（2023 修訂版）" data-cite="IRIS-CKD-2023">2</a></sup>。分期必須在貓穩定、沒有脫水的狀態下，用至少兩次間隔數週的檢驗結果判定。</p>
 <table>
 <thead>
 <tr>
 <th>分期</th>
+<th>肌酸酐（mg/dL）</th>
 <th>肌酸酐（µmol/L）</th>
 <th>SDMA（µg/dL）</th>
 <th>臨床意義</th>
@@ -218,99 +250,161 @@
 </thead>
 <tbody>
 <tr>
-<td>Stage 1</td>
+<td>第 1 期</td>
+<td>&lt; 1.6</td>
 <td>&lt; 140</td>
 <td>&lt; 18</td>
-<td>非氮血症，腎功能下降但尿液無法濃縮</td>
+<td>無氮血症，但有其他腎臟異常（例如尿液無法濃縮、影像異常）</td>
 </tr>
 <tr>
-<td>Stage 2</td>
-<td>140–249</td>
-<td>18–25</td>
-<td>輕度氮血症，多數貓咪症狀不明顯</td>
+<td>第 2 期</td>
+<td>1.6 到 2.8</td>
+<td>140 到 250</td>
+<td>18 到 25</td>
+<td>輕度氮血症，多數貓沒有明顯症狀</td>
 </tr>
 <tr>
-<td>Stage 3</td>
-<td>250–439</td>
-<td>25–38</td>
+<td>第 3 期</td>
+<td>2.9 到 5.0</td>
+<td>251 到 440</td>
+<td>26 到 38</td>
 <td>中度氮血症，開始出現症狀</td>
 </tr>
 <tr>
-<td>Stage 4</td>
-<td>≥ 440</td>
-<td>≥ 38</td>
-<td>重度氮血症，需積極管理</td>
+<td>第 4 期</td>
+<td>&gt; 5.0</td>
+<td>&gt; 440</td>
+<td>&gt; 38</td>
+<td>重度氮血症，尿毒症狀明顯</td>
 </tr>
 </tbody>
 </table>
-<p><strong>分期附加系統</strong>：IRIS 還會附加血壓（Hypertension）和蛋白尿（Proteinuria）分級，指導治療決策。</p>
-<h2 id="_1">常見症狀</h2>
-<p>早期 CKD（Stage 1–2）幾乎無症狀，這是為什麼定期健檢如此重要。</p>
-<p><strong>出現症狀通常代表 Stage 2–3 以上</strong>：<br />
-- 多喝水、多尿（多尿多飲症）<br />
-- 體重持續下降、肌肉萎縮<br />
-- 食慾不振、偶爾嘔吐<br />
-- 毛髮暗淡、無光澤<br />
-- 精神倦怠<br />
-- 口腔潰瘍（尿毒素刺激）</p>
-<h2 id="_2">飲食管理：最重要的居家措施</h2>
-<h3 id="_3">低磷飲食</h3>
-<p>磷是 CKD 進展的最關鍵飲食因素。腎功能下降後，過多磷無法由腎臟排出，積累在體內加速腎元損傷。</p>
-<p><strong>目標</strong>：IRIS 建議 Stage 2 起開始腎臟處方飲食，以血磷控制在 &lt; 4.6 mg/dL（Stage 2）為目標（IRIS Treatment Recommendations 2023）；隨分期加重目標更嚴格，需獸醫依個案調整。</p>
-<p><strong>飲食選項</strong>：<br />
-- 處方腎臟飼料（Hill's k/d、Royal Canin Renal、Purina Pro Plan NF）<br />
-- 補充磷結合劑（如碳酸鈣、氫氧化鋁），需獸醫指示使用</p>
-<h3 id="_4">充足水分</h3>
-<p>稀釋尿液可減緩腎臟損傷，增加腎臟血流灌注。</p>
-<p><strong>方法</strong>：<br />
-- 以濕食為主（主食罐或泥狀）<br />
-- 在食物中加水<br />
-- 使用皮下注射補液（獸醫操作或訓練飼主居家執行）</p>
-<h3 id="_5">蛋白質的爭議</h3>
-<p>CKD 飼料通常蛋白質較低，但 ISFM 指引（Sparkes et al. 2016）強調：<strong>過度限制蛋白質可能導致肌肉萎縮</strong>，反而加速病情。應選擇高品質、易消化的蛋白質來源，而非單純低蛋白。</p>
-<h2 id="_6">家庭監測清單</h2>
-<p>每日觀察：<br />
-- [ ] 飲水量（CKD 貓因腎臟濃縮尿液能力下降，飲水量通常明顯多於健康貓；若發現飲水量驟增應記錄並回報獸醫）<br />
-- [ ] 排尿量和排尿頻率<br />
-- [ ] 進食量<br />
-- [ ] 精神狀態和活動力</p>
-<p>每週記錄：<br />
-- [ ] 體重（可在家使用嬰兒秤）</p>
-<p>每 3–6 個月回診：<br />
-- [ ] 血液生化（肌酸酐、BUN、SDMA、電解質）<br />
-- [ ] 尿液分析<br />
-- [ ] 血壓測量</p>
-<h2 id="_7">常見合併症</h2>
+<p>分期之後還有兩個附加分級，直接影響用藥<sup class="fn"><a href="../library.html?id=IRIS-CKD-2023" title="IRIS 貓慢性腎病分期系統（2023 修訂版）" data-cite="IRIS-CKD-2023">2</a></sup>：</p>
+<ul>
+<li><strong>蛋白尿</strong>：以尿蛋白肌酸酐比（UPC）判定。低於 0.2 為無蛋白尿，0.2 到 0.4 為邊緣性，高於 0.4 為蛋白尿。</li>
+<li><strong>血壓</strong>：收縮壓低於 140 mmHg 為正常，140 到 159 為高血壓前期，160 到 179 為高血壓，180 以上為重度高血壓。</li>
+</ul>
+<h2 id="_4">常見症狀</h2>
+<p>第 1 到 2 期的貓通常沒有症狀，這是定期健檢的意義所在。出現下列症狀時，多半已經是第 2 期後段到第 3 期：</p>
+<ul>
+<li>喝水變多、尿變多，貓砂結塊變大變重</li>
+<li>體重持續下降、背部肌肉變薄</li>
+<li>食慾變差、偶爾嘔吐</li>
+<li>毛髮暗淡、不再自己梳理</li>
+<li>精神倦怠</li>
+<li>口臭帶氨味，嚴重時口腔潰瘍</li>
+</ul>
+<h2 id="_5">飲食管理：最重要的居家措施</h2>
+<h3 id="_6">控制磷</h3>
+<p>磷是 CKD 進展最關鍵的飲食因素。腎功能下降後，多餘的磷排不出去，累積在體內會加速剩餘腎元的損傷。</p>
+<p>IRIS 2023 治療建議從第 2 期開始使用腎臟處方飲食，血磷目標依分期不同<sup class="fn"><a href="../library.html?id=IRIS-CKD-TREATMENT-2023" title="IRIS 貓慢性腎病治療建議" data-cite="IRIS-CKD-TREATMENT-2023">3</a></sup>：</p>
+<table>
+<thead>
+<tr>
+<th>分期</th>
+<th>血磷目標（mg/dL）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第 2 期</td>
+<td>2.7 到 4.6</td>
+</tr>
+<tr>
+<td>第 3 期</td>
+<td>2.7 到 5.0</td>
+</tr>
+<tr>
+<td>第 4 期</td>
+<td>2.7 到 6.0</td>
+</tr>
+</tbody>
+</table>
+<p>處方飲食吃了仍降不到目標，獸醫會加上磷結合劑（例如碳酸鈣、氫氧化鋁、碳酸鑭），混在食物裡一起吃。磷結合劑需要獸醫決定劑量並追蹤血鈣。</p>
+<p>腎臟處方飲食各主要廠商都有乾糧與濕食，需獸醫處方。本站不推薦特定品牌，選貓願意吃的那一款最重要。</p>
+<h3 id="_7">補水</h3>
+<p>腎臟濃縮尿液的能力下降後，貓會慢性脫水，脫水又會加重腎臟負擔。補水的方法依效果排序：</p>
+<ul>
+<li>主食改濕食（主食罐或泥狀），這是最有效的一項</li>
+<li>濕食再加水，或乾糧泡軟</li>
+<li>多放幾個水碗，加上流動飲水機</li>
+<li>第 3 到 4 期若持續脫水，獸醫會教飼主在家做皮下輸液。AAFP 輸液指引把居家皮下輸液列為長期 CKD 維持水分的常規做法之一<sup class="fn"><a href="../library.html?id=AAFP-FLUID-2013" title="2013 AAFP 輸液治療指引" data-cite="AAFP-FLUID-2013">5</a></sup></li>
+</ul>
+<h3 id="_8">蛋白質不是越低越好</h3>
+<p>腎臟處方飲食的蛋白質通常偏低，但 ISFM 2016 共識強調，過度限制蛋白質會造成肌肉流失和營養不良，反而縮短存活<sup class="fn"><a href="../library.html?id=SPARKES-2016-ISFM-CKD" title="ISFM 貓慢性腎病診斷與管理共識指引（2016）" data-cite="SPARKES-2016-ISFM-CKD">4</a></sup>。正確的方向是控制磷、選高品質易消化的蛋白質，並確保貓吃得夠。體重和肌肉量下降時，要跟獸醫討論是否調整飲食，而不是繼續減蛋白。</p>
+<h2 id="_9">常見合併症與處理方向</h2>
 <table>
 <thead>
 <tr>
 <th>合併症</th>
+<th>為什麼會發生</th>
 <th>處理方向</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>高血壓</td>
-<td>Amlodipine 控制，目標收縮壓 &lt; 160 mmHg</td>
-</tr>
-<tr>
-<td>貧血</td>
-<td>補充促紅血球生成素（Darbepoetin）、補鐵</td>
-</tr>
-<tr>
-<td>低鉀血症</td>
-<td>口服補鉀（Tumil-K 等）</td>
+<td>腎臟調節血壓的機制失靈</td>
+<td>IRIS 建議收縮壓持續高於 160 mmHg 時治療，常用 amlodipine，目標降到 160 以下<sup class="fn"><a href="../library.html?id=IRIS-CKD-TREATMENT-2023" title="IRIS 貓慢性腎病治療建議" data-cite="IRIS-CKD-TREATMENT-2023">3</a></sup></td>
 </tr>
 <tr>
 <td>蛋白尿</td>
-<td>Benazepril 或 Telmisartan 降低腎臟損傷</td>
+<td>腎絲球損傷</td>
+<td>UPC 高於 0.4 時使用 benazepril 或 telmisartan 減少蛋白流失<sup class="fn"><a href="../library.html?id=IRIS-CKD-TREATMENT-2023" title="IRIS 貓慢性腎病治療建議" data-cite="IRIS-CKD-TREATMENT-2023">3</a></sup></td>
+</tr>
+<tr>
+<td>貧血</td>
+<td>腎臟不再製造足夠的紅血球生成素</td>
+<td>補鐵，嚴重時注射 darbepoetin</td>
+</tr>
+<tr>
+<td>低血鉀</td>
+<td>尿中流失鉀增加</td>
+<td>口服葡萄糖酸鉀</td>
+</tr>
+<tr>
+<td>噁心、食慾差</td>
+<td>尿毒素刺激</td>
+<td>止吐藥（如 maropitant）、食慾促進劑（如 mirtazapine）</td>
+</tr>
+<tr>
+<td>脫水</td>
+<td>尿液無法濃縮</td>
+<td>濕食、皮下輸液</td>
 </tr>
 </tbody>
 </table>
-<p>CKD 是長期抗戰，與獸醫建立良好的溝通和定期複診是管理的核心。</p>
-<blockquote>
-<p><strong>免責聲明</strong>：本文僅供參考，不構成獸醫診療建議。如有健康疑慮，請諮詢專業獸醫師。</p>
-</blockquote>
+<p>這些藥物都需要獸醫處方並定期追蹤，不要自行調整劑量。</p>
+<h2 id="_10">居家能做的事</h2>
+<p><strong>每天觀察</strong><br />
+- 飲水量與尿量。CKD 貓本來就喝得多，重點是有沒有突然變得更多或更少<br />
+- 吃了多少。連續兩餐吃不到一半就要留意<br />
+- 精神與活動力</p>
+<p><strong>每週記錄</strong><br />
+- 體重。用嬰兒秤或抱著上人用體重計再扣掉自己，記在手機裡</p>
+<p><strong>每 3 到 6 個月回診</strong><br />
+- 血液生化（肌酸酐、SDMA、血磷、鉀、血比容）<br />
+- 尿液分析與 UPC<br />
+- 血壓</p>
+<p><strong>準備一份紀錄</strong><br />
+- 把體重、飲水、食量、嘔吐次數整理成表格帶去回診，獸醫能更快判斷分期有沒有變化</p>
+<h2 id="_11">常見問題</h2>
+<p><strong>Q. 貓不肯吃處方飼料怎麼辦？</strong><br />
+先試不同廠商、不同劑型（乾糧、濕食、泥狀）和溫度，通常至少有一款貓願意吃。轉換要慢，用一到兩週逐步混合。真的都不吃，跟獸醫討論用磷結合劑搭配一般飲食，吃得夠，比吃處方但吃不夠重要得多。</p>
+<p><strong>Q. 可以只餵乾糧嗎？</strong><br />
+可以，但補水要更用心。乾糧泡軟、加流動飲水機、多點水碗。若體重和血液指標穩定，獸醫也認可，就不必勉強換濕食。</p>
+<p><strong>Q. 皮下輸液自己打會不會很難？</strong><br />
+多數飼主學一到兩次就能上手，貓通常耐受良好。獸醫會示範針頭角度、輸液量與頻率。第一次在醫院做，回家後有問題隨時回診確認。</p>
+<p><strong>Q. 確診後貓還能活多久？</strong><br />
+差異很大，主要看確診時的分期、血磷與血壓控制得好不好，以及有沒有蛋白尿。第 2 期發現並穩定控制的貓，活好幾年很常見；第 4 期則以舒適為優先。定期回診比任何單一藥物都重要。</p>
+<p><strong>Q. 甲狀腺亢進的貓也常有腎病，兩個要一起治嗎？</strong><br />
+要，而且順序有講究。甲亢會讓腎臟血流增加，把腎功能數值「撐」得看起來正常；治療甲亢後真正的腎功能才會顯現。詳見<a href="cat-hyperthyroidism-senior.html">老貓甲狀腺亢進</a>。</p>
+<h2 id="_12">相關文章</h2>
+<ul>
+<li><a href="cat-water-urinary-health-taiwan.html">貓咪水分與泌尿道健康</a>：補水的具體做法</li>
+<li><a href="cat-life-stages-care-taiwan.html">成貓與老貓照顧</a>：7 歲後的健檢項目與頻率</li>
+<li><a href="cat-cost-insurance-taiwan.html">養貓財務規劃</a>：慢性病的長期費用</li>
+</ul>
 
     <div style="clear:both"></div>
 
@@ -318,22 +412,30 @@
 
     <div class="find-vet-cta"><span class="label">📍 需要找獸醫？</span><a href="../vets.html?cat=1">🐈 找台灣貓專科獸醫院 →</a></div>
 
-    
+        <div class="related-box">
+      <h3>📚 站內相關</h3>
+      <ul>
+        <li><a href="./cat-life-stages-care-taiwan.html">成貓 + 老貓 完整照顧 — 1-7 歲到 15 歲分齡指南</a></li>
+        <li><a href="./cat-water-urinary-health-taiwan.html">貓咪水分與泌尿道健康 — 預防 FLUTD 完整指南</a></li>
+        <li><a href="./cat-hyperthyroidism-senior.html">老貓甲狀腺亢進：症狀、診斷與四種治療的取捨</a></li>
+        <li><a href="./cat-cost-insurance-taiwan.html">養貓財務規劃 — 年度費用 + 寵物保險完整指南</a></li>
+      </ul>
+    </div>
 
     <div class="disclaimer">
       ⚠️ 本文僅供參考，不構成獸醫診療建議。如有健康疑慮，請諮詢專業獸醫師。
     </div>
 
-    <div class="sources-box">
-      <h3>資料來源</h3>
-      <ul>
-      <li>IRIS (International Renal Interest Society) Staging of CKD 2023: 以血清肌酸酐、SDMA、UPC 等指標進行 1–4 期分期</li>
-      <li>ISFM Consensus Guidelines on the Diagnosis and Management of Feline Chronic Kidney Disease — Sparkes et al. 2016 (JFMS): 飲食磷限制、水分補充、血壓控制的個人化臨床建議</li>
-      <li>Chronic Kidney Disease — Cornell Feline Health Center: 多尿、多飲、體重下降的症狀識別與居家管理</li>
-      <li>AAFP 2013 Fluid Therapy Guidelines: 輸液治療的臨床基礎與長期 CKD 居家皮下輸液策略</li>
-      <li>WSAVA Renal Standardization Guidelines: 病理檢驗與分期判讀的全球標準化建議</li>
-      <li>VCA Animal Hospitals: Chronic Kidney Disease in Cats — 症狀識別（多尿、多飲、體重下降）與居家管理</li>
-      </ul>
+    <div class="sources-box references">
+      <h3>參考文獻</h3>
+      <ol>
+      <li id="ref-CORNELL-CKD"><a class="ref-title" href="../library.html?id=CORNELL-CKD">慢性腎病 — Cornell 貓健康中心</a> <a class="ref-url" href="https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/chronic-kidney-disease" target="_blank" rel="noopener">原文</a><div class="ref-en">Chronic Kidney Disease — Cornell Feline Health Center</div><div class="ref-meta">Cornell University College of Veterinary Medicine · Cornell · 2024</div></li>
+      <li id="ref-IRIS-CKD-2023"><a class="ref-title" href="../library.html?id=IRIS-CKD-2023">IRIS 貓慢性腎病分期系統（2023 修訂版）</a> <a class="ref-url" href="https://www.iris-kidney.com/iris-guidelines-1" target="_blank" rel="noopener">原文</a><div class="ref-en">IRIS Staging of CKD (modified 2023)</div><div class="ref-meta">International Renal Interest Society · iris-kidney.com · 2023</div></li>
+      <li id="ref-IRIS-CKD-TREATMENT-2023"><a class="ref-title" href="../library.html?id=IRIS-CKD-TREATMENT-2023">IRIS 貓慢性腎病治療建議</a> <a class="ref-url" href="https://www.iris-kidney.com/iris-guidelines-1" target="_blank" rel="noopener">原文</a><div class="ref-en">IRIS Treatment Recommendations for CKD in Cats</div><div class="ref-meta">International Renal Interest Society · iris-kidney.com · 2023</div></li>
+      <li id="ref-SPARKES-2016-ISFM-CKD"><a class="ref-title" href="../library.html?id=SPARKES-2016-ISFM-CKD">ISFM 貓慢性腎病診斷與管理共識指引（2016）</a> <a class="ref-url" href="https://pubmed.ncbi.nlm.nih.gov/26936494/" target="_blank" rel="noopener">原文</a><div class="ref-en">ISFM Consensus Guidelines on the Diagnosis and Management of Feline Chronic Kidney Disease</div><div class="ref-meta">Andrew H Sparkes, Sarah Caney, Serge Chalhoub, Jonathan Elliott, Natalie Finch, Isuru Gajanayake, Catherine Langston, Hervé P Lefebvre, Joanna White, Jessica Quimby · JFMS · 2016</div></li>
+      <li id="ref-AAFP-FLUID-2013"><a class="ref-title" href="../library.html?id=AAFP-FLUID-2013">2013 AAFP 輸液治療指引</a> <a class="ref-url" href="https://catvets.com/guidelines/practice-guidelines/fluid-therapy-guidelines/" target="_blank" rel="noopener">原文</a><div class="ref-en">2013 AAFP Fluid Therapy Guidelines</div><div class="ref-meta">AAFP · AAFP · 2013</div></li>
+      </ol>
+      <p class="ref-hint">點文獻標題可到文獻庫查看中文摘要與審核狀態。</p>
     </div>
   </article>
 
@@ -352,6 +454,7 @@
       <a href="../vets.html">🏥 獸醫院</a>
       <a href="index.html">📝 文章</a>
       <a href="../about.html">ℹ️ 關於本站</a>
+      <a href="../editorial.html">📋 編輯方針</a>
       <a href="../privacy.html">🔒 隱私政策</a>
     </div>
     <div class="f-meta">

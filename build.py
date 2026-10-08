@@ -169,6 +169,82 @@ def _md_to_html(md_text: str) -> str:
         return html
 
 
+# ---------------------------------------------------------------------------
+# 句內引用註腳：正文寫 [^KEY]，KEY 對應 content/references/citations.json
+# 渲染為上標數字連到 library.html?id=KEY，文末自動產生「參考文獻」清單
+# ---------------------------------------------------------------------------
+
+_CITATIONS_CACHE: dict | None = None
+
+
+def _load_citations() -> dict:
+    global _CITATIONS_CACHE
+    if _CITATIONS_CACHE is None:
+        p = ROOT / "content" / "references" / "citations.json"
+        try:
+            data = json.loads(p.read_text(encoding="utf-8"))
+        except Exception:
+            data = {}
+        _CITATIONS_CACHE = {k: v for k, v in data.items() if k != "_meta"}
+    return _CITATIONS_CACHE
+
+
+FOOTNOTE_RE = re.compile(r"\[\^([A-Za-z0-9][A-Za-z0-9_\-\.]*)\]")
+
+
+def _process_footnotes(body_md: str, slug: str) -> tuple[str, str, list[str]]:
+    """把 [^KEY] 換成上標連結，回傳 (新 markdown, 參考文獻 HTML, 使用到的 key 依序)。
+
+    同一個 KEY 多次出現共用同一個編號。找不到的 KEY 會印警告，仍照常連到 library。
+    """
+    citations = _load_citations()
+    order: list[str] = []
+
+    def repl(m: re.Match) -> str:
+        key = m.group(1)
+        if key not in order:
+            order.append(key)
+            if key not in citations:
+                print(f"  [warn] {slug}: 註腳 [^{key}] 不在 citations.json")
+        n = order.index(key) + 1
+        c = citations.get(key, {})
+        tip = _escape_html(c.get("title_zh") or c.get("title") or key)
+        return (
+            f'<sup class="fn"><a href="../library.html?id={key}" '
+            f'title="{tip}" data-cite="{key}">{n}</a></sup>'
+        )
+
+    new_md = FOOTNOTE_RE.sub(repl, body_md)
+    if not order:
+        return new_md, "", []
+
+    items = []
+    for i, key in enumerate(order, 1):
+        c = citations.get(key)
+        if c:
+            title = _escape_html(c.get("title_zh") or c.get("title") or key)
+            en = c.get("title") if c.get("title_zh") and c.get("title") != c.get("title_zh") else ""
+            meta_bits = [b for b in (c.get("authors", ""), c.get("source", ""), str(c.get("year", "") or "")) if b]
+            meta = _escape_html(" · ".join(meta_bits))
+            en_html = f'<div class="ref-en">{_escape_html(en)}</div>' if en else ""
+            url = c.get("url", "")
+            url_html = f' <a class="ref-url" href="{_escape_html(url)}" target="_blank" rel="noopener">原文</a>' if url else ""
+            items.append(
+                f'      <li id="ref-{key}"><a class="ref-title" href="../library.html?id={key}">{title}</a>{url_html}'
+                f'{en_html}<div class="ref-meta">{meta}</div></li>'
+            )
+        else:
+            items.append(f'      <li id="ref-{key}"><span class="ref-title">{_escape_html(key)}</span><div class="ref-meta">（文獻庫尚未收錄）</div></li>')
+    refs_html = (
+        '<div class="sources-box references">\n'
+        '      <h3>參考文獻</h3>\n'
+        '      <ol>\n' + "\n".join(items) + '\n      </ol>\n'
+        '      <p class="ref-hint">點文獻標題可到文獻庫查看中文摘要與審核狀態。</p>\n'
+        '    </div>'
+    )
+    return new_md, refs_html, order
+
+
 CATEGORY_EMOJI = {
     "入門": "🆕", "健康": "❤️", "飲食": "🍖", "行為": "🐾",
     "環境": "🏠", "階段": "⏳", "品種": "🐈",
@@ -320,6 +396,10 @@ ARTICLE_TEMPLATE = """\
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+  <link rel="apple-touch-icon" href="../favicon-180.png">
+  <meta property="og:image" content="{site_url}/images/og-default.png">
   <title>{title} — 貓健康站</title>
   <meta name="description" content="{description}">
   <meta property="og:title" content="{title}">
@@ -331,9 +411,9 @@ ARTICLE_TEMPLATE = """\
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": {title_json},
-    "datePublished": "{date}",
-    "author": {{"@type": "Organization", "name": "貓健康站"}},
-    "publisher": {{"@type": "Organization", "name": "貓健康站", "url": "https://chen-mouchin.github.io/cat-health-tw"}}
+    "datePublished": "{date}",{date_modified_json}
+    "author": {{"@type": "Person", "name": "Chen-MouChin", "url": "https://github.com/Chen-MouChin"}},
+    "publisher": {{"@type": "Organization", "name": "貓健康站", "url": "{site_url}", "publishingPrinciples": "{site_url}/editorial.html"}}
   }}
   </script>
   <link rel="stylesheet" href="../css/ads.css">
@@ -383,6 +463,18 @@ ARTICLE_TEMPLATE = """\
       margin-top: 2rem; font-size: 0.85rem; color: var(--text-muted, #666);
     }}
     .sources-box h3 {{ color: var(--text-muted, #555); margin-bottom: 0.5rem; font-size: 0.9rem; }}
+    /* 句內註腳與參考文獻 */
+    sup.fn {{ font-size: 0.7em; line-height: 0; vertical-align: super; margin-left: 1px; }}
+    sup.fn a {{ color: var(--accent, #1d1d1f); text-decoration: none; padding: 0 2px; border-radius: 3px; background: var(--accent-light, #f0f0f3); }}
+    sup.fn a:hover {{ background: var(--accent, #1d1d1f); color: var(--accent-on, #fff); }}
+    .references ol {{ margin: 0.4rem 0 0 1.4rem; padding: 0; }}
+    .references li {{ margin: 0.45rem 0; line-height: 1.5; }}
+    .references .ref-title {{ color: var(--text, #333); font-weight: 600; text-decoration: none; }}
+    .references .ref-title:hover {{ text-decoration: underline; }}
+    .references .ref-url {{ font-size: 0.8em; margin-left: 0.4rem; color: var(--text-muted, #888); }}
+    .references .ref-en {{ font-size: 0.85em; color: var(--text-muted, #777); }}
+    .references .ref-meta {{ font-size: 0.8em; color: var(--text-faint, #999); }}
+    .references .ref-hint {{ margin-top: 0.6rem; font-size: 0.78em; color: var(--text-faint, #aaa); }}
     .disclaimer {{
       background: #fff8e1; border-left: 4px solid #ffc107;
       padding: 0.6rem 1rem; margin: 1.5rem 0; font-size: 0.88rem; color: #555;
@@ -492,7 +584,7 @@ ARTICLE_TEMPLATE = """\
 </head>
 <body>
   <nav class="site-nav">
-    <a class="nav-brand" href="../index.html" title="回首頁"><span class="b-icon">🐱</span><span class="brand-text">貓健康站</span><span class="brand-home" aria-hidden="true">🏠</span></a>
+    <a class="nav-brand" href="../index.html" title="回首頁"><svg class="brand-logo" viewBox="0 0 180 47" aria-label="貓健康站" role="img"><g transform="translate(0,15.2) scale(0.750)" fill="currentColor"><path d="M4 20 V2 L14 10 Z"/><path d="M36 20 V2 L26 10 Z"/><circle cx="13" cy="18" r="2.2"/><circle cx="27" cy="18" r="2.2"/></g><g transform="translate(40.0,0) scale(0.340)"><path fill="currentColor" d="M79.79 93.26 65.04 93.46 49.61 93.65 48.24 93.75H41.21L40.72 64.45L40.82 45.31L45.21 44.73V44.63H46.00L46.48 44.53L48.83 44.43L61.13 43.95H81.25L89.16 44.73L91.89 46.78L92.48 64.84L92.29 85.94L91.89 93.75H85.74ZM59.08 65.43 58.79 57.91 54.59 58.01V60.35L54.69 65.53ZM71.78 65.23 77.05 65.33 76.95 57.91H71.88ZM59.08 82.71V76.95L54.98 77.15L55.08 82.71H58.40ZM71.97 82.62H76.95L77.15 77.54V76.86H71.88ZM17.58 85.45 24.41 85.16 25.68 81.35 20.21 84.28ZM68.85 9.96 76.37 9.67 83.98 10.55 83.79 19.63 92.68 19.92V27.25L91.80 33.30L83.01 32.91L82.91 35.25L82.52 41.50L73.24 41.02L68.85 40.43L68.95 32.62L60.06 32.81L60.45 40.33L51.56 41.11L46.97 41.41L46.29 33.30L40.62 33.59L39.75 27.54L39.65 20.61L45.41 20.31L45.02 12.30L52.83 10.84L58.89 10.94L59.38 19.73L69.14 19.34V16.50ZM32.62 8.89 36.23 13.38 39.26 20.21 32.81 23.14 22.17 27.25 7.71 31.84 5.86 27.44 4.79 20.02 15.04 17.09 23.73 13.67ZM6.15 35.94 10.64 32.91 15.72 30.66 18.16 35.45 20.61 41.11 16.41 43.46 11.82 45.70 9.47 41.80ZM19.24 30.96 24.71 27.15 29.49 25.29 32.23 29.98 34.18 34.08 36.72 31.74 41.11 36.43 44.53 42.77 37.21 47.17 33.20 49.22 37.01 56.54 40.14 70.51 38.87 84.77 36.43 91.41 32.23 94.73 24.51 95.12 19.14 94.24 18.55 89.45 16.80 85.74 10.74 88.38 8.79 85.35 7.13 78.42 16.31 74.51 23.05 70.80 26.17 68.36 25.68 66.41 19.92 69.63 11.82 73.14 10.06 70.70 7.71 63.57 19.53 58.20 22.17 56.45 21.29 54.69 19.53 55.47 10.35 58.69 8.20 54.98 6.15 47.85 13.96 45.51 25.59 40.23 30.18 37.30 29.30 37.70 24.22 39.16 21.48 34.47ZM134.08 77.73 129.88 75.20 129.78 83.20ZM153.12 68.36 150.97 73.05 153.80 74.51ZM177.44 28.12H180.95L180.86 25.49L177.54 25.29ZM177.44 41.02 180.76 41.21 180.86 38.28H177.44ZM165.13 75.29 156.54 75.49 165.13 78.22ZM136.62 44.53 138.96 38.67 136.52 38.38 132.22 38.57 131.44 33.01 128.80 40.92 126.36 46.58 130.66 48.05 130.07 62.40 129.98 68.46 134.57 62.79 140.04 66.60 141.99 61.23 139.35 60.74 135.25 60.35 134.27 55.18 133.88 49.51ZM164.35 7.71 173.73 7.62 178.12 8.69 177.93 13.87H185.64L191.99 14.55L194.33 17.09L194.23 28.32L199.61 28.42V35.45L198.73 39.06L194.04 38.87L193.16 50.78H187.40L185.93 50.59L177.44 50.29L177.54 52.64L191.89 53.12L191.99 59.18L191.30 63.18L185.05 62.60L177.63 62.50V65.14L189.55 65.33L197.16 65.82V71.78L196.38 76.46L186.52 75.49L177.73 75.20L177.83 79.20L171.09 79.00L165.72 78.42L167.38 78.91L181.44 80.86L195.60 81.45L195.21 89.06L194.14 94.43L176.56 92.77L164.35 90.53L151.17 86.72L145.11 83.89L142.77 87.79L137.59 94.24L131.93 89.84L129.78 86.72L129.88 94.53H122.85L117.38 93.75L117.77 72.56V65.72L115.52 70.31L109.57 66.21L105.66 61.23L111.03 50.49L116.60 35.84L120.50 22.75L123.34 9.86L132.61 12.01L137.59 14.94L134.18 25.20L142.87 25.00L148.82 25.49L151.17 31.64L152.05 38.28L150.48 42.87L146.97 49.22L151.07 49.41L153.61 50.29L155.17 56.25L155.46 61.33L154.39 65.62L165.23 65.23V62.50L157.91 62.79L156.93 58.30L157.22 52.93L165.23 52.73V50.29L155.27 50.49L154.59 46.78L154.68 41.21L165.04 41.11V38.28L153.61 38.38L152.83 32.71L153.02 28.12L164.94 28.03L164.84 25.39L155.37 25.49L154.49 21.00L154.39 14.16L164.55 13.96ZM271.09 42.87Q275.58 42.87 279.97 42.77Q280.07 41.41 280.17 40.14Q275.68 39.94 271.18 39.75Q271.09 40.62 271.09 41.50ZM271.18 54.10H279.58Q279.58 52.73 279.68 51.37Q279.29 51.37 278.80 51.37Q274.99 51.46 271.09 51.46Q271.18 52.83 271.18 54.10ZM271.28 70.02 279.29 66.99 286.12 64.06 287.79 63.09H286.42H279.29V62.60L271.28 62.70H271.18ZM273.53 73.34 271.28 70.31V72.75ZM255.36 6.35 266.40 8.40 270.79 9.08 270.50 15.14Q275.58 15.23 280.66 15.33H299.31L299.11 22.17L298.43 27.64L277.34 26.66L262.10 26.37L266.01 27.54L272.06 28.52Q271.96 29.88 271.87 31.15H280.46L292.47 32.13L294.91 34.28L294.62 43.16L302.82 43.36L302.14 48.05L301.95 52.05L294.33 51.86L293.64 63.09H290.91L293.06 66.60L296.96 71.58L291.50 74.22L287.30 75.78Q286.22 76.07 285.15 76.46L294.04 80.66L301.85 84.28L298.53 89.94L295.79 94.73L288.86 90.53L280.56 86.43L271.48 83.20Q271.57 87.01 271.67 90.92L270.11 92.97L265.03 94.82L255.07 95.21L253.31 91.02L251.26 87.21L254.88 86.91L257.61 86.23L257.32 76.66V73.63Q257.32 68.16 257.22 62.70H256.24L240.03 62.89L239.64 58.69L238.96 54.30H257.22L257.12 51.66Q253.61 51.66 250.19 51.76L236.12 51.86L235.44 46.78L234.95 43.07Q245.89 43.07 256.83 42.97V40.04L254.29 40.14H239.64L239.05 35.45L238.27 31.25L251.75 31.15H256.54L256.34 26.27Q255.07 26.27 253.90 26.17L230.27 26.56L235.54 28.12L233.98 53.71L232.12 68.46L228.70 83.98L225.48 94.04L219.91 91.31L212.49 88.87L216.11 75.78L218.25 64.65L219.82 53.22L220.40 38.18L220.99 24.32H221.09L220.79 21.09L220.01 15.43L231.44 15.04L255.85 14.84Q255.66 10.64 255.36 6.35ZM231.24 82.91 236.71 80.47 242.47 78.81 246.96 77.15 242.38 75.49 232.71 73.34 234.07 68.46 235.83 63.18 246.57 65.62 254.97 68.26 252.82 73.05 251.65 75.39 253.61 74.61 255.07 80.47 256.63 84.28 250.09 86.23 235.44 92.97 233.39 87.79ZM390.03 81.45Q390.12 78.52 390.22 75.68V69.04L379.68 68.65Q376.26 68.75 372.74 68.85Q372.74 71.68 372.84 74.51Q372.94 78.03 372.94 81.45Q375.96 81.54 378.99 81.64ZM328.21 15.82 336.32 15.72 342.66 16.70 342.08 24.02 341.98 29.30Q343.74 29.30 345.59 29.20H356.53V36.04L356.14 43.07L344.42 42.77L329.48 42.97L316.30 43.36L315.91 36.82L315.71 30.27L326.36 29.59H328.41V27.44ZM317.86 46.88 324.79 45.61 330.95 45.21 332.21 60.55 333.00 68.26 320.98 70.41 319.32 59.38ZM316.10 71.97 333.19 70.02 343.05 68.95 337.49 68.07 338.66 59.57 339.83 43.55 346.86 44.34 354.29 46.78 351.36 62.40 349.89 68.16 355.26 67.58 356.04 75.49 356.73 80.47 331.34 83.30 317.18 84.96 316.79 79.10ZM370.98 11.33 379.58 11.13 387.29 12.11 386.51 24.61V29.49L387.98 29.39L404.58 28.52L404.87 35.35L404.68 41.99L391.79 41.89Q389.15 41.99 386.41 42.09Q386.41 44.43 386.41 46.88V54.39L402.33 54.69L406.04 56.93V82.32L405.85 94.04L398.62 93.85L378.99 93.46Q374.50 93.46 370.01 93.46L364.54 93.75L358.58 93.65L358.19 90.62L358.09 73.54L357.80 54.98L364.44 54.79Q365.22 54.79 365.91 54.79Q365.91 54.69 365.91 54.59Q368.93 54.49 371.96 54.49Q371.86 45.41 371.77 36.33Z"/></g><g transform="translate(40.0,36.7) scale(0.579)"><path d="M0 9 H56 L61 9 L65 2 L70 15 L75 9 H150" fill="none" stroke="#b8860b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g></svg><span class="brand-home" aria-hidden="true">🏠</span></a>
     <div class="nav-links">
       <a class="nav-link" href="../library.html" data-nav="library">📚 文獻庫</a>
       <a class="nav-link" href="../breeds.html" data-nav="breeds">🐈 品種</a>
@@ -506,6 +598,7 @@ ARTICLE_TEMPLATE = """\
     <div class="article-meta">
       <span class="cat-badge">{cat_emoji} {category}</span>
       <span>📅 {date}</span>
+{editor_meta_html}
     </div>
     <h1>{title}</h1>
 {draft_warning_html}
@@ -545,6 +638,7 @@ ARTICLE_TEMPLATE = """\
       <a href="../vets.html">🏥 獸醫院</a>
       <a href="index.html">📝 文章</a>
       <a href="../about.html">ℹ️ 關於本站</a>
+      <a href="../editorial.html">📋 編輯方針</a>
       <a href="../privacy.html">🔒 隱私政策</a>
     </div>
     <div class="f-meta">
@@ -596,6 +690,10 @@ ARTICLES_INDEX_TEMPLATE = """\
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+  <link rel="apple-touch-icon" href="../favicon-180.png">
+  <meta property="og:image" content="https://chen-mouchin.github.io/cat-health-tw/images/og-default.png">
   <title>貓咪知識庫文章列表 — 貓健康站</title>
   <meta name="description" content="台灣養貓人完整知識庫：飲食、醫療、行為、居家環境，全部文章均佐證學術來源。">
   <link rel="stylesheet" href="../css/ads.css">
@@ -700,7 +798,7 @@ ARTICLES_INDEX_TEMPLATE = """\
 </head>
 <body>
   <nav class="site-nav">
-    <a class="nav-brand" href="../index.html" title="回首頁"><span class="b-icon">🐱</span><span class="brand-text">貓健康站</span><span class="brand-home" aria-hidden="true">🏠</span></a>
+    <a class="nav-brand" href="../index.html" title="回首頁"><svg class="brand-logo" viewBox="0 0 180 47" aria-label="貓健康站" role="img"><g transform="translate(0,15.2) scale(0.750)" fill="currentColor"><path d="M4 20 V2 L14 10 Z"/><path d="M36 20 V2 L26 10 Z"/><circle cx="13" cy="18" r="2.2"/><circle cx="27" cy="18" r="2.2"/></g><g transform="translate(40.0,0) scale(0.340)"><path fill="currentColor" d="M79.79 93.26 65.04 93.46 49.61 93.65 48.24 93.75H41.21L40.72 64.45L40.82 45.31L45.21 44.73V44.63H46.00L46.48 44.53L48.83 44.43L61.13 43.95H81.25L89.16 44.73L91.89 46.78L92.48 64.84L92.29 85.94L91.89 93.75H85.74ZM59.08 65.43 58.79 57.91 54.59 58.01V60.35L54.69 65.53ZM71.78 65.23 77.05 65.33 76.95 57.91H71.88ZM59.08 82.71V76.95L54.98 77.15L55.08 82.71H58.40ZM71.97 82.62H76.95L77.15 77.54V76.86H71.88ZM17.58 85.45 24.41 85.16 25.68 81.35 20.21 84.28ZM68.85 9.96 76.37 9.67 83.98 10.55 83.79 19.63 92.68 19.92V27.25L91.80 33.30L83.01 32.91L82.91 35.25L82.52 41.50L73.24 41.02L68.85 40.43L68.95 32.62L60.06 32.81L60.45 40.33L51.56 41.11L46.97 41.41L46.29 33.30L40.62 33.59L39.75 27.54L39.65 20.61L45.41 20.31L45.02 12.30L52.83 10.84L58.89 10.94L59.38 19.73L69.14 19.34V16.50ZM32.62 8.89 36.23 13.38 39.26 20.21 32.81 23.14 22.17 27.25 7.71 31.84 5.86 27.44 4.79 20.02 15.04 17.09 23.73 13.67ZM6.15 35.94 10.64 32.91 15.72 30.66 18.16 35.45 20.61 41.11 16.41 43.46 11.82 45.70 9.47 41.80ZM19.24 30.96 24.71 27.15 29.49 25.29 32.23 29.98 34.18 34.08 36.72 31.74 41.11 36.43 44.53 42.77 37.21 47.17 33.20 49.22 37.01 56.54 40.14 70.51 38.87 84.77 36.43 91.41 32.23 94.73 24.51 95.12 19.14 94.24 18.55 89.45 16.80 85.74 10.74 88.38 8.79 85.35 7.13 78.42 16.31 74.51 23.05 70.80 26.17 68.36 25.68 66.41 19.92 69.63 11.82 73.14 10.06 70.70 7.71 63.57 19.53 58.20 22.17 56.45 21.29 54.69 19.53 55.47 10.35 58.69 8.20 54.98 6.15 47.85 13.96 45.51 25.59 40.23 30.18 37.30 29.30 37.70 24.22 39.16 21.48 34.47ZM134.08 77.73 129.88 75.20 129.78 83.20ZM153.12 68.36 150.97 73.05 153.80 74.51ZM177.44 28.12H180.95L180.86 25.49L177.54 25.29ZM177.44 41.02 180.76 41.21 180.86 38.28H177.44ZM165.13 75.29 156.54 75.49 165.13 78.22ZM136.62 44.53 138.96 38.67 136.52 38.38 132.22 38.57 131.44 33.01 128.80 40.92 126.36 46.58 130.66 48.05 130.07 62.40 129.98 68.46 134.57 62.79 140.04 66.60 141.99 61.23 139.35 60.74 135.25 60.35 134.27 55.18 133.88 49.51ZM164.35 7.71 173.73 7.62 178.12 8.69 177.93 13.87H185.64L191.99 14.55L194.33 17.09L194.23 28.32L199.61 28.42V35.45L198.73 39.06L194.04 38.87L193.16 50.78H187.40L185.93 50.59L177.44 50.29L177.54 52.64L191.89 53.12L191.99 59.18L191.30 63.18L185.05 62.60L177.63 62.50V65.14L189.55 65.33L197.16 65.82V71.78L196.38 76.46L186.52 75.49L177.73 75.20L177.83 79.20L171.09 79.00L165.72 78.42L167.38 78.91L181.44 80.86L195.60 81.45L195.21 89.06L194.14 94.43L176.56 92.77L164.35 90.53L151.17 86.72L145.11 83.89L142.77 87.79L137.59 94.24L131.93 89.84L129.78 86.72L129.88 94.53H122.85L117.38 93.75L117.77 72.56V65.72L115.52 70.31L109.57 66.21L105.66 61.23L111.03 50.49L116.60 35.84L120.50 22.75L123.34 9.86L132.61 12.01L137.59 14.94L134.18 25.20L142.87 25.00L148.82 25.49L151.17 31.64L152.05 38.28L150.48 42.87L146.97 49.22L151.07 49.41L153.61 50.29L155.17 56.25L155.46 61.33L154.39 65.62L165.23 65.23V62.50L157.91 62.79L156.93 58.30L157.22 52.93L165.23 52.73V50.29L155.27 50.49L154.59 46.78L154.68 41.21L165.04 41.11V38.28L153.61 38.38L152.83 32.71L153.02 28.12L164.94 28.03L164.84 25.39L155.37 25.49L154.49 21.00L154.39 14.16L164.55 13.96ZM271.09 42.87Q275.58 42.87 279.97 42.77Q280.07 41.41 280.17 40.14Q275.68 39.94 271.18 39.75Q271.09 40.62 271.09 41.50ZM271.18 54.10H279.58Q279.58 52.73 279.68 51.37Q279.29 51.37 278.80 51.37Q274.99 51.46 271.09 51.46Q271.18 52.83 271.18 54.10ZM271.28 70.02 279.29 66.99 286.12 64.06 287.79 63.09H286.42H279.29V62.60L271.28 62.70H271.18ZM273.53 73.34 271.28 70.31V72.75ZM255.36 6.35 266.40 8.40 270.79 9.08 270.50 15.14Q275.58 15.23 280.66 15.33H299.31L299.11 22.17L298.43 27.64L277.34 26.66L262.10 26.37L266.01 27.54L272.06 28.52Q271.96 29.88 271.87 31.15H280.46L292.47 32.13L294.91 34.28L294.62 43.16L302.82 43.36L302.14 48.05L301.95 52.05L294.33 51.86L293.64 63.09H290.91L293.06 66.60L296.96 71.58L291.50 74.22L287.30 75.78Q286.22 76.07 285.15 76.46L294.04 80.66L301.85 84.28L298.53 89.94L295.79 94.73L288.86 90.53L280.56 86.43L271.48 83.20Q271.57 87.01 271.67 90.92L270.11 92.97L265.03 94.82L255.07 95.21L253.31 91.02L251.26 87.21L254.88 86.91L257.61 86.23L257.32 76.66V73.63Q257.32 68.16 257.22 62.70H256.24L240.03 62.89L239.64 58.69L238.96 54.30H257.22L257.12 51.66Q253.61 51.66 250.19 51.76L236.12 51.86L235.44 46.78L234.95 43.07Q245.89 43.07 256.83 42.97V40.04L254.29 40.14H239.64L239.05 35.45L238.27 31.25L251.75 31.15H256.54L256.34 26.27Q255.07 26.27 253.90 26.17L230.27 26.56L235.54 28.12L233.98 53.71L232.12 68.46L228.70 83.98L225.48 94.04L219.91 91.31L212.49 88.87L216.11 75.78L218.25 64.65L219.82 53.22L220.40 38.18L220.99 24.32H221.09L220.79 21.09L220.01 15.43L231.44 15.04L255.85 14.84Q255.66 10.64 255.36 6.35ZM231.24 82.91 236.71 80.47 242.47 78.81 246.96 77.15 242.38 75.49 232.71 73.34 234.07 68.46 235.83 63.18 246.57 65.62 254.97 68.26 252.82 73.05 251.65 75.39 253.61 74.61 255.07 80.47 256.63 84.28 250.09 86.23 235.44 92.97 233.39 87.79ZM390.03 81.45Q390.12 78.52 390.22 75.68V69.04L379.68 68.65Q376.26 68.75 372.74 68.85Q372.74 71.68 372.84 74.51Q372.94 78.03 372.94 81.45Q375.96 81.54 378.99 81.64ZM328.21 15.82 336.32 15.72 342.66 16.70 342.08 24.02 341.98 29.30Q343.74 29.30 345.59 29.20H356.53V36.04L356.14 43.07L344.42 42.77L329.48 42.97L316.30 43.36L315.91 36.82L315.71 30.27L326.36 29.59H328.41V27.44ZM317.86 46.88 324.79 45.61 330.95 45.21 332.21 60.55 333.00 68.26 320.98 70.41 319.32 59.38ZM316.10 71.97 333.19 70.02 343.05 68.95 337.49 68.07 338.66 59.57 339.83 43.55 346.86 44.34 354.29 46.78 351.36 62.40 349.89 68.16 355.26 67.58 356.04 75.49 356.73 80.47 331.34 83.30 317.18 84.96 316.79 79.10ZM370.98 11.33 379.58 11.13 387.29 12.11 386.51 24.61V29.49L387.98 29.39L404.58 28.52L404.87 35.35L404.68 41.99L391.79 41.89Q389.15 41.99 386.41 42.09Q386.41 44.43 386.41 46.88V54.39L402.33 54.69L406.04 56.93V82.32L405.85 94.04L398.62 93.85L378.99 93.46Q374.50 93.46 370.01 93.46L364.54 93.75L358.58 93.65L358.19 90.62L358.09 73.54L357.80 54.98L364.44 54.79Q365.22 54.79 365.91 54.79Q365.91 54.69 365.91 54.59Q368.93 54.49 371.96 54.49Q371.86 45.41 371.77 36.33Z"/></g><g transform="translate(40.0,36.7) scale(0.579)"><path d="M0 9 H56 L61 9 L65 2 L70 15 L75 9 H150" fill="none" stroke="#b8860b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g></svg><span class="brand-home" aria-hidden="true">🏠</span></a>
     <div class="nav-links">
       <a class="nav-link" href="../library.html" data-nav="library">📚 文獻庫</a>
       <a class="nav-link" href="../breeds.html" data-nav="breeds">🐈 品種</a>
@@ -748,6 +846,7 @@ ARTICLES_INDEX_TEMPLATE = """\
       <a href="../vets.html">🏥 獸醫院</a>
       <a href="index.html">📝 文章</a>
       <a href="../about.html">ℹ️ 關於本站</a>
+      <a href="../editorial.html">📋 編輯方針</a>
       <a href="../privacy.html">🔒 隱私政策</a>
     </div>
     <div class="f-meta">
@@ -874,6 +973,7 @@ def build_articles() -> list[dict]:
         quality = (meta.get("quality") or "draft").strip().lower()
         last_reviewed = meta.get("last_reviewed", "")
 
+        body_md, references_html, cited_keys = _process_footnotes(body_md, slug)
         body_html = _md_to_html(body_md)
         # Strip the leading <h1> if the markdown starts with # Title (avoids duplicate)
         body_html = re.sub(r"^\s*<h1>[^<]*</h1>\s*", "", body_html, count=1)
@@ -893,8 +993,11 @@ def build_articles() -> list[dict]:
             if p_match:
                 description = re.sub(r"<[^>]+>", "", p_match.group(1))[:150].strip()
 
+        # 有句內註腳 → 只顯示自動產生的「參考文獻」；沒有 → 退回 frontmatter sources 清單
         sources_html = ""
-        if sources:
+        if references_html:
+            sources_html = references_html
+        elif sources:
             items = "\n".join(f"      <li>{s}</li>" for s in sources)
             sources_html = f"""<div class="sources-box">
       <h3>資料來源</h3>
@@ -923,6 +1026,17 @@ def build_articles() -> list[dict]:
                 '本文為 AI 草稿，尚未經人工審核校對，醫療資訊請務必再次與獸醫師確認，勿據此自行診斷或用藥。'
                 '</div>'
             )
+
+        # 編輯／審核揭露（E-E-A-T）：人類編輯 + AI 起草，連到 editorial.html
+        # last_reviewed 為 null/空 → 只顯示編輯者；有日期 → 加「審核 {日期}」並寫進 schema dateModified
+        lr = str(last_reviewed).strip() if last_reviewed not in (None, "", "null", "None") else ""
+        editor_meta_html = (
+            '      <span>✍️ 編輯 <a href="https://github.com/Chen-MouChin" target="_blank" rel="noopener">Chen-MouChin</a>'
+            ' · AI 協助起草 · <a href="../editorial.html">編輯方針</a></span>'
+        )
+        if lr:
+            editor_meta_html += f'\n      <span>✅ 審核 {_escape_html(lr)}</span>'
+        date_modified_json = f'\n    "dateModified": "{_escape_html(lr)}",' if lr else ""
 
         # 文末「找獸醫」CTA（從文章 frontmatter 的 find_vet 欄位）
         # 值：cat_only（→ vets.html?cat=1）/ emergency（→ ?only24h=1）/ both
@@ -1027,6 +1141,8 @@ def build_articles() -> list[dict]:
             category=category,
             cat_emoji=cat_emoji,
             date=str(date),
+            date_modified_json=date_modified_json,
+            editor_meta_html=editor_meta_html,
             body=body_html,
             sources_html=sources_html,
             related_products_html=related_products_html,
@@ -1052,6 +1168,7 @@ def build_articles() -> list[dict]:
             "tags": meta.get("tags", []),
             "quality": quality,
             "last_reviewed": str(last_reviewed) if last_reviewed else "",
+            "citations": cited_keys,
             "body_text": re.sub(r"<[^>]+>", "", body_html)[:800],
         })
 
@@ -1238,6 +1355,10 @@ def build_breed_pages() -> list[dict]:
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<link rel="apple-touch-icon" href="../favicon-180.png">
+<meta property="og:image" content="https://chen-mouchin.github.io/cat-health-tw/images/og-default.png">
 <title>{name_zh}（{name_en}）品種資料 — 貓健康站</title>
 <meta name="description" content="{name_zh} 品種資料：原產 {origin}、壽命 {life_str}、體重 {weight_str}。{desc_meta}">
 <meta property="og:title" content="{name_zh}（{name_en}）— 貓健康站 品種圖鑑">
@@ -1273,7 +1394,7 @@ h1 .en {{ font-size: 0.95rem; font-weight: 400; color: var(--text-muted, #6e6e73
 </head>
 <body>
 <nav class="site-nav">
-  <a class="nav-brand" href="../index.html" title="回首頁"><span class="b-icon">🐱</span><span class="brand-text">貓健康站</span><span class="brand-home" aria-hidden="true">🏠</span></a>
+  <a class="nav-brand" href="../index.html" title="回首頁"><svg class="brand-logo" viewBox="0 0 180 47" aria-label="貓健康站" role="img"><g transform="translate(0,15.2) scale(0.750)" fill="currentColor"><path d="M4 20 V2 L14 10 Z"/><path d="M36 20 V2 L26 10 Z"/><circle cx="13" cy="18" r="2.2"/><circle cx="27" cy="18" r="2.2"/></g><g transform="translate(40.0,0) scale(0.340)"><path fill="currentColor" d="M79.79 93.26 65.04 93.46 49.61 93.65 48.24 93.75H41.21L40.72 64.45L40.82 45.31L45.21 44.73V44.63H46.00L46.48 44.53L48.83 44.43L61.13 43.95H81.25L89.16 44.73L91.89 46.78L92.48 64.84L92.29 85.94L91.89 93.75H85.74ZM59.08 65.43 58.79 57.91 54.59 58.01V60.35L54.69 65.53ZM71.78 65.23 77.05 65.33 76.95 57.91H71.88ZM59.08 82.71V76.95L54.98 77.15L55.08 82.71H58.40ZM71.97 82.62H76.95L77.15 77.54V76.86H71.88ZM17.58 85.45 24.41 85.16 25.68 81.35 20.21 84.28ZM68.85 9.96 76.37 9.67 83.98 10.55 83.79 19.63 92.68 19.92V27.25L91.80 33.30L83.01 32.91L82.91 35.25L82.52 41.50L73.24 41.02L68.85 40.43L68.95 32.62L60.06 32.81L60.45 40.33L51.56 41.11L46.97 41.41L46.29 33.30L40.62 33.59L39.75 27.54L39.65 20.61L45.41 20.31L45.02 12.30L52.83 10.84L58.89 10.94L59.38 19.73L69.14 19.34V16.50ZM32.62 8.89 36.23 13.38 39.26 20.21 32.81 23.14 22.17 27.25 7.71 31.84 5.86 27.44 4.79 20.02 15.04 17.09 23.73 13.67ZM6.15 35.94 10.64 32.91 15.72 30.66 18.16 35.45 20.61 41.11 16.41 43.46 11.82 45.70 9.47 41.80ZM19.24 30.96 24.71 27.15 29.49 25.29 32.23 29.98 34.18 34.08 36.72 31.74 41.11 36.43 44.53 42.77 37.21 47.17 33.20 49.22 37.01 56.54 40.14 70.51 38.87 84.77 36.43 91.41 32.23 94.73 24.51 95.12 19.14 94.24 18.55 89.45 16.80 85.74 10.74 88.38 8.79 85.35 7.13 78.42 16.31 74.51 23.05 70.80 26.17 68.36 25.68 66.41 19.92 69.63 11.82 73.14 10.06 70.70 7.71 63.57 19.53 58.20 22.17 56.45 21.29 54.69 19.53 55.47 10.35 58.69 8.20 54.98 6.15 47.85 13.96 45.51 25.59 40.23 30.18 37.30 29.30 37.70 24.22 39.16 21.48 34.47ZM134.08 77.73 129.88 75.20 129.78 83.20ZM153.12 68.36 150.97 73.05 153.80 74.51ZM177.44 28.12H180.95L180.86 25.49L177.54 25.29ZM177.44 41.02 180.76 41.21 180.86 38.28H177.44ZM165.13 75.29 156.54 75.49 165.13 78.22ZM136.62 44.53 138.96 38.67 136.52 38.38 132.22 38.57 131.44 33.01 128.80 40.92 126.36 46.58 130.66 48.05 130.07 62.40 129.98 68.46 134.57 62.79 140.04 66.60 141.99 61.23 139.35 60.74 135.25 60.35 134.27 55.18 133.88 49.51ZM164.35 7.71 173.73 7.62 178.12 8.69 177.93 13.87H185.64L191.99 14.55L194.33 17.09L194.23 28.32L199.61 28.42V35.45L198.73 39.06L194.04 38.87L193.16 50.78H187.40L185.93 50.59L177.44 50.29L177.54 52.64L191.89 53.12L191.99 59.18L191.30 63.18L185.05 62.60L177.63 62.50V65.14L189.55 65.33L197.16 65.82V71.78L196.38 76.46L186.52 75.49L177.73 75.20L177.83 79.20L171.09 79.00L165.72 78.42L167.38 78.91L181.44 80.86L195.60 81.45L195.21 89.06L194.14 94.43L176.56 92.77L164.35 90.53L151.17 86.72L145.11 83.89L142.77 87.79L137.59 94.24L131.93 89.84L129.78 86.72L129.88 94.53H122.85L117.38 93.75L117.77 72.56V65.72L115.52 70.31L109.57 66.21L105.66 61.23L111.03 50.49L116.60 35.84L120.50 22.75L123.34 9.86L132.61 12.01L137.59 14.94L134.18 25.20L142.87 25.00L148.82 25.49L151.17 31.64L152.05 38.28L150.48 42.87L146.97 49.22L151.07 49.41L153.61 50.29L155.17 56.25L155.46 61.33L154.39 65.62L165.23 65.23V62.50L157.91 62.79L156.93 58.30L157.22 52.93L165.23 52.73V50.29L155.27 50.49L154.59 46.78L154.68 41.21L165.04 41.11V38.28L153.61 38.38L152.83 32.71L153.02 28.12L164.94 28.03L164.84 25.39L155.37 25.49L154.49 21.00L154.39 14.16L164.55 13.96ZM271.09 42.87Q275.58 42.87 279.97 42.77Q280.07 41.41 280.17 40.14Q275.68 39.94 271.18 39.75Q271.09 40.62 271.09 41.50ZM271.18 54.10H279.58Q279.58 52.73 279.68 51.37Q279.29 51.37 278.80 51.37Q274.99 51.46 271.09 51.46Q271.18 52.83 271.18 54.10ZM271.28 70.02 279.29 66.99 286.12 64.06 287.79 63.09H286.42H279.29V62.60L271.28 62.70H271.18ZM273.53 73.34 271.28 70.31V72.75ZM255.36 6.35 266.40 8.40 270.79 9.08 270.50 15.14Q275.58 15.23 280.66 15.33H299.31L299.11 22.17L298.43 27.64L277.34 26.66L262.10 26.37L266.01 27.54L272.06 28.52Q271.96 29.88 271.87 31.15H280.46L292.47 32.13L294.91 34.28L294.62 43.16L302.82 43.36L302.14 48.05L301.95 52.05L294.33 51.86L293.64 63.09H290.91L293.06 66.60L296.96 71.58L291.50 74.22L287.30 75.78Q286.22 76.07 285.15 76.46L294.04 80.66L301.85 84.28L298.53 89.94L295.79 94.73L288.86 90.53L280.56 86.43L271.48 83.20Q271.57 87.01 271.67 90.92L270.11 92.97L265.03 94.82L255.07 95.21L253.31 91.02L251.26 87.21L254.88 86.91L257.61 86.23L257.32 76.66V73.63Q257.32 68.16 257.22 62.70H256.24L240.03 62.89L239.64 58.69L238.96 54.30H257.22L257.12 51.66Q253.61 51.66 250.19 51.76L236.12 51.86L235.44 46.78L234.95 43.07Q245.89 43.07 256.83 42.97V40.04L254.29 40.14H239.64L239.05 35.45L238.27 31.25L251.75 31.15H256.54L256.34 26.27Q255.07 26.27 253.90 26.17L230.27 26.56L235.54 28.12L233.98 53.71L232.12 68.46L228.70 83.98L225.48 94.04L219.91 91.31L212.49 88.87L216.11 75.78L218.25 64.65L219.82 53.22L220.40 38.18L220.99 24.32H221.09L220.79 21.09L220.01 15.43L231.44 15.04L255.85 14.84Q255.66 10.64 255.36 6.35ZM231.24 82.91 236.71 80.47 242.47 78.81 246.96 77.15 242.38 75.49 232.71 73.34 234.07 68.46 235.83 63.18 246.57 65.62 254.97 68.26 252.82 73.05 251.65 75.39 253.61 74.61 255.07 80.47 256.63 84.28 250.09 86.23 235.44 92.97 233.39 87.79ZM390.03 81.45Q390.12 78.52 390.22 75.68V69.04L379.68 68.65Q376.26 68.75 372.74 68.85Q372.74 71.68 372.84 74.51Q372.94 78.03 372.94 81.45Q375.96 81.54 378.99 81.64ZM328.21 15.82 336.32 15.72 342.66 16.70 342.08 24.02 341.98 29.30Q343.74 29.30 345.59 29.20H356.53V36.04L356.14 43.07L344.42 42.77L329.48 42.97L316.30 43.36L315.91 36.82L315.71 30.27L326.36 29.59H328.41V27.44ZM317.86 46.88 324.79 45.61 330.95 45.21 332.21 60.55 333.00 68.26 320.98 70.41 319.32 59.38ZM316.10 71.97 333.19 70.02 343.05 68.95 337.49 68.07 338.66 59.57 339.83 43.55 346.86 44.34 354.29 46.78 351.36 62.40 349.89 68.16 355.26 67.58 356.04 75.49 356.73 80.47 331.34 83.30 317.18 84.96 316.79 79.10ZM370.98 11.33 379.58 11.13 387.29 12.11 386.51 24.61V29.49L387.98 29.39L404.58 28.52L404.87 35.35L404.68 41.99L391.79 41.89Q389.15 41.99 386.41 42.09Q386.41 44.43 386.41 46.88V54.39L402.33 54.69L406.04 56.93V82.32L405.85 94.04L398.62 93.85L378.99 93.46Q374.50 93.46 370.01 93.46L364.54 93.75L358.58 93.65L358.19 90.62L358.09 73.54L357.80 54.98L364.44 54.79Q365.22 54.79 365.91 54.79Q365.91 54.69 365.91 54.59Q368.93 54.49 371.96 54.49Q371.86 45.41 371.77 36.33Z"/></g><g transform="translate(40.0,36.7) scale(0.579)"><path d="M0 9 H56 L61 9 L65 2 L70 15 L75 9 H150" fill="none" stroke="#b8860b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g></svg><span class="brand-home" aria-hidden="true">🏠</span></a>
   <div class="nav-links">
     <a class="nav-link" href="../library.html" data-nav="library">📚 文獻庫</a>
     <a class="nav-link active" href="../breeds.html" data-nav="breeds">🐈 品種</a>
@@ -1317,6 +1438,7 @@ h1 .en {{ font-size: 0.95rem; font-weight: 400; color: var(--text-muted, #6e6e73
     <a href="../vets.html">🏥 獸醫院</a>
     <a href="../articles/index.html">📝 文章</a>
     <a href="../about.html">ℹ️ 關於本站</a>
+    <a href="../editorial.html">📋 編輯方針</a>
     <a href="../privacy.html">🔒 隱私政策</a>
   </div>
   <div class="f-meta">
@@ -1350,6 +1472,7 @@ def build_sitemap(articles: list[dict], breeds: list[dict] = None):
         f"  <url><loc>{SITE_URL}/breeds.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>",
         f"  <url><loc>{SITE_URL}/vets.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>",
         f"  <url><loc>{SITE_URL}/about.html</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>",
+        f"  <url><loc>{SITE_URL}/editorial.html</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>",
     ]
     published = [a for a in articles if a.get("quality") in ("reviewed", "featured")]
     skipped_drafts = len(articles) - len(published)

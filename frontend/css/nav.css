@@ -55,6 +55,7 @@
     -webkit-text-fill-color: transparent;
   }
 }
+.site-nav .nav-brand .brand-logo { height: 28px; width: auto; display: block; color: var(--text, #1d1d1f); }
 /* 常駐「🏠」icon — 非首頁時顯示，明確告訴使用者「這裡可以回首頁」*/
 .site-nav .nav-brand .brand-home {
   font-size: 0.78rem; opacity: 0.55;
@@ -111,7 +112,7 @@
 @media (max-width: 480px) {
   .site-nav { padding: 0.4rem 0.6rem; gap: 0.25rem; }
   .site-nav .nav-brand { font-size: 0.92rem; padding: 0.3rem 0.5rem; }
-  .site-nav .nav-brand .b-icon { font-size: 1.2rem; }
+  .site-nav .nav-brand .brand-logo { height: 24px; }
   .site-nav .nav-link { font-size: 0.78rem; padding: 0.3rem 0.55rem; gap: 0.15rem; }
   /* 手機沒 hover，提示常駐顯示但更小 */
   .site-nav .nav-brand:not(.active)::after {

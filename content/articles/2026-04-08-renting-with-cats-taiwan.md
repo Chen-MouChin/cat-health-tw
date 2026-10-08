@@ -9,7 +9,9 @@ sources:
   - 立法院 — 公寓大廈不得禁止飼養寵物議題之研析: https://www.ly.gov.tw/Pages/Detail.aspx?nodeid=6590&pid=163942
   - 農業部 — 動物保護法: https://law.moa.gov.tw/LawContent.aspx?id=FL014739
 created: 2026-04-08
+date: 2026-04-08
 cover_image: https://image.pollinations.ai/prompt/Cat%20owner%20reviewing%20rental%20lease%20with%20landlord%20in%20Taiwan%20apartment%2C%20pet-friendly%20rental%20agreement%2C%20happy%20resolution%2C%20modern%20interior%2C%20professional%20pet%20photography%2C%20soft%20natural%20bokeh%20lighting%2C%20photorealistic%20high%20quality%2C%204K%20sharp%20focus%2C%20warm%20tones?width=800&height=450&nologo=true&model=flux-schnell&seed=42
+description: "房東可以禁止養貓嗎？整理公寓大廈管理條例、租約禁養條款效力、貓晶片登記義務，以及租屋前確認文件、書面許可與押金談判的實務做法。"
 quality: draft
 last_reviewed: null
 ---
@@ -61,8 +63,8 @@ last_reviewed: null
 
 ### 第一步：確認兩份文件
 
-1. **租賃契約** — 要求房東提供完整版本，逐條確認是否有禁養條款
-2. **社區規約** — 向管委會或房東索取，確認大樓規定
+1. **租賃契約**，要求房東提供完整版本，逐條確認是否有禁養條款
+2. **社區規約**，向管委會或房東索取，確認大樓規定
 
 ### 第二步：書面確認養貓許可
 
@@ -120,9 +122,9 @@ last_reviewed: null
 
 ---
 
-> 📌 **資料來源**
-> - 台灣法律網 — [租屋養毛小孩](https://www.lawtw.com/archives/445490)
-> - 立法院 — [公寓大廈不得禁止飼養寵物議題之研析](https://www.ly.gov.tw/Pages/Detail.aspx?nodeid=6590&pid=163942)
-> - 農業部 — [動物保護法](https://law.moa.gov.tw/LawContent.aspx?id=FL014739)
+> **資料來源**
+> - 台灣法律網，[租屋養毛小孩](https://www.lawtw.com/archives/445490)
+> - 立法院，[公寓大廈不得禁止飼養寵物議題之研析](https://www.ly.gov.tw/Pages/Detail.aspx?nodeid=6590&pid=163942)
+> - 農業部，[動物保護法](https://law.moa.gov.tw/LawContent.aspx?id=FL014739)
 >
 > **免責聲明：** 本文為一般資訊整理，不構成法律意見。如有具體法律糾紛，請諮詢律師或消費者保護協會。

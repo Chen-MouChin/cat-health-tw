@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>貓健康站 工作檯</title>
+<link rel="icon" href="/site/favicon.svg">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.4.21/vue.global.prod.min.js"></script>
+<style>
+  :root { --bg:#f9f6f0; --card:#fff; --text:#1d1d1f; --muted:#6e6e73; --faint:#a1a1a6; --border:#e8e4db; --gold:#b8860b; --green:#5b8a6e; --red:#b04a3a; --amber:#8a7340; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family: system-ui, "Noto Sans TC", "Microsoft JhengHei", sans-serif; background:var(--bg); color:var(--text); font-size:14px; }
+  header.top { display:flex; align-items:center; gap:14px; padding:8px 16px; background:rgba(255,255,255,.92); border-bottom:1px solid var(--border); position:sticky; top:0; z-index:10; }
+  header.top img { height:26px; }
+  header.top .t { font-weight:700; }
+  nav.tabs { display:flex; gap:4px; margin-left:16px; }
+  nav.tabs button { border:1px solid transparent; background:transparent; padding:6px 12px; border-radius:14px; cursor:pointer; font:inherit; color:var(--text); }
+  nav.tabs button.on { background:var(--text); color:#fff; }
+  .right { margin-left:auto; display:flex; gap:8px; align-items:center; color:var(--muted); font-size:12px; }
+  main { padding:16px; }
+  .cards { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:12px; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:14px 16px; }
+  .card h3 { margin:0 0 8px; font-size:13px; color:var(--muted); font-weight:500; }
+  .big { font-size:28px; font-weight:700; line-height:1; }
+  .sub { color:var(--muted); font-size:12px; margin-top:6px; }
+  .bar { height:6px; background:#ece8df; border-radius:3px; overflow:hidden; margin-top:8px; }
+  .bar i { display:block; height:100%; background:var(--green); }
+  .bar i.warn { background:var(--gold); }
+  table { width:100%; border-collapse:collapse; font-size:13px; }
+  th { text-align:left; color:var(--muted); font-weight:500; padding:6px 8px; border-bottom:1px solid var(--border); }
+  td { padding:6px 8px; border-bottom:1px solid #f0ece4; vertical-align:top; }
+  tr.sel td { background:#f3efe6; }
+  tr[data-click] { cursor:pointer; }
+  .pill { display:inline-block; font-size:11px; padding:1px 7px; border-radius:8px; border:1px solid transparent; }
+  .q-draft { background:#f5f0e8; color:var(--amber); border-color:#d4c8b0; }
+  .q-reviewed { background:#e8f3ea; color:#2f6b3a; border-color:#b8d8bf; }
+  .q-featured { background:#e9eef8; color:#2d4a8a; border-color:#b9c8ea; }
+  .q-archived { background:#eee; color:#666; }
+  .s-approved { background:#e8f3ea; color:#2f6b3a; }
+  .s-pending_review, .s-needs_review { background:#f5f0e8; color:var(--amber); }
+  .s-rejected { background:#f6e3df; color:var(--red); }
+  .fail { color:var(--red); font-weight:600; }
+  .warn { color:var(--amber); }
+  .ok { color:var(--green); }
+  button.btn { font:inherit; border:1px solid var(--border); background:#fff; padding:6px 12px; border-radius:8px; cursor:pointer; color:var(--text); }
+  button.btn:hover { background:#f3efe6; }
+  button.btn.primary { background:var(--text); color:#fff; border-color:var(--text); }
+  button.btn.gold { background:var(--gold); color:#fff; border-color:var(--gold); }
+  button.btn.danger { color:var(--red); }
+  button.btn:disabled { opacity:.5; cursor:default; }
+  input, select, textarea { font:inherit; border:1px solid var(--border); border-radius:8px; padding:6px 8px; background:#fff; color:var(--text); }
+  textarea { width:100%; min-height:80px; resize:vertical; }
+  .toolbar { display:flex; gap:8px; align-items:center; flex-wrap:wrap; margin-bottom:12px; }
+  .review { display:grid; grid-template-columns:300px minmax(0,1fr) 360px; gap:12px; height:calc(100vh - 92px); }
+  .review .col { background:var(--card); border:1px solid var(--border); border-radius:12px; overflow:auto; }
+  .review iframe { width:100%; height:100%; border:0; background:#fff; }
+  .list-item { padding:8px 12px; border-bottom:1px solid #f0ece4; cursor:pointer; }
+  .list-item:hover { background:#faf7f1; }
+  .list-item.sel { background:#f3efe6; }
+  .list-item .t { font-size:13px; }
+  .list-item .m { font-size:11px; color:var(--muted); display:flex; gap:8px; margin-top:2px; }
+  .side { padding:12px 14px; display:flex; flex-direction:column; gap:12px; font-size:13px; }
+  .side h4 { margin:0; font-size:12px; color:var(--muted); font-weight:500; }
+  .cite { border:1px solid var(--border); border-radius:8px; padding:8px 10px; }
+  .cite .k { font-family:ui-monospace, monospace; font-size:11px; color:var(--muted); }
+  .cite .a { font-size:12px; color:#444; margin-top:4px; max-height:5.5em; overflow:auto; }
+  .lint li { margin:2px 0; }
+  .actions { display:flex; gap:6px; flex-wrap:wrap; }
+  kbd { font-family:ui-monospace, monospace; font-size:11px; background:#f0ece4; padding:0 5px; border-radius:4px; }
+  pre.out { background:#1d1d1f; color:#e8e4db; padding:12px; border-radius:8px; font-size:12px; max-height:360px; overflow:auto; white-space:pre-wrap; }
+  .toast { position:fixed; bottom:16px; right:16px; background:var(--text); color:#fff; padding:10px 14px; border-radius:10px; font-size:13px; z-index:50; }
+  .muted { color:var(--muted); }
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .cit-row textarea { min-height:60px; }
+  details summary { cursor:pointer; color:var(--muted); font-size:12px; }
+</style>
+</head>
+<body>
+<div id="app">
+  <header class="top">
+    <img src="/site/images/logo/lockup-horizontal.svg" alt="貓健康站">
+    <span class="t">工作檯</span>
+    <nav class="tabs">
+      <button v-for="t in tabs" :key="t.id" :class="{on: tab===t.id}" @click="go(t.id)">{{ t.label }}</button>
+    </nav>
+    <div class="right">
+      <span v-if="ov">{{ ov.git.branch }} · 未 commit {{ ov.git.changed }} 檔 · 上次 build {{ fmtTime(ov.built_at) }}</span>
+      <button class="btn" @click="loadOverview">重新整理</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- 儀表板 -->
+    <section v-if="tab==='dash'">
+      <div class="cards" v-if="ov">
+        <div class="card">
+          <h3>文章 reviewed + featured</h3>
+          <div class="big">{{ (ov.articles.by_quality.reviewed||0)+(ov.articles.by_quality.featured||0) }} <span class="muted" style="font-size:14px">/ {{ ov.thresholds.reviewed }} 門檻</span></div>
+          <div class="bar"><i :style="{width: pct((ov.articles.by_quality.reviewed||0)+(ov.articles.by_quality.featured||0), ov.thresholds.reviewed)}"></i></div>
+          <div class="sub">共 {{ ov.articles.total }} 篇，draft {{ ov.articles.by_quality.draft||0 }}</div>
+        </div>
+        <div class="card">
+          <h3>寫作規範 lint</h3>
+          <div class="big" :class="ov.articles.fails? 'fail':'ok'">{{ ov.articles.fails }} FAIL</div>
+          <div class="sub">{{ ov.articles.warns }} WARN · 零 FAIL {{ ov.articles.zero_fail }}/{{ ov.articles.total }} · 有註腳 {{ ov.articles.with_footnotes }} 篇</div>
+        </div>
+        <div class="card">
+          <h3>文獻 approved</h3>
+          <div class="big">{{ ov.citations.by_status.approved||0 }} <span class="muted" style="font-size:14px">/ {{ ov.thresholds.approved }} 門檻</span></div>
+          <div class="bar"><i :style="{width: pct(ov.citations.by_status.approved||0, ov.thresholds.approved)}"></i></div>
+          <div class="sub">共 {{ ov.citations.total }} 筆 · 被引用 {{ ov.citations.cited }} 筆</div>
+        </div>
+        <div class="card">
+          <h3>文獻完整度</h3>
+          <div class="sub" style="margin-top:0">url 已驗證 {{ pct(ov.citations.url_verified, ov.citations.total) }}（門檻 90%）</div>
+          <div class="bar"><i :class="{warn: ov.citations.url_verified/ov.citations.total<0.9}" :style="{width: pct(ov.citations.url_verified, ov.citations.total)}"></i></div>
+          <div class="sub">中文摘要 {{ pct(ov.citations.abstract_zh, ov.citations.total) }}（門檻 80%）</div>
+          <div class="bar"><i :class="{warn: ov.citations.abstract_zh/ov.citations.total<0.8}" :style="{width: pct(ov.citations.abstract_zh, ov.citations.total)}"></i></div>
+          <div class="sub">中文標題 {{ pct(ov.citations.title_zh, ov.citations.total) }}</div>
+        </div>
+      </div>
+      <div class="card" style="margin-top:12px">
+        <h3>今天該做什麼</h3>
+        <ol style="margin:0; padding-left:18px; line-height:1.8">
+          <li>「文章審核」讀一篇，沒問題按 <kbd>r</kbd>，有問題按 <kbd>d</kbd> 並留備註，要淘汰按 <kbd>x</kbd>。</li>
+          <li>「文獻核對」把 reviewed 文章引用的文獻標 approved，url 點過就勾已驗證。</li>
+          <li>「建置與發佈」重建、看 lint、commit、push。push 之後 GitHub Pages 幾分鐘內更新。</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 文章審核 -->
+    <section v-if="tab==='review'" class="review">
+      <div class="col">
+        <div class="toolbar" style="padding:10px 12px 0">
+          <select v-model="fq"><option value="">全部品質</option><option value="draft">draft</option><option value="reviewed">reviewed</option><option value="featured">featured</option></select>
+          <select v-model="fc"><option value="">全部分類</option><option v-for="c in categories" :value="c">{{ c }}</option></select>
+          <input v-model="fs" placeholder="搜尋標題" style="width:110px">
+        </div>
+        <div class="muted" style="padding:4px 12px 8px; font-size:11px">{{ filtered.length }} 篇 · <kbd>n</kbd>/<kbd>p</kbd> 上下篇</div>
+        <div v-for="a in filtered" :key="a.slug" class="list-item" :class="{sel: cur && cur.slug===a.slug}" @click="open(a.slug)">
+          <div class="t">{{ a.title }}</div>
+          <div class="m"><span class="pill" :class="'q-'+a.quality">{{ a.quality }}</span><span>{{ a.category }}</span><span>{{ a.chars }} 字</span><span>註腳 {{ a.footnotes }}</span><span :class="a.fails?'fail':''">F{{ a.fails }}</span><span class="warn">W{{ a.warns }}</span></div>
+        </div>
+      </div>
+      <div class="col">
+        <iframe v-if="cur" :src="cur.html + '?wb=' + bump"></iframe>
+        <div v-else class="muted" style="padding:24px">左邊選一篇。</div>
+      </div>
+      <div class="col side" v-if="cur">
+        <div>
+          <h4>{{ cur.file }}</h4>
+          <div style="margin-top:4px"><span class="pill" :class="'q-'+cur.frontmatter.quality">{{ cur.frontmatter.quality }}</span>
+            <span class="muted" v-if="cur.frontmatter.last_reviewed && cur.frontmatter.last_reviewed!=='null'"> 審核 {{ cur.frontmatter.last_reviewed }}</span></div>
+        </div>
+        <div>
+          <h4>審核</h4>
+          <textarea v-model="note" placeholder="備註（選填）：要補什麼、哪裡存疑"></textarea>
+          <div class="actions" style="margin-top:6px">
+            <button class="btn primary" @click="mark('reviewed')">通過 <kbd>r</kbd></button>
+            <button class="btn gold" @click="mark('featured')">精選 <kbd>f</kbd></button>
+            <button class="btn" @click="mark('draft')">退回 draft <kbd>d</kbd></button>
+            <button class="btn danger" @click="mark('archived')">淘汰 <kbd>x</kbd></button>
+          </div>
+          <div class="muted" style="font-size:11px; margin-top:6px">通過會把 last_reviewed 設為今天並存回 .md；淘汰會移到 _archived/。改完記得到「建置與發佈」重建。</div>
+        </div>
+        <div>
+          <h4>Lint</h4>
+          <div v-if="!cur.lint.fails.length && !cur.lint.warns.length" class="ok">乾淨</div>
+          <ul class="lint" style="margin:4px 0; padding-left:16px">
+            <li v-for="f in cur.lint.fails" class="fail">{{ f[0] }}：{{ f[1] }}</li>
+            <li v-for="w in cur.lint.warns" class="warn">{{ w[0] }}：{{ w[1] }}</li>
+          </ul>
+        </div>
+        <div>
+          <h4>句內引用的文獻（{{ cur.citations.length }}）</h4>
+          <div v-if="!cur.citations.length" class="muted">沒有 [^KEY] 註腳。</div>
+          <div v-for="c in cur.citations" :key="c.key" class="cite" style="margin-top:6px">
+            <div class="k">{{ c.key }} <span v-if="c.found" class="pill" :class="'s-'+c.status">{{ c.status }}</span><span v-else class="pill s-rejected">文獻庫沒有</span></div>
+            <div v-if="c.found"><b>{{ c.title_zh || c.title }}</b> <span class="muted">{{ c.year }}</span></div>
+            <div v-if="c.found && c.url"><a :href="c.url" target="_blank" rel="noopener" style="font-size:12px">原文 ↗</a> <span class="muted" style="font-size:11px">{{ c.url_verified ? '已驗證' : '未驗證' }}</span></div>
+            <div v-if="c.found && c.abstract_zh" class="a">{{ c.abstract_zh }}</div>
+            <div v-if="c.found" class="actions" style="margin-top:6px">
+              <button class="btn" style="padding:2px 8px; font-size:12px" @click="citeSet(c.key,{status:'approved', url_verified:true})">approve</button>
+              <button class="btn" style="padding:2px 8px; font-size:12px" @click="goCite(c.key)">編輯</button>
+            </div>
+          </div>
+        </div>
+        <details>
+          <summary>frontmatter sources（{{ cur.sources.length }}）</summary>
+          <ul style="padding-left:16px; font-size:12px; color:#555"><li v-for="s in cur.sources">{{ s }}</li></ul>
+        </details>
+      </div>
+    </section>
+
+    <!-- 文獻核對 -->
+    <section v-if="tab==='cites'">
+      <div class="toolbar">
+        <select v-model="cs" @change="loadCites"><option value="">全部狀態</option><option value="pending_review">pending_review</option><option value="needs_review">needs_review</option><option value="approved">approved</option><option value="rejected">rejected</option></select>
+        <label><input type="checkbox" v-model="onlyCited"> 只看被引用的</label>
+        <input v-model="cq" placeholder="搜尋 key / 標題" style="width:200px">
+        <span class="muted">{{ citesFiltered.length }} 筆</span>
+      </div>
+      <div class="card" v-for="c in citesFiltered" :key="c.key" style="margin-bottom:10px">
+        <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap">
+          <span class="k" style="font-family:ui-monospace,monospace; font-size:12px">{{ c.key }}</span>
+          <span class="pill" :class="'s-'+c.status">{{ c.status }}</span>
+          <span class="muted" style="font-size:12px">{{ c.source }} · {{ c.year }} · 被 {{ c.cited_by.length }} 篇引用</span>
+          <a v-if="c.url" :href="c.url" target="_blank" rel="noopener" style="font-size:12px">原文 ↗</a>
+          <label style="font-size:12px"><input type="checkbox" v-model="c.url_verified"> url 已驗證</label>
+          <span style="margin-left:auto" class="actions">
+            <button class="btn" @click="verify(c)" :disabled="busy">跑 verify_citation</button>
+            <button class="btn primary" @click="citeSave(c,'approved')">approve</button>
+            <button class="btn" @click="citeSave(c,'pending_review')">pending</button>
+            <button class="btn danger" @click="citeSave(c,'rejected')">reject</button>
+          </span>
+        </div>
+        <div class="grid2 cit-row" style="margin-top:8px">
+          <div><div class="muted" style="font-size:12px">英文標題</div><div style="font-size:13px">{{ c.title }}</div>
+            <div class="muted" style="font-size:12px; margin-top:6px">中文標題</div><input v-model="c.title_zh" style="width:100%"></div>
+          <div><div class="muted" style="font-size:12px">中文摘要（必須改寫，不可複製原文）</div><textarea v-model="c.abstract_zh"></textarea></div>
+        </div>
+        <div style="margin-top:6px"><div class="muted" style="font-size:12px">備註</div><input v-model="c.notes" style="width:100%"></div>
+        <pre class="out" v-if="c._out" style="margin-top:8px">{{ c._out }}</pre>
+      </div>
+    </section>
+
+    <!-- 建置與發佈 -->
+    <section v-if="tab==='build'">
+      <div class="grid2">
+        <div class="card">
+          <h3>建置</h3>
+          <div class="actions">
+            <button class="btn primary" @click="runBuild" :disabled="busy">重建網站（build.py + 回填 cited_by）</button>
+            <button class="btn" @click="runLint" :disabled="busy">全站 lint</button>
+            <a class="btn" href="/site/" target="_blank" style="text-decoration:none">開啟預覽 ↗</a>
+          </div>
+          <pre class="out" v-if="out" style="margin-top:10px">{{ out }}</pre>
+        </div>
+        <div class="card">
+          <h3>Git</h3>
+          <div class="muted" style="font-size:12px">{{ git.branch_line }}</div>
+          <pre class="out" style="max-height:180px; margin-top:8px">{{ git.status || '（工作樹乾淨）' }}</pre>
+          <input v-model="msg" placeholder="commit 訊息，例如：review: 10 篇核心文章通過審核" style="width:100%; margin-top:8px">
+          <div class="actions" style="margin-top:8px">
+            <button class="btn primary" @click="commit" :disabled="busy || !msg">commit（先 fetch，落後會 pull --rebase）</button>
+            <button class="btn gold" @click="push" :disabled="busy">push（會直接上線）</button>
+            <button class="btn" @click="loadGit">重新整理</button>
+          </div>
+          <pre class="out" style="max-height:200px; margin-top:8px">{{ git.log }}</pre>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div class="toast" v-if="toast">{{ toast }}</div>
+</div>
+
+<script>
+const { createApp, ref, computed, onMounted, watch } = Vue;
+const H = { 'Content-Type': 'application/json', 'X-Workbench': '1' };
+const api = {
+  get: (u) => fetch(u).then(r => r.json()),
+  post: (u, b) => fetch(u, { method: 'POST', headers: H, body: JSON.stringify(b || {}) }).then(r => r.json()),
+};
+createApp({
+  setup() {
+    const tabs = [{ id: 'dash', label: '儀表板' }, { id: 'review', label: '文章審核' }, { id: 'cites', label: '文獻核對' }, { id: 'build', label: '建置與發佈' }];
+    const tab = ref(location.hash.replace('#', '') || 'dash');
+    const ov = ref(null), arts = ref([]), cur = ref(null), note = ref(''), bump = ref(0);
+    const fq = ref(''), fc = ref(''), fs = ref('');
+    const cites = ref([]), cs = ref(''), cq = ref(''), onlyCited = ref(true);
+    const out = ref(''), git = ref({ status: '', log: '', branch_line: '' }), msg = ref(''), busy = ref(false), toast = ref('');
+    const say = (m) => { toast.value = m; setTimeout(() => toast.value = '', 2500); };
+    const pct = (a, b) => b ? Math.min(100, Math.round(a / b * 100)) + '%' : '0%';
+    const fmtTime = (s) => s ? s.replace('T', ' ').replace('Z', ' UTC') : '未知';
+    const categories = computed(() => [...new Set(arts.value.map(a => a.category))].filter(Boolean));
+    const filtered = computed(() => arts.value.filter(a => (!fq.value || a.quality === fq.value) && (!fc.value || a.category === fc.value) && (!fs.value || a.title.includes(fs.value))));
+    const citesFiltered = computed(() => cites.value.filter(c => (!onlyCited.value || c.cited_by.length) && (!cq.value || c.key.includes(cq.value) || (c.title || '').includes(cq.value) || (c.title_zh || '').includes(cq.value))));
+
+    async function loadOverview() { ov.value = await api.get('/api/overview'); }
+    async function loadArts() { arts.value = await api.get('/api/articles'); }
+    async function loadCites() { cites.value = await api.get('/api/citations' + (cs.value ? '?status=' + cs.value : '')); }
+    async function loadGit() { git.value = await api.get('/api/git'); }
+    async function open(slug) { cur.value = await api.get('/api/articles/' + slug); note.value = cur.value.review_notes || ''; bump.value++; }
+    function go(t) { tab.value = t; location.hash = t; if (t === 'review' && !arts.value.length) loadArts(); if (t === 'cites' && !cites.value.length) loadCites(); if (t === 'build') loadGit(); }
+    async function mark(q) {
+      if (!cur.value) return;
+      if (q === 'archived' && !confirm('確定淘汰？檔案會移到 _archived/')) return;
+      const r = await api.post('/api/articles/' + cur.value.slug + '/quality', { quality: q, note: note.value });
+      if (r.error) return say('失敗：' + r.error);
+      say(q === 'archived' ? '已移到 _archived' : '已標 ' + q);
+      const i = filtered.value.findIndex(a => a.slug === cur.value.slug);
+      await loadArts(); loadOverview();
+      if (q === 'archived') { cur.value = null; return; }
+      const next = filtered.value[i + 1]; if (next) open(next.slug); else open(cur.value.slug);
+    }
+    function step(d) { if (!cur.value) { if (filtered.value[0]) open(filtered.value[0].slug); return; } const i = filtered.value.findIndex(a => a.slug === cur.value.slug); const n = filtered.value[i + d]; if (n) open(n.slug); }
+    async function citeSet(key, patch) { const r = await api.post('/api/citations/' + key, patch); if (r.error) return say(r.error); say(key + ' 已更新'); if (cur.value) open(cur.value.slug); loadOverview(); }
+    async function citeSave(c, status) { const r = await api.post('/api/citations/' + c.key, { status, title_zh: c.title_zh, abstract_zh: c.abstract_zh, notes: c.notes, url_verified: c.url_verified || status === 'approved' }); if (r.error) return say(r.error); c.status = status; if (status === 'approved') c.url_verified = true; say(c.key + ' → ' + status); loadOverview(); }
+    async function verify(c) { busy.value = true; c._out = '執行中…'; const r = await api.post('/api/verify/' + c.key); c._out = (r.stdout || '') + (r.stderr || ''); busy.value = false; }
+    function goCite(key) { cs.value = ''; cq.value = key; onlyCited.value = false; go('cites'); loadCites(); }
+    async function runBuild() { busy.value = true; out.value = '建置中…'; const r = await api.post('/api/build'); out.value = r.stdout + (r.stderr || ''); busy.value = false; bump.value++; loadOverview(); loadGit(); }
+    async function runLint() { busy.value = true; out.value = 'lint 中…'; const r = await api.post('/api/lint'); out.value = r.stdout; busy.value = false; loadArts(); loadOverview(); }
+    async function commit() { busy.value = true; const r = await api.post('/api/git/commit', { message: msg.value }); busy.value = false; if (!r.ok) { out.value = (r.error || '') + '\n' + JSON.stringify(r.steps || [], null, 1); return say('commit 失敗，看輸出'); } say('已 commit'); msg.value = ''; loadGit(); loadOverview(); }
+    async function push() { if (!confirm('push 到 GitHub 後 Pages 會自動發佈，確定？')) return; busy.value = true; const r = await api.post('/api/git/push'); busy.value = false; out.value = r.stdout + r.stderr; say(r.code === 0 ? '已 push' : 'push 失敗'); loadGit(); }
+
+    onMounted(() => {
+      loadOverview(); go(tab.value);
+      document.addEventListener('keydown', (e) => {
+        if (tab.value !== 'review' || ['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement.tagName)) return;
+        if (e.key === 'r') mark('reviewed'); else if (e.key === 'd') mark('draft'); else if (e.key === 'f') mark('featured'); else if (e.key === 'x') mark('archived');
+        else if (e.key === 'n') step(1); else if (e.key === 'p') step(-1);
+      });
+    });
+    return { tabs, tab, go, ov, arts, cur, note, bump, fq, fc, fs, categories, filtered, open, mark, step, cites, cs, cq, onlyCited, citesFiltered, loadCites, citeSet, citeSave, verify, goCite, out, git, msg, busy, toast, runBuild, runLint, commit, push, loadGit, loadOverview, pct, fmtTime };
+  }
+}).mount('#app');
+</script>
+</body>
+</html>

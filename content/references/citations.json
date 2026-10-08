@@ -1,8 +1,8 @@
 {
   "_meta": {
     "description": "貓健康站 literature database",
-    "total": 105,
-    "pending_review": 91,
+    "total": 109,
+    "pending_review": 77,
     "approved": 14,
     "rejected": 0
   },
@@ -179,7 +179,8 @@
     "url_verified": true,
     "notes": "PDF 原文標題為 modified 2019，但 IRIS 網站 2023 重新發布。數值經 PDF 原文逐字核實。",
     "cited_by": [
-      "cat-ckd-complete-guide"
+      "cat-ckd-complete-guide",
+      "cat-life-stages-care-taiwan"
     ]
   },
   "IRIS-CKD-TREATMENT-2023": {
@@ -208,6 +209,7 @@
     "url_verified": true,
     "notes": "17 頁 PDF 逐字核實。已修正 3 處原摘要中非原文內容：(1)刪除皮下輸液具體 ml 數 (2)刪除 Stage 4 特定磷目標 (3)刪除餵食管建議。14/14 項經 regex 比對原文確認。",
     "cited_by": [
+      "cat-ckd-complete-guide",
       "cat-life-stages-care-taiwan"
     ]
   },
@@ -381,7 +383,9 @@
     "status": "pending_review",
     "url_verified": true,
     "notes": "AAFP 官網免費",
-    "cited_by": []
+    "cited_by": [
+      "cat-vaccination-wellness-taiwan"
+    ]
   },
   "AAFP-RETROVIRUS-2020": {
     "title": "2020 AAFP Feline Retrovirus Management Guidelines",
@@ -439,7 +443,8 @@
     "url_verified": true,
     "notes": "AAFP 官網免費",
     "cited_by": [
-      "cat-common-symptoms-taiwan"
+      "cat-common-symptoms-taiwan",
+      "cat-vaccination-wellness-taiwan"
     ]
   },
   "AAFP-PAIN-2022": {
@@ -577,7 +582,9 @@
     "status": "pending_review",
     "url_verified": true,
     "notes": "AAFP 官網免費。皮下輸液教學文章的核心引用",
-    "cited_by": []
+    "cited_by": [
+      "cat-ckd-complete-guide"
+    ]
   },
   "AAFP-HOUSESOILING-2014": {
     "title": "2014 ISFM/AAFP Guidelines for Diagnosing and Solving House-Soiling Behavior in Cats",
@@ -606,6 +613,7 @@
     "url_verified": false,
     "notes": "AAFP 官網免費",
     "cited_by": [
+      "cat-inappropriate-elimination",
       "male-cat-urethral-obstruction"
     ]
   },
@@ -864,7 +872,9 @@
     "status": "pending_review",
     "url_verified": true,
     "notes": "WSAVA 免費 PDF",
-    "cited_by": []
+    "cited_by": [
+      "cat-vaccination-wellness-taiwan"
+    ]
   },
   "WSAVA-NUTRITION-2011": {
     "title": "WSAVA Nutritional Assessment Guidelines",
@@ -891,7 +901,9 @@
     "status": "pending_review",
     "url_verified": true,
     "notes": "WSAVA 免費 PDF",
-    "cited_by": []
+    "cited_by": [
+      "cat-food-selection-taiwan"
+    ]
   },
   "ASPCA-TOXIC-PLANTS": {
     "title": "Toxic and Non-Toxic Plants List — ASPCA",
@@ -1326,7 +1338,9 @@
     "status": "pending_review",
     "url_verified": true,
     "notes": "auto-crawled from catvets.com/guidelines",
-    "cited_by": []
+    "cited_by": [
+      "cat-neutering-aftercare-taiwan"
+    ]
   },
   "AAFP-2018-HOW-TO-FEED-A-CAT-2018": {
     "title": "2018 How to Feed a Cat",
@@ -1866,7 +1880,9 @@
     "status": "pending_review",
     "url_verified": true,
     "notes": "auto-crawled from Cornell Feline Health Topics",
-    "cited_by": []
+    "cited_by": [
+      "cat-common-symptoms-taiwan"
+    ]
   },
   "VCA-BREED-INFORMATION-2024": {
     "title": "Breed Information",
@@ -2661,6 +2677,135 @@
     "notes": "年份經 WebFetch 立法院頁逐字核對為2017（民106），非文章原寫的2022（renting 驗證，2026-06-10）。",
     "cited_by": [
       "renting-with-cats-taiwan"
+    ]
+  },
+  "MOA-CAT-REGISTRATION-2024": {
+    "title": "增列貓需寵物登記，明年1/1起開始辦理",
+    "title_zh": "農業部：增列貓為應辦理登記之寵物（2025 年 1 月 1 日起）",
+    "authors": "中華民國農業部",
+    "source": "農業部新聞稿",
+    "url": "https://www.moa.gov.tw/theme_data.php?theme=news&sub_theme=agri&id=9637",
+    "year": 2024,
+    "type": "government",
+    "language": "zh",
+    "open_access": true,
+    "abstract_zh": "農業部於 2024 年 12 月 16 日依動物保護法第 19 條第 1 項修正公告，自 2025 年 1 月 1 日起將貓納入應辦理登記之寵物，飼主須為貓植入晶片並辦理寵物登記。給予一年緩衝期，自 2026 年 1 月 1 日起未辦理者，依同法第 31 條第 1 項第 8 款處新臺幣 3,000 元以上 15,000 元以下罰鍰，並得限期改善，屆期未改善得按次處罰。辦理登記不再要求同時施打狂犬病疫苗。",
+    "keywords": [
+      "寵物登記",
+      "晶片",
+      "貓",
+      "動保法第19條",
+      "罰鍰"
+    ],
+    "disease_tags": [
+      "law",
+      "taiwan"
+    ],
+    "status": "pending_review",
+    "url_verified": false,
+    "notes": "2026-09-06 依 WebSearch 結果摘要（農業部全球資訊網、動保資訊網新聞稿），尚待 WebFetch 逐字核對。",
+    "cited_by": [
+      "cat-home-safety-taiwan",
+      "cat-laws-taiwan",
+      "cat-neutering-aftercare-taiwan",
+      "kitten-care-complete-taiwan",
+      "mixed-breed-cats-taiwan"
+    ]
+  },
+  "APHIA-CAT-RABIES-2025": {
+    "title": "貓狂犬病防疫措施 Q&A",
+    "title_zh": "動植物防疫檢疫署：貓狂犬病防疫措施問答（2025 年 7 月起室內貓有條件免打）",
+    "authors": "農業部動植物防疫檢疫署",
+    "source": "農業部動植物防疫檢疫署",
+    "url": "https://www.aphia.gov.tw/ws.php?id=23524",
+    "year": 2025,
+    "type": "government",
+    "language": "zh",
+    "open_access": true,
+    "abstract_zh": "依動物傳染病防治條例，家犬、貓及其他食肉目寵物滿 3 月齡應注射狂犬病疫苗，其後每年一次；逾期未施打可處新臺幣 3 萬元以上 15 萬元以下罰鍰。自 2025 年 7 月 1 日起，飼養或管領於室內、外出時以箱籠裝載且能有效防止逃脫的貓，經縣市政府公告者，可免強制施打狂犬病疫苗；可自由進出戶外的貓與所有家犬仍須每年接種。台灣自 2013 年起於野生鼬獾族群確認狂犬病，屬狂犬病疫區。",
+    "keywords": [
+      "狂犬病",
+      "疫苗",
+      "貓",
+      "動物傳染病防治條例",
+      "室內貓"
+    ],
+    "disease_tags": [
+      "law",
+      "taiwan",
+      "vaccination",
+      "rabies"
+    ],
+    "status": "pending_review",
+    "url_verified": false,
+    "notes": "2026-09-06 依 WebSearch 結果摘要（防檢署 Q&A、聯合新聞網、窩窩），尚待 WebFetch 逐字核對。",
+    "cited_by": [
+      "cat-aggression-causes-treatment",
+      "cat-leaving-home-taiwan",
+      "cat-vaccination-wellness-taiwan",
+      "kitten-care-complete-taiwan"
+    ]
+  },
+  "GANDOLFI-2016-TRPV4": {
+    "title": "A dominant TRPV4 variant underlies osteochondrodysplasia in Scottish fold cats",
+    "title_zh": "蘇格蘭折耳貓骨軟骨發育不全的顯性 TRPV4 基因變異",
+    "authors": "Barbara Gandolfi, Hasan Alamri, William G Darby, et al.",
+    "source": "Osteoarthritis and Cartilage",
+    "journal": "Osteoarthritis Cartilage",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/26911261/",
+    "pmid": "26911261",
+    "year": 2016,
+    "type": "research_paper",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "找出蘇格蘭折耳貓折耳與骨軟骨發育不全的致病基因：TRPV4 的顯性錯義變異。帶有一份變異（雜合子）即表現折耳並可能發展骨軟骨病變，兩份（純合子）病變更嚴重。此研究確立折耳外觀與關節疾病來自同一個基因，無法分離。",
+    "keywords": [
+      "蘇格蘭折耳",
+      "TRPV4",
+      "骨軟骨發育不全",
+      "遺傳病"
+    ],
+    "disease_tags": [
+      "breed",
+      "genetic",
+      "orthopedic"
+    ],
+    "status": "pending_review",
+    "url_verified": false,
+    "notes": "PMID 待 WebFetch 核對。",
+    "cited_by": [
+      "scottish-fold-breed-guide-taiwan"
+    ]
+  },
+  "GUNN-MOORE-2007-FCDS": {
+    "title": "Cognitive dysfunction and the neurobiology of ageing in cats",
+    "title_zh": "貓的認知功能障礙與老化神經生物學",
+    "authors": "Danièlle Gunn-Moore, Kelly Moffat, Lori-Ann Christie, Elizabeth Head",
+    "source": "Journal of Small Animal Practice",
+    "journal": "J Small Anim Pract",
+    "url": "https://onlinelibrary.wiley.com/doi/10.1111/j.1748-5827.2007.00386.x",
+    "doi": "10.1111/j.1748-5827.2007.00386.x",
+    "year": 2007,
+    "type": "review",
+    "language": "en",
+    "open_access": false,
+    "abstract_zh": "回顧貓認知功能障礙症候群（FCDS）的臨床表現與神經病理，並引述行為問卷調查：11 至 14 歲貓約 28% 出現至少一項與認知障礙相符的行為改變，15 歲以上約 50%。強調需先排除甲狀腺亢進、高血壓、疼痛等可治療的疾病。",
+    "keywords": [
+      "認知功能障礙",
+      "老貓",
+      "FCDS",
+      "失智"
+    ],
+    "disease_tags": [
+      "senior",
+      "neurology",
+      "behavior"
+    ],
+    "status": "pending_review",
+    "url_verified": false,
+    "notes": "DOI 待核對；28%/50% 數字為此文常被引用的結果。",
+    "cited_by": [
+      "cat-cognitive-dysfunction"
     ]
   }
 }
