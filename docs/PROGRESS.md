@@ -36,7 +36,7 @@
 - commit 歷史壓成 4 批（init／09-06／09-29／10-08），之後 commit 都加 Co-Authored-By: Claude。
 - repo 改 public，GitHub Pages 開通並部署成功，舊的失敗 run 刪除。網站上線。
 - **未審文章不上線**：build.py 只把 reviewed／featured 寫進 `frontend/articles/`，54 篇草稿改產到 `build/drafts/`（gitignore，工作檯預覽自動補）。列表、搜尋索引、首頁篇數只算已審；首頁連到草稿的捷徑加 `hidden`、推薦卡標題改純文字；已審文內連到草稿的連結拆成文字；文獻庫 cited_by 對草稿只列名不連結。線上現在只有 CKD、甲亢兩篇。
-- 課程作業「貓咪急診判斷器」另開公開 repo：https://github.com/Chen-MouChin/cat-emergency-triage ，線上版 https://chen-mouchin.github.io/cat-emergency-triage/ 。內容取自急診文與毒物文，規格書副本在 research/。
+- 課程作業（10/19 交）：先做了「貓咪急診判斷器」（repo cat-emergency-triage，後改為 2.0「就醫前準備」），使用者認為工具不該替飼主判斷要不要就醫，**改以獸醫院查詢頁為交付物**：repo https://github.com/Chen-MouChin/cat-vets-finder ，線上 https://chen-mouchin.github.io/cat-vets-finder/ ，`build_single.py` 從 `frontend/vets.html` 打包成單檔（內嵌 CSS、JS、2,001 筆資料，去廣告）。vets.html 改了要重跑打包。急診判斷類工具不進大站（ROADMAP 已記）。
 
 ## 2026-09-29
 
