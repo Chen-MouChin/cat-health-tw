@@ -181,6 +181,8 @@
     "cited_by": [
       "cat-ckd-complete-guide",
       "cat-common-symptoms-taiwan",
+      "cat-end-of-life-care-taiwan",
+      "cat-eye-ear-problems-taiwan",
       "cat-life-stages-care-taiwan",
       "cat-vaccination-wellness-taiwan"
     ],
@@ -213,6 +215,7 @@
     "notes": "17 頁 PDF 逐字核實。已修正 3 處原摘要中非原文內容：(1)刪除皮下輸液具體 ml 數 (2)刪除 Stage 4 特定磷目標 (3)刪除餵食管建議。14/14 項經 regex 比對原文確認。",
     "cited_by": [
       "cat-ckd-complete-guide",
+      "cat-end-of-life-care-taiwan",
       "cat-food-selection-taiwan",
       "cat-life-stages-care-taiwan"
     ]
@@ -391,8 +394,12 @@
     "url_verified": true,
     "notes": "AAFP 官網免費",
     "cited_by": [
+      "cat-adoption-guide-taiwan",
+      "cat-cancer-tumors-guide",
+      "cat-eye-ear-problems-taiwan",
       "cat-upper-respiratory-infection",
       "cat-vaccination-wellness-taiwan",
+      "fiv-felv-management-taiwan",
       "kitten-care-complete-taiwan"
     ]
   },
@@ -423,6 +430,7 @@
     "url_verified": true,
     "notes": "AAFP 官網免費",
     "cited_by": [
+      "cat-adoption-guide-taiwan",
       "fiv-felv-management-taiwan"
     ]
   },
@@ -452,7 +460,10 @@
     "url_verified": true,
     "notes": "AAFP 官網免費",
     "cited_by": [
+      "cat-adoption-guide-taiwan",
+      "cat-cognitive-dysfunction",
       "cat-common-symptoms-taiwan",
+      "cat-hcm-heart-disease",
       "cat-ibd-intestinal-disease",
       "cat-life-stages-care-taiwan",
       "cat-litter-box-guide",
@@ -639,6 +650,7 @@
     "url_verified": false,
     "notes": "AAFP 官網免費",
     "cited_by": [
+      "cat-cognitive-dysfunction",
       "cat-inappropriate-elimination",
       "cat-litter-box-guide",
       "male-cat-urethral-obstruction"
@@ -670,6 +682,8 @@
     "url_verified": true,
     "notes": "AAFP 官網免費",
     "cited_by": [
+      "cat-adoption-guide-taiwan",
+      "cat-cognitive-dysfunction",
       "cat-environment-enrichment-taiwan",
       "cat-obesity-weight-management",
       "male-cat-urethral-obstruction"
@@ -701,7 +715,10 @@
     "status": "pending_review",
     "url_verified": true,
     "notes": "AAFP 官網免費",
-    "cited_by": []
+    "cited_by": [
+      "cat-cancer-tumors-guide",
+      "cat-end-of-life-care-taiwan"
+    ]
   },
   "CORNELL-CKD": {
     "title": "Chronic Kidney Disease — Cornell Feline Health Center",
@@ -828,6 +845,7 @@
     "url_verified": true,
     "notes": "Cornell 免費",
     "cited_by": [
+      "cat-cognitive-dysfunction",
       "cat-common-symptoms-taiwan",
       "cat-emergency-care-taiwan",
       "cat-hyperthyroidism-senior",
@@ -891,9 +909,12 @@
     "url_verified": true,
     "notes": "VCA 免費，獸醫撰寫",
     "cited_by": [
+      "cat-cancer-tumors-guide",
       "cat-common-symptoms-taiwan",
       "cat-emergency-care-taiwan",
+      "cat-end-of-life-care-taiwan",
       "cat-hepatic-lipidosis",
+      "cat-home-safety-taiwan",
       "cat-ibd-intestinal-disease",
       "cat-neutering-aftercare-taiwan",
       "cat-upper-respiratory-infection",
@@ -1018,6 +1039,7 @@
     "notes": "ASPCA 免費",
     "cited_by": [
       "cat-emergency-care-taiwan",
+      "cat-home-safety-taiwan",
       "cat-toxic-substances-taiwan",
       "cat-water-urinary-health-taiwan"
     ]
@@ -1296,6 +1318,8 @@
     "url_verified": true,
     "notes": "auto-crawled from catvets.com/guidelines",
     "cited_by": [
+      "cat-adoption-guide-taiwan",
+      "cat-end-of-life-care-taiwan",
       "cat-hyperthyroidism-senior",
       "cat-life-stages-care-taiwan"
     ]
@@ -1318,6 +1342,8 @@
     "url_verified": true,
     "notes": "auto-crawled from catvets.com/guidelines | 摘要依指引範圍整理（原文 PDF）。2026-06-10",
     "cited_by": [
+      "cat-adoption-guide-taiwan",
+      "cat-cancer-tumors-guide",
       "cat-common-symptoms-taiwan",
       "cat-life-stages-care-taiwan",
       "cat-neutering-aftercare-taiwan",
@@ -1384,6 +1410,7 @@
     "notes": "auto-crawled from catvets.com/guidelines | 摘要依指引範圍整理，2026-06-10",
     "cited_by": [
       "cat-parasite-prevention-taiwan",
+      "cat-skin-allergies",
       "cat-toxoplasma-pregnancy"
     ]
   },
@@ -1680,6 +1707,7 @@
     "notes": "auto-crawled from Cornell Feline Health Topics",
     "cited_by": [
       "cat-emergency-care-taiwan",
+      "cat-home-safety-taiwan",
       "cat-life-stages-care-taiwan"
     ]
   },
@@ -1781,6 +1809,7 @@
     "cited_by": [
       "cat-cancer-tumors-guide",
       "cat-common-symptoms-taiwan",
+      "cat-end-of-life-care-taiwan",
       "cat-ibd-intestinal-disease",
       "cat-life-stages-care-taiwan"
     ]
@@ -1802,7 +1831,9 @@
     "status": "needs_review",
     "url_verified": true,
     "notes": "auto-crawled from Cornell Feline Health Topics",
-    "cited_by": []
+    "cited_by": [
+      "cat-end-of-life-care-taiwan"
+    ]
   },
   "CORNELL-HISTOPLASMOSIS-2024": {
     "title": "Histoplasmosis",
@@ -2102,6 +2133,7 @@
     "url_verified": false,
     "notes": "auto-crawled from wsava.org | 摘要依指引範圍整理，2026-06-10",
     "cited_by": [
+      "cat-hcm-heart-disease",
       "scottish-fold-breed-guide-taiwan"
     ]
   },
@@ -2674,6 +2706,8 @@
     "verified_at": "2026-06-10",
     "notes": "逐字核實：6個月前91%、1歲前86%（WebFetch PubMed 16095174, 2026-06-10）。文章原稱「2歲後74%」原文無此數據。",
     "cited_by": [
+      "cat-adoption-guide-taiwan",
+      "cat-cancer-tumors-guide",
       "cat-neutering-aftercare-taiwan",
       "kitten-care-complete-taiwan"
     ]
@@ -2705,11 +2739,12 @@
     "verified_at": "2026-06-10",
     "notes": "第25/19條經 WebFetch law.moa.gov.tw 逐字核對（2026-06-10）。",
     "cited_by": [
+      "cat-adoption-guide-taiwan",
+      "cat-home-safety-taiwan",
       "cat-laws-taiwan",
-      "renting-with-cats-taiwan",
       "rehoming-cat-responsibly-taiwan",
-      "should-i-adopt-cat-decision-taiwan",
-      "cat-adoption-guide-taiwan"
+      "renting-with-cats-taiwan",
+      "should-i-adopt-cat-decision-taiwan"
     ]
   },
   "MOA-PET-POPULATION-2021": {
@@ -2738,6 +2773,9 @@
     "verified_at": "2026-06-10",
     "notes": "數據經 WebFetch 農業部頁核對（mixed-breed 驗證，2026-06-10）。",
     "cited_by": [
+      "cat-adoption-guide-taiwan",
+      "cat-home-safety-taiwan",
+      "cat-laws-taiwan",
       "mixed-breed-cats-taiwan"
     ]
   },
@@ -2767,6 +2805,8 @@
     "verified_at": "2026-06-10",
     "notes": "年份經 WebFetch 立法院頁逐字核對為2017（民106），非文章原寫的2022（renting 驗證，2026-06-10）。",
     "cited_by": [
+      "cat-adoption-guide-taiwan",
+      "cat-laws-taiwan",
       "renting-with-cats-taiwan"
     ]
   },
@@ -2796,6 +2836,7 @@
     "url_verified": false,
     "notes": "2026-09-06 依 WebSearch 結果摘要（農業部全球資訊網、動保資訊網新聞稿），尚待 WebFetch 逐字核對。",
     "cited_by": [
+      "cat-adoption-guide-taiwan",
       "cat-home-safety-taiwan",
       "cat-laws-taiwan",
       "cat-neutering-aftercare-taiwan",
@@ -2831,7 +2872,9 @@
     "url_verified": false,
     "notes": "2026-09-06 依 WebSearch 結果摘要（防檢署 Q&A、聯合新聞網、窩窩），尚待 WebFetch 逐字核對。",
     "cited_by": [
+      "cat-adoption-guide-taiwan",
       "cat-aggression-causes-treatment",
+      "cat-laws-taiwan",
       "cat-leaving-home-taiwan",
       "cat-life-stages-care-taiwan",
       "cat-vaccination-wellness-taiwan",
@@ -2943,6 +2986,7 @@
     "verified_at": "2026-09-09",
     "cited_by": [
       "cat-ckd-complete-guide",
+      "cat-hcm-heart-disease",
       "cat-hepatic-lipidosis"
     ]
   },
