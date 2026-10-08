@@ -114,7 +114,7 @@ scripts/build_vets_js.py → frontend/data/vets.js（短鍵 n/t/a/c/d/g/h/e/cat/
 - 每頁獨立 HTML，共用 `css/theme.css`（色票）與 `js/theme.js`。
 - 新版外殼（2026-10-09）：文章頁、文章列表、獸醫院、文獻庫共用 `css/site.css`（頁首、頁尾、按鈕、篩選膠囊、卡片、金色記號）；頁首頁尾 HTML 由 build.py 的 `site_head()`／`site_foot()` 產生，vets.html、library.html 在 `<!-- site-head -->`、`<!-- site-foot -->` 標記之間由 `inject_shell()` 每次重寫，不要手改標記內的內容。首頁自己有內嵌樣式。about、editorial、privacy、breeds 與 68 個品種單頁也已套用（2026-10-09）；`nav.css`、`ads.css`、`ads.js` 已沒有頁面使用。新手寫頁要套外殼：頁名加進 `SHELL_PAGES`、補上兩組標記。
 - 文章封面圖：`COVER_PLACEHOLDER = True` 時一律用線條貓佔位圖（AI 生成的封面上線前不用）。真圖到位後改 False，frontmatter 的 `cover_image` 就會生效。
-- 全站語氣是建議、不渲染急迫：不用紅色與警示圖示，「24h 急診」入口用主色（見 SKILL.md「語氣」節）。
+- 醫療內容的語氣是建議、不渲染急迫：就醫時機與處置不用紅色與警示圖示，「24h 急診」入口用主色（見 SKILL.md「語氣」節）。品種圖鑑的遺傳風險與法規警示是資訊標示，不在此限。
 - 改版色票在 `theme.css`：`--primary` 深苔綠（連結、主按鈕、選取）、`--emergency`（只給急診）、`--gold`（只給脈搏線與記號）、`--focus` 等。`--link` 已全站換主色；`--accent` 仍是近黑（build.py 的文章標題在用），其他頁改版時再拆。首頁只載 `theme.css`，其他頁另載 `site.css`。
 - 鍵盤焦點：`theme.css` 的全站 `:focus-visible` 是 3px 近黑外框，連結加黃底。元件不要寫 `outline: none`，會把它蓋掉。
 - `search.js` 的計分（title 10 / tags 5 / description 3 / body 1）與分隔符正規化在 `test_search.py` 有一份 Python 鏡像。**改 search.js 的演算法必須同步改 test_search.py**。
