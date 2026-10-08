@@ -96,5 +96,3 @@ last_reviewed: null
 - 嚴重攻擊行為
 
 選項包括：Fluoxetine、Buspirone、Gabapentin（情境性短期使用，如就醫時）。均需獸醫處方和評估。
-
-> **免責聲明**：本文僅供參考，不構成獸醫診療建議。如有健康疑慮，請諮詢專業獸醫師。

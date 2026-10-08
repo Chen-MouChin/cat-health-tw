@@ -151,7 +151,3 @@ merged_from:
 1. 逐漸**減少食物量**（約 1 週內回到正常）
 2. 切換回**成貓飼料**
 3. 考慮**結紮**（若未計畫再繁殖），[結紮指南](cat-neutering-aftercare-taiwan.html)
-
----
-
-> **免責聲明**：整理自 VCA、WSAVA、ASPCA。難產或其他急症立即就醫。
