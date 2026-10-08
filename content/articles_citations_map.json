@@ -83,14 +83,14 @@
       "top_matches": [
         {
           "score": 4,
-          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+          "cid": "AAFP-SENIOR-2021"
         },
         {
           "score": 4,
           "cid": "AAFP-2012-FELINE-FRIENDLY-NURSING-CARE-2012"
         }
       ],
-      "best_match": "AAFP-2021-FELINE-SENIOR-CARE-2021",
+      "best_match": "AAFP-SENIOR-2021",
       "confidence": "low"
     },
     {
@@ -142,7 +142,7 @@
         },
         {
           "score": 4,
-          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+          "cid": "AAFP-SENIOR-2021"
         },
         {
           "score": 4,
@@ -235,7 +235,7 @@
       "top_matches": [
         {
           "score": 34,
-          "cid": "AAFP-2013-FLUID-THERAPY-2013"
+          "cid": "AAFP-FLUID-2013"
         },
         {
           "score": 13,
@@ -246,7 +246,7 @@
           "cid": "WSAVA-RENAL-STANDARDIZATION-GUIDELIN-2022"
         }
       ],
-      "best_match": "AAFP-2013-FLUID-THERAPY-2013",
+      "best_match": "AAFP-FLUID-2013",
       "confidence": "high"
     },
     {
@@ -488,7 +488,7 @@
       "top_matches": [
         {
           "score": 14,
-          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+          "cid": "AAFP-SENIOR-2021"
         },
         {
           "score": 10,
@@ -499,7 +499,7 @@
           "cid": "WSAVA-RENAL-STANDARDIZATION-GUIDELIN-2022"
         }
       ],
-      "best_match": "AAFP-2021-FELINE-SENIOR-CARE-2021",
+      "best_match": "AAFP-SENIOR-2021",
       "confidence": "medium"
     },
     {
@@ -566,14 +566,14 @@
       "top_matches": [
         {
           "score": 4,
-          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+          "cid": "AAFP-SENIOR-2021"
         },
         {
           "score": 4,
           "cid": "AAFP-2012-FELINE-FRIENDLY-NURSING-CARE-2012"
         }
       ],
-      "best_match": "AAFP-2021-FELINE-SENIOR-CARE-2021",
+      "best_match": "AAFP-SENIOR-2021",
       "confidence": "low"
     }
   ],
@@ -621,14 +621,14 @@
       "top_matches": [
         {
           "score": 4,
-          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+          "cid": "AAFP-SENIOR-2021"
         },
         {
           "score": 4,
           "cid": "AAFP-2012-FELINE-FRIENDLY-NURSING-CARE-2012"
         }
       ],
-      "best_match": "AAFP-2021-FELINE-SENIOR-CARE-2021",
+      "best_match": "AAFP-SENIOR-2021",
       "confidence": "low"
     }
   ],
@@ -724,7 +724,7 @@
         },
         {
           "score": 4,
-          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+          "cid": "AAFP-SENIOR-2021"
         }
       ],
       "best_match": "WILHELMY-2016-BREED-COAT-BEHAVIOR",
@@ -815,7 +815,7 @@
       "top_matches": [
         {
           "score": 4,
-          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+          "cid": "AAFP-SENIOR-2021"
         },
         {
           "score": 4,
@@ -826,7 +826,7 @@
           "cid": "AAFP-2022-AAFP-EVERYCAT-FELINE-INFECTIOUS-PER-2022"
         }
       ],
-      "best_match": "AAFP-2021-FELINE-SENIOR-CARE-2021",
+      "best_match": "AAFP-SENIOR-2021",
       "confidence": "low"
     },
     {
@@ -1109,7 +1109,7 @@
         },
         {
           "score": 4,
-          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+          "cid": "AAFP-SENIOR-2021"
         }
       ],
       "best_match": "CORNELL-TICKS-AND-YOUR-CAT-FAQS-2024",
@@ -1146,7 +1146,7 @@
         },
         {
           "score": 6,
-          "cid": "AAFP-2025-FELINEVMA-FELINE-ORAL-HEALTH-AND-DE-2025"
+          "cid": "AAFP-DENTAL-2025"
         },
         {
           "score": 4,
@@ -1161,14 +1161,14 @@
       "top_matches": [
         {
           "score": 4,
-          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+          "cid": "AAFP-SENIOR-2021"
         },
         {
           "score": 4,
           "cid": "AAFP-2012-FELINE-FRIENDLY-NURSING-CARE-2012"
         }
       ],
-      "best_match": "AAFP-2021-FELINE-SENIOR-CARE-2021",
+      "best_match": "AAFP-SENIOR-2021",
       "confidence": "low"
     },
     {
@@ -1216,7 +1216,7 @@
       "top_matches": [
         {
           "score": 4,
-          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+          "cid": "AAFP-SENIOR-2021"
         },
         {
           "score": 4,
@@ -1227,7 +1227,7 @@
           "cid": "AAFP-ENVIRONMENT-2013"
         }
       ],
-      "best_match": "AAFP-2021-FELINE-SENIOR-CARE-2021",
+      "best_match": "AAFP-SENIOR-2021",
       "confidence": "low"
     },
     {
@@ -1283,7 +1283,7 @@
         },
         {
           "score": 4,
-          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+          "cid": "AAFP-SENIOR-2021"
         }
       ],
       "best_match": "ICATCARE-LILY-POISONING",
@@ -1566,7 +1566,7 @@
       "top_matches": [
         {
           "score": 4,
-          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+          "cid": "AAFP-SENIOR-2021"
         },
         {
           "score": 4,
@@ -1577,7 +1577,7 @@
           "cid": "FOX-2018-HCM-REVEAL"
         }
       ],
-      "best_match": "AAFP-2021-FELINE-SENIOR-CARE-2021",
+      "best_match": "AAFP-SENIOR-2021",
       "confidence": "low"
     }
   ],
@@ -1610,7 +1610,7 @@
         },
         {
           "score": 4,
-          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+          "cid": "AAFP-SENIOR-2021"
         },
         {
           "score": 4,
@@ -1688,7 +1688,7 @@
         },
         {
           "score": 6,
-          "cid": "AAFP-2025-FELINEVMA-FELINE-ORAL-HEALTH-AND-DE-2025"
+          "cid": "AAFP-DENTAL-2025"
         },
         {
           "score": 4,
@@ -1806,7 +1806,7 @@
         },
         {
           "score": 4,
-          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+          "cid": "AAFP-SENIOR-2021"
         },
         {
           "score": 4,
@@ -1901,18 +1901,18 @@
       "top_matches": [
         {
           "score": 7,
-          "cid": "AAFP-2013-FLUID-THERAPY-2013"
+          "cid": "AAFP-FLUID-2013"
         },
         {
           "score": 4,
-          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+          "cid": "AAFP-SENIOR-2021"
         },
         {
           "score": 4,
           "cid": "AAFP-2012-FELINE-FRIENDLY-NURSING-CARE-2012"
         }
       ],
-      "best_match": "AAFP-2013-FLUID-THERAPY-2013",
+      "best_match": "AAFP-FLUID-2013",
       "confidence": "low"
     },
     {
@@ -2065,7 +2065,7 @@
         },
         {
           "score": 4,
-          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+          "cid": "AAFP-SENIOR-2021"
         },
         {
           "score": 4,
@@ -2080,14 +2080,14 @@
       "top_matches": [
         {
           "score": 4,
-          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+          "cid": "AAFP-SENIOR-2021"
         },
         {
           "score": 4,
           "cid": "AAFP-2012-FELINE-FRIENDLY-NURSING-CARE-2012"
         }
       ],
-      "best_match": "AAFP-2021-FELINE-SENIOR-CARE-2021",
+      "best_match": "AAFP-SENIOR-2021",
       "confidence": "low"
     },
     {
@@ -2196,7 +2196,7 @@
         },
         {
           "score": 10,
-          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+          "cid": "AAFP-SENIOR-2021"
         },
         {
           "score": 8,
@@ -2255,7 +2255,7 @@
         },
         {
           "score": 4,
-          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+          "cid": "AAFP-SENIOR-2021"
         },
         {
           "score": 4,
@@ -2354,7 +2354,7 @@
       "top_matches": [
         {
           "score": 10,
-          "cid": "AAFP-2025-FELINEVMA-FELINE-ORAL-HEALTH-AND-DE-2025"
+          "cid": "AAFP-DENTAL-2025"
         },
         {
           "score": 8,
@@ -2365,7 +2365,7 @@
           "cid": "WSAVA-PROFESSIONAL-WELLNESS-GUIDELIN-2022"
         }
       ],
-      "best_match": "AAFP-2025-FELINEVMA-FELINE-ORAL-HEALTH-AND-DE-2025",
+      "best_match": "AAFP-DENTAL-2025",
       "confidence": "medium"
     }
   ],
@@ -2440,7 +2440,7 @@
         },
         {
           "score": 4,
-          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+          "cid": "AAFP-SENIOR-2021"
         }
       ],
       "best_match": "VCA-EMERGENCY-SIGNS",
@@ -2533,7 +2533,7 @@
         },
         {
           "score": 4,
-          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+          "cid": "AAFP-SENIOR-2021"
         },
         {
           "score": 4,
@@ -2748,7 +2748,7 @@
         },
         {
           "score": 4,
-          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+          "cid": "AAFP-SENIOR-2021"
         },
         {
           "score": 4,
@@ -2889,7 +2889,7 @@
         },
         {
           "score": 4,
-          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+          "cid": "AAFP-SENIOR-2021"
         },
         {
           "score": 4,
@@ -2929,7 +2929,7 @@
         },
         {
           "score": 4,
-          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+          "cid": "AAFP-SENIOR-2021"
         },
         {
           "score": 4,
@@ -2998,7 +2998,7 @@
         },
         {
           "score": 10,
-          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+          "cid": "AAFP-SENIOR-2021"
         }
       ],
       "best_match": "AAFP-2021-FELINE-LIFE-STAGE-2021",
@@ -3013,7 +3013,7 @@
         },
         {
           "score": 4,
-          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+          "cid": "AAFP-SENIOR-2021"
         },
         {
           "score": 4,
@@ -3028,7 +3028,7 @@
       "top_matches": [
         {
           "score": 10,
-          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+          "cid": "AAFP-SENIOR-2021"
         },
         {
           "score": 6,
@@ -3039,7 +3039,7 @@
           "cid": "WSAVA-ANIMAL-WELFARE-COMMITTEE-2022"
         }
       ],
-      "best_match": "AAFP-2021-FELINE-SENIOR-CARE-2021",
+      "best_match": "AAFP-SENIOR-2021",
       "confidence": "medium"
     },
     {
@@ -3095,7 +3095,7 @@
         },
         {
           "score": 4,
-          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+          "cid": "AAFP-SENIOR-2021"
         }
       ],
       "best_match": "ICATCARE-LILY-POISONING",
@@ -3188,7 +3188,7 @@
         },
         {
           "score": 4,
-          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+          "cid": "AAFP-SENIOR-2021"
         },
         {
           "score": 4,
@@ -3897,7 +3897,7 @@
         },
         {
           "score": 4,
-          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+          "cid": "AAFP-SENIOR-2021"
         }
       ],
       "best_match": "ICATCARE-LILY-POISONING",
@@ -3933,7 +3933,7 @@
         },
         {
           "score": 4,
-          "cid": "AAFP-2021-FELINE-SENIOR-CARE-2021"
+          "cid": "AAFP-SENIOR-2021"
         },
         {
           "score": 4,
