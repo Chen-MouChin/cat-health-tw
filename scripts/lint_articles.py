@@ -139,9 +139,10 @@ def lint_one(path: Path, citations: dict, known_slugs: set[str]) -> dict:
         if k not in citations:
             fails.append(("fn-missing", f"[^{k}] 不在 citations.json"))
 
-    # brands
+    # brands（連結的 href 不掃，slug 裡的 wellness 之類不是品牌）
     for i, line in enumerate(lines, 1):
-        for m in BRAND_RE.finditer(line):
+        scan = re.sub(r"\]\([^)]*\)", "]()", line)
+        for m in BRAND_RE.finditer(scan):
             fails.append(("brand", f"L{i}: {m.group(0)}"))
 
     # links
