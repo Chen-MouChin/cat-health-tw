@@ -10,14 +10,34 @@
   --bg: #f9f6f0;                 /* 溫暖奶油米色 — 保留原本的溫潤感 */
   --bg-card: #ffffff;
   --text: #1d1d1f;
-  --text-muted: #6e6e73;
-  --text-faint: #a1a1a6;
+  /* 文字灰階都要達 WCAG AA 4.5:1：muted 在淺米區塊（accent-light、border）上仍有 4.7 以上，
+     faint 在紙面上 4.9（原本 #a1a1a6 只有 2.4，日期、營業時間、說明字都看不清）*/
+  --text-muted: #636368;
+  --text-faint: #6b6b70;
 
   /* accent = 近黑，無色相 */
   --accent: #1d1d1f;
   --accent-hover: #424245;
   --accent-light: #f0ede6;       /* 淺米灰（配合 bg 調暖調）*/
   --accent-on: #ffffff;
+
+  /* 改版色票（設計需求書第二版 5-1）：首頁先用，其他頁改版時再換過去 */
+  --primary: #3b6a50;            /* 深苔綠：連結、主按鈕、選取狀態；米底 5.8:1、白底 6.2:1 */
+  --primary-deep: #2a4c39;       /* 按下、按鈕底邊、數字 */
+  --primary-pale: #e7efe9;       /* 淺苔綠色塊 */
+  --gold: #b8860b;               /* 只給 Logo 脈搏線與小記號，不當文字色 */
+  --gold-pale: #f6ecd2;          /* 淺金色塊 */
+  --gold-pale-deep: #efdfb6;
+  --blush: #dd7f8a;              /* 插畫專用：貓鼻子的粉紅，不當文字或介面色 */
+  --draft-text: #735f33;         /* 草稿標籤字，淺金底 5.2:1 */
+  --emergency: #b93a2e;          /* 只給急診，白字 5.7:1 */
+  --emergency-deep: #8f2a21;
+  --emergency-pale: #fbe9e7;
+  --text-2: #4a4a4c;             /* 次要文字（副標、卡片說明），米底 8.2:1 */
+  --focus: #ffdd00;              /* 鍵盤焦點的黃底，一律配近黑字 */
+
+  /* 連結色：2026-09-29 起全站換成主色深苔綠。accent 仍是近黑（文章標題等在用），其他頁改版時再拆 */
+  --link: var(--primary);
 
   --border: #e8e4db;             /* 暖米邊框（原本 #e5e5ea 過冷）*/
   --border-strong: #d4cfc3;
@@ -31,6 +51,16 @@
   --header-bg: #f5f5f7;
   --header-text: #1d1d1f;
 }
+
+/* 連結基底：沒有自己設色的連結（文章內文、編輯資訊、關於頁）不再落回瀏覽器預設的藍紫色。
+   元件自己有設色的（導覽列、按鈕、卡片）選擇器比較具體，不受影響 */
+a { color: var(--link); text-underline-offset: 0.18em; }
+a:hover { text-decoration-thickness: 2px; }
+
+/* 鍵盤焦點：3px 近黑外框，米底、白卡、彩色按鈕上都看得到；連結另加黃底（GOV.UK 作法）。
+   元件不要再寫 outline: none，會把這裡蓋掉 */
+:focus-visible { outline: 3px solid var(--text); outline-offset: 2px; }
+a:focus-visible { outline-offset: 1px; background-color: var(--focus); color: var(--text); text-decoration: none; }
 
 
 /* Header controls：theme + lang switcher

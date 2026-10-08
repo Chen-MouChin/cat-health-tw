@@ -68,7 +68,7 @@
       font-family: inherit; font-size: 0.92rem;
       border: 1px solid var(--border, #d2d2d7); border-radius: 6px;
       background: var(--bg, #fafafa); color: var(--text, #1d1d1f);
-      outline: none; transition: border-color 0.15s;
+      transition: border-color 0.15s;
       box-sizing: border-box;
     }
     .feedback-box select:focus, .feedback-box input:focus, .feedback-box textarea:focus {
@@ -163,7 +163,9 @@
       </li>
       <li>
         <strong>地址解析（geocoding）</strong>：用 OSM Nominatim 補 lat/lng，
-        全台 2,001 家 100% 有座標，可在前端按距離排序。
+        全台 2,001 家都有座標，手機可定位找附近最近的醫院。
+        OSM 查不到門牌時會退回街道或行政區中心，179 家只精確到這個程度，距離會標「約」；
+        另有 13 家被對到別的縣市，暫不列入距離排序，待重新定位。
       </li>
       <li>
         <strong>避免重複洗 geocode</strong>：merge 邏輯保留既有 lat/lng（不會每次更新都重跑 OSM 30 分鐘）。

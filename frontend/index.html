@@ -8,12 +8,12 @@
   <link rel="apple-touch-icon" href="favicon-180.png">
   <meta property="og:image" content="https://chen-mouchin.github.io/cat-health-tw/images/og-default.png">
   <title>貓健康站 — 台灣貓健康知識庫</title>
-  <meta name="description" content="台灣貓健康知識庫：56 篇深度文章、2,001 家動物醫院、68 種品種圖鑑、113 筆學術引用。每筆引用回溯 ISFM/AAFP/IRIS 原文，無業配。">
+  <meta name="description" content="台灣貓健康知識庫：56 篇深度文章、2,001 家動物醫院、68 種品種圖鑑、109 筆學術引用。每筆引用回溯 ISFM/AAFP/IRIS 原文，無業配。">
   <meta property="og:title" content="貓健康站 — 台灣貓健康知識庫">
   <meta property="og:description" content="找獸醫、查症狀、學品種、看文獻 — 一站搞定，引用回溯原文。">
   <meta property="og:type" content="website">
-  <link rel="stylesheet" href="css/theme.css">
-  <link rel="stylesheet" href="css/nav.css?v=20260420b">
+  <link rel="preload" href="fonts/huninn-home.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/theme.css?v=20260929">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -21,7 +21,7 @@
     "name": "貓健康站",
     "alternateName": "貓咪大全",
     "url": "https://chen-mouchin.github.io/cat-health-tw/",
-    "description": "台灣貓健康知識庫：56 篇深度文章、2,001 家動物醫院、68 種品種圖鑑、113 筆學術引用。",
+    "description": "台灣貓健康知識庫：56 篇深度文章、2,001 家動物醫院、68 種品種圖鑑、109 筆學術引用。",
     "inLanguage": "zh-TW",
     "potentialAction": {
       "@type": "SearchAction",
@@ -37,201 +37,376 @@
   </script>
   <script src="js/theme.js"></script>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: system-ui, "Noto Sans TC", sans-serif; background: var(--bg, #fafafa); color: var(--text, #1d1d1f); min-height: 100vh; }
+    /* 首頁｜主調：溫暖插畫 × 公共服務（設計需求書第二版 5-1），原型在 docs/design/home-prototype.html
+       手機單欄從 390px 起；880px 以上主視覺左右分、數字一列、入口四欄。
+       顏色一律用 theme.css 的 token。數字與草稿標籤由 build.py 依實際資料寫入，不要手改。 */
+    @font-face {
+      /* jf 粉圓子集，只含主標的字。主標改字後執行 python scripts/fetch_home_font.py */
+      font-family: "Huninn";
+      src: url("fonts/huninn-home.woff2") format("woff2");
+      font-display: swap;
+      unicode-range: U+3002, U+4E86, U+5148, U+67E5, U+751F, U+75C5, U+88E1, U+8C93, U+9019, U+FF0C;
+    }
+    :root {
+      --ui: -apple-system, BlinkMacSystemFont, "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+      --brand: "Huninn", var(--ui);
+      --r-card: 18px;
+      --r-pill: 999px;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.75 var(--ui); -webkit-font-smoothing: antialiased; }
+    .page { max-width: 600px; margin: 0 auto; padding: 0 20px 24px; }
+    h1, h2, h3 { margin: 0; line-height: 1.3; text-wrap: balance; }
+    p, ul { margin: 0; }
+    ul { padding: 0; list-style: none; }
+    a { font-weight: 600; text-decoration-thickness: 1px; text-underline-offset: 0.22em; }
+    a:hover { color: var(--primary-deep); text-decoration-thickness: 2px; }
+    .vh { position: absolute !important; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; border: 0; }
+    .i { width: 24px; height: 24px; flex: none; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .skip { position: absolute; left: 12px; top: -60px; z-index: 5; padding: 8px 12px; }
+    .skip:focus-visible { top: 8px; }
 
-    header { text-align: center; padding: 1.8rem 1.5rem 0.4rem; }
-    header .logo-img { width: 260px; max-width: 70vw; height: auto; display: block; margin: 0 auto; }
-    header .tagline { font-size: 0.95rem; color: var(--text-muted, #666); margin-top: 0.4rem; max-width: 460px; margin-left: auto; margin-right: auto; line-height: 1.55; }
+    /* 頁首：手機兩列（Logo＋急診／分頁），桌機一列 */
+    .site-head { display: grid; grid-template-columns: 1fr auto; grid-template-areas: "brand er" "nav nav"; align-items: center; column-gap: 12px; padding-top: 12px; }
+    .brand { grid-area: brand; display: inline-flex; justify-self: start; color: var(--text); border-radius: 6px; }
+    .brand svg { display: block; height: 38px; width: auto; }
+    .er-pill { grid-area: er; display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 16px 0 12px; border-radius: var(--r-pill); background: var(--emergency); color: var(--accent-on); font-size: 16px; font-weight: 700; text-decoration: none; box-shadow: 0 2px 0 var(--emergency-deep); }
+    .er-pill:hover { background: var(--emergency-deep); color: var(--accent-on); }
+    .er-pill .i { width: 20px; height: 20px; }
+    .main-nav { grid-area: nav; display: flex; gap: 22px; margin-top: 6px; overflow-x: auto; border-bottom: 2px solid var(--primary-pale); scrollbar-width: none; }
+    .main-nav::-webkit-scrollbar { display: none; }
+    .main-nav a { display: flex; align-items: center; min-height: 46px; color: var(--text); font-size: 16px; text-decoration: none; white-space: nowrap; }
+    .main-nav a:hover { color: var(--primary); text-decoration: underline; }
+    .main-nav a:focus-visible { outline-offset: -3px; } /* 捲動容器會切掉外側的框，改畫在內側 */
 
-    main { max-width: 720px; margin: 0 auto; padding: 0 1.5rem 1.2rem; }
+    /* 主視覺：主標在左、小貓在右；副標跨兩欄 */
+    .hero { display: grid; grid-template-columns: 1fr auto; grid-template-areas: "title cat" "sub sub"; align-items: center; column-gap: 12px; padding: 24px 0 20px; }
+    .hero h1 { grid-area: title; font-family: var(--brand); font-weight: 700; font-synthesis: none; font-size: 34px; line-height: 1.22; letter-spacing: 0.02em; }
+    .hero h1 span { display: block; }
+    .hero-sub { grid-area: sub; margin-top: 12px; color: var(--text-2); font-size: 16px; line-height: 1.65; }
+    .hero-cat { grid-area: cat; width: 116px; aspect-ratio: 1; max-width: 100%; display: grid; place-items: center; border-radius: 50%; background: var(--primary-pale); color: var(--primary); cursor: pointer; -webkit-tap-highlight-color: transparent; }
+    .hero-cat svg { width: 92%; height: auto; overflow: visible; }
+    .cat-body { fill: var(--bg-card); }
+    .cat-nose { fill: var(--blush); stroke: var(--blush); stroke-width: 0.8; stroke-linejoin: round; }
 
-    /* === A: 主搜尋框 === */
-    .home-search {
-      margin: 0.8rem 0 0.5rem;
-      position: relative;
-    }
-    .home-search input {
-      width: 100%; padding: 1.1rem 1.2rem 1.1rem 3rem; font-size: 1.05rem;
-      border: 1px solid var(--border-strong, #d2d2d7); border-radius: 30px;
-      background: var(--bg-card, #fff); color: var(--text, #333);
-      transition: border-color 0.15s, box-shadow 0.15s;
-    }
-    .home-search input:focus {
-      outline: none; border-color: var(--accent, #1d1d1f);
-      box-shadow: 0 0 0 4px rgba(0,0,0,0.06);
-    }
-    .home-search::before {
-      content: '🔍'; position: absolute; left: 1.1rem; top: 50%;
-      transform: translateY(-50%); font-size: 1.1rem; pointer-events: none; opacity: 0.55;
-    }
-    .search-hint {
-      font-size: 0.78rem; color: var(--text-faint, #888); padding: 0 0.5rem 0;
-      margin-bottom: 1.2rem; line-height: 1.6;
-    }
-    .search-hint a {
-      color: var(--text-muted, #6e6e73); text-decoration: none;
-      border-bottom: 1px dotted var(--border-strong, #c2c2c7);
-      margin-right: 0.5rem;
-    }
-    .search-hint a:hover { color: var(--accent, #1d1d1f); border-bottom-color: var(--accent, #1d1d1f); }
+    /* 搜尋 */
+    .search { display: flex; gap: 8px; }
+    .search input { flex: 1; min-width: 0; min-height: 52px; padding: 0 12px; border: 2px solid var(--text); border-radius: 14px; background: var(--bg-card); color: var(--text); font: 17px var(--ui); }
+    /* 原稿提示字 16 個字，390px 寬剛好放得下；更窄的手機跟著縮小，不要被切掉 */
+    .search input::placeholder { color: var(--text-muted); opacity: 1; font-size: min(15px, calc((100vw - 150px) / 16)); }
+    .search .btn { padding: 0 18px; }
+    /* 原生搜尋框樣式與清除鈕會吃掉右側空間；清除鈕只在有字時才需要 */
+    .search input { -webkit-appearance: none; appearance: none; }
+    .search input:placeholder-shown::-webkit-search-cancel-button { display: none; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 52px; padding: 0 22px; border: 0; border-radius: var(--r-pill); background: var(--primary); color: var(--accent-on); font: 700 17px/1.2 var(--ui); text-decoration: none; cursor: pointer; box-shadow: 0 3px 0 var(--primary-deep); }
+    .btn:hover { background: var(--primary-deep); color: var(--accent-on); }
+    .btn:active { transform: translateY(3px); box-shadow: none; }
+    .btn:focus-visible { background: var(--focus); color: var(--text); box-shadow: 0 3px 0 var(--text); }
 
-    /* === B: 緊急 strip === */
-    .emergency-strip {
-      display: flex; align-items: center; justify-content: space-between; gap: 0.8rem;
-      background: #fbeeec; border: 1px solid #e6c0b8; border-left: 3px solid #c0392b;
-      border-radius: 8px; padding: 0.6rem 1rem; margin-bottom: 1.2rem;
-      font-size: 0.9rem; color: #7c2618;
-    }
-    .emergency-strip .e-left { display: flex; align-items: center; gap: 0.5rem; }
-    .emergency-strip .e-icon { font-size: 1.1rem; }
-    .emergency-strip a {
-      background: #c0392b; color: #fff; text-decoration: none;
-      padding: 0.4rem 0.85rem; border-radius: 16px; font-weight: 600;
-      font-size: 0.83rem; white-space: nowrap;
-    }
-    .emergency-strip a:hover { background: #a02b1f; }
+    /* 急診（NHS「何時就醫」）：不加任何動畫 */
+    .er { margin-top: 20px; padding: 20px; border-radius: var(--r-card); background: var(--emergency); color: var(--accent-on); }
+    .er h2 { display: flex; align-items: center; gap: 8px; font-size: 22px; }
+    .er-list { display: grid; grid-template-columns: 1fr 1fr; gap: 0 16px; margin: 10px 0 18px; font-size: 18px; font-weight: 700; }
+    .er-list li { position: relative; padding-left: 16px; }
+    .er-list li::before { content: ""; position: absolute; left: 2px; top: 0.78em; width: 7px; height: 7px; border-radius: 50%; background: var(--accent-on); }
+    .btn-er { width: 100%; background: var(--bg-card); color: var(--emergency); box-shadow: 0 3px 0 var(--emergency-deep); }
+    .btn-er:hover { background: var(--emergency-pale); color: var(--emergency-deep); }
 
-    /* === Disclaimer (top tiny notice) === */
-    .disclaimer {
-      text-align: center; font-size: 0.72rem; color: var(--text-faint, #999);
-      padding: 0.3rem 1rem; margin-top: 0.8rem;
-      line-height: 1.4;
-    }
-    .disclaimer .d-icon { opacity: 0.6; }
+    /* 數字：HTML 先放實際數字（build.py 寫入），進入畫面才從 0 跑 */
+    .stats { margin-top: 28px; padding: 20px 12px; border-radius: var(--r-card); background: var(--primary-pale); }
+    .stats-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px 4px; text-align: center; }
+    .stats-grid li { grid-column: span 2; display: flex; flex-direction: column; }
+    .stats-grid li:nth-child(-n+2) { grid-column: span 3; }
+    .num { font-size: 32px; font-weight: 800; line-height: 1.15; color: var(--primary-deep); font-variant-numeric: tabular-nums; }
+    .stats-grid span { font-size: 15px; font-weight: 600; }
 
-    /* === C: 入口卡片（按飼主意圖排序） === */
-    .entry-grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; margin-bottom: 1rem;
-    }
-    .entry-card {
-      display: block; text-decoration: none; color: var(--text, #1d1d1f);
-      background: var(--bg-card, #fff); border: 1px solid var(--border-strong, #d2d2d7);
-      border-radius: 12px; padding: 1.2rem 1.1rem;
-      transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
-    }
-    .entry-card:hover {
-      transform: translateY(-1px);
-      border-color: var(--accent, #1d1d1f);
-      box-shadow: 0 3px 12px var(--shadow, rgba(0,0,0,0.06));
-    }
-    .entry-card .e-icon { font-size: 1.6rem; margin-bottom: 0.3rem; }
-    .entry-card h2 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.3rem; }
-    .entry-card .e-desc { font-size: 0.82rem; color: var(--text-muted, #6e6e73); line-height: 1.5; min-height: 2.5em; }
-    .entry-card .e-meta { font-size: 0.74rem; color: var(--text-faint, #999); margin-top: 0.5rem; }
+    /* 四個入口 */
+    .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
+    .card { display: flex; flex-direction: column; gap: 8px; padding: 16px; border: 1px solid var(--border-strong); border-radius: var(--r-card); background: var(--bg-card); color: var(--text); font-weight: 400; text-decoration: none; }
+    .card-ic { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 12px; background: var(--primary-pale); color: var(--primary); }
+    .card h3 { font-size: 18px; color: var(--primary-deep); }
+    .card p { font-size: 14px; line-height: 1.55; color: var(--text-2); }
 
-    /* 主推卡片（前 2 個飼主常用） */
-    .entry-card.primary { border-color: var(--accent, #1d1d1f); }
-    .entry-card.primary .e-meta { color: var(--accent, #1d1d1f); font-weight: 600; }
+    /* 區塊標題：金色脈搏記號 */
+    .sec-h { display: flex; align-items: center; gap: 10px; margin: 36px 0 12px; font-size: 22px; }
+    .mark { width: 30px; height: 14px; flex: none; fill: none; stroke: var(--gold); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 
-    @media (max-width: 540px) {
-      .entry-grid { grid-template-columns: 1fr; }
-      .emergency-strip { flex-direction: column; align-items: stretch; text-align: center; }
+    /* 常見狀況 */
+    .pills { display: flex; flex-wrap: wrap; gap: 8px; }
+    .pill { display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; border-radius: var(--r-pill); background: var(--gold-pale); color: var(--text); font-size: 15px; text-decoration: none; }
+    .pill:hover { background: var(--gold-pale-deep); color: var(--text); }
+
+    /* 推薦文章 */
+    .posts { display: grid; gap: 12px; }
+    .post { display: flex; flex-direction: column; gap: 6px; padding: 16px; border: 1px solid var(--border-strong); border-radius: var(--r-card); background: var(--bg-card); }
+    .post-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; font-size: 14px; color: var(--text-muted); }
+    .tag-draft, .tag-reviewed { padding: 0 8px; border-radius: 6px; font-size: 13px; font-weight: 700; line-height: 1.7; }
+    .tag-draft { background: var(--gold-pale); color: var(--draft-text); }
+    .tag-reviewed { background: var(--primary-pale); color: var(--primary-deep); }
+    .post h3 { font-size: 18px; line-height: 1.45; }
+    .post p { font-size: 15px; line-height: 1.65; color: var(--text-2); }
+    .more { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; margin-top: 4px; }
+    .more .i { width: 18px; height: 18px; }
+
+    /* 廣告位：AdSense 上線前先隱藏，不放空白佔位 */
+    .ad { margin-top: 32px; }
+    .ad-label { display: block; margin-bottom: 4px; font-size: 13px; letter-spacing: 0.1em; color: var(--text-muted); }
+
+    /* 我們怎麼寫 */
+    .principles { padding: 20px; border-radius: var(--r-card); background: var(--gold-pale); }
+    .principles ul { display: grid; gap: 12px; }
+    .principles li { display: grid; grid-template-columns: 30px 1fr; column-gap: 10px; }
+    .principles li .mark { margin-top: 0.45em; }
+    .principles b { display: block; }
+    .principles li p { font-size: 15px; line-height: 1.65; color: var(--text-2); }
+    .principles .more { margin-top: 8px; }
+
+    /* 頁尾 */
+    .foot { display: grid; gap: 10px; margin-top: 40px; padding-top: 20px; border-top: 2px solid var(--primary-pale); font-size: 15px; color: var(--text-2); }
+    .foot-cat { width: 64px; color: var(--primary); }
+    .foot-cat svg { display: block; width: 100%; height: auto; }
+    .foot nav { display: flex; flex-wrap: wrap; column-gap: 18px; }
+    .foot nav a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 400; }
+    .foot-src { font-size: 13px; color: var(--text-muted); }
+
+    /* 動態：只在系統沒開「減少動態效果」時播放，每項只跑一次；急診區塊不動 */
+    @media (prefers-reduced-motion: no-preference) {
+      .brand .pulse { stroke-dasharray: 1; stroke-dashoffset: 1; animation: draw 0.9s cubic-bezier(0.3, 0.7, 0.2, 1) 0.15s forwards; }
+      .motion .sec-h .mark path { stroke-dasharray: 1; stroke-dashoffset: 1; }
+      .motion .sec-h .mark.on path { animation: draw 0.7s ease-out forwards; }
+      .cat-tail { transform-origin: 40px 26px; animation: flick 0.9s ease-in-out 0.6s 2; }
+      .cat-eye { transform-box: fill-box; transform-origin: center; animation: blink 0.3s ease-in-out 2.5s 1; }
+      .card { transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease; }
+      @media (hover: hover) {
+        .card:hover { transform: translateY(-2px); border-color: var(--primary); box-shadow: 0 6px 16px var(--shadow); }
+      }
     }
+    @keyframes draw { to { stroke-dashoffset: 0; } }
+    @keyframes flick { 0%, 100% { transform: rotate(0); } 35% { transform: rotate(-10deg); } 70% { transform: rotate(6deg); } }
+    @keyframes blink { 0%, 100% { transform: scaleY(1); } 50% { transform: scaleY(0.12); } }
 
-    .why-box {
-      background: var(--bg-card, #f5f5f7); border-radius: 8px;
-      padding: 0.85rem 1.1rem; margin-bottom: 0;
-      font-size: 0.83rem; color: var(--text-muted, #555); line-height: 1.6;
+    /* 桌機 */
+    @media (min-width: 880px) {
+      .page { max-width: 1000px; padding: 0 32px 32px; }
+      .site-head { grid-template-columns: auto 1fr auto; grid-template-areas: "brand nav er"; padding: 16px 0; border-bottom: 2px solid var(--primary-pale); }
+      .main-nav { justify-content: flex-end; margin: 0 8px 0 0; border: 0; }
+      .hero { grid-template-columns: 1fr 240px; grid-template-areas: "title cat" "sub cat"; padding: 48px 0 32px; }
+      .hero h1 { align-self: end; font-size: 52px; }
+      .hero-sub { align-self: start; font-size: 18px; }
+      .hero-cat { width: 240px; }
+      .search { max-width: 640px; }
+      .er { display: grid; grid-template-columns: 1fr auto; grid-template-areas: "h btn" "list btn"; column-gap: 32px; align-items: center; padding: 28px 32px; }
+      .er h2 { grid-area: h; }
+      .er-list { grid-area: list; grid-template-columns: repeat(4, auto); justify-content: start; column-gap: 28px; margin-bottom: 0; }
+      .btn-er { grid-area: btn; width: auto; padding: 0 28px; }
+      .stats-grid { grid-template-columns: repeat(5, 1fr); }
+      .stats-grid li, .stats-grid li:nth-child(-n+2) { grid-column: auto; }
+      .cards { grid-template-columns: repeat(4, 1fr); }
+      .posts { grid-template-columns: repeat(3, 1fr); }
+      .principles ul { grid-template-columns: repeat(3, 1fr); column-gap: 24px; }
     }
-    /* 首頁專用：壓縮 footer 留白（覆蓋共用 nav.css 的 .site-footer） */
-    body > .site-footer { margin-top: 1rem; padding: 1.2rem 1.5rem 1.5rem; }
-    .why-box strong { color: var(--text, #1d1d1f); }
-    .why-box a { color: var(--text, #1d1d1f); text-decoration: underline; text-decoration-color: var(--border-strong, #d2d2d7); text-underline-offset: 3px; }
-
   </style>
 </head>
 <body>
+<div class="page">
+<a class="skip" href="#main">跳到主要內容</a>
 
-<nav class="site-nav">
-  <a class="nav-brand active" href="index.html" title="回首頁"><svg class="brand-logo" viewBox="0 0 180 47" aria-label="貓健康站" role="img"><g transform="translate(0,15.2) scale(0.750)" fill="currentColor"><path d="M4 20 V2 L14 10 Z"/><path d="M36 20 V2 L26 10 Z"/><circle cx="13" cy="18" r="2.2"/><circle cx="27" cy="18" r="2.2"/></g><g transform="translate(40.0,0) scale(0.340)"><path fill="currentColor" d="M79.79 93.26 65.04 93.46 49.61 93.65 48.24 93.75H41.21L40.72 64.45L40.82 45.31L45.21 44.73V44.63H46.00L46.48 44.53L48.83 44.43L61.13 43.95H81.25L89.16 44.73L91.89 46.78L92.48 64.84L92.29 85.94L91.89 93.75H85.74ZM59.08 65.43 58.79 57.91 54.59 58.01V60.35L54.69 65.53ZM71.78 65.23 77.05 65.33 76.95 57.91H71.88ZM59.08 82.71V76.95L54.98 77.15L55.08 82.71H58.40ZM71.97 82.62H76.95L77.15 77.54V76.86H71.88ZM17.58 85.45 24.41 85.16 25.68 81.35 20.21 84.28ZM68.85 9.96 76.37 9.67 83.98 10.55 83.79 19.63 92.68 19.92V27.25L91.80 33.30L83.01 32.91L82.91 35.25L82.52 41.50L73.24 41.02L68.85 40.43L68.95 32.62L60.06 32.81L60.45 40.33L51.56 41.11L46.97 41.41L46.29 33.30L40.62 33.59L39.75 27.54L39.65 20.61L45.41 20.31L45.02 12.30L52.83 10.84L58.89 10.94L59.38 19.73L69.14 19.34V16.50ZM32.62 8.89 36.23 13.38 39.26 20.21 32.81 23.14 22.17 27.25 7.71 31.84 5.86 27.44 4.79 20.02 15.04 17.09 23.73 13.67ZM6.15 35.94 10.64 32.91 15.72 30.66 18.16 35.45 20.61 41.11 16.41 43.46 11.82 45.70 9.47 41.80ZM19.24 30.96 24.71 27.15 29.49 25.29 32.23 29.98 34.18 34.08 36.72 31.74 41.11 36.43 44.53 42.77 37.21 47.17 33.20 49.22 37.01 56.54 40.14 70.51 38.87 84.77 36.43 91.41 32.23 94.73 24.51 95.12 19.14 94.24 18.55 89.45 16.80 85.74 10.74 88.38 8.79 85.35 7.13 78.42 16.31 74.51 23.05 70.80 26.17 68.36 25.68 66.41 19.92 69.63 11.82 73.14 10.06 70.70 7.71 63.57 19.53 58.20 22.17 56.45 21.29 54.69 19.53 55.47 10.35 58.69 8.20 54.98 6.15 47.85 13.96 45.51 25.59 40.23 30.18 37.30 29.30 37.70 24.22 39.16 21.48 34.47ZM134.08 77.73 129.88 75.20 129.78 83.20ZM153.12 68.36 150.97 73.05 153.80 74.51ZM177.44 28.12H180.95L180.86 25.49L177.54 25.29ZM177.44 41.02 180.76 41.21 180.86 38.28H177.44ZM165.13 75.29 156.54 75.49 165.13 78.22ZM136.62 44.53 138.96 38.67 136.52 38.38 132.22 38.57 131.44 33.01 128.80 40.92 126.36 46.58 130.66 48.05 130.07 62.40 129.98 68.46 134.57 62.79 140.04 66.60 141.99 61.23 139.35 60.74 135.25 60.35 134.27 55.18 133.88 49.51ZM164.35 7.71 173.73 7.62 178.12 8.69 177.93 13.87H185.64L191.99 14.55L194.33 17.09L194.23 28.32L199.61 28.42V35.45L198.73 39.06L194.04 38.87L193.16 50.78H187.40L185.93 50.59L177.44 50.29L177.54 52.64L191.89 53.12L191.99 59.18L191.30 63.18L185.05 62.60L177.63 62.50V65.14L189.55 65.33L197.16 65.82V71.78L196.38 76.46L186.52 75.49L177.73 75.20L177.83 79.20L171.09 79.00L165.72 78.42L167.38 78.91L181.44 80.86L195.60 81.45L195.21 89.06L194.14 94.43L176.56 92.77L164.35 90.53L151.17 86.72L145.11 83.89L142.77 87.79L137.59 94.24L131.93 89.84L129.78 86.72L129.88 94.53H122.85L117.38 93.75L117.77 72.56V65.72L115.52 70.31L109.57 66.21L105.66 61.23L111.03 50.49L116.60 35.84L120.50 22.75L123.34 9.86L132.61 12.01L137.59 14.94L134.18 25.20L142.87 25.00L148.82 25.49L151.17 31.64L152.05 38.28L150.48 42.87L146.97 49.22L151.07 49.41L153.61 50.29L155.17 56.25L155.46 61.33L154.39 65.62L165.23 65.23V62.50L157.91 62.79L156.93 58.30L157.22 52.93L165.23 52.73V50.29L155.27 50.49L154.59 46.78L154.68 41.21L165.04 41.11V38.28L153.61 38.38L152.83 32.71L153.02 28.12L164.94 28.03L164.84 25.39L155.37 25.49L154.49 21.00L154.39 14.16L164.55 13.96ZM271.09 42.87Q275.58 42.87 279.97 42.77Q280.07 41.41 280.17 40.14Q275.68 39.94 271.18 39.75Q271.09 40.62 271.09 41.50ZM271.18 54.10H279.58Q279.58 52.73 279.68 51.37Q279.29 51.37 278.80 51.37Q274.99 51.46 271.09 51.46Q271.18 52.83 271.18 54.10ZM271.28 70.02 279.29 66.99 286.12 64.06 287.79 63.09H286.42H279.29V62.60L271.28 62.70H271.18ZM273.53 73.34 271.28 70.31V72.75ZM255.36 6.35 266.40 8.40 270.79 9.08 270.50 15.14Q275.58 15.23 280.66 15.33H299.31L299.11 22.17L298.43 27.64L277.34 26.66L262.10 26.37L266.01 27.54L272.06 28.52Q271.96 29.88 271.87 31.15H280.46L292.47 32.13L294.91 34.28L294.62 43.16L302.82 43.36L302.14 48.05L301.95 52.05L294.33 51.86L293.64 63.09H290.91L293.06 66.60L296.96 71.58L291.50 74.22L287.30 75.78Q286.22 76.07 285.15 76.46L294.04 80.66L301.85 84.28L298.53 89.94L295.79 94.73L288.86 90.53L280.56 86.43L271.48 83.20Q271.57 87.01 271.67 90.92L270.11 92.97L265.03 94.82L255.07 95.21L253.31 91.02L251.26 87.21L254.88 86.91L257.61 86.23L257.32 76.66V73.63Q257.32 68.16 257.22 62.70H256.24L240.03 62.89L239.64 58.69L238.96 54.30H257.22L257.12 51.66Q253.61 51.66 250.19 51.76L236.12 51.86L235.44 46.78L234.95 43.07Q245.89 43.07 256.83 42.97V40.04L254.29 40.14H239.64L239.05 35.45L238.27 31.25L251.75 31.15H256.54L256.34 26.27Q255.07 26.27 253.90 26.17L230.27 26.56L235.54 28.12L233.98 53.71L232.12 68.46L228.70 83.98L225.48 94.04L219.91 91.31L212.49 88.87L216.11 75.78L218.25 64.65L219.82 53.22L220.40 38.18L220.99 24.32H221.09L220.79 21.09L220.01 15.43L231.44 15.04L255.85 14.84Q255.66 10.64 255.36 6.35ZM231.24 82.91 236.71 80.47 242.47 78.81 246.96 77.15 242.38 75.49 232.71 73.34 234.07 68.46 235.83 63.18 246.57 65.62 254.97 68.26 252.82 73.05 251.65 75.39 253.61 74.61 255.07 80.47 256.63 84.28 250.09 86.23 235.44 92.97 233.39 87.79ZM390.03 81.45Q390.12 78.52 390.22 75.68V69.04L379.68 68.65Q376.26 68.75 372.74 68.85Q372.74 71.68 372.84 74.51Q372.94 78.03 372.94 81.45Q375.96 81.54 378.99 81.64ZM328.21 15.82 336.32 15.72 342.66 16.70 342.08 24.02 341.98 29.30Q343.74 29.30 345.59 29.20H356.53V36.04L356.14 43.07L344.42 42.77L329.48 42.97L316.30 43.36L315.91 36.82L315.71 30.27L326.36 29.59H328.41V27.44ZM317.86 46.88 324.79 45.61 330.95 45.21 332.21 60.55 333.00 68.26 320.98 70.41 319.32 59.38ZM316.10 71.97 333.19 70.02 343.05 68.95 337.49 68.07 338.66 59.57 339.83 43.55 346.86 44.34 354.29 46.78 351.36 62.40 349.89 68.16 355.26 67.58 356.04 75.49 356.73 80.47 331.34 83.30 317.18 84.96 316.79 79.10ZM370.98 11.33 379.58 11.13 387.29 12.11 386.51 24.61V29.49L387.98 29.39L404.58 28.52L404.87 35.35L404.68 41.99L391.79 41.89Q389.15 41.99 386.41 42.09Q386.41 44.43 386.41 46.88V54.39L402.33 54.69L406.04 56.93V82.32L405.85 94.04L398.62 93.85L378.99 93.46Q374.50 93.46 370.01 93.46L364.54 93.75L358.58 93.65L358.19 90.62L358.09 73.54L357.80 54.98L364.44 54.79Q365.22 54.79 365.91 54.79Q365.91 54.69 365.91 54.59Q368.93 54.49 371.96 54.49Q371.86 45.41 371.77 36.33Z"/></g><g transform="translate(40.0,36.7) scale(0.579)"><path d="M0 9 H56 L61 9 L65 2 L70 15 L75 9 H150" fill="none" stroke="#b8860b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g></svg><span class="brand-home" aria-hidden="true">🏠</span></a>
-  <div class="nav-links">
-    <a class="nav-link" href="library.html" data-nav="library">📚 文獻庫</a>
-    <a class="nav-link" href="breeds.html" data-nav="breeds">🐈 品種</a>
-    <a class="nav-link" href="vets.html" data-nav="vets">🏥 獸醫院</a>
-    <a class="nav-link" href="articles/index.html" data-nav="articles">📝 文章</a>
-    <a class="nav-link" href="about.html" data-nav="about">ℹ️ 關於</a>
-  </div>
-</nav>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21.5s-7-6-7-11.5a7 7 0 0 1 14 0c0 5.5-7 11.5-7 11.5z"/><path d="M12 7v6M9 10h6"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M2.5 5.5c3.1-1.3 6.5-1.1 9.5.8 3-1.9 6.4-2.1 9.5-.8v13.3c-3.1-1.3-6.5-1.1-9.5.8-3-1.9-6.4-2.1-9.5-.8z"/><path d="M12 6.3v13.3"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 2.5h8.5L19 7v14.5H6z"/><path d="M14 2.5V7h5"/><path d="M9 12h7M9 15.5h7M9 19h4"/></symbol>
+  <symbol id="i-cat" viewBox="0 0 24 24"><path d="M4.6 10.2 4 3.5l5 3.4c1.9-.6 4.1-.6 6 0l5-3.4-.6 6.7c1 1.1 1.6 2.4 1.6 3.9 0 4-4 6.9-9 6.9s-9-2.9-9-6.9c0-1.5.6-2.8 1.6-3.9z"/><path d="M9 13.5h.01M15 13.5h.01"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-mark" viewBox="0 0 30 14"><path d="M1 7.5h9l2.2-5 3.6 9.5 3-7.5 1.7 3H29"/></symbol>
+</svg>
 
-<header>
-  <img class="logo-img" src="images/logo/lockup-vertical.svg" alt="貓健康站" width="260" height="135">
-  <p class="tagline">台灣貓健康知識庫 · 引用回溯原文 · 無業配</p>
+<header class="site-head">
+  <a class="brand" href="index.html" aria-label="貓健康站首頁" aria-current="page"><svg viewBox="0 0 180 47" aria-hidden="true" focusable="false"><g transform="translate(0,15.2) scale(0.750)" fill="currentColor"><path d="M4 20 V2 L14 10 Z"/><path d="M36 20 V2 L26 10 Z"/><circle cx="13" cy="18" r="2.2"/><circle cx="27" cy="18" r="2.2"/></g><g transform="translate(40.0,0) scale(0.340)"><path fill="currentColor" d="M79.79 93.26 65.04 93.46 49.61 93.65 48.24 93.75H41.21L40.72 64.45L40.82 45.31L45.21 44.73V44.63H46.00L46.48 44.53L48.83 44.43L61.13 43.95H81.25L89.16 44.73L91.89 46.78L92.48 64.84L92.29 85.94L91.89 93.75H85.74ZM59.08 65.43 58.79 57.91 54.59 58.01V60.35L54.69 65.53ZM71.78 65.23 77.05 65.33 76.95 57.91H71.88ZM59.08 82.71V76.95L54.98 77.15L55.08 82.71H58.40ZM71.97 82.62H76.95L77.15 77.54V76.86H71.88ZM17.58 85.45 24.41 85.16 25.68 81.35 20.21 84.28ZM68.85 9.96 76.37 9.67 83.98 10.55 83.79 19.63 92.68 19.92V27.25L91.80 33.30L83.01 32.91L82.91 35.25L82.52 41.50L73.24 41.02L68.85 40.43L68.95 32.62L60.06 32.81L60.45 40.33L51.56 41.11L46.97 41.41L46.29 33.30L40.62 33.59L39.75 27.54L39.65 20.61L45.41 20.31L45.02 12.30L52.83 10.84L58.89 10.94L59.38 19.73L69.14 19.34V16.50ZM32.62 8.89 36.23 13.38 39.26 20.21 32.81 23.14 22.17 27.25 7.71 31.84 5.86 27.44 4.79 20.02 15.04 17.09 23.73 13.67ZM6.15 35.94 10.64 32.91 15.72 30.66 18.16 35.45 20.61 41.11 16.41 43.46 11.82 45.70 9.47 41.80ZM19.24 30.96 24.71 27.15 29.49 25.29 32.23 29.98 34.18 34.08 36.72 31.74 41.11 36.43 44.53 42.77 37.21 47.17 33.20 49.22 37.01 56.54 40.14 70.51 38.87 84.77 36.43 91.41 32.23 94.73 24.51 95.12 19.14 94.24 18.55 89.45 16.80 85.74 10.74 88.38 8.79 85.35 7.13 78.42 16.31 74.51 23.05 70.80 26.17 68.36 25.68 66.41 19.92 69.63 11.82 73.14 10.06 70.70 7.71 63.57 19.53 58.20 22.17 56.45 21.29 54.69 19.53 55.47 10.35 58.69 8.20 54.98 6.15 47.85 13.96 45.51 25.59 40.23 30.18 37.30 29.30 37.70 24.22 39.16 21.48 34.47ZM134.08 77.73 129.88 75.20 129.78 83.20ZM153.12 68.36 150.97 73.05 153.80 74.51ZM177.44 28.12H180.95L180.86 25.49L177.54 25.29ZM177.44 41.02 180.76 41.21 180.86 38.28H177.44ZM165.13 75.29 156.54 75.49 165.13 78.22ZM136.62 44.53 138.96 38.67 136.52 38.38 132.22 38.57 131.44 33.01 128.80 40.92 126.36 46.58 130.66 48.05 130.07 62.40 129.98 68.46 134.57 62.79 140.04 66.60 141.99 61.23 139.35 60.74 135.25 60.35 134.27 55.18 133.88 49.51ZM164.35 7.71 173.73 7.62 178.12 8.69 177.93 13.87H185.64L191.99 14.55L194.33 17.09L194.23 28.32L199.61 28.42V35.45L198.73 39.06L194.04 38.87L193.16 50.78H187.40L185.93 50.59L177.44 50.29L177.54 52.64L191.89 53.12L191.99 59.18L191.30 63.18L185.05 62.60L177.63 62.50V65.14L189.55 65.33L197.16 65.82V71.78L196.38 76.46L186.52 75.49L177.73 75.20L177.83 79.20L171.09 79.00L165.72 78.42L167.38 78.91L181.44 80.86L195.60 81.45L195.21 89.06L194.14 94.43L176.56 92.77L164.35 90.53L151.17 86.72L145.11 83.89L142.77 87.79L137.59 94.24L131.93 89.84L129.78 86.72L129.88 94.53H122.85L117.38 93.75L117.77 72.56V65.72L115.52 70.31L109.57 66.21L105.66 61.23L111.03 50.49L116.60 35.84L120.50 22.75L123.34 9.86L132.61 12.01L137.59 14.94L134.18 25.20L142.87 25.00L148.82 25.49L151.17 31.64L152.05 38.28L150.48 42.87L146.97 49.22L151.07 49.41L153.61 50.29L155.17 56.25L155.46 61.33L154.39 65.62L165.23 65.23V62.50L157.91 62.79L156.93 58.30L157.22 52.93L165.23 52.73V50.29L155.27 50.49L154.59 46.78L154.68 41.21L165.04 41.11V38.28L153.61 38.38L152.83 32.71L153.02 28.12L164.94 28.03L164.84 25.39L155.37 25.49L154.49 21.00L154.39 14.16L164.55 13.96ZM271.09 42.87Q275.58 42.87 279.97 42.77Q280.07 41.41 280.17 40.14Q275.68 39.94 271.18 39.75Q271.09 40.62 271.09 41.50ZM271.18 54.10H279.58Q279.58 52.73 279.68 51.37Q279.29 51.37 278.80 51.37Q274.99 51.46 271.09 51.46Q271.18 52.83 271.18 54.10ZM271.28 70.02 279.29 66.99 286.12 64.06 287.79 63.09H286.42H279.29V62.60L271.28 62.70H271.18ZM273.53 73.34 271.28 70.31V72.75ZM255.36 6.35 266.40 8.40 270.79 9.08 270.50 15.14Q275.58 15.23 280.66 15.33H299.31L299.11 22.17L298.43 27.64L277.34 26.66L262.10 26.37L266.01 27.54L272.06 28.52Q271.96 29.88 271.87 31.15H280.46L292.47 32.13L294.91 34.28L294.62 43.16L302.82 43.36L302.14 48.05L301.95 52.05L294.33 51.86L293.64 63.09H290.91L293.06 66.60L296.96 71.58L291.50 74.22L287.30 75.78Q286.22 76.07 285.15 76.46L294.04 80.66L301.85 84.28L298.53 89.94L295.79 94.73L288.86 90.53L280.56 86.43L271.48 83.20Q271.57 87.01 271.67 90.92L270.11 92.97L265.03 94.82L255.07 95.21L253.31 91.02L251.26 87.21L254.88 86.91L257.61 86.23L257.32 76.66V73.63Q257.32 68.16 257.22 62.70H256.24L240.03 62.89L239.64 58.69L238.96 54.30H257.22L257.12 51.66Q253.61 51.66 250.19 51.76L236.12 51.86L235.44 46.78L234.95 43.07Q245.89 43.07 256.83 42.97V40.04L254.29 40.14H239.64L239.05 35.45L238.27 31.25L251.75 31.15H256.54L256.34 26.27Q255.07 26.27 253.90 26.17L230.27 26.56L235.54 28.12L233.98 53.71L232.12 68.46L228.70 83.98L225.48 94.04L219.91 91.31L212.49 88.87L216.11 75.78L218.25 64.65L219.82 53.22L220.40 38.18L220.99 24.32H221.09L220.79 21.09L220.01 15.43L231.44 15.04L255.85 14.84Q255.66 10.64 255.36 6.35ZM231.24 82.91 236.71 80.47 242.47 78.81 246.96 77.15 242.38 75.49 232.71 73.34 234.07 68.46 235.83 63.18 246.57 65.62 254.97 68.26 252.82 73.05 251.65 75.39 253.61 74.61 255.07 80.47 256.63 84.28 250.09 86.23 235.44 92.97 233.39 87.79ZM390.03 81.45Q390.12 78.52 390.22 75.68V69.04L379.68 68.65Q376.26 68.75 372.74 68.85Q372.74 71.68 372.84 74.51Q372.94 78.03 372.94 81.45Q375.96 81.54 378.99 81.64ZM328.21 15.82 336.32 15.72 342.66 16.70 342.08 24.02 341.98 29.30Q343.74 29.30 345.59 29.20H356.53V36.04L356.14 43.07L344.42 42.77L329.48 42.97L316.30 43.36L315.91 36.82L315.71 30.27L326.36 29.59H328.41V27.44ZM317.86 46.88 324.79 45.61 330.95 45.21 332.21 60.55 333.00 68.26 320.98 70.41 319.32 59.38ZM316.10 71.97 333.19 70.02 343.05 68.95 337.49 68.07 338.66 59.57 339.83 43.55 346.86 44.34 354.29 46.78 351.36 62.40 349.89 68.16 355.26 67.58 356.04 75.49 356.73 80.47 331.34 83.30 317.18 84.96 316.79 79.10ZM370.98 11.33 379.58 11.13 387.29 12.11 386.51 24.61V29.49L387.98 29.39L404.58 28.52L404.87 35.35L404.68 41.99L391.79 41.89Q389.15 41.99 386.41 42.09Q386.41 44.43 386.41 46.88V54.39L402.33 54.69L406.04 56.93V82.32L405.85 94.04L398.62 93.85L378.99 93.46Q374.50 93.46 370.01 93.46L364.54 93.75L358.58 93.65L358.19 90.62L358.09 73.54L357.80 54.98L364.44 54.79Q365.22 54.79 365.91 54.79Q365.91 54.69 365.91 54.59Q368.93 54.49 371.96 54.49Q371.86 45.41 371.77 36.33Z"/></g><g transform="translate(40.0,36.7) scale(0.579)"><path class="pulse" pathLength="1" d="M0 9 H56 L61 9 L65 2 L70 15 L75 9 H150" fill="none" stroke="#b8860b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g></svg></a>
+  <a class="er-pill" href="vets.html?only24h=1&amp;near=1"><svg class="i" aria-hidden="true"><use href="#i-alert"/></svg>24h 急診</a>
+  <nav class="main-nav" aria-label="主要分頁">
+    <a href="articles/index.html">文章</a>
+    <a href="vets.html">獸醫院</a>
+    <a href="library.html">文獻庫</a>
+    <a href="breeds.html">品種</a>
+    <a href="about.html">關於</a>
+  </nav>
 </header>
 
-<main>
+<main id="main">
+  <section class="hero" aria-labelledby="hero-title">
+    <h1 id="hero-title"><span>貓生病了，</span><span>先查這裡。</span></h1>
+    <p class="hero-sub">每個數字都有出處，回溯 ISFM、AAFP、IRIS 等原文。無業配。</p>
+    <!-- 小貓插畫：底稿是使用者提供的「伸懶腰放鬆小貓」（docs/design/ref-cat-asset.html），線條改主色，臉是兩眼＋粉紅倒三角鼻 -->
+    <div class="hero-cat" aria-hidden="true">
+      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path class="cat-body" d="M12 36C12 36 10 26 15 22C19 18.8 24 21 28 22C32 23 37 20 40 23C42 25 41 33 36 36H12Z"/>
+        <path d="M14 23L12 16L18 19"/>
+        <path d="M22 19L27 16L26 22"/>
+        <path class="cat-tail" d="M40 26C43 23 45 16 41 13C38 10 35 15 37 19"/>
+        <circle class="cat-eye" cx="15.6" cy="26.3" r="1.15" fill="currentColor" stroke="none"/>
+        <circle class="cat-eye" cx="21.6" cy="26.3" r="1.15" fill="currentColor" stroke="none"/>
+        <path class="cat-nose" d="M17.5 28.2H19.7L18.6 29.7Z"/>
+      </svg>
+    </div>
+  </section>
 
-  <!-- 免責聲明（小字置頂） -->
-  <p class="disclaimer">
-    <span class="d-icon">⚠️</span> 本站為知識索引與獸醫院查詢，不取代獸醫師診斷。貓咪有異狀請立即就醫。
-  </p>
-
-  <!-- A: 主搜尋框 -->
-  <form class="home-search" action="articles/index.html" method="get" role="search">
-    <input type="search" name="q" placeholder="我家貓最近... (例：腎指數高、亂尿尿、半夜亂叫)" autocomplete="off" autofocus>
+  <form class="search" action="articles/index.html" method="get" role="search">
+    <label class="vh" for="q">搜尋症狀或疾病</label>
+    <input id="q" name="q" type="search" placeholder="症狀或疾病，例：腎指數高、亂尿尿" autocomplete="off" enterkeyhint="search">
+    <button class="btn" type="submit">搜尋</button>
   </form>
 
-  <!-- B: 緊急狀況入口 -->
-  <div class="emergency-strip">
-    <div class="e-left">
-      <span class="e-icon">🚨</span>
-      <span>半夜貓出狀況？尿不出來、呼吸急促、抽搐、誤食 — 不要等天亮</span>
+  <section class="er" aria-labelledby="er-title">
+    <h2 id="er-title"><svg class="i" aria-hidden="true"><use href="#i-alert"/></svg>半夜貓出狀況？</h2>
+    <ul class="er-list">
+      <li>尿不出來</li>
+      <li>呼吸急促</li>
+      <li>抽搐</li>
+      <li>誤食</li>
+    </ul>
+    <a class="btn btn-er" href="vets.html?only24h=1&amp;near=1"><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>找附近的 24h 急診</a>
+  </section>
+
+  <section class="stats" aria-label="網站收錄">
+    <p class="vh">全台 22 縣市、2,001 家獸醫院、56 篇文章、109 筆文獻、68 種品種。</p>
+    <ul class="stats-grid" aria-hidden="true">
+      <li><b class="num" data-to="22">22</b><span>縣市</span></li>
+      <li><b class="num" data-stat="vets" data-to="2001">2,001</b><span>家獸醫院</span></li>
+      <li><b class="num" data-stat="articles" data-to="56">56</b><span>篇文章</span></li>
+      <li><b class="num" data-stat="citations" data-to="109">109</b><span>筆文獻</span></li>
+      <li><b class="num" data-stat="breeds" data-to="68">68</b><span>種品種</span></li>
+    </ul>
+  </section>
+
+  <nav class="cards" aria-labelledby="cards-title">
+    <h2 class="vh" id="cards-title">主要功能</h2>
+    <a class="card" href="vets.html"><span class="card-ic"><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg></span><h3>找獸醫院</h3><p>可定位、可篩 24h 急診與貓專科</p></a>
+    <a class="card" href="articles/index.html"><span class="card-ic"><svg class="i" aria-hidden="true"><use href="#i-book"/></svg></span><h3>查症狀看文章</h3><p>分類清楚的醫療科普</p></a>
+    <a class="card" href="library.html"><span class="card-ic"><svg class="i" aria-hidden="true"><use href="#i-doc"/></svg></span><h3>學術文獻庫</h3><p>每筆附原文與中文摘要</p></a>
+    <a class="card" href="breeds.html"><span class="card-ic"><svg class="i" aria-hidden="true"><use href="#i-cat"/></svg></span><h3>品種圖鑑</h3><p>含遺傳病風險整理</p></a>
+  </nav>
+
+  <section aria-labelledby="common-title">
+    <h2 class="sec-h" id="common-title"><svg class="mark" viewBox="0 0 30 14" aria-hidden="true" focusable="false"><path pathLength="1" d="M1 7.5h9l2.2-5 3.6 9.5 3-7.5 1.7 3H29"/></svg>常見狀況</h2>
+    <ul class="pills">
+      <li><a class="pill" href="articles/cat-emergency-care-taiwan.html">急診判斷</a></li>
+      <li><a class="pill" href="articles/male-cat-urethral-obstruction.html">公貓尿道阻塞</a></li>
+      <li><a class="pill" href="articles/cat-ckd-complete-guide.html">慢性腎病 CKD</a></li>
+      <li><a class="pill" href="articles/cat-toxic-substances-taiwan.html">誤食中毒</a></li>
+      <li><a class="pill" href="articles/cat-common-symptoms-taiwan.html">嘔吐與便秘</a></li>
+      <li><a class="pill" href="articles/cat-diabetes-care.html">糖尿病</a></li>
+      <li><a class="pill" href="articles/cat-hyperthyroidism-senior.html">甲狀腺亢進</a></li>
+      <li><a class="pill" href="articles/cat-fip-guide-taiwan.html">FIP 腹膜炎</a></li>
+      <li><a class="pill" href="articles/cat-vaccination-wellness-taiwan.html">疫苗與健檢</a></li>
+      <li><a class="pill" href="articles/cat-neutering-aftercare-taiwan.html">結紮</a></li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="core-title">
+    <h2 class="sec-h" id="core-title"><svg class="mark" viewBox="0 0 30 14" aria-hidden="true" focusable="false"><path pathLength="1" d="M1 7.5h9l2.2-5 3.6 9.5 3-7.5 1.7 3H29"/></svg>推薦文章</h2>
+    <div class="posts">
+      <article class="post">
+        <p class="post-meta"><span>健康 › 急症辨識</span><span class="tag-draft" data-quality-of="cat-emergency-care-taiwan">草稿</span></p>
+        <h3><a href="articles/cat-emergency-care-taiwan.html">貓咪急診判斷與居家急救：何時該衝醫院，路上能做什麼</a></h3>
+        <p>把貓的症狀分成四級：立刻急診、今天就醫、本週預約、居家觀察。</p>
+      </article>
+      <article class="post">
+        <p class="post-meta"><span>健康 › 急症辨識</span><span class="tag-draft" data-quality-of="male-cat-urethral-obstruction">草稿</span></p>
+        <h3><a href="articles/male-cat-urethral-obstruction.html">公貓尿道阻塞：辨識急症與黃金救治時間</a></h3>
+        <p>公貓尿道阻塞在 24 到 48 小時內可能致命，常被誤認為便秘。</p>
+      </article>
+      <article class="post">
+        <p class="post-meta"><span>健康 › 常見疾病</span><span class="tag-draft" data-quality-of="cat-ckd-complete-guide">草稿</span></p>
+        <h3><a href="articles/cat-ckd-complete-guide.html">貓咪慢性腎病（CKD）：分期、飲食與居家照護</a></h3>
+        <p>IRIS 2023 分期怎麼看、哪些症狀該立刻就醫、低磷飲食與補水。</p>
+      </article>
     </div>
-    <a href="vets.html?only24h=1">找 24h 急診 →</a>
-  </div>
+    <a class="more" href="articles/index.html">看全部 56 篇文章<svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+  </section>
 
-  <!-- C: 主入口（飼主意圖排序：找獸醫 → 看文章 → 學品種 → 學文獻） -->
-  <div class="entry-grid">
-    <a class="entry-card primary" href="vets.html">
-      <div class="e-icon">🏥</div>
-      <h2>找獸醫院</h2>
-      <p class="e-desc">全台 22 縣市 2,001 家。可篩 24h 急診、貓專科、依縣市/區搜尋。</p>
-      <div class="e-meta">最常用 · 含 GPS 距離排序</div>
-    </a>
-    <a class="entry-card primary" href="articles/index.html">
-      <div class="e-icon">📝</div>
-      <h2>查症狀 / 看文章</h2>
-      <p class="e-desc">CKD、糖尿、FIP、行為問題、急診判斷。引用 ISFM/AAFP 原文。</p>
-      <div class="e-meta">57 篇文章 · 含台灣本土資訊</div>
-    </a>
-    <a class="entry-card" href="breeds.html">
-      <div class="e-icon">🐈</div>
-      <h2>品種圖鑑</h2>
-      <p class="e-desc">68 種品種，遺傳病風險警示（摺耳/曼基/無毛...）+ 並排比較。</p>
-      <div class="e-meta">含 Salonen 2019 學術數據</div>
-    </a>
-    <a class="entry-card" href="library.html">
-      <div class="e-icon">📚</div>
-      <h2>學術文獻庫</h2>
-      <p class="e-desc">ISFM / AAFP / IRIS / WSAVA 指引索引，每筆原文連結 + 中文摘要。</p>
-      <div class="e-meta">113 筆 · 進階使用者</div>
-    </a>
-  </div>
+  <!-- 廣告位：AdSense 上線後拿掉 hidden，在 .ad 裡放廣告碼（每頁最多 3 個，不可夾在急診資訊中間） -->
+  <aside class="ad" aria-label="贊助" hidden>
+    <span class="ad-label">贊助</span>
+  </aside>
 
-  <!-- 本站做什麼 -->
-  <div class="why-box">
-    <strong>本站做的事：</strong>每筆數據都回溯原文核實，學術來源以獸醫專業組織指引為主（ISFM / AAFP / IRIS / WSAVA）。<strong>不 SEO 內容農場、業配與聯盟行銷</strong>。
-    <a href="about.html">→ 完整原則</a>
-  </div>
-
+  <section aria-labelledby="principles-title">
+    <h2 class="sec-h" id="principles-title"><svg class="mark" viewBox="0 0 30 14" aria-hidden="true" focusable="false"><path pathLength="1" d="M1 7.5h9l2.2-5 3.6 9.5 3-7.5 1.7 3H29"/></svg>我們怎麼寫</h2>
+    <div class="principles">
+      <ul>
+        <li><svg class="mark" aria-hidden="true"><use href="#i-mark"/></svg><div><b>數字附出處</b><p>每個數字句尾都有編號，點了看原始文獻。</p></div></li>
+        <li><svg class="mark" aria-hidden="true"><use href="#i-mark"/></svg><div><b>草稿會標示</b><p>還沒經人工審核的文章，標題旁會寫「草稿」。</p></div></li>
+        <li><svg class="mark" aria-hidden="true"><use href="#i-mark"/></svg><div><b>沒有業配</b><p>不收廠商費用、不放聯盟連結，網站靠 Google 廣告維持。</p></div></li>
+      </ul>
+      <a class="more" href="editorial.html">看編輯方針<svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+  </section>
 </main>
 
-<footer class="site-footer">
-  <div class="f-nav">
-    <a class="f-home" href="index.html">🏠 回首頁</a>
-    <a href="library.html">📚 文獻庫</a>
-    <a href="breeds.html">🐈 品種圖鑑</a>
-    <a href="vets.html">🏥 獸醫院</a>
-    <a href="articles/index.html">📝 文章</a>
-    <a href="about.html">ℹ️ 關於本站</a>
-    <a href="editorial.html">📋 編輯方針</a>
-    <a href="privacy.html">🔒 隱私政策</a>
+<footer class="foot">
+  <div class="foot-cat" aria-hidden="true">
+    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path class="cat-body" d="M12 36C12 36 10 26 15 22C19 18.8 24 21 28 22C32 23 37 20 40 23C42 25 41 33 36 36H12Z"/>
+      <path d="M14 23L12 16L18 19"/>
+      <path d="M22 19L27 16L26 22"/>
+      <path d="M40 26C43 23 45 16 41 13C38 10 35 15 37 19"/>
+      <circle cx="15.6" cy="26.3" r="1.15" fill="currentColor" stroke="none"/>
+      <circle cx="21.6" cy="26.3" r="1.15" fill="currentColor" stroke="none"/>
+      <path class="cat-nose" d="M17.5 28.2H19.7L18.6 29.7Z"/>
+    </svg>
   </div>
-  <div class="f-meta">
-    貓健康站 · 學術來源：ISFM · WSAVA · IRIS · AAFP · ABCD · Cornell · PubMed OA<br>
-    本站內容僅供參考，不取代獸醫師診斷
-  </div>
+  <nav aria-label="頁尾">
+    <a href="articles/index.html">文章</a>
+    <a href="vets.html">獸醫院</a>
+    <a href="library.html">文獻庫</a>
+    <a href="breeds.html">品種</a>
+    <a href="about.html">關於</a>
+    <a href="editorial.html">編輯方針</a>
+    <a href="privacy.html">隱私權政策</a>
+  </nav>
+  <p>本站內容僅供參考，不取代獸醫師診斷。</p>
+  <p class="foot-src">學術來源：ISFM · WSAVA · IRIS · AAFP · ABCD · Cornell · PubMed OA</p>
 </footer>
+</div>
 
+<script>
+(() => {
+  // 動態只在系統沒開「減少動態效果」時播放；急診區塊與按鈕不加任何動畫
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return;
+  document.documentElement.classList.add('motion');
+
+  // 數字跑碼：HTML 已是實際數字（沒 JS、報讀器、搜尋引擎都讀得到），進入畫面才從 0 跑，約 1 秒、一起到、只跑一次
+  const nums = [...document.querySelectorAll('.num[data-to]')];
+  const countUp = () => {
+    const t0 = performance.now();
+    nums.forEach(el => { el.textContent = '0'; });
+    const step = t => {
+      const p = Math.min(1, (t - t0) / 1000);
+      const e = 1 - Math.pow(1 - p, 3);
+      nums.forEach(el => { el.textContent = Math.round(Number(el.dataset.to) * e).toLocaleString('en-US'); });
+      if (p < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  };
+  const so = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting) { so.disconnect(); countUp(); }
+  }, { threshold: 0.6 });
+  so.observe(document.querySelector('.stats'));
+
+  // 區塊標題的金色脈搏記號：出現在畫面時畫一次
+  const mo = new IntersectionObserver(entries => entries.forEach(en => {
+    if (en.isIntersecting) { en.target.classList.add('on'); mo.unobserve(en.target); }
+  }), { threshold: 1 });
+  document.querySelectorAll('.sec-h .mark').forEach(m => mo.observe(m));
+
+  // 點小貓：甩一次尾巴、眨一次眼
+  const cat = document.querySelector('.hero-cat');
+  const replay = (el, anim) => { el.style.animation = 'none'; el.getBoundingClientRect(); el.style.animation = anim; };
+  cat.addEventListener('click', () => {
+    replay(cat.querySelector('.cat-tail'), 'flick 0.9s ease-in-out');
+    cat.querySelectorAll('.cat-eye').forEach(eye => replay(eye, 'blink 0.3s ease-in-out 0.5s'));
+  });
+})();
+</script>
 </body>
 </html>

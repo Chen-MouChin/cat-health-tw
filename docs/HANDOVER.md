@@ -1,11 +1,57 @@
 # 交接文件
 
-最後更新：2026-09-06
+最後更新：2026-09-29
 對象：接手這個 repo 的人或 AI session。讀完這份，應該能在 30 分鐘內跑起網站、知道每個工具做什麼、知道哪些事不能做。
 
 進度看 [PROGRESS.md](PROGRESS.md)，計畫看 [ROADMAP.md](ROADMAP.md)，待辦看 [TODO.md](TODO.md)，寫作規範看 `.claude/skills/cat-health-writing/SKILL.md`。
 
 **開工前先看 `docs/TODO.md` 的「等你回覆」那節**，那裡是卡在使用者身上的事項。
+
+---
+
+## 下次開工（2026-09-29 留）
+
+這次的改動都已合併進 main：首頁改版、手機定位找附近獸醫院、全站連結色與鍵盤焦點、六項錯誤修正、部署改成只能手動觸發。網站尚未公開（不開 GitHub Pages），測試用 ngrok。
+
+**1. 同步 main**
+
+```bash
+git checkout main
+git pull
+```
+
+本機有自己的分支或還沒 commit 的改動：先 commit，再 `git merge main`。衝突在 `frontend/` 產出物的話不要手改，解完跑 `python build.py` 重建再 commit。
+
+**2. 起站，用 ngrok 給手機測**
+
+```bash
+python build.py                           # 改過 content/ 或 build.py 才需要
+python sandbox/serve.py                   # http://localhost:8000/；沒有 sandbox/ 就用 python -m http.server 8000 --directory frontend
+ngrok config add-authtoken <你的 token>    # 第一次用 ngrok 才需要
+ngrok http 8000 --basic-auth "帳號:密碼"    # 密碼至少 8 碼
+```
+
+- 手機打開 ngrok 給的 https 網址。瀏覽器只在 HTTPS 下給定位，「找我附近的獸醫院」要這樣才測得到。
+- 免費版第一次進站會先出現 ngrok 提醒頁，按 Visit Site。
+- 加了 `--basic-auth` 要輸入帳密才看得到，連結外流也沒關係。
+- ngrok 要在自己電腦跑。雲端 Claude session 的網路政策擋掉 ngrok（`ngrok.com`、`bin.equinox.io`、`connect.ngrok-agent.com`），而且容器用完就回收。
+
+**3. 手機測試清單**
+
+- 首頁：頁首「24h 急診」與急診區塊的按鈕第一屏就看得到；數字捲到才跑、約 1 秒；小貓甩兩下尾巴、眨一次眼，點牠再動一次；搜尋送出後到文章列表。
+- 手機設定開「減少動態效果」：數字直接顯示、貓不動。
+- 獸醫院：「找我附近的獸醫院」允許定位後，範圍切換、24h、貓專科、導航（開 Google 地圖）；拒絕定位時有設定說明。
+- 文章頁：內文連結是深苔綠、參考文獻、文末找獸醫按鈕。
+- 電腦用 Tab 走一遍：每個可點的地方都有 3px 近黑框，連結另有黃底。
+
+**4. 清掉 GitHub 上的失敗部署（一次性，Claude 的 GitHub 工具刪不了）**
+
+- Actions → Deploy to GitHub Pages → 失敗的那次 → 右上「⋯」→ Delete workflow run。
+- Settings → Environments → `github-pages` → Delete environment。repo 首頁側欄的失敗部署紀錄會一起消失，以後開 Pages 時會自動重建。
+
+`deploy.yml` 已改成只能手動觸發，之後合併到 main 不會再產生失敗部署。
+
+**5. 待你決定**（細節在 TODO「等你回覆」）：縣市數寫 21 或 22、急診區塊的四個狀況要不要留、手機底部錨定廣告、上線託管方式、網域、工作檯意見、10 篇核心文章審核。
 
 ---
 
@@ -31,7 +77,7 @@ python workbench/server.py                 # http://127.0.0.1:8010/ 審核工作
 python scripts/lint_articles.py            # 寫作規範檢查，FAIL 必須為 0
 ```
 
-部署：push 到 main，GitHub Actions 把 `frontend/` 原樣上傳到 GitHub Pages，**不跑 build.py**。所以產出物要 commit，而且 push 等於上線。
+部署：`deploy.yml` 把 `frontend/` 原樣上傳到 GitHub Pages，**不跑 build.py**，所以產出物要 commit。目前 repo（private）沒開 Pages，網站尚未公開：2026-09-29 決定先內部開發、用 ngrok 測試，deploy 只能手動觸發，push 到 main 不會上線。
 
 ## 3. 目錄與角色
 
@@ -49,7 +95,8 @@ python scripts/lint_articles.py            # 寫作規範檢查，FAIL 必須為
 | `workbench/` | 本機審核後台 | 是 |
 | `.claude/skills/cat-health-writing/` | 寫作規範 skill | 是 |
 | `.claude/settings.json` | PostToolUse hook：編輯文章後自動 lint | 是 |
-| `docs/` | 本文件、進度、路線圖 | 是 |
+| `docs/` | 本文件、進度、路線圖、設計需求書 `design-prompts.md` | 是 |
+| `docs/design/` | 視覺改版：使用者原稿、首頁原型、改動說明 | 是 |
 | `research/` | 內部研究、審核腳本、品質報表、審核報告 | **否** |
 | `sandbox/` | 本機試驗與預覽伺服器 | **否** |
 
@@ -104,20 +151,25 @@ python scripts/lint_articles.py            # 寫作規範檢查，FAIL 必須為
 - 字型：貓啃什錦黑繁體版，SIL OFL 1.1，來源 github.com/Skr-ZERO/MaokenAssortedSans-TC v0.90。字型檔不進 git，只留 `frontend/fonts/maoken-assorted-logo.woff2` 子集與外框化的 SVG。
 - 重新產生：`python scripts/build_logo.py --font <MaokenAssortedSans-TC.ttf>`
 - 色票：奶油米 `#f9f6f0`、近黑 `#1d1d1f`、苔綠 `#5b8a6e`、金 `#b8860b`。全在 `frontend/css/theme.css`。
+- 改版色票（2026-09-29）：深苔綠 `#3b6a50` 是主色（連結、按鈕、選取），急診紅 `#b93a2e` 只給急診，焦點黃 `#ffdd00`，貓鼻粉 `#dd7f8a` 只給插畫。
+- 首頁主標字型：jf 粉圓子集 `frontend/fonts/huninn-home.woff2`（SIL OFL），主標改字後跑 `python scripts/fetch_home_font.py`。
+- 視覺改版：需求書 `docs/design-prompts.md`（網頁版 https://claude.ai/artifact/J7ocheYfZhL7RikiZ6aSkD），首頁原型 `docs/design/home-prototype.html`（https://claude.ai/artifact/VEz7Lymwu2Pi1xWr7AXAU5），第一版提案畫布 https://claude.ai/artifact/FXxMk1LkENFztekerzVNaG。這些網頁版只有你登入才看得到，要給別人看要從 Share 開放。
 - 設計過程與未採用方案在 Claude 設計畫布：https://claude.ai/code/artifact/36152237-a431-4ddf-bd6a-fa77a539e066
 
 ## 8. 外部帳號與待辦設定
 
 | 項目 | 狀態 | 誰 |
 |---|---|---|
-| GitHub repo `Chen-MouChin/cat-health-tw` | 有，Pages 用 Actions 部署 | 已設 |
-| 自訂網域 | 未買。README 寫 cat-health.tw。買好後：Cloudflare DNS 指 GitHub Pages IP、`frontend/CNAME`、Pages 設定勾 Enforce HTTPS、改 build.py `SITE_URL` 與所有 canonical | 買網域是你 |
+| GitHub repo `Chen-MouChin/cat-health-tw` | 有（private）。Pages 沒開：private repo 要 GitHub Pro 才能用，而且 Pages 站是公開的。先內部開發、用 ngrok 測試 | 上線時決定託管 |
+| 自訂網域 | 未買。README 寫 cat-health.tw。買好後依上線託管方式設 DNS（用 GitHub Pages 的話：Cloudflare DNS 指 Pages IP、`frontend/CNAME`、勾 Enforce HTTPS），並改 build.py `SITE_URL` 與所有 canonical | 買網域是你 |
 | AdSense | 未申請。github.io 子網域不會過，要先有網域。站內隱私政策與廣告佔位已備。申請時機：20 到 30 篇 reviewed 之後 | 申請是你 |
 | Google Search Console | 未設 | 網域好後 |
 
 ## 9. 已知陷阱
 
-- **push 等於上線。** 沒有 staging。draft 警語是保護機制，別在 reviewed 之前把警語拿掉。
+- **目前 push 不會上線**（Pages 沒開、deploy 只能手動）。之後開了 Pages 並把 push 觸發加回來，push 到 main 就等於上線，沒有 staging。draft 警語是保護機制，別在 reviewed 之前把警語拿掉。
+- 首頁文字以使用者原稿為準（`docs/design/ref-home-mockup.html`），改版只動樣式。急診區塊不寫就醫建議（例如「不要等天亮」），只放狀況與找 24h 急診的入口。
+- 首頁的篇／筆／種／家與草稿標籤由 `build.py` 依資料寫回，不要手改；縣市數例外，照原稿 22。
 - `frontend/data/vets.js` 由 `scripts/build_vets_js.py` 產生，不是 build.py。改獸醫院資料要跑它。
 - 文章內部連結一律相對路徑（`../vets.html`）。站台在子路徑下，`/vets.html` 會 404。
 - `test_search.py` 有 45 筆既有失敗，它還假設 103 篇文章，改搜尋前先更新案例。

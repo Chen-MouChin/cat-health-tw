@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>貓健康站 | 貓生病了，先查這裡。</title>
+    <style>
+        :root {
+            /* 品牌色 */
+            --cream: #f9f6f0;
+            --dark: #1d1d1f;
+            --moss-green: #3b6a50;
+            --pale-moss: #e7efe9;
+            --pale-gold: #f6ecd2;
+            --gold: #b8860b;
+            --gold-text: #8a6408;
+            --emergency-red: #b93a2e;
+
+            /* 介面顏色 */
+            --focus-ring: #ffdd00;
+            --card-bg: #ffffff;
+
+            /* 排版 */
+            --font-sys: -apple-system, BlinkMacSystemFont, "PingFang TC", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+        }
+
+        /* 基礎設定 */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--cream);
+            color: var(--dark);
+            font-family: var(--font-sys);
+            font-size: 17px;
+            line-height: 1.75;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4 {
+            line-height: 1.3;
+            font-weight: 700;
+            color: var(--dark);
+        }
+
+        h1 { font-size: 28px; margin-bottom: 16px; }
+        h2 { font-size: 24px; margin-bottom: 12px; }
+        h3 { font-size: 20px; margin-bottom: 8px; }
+
+        a {
+            color: var(--moss-green);
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            font-weight: 600;
+        }
+
+        a:hover {
+            color: #2a4c39;
+        }
+
+        /* 無障礙焦點 */
+        *:focus-visible {
+            outline: 4px solid var(--focus-ring);
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+
+        /* 版面骨架 (單欄為主，390px 起) */
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            margin-bottom: 48px;
+        }
+
+        /* 導覽列 */
+        header {
+            padding: 16px 0;
+            border-bottom: 2px solid var(--pale-moss);
+            margin-bottom: 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: var(--dark);
+        }
+
+        .logo-text {
+            font-size: 22px;
+            font-weight: 900;
+            letter-spacing: 1px;
+        }
+
+        .pulse-line {
+            stroke-dasharray: 100;
+            stroke-dashoffset: 100;
+            animation: drawPulse 1.5s ease-out forwards;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 16px;
+            font-size: 15px;
+            overflow-x: auto;
+            padding-bottom: 4px;
+            width: 100%;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            white-space: nowrap;
+            color: var(--dark);
+            min-height: 44px; /* 點擊區至少 44px */
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--moss-green);
+            text-decoration: underline;
+        }
+
+        /* 主視覺與標語 */
+        .hero {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .cat-illustration {
+            width: 120px;
+            height: auto;
+            margin: 0 auto 16px;
+            display: block;
+        }
+
+        .cat-tail {
+            transform-origin: 40px 26px;
+            animation: wag 4s ease-in-out infinite;
+        }
+
+        .hero h1 {
+            margin-bottom: 8px;
+        }
+
+        .hero p {
+            color: #4a4a4c;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        /* 搜尋框 */
+        .search-box {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 40px;
+        }
+
+        .search-box input {
+            flex: 1;
+            padding: 12px 16px;
+            border: 2px solid var(--dark);
+            border-radius: 12px;
+            font-size: 16px;
+            min-height: 44px;
+            background: var(--card-bg);
+        }
+
+        .btn {
+            background-color: var(--moss-green);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 24px; /* 大圓角 */
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 44px;
+            cursor: pointer;
+            transition: transform 0.1s ease;
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        /* 急診區塊 (NHS Style) */
+        .emergency-block {
+            background-color: var(--emergency-red);
+            color: white;
+            padding: 24px;
+            border-radius: 16px;
+            margin-bottom: 40px;
+        }
+
+        .emergency-block h2 {
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .emergency-block ul {
+            list-style: none;
+            margin: 16px 0 24px 0;
+        }
+
+        .emergency-block li {
+            margin-bottom: 8px;
+            padding-left: 24px;
+            position: relative;
+            font-weight: 600;
+        }
+
+        .emergency-block li::before {
+            content: "•";
+            position: absolute;
+            left: 8px;
+            color: var(--focus-ring);
+        }
+
+        .btn-emergency {
+            background-color: white;
+            color: var(--emergency-red);
+            width: 100%;
+        }
+
+        /* 數字列跑碼 */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 16px;
+            background-color: var(--pale-moss);
+            padding: 24px;
+            border-radius: 16px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .stat-item .num {
+            display: block;
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--moss-green);
+            font-variant-numeric: tabular-nums;
+        }
+
+        .stat-item .label {
+            font-size: 14px;
+            color: var(--dark);
+            font-weight: 600;
+        }
+
+        /* 四個入口卡片 */
+        .entrances-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+
+        .card-entrance {
+            background-color: var(--card-bg);
+            border: 2px solid #e5e5e5;
+            border-radius: 16px;
+            padding: 20px 16px;
+            text-decoration: none;
+            color: var(--dark);
+            transition: all 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .card-entrance:hover {
+            border-color: var(--moss-green);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .card-entrance h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: var(--moss-green);
+        }
+
+        .card-entrance p {
+            font-size: 13px;
+            color: #4a4a4c;
+            line-height: 1.5;
+            font-weight: normal;
+        }
+
+        /* 常見狀況標籤 */
+        .tags-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 40px;
+        }
+
+        .tag-pill {
+            background-color: var(--pale-gold);
+            color: var(--dark);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            min-height: 44px;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        /* 核心文章 */
+        .article-list {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .article-item {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 16px;
+            border: 1px solid #e5e5e5;
+        }
+
+        .article-meta {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            margin-bottom: 8px;
+            font-size: 13px;
+            color: #666;
+        }
+
+        .badge-draft {
+            background-color: #eee;
+            color: #555;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .article-item h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .article-item p {
+            font-size: 15px;
+            color: #4a4a4c;
+        }
+
+        /* 廣告位 */
+        .ad-placeholder {
+            background-color: #e5e5e5;
+            color: #666;
+            text-align: center;
+            padding: 40px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .ad-placeholder::before {
+            content: "贊助";
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            font-size: 12px;
+            background: rgba(0,0,0,0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        /* 頁尾 */
+        footer {
+            border-top: 2px solid var(--pale-moss);
+            padding: 32px 0;
+            font-size: 14px;
+            color: #666;
+            text-align: center;
+        }
+
+        footer nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        /* 動畫設定 */
+        @keyframes drawPulse {
+            to { stroke-dashoffset: 0; }
+        }
+
+        @keyframes wag {
+            0%, 100% { transform: rotate(0deg); }
+            50% { transform: rotate(10deg); }
+        }
+
+        /* 減少動態效果 (Respect User Settings) */
+        @media (prefers-reduced-motion: reduce) {
+            .pulse-line {
+                animation: none;
+                stroke-dashoffset: 0;
+            }
+            .cat-tail {
+                animation: none;
+            }
+            .btn {
+                transition: none;
+            }
+            .card-entrance {
+                transition: none;
+                transform: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <a href="#" class="logo" aria-label="貓健康站首頁">
+            <!-- 貓耳與手繪感字標示意 -->
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 20V6l4 4 4-4 4 4 4-4v14"/>
+            </svg>
+            <span class="logo-text">貓健康站</span>
+            <!-- 金色心電圖脈搏線 -->
+            <svg width="40" height="24" viewBox="0 0 40 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path class="pulse-line" d="M0 12h8l3-6 4 12 5-18 4 20 4-8h12"/>
+            </svg>
+        </a>
+        <nav class="nav-links" aria-label="主要導覽">
+            <a href="#">文章</a>
+            <a href="#">獸醫院</a>
+            <a href="#">文獻庫</a>
+            <a href="#">品種</a>
+            <a href="#">關於</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <!-- 伸懶腰放鬆小貓插畫 -->
+            <svg class="cat-illustration" viewBox="0 0 48 48" fill="none" stroke="var(--dark)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <!-- 身體輪廓 -->
+                <path d="M12 36 C 6 36, 8 25, 14 23 C 18 20, 23 20, 26 22 C 32 18, 40 22, 40 26 C 43 32, 38 36, 32 36 Z" fill="#f9fbf9" />
+                <!-- 左耳 -->
+                <path d="M14 23 L12 16 L18 19" fill="#f9fbf9" />
+                <!-- 右耳 -->
+                <path d="M22 19 L27 16 L26 22" fill="#f9fbf9" />
+                <!-- 尾巴 (獨立路徑，套用 CSS 動畫) -->
+                <path class="cat-tail" d="M40 26 C 44 26, 46 20, 44 14 C 42 10, 38 12, 38 16" />
+                <!-- 放鬆瞇眼 -->
+                <path d="M15 26 C 15.5 27, 16.5 27, 17 26" />
+                <path d="M19 26 C 19.5 27, 20.5 27, 21 26" />
+                <!-- 鼻尖 -->
+                <circle cx="17.2" cy="28.5" r="0.8" fill="var(--dark)" stroke="none" />
+                <!-- 嘴巴微笑線 -->
+                <path d="M16 30 C 16.5 31, 18 31, 18.4 30" />
+            </svg>
+            <h1>貓生病了，先查這裡。</h1>
+            <p>每個數字都有出處，回溯 ISFM、AAFP、<br>IRIS 等原文。無業配。</p>
+        </section>
+
+        <section class="search-box">
+            <label for="main-search" class="sr-only" style="display:none;">搜尋症狀或疾病</label>
+            <input type="search" id="main-search" placeholder="症狀或疾病，例：腎指數高、亂尿尿">
+            <button class="btn" type="button" aria-label="搜尋">搜尋</button>
+        </section>
+
+        <!-- NHS 風格急診區塊 -->
+        <section class="emergency-block" aria-labelledby="emergency-title">
+            <h2 id="emergency-title">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                半夜貓出狀況？
+            </h2>
+            <ul>
+                <li>尿不出來</li>
+                <li>呼吸急促</li>
+                <li>抽搐</li>
+                <li>誤食</li>
+            </ul>
+            <p style="margin-bottom: 16px; font-weight: bold;">不要等天亮。</p>
+            <a href="#" class="btn btn-emergency">找附近的 24h 急診</a>
+        </section>
+
+        <!-- 數字跑碼列 -->
+        <section class="stats-grid" aria-label="網站統計">
+            <div class="stat-item">
+                <span class="num counter" data-target="22">0</span>
+                <span class="label">縣市</span>
+            </div>
+            <div class="stat-item">
+                <span class="num counter" data-target="2001">0</span>
+                <span class="label">家獸醫院</span>
+            </div>
+            <div class="stat-item">
+                <span class="num counter" data-target="56">0</span>
+                <span class="label">篇文章</span>
+            </div>
+            <div class="stat-item">
+                <span class="num counter" data-target="109">0</span>
+                <span class="label">筆文獻</span>
+            </div>
+            <div class="stat-item">
+                <span class="num counter" data-target="68">0</span>
+                <span class="label">種品種</span>
+            </div>
+        </section>
+
+        <!-- 四個主要入口 -->
+        <section class="entrances-grid" aria-label="主要服務">
+            <a href="#" class="card-entrance">
+                <h3>找獸醫院</h3>
+                <p>可定位、可篩 24h 急診與貓專科</p>
+            </a>
+            <a href="#" class="card-entrance">
+                <h3>查症狀看文章</h3>
+                <p>分類清楚的醫療科普</p>
+            </a>
+            <a href="#" class="card-entrance">
+                <h3>學術文獻庫</h3>
+                <p>每筆附原文與中文摘要</p>
+            </a>
+            <a href="#" class="card-entrance">
+                <h3>品種圖鑑</h3>
+                <p>含遺傳病風險整理</p>
+            </a>
+        </section>
+
+        <!-- 常見狀況 -->
+        <section aria-labelledby="common-issues-title">
+            <h2 id="common-issues-title">常見狀況</h2>
+            <div class="tags-container">
+                <a href="#" class="tag-pill">急診判斷</a>
+                <a href="#" class="tag-pill">公貓尿道阻塞</a>
+                <a href="#" class="tag-pill">慢性腎病 CKD</a>
+                <a href="#" class="tag-pill">誤食中毒</a>
+                <a href="#" class="tag-pill">嘔吐與便秘</a>
+                <a href="#" class="tag-pill">糖尿病</a>
+                <a href="#" class="tag-pill">甲狀腺亢進</a>
+                <a href="#" class="tag-pill">FIP 腹膜炎</a>
+                <a href="#" class="tag-pill">疫苗與健檢</a>
+                <a href="#" class="tag-pill">結紮</a>
+            </div>
+        </section>
+
+        <!-- 核心文章 -->
+        <section aria-labelledby="core-articles-title">
+            <h2 id="core-articles-title">推薦文章</h2>
+            <div class="article-list">
+                <article class="article-item">
+                    <div class="article-meta">
+                        <span>健康 › 急症辨識</span>
+                        <span class="badge-draft">草稿</span>
+                    </div>
+                    <h3><a href="#">貓咪急診判斷與居家急救：何時該衝醫院，路上能做什麼</a></h3>
+                    <p>把貓的症狀分成四級：立刻急診、今天就醫、本週預約、居家觀察。</p>
+                </article>
+
+                <article class="article-item">
+                    <div class="article-meta">
+                        <span>健康 › 急症辨識</span>
+                        <span class="badge-draft">草稿</span>
+                    </div>
+                    <h3><a href="#">公貓尿道阻塞：辨識急症與黃金救治時間</a></h3>
+                    <p>公貓尿道阻塞在 24 到 48 小時內可能致命，常被誤認為便秘。</p>
+                </article>
+
+                <article class="article-item">
+                    <div class="article-meta">
+                        <span>健康 › 常見疾病</span>
+                        <span class="badge-draft">草稿</span>
+                    </div>
+                    <h3><a href="#">貓咪慢性腎病（CKD）：分期、飲食與居家照護</a></h3>
+                    <p>IRIS 2023 分期怎麼看、哪些症狀該立刻就醫、低磷飲食與補水。</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="ad-placeholder" aria-label="廣告區塊">
+            此處為廣告預留版位 (300x250)
+        </section>
+    </main>
+
+    <footer>
+        <nav aria-label="頁尾導覽">
+            <a href="#">文章</a>
+            <a href="#">獸醫院</a>
+            <a href="#">文獻庫</a>
+            <a href="#">隱私權政策</a>
+        </nav>
+        <p>本站內容僅供參考，不取代獸醫師診斷。</p>
+    </footer>
+</div>
+
+<script>
+    // 尊重使用者減少動態效果的設定
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // 數字跑碼動畫 (Intersection Observer)
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200; // 數值越大，動畫越慢
+
+    const animateCounters = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                const target = +counter.getAttribute('data-target');
+
+                // 若開啟減少動態，直接顯示最終數字
+                if (prefersReducedMotion) {
+                    counter.innerText = target.toLocaleString();
+                    observer.unobserve(counter);
+                    return;
+                }
+
+                // 若為螢幕報讀器，可能也會希望直接呈現最終結果，但為了視覺效果我們用 requestAnimationFrame
+                const updateCount = () => {
+                    const current = +counter.innerText.replace(/,/g, '');
+                    const inc = target / speed;
+
+                    if (current < target) {
+                        counter.innerText = Math.ceil(current + inc).toLocaleString();
+                        setTimeout(updateCount, 10);
+                    } else {
+                        counter.innerText = target.toLocaleString();
+                    }
+                };
+
+                updateCount();
+                observer.unobserve(counter); // 只跑一次
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(animateCounters, {
+        threshold: 0.5
+    });
+
+    counters.forEach(counter => {
+        // 設定初始語意化數值給報讀器，但視覺上從0開始（報讀器會唸最終 aria-label 或內容，此處不特別覆蓋以維持簡潔，若需嚴格無障礙可加 aria-label）
+        counter.setAttribute('aria-label', counter.getAttribute('data-target'));
+        observer.observe(counter);
+    });
+</script>
+
+</body>
+</html>

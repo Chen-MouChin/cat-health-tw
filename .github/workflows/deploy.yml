@@ -1,9 +1,11 @@
 name: Deploy to GitHub Pages
 
-# 推到 main 就自動發佈 frontend/ 到 GitHub Pages
+# 發佈 frontend/ 到 GitHub Pages。
+# 目前 repo（private）沒開 Pages：2026-09-29 決定先內部開發、用 ngrok 測試，不公開，
+# 所以不在 push 時自動部署，免得每次合併到 main 都失敗、寄通知。要上線時：
+#   1. repo Settings → Pages → Source 選 GitHub Actions（private repo 需 GitHub Pro；或改用其他託管）
+#   2. 把 push 觸發加回來：push: branches: [main]
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:

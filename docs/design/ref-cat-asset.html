@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>貓健康站 · C方案專屬單線條貓插畫展示與代碼</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            warmCream: '#f9f6f0',
+            warmSage: '#5b8a6e',
+            warmSageDark: '#446853',
+            warmSageLight: '#e7efe9',
+            inkNearBlack: '#1d1d1f',
+            borderWarm: '#ebd9c5',
+          },
+          fontFamily: {
+            sans: ['-apple-system', 'BlinkMacSystemFont', '"PingFang TC"', '"Noto Sans TC"', 'sans-serif'],
+            mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #f4eee3;
+      color: #1d1d1f;
+      -webkit-font-smoothing: antialiased;
+    }
+  </style>
+</head>
+<body class="min-h-screen py-8 px-4 flex flex-col items-center">
+
+  <main class="w-full max-w-2xl bg-white rounded-3xl border border-[#ded8cb] shadow-sm p-6 sm:p-8 space-y-6">
+
+    <!-- 標題與簡介 -->
+    <header class="border-b border-[#ebd9c5] pb-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+      <div>
+        <span class="text-xs font-mono font-bold tracking-wider text-[#5b8a6e] uppercase">Asset Preview · Option C</span>
+        <h1 class="text-2xl font-bold text-[#1d1d1f] tracking-tight">伸懶腰放鬆小貓 (單線條插畫)</h1>
+        <p class="text-xs text-[#666] mt-1">線寬一致 (2.2px)、圓潤端點、親和手繪感的向量 SVG 資產</p>
+      </div>
+      <div class="flex items-center gap-2 self-start sm:self-center">
+        <span class="px-2.5 py-1 rounded-full bg-[#e7efe9] text-[#446853] text-xs font-bold font-mono">48 × 48 ViewBox</span>
+      </div>
+    </header>
+
+    <!-- 主展示畫布 (可切換背景色與大小) -->
+    <section class="space-y-3">
+      <div class="flex items-center justify-between text-xs font-bold text-[#555]">
+        <span>即時渲染預覽</span>
+        <div class="flex items-center gap-2">
+          <span>切換底色：</span>
+          <button onclick="setPreviewBg('#e7efe9')" class="w-5 h-5 rounded-full bg-[#e7efe9] border border-[#d6e3d9]" title="淺苔綠底"></button>
+          <button onclick="setPreviewBg('#f9f6f0')" class="w-5 h-5 rounded-full bg-[#f9f6f0] border border-[#ebd9c5]" title="奶油米底"></button>
+          <button onclick="setPreviewBg('#ffffff')" class="w-5 h-5 rounded-full bg-white border border-[#ccc]" title="純白底"></button>
+          <button onclick="setPreviewBg('#1d1d1f', '#ffffff', '#2a2a2d')" class="w-5 h-5 rounded-full bg-[#1d1d1f] border border-black" title="深色模式測試"></button>
+        </div>
+      </div>
+
+      <!-- 渲染容器 -->
+      <div id="preview-wrapper" class="w-full h-64 sm:h-72 rounded-2xl bg-[#e7efe9] border border-[#d6e3d9] flex flex-col items-center justify-center transition-colors relative group">
+
+        <!-- 大尺寸 SVG 實體渲染 -->
+        <div id="cat-svg-box" class="transition-transform transform hover:scale-105 duration-200">
+          <svg id="cat-svg" class="w-36 h-36 text-[#446853] transition-colors" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <!-- 伸懶腰放鬆小貓身體輪廓 (附微白透底色) -->
+            <path id="cat-body-fill" d="M12 36C12 36 10 26 15 22C19 18.8 24 21 28 22C32 23 37 20 40 23C42 25 41 33 36 36H12Z" fill="#f9fbf9"/>
+            <!-- 左耳 -->
+            <path d="M14 23L12 16L18 19"/>
+            <!-- 右耳 -->
+            <path d="M22 19L27 16L26 22"/>
+            <!-- 翹尾巴曲線 -->
+            <path d="M40 26C43 23 45 16 41 13C38 10 35 15 37 19"/>
+            <!-- 放鬆睡意閉眼微笑線 -->
+            <path d="M15 26C16 27.5 18 27.5 19 26"/>
+            <!-- 鼻尖小點 -->
+            <circle cx="17.2" cy="28.5" r="1" fill="currentColor"/>
+          </svg>
+        </div>
+
+        <span class="absolute bottom-3 text-[11px] font-mono text-[#666] opacity-75">
+          原尺寸 48px，此處等比放大至 144px
+        </span>
+      </div>
+    </section>
+
+    <!-- 多尺寸實裝效果對照 -->
+    <section class="space-y-2 pt-2">
+      <h2 class="text-xs font-bold text-[#555] uppercase tracking-wider font-mono">實際尺寸對照 (24px · 40px · 64px)</h2>
+      <div class="grid grid-cols-3 gap-3 p-4 bg-[#f9f6f0] rounded-xl border border-[#ebd9c5]">
+
+        <div class="flex flex-col items-center justify-center gap-2">
+          <div class="w-10 h-10 rounded-lg bg-[#e7efe9] flex items-center justify-center">
+            <svg class="w-6 h-6 text-[#446853]" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 36C12 36 10 26 15 22C19 18.8 24 21 28 22C32 23 37 20 40 23C42 25 41 33 36 36H12Z" fill="#f9fbf9"/>
+              <path d="M14 23L12 16L18 19"/>
+              <path d="M22 19L27 16L26 22"/>
+              <path d="M40 26C43 23 45 16 41 13C38 10 35 15 37 19"/>
+              <path d="M15 26C16 27.5 18 27.5 19 26"/>
+              <circle cx="17.2" cy="28.5" r="1" fill="currentColor"/>
+            </svg>
+          </div>
+          <span class="text-[11px] font-mono text-[#777]">Icon 級 (24px)</span>
+        </div>
+
+        <div class="flex flex-col items-center justify-center gap-2">
+          <div class="w-14 h-14 rounded-xl bg-[#e7efe9] flex items-center justify-center">
+            <svg class="w-10 h-10 text-[#446853]" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 36C12 36 10 26 15 22C19 18.8 24 21 28 22C32 23 37 20 40 23C42 25 41 33 36 36H12Z" fill="#f9fbf9"/>
+              <path d="M14 23L12 16L18 19"/>
+              <path d="M22 19L27 16L26 22"/>
+              <path d="M40 26C43 23 45 16 41 13C38 10 35 15 37 19"/>
+              <path d="M15 26C16 27.5 18 27.5 19 26"/>
+              <circle cx="17.2" cy="28.5" r="1" fill="currentColor"/>
+            </svg>
+          </div>
+          <span class="text-[11px] font-mono text-[#777]">頭像級 (40px)</span>
+        </div>
+
+        <div class="flex flex-col items-center justify-center gap-2">
+          <div class="w-20 h-20 rounded-2xl bg-[#e7efe9] flex items-center justify-center">
+            <svg class="w-16 h-16 text-[#446853]" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 36C12 36 10 26 15 22C19 18.8 24 21 28 22C32 23 37 20 40 23C42 25 41 33 36 36H12Z" fill="#f9fbf9"/>
+              <path d="M14 23L12 16L18 19"/>
+              <path d="M22 19L27 16L26 22"/>
+              <path d="M40 26C43 23 45 16 41 13C38 10 35 15 37 19"/>
+              <path d="M15 26C16 27.5 18 27.5 19 26"/>
+              <circle cx="17.2" cy="28.5" r="1" fill="currentColor"/>
+            </svg>
+          </div>
+          <span class="text-[11px] font-mono text-[#777]">首頁徽章級 (64px)</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 程式碼輸出與一鍵複製 -->
+    <section class="space-y-3 pt-2">
+      <div class="flex items-center justify-between">
+        <h2 class="text-sm font-bold text-[#1d1d1f]">代碼獲取 (純 HTML / SVG 格式)</h2>
+        <button id="copy-btn" onclick="copySvgCode()" class="px-3.5 py-1.5 rounded-full bg-[#5b8a6e] hover:bg-[#446853] text-white text-xs font-bold transition-all shadow-sm active:scale-95 flex items-center gap-1.5">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+          <span id="copy-btn-text">複製 SVG 代碼</span>
+        </button>
+      </div>
+
+      <!-- 程式碼展示框 -->
+      <pre class="p-4 rounded-2xl bg-[#1d1d1f] text-emerald-400 font-mono text-xs overflow-x-auto leading-relaxed border border-black"><code id="code-block">&lt;!-- 貓健康站 C方案：單線條放鬆小貓 (48x48) --&gt;
+&lt;svg class="w-12 h-12 text-[#446853]" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"&gt;
+  &lt;!-- 身體輪廓與柔白填充 --&gt;
+  &lt;path d="M12 36C12 36 10 26 15 22C19 18.8 24 21 28 22C32 23 37 20 40 23C42 25 41 33 36 36H12Z" fill="#f9fbf9"/&gt;
+  &lt;!-- 左耳 --&gt;
+  &lt;path d="M14 23L12 16L18 19"/&gt;
+  &lt;!-- 右耳 --&gt;
+  &lt;path d="M22 19L27 16L26 22"/&gt;
+  &lt;!-- 尾巴 --&gt;
+  &lt;path d="M40 26C43 23 45 16 41 13C38 10 35 15 37 19"/&gt;
+  &lt;!-- 放鬆瞇眼笑線 --&gt;
+  &lt;path d="M15 26C16 27.5 18 27.5 19 26"/&gt;
+  &lt;!-- 鼻尖 --&gt;
+  &lt;circle cx="17.2" cy="28.5" r="1" fill="currentColor"/&gt;
+&lt;/svg&gt;</code></pre>
+    </section>
+
+    <!-- 提示訊息框 -->
+    <div id="toast-msg" class="hidden p-3 rounded-xl bg-[#e7efe9] text-[#2c4e3a] text-xs font-bold text-center border border-[#d2e2d6] transition-opacity">
+      代碼已成功複製至剪貼簿！
+    </div>
+
+  </main>
+
+  <script>
+    // 切換預覽背景與色系
+    function setPreviewBg(bgColor, textColor = '#446853', fillBg = '#f9fbf9') {
+      const wrapper = document.getElementById('preview-wrapper');
+      const catSvg = document.getElementById('cat-svg');
+      const catBody = document.getElementById('cat-body-fill');
+
+      wrapper.style.backgroundColor = bgColor;
+      catSvg.style.color = textColor;
+      catBody.setAttribute('fill', fillBg);
+    }
+
+    // 複製 SVG 代碼
+    function copySvgCode() {
+      const codeText = document.getElementById('code-block').innerText;
+      const dummy = document.createElement('textarea');
+      dummy.value = codeText;
+      document.body.appendChild(dummy);
+      dummy.select();
+      document.execCommand('copy');
+      document.body.removeChild(dummy);
+
+      // 按鈕狀態回饋
+      const btnText = document.getElementById('copy-btn-text');
+      const toast = document.getElementById('toast-msg');
+      btnText.innerText = '已複製！';
+      toast.classList.remove('hidden');
+
+      setTimeout(() => {
+        btnText.innerText = '複製 SVG 代碼';
+        toast.classList.add('hidden');
+      }, 2500);
+    }
+  </script>
+</body>
+</html>

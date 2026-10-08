@@ -8,7 +8,7 @@
   <link rel="apple-touch-icon" href="favicon-180.png">
   <meta property="og:image" content="https://chen-mouchin.github.io/cat-health-tw/images/og-default.png">
 <title>獸醫院查詢 — 貓健康站</title>
-<meta name="description" content="全台 22 縣市動物醫院查詢：本島 21 縣市 + 澎湖金門共 2,001 家（基於農業部公開登記）。可篩 24h 急診 + 貓專科。">
+<meta name="description" content="全台 22 縣市動物醫院查詢：本島 21 縣市 + 澎湖金門共 2,001 家（基於農業部公開登記）。可篩 24h 急診 + 貓專科，手機可定位找附近最近的醫院。">
 <link rel="stylesheet" href="css/theme.css">
 <link rel="stylesheet" href="css/nav.css?v=20260420b">
 <script type="application/ld+json">
@@ -38,7 +38,7 @@ main { max-width: 960px; margin: 0 auto; padding: 0 1rem 2rem; }
   padding: 0.5rem 0.9rem;
   border: 1px solid var(--border, #d2d2d7); border-radius: 18px;
   background: var(--bg-card, #fff); color: var(--text);
-  font-size: 0.9rem; outline: none;
+  font-size: 0.9rem;
 }
 .toolbar input { flex: 1; min-width: 200px; }
 .toolbar select { cursor: pointer; }
@@ -147,7 +147,35 @@ main { max-width: 960px; margin: 0 auto; padding: 0 1rem 2rem; }
 }
 .btn-loc[disabled] { opacity: 0.5; cursor: wait; }
 .loc-status {
+  flex-basis: 100%;
+  font-size: 0.75rem; color: var(--text-muted, #6e6e73); line-height: 1.55;
+}
+.loc-status:empty { display: none; }
+
+/* 附近模式：範圍切換 + 定位說明 */
+.near-panel {
+  background: var(--bg-card, #fff);
+  border: 1px solid var(--border, #e5e5ea); border-radius: 8px;
+  padding: 0.6rem 0.8rem; margin-bottom: 0.8rem;
+  scroll-margin-top: 4.5rem;  /* 導覽列是 sticky，捲過來時別被蓋住 */
+}
+.near-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.3rem; }
+.near-label { font-size: 0.8rem; color: var(--text-muted, #6e6e73); margin-right: 0.2rem; }
+.btn-relocate {
+  padding: 0.2rem 0; white-space: nowrap;
+  background: none; border: none; cursor: pointer;
+  font-size: 0.75rem; color: var(--text-muted, #6e6e73); text-decoration: underline;
+}
+.near-note {
   font-size: 0.75rem; color: var(--text-muted, #6e6e73);
+  margin-top: 0.45rem; line-height: 1.55;
+}
+.near-note .warn { color: #8a4b12; }
+
+/* 手機觸控：放大點擊區 */
+@media (pointer: coarse) {
+  .city-chip { padding: 0.4rem 0.85rem; font-size: 0.85rem; }
+  .vet-actions a { padding: 0.45rem 0.9rem; font-size: 0.82rem; }
 }
 
 /* filter 啟用時的補充說明（避免使用者誤解 filter 結果）*/
@@ -162,19 +190,24 @@ main { max-width: 960px; margin: 0 auto; padding: 0 1rem 2rem; }
 /* 24h 標記 + 距離 */
 .badge-24h {
   display: inline-block; font-size: 0.68rem; font-weight: 600;
-  background: #d8463b; color: white;
+  background: #b93a2e; color: white;  /* 白字 5.7:1（原 #d8463b 只有 4.3）*/
   padding: 0.1rem 0.45rem; border-radius: 8px;
   margin-left: 0.4rem; vertical-align: middle;
 }
 .badge-cat {
   display: inline-block; font-size: 0.68rem; font-weight: 600;
-  background: #5b8a6e; color: white;
+  background: #3b6a50; color: white;  /* 白字 6.2:1（原 #5b8a6e 只有 4.0）*/
   padding: 0.1rem 0.45rem; border-radius: 8px;
   margin-left: 0.4rem; vertical-align: middle;
 }
 .vet-distance {
   font-size: 0.78rem; color: var(--accent, #1d1d1f);
   font-weight: 600; font-variant-numeric: tabular-nums;
+  margin-left: 0.4rem;
+}
+.vet-distance .approx {
+  font-size: 0.7rem; font-weight: 400; color: var(--text-faint, #a1a1a6);
+  margin-left: 0.25rem;
 }
 </style>
   <meta property="og:title" content="獸醫院查詢 — 貓健康站">
@@ -199,7 +232,7 @@ main { max-width: 960px; margin: 0 auto; padding: 0 1rem 2rem; }
 <h1 class="page-title">🏥 獸醫院查詢</h1>
 <p class="page-sub">
   全台 22 縣市共 <strong id="totalCount">—</strong> 家動物醫院 · 資料來源：農業部動保司
-  · <a href="about.html#data-quality" class="data-quality-badge" title="100% 有地址 + GPS 座標 — 點看資料補洞細節">✓ 100% 有座標</a>
+  · <a href="about.html#data-quality" class="data-quality-badge" title="100% 有地址；99% 有可用 GPS 座標，部分只精確到街道或行政區 — 點看資料補洞細節">✓ 99% 有座標</a>
 </p>
 
 <main>
@@ -212,10 +245,15 @@ main { max-width: 960px; margin: 0 auto; padding: 0 1rem 2rem; }
   </div>
 
   <div class="toolbar2">
-    <button id="btnLoc" class="btn-loc" onclick="requestLocation()">📍 用我的位置排距離</button>
+    <button id="btnLoc" class="btn-loc" onclick="requestLocation()">📍 找我附近的獸醫院</button>
     <button id="btn24h" class="btn-toggle" onclick="toggle24h()">🚨 只看 24h 急診</button>
     <button id="btnCat" class="btn-toggle" onclick="toggleCat()">🐈 只看貓專科</button>
-    <span class="loc-status" id="locStatus"></span>
+    <span class="loc-status" id="locStatus" role="status"></span>
+  </div>
+
+  <div class="near-panel" id="nearPanel" hidden>
+    <div class="near-row" id="radiusChips" role="group" aria-label="搜尋範圍"></div>
+    <div class="near-note" id="nearNote"></div>
   </div>
 
   <div class="filter-hint" id="filterHint" hidden></div>
@@ -269,9 +307,15 @@ const CITIES = [
   '宜蘭縣', '花蓮縣', '台東縣',
   '澎湖縣', '金門縣', '連江縣'
 ];
-const PAGE_SIZE = 30;
+const PAGE_SIZE = 30;              // 一般列表每頁
+const NEAR_PAGE = 10;              // 附近模式先列最近 10 家
+const FALLBACK_N = 5;              // 範圍內一家都沒有時，改列最近幾家
+const RADII = [1, 3, 5, 10, 20, 0];  // km；0 = 不限
 
 let filters = { city: '', district: '', q: '', only24h: false, onlyCat: false };
+let myLoc = null;   // {lat, lng, acc} 定位成功才填
+let radiusKm = 5;
+let autoLocate = false;
 
 // URL 參數預先套用篩選（從文章端跳轉用）
 (function applyUrlFilters() {
@@ -279,9 +323,13 @@ let filters = { city: '', district: '', q: '', only24h: false, onlyCat: false };
   if (params.get('only24h') === '1' || params.get('e') === '1') filters.only24h = true;
   if (params.get('cat') === '1') filters.onlyCat = true;
   if (params.get('city')) filters.city = params.get('city');
+  // near=1：進站就定位（「找附近 24h 急診」入口用）；r=範圍 km
+  if (params.get('near') === '1') autoLocate = true;
+  if (params.has('r') && RADII.includes(Number(params.get('r')))) radiusKm = Number(params.get('r'));
 })();
-let myLoc = null;  // {lat, lng} 取得後才填
 let shown = PAGE_SIZE;
+
+function pageSize() { return myLoc ? NEAR_PAGE : PAGE_SIZE; }
 
 // Haversine 距離（km）
 function distKm(lat1, lng1, lat2, lng2) {
@@ -292,42 +340,115 @@ function distKm(lat1, lng1, lat2, lng2) {
   return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
 }
 
-function requestLocation() {
+function fmtKm(d) {
+  return d < 1 ? Math.round(d * 1000) + ' m' : d.toFixed(1) + ' km';
+}
+
+function setLocStatus(msg) {
+  document.getElementById('locStatus').textContent = msg;
+}
+
+function setLocButton() {
   const btn = document.getElementById('btnLoc');
-  const status = document.getElementById('locStatus');
+  btn.disabled = false;
+  btn.classList.toggle('active', !!myLoc);
+  btn.textContent = myLoc ? '📍 附近模式（再按一次關閉）' : '📍 找我附近的獸醫院';
+}
+
+function requestLocation() {
+  if (myLoc) { clearLocation(); return; }  // 再按一次 = 關閉附近模式
+  locate(false);
+}
+
+// 位置只在瀏覽器裡算距離，不送出去
+function locate(fresh) {
+  if (!window.isSecureContext) {
+    setLocStatus('定位只能在 HTTPS 網頁使用（本機測試請用 localhost）。');
+    return;
+  }
   if (!navigator.geolocation) {
-    status.textContent = '此瀏覽器不支援定位';
+    setLocStatus('這個瀏覽器不支援定位，請改點縣市或在搜尋框輸入區名。');
     return;
   }
-  if (myLoc) {
-    // 再次點擊 = 取消定位
-    myLoc = null;
-    btn.classList.remove('active');
-    btn.textContent = '📍 用我的位置排距離';
-    status.textContent = '';
-    render();
-    return;
-  }
+  const btn = document.getElementById('btnLoc');
   btn.disabled = true;
-  btn.textContent = '📍 取得位置中...';
-  status.textContent = '';
-  navigator.geolocation.getCurrentPosition(
-    (pos) => {
-      myLoc = { lat: pos.coords.latitude, lng: pos.coords.longitude };
-      btn.disabled = false;
-      btn.classList.add('active');
-      btn.textContent = '📍 已取得位置（再次點擊取消）';
-      const geocodedCount = DATA.filter(v => v.lat && v.lng).length;
-      status.textContent = `按距離排序 · ${geocodedCount}/${DATA.length} 家有座標`;
-      render();
-    },
+  btn.textContent = '📍 定位中…';
+  setLocStatus('');
+  const attempt = (highAccuracy) => navigator.geolocation.getCurrentPosition(
+    onLocated,
     (err) => {
-      btn.disabled = false;
-      btn.textContent = '📍 用我的位置排距離';
-      status.textContent = '無法取得位置：' + (err.code === 1 ? '權限被拒' : err.message);
+      // 手機 GPS 在室內常逾時或抓不到，退回網路（Wi-Fi／基地台）定位再試一次
+      if (highAccuracy && err.code !== 1) { attempt(false); return; }
+      onLocateError(err);
     },
-    { timeout: 10000, enableHighAccuracy: false, maximumAge: 60000 }
+    { enableHighAccuracy: highAccuracy, timeout: highAccuracy ? 10000 : 15000, maximumAge: fresh ? 0 : 120000 }
   );
+  attempt(true);
+}
+
+function onLocated(pos) {
+  const first = !myLoc;
+  myLoc = { lat: pos.coords.latitude, lng: pos.coords.longitude, acc: pos.coords.accuracy };
+  // 附近模式不分縣市（住在縣市交界很常見）
+  filters.city = '';
+  filters.district = '';
+  shown = NEAR_PAGE;
+  setLocButton();
+  const panel = document.getElementById('nearPanel');
+  panel.hidden = false;
+  refreshAll();
+  // 手機上工具列佔掉大半個畫面，第一次定位完把結果捲上來
+  if (first && window.matchMedia('(max-width: 640px)').matches) {
+    panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
+function onLocateError(err) {
+  setLocButton();
+  const MSG = {
+    1: '沒有定位權限。iPhone：設定 → 隱私權與安全性 → 定位服務 → Safari 網站，改成「使用 App 期間」；Android：點網址列左邊的圖示 → 權限 → 位置。',
+    2: '暫時抓不到位置（室內或訊號弱），稍後再試一次。',
+    3: '定位逾時，稍後再試一次。',
+  };
+  let msg = MSG[err.code] || ('定位失敗：' + err.message);
+  if (/\bLine\/|FBAN|FBAV|Instagram/i.test(navigator.userAgent)) {
+    msg += ' LINE、Facebook 的內建瀏覽器常無法定位，可從右上角選單改用 Safari 或 Chrome 開啟。';
+  }
+  setLocStatus(msg + ' 也可以直接點縣市，或在搜尋框輸入區名。');
+}
+
+function clearLocation() {
+  myLoc = null;
+  shown = PAGE_SIZE;
+  setLocButton();
+  setLocStatus('');
+  document.getElementById('nearPanel').hidden = true;
+  refreshAll();
+}
+
+function buildRadiusChips() {
+  const box = document.getElementById('radiusChips');
+  box.innerHTML = '<span class="near-label">範圍</span>';
+  RADII.forEach(r => {
+    const btn = document.createElement('button');
+    btn.className = 'city-chip' + (r === radiusKm ? ' active' : '');
+    btn.setAttribute('aria-pressed', String(r === radiusKm));
+    btn.textContent = r ? `${r} km` : '不限';
+    btn.onclick = () => { radiusKm = r; shown = NEAR_PAGE; buildRadiusChips(); render(); };
+    box.appendChild(btn);
+  });
+}
+
+function updateNearNote() {
+  const note = document.getElementById('nearNote');
+  if (!myLoc) { note.textContent = ''; return; }
+  const acc = myLoc.acc >= 1000 ? (myLoc.acc / 1000).toFixed(1) + ' km' : Math.round(myLoc.acc) + ' m';
+  let html = `你的位置精度約 ±${acc} · 距離是直線距離，實際路程會更遠 · 位置只在你的裝置上計算，不會上傳`
+    + ' · <button class="btn-relocate" onclick="locate(true)">🔄 重新定位</button>';
+  if (myLoc.acc > 1000) {
+    html += '<br><span class="warn">⚠️ 精度偏低（可能是用網路 IP 推估），距離僅供參考。手機請打開定位服務後按「重新定位」。</span>';
+  }
+  note.innerHTML = html;
 }
 
 function toggleCat() {
@@ -335,7 +456,7 @@ function toggleCat() {
   const btn = document.getElementById('btnCat');
   btn.classList.toggle('active', filters.onlyCat);
   updateFilterHint();
-  shown = PAGE_SIZE;
+  shown = pageSize();
   refreshAll();
 }
 
@@ -344,7 +465,7 @@ function toggle24h() {
   const btn = document.getElementById('btn24h');
   btn.classList.toggle('active', filters.only24h);
   updateFilterHint();
-  shown = PAGE_SIZE;
+  shown = pageSize();
   render();
 }
 
@@ -383,9 +504,18 @@ function escapeHtml(s) {
   return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 
+// 地址缺縣市前綴（台南、台中常見）時補上，免得導航到別縣市的同名路
+function fullAddr(v) {
+  const a = v.a || '';
+  if (a.replace(/臺/g, '台').startsWith(v.c)) return a;
+  return v.c + (v.d && !a.startsWith(v.d) ? v.d : '') + a;
+}
+
 function buildCityChips() {
   const box = document.getElementById('cityChips');
   box.innerHTML = '';  // 防止 refreshAll() 重複追加
+  box.hidden = !!myLoc;  // 附近模式改用範圍，不分縣市
+  if (myLoc) return;
   // 全部
   const total = DATA.length;
   const all = document.createElement('button');
@@ -409,7 +539,7 @@ function buildCityChips() {
 
 function compute() {
   const q = filters.q.trim().toLowerCase();
-  let list = DATA.filter(v => {
+  const list = DATA.filter(v => {
     if (filters.city && v.c !== filters.city) return false;
     if (filters.district && v.d !== filters.district) return false;
     if (filters.only24h && v.e !== 1) return false;
@@ -420,36 +550,52 @@ function compute() {
     }
     return true;
   });
+  if (!myLoc) return { list };
 
-  // 距離排序：取得位置後啟用，沒座標的排最後
-  if (myLoc) {
-    list = list.map(v => {
-      const d = (v.lat && v.lng) ? distKm(myLoc.lat, myLoc.lng, v.lat, v.lng) : null;
-      return { ...v, _d: d };
-    }).sort((a, b) => {
-      if (a._d == null && b._d == null) return 0;
-      if (a._d == null) return 1;
-      if (b._d == null) return -1;
-      return a._d - b._d;
-    });
+  // 附近模式：算直線距離，由近到遠。疑似錯位（ap=2）的在 vets.js 裡沒有座標，不列入
+  const withD = [];
+  let noCoord = 0;
+  for (const v of list) {
+    if (v.lat == null || v.lng == null) { noCoord++; continue; }
+    withD.push({ ...v, _d: distKm(myLoc.lat, myLoc.lng, v.lat, v.lng) });
   }
-  return list;
+  withD.sort((a, b) => a._d - b._d);
+  const inRange = radiusKm ? withD.filter(v => v._d <= radiusKm) : withD;
+  // 範圍內一家都沒有 → 直接列最近幾家，半夜急診時不要只看到空白
+  if (!inRange.length && withD.length) {
+    return { list: withD.slice(0, FALLBACK_N), noCoord, fallback: true };
+  }
+  return { list: inRange, noCoord };
 }
 
 function render() {
-  const list = compute();
+  const { list, noCoord, fallback } = compute();
   const container = document.getElementById('list');
   const hint = document.getElementById('hint');
   const moreBtn = document.getElementById('loadMore');
+  updateNearNote();
 
   if (!list.length) {
     container.innerHTML = '';
-    hint.innerHTML = '<div class="empty">沒有符合條件的獸醫院</div>';
+    hint.innerHTML = (myLoc && noCoord)
+      ? `<div class="empty">符合條件的 ${noCoord} 家座標疑似有誤，無法算距離。關閉附近模式就看得到。</div>`
+      : '<div class="empty">沒有符合條件的獸醫院</div>';
     moreBtn.style.display = 'none';
     return;
   }
 
-  hint.textContent = `共 ${list.length} 家` + (list.length > shown ? `（目前顯示 ${shown}）` : '');
+  let text;
+  if (myLoc) {
+    text = fallback
+      ? `⚠️ ${radiusKm} km 內沒有符合條件的醫院，改列出最近的 ${list.length} 家`
+        + (filters.only24h ? '。24h 名單可能漏列，也可以關掉「只看 24h」看附近所有醫院' : '')
+      : `${radiusKm ? radiusKm + ' km 內' : ''}共 ${list.length} 家，由近到遠`;
+    if (list.length > shown) text += `（先列最近 ${shown} 家）`;
+    if (noCoord) text += ` · 另有 ${noCoord} 家座標疑似有誤，沒列入`;
+  } else {
+    text = `共 ${list.length} 家` + (list.length > shown ? `（目前顯示 ${shown}）` : '');
+  }
+  hint.textContent = text;
   moreBtn.style.display = list.length > shown ? 'block' : 'none';
 
   const subset = list.slice(0, shown);
@@ -460,10 +606,15 @@ function renderCard(v) {
   const badge24 = v.e === 1 ? `<span class="badge-24h">24h 急診</span>` : '';
   const badgeCat = v.cat === 1 ? `<span class="badge-cat">🐈 貓專科</span>` : '';
   const pos = v.d ? `<span class="pos">${escapeHtml(v.c)} · ${escapeHtml(v.d)}</span>` : `<span class="pos">${escapeHtml(v.c)}</span>`;
-  const dist = (v._d != null) ? `<span class="vet-distance">📏 ${v._d < 1 ? Math.round(v._d*1000)+' m' : v._d.toFixed(1)+' km'}</span>` : '';
+  // ap=1：座標只精確到街道或行政區中心，距離標「約」
+  const dist = (v._d != null)
+    ? `<span class="vet-distance">📏 ${v.ap === 1 ? '約 ' : ''}${fmtKm(v._d)}${v.ap === 1 ? '<span class="approx">位置為估計</span>' : ''}</span>`
+    : '';
   const telLink = v.t ? `<a href="tel:${escapeHtml(v.t)}" class="vet-tel">📞 ${escapeHtml(v.t)}</a>` : '';
   const addr = v.a ? `<span>📍 ${escapeHtml(v.a)}</span>` : '';
   const hours = v.h ? `<div class="vet-hours">🕐 ${escapeHtml(v.h)}</div>` : '';
+  // 導航用文字地址交給 Google 解析，不用本站座標（本站座標有些只到街道或區）
+  const nav = v.a ? `<a href="https://www.google.com/maps/dir/?api=1&amp;destination=${encodeURIComponent(v.n + ' ' + fullAddr(v))}" target="_blank" rel="noopener">🧭 導航</a>` : '';
   const gmaps = v.g ? `<a href="${escapeHtml(v.g)}" target="_blank" rel="noopener">🗺️ Google 地圖</a>` : '';
   const search = `<a href="https://www.google.com/search?q=${encodeURIComponent(v.n + ' ' + v.c)}" target="_blank" rel="noopener">🔎 搜尋評價</a>`;
   return `
@@ -471,24 +622,25 @@ function renderCard(v) {
       <div class="vet-name">${escapeHtml(v.n)}${badge24}${badgeCat}${pos}${dist}</div>
       <div class="vet-meta">${telLink}${addr}</div>
       ${hours}
-      <div class="vet-actions">${gmaps}${search}</div>
+      <div class="vet-actions">${nav}${gmaps}${search}</div>
     </div>
   `;
 }
 
 function refreshAll() {
   buildCityChips();
+  if (myLoc) buildRadiusChips();
   render();
 }
 
 function loadMore() {
-  shown += PAGE_SIZE;
+  shown += pageSize();
   render();
 }
 
 document.getElementById('totalCount').textContent = DATA.length.toLocaleString();
 document.getElementById('q').addEventListener('input', (e) => {
-  filters.q = e.target.value; shown = PAGE_SIZE; render();
+  filters.q = e.target.value; shown = pageSize(); render();
 });
 
 // 同步 URL 參數 → 按鈕 active 狀態
@@ -497,6 +649,7 @@ if (filters.onlyCat) document.getElementById('btnCat').classList.add('active');
 updateFilterHint();  // URL 帶參數進來時也要顯示對應 hint
 
 refreshAll();
+if (autoLocate) requestLocation();
 </script>
 </body>
 </html>

@@ -27,6 +27,8 @@ python workbench/server.py                          # http://127.0.0.1:8010/ ；
 # 核心循環：改 content/ 或 build.py → 重建 → 本機預覽
 python build.py                                     # 無參數，全量重建（見下方「Build pipeline」）
 python sandbox/serve.py                             # http://localhost:8000/，服務 frontend/，關快取
+# 內部測試（網站尚未公開）：本機起站後用 ngrok 開 HTTPS 網址給手機或同事看，定位功能要 HTTPS 才能測
+ngrok http 8000 --basic-auth "帳號:至少8碼的密碼"
 # 或 python -m http.server 8000 --directory frontend
 
 # 測試 / 檢查
@@ -44,6 +46,7 @@ python scrapers/vets/layer3_website.py --city 台北市 --limit 50
 python scripts/clean_vets.py                        # 補 district、抓重複 → cleanup-report.md
 python scripts/geocode_vets.py                      # OSM Nominatim，1.5s/req，可中斷續跑
 python scripts/build_vets_js.py                     # all_vets.json → frontend/data/vets.js（vets.html 真正讀的檔）
+python scripts/fetch_home_font.py                   # 首頁主標改字後重抓粉圓子集字型
 
 # 文獻
 python scrapers/literature/crawler.py --report
@@ -71,11 +74,13 @@ frontend/breeds/{slug}.html        品種 SEO 殼頁，互動版在 breeds.html
 frontend/sitemap.xml               只收 quality ∈ {reviewed, featured} 的文章
 ```
 
-- 產出物**全部進 git**。GitHub Actions（`.github/workflows/deploy.yml`）只把 `frontend/` 原樣推上 Pages，**不跑 build.py**。改了 content/ 卻沒 `python build.py` 再 commit，線上不會變。
+- 產出物**全部進 git**。`.github/workflows/deploy.yml` 只把 `frontend/` 原樣推上 Pages，**不跑 build.py**，改了 content/ 要先 `python build.py` 再 commit。目前 repo（private）沒開 Pages，網站尚未公開：deploy 只能手動觸發，push 到 main 不會上線；內部測試用 ngrok（見開發指令）。
 - 文章 HTML 模板（`ARTICLE_TEMPLATE`、`ARTICLES_INDEX_TEMPLATE`）是 build.py 內的 f-string，不是獨立檔；改版面要改 build.py。
 - `SUBCATEGORY_MAP`（build.py）以 slug 硬編子分類，frontmatter `subcategory` 只是 fallback。
 - `SITE_URL` 寫死在 build.py，換網域時要改。
 - Markdown 內的 HTML 註解會在 build 時被剝除，可放內部備註。
+- 內文開頭的 `# 標題` 由模板的 `<h1>`（取 frontmatter `title`）顯示，build 時會拿掉內文那一個。
+- `frontend/index.html` 是手寫的（2026-09-29 依 `docs/design/home-prototype.html` 改版），但上面的數字（篇／筆／種／家，含 `data-stat` 跑碼終點、meta 描述、結構化資料；縣市數照原稿寫 22，不自動改）與「先讀這三篇」的草稿標籤由 build.py 的 `sync_home_stats` 依實際資料寫回，不要手改。主標用粉圓子集字型 `frontend/fonts/huninn-home.woff2`，改主標文字後跑 `scripts/fetch_home_font.py`（build 會提醒）。
 
 ### 文章 frontmatter 與品質狀態
 
@@ -87,7 +92,7 @@ frontend/sitemap.xml               只收 quality ∈ {reviewed, featured} 的�
 | `quality` | `draft`（預設）/ `reviewed` / `featured` / `archived`。draft 頁面頂端顯示「未審」警語、列表半透明、**不進 sitemap** |
 | `sources` | 自由文字列表；`scripts/link_sources_to_citations.py` 用 fuzzy match 對到 `citations.json` 的 key 並回填 `cited_by` |
 | `find_vet` | `cat_only` / `emergency` / `both` → 文末「找獸醫」CTA 樣式 |
-| `related` | 反向連結用 slug 列表 |
+| `related` | 站內相關盒用 slug 列表；內文已有「## 相關文章」一節時不另外顯示 |
 
 - 目前所有文章都還是 `draft`；審核流程在 `research/`（`review_batch.py` → 人工回 `<#> r/d/x` → `apply_review.py` 改 frontmatter）。
 - 已淘汰文章移到 `content/articles/_archived/`，build.py 只 glob 頂層 `*.md`，所以移進去即下架。
@@ -98,7 +103,7 @@ frontend/sitemap.xml               只收 quality ∈ {reviewed, featured} 的�
 scrapers/vets/layer1 → data/vets/{city}_vets.json → --merge → data/vets/all_vets.json
                        ↓ layer2（gmaps_url/rating）↓ layer3（website/blog）
 scripts/clean_vets.py / geocode_vets.py（in-place 改 all_vets.json）
-scripts/build_vets_js.py → frontend/data/vets.js（短鍵 n/t/a/c/d/g/h/e/lat/lng + KNOWN_24H 手動名單）
+scripts/build_vets_js.py → frontend/data/vets.js（短鍵 n/t/a/c/d/g/h/e/cat/ap/lat/lng + KNOWN_24H 手動名單）
 ```
 
 注意：build.py 也會把舊的 `taipei_newtaipei_vets.json` 複製成 `frontend/data/vets.json`，但 `vets.html` 實際載入的是 `vets.js`。改獸醫院資料後要跑 `build_vets_js.py`，不是只跑 build.py。
@@ -106,10 +111,13 @@ scripts/build_vets_js.py → frontend/data/vets.js（短鍵 n/t/a/c/d/g/h/e/lat/
 ### 前端
 
 - 每頁獨立 HTML，共用 `css/theme.css`、`css/nav.css`、`css/ads.css` 與 `js/theme.js`、`js/ads.js`。
+- 改版色票在 `theme.css`：`--primary` 深苔綠（連結、主按鈕、選取）、`--emergency`（只給急診）、`--gold`（只給脈搏線與記號）、`--focus` 等。`--link` 已全站換主色；`--accent` 仍是近黑（build.py 的文章標題在用），其他頁改版時再拆。首頁只載 `theme.css`，頁首頁尾是首頁專用，其他頁仍用 `nav.css` 的舊導覽列。
+- 鍵盤焦點：`theme.css` 的全站 `:focus-visible` 是 3px 近黑外框，連結加黃底。元件不要寫 `outline: none`，會把它蓋掉。
 - `search.js` 的計分（title 10 / tags 5 / description 3 / body 1）與分隔符正規化在 `test_search.py` 有一份 Python 鏡像。**改 search.js 的演算法必須同步改 test_search.py**。
 - `test_search.py` 目前有 45 筆既有失敗：它仍假設 103 篇文章，並查找已移進 `_archived/` 的 slug（波斯貓、跳蚤、TNR 等）。改動搜尋前先把這些案例更新到現有 56 篇，否則分不出新舊失敗。
 - 文章頁的編輯揭露（`✍️ 編輯 Chen-MouChin · AI 協助起草`）與 JSON-LD 的 `author: Person`、`publishingPrinciples` 由 build.py 產生；有 `last_reviewed` 日期時會多顯示「✅ 審核」並寫入 `dateModified`。方針內容在 `frontend/editorial.html`（手寫，不由 build 產生）。
 - `library.html` 讀 `frontend/data/citations.json`＋`glossary.json`（文獻庫，目前唯一被 sitemap 視為可信的內容頁）。
+- `vets.html` 附近模式：瀏覽器定位（先 GPS、失敗退回網路定位）→ 直線距離 → 範圍 `RADII` 篩選、先列 `NEAR_PAGE` 家；`?near=1` 進站即定位、`&r=` 指定範圍。`vets.js` 的 `ap=1` 距離標「約」，`ap=2` 沒有座標、不列入。位置不離開瀏覽器（隱私政策有寫）。
 
 ### 爬蟲共通
 
@@ -138,6 +146,8 @@ scripts/build_vets_js.py → frontend/data/vets.js（短鍵 n/t/a/c/d/g/h/e/lat/
 - 手機友善（RWD）
 - 每頁最多 3 個 AdSense 位；sticky anchor 廣告可關（24h localStorage）
 - 免責聲明放在醫療內容前面
+- 首頁文字以使用者的原稿為準（`docs/design/ref-home-mockup.html`），改版只動樣式，不改寫文字
+- 急診相關區塊不寫就醫建議（例如「不要等天亮」「出門前先打電話」），只放狀況與找 24h 急診的入口，避免讓人一有狀況就跑急診
 - 學術引用只用：ISFM / WSAVA / IRIS / AAFP / Cornell / VCA / ASPCA / PubMed open-access
 - **不引用 Frontiers 期刊**
 - 文獻摘要（`abstract_zh`）必須 paraphrase，不可複製原文

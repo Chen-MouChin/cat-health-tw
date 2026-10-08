@@ -569,7 +569,7 @@ ARTICLE_TEMPLATE = """\
       line-height: 1.6;
     }}
     .section-hint .hint-label {{
-      color: #d96a1f; font-weight: 700;
+      color: #a84d16; font-weight: 700;
       margin-right: 0.5rem; font-size: 0.82rem;
       letter-spacing: 0.04em;
     }}
@@ -717,7 +717,7 @@ ARTICLES_INDEX_TEMPLATE = """\
       transition: border-color 0.15s, box-shadow 0.15s;
     }}
     .search-bar input:focus {{
-      outline: none; border-color: var(--accent, #1d1d1f);
+      border-color: var(--accent, #1d1d1f);
       box-shadow: 0 0 0 3px rgba(0,0,0,0.05);
     }}
     .filter-bar {{ display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2rem; }}
@@ -777,7 +777,7 @@ ARTICLES_INDEX_TEMPLATE = """\
     .article-card p {{ font-size: 0.85rem; color: var(--text-muted, #666); line-height: 1.45; }}
     /* Quality badges (Phase 1B) */
     .quality-badge {{ font-size: 0.7rem; padding: 1px 6px; border-radius: 8px; }}
-    .q-draft {{ background: #f5f0e8; color: #8a7340; border: 1px solid #d4c8b0; }}
+    .q-draft {{ background: #f5f0e8; color: #735f33; border: 1px solid #d4c8b0; }}
     .q-reviewed {{ background: #f0f0f3; color: #1d1d1f; border: 1px solid #d2d2d7; }}
     .q-featured {{ background: #1d1d1f; color: #fff; }}
     .article-card.is-draft {{ opacity: 0.65; }}
@@ -975,8 +975,9 @@ def build_articles() -> list[dict]:
 
         body_md, references_html, cited_keys = _process_footnotes(body_md, slug)
         body_html = _md_to_html(body_md)
-        # Strip the leading <h1> if the markdown starts with # Title (avoids duplicate)
-        body_html = re.sub(r"^\s*<h1>[^<]*</h1>\s*", "", body_html, count=1)
+        # 內文開頭的「# 標題」改由模板的 <h1> 顯示，這裡拿掉以免重複
+        # （toc 擴充會替標題加 id，所以要容許 <h1 id="...">）
+        body_html = re.sub(r"^\s*<h1\b[^>]*>.*?</h1>\s*", "", body_html, count=1, flags=re.S)
         # 章節重點約定：blockquote 以「⚡ 重點」開頭 → 渲染為 .section-hint 醒目盒
         body_html = re.sub(
             r'<blockquote>\s*<p>⚡\s*重點[:：]?\s*(.*?)</p>\s*</blockquote>',
@@ -1039,7 +1040,7 @@ def build_articles() -> list[dict]:
         date_modified_json = f'\n    "dateModified": "{_escape_html(lr)}",' if lr else ""
 
         # 文末「找獸醫」CTA（從文章 frontmatter 的 find_vet 欄位）
-        # 值：cat_only（→ vets.html?cat=1）/ emergency（→ ?only24h=1）/ both
+        # 值：cat_only（→ vets.html?cat=1）/ emergency（→ ?only24h=1&near=1，進站即定位）/ both
         find_vet_html = ""
         find_vet = (meta.get("find_vet") or "").strip().lower()
         if find_vet == "cat_only":
@@ -1053,7 +1054,7 @@ def build_articles() -> list[dict]:
             find_vet_html = (
                 '<div class="find-vet-cta">'
                 '<span class="label">🚨 緊急狀況？</span>'
-                '<a href="../vets.html?only24h=1">找 24h 急診動物醫院 →</a>'
+                '<a href="../vets.html?only24h=1&amp;near=1">找附近的 24h 急診動物醫院 →</a>'
                 '</div>'
             )
         elif find_vet == "both":
@@ -1061,7 +1062,7 @@ def build_articles() -> list[dict]:
                 '<div class="find-vet-cta">'
                 '<span class="label">📍 需要找獸醫？</span>'
                 '<a href="../vets.html?cat=1">🐈 貓專科 →</a>'
-                '<a href="../vets.html?only24h=1">🚨 24h 急診 →</a>'
+                '<a href="../vets.html?only24h=1&amp;near=1">🚨 附近 24h 急診 →</a>'
                 '</div>'
             )
 
@@ -1112,7 +1113,9 @@ def build_articles() -> list[dict]:
 
         related_html = ""
         related = meta.get("related") or []
-        if isinstance(related, list) and related:
+        # 內文已有手寫的「相關文章」一節（附一句說明）就不再加站內相關盒，免得同一批連結列兩次
+        has_related_section = re.search(r"<h2\b[^>]*>\s*相關文章\s*</h2>", body_html)
+        if isinstance(related, list) and related and not has_related_section:
             rel_items = []
             for rel_slug in related:
                 rel_slug = rel_slug.strip()
@@ -1500,6 +1503,100 @@ def build_sitemap(articles: list[dict], breeds: list[dict] = None):
 # Main
 # ---------------------------------------------------------------------------
 
+# 首頁「數字＋單位」對應的統計鍵
+HOME_STAT_UNITS = {"篇": "articles", "筆": "citations", "種": "breeds", "家": "vets"}
+
+
+def sync_home_stats(articles: list, n_breeds: int):
+    """首頁 index.html 是手寫的，但上面的數字與草稿標籤由這裡依實際資料寫入，文章或文獻增刪後不必手改。
+    - data-stat="vets|articles|citations|breeds" 的元素：改內文與 data-to（數字跑碼的終點）
+    - 其他「數字＋單位」的文字（meta 描述、結構化資料、報讀器說明句、「看全部 N 篇」）：直接改數字
+    - data-quality-of="slug" 的標籤：依該篇 quality 寫「草稿」或「已審核」
+    縣市數照使用者原稿寫 22，不在這裡改（資料裡連江縣 0 家，要不要改 21 待使用者決定，見 docs/TODO.md）。
+    另外檢查主標的字是否都在粉圓子集裡。
+    """
+    home = FRONTEND_DIR / "index.html"
+    if not home.exists():
+        return
+    actual = {"articles": len(articles), "breeds": n_breeds}
+    try:
+        cites = json.loads((ROOT / "content" / "references" / "citations.json").read_text(encoding="utf-8"))
+        actual["citations"] = len([k for k in cites if not k.startswith("_")])
+    except (OSError, ValueError):
+        pass
+    try:
+        vets = json.loads((ROOT / "data" / "vets" / "all_vets.json").read_text(encoding="utf-8"))
+        actual["vets"] = len(vets)
+    except (OSError, ValueError):
+        pass
+
+    src = home.read_text(encoding="utf-8")
+    changed = []
+
+    def stat_elem(m):
+        key = m.group("key")
+        if key not in actual:
+            return m.group(0)
+        old, new = m.group("text"), f"{actual[key]:,}"
+        if old != new:
+            changed.append(f"{key} {old} → {new}")
+        open_tag = re.sub(r'data-to="\d+"', f'data-to="{actual[key]}"', m.group("open"))
+        return f"{open_tag}{new}{m.group('close')}"
+
+    html = re.sub(r'(?P<open><(?P<tag>\w+)\b[^>]*\bdata-stat="(?P<key>\w+)"[^>]*>)(?P<text>[^<]*)(?P<close></(?P=tag)>)',
+                  stat_elem, src)
+
+    def stat_text(m):
+        key = HOME_STAT_UNITS[m.group(3)]
+        if key not in actual:
+            return m.group(0)
+        new = f"{actual[key]:,}"
+        if m.group(1) != new:
+            changed.append(f"{m.group(1)} {m.group(3)} → {new} {m.group(3)}")
+        return f"{new}{m.group(2)}{m.group(3)}"
+
+    html = re.sub(r"(\d[\d,]*)(\s*)(篇|筆|種|家)", stat_text, html)
+
+    quality = {a["slug"]: (a.get("quality") or "draft") for a in articles}
+    missing = []
+
+    def quality_tag(m):
+        slug = m.group("slug")
+        if slug not in quality:
+            missing.append(slug)
+            return m.group(0)
+        if quality[slug] in ("reviewed", "featured"):
+            new = f'<span class="tag-reviewed" data-quality-of="{slug}">已審核</span>'
+        else:
+            new = f'<span class="tag-draft" data-quality-of="{slug}">草稿</span>'
+        if new != m.group(0):
+            changed.append(f"{slug} 標籤 → {'已審核' if 'reviewed' in new else '草稿'}")
+        return new
+
+    html = re.sub(r'<span class="tag-(?:draft|reviewed)" data-quality-of="(?P<slug>[\w-]+)">[^<]*</span>', quality_tag, html)
+
+    if html != src:
+        home.write_text(html, encoding="utf-8")
+        print("  index.html 已依實際資料更新：" + "；".join(dict.fromkeys(changed)))
+    else:
+        print("  index.html 的數字與草稿標籤與實際一致")
+    for slug in missing:
+        print(f"  [warn] index.html 列了不存在的文章 {slug}（已歸檔或改名？）")
+
+    # 主標用的粉圓是子集字型，改了主標要重抓
+    rng = re.search(r"unicode-range:\s*([^;]+);", html)
+    h1 = re.search(r"<h1\b[^>]*>(.*?)</h1>", html, re.S)
+    if rng and h1:
+        covered = set()
+        for part in rng.group(1).split(","):
+            part = part.strip().upper().removeprefix("U+")
+            lo, _, hi = part.partition("-")
+            covered.update(range(int(lo, 16), int(hi or lo, 16) + 1))
+        lacking = sorted({c for c in re.sub(r"<[^>]+>", "", h1.group(1)) if not c.isspace() and ord(c) not in covered})
+        if lacking:
+            print(f"  [warn] 首頁主標有字不在粉圓子集：{''.join(lacking)}，執行 python scripts/fetch_home_font.py")
+
+
 def main():
     print("=== build.py ===")
 
@@ -1533,6 +1630,10 @@ def main():
     # --- SEO ---
     print("\n[SEO]")
     build_sitemap(articles, breeds)
+
+    # --- 首頁數字檢查 ---
+    print("\n[Home stats]")
+    sync_home_stats(articles, len(breeds))
 
     print("\nDone.")
 

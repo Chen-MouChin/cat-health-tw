@@ -4,16 +4,21 @@
 
 ---
 
-## 最優先
-
-- [ ] **確認 GitHub Pages 是否真的啟用** — 2026-09-06 push 後，
-      `https://chen-mouchin.github.io/cat-health-tw/` 回 404。
-      從開發環境連不到 github.com 與 api.github.com（504），無法判斷是網路限制還是沒部署。
-      檢查：repo → Actions 看 `Deploy to GitHub Pages` 有沒有跑成功；
-      repo → Settings → Pages → Source 是否為「GitHub Actions」。
-
 ## 等你回覆
 
+- [ ] **視覺改版委託** — 風格 2026-09-29 定案（主調溫暖插畫 × 公共服務、文獻區醫學期刊、加入動態，見 ROADMAP 決策紀錄）。
+      第二版需求書與 AI 工具 prompt：`docs/design-prompts.md`（網頁版 https://claude.ai/artifact/J7ocheYfZhL7RikiZ6aSkD）。
+      等你：填需求書第十一點的時程與預算，找設計師或自己用 AI 工具跑稿；
+      手機底部錨定廣告要不要留還沒決定，需求書請設計師提建議。
+      設計稿回來前，除了錯誤修正不動全站樣式。第一版提案與現況截圖在畫布 https://claude.ai/artifact/FXxMk1LkENFztekerzVNaG。
+      2026-09-29 收到首頁 AI 稿與小貓插畫，改成首頁原型 `docs/design/home-prototype.html`
+      （線上版 https://claude.ai/artifact/VEz7Lymwu2Pi1xWr7AXAU5，目前只有你看得到）。
+      首頁改版完成，使用者同意上線（2026-09-29）。其他頁（文章、獸醫院、文獻庫、列表）等設計稿。
+- [ ] **縣市數寫 21 還是 22** — 資料裡連江縣 0 家（爬蟲有抓，農業部登記沒有），實際有醫院的是 21 縣市。
+      首頁照原稿維持 22（使用者要求文字不改，build 不自動改這個數）；`vets.html`、`about.html` 也寫「全台 22 縣市」，
+      `vets.html` 的描述另有「本島 21 縣市＋澎湖金門」的錯誤算法。要不要全站改成 21？
+- [ ] **急診區塊的四個狀況要不要留** — 首頁急診區塊已拿掉所有就醫建議，現在只剩標題、尿不出來／呼吸急促／抽搐／誤食、找 24h 急診的按鈕。四個狀況是原稿文字，先留著。
+- [ ] **清掉 GitHub 上的失敗部署** — 步驟在 HANDOVER「下次開工」第 4 點（Claude 的 GitHub 工具刪不了）。
 - [ ] **工作檯要調整** — 你說之後會提意見。收到意見前不動 `workbench/`。
       目前狀態：文章審核、文獻核對、建置發佈三塊都能用，寫入路徑已實測。
       已知可能要改的方向（等你確認再做）：版面配置、快捷鍵、審核佇列排序、
@@ -22,6 +27,8 @@
       清單：CKD、公貓尿道阻塞、疫苗健檢、危險物質、急診判斷、常見症狀、
       FIP、糖尿病、甲狀腺亢進、結紮。
 - [ ] **網域** — 買了才能申請 AdSense。買好後告訴我，DNS 以外的設定我做。
+- [ ] **上線託管**（要公開時再決定）— 2026-09-29 查明之前 404 的原因：repo 沒開 GitHub Pages（部署在 configure-pages 失敗，Get Pages site failed／Not Found）。repo 是 private，開 Pages 要 GitHub Pro（每年 48 美元），而且 Pages 站是公開的。目前先內部開發、用 ngrok 測試，`deploy.yml` 已改成只能手動觸發。
+      要公開時的選項：repo 改公開後用 Pages（免費）；Cloudflare Pages 或 Netlify（private repo 也免費）；或付 GitHub Pro。
 
 ## 內容
 
@@ -39,6 +46,16 @@
 - [ ] approved 從 14 補到 40，url 驗證從 73% 到 90%，中文摘要從 72% 到 80%
 - [ ] 品種中文名校正，約 40 個罕見品種音譯需人工看過
 
+## 視覺改版實作時
+
+- [ ] 閱讀時間：需求書的文章頁與列表有「約 N 分鐘」，站上目前沒有。`build.py` 以每分鐘約 500 字估
+- [x] 數字跑碼要用真實數字：`build.py` 的 `sync_home_stats` 依資料寫回首頁（2026-09-29）
+- [ ] 動態一律尊重 `prefers-reduced-motion`，急診按鈕與醫院清單不加延遲出現的動畫（首頁已照做，其他頁改版時沿用）
+- [x] 首頁從 `docs/design/home-prototype.html` 移植（2026-09-29）
+- [ ] 其他頁的導覽列與頁尾照首頁改（現在首頁一套、內頁 `nav.css` 一套，內頁仍有 emoji 圖示）
+- [ ] 拆 `--accent`：主按鈕與選取狀態換深苔綠，文章標題留近黑（build.py 模板與各頁 CSS）
+- [ ] AdSense 上線時，首頁拿掉 `.ad` 的 hidden 放廣告碼
+
 ## 技術債
 
 - [ ] `test_search.py` 45 筆失敗：仍假設 103 篇文章、查找已歸檔的 slug
@@ -47,6 +64,11 @@
 - [ ] `frontend/data/vets.json` 是舊的雙北檔，`vets.html` 實際讀 `vets.js`，
       考慮讓 build.py 不要再複製那個 json
 - [ ] `CLAUDE.md` 架構圖曾提到根目錄 `TODO.md`，實際位置改為 `docs/TODO.md`
+- [ ] 重新 geocode 座標可疑的獸醫院：`python scripts/build_vets_js.py` 會列出 13 家 ap=2（錯位），
+      另有 179 家 ap=1（共用街道或區中心點）。台南、台中的地址缺縣市與區前綴，要先補區再查；
+      `geocode_vets.py` 也該記下命中的是哪一層 fallback（門牌／街道／區）。
+- [ ] 24h 急診名單只涵蓋 12 縣市，花蓮、台東、宜蘭、屏東等地一家都沒有。
+      台東池上開「只看 24h」，最近的是直線 90 km 外的嘉義。需人工確認各縣市夜間急診補進 `KNOWN_24H`。
 
 ## 已完成（留紀錄）
 
