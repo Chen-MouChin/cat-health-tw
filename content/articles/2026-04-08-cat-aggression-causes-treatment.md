@@ -1,5 +1,5 @@
 ---
-title: "貓咪攻擊行為：常見類型、原因分析與有效處置方法"
+title: "貓咪為什麼會有攻擊行為"
 slug: cat-aggression-causes-treatment
 date: 2026-04-08
 category: 行為

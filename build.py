@@ -23,10 +23,15 @@ Usage:
 
 import json
 import re
+import sys
 import textwrap
 from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
+
+# Windows 主控台預設 cp1252，印 → 或中文會崩潰
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
 
 ROOT = Path(__file__).parent
 CONTENT_DIR = ROOT / "content" / "articles"
@@ -1218,6 +1223,9 @@ def build_articles_index(articles: list[dict]):
             extra_class = ""
         elif q == "featured":
             quality_badge = '<span class="quality-badge q-featured">精選</span>'
+            extra_class = ""
+        elif q == "ai-reviewed":
+            quality_badge = '<span class="quality-badge q-ai-reviewed">AI 初審</span>'
             extra_class = ""
         else:
             quality_badge = ""

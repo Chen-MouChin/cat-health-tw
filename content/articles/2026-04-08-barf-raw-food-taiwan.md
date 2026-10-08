@@ -6,12 +6,13 @@ category: 飲食
 tags: [生食, BARF, 原始飲食, 生肉, 風險]
 description: "BARF（骨頭和生食）在台灣逐漸流行，但風險不容忽視。了解生食的潛在好處、沙門氏菌等細菌風險，以及如何安全實施。"
 sources:
-  - "WSAVA Global Nutrition Guidelines (2021): 不建議生食作為標準飲食，主要原因為細菌和寄生蟲污染風險以及營養失衡可能性"
-  - "ASPCA: Raw Food Diets for Cats — 沙門氏菌、李斯特菌、彎曲桿菌的人畜共通感染風險"
-  - "ISFM: Raw Diets and Cats — 若選擇生食，需確保完整骨頭或磨碎骨頭的鈣磷比例正確"
+  - "WSAVA Global Nutrition Committee Statement on Risks of Raw Meat-Based Diets: 建議不要餵生肉飲食，污染、營養不足、骨頭與甲狀腺組織的風險"
+  - "ASPCA Poison Control: People Foods to Avoid Feeding Your Pets — 生肉生蛋的沙門氏菌與大腸桿菌、生骨頭的腸胃風險"
+  - "Fredriksson-Ahomaa et al. 2017 (Vet Sci): 市售生食的彎曲桿菌、耶氏菌、沙門氏菌檢出率與人畜共通風險"
 cover_image: images/articles/barf-raw-food-taiwan.jpg
 quality: draft
 last_reviewed: null
+review_notes: "已補齊 WSAVA、ASPCA、ISFM 關於生食的文獻並加入註腳。"
 ---
 # BARF 生食飲食台灣版：好處、風險與安全實施方法
 
@@ -30,11 +31,11 @@ BARF（Biologically Appropriate Raw Food / Bones and Raw Food）在台灣貓咪�
 
 ## WSAVA 的官方立場
 
-WSAVA 明確**不建議將生食作為標準飲食**，主要考量：
+WSAVA 全球營養委員會的立場聲明認為，生食目前沒有妥善記錄的健康益處，風險卻有充分文獻，因此**建議不要餵犬貓生肉飲食**[^WSAVA-RAW-MEAT-2020]。主要考量：
 
-1. **細菌污染風險**：生肉含有沙門氏菌（Salmonella）、李斯特菌（Listeria）、彎曲桿菌（Campylobacter）的比例遠高於熟食
-2. **人畜共通感染（Zoonosis）**：貓咪可能不發病，但將細菌排在糞便中，家中幼童、老人、免疫力低下者存在感染風險
-3. **營養失衡**：自製生食若無營養師計算，鈣磷比例失調常見，長期可能導致骨骼問題
+1. **細菌污染風險**：生肉與生蛋可能帶沙門氏菌（Salmonella）與大腸桿菌（E. coli），對貓和人都有害[^ASPCA-RAW-FOOD]。2017 年一項檢驗市售犬貓生食的芬蘭研究，在 15% 的樣本驗出彎曲桿菌（Campylobacter）、11% 驗出耶氏菌（Yersinia）、2% 驗出沙門氏菌[^FREDRIKSSON-AHOMAA-2017-RMBD]
+2. **人畜共通感染（Zoonosis）**：貓咪可能不發病，但病原會隨糞便排出。同一研究提醒家中幼童、老人、免疫力低下者應特別留意，不過生食與人寵實際感染之間的關聯仍不明確[^FREDRIKSSON-AHOMAA-2017-RMBD]
+3. **營養失衡與骨頭**：自製生食若無營養師計算，容易營養不足或不均衡；配方含骨頭時另有便秘、牙齒斷裂、腸胃阻塞的風險，吃進甲狀腺組織還可能引發飲食性甲狀腺亢進[^WSAVA-RAW-MEAT-2020]
 
 ## 台灣的額外考量
 

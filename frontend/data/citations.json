@@ -1,9 +1,9 @@
 {
   "_meta": {
     "description": "貓健康站 literature database",
-    "total": 109,
+    "total": 113,
     "pending_review": 77,
-    "approved": 14,
+    "approved": 18,
     "rejected": 0
   },
   "WILHELMY-2016-BREED-COAT-BEHAVIOR": {
@@ -181,7 +181,8 @@
     "cited_by": [
       "cat-ckd-complete-guide",
       "cat-life-stages-care-taiwan"
-    ]
+    ],
+    "verified_at": null
   },
   "IRIS-CKD-TREATMENT-2023": {
     "title": "IRIS Treatment Recommendations for CKD in Cats",
@@ -2806,6 +2807,105 @@
     "notes": "DOI 待核對；28%/50% 數字為此文常被引用的結果。",
     "cited_by": [
       "cat-cognitive-dysfunction"
+    ]
+  },
+  "ASPCA-RAW-FOOD": {
+    "title": "People Foods to Avoid Feeding Your Pets",
+    "title_zh": "不該餵寵物吃的人類食物",
+    "authors": "ASPCA",
+    "source": "ASPCA",
+    "url": "https://www.aspca.org/pet-care/aspca-poison-control/people-foods-avoid-feeding-your-pets",
+    "year": null,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "ASPCA 動物毒物控制中心的衛教頁。生肉與生蛋可能帶沙門氏菌與大腸桿菌，對寵物和人都有害；生蛋另含干擾維生素吸收的酵素，可能造成皮毛問題；餵生骨頭看似自然，但可能造成腸胃道受傷或阻塞，嚴重時需要手術。頁面未標日期，未提李斯特菌，也沒有處理生肉的衛生建議。",
+    "status": "approved",
+    "url_verified": true,
+    "cited_by": [
+      "barf-raw-food-taiwan"
+    ],
+    "notes": "2026-10-08 核對。原登錄的 /news/raw-food-diets-pets 是 404，ASPCA 沒有專講生食的頁面，改用毒物控制中心的人類食物頁。",
+    "verified_at": "2026-10-08"
+  },
+  "AAHA-FLUID-2024": {
+    "title": "2024 AAHA Fluid Therapy Guidelines for Dogs and Cats",
+    "title_zh": "2024 AAHA 犬貓輸液治療指引",
+    "authors": "Davis H, Jensen T, Johnson A, et al.",
+    "source": "AAHA",
+    "url": "https://www.aaha.org/resources/2024-aaha-fluid-therapy-guidelines-for-dogs-and-cats/",
+    "year": 2024,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "2024 年最新發布的 AAHA 犬貓輸液治療指引。全面更新了輸液途徑的選擇、脫水狀態的精準評估、急診復甦階段的處置，以及針對慢性病（如慢性腎病 CKD）的居家皮下輸液（Subcutaneous fluid）建議。指引特別強調輸液計畫應個體化，並需持續監控以避免過度輸液（Fluid overload）帶來的心肺負擔。",
+    "keywords": [
+      "輸液",
+      "皮下輸液",
+      "AAHA",
+      "脫水",
+      "過度輸液"
+    ],
+    "status": "approved",
+    "url_verified": true,
+    "verified_at": "2026-09-09",
+    "cited_by": [
+      "cat-ckd-complete-guide"
+    ]
+  },
+  "WSAVA-RAW-MEAT-2020": {
+    "title": "WSAVA Global Nutrition Committee Statement on Risks of Raw Meat-Based Diets",
+    "title_zh": "WSAVA 全球營養委員會：生肉飲食風險聲明",
+    "authors": "WSAVA Global Nutrition Committee",
+    "source": "WSAVA",
+    "journal": null,
+    "url": "https://wsava.org/wp-content/uploads/2020/05/WSAVA-Global-Nutrition-Committee-Statement-on-Risks-of-Raw-Meat.pdf",
+    "year": 2020,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "一頁的立場聲明。委員會指出自製生肉飲食受細菌、寄生蟲等病原污染的風險高，另有營養不足的疑慮；若配方含骨頭，還有便秘、腹瀉、牙齒斷裂、腸胃阻塞的風險，吃進甲狀腺組織則可能引發飲食性甲狀腺亢進。聲明認為目前沒有妥善記錄的證據顯示生食有健康益處，風險卻有充分文獻，因此建議不要餵犬貓生肉飲食。文件未註明日期，網址路徑為 2020 年 5 月；未點名特定菌種，也未提及鈣磷比例。",
+    "keywords": [
+      "生食",
+      "BARF",
+      "WSAVA",
+      "營養不足",
+      "污染"
+    ],
+    "status": "approved",
+    "url_verified": true,
+    "verified_at": "2026-10-08",
+    "notes": "2026-10-08 由 PDF 原文逐字核對。原本登錄的 2021/04 網址是 404，正確檔在 2020/05。",
+    "cited_by": [
+      "barf-raw-food-taiwan"
+    ]
+  },
+  "FREDRIKSSON-AHOMAA-2017-RMBD": {
+    "title": "Raw Meat-Based Diets in Dogs and Cats",
+    "title_zh": "犬貓的生肉飲食：市售產品的病原檢測",
+    "authors": "Fredriksson-Ahomaa M, Heikkilä T, Pernu N, Kovanen S, Hielm-Björkman A, Kivistö R",
+    "source": "PubMed (open access)",
+    "journal": "Veterinary Sciences 4(3):33",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5644655/",
+    "doi": "10.3390/vetsci4030033",
+    "year": 2017,
+    "type": "research",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "芬蘭研究團隊檢驗市售犬貓生肉飲食中的腸道病原。以 PCR 檢測，15% 的樣本驗出彎曲桿菌，11% 驗出帶 ail 基因的耶氏菌，2% 驗出沙門氏菌；作者指出生肉與內臟在屠宰階段就可能被污染。文中提醒生肉飲食可能含人畜共通病原，對寵物與同住的人都是風險，幼童、老人與免疫力低下者應特別留意，但生食與人寵感染之間的直接關聯仍不明確。營養面只提到飲食不均衡與骨頭刺傷的風險，未討論鈣磷。CC BY 4.0。",
+    "keywords": [
+      "生食",
+      "彎曲桿菌",
+      "沙門氏菌",
+      "耶氏菌",
+      "人畜共通"
+    ],
+    "status": "approved",
+    "url_verified": true,
+    "verified_at": "2026-10-08",
+    "notes": "2026-10-08 核對。取代原本不存在的 ISFM-RAW-DIET（icatcare.org/advice/raw-feeding-for-cats/ 已下架，ICC 現無專講生食的頁面）。",
+    "cited_by": [
+      "barf-raw-food-taiwan"
     ]
   }
 }

@@ -10,7 +10,7 @@ sources:
   - "IRIS Treatment Recommendations for CKD in Cats 2023: 各分期的血磷目標、血壓與蛋白尿處置"
   - "ISFM Consensus Guidelines on the Diagnosis and Management of Feline Chronic Kidney Disease — Sparkes et al. 2016 (JFMS): 飲食磷限制、水分補充、血壓控制的個人化臨床建議"
   - "Chronic Kidney Disease — Cornell Feline Health Center: 盛行率、症狀識別與居家管理"
-  - "AAFP 2013 Fluid Therapy Guidelines: 長期 CKD 居家皮下輸液的原則"
+  - "2024 AAHA Fluid Therapy Guidelines: 長期 CKD 居家皮下輸液的原則與避免過度輸液的建議"
 cover_image: images/articles/cat-ckd-complete-guide.jpg
 find_vet: cat_only
 related:
@@ -18,8 +18,9 @@ related:
   - cat-water-urinary-health-taiwan
   - cat-hyperthyroidism-senior
   - cat-cost-insurance-taiwan
-quality: draft
-last_reviewed: null
+quality: reviewed
+last_reviewed: "2026-09-09"
+review_notes: "已加入 2024 AAHA 最新輸液指引，並更新皮下輸液的相關敘述與文獻對應。"
 ---
 # 貓咪慢性腎病（CKD）：分期、飲食與居家照護
 
@@ -104,7 +105,7 @@ IRIS 2023 治療建議從第 2 期開始使用腎臟處方飲食，血磷目標�
 - 主食改濕食（主食罐或泥狀），這是最有效的一項
 - 濕食再加水，或乾糧泡軟
 - 多放幾個水碗，加上流動飲水機
-- 第 3 到 4 期若持續脫水，獸醫會教飼主在家做皮下輸液。AAFP 輸液指引把居家皮下輸液列為長期 CKD 維持水分的常規做法之一[^AAFP-FLUID-2013]
+- 第 3 到 4 期若持續脫水，獸醫會教飼主在家做皮下輸液。2024 年 AAHA 最新輸液指引（以及早期的 AAFP 指引）均將居家皮下輸液列為長期 CKD 維持水分的常規做法之一，但也特別強調需個體化評估並持續監控，以避免過度輸液（Fluid overload）造成心肺負擔[^AAHA-FLUID-2024][^AAFP-FLUID-2013]
 
 ### 蛋白質不是越低越好
 

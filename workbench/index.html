@@ -36,6 +36,7 @@
   .q-reviewed { background:#e8f3ea; color:#2f6b3a; border-color:#b8d8bf; }
   .q-featured { background:#e9eef8; color:#2d4a8a; border-color:#b9c8ea; }
   .q-archived { background:#eee; color:#666; }
+  .q-ai-reviewed { background:#e0f2fe; color:#0369a1; border-color:#bae6fd; }
   .s-approved { background:#e8f3ea; color:#2f6b3a; }
   .s-pending_review, .s-needs_review { background:#f5f0e8; color:var(--amber); }
   .s-rejected { background:#f6e3df; color:var(--red); }
@@ -143,10 +144,22 @@
           <div class="m"><span class="pill" :class="'q-'+a.quality">{{ a.quality }}</span><span>{{ a.category }}</span><span>{{ a.chars }} 字</span><span>註腳 {{ a.footnotes }}</span><span :class="a.fails?'fail':''">F{{ a.fails }}</span><span class="warn">W{{ a.warns }}</span></div>
         </div>
       </div>
-      <div class="col">
-        <iframe v-if="cur" :src="cur.html + '?wb=' + bump"></iframe>
-        <div v-else class="muted" style="padding:24px">左邊選一篇。</div>
-      </div>
+        <div class="col" style="display:flex; flex-direction:column;">
+          <div v-if="cur" style="padding: 8px 12px; border-bottom: 1px solid #eee; display:flex; justify-content:flex-end;">
+            <button v-if="!isEditMode" class="btn" @click="startEdit">✏️ 編輯內文 (Markdown)</button>
+            <div v-else>
+              <button class="btn" @click="isEditMode = false">取消</button>
+              <button class="btn primary" @click="saveEdit" :disabled="busy">💾 儲存修改</button>
+            </div>
+          </div>
+          <template v-if="!isEditMode">
+            <iframe v-if="cur" :src="cur.html + '?wb=' + bump" @load="onIframeLoad" style="flex:1;"></iframe>
+            <div v-else class="muted" style="padding:24px">請在左側選擇文章</div>
+          </template>
+          <template v-else>
+            <textarea v-model="rawContent" style="flex:1; border:0; padding:16px; font-family:monospace; font-size:14px; background:#fafafa; resize:none;" :disabled="busy"></textarea>
+          </template>
+        </div>
       <div class="col side" v-if="cur">
         <div>
           <h4>{{ cur.file }}</h4>
@@ -175,14 +188,24 @@
         <div>
           <h4>句內引用的文獻（{{ cur.citations.length }}）</h4>
           <div v-if="!cur.citations.length" class="muted">沒有 [^KEY] 註腳。</div>
-          <div v-for="c in cur.citations" :key="c.key" class="cite" style="margin-top:6px">
+          <div v-for="c in cur.citations" :key="c.key" :id="'cite-card-' + c.key" class="cite" style="margin-top:6px">
             <div class="k">{{ c.key }} <span v-if="c.found" class="pill" :class="'s-'+c.status">{{ c.status }}</span><span v-else class="pill s-rejected">文獻庫沒有</span></div>
-            <div v-if="c.found"><b>{{ c.title_zh || c.title }}</b> <span class="muted">{{ c.year }}</span></div>
-            <div v-if="c.found && c.url"><a :href="c.url" target="_blank" rel="noopener" style="font-size:12px">原文 ↗</a> <span class="muted" style="font-size:11px">{{ c.url_verified ? '已驗證' : '未驗證' }}</span></div>
-            <div v-if="c.found && c.abstract_zh" class="a">{{ c.abstract_zh }}</div>
-            <div v-if="c.found" class="actions" style="margin-top:6px">
-              <button class="btn" style="padding:2px 8px; font-size:12px" @click="citeSet(c.key,{status:'approved', url_verified:true})">approve</button>
-              <button class="btn" style="padding:2px 8px; font-size:12px" @click="goCite(c.key)">編輯</button>
+            <div v-if="c.found" style="margin-top:4px"><b>{{ c.title_zh || c.title }}</b> <span class="muted">{{ c.year }}</span></div>
+            
+            <div v-if="c.contexts && c.contexts.length" style="margin-top:8px; padding:6px 8px; background:#fff; border-left:3px solid var(--faint); border-radius:0 4px 4px 0; font-size:12px; color:#444; line-height:1.5">
+              <div v-for="(ctx, i) in c.contexts" :key="i" style="margin-bottom:4px" v-html="fmtCtx(ctx, c.key)"></div>
+            </div>
+            
+            <div v-if="c.found && c.abstract_zh" class="a" style="margin-top:8px; border-left:3px solid var(--gold); padding-left:8px; background:#faf9f6; border-radius:0 4px 4px 0; padding:6px 8px; line-height:1.5">{{ c.abstract_zh }}</div>
+            
+            <div v-if="c.found && c.url" style="margin-top:10px">
+              <a :href="c.url" target="_blank" rel="noopener" class="btn" style="background:var(--text); color:#fff; border-color:var(--text); text-decoration:none; display:inline-block; font-size:12px; padding:4px 10px;">開啟原文對照 ↗</a>
+              <label style="font-size:11px; margin-left:8px; cursor:pointer"><input type="checkbox" :checked="c.url_verified" @change="citeSet(c.key, {url_verified: $event.target.checked})"> url 已驗證</label>
+            </div>
+            
+            <div v-if="c.found" class="actions" style="margin-top:8px; border-top:1px solid var(--border); padding-top:8px">
+              <button class="btn" style="padding:2px 8px; font-size:12px" @click="citeSet(c.key,{status:'approved', url_verified:true})">標記 approved</button>
+              <button class="btn" style="padding:2px 8px; font-size:12px" @click="goCite(c.key)">編輯文獻內容</button>
             </div>
           </div>
         </div>
@@ -217,8 +240,9 @@
         </div>
         <div class="grid2 cit-row" style="margin-top:8px">
           <div><div class="muted" style="font-size:12px">英文標題</div><div style="font-size:13px">{{ c.title }}</div>
-            <div class="muted" style="font-size:12px; margin-top:6px">中文標題</div><input v-model="c.title_zh" style="width:100%"></div>
-          <div><div class="muted" style="font-size:12px">中文摘要（必須改寫，不可複製原文）</div><textarea v-model="c.abstract_zh"></textarea></div>
+            <div class="muted" style="font-size:12px; margin-top:6px">中文標題</div><input v-model="c.title_zh" style="width:100%">
+            <div class="muted" style="font-size:12px; margin-top:6px">原文網址 (URL)</div><input v-model="c.url" style="width:100%" placeholder="https://..."></div>
+          <div><div class="muted" style="font-size:12px">中文摘要 (提供給使用者對照，可換行)</div><textarea v-model="c.abstract_zh"></textarea></div>
         </div>
         <div style="margin-top:6px"><div class="muted" style="font-size:12px">備註</div><input v-model="c.notes" style="width:100%"></div>
         <pre class="out" v-if="c._out" style="margin-top:8px">{{ c._out }}</pre>
@@ -267,12 +291,14 @@ createApp({
     const tabs = [{ id: 'dash', label: '儀表板' }, { id: 'review', label: '文章審核' }, { id: 'cites', label: '文獻核對' }, { id: 'build', label: '建置與發佈' }];
     const tab = ref(location.hash.replace('#', '') || 'dash');
     const ov = ref(null), arts = ref([]), cur = ref(null), note = ref(''), bump = ref(0);
+      const isEditMode = ref(false), rawContent = ref('');
     const fq = ref(''), fc = ref(''), fs = ref('');
     const cites = ref([]), cs = ref(''), cq = ref(''), onlyCited = ref(true);
     const out = ref(''), git = ref({ status: '', log: '', branch_line: '' }), msg = ref(''), busy = ref(false), toast = ref('');
     const say = (m) => { toast.value = m; setTimeout(() => toast.value = '', 2500); };
     const pct = (a, b) => b ? Math.min(100, Math.round(a / b * 100)) + '%' : '0%';
     const fmtTime = (s) => s ? s.replace('T', ' ').replace('Z', ' UTC') : '未知';
+    const fmtCtx = (t, k) => t.replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(new RegExp(`\\[\\^${k}\\]`,'g'), `<strong style="color:#1d1d1f; background:#e8e4db; padding:0 4px; border-radius:4px;">[^${k}]</strong>`);
     const categories = computed(() => [...new Set(arts.value.map(a => a.category))].filter(Boolean));
     const filtered = computed(() => arts.value.filter(a => (!fq.value || a.quality === fq.value) && (!fc.value || a.category === fc.value) && (!fs.value || a.title.includes(fs.value))));
     const citesFiltered = computed(() => cites.value.filter(c => (!onlyCited.value || c.cited_by.length) && (!cq.value || c.key.includes(cq.value) || (c.title || '').includes(cq.value) || (c.title_zh || '').includes(cq.value))));
@@ -281,7 +307,26 @@ createApp({
     async function loadArts() { arts.value = await api.get('/api/articles'); }
     async function loadCites() { cites.value = await api.get('/api/citations' + (cs.value ? '?status=' + cs.value : '')); }
     async function loadGit() { git.value = await api.get('/api/git'); }
-    async function open(slug) { cur.value = await api.get('/api/articles/' + slug); note.value = cur.value.review_notes || ''; bump.value++; }
+          async function startEdit() {
+        busy.value = true;
+        const r = await api.get('/api/articles/' + cur.value.slug + '/raw');
+        busy.value = false;
+        if (r.error) return say(r.error);
+        rawContent.value = r.raw;
+        isEditMode.value = true;
+      }
+      async function saveEdit() {
+        busy.value = true;
+        const r = await api.post('/api/articles/' + cur.value.slug + '/raw', { raw: rawContent.value });
+        if (r.error) { busy.value = false; return say(r.error); }
+        const b = await api.post('/api/build');
+        busy.value = false;
+        if (!b.ok) say('儲存成功，但建置失敗：' + b.error);
+        else say('儲存並建置成功！');
+        isEditMode.value = false;
+        bump.value++;
+      }
+      async function open(slug) { cur.value = await api.get('/api/articles/' + slug); note.value = cur.value.review_notes || ''; bump.value++; isEditMode.value = false; }
     function go(t) { tab.value = t; location.hash = t; if (t === 'review' && !arts.value.length) loadArts(); if (t === 'cites' && !cites.value.length) loadCites(); if (t === 'build') loadGit(); }
     async function mark(q) {
       if (!cur.value) return;
@@ -296,13 +341,68 @@ createApp({
     }
     function step(d) { if (!cur.value) { if (filtered.value[0]) open(filtered.value[0].slug); return; } const i = filtered.value.findIndex(a => a.slug === cur.value.slug); const n = filtered.value[i + d]; if (n) open(n.slug); }
     async function citeSet(key, patch) { const r = await api.post('/api/citations/' + key, patch); if (r.error) return say(r.error); say(key + ' 已更新'); if (cur.value) open(cur.value.slug); loadOverview(); }
-    async function citeSave(c, status) { const r = await api.post('/api/citations/' + c.key, { status, title_zh: c.title_zh, abstract_zh: c.abstract_zh, notes: c.notes, url_verified: c.url_verified || status === 'approved' }); if (r.error) return say(r.error); c.status = status; if (status === 'approved') c.url_verified = true; say(c.key + ' → ' + status); loadOverview(); }
+    async function citeSave(c, status) { const r = await api.post('/api/citations/' + c.key, { status, title_zh: c.title_zh, abstract_zh: c.abstract_zh, notes: c.notes, url: c.url, url_verified: c.url_verified || status === 'approved' }); if (r.error) return say(r.error); c.status = status; if (status === 'approved') c.url_verified = true; say(c.key + ' 已設為 ' + status); loadOverview(); }
     async function verify(c) { busy.value = true; c._out = '執行中…'; const r = await api.post('/api/verify/' + c.key); c._out = (r.stdout || '') + (r.stderr || ''); busy.value = false; }
     function goCite(key) { cs.value = ''; cq.value = key; onlyCited.value = false; go('cites'); loadCites(); }
     async function runBuild() { busy.value = true; out.value = '建置中…'; const r = await api.post('/api/build'); out.value = r.stdout + (r.stderr || ''); busy.value = false; bump.value++; loadOverview(); loadGit(); }
     async function runLint() { busy.value = true; out.value = 'lint 中…'; const r = await api.post('/api/lint'); out.value = r.stdout; busy.value = false; loadArts(); loadOverview(); }
     async function commit() { busy.value = true; const r = await api.post('/api/git/commit', { message: msg.value }); busy.value = false; if (!r.ok) { out.value = (r.error || '') + '\n' + JSON.stringify(r.steps || [], null, 1); return say('commit 失敗，看輸出'); } say('已 commit'); msg.value = ''; loadGit(); loadOverview(); }
     async function push() { if (!confirm('push 到 GitHub 後 Pages 會自動發佈，確定？')) return; busy.value = true; const r = await api.post('/api/git/push'); busy.value = false; out.value = r.stdout + r.stderr; say(r.code === 0 ? '已 push' : 'push 失敗'); loadGit(); }
+
+    function onIframeLoad(e) {
+      if (!cur.value || !cur.value.citations) return;
+      const doc = e.target.contentWindow.document;
+      if (!doc) return;
+      
+      const style = doc.createElement('style');
+      style.textContent = `
+        .wb-tooltip { position:absolute; background:#1d1d1f; color:#fff; padding:10px 14px; border-radius:8px; font-size:13px; line-height:1.5; max-width:300px; z-index:9999; pointer-events:none; opacity:0; transition:opacity 0.2s; box-shadow:0 4px 12px rgba(0,0,0,0.2); }
+        .wb-tooltip.show { opacity:1; }
+        .wb-tooltip .title { font-weight:bold; margin-bottom:4px; color:#b8860b; }
+      `;
+      doc.head.appendChild(style);
+
+      const tooltip = doc.createElement('div');
+      tooltip.className = 'wb-tooltip';
+      doc.body.appendChild(tooltip);
+
+      const citesMap = {};
+      cur.value.citations.forEach(c => { citesMap[c.key] = c; });
+
+      const links = doc.querySelectorAll('sup.fn a[data-cite]');
+      links.forEach(link => {
+        link.addEventListener('mouseenter', () => {
+          const key = link.getAttribute('data-cite');
+          const cite = citesMap[key];
+          if (!cite) return;
+          
+          const title = cite.title_zh || cite.title || key;
+          const desc = cite.abstract_zh ? cite.abstract_zh.substring(0, 100) + '...' : '（無摘要）';
+          tooltip.innerHTML = `<div class="title">${title}</div><div>${desc}</div>`;
+          
+          const rect = link.getBoundingClientRect();
+          tooltip.style.left = (rect.left + doc.documentElement.scrollLeft) + 'px';
+          tooltip.style.top = (rect.bottom + doc.documentElement.scrollTop + 8) + 'px';
+          tooltip.classList.add('show');
+        });
+        
+        link.addEventListener('mouseleave', () => {
+          tooltip.classList.remove('show');
+        });
+
+        link.addEventListener('click', (ev) => {
+          ev.preventDefault();
+          const key = link.getAttribute('data-cite');
+          const el = document.getElementById('cite-card-' + key);
+          if (el) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            el.style.transition = 'background 0.3s';
+            el.style.background = '#f3efe6';
+            setTimeout(() => { el.style.background = ''; }, 1500);
+          }
+        });
+      });
+    }
 
     onMounted(() => {
       loadOverview(); go(tab.value);
@@ -312,7 +412,7 @@ createApp({
         else if (e.key === 'n') step(1); else if (e.key === 'p') step(-1);
       });
     });
-    return { tabs, tab, go, ov, arts, cur, note, bump, fq, fc, fs, categories, filtered, open, mark, step, cites, cs, cq, onlyCited, citesFiltered, loadCites, citeSet, citeSave, verify, goCite, out, git, msg, busy, toast, runBuild, runLint, commit, push, loadGit, loadOverview, pct, fmtTime };
+    return { tabs, tab, go, ov, arts, cur, note, bump, fq, fc, fs, categories, filtered, open, mark, step, cites, cs, cq, onlyCited, citesFiltered, loadCites, citeSet, citeSave, verify, goCite, out, git, msg, busy, toast, runBuild, runLint, commit, push, loadGit, loadOverview, pct, fmtTime, fmtCtx, onIframeLoad, isEditMode, rawContent, startEdit, saveEdit };
   }
 }).mount('#app');
 </script>

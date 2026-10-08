@@ -1,5 +1,5 @@
 ---
-title: "老貓甲狀腺亢進：症狀、診斷與四種治療的取捨"
+title: "甲狀腺亢進：症狀、診斷與四種治療的取捨"
 slug: cat-hyperthyroidism-senior
 date: 2026-04-08
 category: 健康
@@ -15,10 +15,10 @@ related:
   - cat-life-stages-care-taiwan
   - cat-common-symptoms-taiwan
   - cat-hcm-heart-disease
-quality: draft
-last_reviewed: null
+quality: reviewed
+last_reviewed: 2026-09-21
 ---
-# 老貓甲狀腺亢進：症狀、診斷與四種治療的取捨
+# 甲狀腺亢進：症狀、診斷與四種治療的取捨
 
 甲狀腺亢進是老貓最常見的內分泌疾病之一，好發於 10 歲以上[^CORNELL-HYPERTHYROIDISM]。它的症狀常被當成「老了比較瘦」或「老了脾氣變差」而被忽略，但它其實是少數可以治癒的老貓慢性病。這篇說明怎麼從症狀懷疑、T4 報告怎麼看、四種治療各適合誰，以及最容易被忽略的一件事：治療前要先弄清楚腎臟的狀況。
 
@@ -31,7 +31,7 @@ last_reviewed: null
 
 ## 30 秒重點
 
-1. **吃很多卻越來越瘦是最典型的訊號。** 加上多喝多尿、躁動、半夜叫、心跳快，老貓有這些組合就該驗 T4[^CORNELL-HYPERTHYROIDISM]。
+1. **吃很多卻越來越瘦是最典型的訊號。** 加上多喝多尿、躁動、嘔吐、腹瀉、毛髮可能顯得凌亂、打結或油膩，老貓有這些組合就該驗 T4[^CORNELL-HYPERTHYROIDISM]。
 2. **放射碘是最接近根治的治療，藥物是最常用的起手式。** AAFP 2016 指引把放射碘列為可取得時的首選，methimazole 則適合作為初期治療與腎功能評估的工具[^AAFP-HYPERTHYROIDISM-2016]。
 3. **甲亢會掩蓋腎病。** 甲狀腺素升高讓腎臟血流增加，腎指數看起來正常；治好甲亢後，潛在的腎病才浮現。所以在做不可逆治療前，AAFP 建議先用藥物試治療並追蹤腎功能[^AAFP-HYPERTHYROIDISM-2016]。
 

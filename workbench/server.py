@@ -167,9 +167,17 @@ def article_detail(slug: str) -> dict | None:
         if k not in keys:
             keys.append(k)
     cites = []
+    paragraphs = [p.strip() for p in body.split("\n\n") if p.strip()]
     for k in keys:
         c = citations.get(k)
-        cites.append({"key": k, "found": bool(c), **({
+        ctx_list = []
+        for p_text in paragraphs:
+            if f"[^{k}]" in p_text:
+                # strip markdown headings
+                clean_text = re.sub(r'^#{1,6}\s*', '', p_text).strip()
+                ctx_list.append(clean_text)
+                
+        cites.append({"key": k, "found": bool(c), "contexts": ctx_list, **({
             "title": c.get("title", ""), "title_zh": c.get("title_zh", ""), "status": c.get("status", ""),
             "abstract_zh": c.get("abstract_zh", ""), "url": c.get("url", ""), "year": c.get("year", ""),
             "url_verified": bool(c.get("url_verified")), "source": c.get("source", ""),
@@ -339,6 +347,17 @@ class Handler(SimpleHTTPRequestHandler):
                 return self._json(overview())
             if path == "/api/articles":
                 return self._json(list_articles())
+            m_raw = re.match(r"^/api/articles/([A-Za-z0-9\-]+)/raw$", path)
+            if m_raw:
+                slug = m_raw.group(1)
+                p = ARTICLES / f"{slug}.md"
+                if not p.exists():
+                    files = list(ARTICLES.glob(f"*-{slug}.md"))
+                    if files: p = files[0]
+                if not p.exists():
+                    return self._json({"error": "not found"}, 404)
+                return self._json({"raw": p.read_text(encoding="utf-8")})
+            
             m = re.match(r"^/api/articles/([A-Za-z0-9\-]+)$", path)
             if m:
                 d = article_detail(m.group(1))
@@ -371,6 +390,19 @@ class Handler(SimpleHTTPRequestHandler):
         path = urllib.parse.unquote(urllib.parse.urlsplit(self.path).path)
         try:
             body = self._body()
+            m_raw = re.match(r"^/api/articles/([A-Za-z0-9\-]+)/raw$", path)
+            if m_raw:
+                slug = m_raw.group(1)
+                p = ARTICLES / f"{slug}.md"
+                if not p.exists():
+                    files = list(ARTICLES.glob(f"*-{slug}.md"))
+                    if files: p = files[0]
+                if not p.exists():
+                    return self._json({"error": "not found"}, 404)
+                if "raw" in body:
+                    p.write_text(body["raw"], encoding="utf-8")
+                return self._json({"ok": True})
+            
             m = re.match(r"^/api/articles/([A-Za-z0-9\-]+)/quality$", path)
             if m:
                 res = set_quality(m.group(1), body.get("quality", ""), body.get("note", ""))
@@ -383,7 +415,7 @@ class Handler(SimpleHTTPRequestHandler):
                     key = m.group(1)
                     if key not in data:
                         return self._json({"error": "not found"}, 404)
-                    for f in ("status", "title_zh", "abstract_zh", "notes"):
+                    for f in ("status", "title_zh", "abstract_zh", "notes", "url"):
                         if f in body:
                             data[key][f] = body[f]
                     if "url_verified" in body:
@@ -415,10 +447,14 @@ class Handler(SimpleHTTPRequestHandler):
 
 def main() -> int:
     ap = argparse.ArgumentParser()
+    ap.add_argument("--host", type=str, default="0.0.0.0")
     ap.add_argument("--port", type=int, default=8010)
     args = ap.parse_args()
-    srv = ThreadingHTTPServer(("127.0.0.1", args.port), Handler)
-    print(f"貓健康站 工作檯 → http://127.0.0.1:{args.port}/   (Ctrl+C 停止)")
+    srv = ThreadingHTTPServer((args.host, args.port), Handler)
+    display_host = "127.0.0.1" if args.host == "0.0.0.0" else args.host
+    print(f"貓健康站 工作檯 → http://{display_host}:{args.port}/   (Ctrl+C 停止)")
+    if args.host == "0.0.0.0":
+        print(f" (若要在其他裝置預覽，請使用本機的區域網路 IP 連線，例如 http://192.168.X.X:{args.port}/)")
     try:
         srv.serve_forever()
     except KeyboardInterrupt:
