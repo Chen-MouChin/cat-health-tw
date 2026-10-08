@@ -44,12 +44,11 @@ ngrok http 8000 --basic-auth "帳號:密碼"    # 密碼至少 8 碼
 - 文章頁：內文連結是深苔綠、參考文獻、文末找獸醫按鈕。
 - 電腦用 Tab 走一遍：每個可點的地方都有 3px 近黑框，連結另有黃底。
 
-**4. 清掉 GitHub 上的失敗部署（一次性，Claude 的 GitHub 工具刪不了）**
+**4. 線上部署（2026-10-08 起）**
 
-- Actions → Deploy to GitHub Pages → 失敗的那次 → 右上「⋯」→ Delete workflow run。
-- Settings → Environments → `github-pages` → Delete environment。repo 首頁側欄的失敗部署紀錄會一起消失，以後開 Pages 時會自動重建。
-
-`deploy.yml` 已改成只能手動觸發，之後合併到 main 不會再產生失敗部署。
+repo 已 public，GitHub Pages 開通（Source = GitHub Actions），網址 https://chen-mouchin.github.io/cat-health-tw/ 。
+`deploy.yml` 只能手動觸發：改完內容、`python build.py`、commit、push 之後，跑
+`gh workflow run "Deploy to GitHub Pages"`（或 Actions 頁按 Run workflow）線上才會更新。gh CLI 已裝在這台（`C:\Program Files\GitHub CLI\gh.exe`），帳號 Chen-MouChin。
 
 **5. 待你決定**（細節在 TODO「等你回覆」）：縣市數寫 21 或 22、急診區塊的四個狀況要不要留、手機底部錨定廣告、上線託管方式、網域、工作檯意見、10 篇核心文章審核。
 

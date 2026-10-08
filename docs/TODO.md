@@ -18,7 +18,6 @@
       首頁照原稿維持 22（使用者要求文字不改，build 不自動改這個數）；`vets.html`、`about.html` 也寫「全台 22 縣市」，
       `vets.html` 的描述另有「本島 21 縣市＋澎湖金門」的錯誤算法。要不要全站改成 21？
 - [ ] **急診區塊的四個狀況要不要留** — 首頁急診區塊已拿掉所有就醫建議，現在只剩標題、尿不出來／呼吸急促／抽搐／誤食、找 24h 急診的按鈕。四個狀況是原稿文字，先留著。
-- [ ] **清掉 GitHub 上的失敗部署** — 步驟在 HANDOVER「下次開工」第 4 點（Claude 的 GitHub 工具刪不了）。
 - [ ] **工作檯要調整** — 你說之後會提意見。收到意見前不動 `workbench/`。
       目前狀態：文章審核、文獻核對、建置發佈三塊都能用，寫入路徑已實測。
       已知可能要改的方向（等你確認再做）：版面配置、快捷鍵、審核佇列排序、
@@ -27,8 +26,9 @@
       已審 2 篇：CKD（2026-09-09）、甲狀腺亢進（2026-09-21）。
       待審：公貓尿道阻塞、疫苗健檢、危險物質、急診判斷、常見症狀、FIP、糖尿病、結紮。
 - [ ] **網域** — 買了才能申請 AdSense。買好後告訴我，DNS 以外的設定我做。
-- [ ] **上線託管**（要公開時再決定）— 2026-09-29 查明之前 404 的原因：repo 沒開 GitHub Pages（部署在 configure-pages 失敗，Get Pages site failed／Not Found）。repo 是 private，開 Pages 要 GitHub Pro（每年 48 美元），而且 Pages 站是公開的。目前先內部開發、用 ngrok 測試，`deploy.yml` 已改成只能手動觸發。
-      要公開時的選項：repo 改公開後用 Pages（免費）；Cloudflare Pages 或 Netlify（private repo 也免費）；或付 GitHub Pro。
+- [x] **上線託管** — 2026-10-08 repo 改 public，GitHub Pages 開通（Source = GitHub Actions），
+      https://chen-mouchin.github.io/cat-health-tw/ 已上線。`deploy.yml` 仍是手動觸發：
+      改了內容要 `gh workflow run "Deploy to GitHub Pages"`（或 Actions 頁按 Run workflow）才會更新線上。
 
 ## 內容
 

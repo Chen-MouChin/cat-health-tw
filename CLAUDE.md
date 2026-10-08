@@ -74,7 +74,7 @@ frontend/breeds/{slug}.html        品種 SEO 殼頁，互動版在 breeds.html
 frontend/sitemap.xml               只收 quality ∈ {reviewed, featured} 的文章
 ```
 
-- 產出物**全部進 git**。`.github/workflows/deploy.yml` 只把 `frontend/` 原樣推上 Pages，**不跑 build.py**，改了 content/ 要先 `python build.py` 再 commit。目前 repo（private）沒開 Pages，網站尚未公開：deploy 只能手動觸發，push 到 main 不會上線；內部測試用 ngrok（見開發指令）。
+- 產出物**全部進 git**。`.github/workflows/deploy.yml` 只把 `frontend/` 原樣推上 Pages，**不跑 build.py**，改了 content/ 要先 `python build.py` 再 commit。repo 已 public、Pages 已開（2026-10-08），線上 https://chen-mouchin.github.io/cat-health-tw/ ；deploy 只能手動觸發，push 到 main 不會自動上線，要 `gh workflow run "Deploy to GitHub Pages"`。
 - 文章 HTML 模板（`ARTICLE_TEMPLATE`、`ARTICLES_INDEX_TEMPLATE`）是 build.py 內的 f-string，不是獨立檔；改版面要改 build.py。
 - `SUBCATEGORY_MAP`（build.py）以 slug 硬編子分類，frontmatter `subcategory` 只是 fallback。
 - `SITE_URL` 寫死在 build.py，換網域時要改。

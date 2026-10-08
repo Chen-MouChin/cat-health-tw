@@ -20,7 +20,7 @@
 | 獸醫院 | 2,001 家，22 縣市；1,988 家座標可算距離（179 家約略、13 家錯位待修） | |
 | sitemap 收錄文章 | 2 篇 | |
 | 網域 | 無 | 有 |
-| 公開網站 | 無：repo 私有、沒開 Pages，先內部開發，用 ngrok 測試 | 上線時決定託管 |
+| 公開網站 | https://chen-mouchin.github.io/cat-health-tw/（2026-10-08 上線，repo public，部署手動觸發） | |
 | AdSense | 未申請 | |
 
 ---
@@ -33,6 +33,9 @@
 - `build.py` 加 `sys.stdout.reconfigure`，Windows 主控台不再在印 `→` 時崩潰。
 - 掃描結果：56 篇 lint FAIL 0；112 個註腳全部對得到文獻；無 Frontiers；事實面沿用 `docs/audit-2026-09-06.md`，無新發現。
 - 本機與遠端 2026-09-29 的 13 個 commit 同步完成，無衝突。
+- commit 歷史壓成 4 批（init／09-06／09-29／10-08），之後 commit 都加 Co-Authored-By: Claude。
+- repo 改 public，GitHub Pages 開通並部署成功，舊的失敗 run 刪除。網站上線。
+- 課程作業「貓咪急診判斷器」另開公開 repo：https://github.com/Chen-MouChin/cat-emergency-triage ，線上版 https://chen-mouchin.github.io/cat-emergency-triage/ 。內容取自急診文與毒物文，規格書副本在 research/。
 
 ## 2026-09-29
 
