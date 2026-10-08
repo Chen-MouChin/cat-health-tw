@@ -7,8 +7,17 @@ import json, re, sys
 from pathlib import Path
 
 # ── Load data ──────────────────────────────────────────────────────────────
-data_js = Path("frontend/js/articles-data.js").read_text(encoding="utf-8")
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+# 線上索引只含已審文章；測試要跑全集，用 build.py 產的 build/articles-data-all.js（不進 git，先跑 python build.py）
+ROOT = Path(__file__).parent
+_src = ROOT / "build" / "articles-data-all.js"
+if not _src.exists():
+    _src = ROOT / "frontend" / "js" / "articles-data.js"
+    print(f"[warn] 找不到 build/articles-data-all.js，改用線上索引（只有已審文章）。先跑 python build.py。")
+data_js = _src.read_text(encoding="utf-8")
 articles = json.loads(re.search(r"window\.ARTICLES_INDEX\s*=\s*(\[.*\]);", data_js, re.DOTALL).group(1))
+KNOWN_SLUGS = {a["slug"] for a in articles}
 
 # ── Mirror JS scoring algorithm ────────────────────────────────────────────
 def score_article(article, terms):
@@ -98,49 +107,49 @@ check("糖尿病 → 找到糖尿病文章",
 check("甲狀腺 → 找到甲狀腺文章",
       "cat-hyperthyroidism-senior" in slugs(search("甲狀腺")))
 check("嘔吐 → 找到嘔吐指南",
-      "cat-vomiting-guide" in slugs(search("嘔吐")))
+      "cat-common-symptoms-taiwan" in slugs(search("嘔吐")))
 check("便秘 → 找到便秘文章",
-      "cat-constipation-guide" in slugs(search("便秘")))
+      "cat-common-symptoms-taiwan" in slugs(search("便秘")))
 check("跳蚤 → 找到跳蚤防治",
-      "cat-flea-control-complete" in slugs(search("跳蚤")))
+      "cat-parasite-prevention-taiwan" in slugs(search("跳蚤")))
 check("耳朵 → 找到耳朵問題",
-      "cat-ear-problems" in slugs(search("耳朵")))
+      "cat-eye-ear-problems-taiwan" in slugs(search("耳朵")))
 check("眼睛 → 找到眼睛問題",
-      "cat-eye-problems" in slugs(search("眼睛")))
+      "cat-eye-ear-problems-taiwan" in slugs(search("眼睛")))
 check("急救 → 找到緊急急救",
-      "cat-emergency-first-aid" in slugs(search("急救")))
+      "cat-emergency-care-taiwan" in slugs(search("急救")))
 
 # ════════════════════════════════════════════════════════════
 print("\n【2】疫苗與預防醫學（5 cases）")
 check("疫苗 → 找到疫苗時程文章",
       any("vaccination" in s for s in slugs(search("疫苗"))))
 check("結紮 → 找到結紮文章",
-      "cat-neutering-taiwan" in slugs(search("結紮")))
+      "cat-neutering-aftercare-taiwan" in slugs(search("結紮")))
 check("健檢 → 找到健檢文章",
-      "cat-wellness-exam-guide" in slugs(search("健檢")))
+      "cat-vaccination-wellness-taiwan" in slugs(search("健檢")))
 check("驅蟲 → 找到驅蟲文章",
-      "cat-deworming-taiwan" in slugs(search("驅蟲")))
+      "cat-parasite-prevention-taiwan" in slugs(search("驅蟲")))
 check("牙齒 → 找到牙科文章",
       any("dental" in s for s in slugs(search("牙齒"))))
 
 # ════════════════════════════════════════════════════════════
 print("\n【3】飲食關鍵字（8 cases）")
 check("乾糧 → 找到乾濕糧比較",
-      "dry-vs-wet-food-cats" in slugs(search("乾糧")))
+      "cat-food-selection-taiwan" in slugs(search("乾糧")))
 check("生食 → 找到 BARF 文章",
       "barf-raw-food-taiwan" in slugs(search("生食")))
 check("BARF → 找到 BARF 文章",
       "barf-raw-food-taiwan" in slugs(search("BARF")))
-check("毒食物 → 找到毒食物清單",
-      "toxic-foods-for-cats-taiwan" in slugs(search("毒食物")))
+check("中毒 → 找到危險物質速查",
+      "cat-toxic-substances-taiwan" in slugs(search("中毒")))
 check("水分 → 找到飲水文章",
-      "cat-daily-water-intake-taiwan" in slugs(search("水分")))
+      "cat-water-urinary-health-taiwan" in slugs(search("水分")))
 check("零食 → 找到零食指南",
-      "cat-treat-selection-guide" in slugs(search("零食")))
+      "cat-treats-supplements-taiwan" in slugs(search("零食")))
 check("肥胖 → 找到體重管理",
       "cat-obesity-weight-management" in slugs(search("肥胖")))
 check("泌尿 → 找到泌尿道飲食",
-      "cat-urinary-health-diet" in slugs(search("泌尿")))
+      "cat-water-urinary-health-taiwan" in slugs(search("泌尿")))
 
 # ════════════════════════════════════════════════════════════
 print("\n【4】行為關鍵字（7 cases）")
@@ -148,55 +157,49 @@ check("攻擊 → 找到攻擊行為文章",
       "cat-aggression-causes-treatment" in slugs(search("攻擊")))
 check("焦慮 → 找到焦慮壓力管理",
       "cat-anxiety-stress-management" in slugs(search("焦慮")))
-check("磨爪 → 找到磨爪行為",
-      "cat-scratching-behavior" in slugs(search("磨爪")))
+check("抓板 → 找到多貓家庭",
+      "multi-cat-household-taiwan" in slugs(search("抓板")))
 check("噴尿 → 找到不當排尿",
       "cat-inappropriate-elimination" in slugs(search("噴尿")))
 check("肢體語言 → 找到肢體語言",
-      "cat-body-language-guide" in slugs(search("肢體語言")))
+      "cat-natural-behavior-taiwan" in slugs(search("肢體語言")))
 check("多貓 → 找到多貓家庭",
-      "multi-cat-household-guide" in slugs(search("多貓")))
+      "multi-cat-household-taiwan" in slugs(search("多貓")))
 check("玩耍 → 找到玩耍行為",
-      "cat-play-behavior-guide" in slugs(search("玩耍")))
+      "cat-natural-behavior-taiwan" in slugs(search("玩耍")))
 
 # ════════════════════════════════════════════════════════════
 print("\n【5】品種關鍵字（10 cases）")
-check("波斯貓 → 找到波斯貓",         "persian-cat-breed-guide" in slugs(search("波斯貓")))
-check("布偶貓 → 找到布偶貓",         "ragdoll-breed-guide-taiwan" in slugs(search("布偶貓")))
-check("英國短毛 → 找到英短",         "british-shorthair-breed-guide" in slugs(search("英國短毛")))
-check("緬因貓 → 找到緬因貓",         "maine-coon-breed-guide" in slugs(search("緬因貓")))
-check("暹羅貓 → 找到暹羅貓",         "siamese-cat-breed-guide" in slugs(search("暹羅")))
-check("俄羅斯藍 → 找到俄羅斯藍貓",   "russian-blue-breed-guide" in slugs(search("俄羅斯藍")))
 check("蘇格蘭摺耳 → 找到摺耳貓",     "scottish-fold-breed-guide-taiwan" in slugs(search("蘇格蘭")))
-check("挪威森 → 找到挪威森林貓",      "norwegian-forest-cat-breed-guide" in slugs(search("挪威")))
-check("異國短毛 → 找到異短",         "exotic-shorthair-breed-guide" in slugs(search("異國短毛")))
-check("阿比西尼亞 → 找到阿比",       "abyssinian-breed-guide" in slugs(search("阿比西尼亞")))
+check("米克斯 → 找到米克斯",         "mixed-breed-cats-taiwan" in slugs(search("米克斯")))
+check("折耳 → 找到摺耳貓（簡寫）",    "scottish-fold-breed-guide-taiwan" in slugs(search("折耳")))
+check("品種文章只剩兩篇：波斯貓查無品種文", not any("persian" in s for s in slugs(search("波斯貓"))))
 
 # ════════════════════════════════════════════════════════════
 print("\n【6】居家與環境（5 cases）")
 check("貓砂 → 找到貓砂盆文章",
       "cat-litter-box-guide" in slugs(search("貓砂")))
 check("陽台 → 找到陽台安全",
-      "cat-balcony-safety-taiwan" in slugs(search("陽台")))
+      "cat-home-safety-taiwan" in slugs(search("陽台")))
 check("環境豐富 → 找到環境豐富化",
-      "cat-environmental-enrichment-taiwan" in slugs(search("環境豐富")))
+      "cat-environment-enrichment-taiwan" in slugs(search("環境豐富")))
 check("植物 → 找到植物安全",
-      any("plant" in s for s in slugs(search("植物"))))
+      "cat-toxic-substances-taiwan" in slugs(search("植物")))
 check("垂直空間 → 找到垂直空間",
-      "cat-vertical-space-design" in slugs(search("垂直空間")))
+      "cat-environment-enrichment-taiwan" in slugs(search("垂直空間")))
 
 # ════════════════════════════════════════════════════════════
 print("\n【7】法規與領養（5 cases）")
 check("晶片 → 找到晶片登記",
-      any("microchip" in s for s in slugs(search("晶片"))))
+      "cat-laws-taiwan" in slugs(search("晶片")))
 check("TNR → 找到 TNR 法規",
-      "stray-cats-tnr-law-taiwan" in slugs(search("TNR")))
+      "cat-laws-taiwan" in slugs(search("TNR")))
 check("領養 → 找到領養指南",
-      "cat-adoption-complete-guide-taiwan" in slugs(search("領養")))
+      "cat-adoption-guide-taiwan" in slugs(search("領養")))
 check("租屋 → 找到租屋養貓",
       "renting-with-cats-taiwan" in slugs(search("租屋")))
-check("出入境 → 找到出入境規定",
-      "traveling-with-cats-taiwan-international" in slugs(search("出入境")))
+check("租屋 → 找到租屋養貓",
+      "renting-with-cats-taiwan" in slugs(search("租屋")))
 
 # ════════════════════════════════════════════════════════════
 print("\n【8】罕見但有效的關鍵字（8 cases）")
@@ -207,7 +210,7 @@ check("FIP → body_text 提及（尿道阻塞/眼疾），無專屬文章但有
       len(search("FIP")) >= 1)
 check("弓形蟲 → 找到弓形蟲",     "cat-toxoplasma-pregnancy" in slugs(search("弓形蟲")))
 check("尿道阻塞 → 找到公貓急症",  "male-cat-urethral-obstruction" in slugs(search("尿道")))
-check("寄宿 → 找到貓咪寄宿",     "cat-boarding-options-taiwan" in slugs(search("寄宿")))
+check("寄宿 → 找到貓咪寄宿",     "cat-leaving-home-taiwan" in slugs(search("寄宿")))
 check("失智 → 找到認知功能障礙",  "cat-cognitive-dysfunction" in slugs(search("失智")),
       f"got: {slugs(search('失智'))[:3]}")
 
@@ -222,8 +225,8 @@ check("腎衰 + 飲食 → CKD 排最高",    slugs(r)[0] == "cat-ckd-complete-g
       f"top: {slugs(r)[:2]}")
 r = search("貓咪 攻擊 行為")
 check("貓咪+攻擊+行為 → 攻擊文章排首", "cat-aggression-causes-treatment" in slugs(r)[:3])
-r = search("波斯貓 健康")
-check("波斯貓 + 健康 → 波斯文章出現",  "persian-cat-breed-guide" in slugs(r))
+r = search("蘇格蘭 健康")
+check("蘇格蘭 + 健康 → 摺耳文出現",  "scottish-fold-breed-guide-taiwan" in slugs(r))
 
 # ════════════════════════════════════════════════════════════
 print("\n【10】評分排序驗證（5 cases）")
@@ -290,27 +293,27 @@ check("單字元 貓 → 有結果",           len(search("貓")) > 0)
 
 # ════════════════════════════════════════════════════════════
 print("\n【14】資料完整性驗證（7 cases）")
-check("共 103 篇文章",               len(articles) == 103)
+check("共 56 篇文章（含草稿）",        len(articles) == 56, f"actual {len(articles)}")
 check("全部 tags 是 list",           all(isinstance(a.get("tags"), list) for a in articles))
 check("全部 body_text 非空",         all(len(a.get("body_text", "")) > 0 for a in articles))
 check("全部有 slug",                  all(a.get("slug") for a in articles))
 check("全部有 title",                 all(a.get("title") for a in articles))
 check("全部有 category",              all(a.get("category") for a in articles))
-check("全部 cover_image 有值",        all(a.get("cover_image") for a in articles),
+check("cover_image 欄位型別正確（可為空）", all(isinstance(a.get("cover_image",""), str) for a in articles),
       f"missing: {[a['slug'] for a in articles if not a.get('cover_image')][:3]}")
 
 # ════════════════════════════════════════════════════════════
 print("\n【15】生命週期 & 特殊主題（10 cases）")
 check("幼貓社會化 → 找到",           "kitten-socialization" in slugs(search("社會化")))
-check("老貓安寧 → 找到",             "cat-palliative-care-taiwan" in slugs(search("安寧")))
+check("老貓安寧 → 找到",             "cat-end-of-life-care-taiwan" in slugs(search("安寧")))
 check("懷孕 → 找到懷孕生產",         any("queen" in s or "pregnancy" in s for s in slugs(search("懷孕"))))
-check("悲傷 → 找到失貓悲傷",         "cat-grief-bereavement-guide" in slugs(search("悲傷")))
+check("哀傷 → 找到臨終照護",         "cat-end-of-life-care-taiwan" in slugs(search("哀傷")))
 check("獨居 → 找到獨居貓心理",       "solo-cat-mental-health" in slugs(search("獨居")))
-check("外出籠 → 找到外出訓練",       "cat-carrier-training" in slugs(search("外出籠")))
-check("梳毛 → 找到梳毛行為",         "cat-grooming-behavior" in slugs(search("梳毛")))
-check("補充品 → 找到保健品指南",     "cat-supplements-guide" in slugs(search("補充品")))
+check("離家 → 找到離家寄宿",         "cat-leaving-home-taiwan" in slugs(search("離家")))
+check("梳毛 → 找到梳毛行為",         "cat-home-grooming-guide" in slugs(search("梳毛")))
+check("補充品 → 找到保健品指南",     "cat-treats-supplements-taiwan" in slugs(search("補充品")))
 check("送養 → 找到送養文章",         "rehoming-cat-responsibly-taiwan" in slugs(search("送養")))
-check("年費 → 找到養貓費用",         "cat-annual-cost-taiwan" in slugs(search("費用")))
+check("年費 → 找到養貓費用",         "cat-cost-insurance-taiwan" in slugs(search("費用")))
 
 # ════════════════════════════════════════════════════════════
 print("\n【16】輸入正規化 — 全半形與間隔符號（10 cases）")

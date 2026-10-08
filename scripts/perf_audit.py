@@ -28,7 +28,7 @@ from pathlib import Path
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8")
 
-BASE = sys.argv[sys.argv.index("--base") + 1] if "--base" in sys.argv else "http://localhost:8000/frontend"
+BASE = sys.argv[sys.argv.index("--base") + 1] if "--base" in sys.argv else "http://localhost:8000"  # sandbox/serve.py 或 python -m http.server 8000 --directory frontend
 ROOT = Path(__file__).parent.parent
 REPORT = ROOT / "research" / "perf-report.md"
 

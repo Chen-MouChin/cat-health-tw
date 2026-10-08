@@ -26,7 +26,7 @@ from pathlib import Path
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8")
 
-BASE = sys.argv[sys.argv.index("--base") + 1] if "--base" in sys.argv else "http://localhost:8000/frontend"
+BASE = sys.argv[sys.argv.index("--base") + 1] if "--base" in sys.argv else "http://localhost:8000"  # python -m http.server 8000 --directory frontend
 ROOT = Path(__file__).parent.parent
 REPORT = ROOT / "research" / "smoke-test-report.md"
 
@@ -73,7 +73,8 @@ def crawl(base, start):
             continue
         ok.append(path)
         # 抽連結
-        for href in re.findall(r'href="([^"#?][^"]*)"', html):
+        # (?<![\w-]) 排除 data-draft-href 這種「藏起來的連結」，它們刻意不是真的 href
+        for href in re.findall(r'(?<![\w-])href="([^"#?][^"]*)"', html):
             if href.startswith("http") or href.endswith(".css") or href.endswith(".js"):
                 continue
             if "${" in href: continue  # JS template
@@ -120,9 +121,10 @@ def main():
     sitemap_results = []
     if status == 200:
         urls = re.findall(r"<loc>([^<]+)</loc>", sitemap)
+        # sitemap 是線上絕對網址（含 /cat-health-tw 這種子路徑），轉成本機路徑要先把站台根路徑剝掉
+        site_root = min((urlparse(u).path for u in urls if urlparse(u).path.endswith("/")), key=len, default="/")
         for u in urls:
-            # 轉本地 URL
-            local_path = urlparse(u).path
+            local_path = "/" + urlparse(u).path[len(site_root):].lstrip("/")
             s = http_head(BASE + local_path)
             ok_flag = s == 200
             sitemap_results.append((u, s, ok_flag))

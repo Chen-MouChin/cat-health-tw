@@ -40,6 +40,12 @@ ARTICLES_DIR = FRONTEND_DIR / "articles"
 SITEMAP_XML = FRONTEND_DIR / "sitemap.xml"
 # 未審核文章不上線：只有這些 quality 的文章會寫進 frontend/（進 git、進 Pages）
 PUBLISHED_QUALITIES = ("reviewed", "featured")
+# 品種圖鑑 68 頁是 TheCatAPI 翻譯、沒人審過：頁面 noindex、不進 sitemap。審完改 True
+BREEDS_INDEXABLE = False
+# 手寫頁（不是 build 產生的）；build 會把它們連到未上線文章的連結拆成純文字
+HAND_PAGES = ("about.html", "breeds.html", "editorial.html", "library.html", "privacy.html", "vets.html")
+# 全部文章（含草稿）的搜尋索引，給 test_search.py 用，不進 git
+ALL_ARTICLES_JS = ROOT / "build" / "articles-data-all.js"
 # 草稿的 HTML 寫到這裡（.gitignore），給工作檯本機預覽用；線上永遠看不到
 DRAFTS_DIR = ROOT / "build" / "drafts" / "articles"
 SITE_URL = "https://chen-mouchin.github.io/cat-health-tw"  # update when deployed
@@ -792,6 +798,7 @@ ARTICLES_INDEX_TEMPLATE = """\
     .article-card.is-draft {{ opacity: 0.65; }}
     .article-card.is-draft:hover {{ opacity: 1; }}
     body.hide-drafts .article-card.is-draft {{ display: none; }}
+    .pending-note {{ font-size: 0.9rem; color: var(--text-muted, #636368); background: var(--bg-card, #fff); border: 1px solid var(--border, #e5e5ea); border-radius: 8px; padding: 0.6rem 0.9rem; margin: 0 0 1.2rem; }}
     .quality-toggle {{
       display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.85rem;
       padding: 0.35rem 0.9rem; border: 1px solid var(--border, #ccc); border-radius: 20px;
@@ -835,6 +842,7 @@ ARTICLES_INDEX_TEMPLATE = """\
         <span>只看已審核</span>
       </label>
     </div>
+{pending_note}
     <div id="articleSections">
 {article_sections}
     </div>
@@ -1217,7 +1225,79 @@ def build_articles() -> list[dict]:
     return articles_meta
 
 
-def build_articles_index(articles: list[dict]):
+def sanitize_hand_pages(public_slugs: set[str]):
+    """手寫頁連到未上線文章的 <a> 拆成 <span data-draft-link>，審核通過後自動還原成連結。"""
+    public_slugs = set(public_slugs) | {"index"}  # articles/index.html 是列表頁，永遠存在
+    pat_a = re.compile(r'<a\b(?P<pre>[^>]*?)\s*href="(?P<rel>(?:\.\./)?)articles/(?P<slug>[\w-]+)\.html"(?P<post>[^>]*)>(?P<text>.*?)</a>', re.S)
+    pat_s = re.compile(r'<span\b(?P<pre>[^>]*?)\s*data-draft-link="(?P<rel>(?:\.\./)?)articles/(?P<slug>[\w-]+)\.html"(?P<post>[^>]*)>(?P<text>.*?)</span>', re.S)
+    for name in HAND_PAGES:
+        path = FRONTEND_DIR / name
+        if not path.exists():
+            continue
+        src = path.read_text(encoding="utf-8")
+        n = []
+
+        def to_span(m):
+            if m.group("slug") in public_slugs:
+                return m.group(0)
+            n.append(m.group("slug"))
+            return f'<span{m.group("pre")} data-draft-link="{m.group("rel")}articles/{m.group("slug")}.html"{m.group("post")}>{m.group("text")}</span>'
+
+        def to_a(m):
+            if m.group("slug") not in public_slugs:
+                return m.group(0)
+            n.append(m.group("slug"))
+            return f'<a{m.group("pre")} href="{m.group("rel")}articles/{m.group("slug")}.html"{m.group("post")}>{m.group("text")}</a>'
+
+        html = pat_a.sub(to_span, src)
+        html = pat_s.sub(to_a, html)
+        if html != src:
+            path.write_text(html, encoding="utf-8")
+            print(f"  {name}：{len(n)} 個文章連結依審核狀態切換（{', '.join(n)}）")
+
+
+def build_404():
+    """GitHub Pages 用根目錄的 404.html；路徑不定，連結與樣式一律用絕對網址。"""
+    base = SITE_URL.rstrip("/")
+    html = f"""<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>找不到這一頁 — 貓健康站</title>
+<link rel="icon" type="image/svg+xml" href="{base}/favicon.svg">
+<link rel="stylesheet" href="{base}/css/theme.css">
+<style>
+  body {{ margin: 0; font-family: system-ui, "Noto Sans TC", sans-serif; background: var(--bg, #f9f6f0); color: var(--text, #1d1d1f); }}
+  main {{ max-width: 560px; margin: 0 auto; padding: 4rem 1.25rem; }}
+  h1 {{ font-size: 1.6rem; margin: 0 0 0.6rem; }}
+  p {{ line-height: 1.7; color: var(--text-muted, #636368); }}
+  ul {{ padding-left: 1.2rem; line-height: 2; }}
+  a {{ color: var(--primary, #3b6a50); }}
+</style>
+</head>
+<body>
+<main>
+  <h1>找不到這一頁</h1>
+  <p>這個網址沒有內容。可能是文章還在審核、已經下架，或網址打錯了。</p>
+  <ul>
+    <li><a href="{base}/">回首頁</a></li>
+    <li><a href="{base}/articles/index.html">已審核的文章</a></li>
+    <li><a href="{base}/vets.html?only24h=1">找 24 小時急診動物醫院</a></li>
+    <li><a href="{base}/library.html">學術文獻庫</a></li>
+  </ul>
+  <p>緊急狀況請直接聯絡附近的動物醫院，不要在網站上等。</p>
+</main>
+</body>
+</html>
+"""
+    out = FRONTEND_DIR / "404.html"
+    out.write_text(html, encoding="utf-8")
+    print(f"  → {out}")
+
+
+def build_articles_index(articles: list[dict], n_pending: int = 0):
     """Generate frontend/articles/index.html with category→subcategory grouping."""
     from collections import defaultdict
 
@@ -1308,7 +1388,11 @@ def build_articles_index(articles: list[dict]):
             f'    </div>'
         )
 
-    html = ARTICLES_INDEX_TEMPLATE.format(article_sections="\n".join(sections_html))
+    pending_note = (
+        f'    <p class="pending-note">目前公開 {len(articles)} 篇。另有 {n_pending} 篇完成撰寫、正在逐篇審核，通過後陸續上架。</p>'
+        if n_pending else ""
+    )
+    html = ARTICLES_INDEX_TEMPLATE.format(article_sections="\n".join(sections_html), pending_note=pending_note)
     out = ARTICLES_DIR / "index.html"
     out.write_text(html, encoding="utf-8")
     print(f"  → {out} ({len(articles)} articles)")
@@ -1393,12 +1477,14 @@ def build_breed_pages() -> list[dict]:
         }
         if hero:
             schema["image"] = hero
+        breed_robots_meta = "" if BREEDS_INDEXABLE else '<meta name="robots" content="noindex,follow">'
 
         html = f"""<!DOCTYPE html>
 <html lang="zh-TW">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{breed_robots_meta}
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
 <link rel="apple-touch-icon" href="../favicon-180.png">
@@ -1525,7 +1611,8 @@ def build_sitemap(articles: list[dict], breeds: list[dict] = None):
             f'  <url><loc>{SITE_URL}/articles/{a["slug"]}.html</loc>'
             f'<lastmod>{a["date"]}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>'
         )
-    for br in (breeds or []):
+    # 品種頁內容未經人工審核，先不給搜尋引擎（頁面本身也標 noindex）；審過再把 BREEDS_INDEXABLE 打開
+    for br in (breeds or []) if BREEDS_INDEXABLE else []:
         urls.append(
             f'  <url><loc>{SITE_URL}/breeds/{br["slug"]}.html</loc>'
             f'<changefreq>monthly</changefreq><priority>0.6</priority></url>'
@@ -1623,9 +1710,10 @@ def sync_home_stats(articles: list, n_breeds: int, n_public: int | None = None):
         if slug not in quality:
             return m.group(0)
         if quality[slug] in PUBLISHED_QUALITIES:
-            return f'<li>{m.group("a")}'
-        return f'<li hidden data-draft-of="{slug}">{m.group("a")}'
-    html2 = re.sub(r'<li(?: hidden data-draft-of="[\w-]+")?>(?P<a><a class="pill" href="articles/(?P<slug>[\w-]+)\.html">)', pill, html)
+            return f'<li><a class="pill" href="articles/{slug}.html">'
+        # 草稿：整個 li 藏起來，而且不留 href，連結檢查工具才不會抓到 404
+        return f'<li hidden data-draft-of="{slug}"><a class="pill" data-draft-href="articles/{slug}.html">'
+    html2 = re.sub(r'<li(?: hidden data-draft-of="[\w-]+")?><a class="pill" (?:href|data-draft-href)="articles/(?P<slug>[\w-]+)\.html">', pill, html)
 
     def card(m):
         slug, text = m.group("slug") or m.group("slug2"), m.group("text")
@@ -1655,6 +1743,24 @@ def sync_home_stats(articles: list, n_breeds: int, n_public: int | None = None):
     for slug in missing:
         print(f"  [warn] index.html 列了不存在的文章 {slug}（已歸檔或改名？）")
 
+    # about.html 的「資料品質實況」數字也手寫：只動有 data-stat 的元素，不做全文「數字＋單位」替換
+    # （about 有「46 筆 stub」這種歷史事實，全文替換會改錯）
+    try:
+        vets_js = (FRONTEND_DIR / "data" / "vets.js").read_text(encoding="utf-8")
+        actual["vets_approx"] = vets_js.count('"ap":1')
+        actual["vets_misplaced"] = vets_js.count('"ap":2')
+    except OSError:
+        pass
+    about = FRONTEND_DIR / "about.html"
+    if about.exists():
+        changed.clear()
+        a_src = about.read_text(encoding="utf-8")
+        a_html = re.sub(r'(?P<open><(?P<tag>\w+)\b[^>]*\bdata-stat="(?P<key>\w+)"[^>]*>)(?P<text>[^<]*)(?P<close></(?P=tag)>)',
+                        stat_elem, a_src)
+        if a_html != a_src:
+            about.write_text(a_html, encoding="utf-8")
+            print("  about.html 數字已更新：" + "；".join(dict.fromkeys(changed)))
+
     # 主標用的粉圓是子集字型，改了主標要重抓
     rng = re.search(r"unicode-range:\s*([^;]+);", html)
     h1 = re.search(r"<h1\b[^>]*>(.*?)</h1>", html, re.S)
@@ -1683,8 +1789,13 @@ def main():
     articles = build_articles()
     # 列表、搜尋索引、首頁數字只看已審文章；sitemap 與首頁標籤自己會依 quality 判斷
     public_articles = [a for a in articles if a.get("public")]
-    build_articles_index(public_articles)
+    build_articles_index(public_articles, n_pending=len(articles) - len(public_articles))
     build_search_index(public_articles)
+    # 全集索引給 test_search.py（build/ 不進 git）
+    ALL_ARTICLES_JS.parent.mkdir(parents=True, exist_ok=True)
+    ALL_ARTICLES_JS.write_text("window.ARTICLES_INDEX = " + json.dumps(articles, ensure_ascii=False) + ";\n", encoding="utf-8")
+    sanitize_hand_pages({a["slug"] for a in public_articles})
+    build_404()
 
     # --- Breeds data ---
     breeds_src = ROOT / "data" / "breeds_en.json"
