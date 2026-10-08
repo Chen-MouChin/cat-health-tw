@@ -1,8 +1,8 @@
 {
   "_meta": {
     "description": "貓健康站 literature database",
-    "total": 113,
-    "pending_review": 77,
+    "total": 110,
+    "pending_review": 76,
     "approved": 18,
     "rejected": 0
   },
@@ -445,7 +445,7 @@
     "type": "guideline",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "定義 Senior（11-14 歲）和 Super Senior（15+歲）。老貓常見疾病篩檢（CKD/甲亢/HCM/糖尿病/認知退化）、營養調整、環境改造、安寧照護轉介時機。",
+    "abstract_zh": "定義 Senior（11-14 歲）和 Super Senior（15+歲）。老貓常見疾病篩檢（CKD/甲亢/HCM/糖尿病/認知退化）、營養調整、環境改造、安寧照護轉介時機。\n\n（合併自 AAFP-2021-FELINE-SENIOR-CARE-2021 的摘要）高齡貓的全面醫療照護建議：疼痛管理、營養、常見疾病與生活品質評估。引入「四項照護預算」（財務、時間、情感、身體）概念，協助獸醫與飼主制定個人化方案。",
     "keywords": [
       "老貓",
       "高齡",
@@ -458,12 +458,14 @@
     ],
     "status": "pending_review",
     "url_verified": true,
-    "notes": "AAFP 官網免費",
+    "notes": "AAFP 官網免費；2026-10-09 合併重複 key AAFP-2021-FELINE-SENIOR-CARE-2021（原 notes：auto-crawled from catvets.com/guidelines）",
     "cited_by": [
       "cat-adoption-guide-taiwan",
       "cat-cognitive-dysfunction",
       "cat-common-symptoms-taiwan",
+      "cat-end-of-life-care-taiwan",
       "cat-hcm-heart-disease",
+      "cat-hyperthyroidism-senior",
       "cat-ibd-intestinal-disease",
       "cat-life-stages-care-taiwan",
       "cat-litter-box-guide",
@@ -508,7 +510,7 @@
     "type": "guideline",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "貓口腔疾病（牙周病/FORL/口炎）的診斷與治療。含居家口腔護理方法、麻醉下洗牙指引、口炎的全口拔牙決策。最新 2025 版。",
+    "abstract_zh": "貓口腔疾病（牙周病/FORL/口炎）的診斷與治療。含居家口腔護理方法、麻醉下洗牙指引、口炎的全口拔牙決策。最新 2025 版。\n\n（合併自 AAFP-2025-FELINEVMA-FELINE-ORAL-HEALTH-AND-DE-2025 的摘要）為獸醫專業人士提供貓口腔健康與牙科護理的實證建議。涵蓋疾病診斷、患者評估、麻醉、手術與術後照護，強調團隊合作與飼主參與。",
     "keywords": [
       "牙科",
       "口炎",
@@ -521,7 +523,7 @@
     ],
     "status": "pending_review",
     "url_verified": true,
-    "notes": "2025 最新版，AAFP 官網免費",
+    "notes": "2025 最新版，AAFP 官網免費；2026-10-09 合併重複 key AAFP-2025-FELINEVMA-FELINE-ORAL-HEALTH-AND-DE-2025（原 notes：auto-crawled from catvets.com/guidelines）",
     "cited_by": [
       "cat-dental-health-taiwan",
       "cat-food-selection-taiwan",
@@ -603,7 +605,7 @@
     "type": "guideline",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "貓的靜脈輸液和皮下輸液（subcutaneous fluid）完整指引。含輸液速率計算、脫水評估、電解質補充、居家皮下輸液操作方法。CKD 居家輸液的重要參考。",
+    "abstract_zh": "貓的靜脈輸液和皮下輸液（subcutaneous fluid）完整指引。含輸液速率計算、脫水評估、電解質補充、居家皮下輸液操作方法。CKD 居家輸液的重要參考。\n\n（合併自 AAFP-2013-FLUID-THERAPY-2013 的摘要）AAFP/AAHA 2013 犬貓輸液治療指引（Davis 等）。涵蓋脫水與低血容評估、輸液種類選擇、速率計算、靜脈與皮下輸液操作與監測。為 CKD 居家皮下輸液的臨床基礎參考。",
     "keywords": [
       "輸液",
       "皮下輸液",
@@ -617,7 +619,7 @@
     ],
     "status": "pending_review",
     "url_verified": true,
-    "notes": "AAFP 官網免費。皮下輸液教學文章的核心引用",
+    "notes": "AAFP 官網免費。皮下輸液教學文章的核心引用；2026-10-09 合併重複 key AAFP-2013-FLUID-THERAPY-2013（原 notes：auto-crawled from catvets.com/guidelines | 摘要依指引範圍整理（原文 PDF，catvets landing）。202）",
     "cited_by": [
       "cat-ckd-complete-guide",
       "cat-water-urinary-health-taiwan"
@@ -1141,27 +1143,6 @@
       "cat-leaving-home-taiwan"
     ]
   },
-  "AAFP-2025-FELINEVMA-FELINE-ORAL-HEALTH-AND-DE-2025": {
-    "title": "2025 FelineVMA Feline Oral Health and Dental Care Guidelines",
-    "title_zh": "2025 FelineVMA 貓口腔健康與牙科照護指引",
-    "authors": "AAFP",
-    "source": "AAFP",
-    "journal": null,
-    "url": "https://catvets.com/resource/2025-oral-health-guidelines",
-    "year": 2025,
-    "type": "guideline",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "為獸醫專業人士提供貓口腔健康與牙科護理的實證建議。涵蓋疾病診斷、患者評估、麻醉、手術與術後照護，強調團隊合作與飼主參與。",
-    "keywords": [],
-    "disease_tags": [],
-    "status": "needs_review",
-    "url_verified": true,
-    "notes": "auto-crawled from catvets.com/guidelines",
-    "cited_by": [
-      "cat-dental-health-taiwan"
-    ]
-  },
   "AAFP-2024-ISFM-AAFP-CONSENSUS-GUIDELINES-ON-T-2024": {
     "title": "2024 ISFM/AAFP Consensus Guidelines on the Long-term Use of NSAIDs in Cats",
     "title_zh": "2024 ISFM/AAFP 貓長期使用 NSAIDs 共識指引",
@@ -1299,30 +1280,6 @@
     "url_verified": true,
     "notes": "auto-crawled from catvets.com/guidelines",
     "cited_by": []
-  },
-  "AAFP-2021-FELINE-SENIOR-CARE-2021": {
-    "title": "2021 AAFP Feline Senior Care Guidelines",
-    "title_zh": "2021 AAFP 高齡貓照護指引",
-    "authors": "AAFP",
-    "source": "AAFP",
-    "journal": null,
-    "url": "https://catvets.com/resource/guidelines-practice-guidelines-senior-care-guidelines/",
-    "year": 2021,
-    "type": "guideline",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "高齡貓的全面醫療照護建議：疼痛管理、營養、常見疾病與生活品質評估。引入「四項照護預算」（財務、時間、情感、身體）概念，協助獸醫與飼主制定個人化方案。",
-    "keywords": [],
-    "disease_tags": [],
-    "status": "needs_review",
-    "url_verified": true,
-    "notes": "auto-crawled from catvets.com/guidelines",
-    "cited_by": [
-      "cat-adoption-guide-taiwan",
-      "cat-end-of-life-care-taiwan",
-      "cat-hyperthyroidism-senior",
-      "cat-life-stages-care-taiwan"
-    ]
   },
   "AAFP-2021-FELINE-LIFE-STAGE-2021": {
     "title": "2021 Feline Life Stage",
@@ -1512,27 +1469,6 @@
     "cited_by": [
       "cat-inappropriate-elimination",
       "cat-litter-box-guide"
-    ]
-  },
-  "AAFP-2013-FLUID-THERAPY-2013": {
-    "title": "2013 Fluid Therapy",
-    "title_zh": "",
-    "authors": "AAFP",
-    "source": "AAFP",
-    "journal": null,
-    "url": "https://catvets.com/resource/guidelines-practice-guidelines-fluid-therapy-guidelines/",
-    "year": 2013,
-    "type": "guideline",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "AAFP/AAHA 2013 犬貓輸液治療指引（Davis 等）。涵蓋脫水與低血容評估、輸液種類選擇、速率計算、靜脈與皮下輸液操作與監測。為 CKD 居家皮下輸液的臨床基礎參考。",
-    "keywords": [],
-    "disease_tags": [],
-    "status": "pending_review",
-    "url_verified": true,
-    "notes": "auto-crawled from catvets.com/guidelines | 摘要依指引範圍整理（原文 PDF，catvets landing）。2026-06-10",
-    "cited_by": [
-      "cat-ckd-complete-guide"
     ]
   },
   "AAFP-2013-ENVIRONMENTAL-NEEDS-2013": {
