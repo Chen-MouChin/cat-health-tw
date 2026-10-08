@@ -7,7 +7,7 @@ window.ARTICLES_INDEX = [
     "date": "2026-04-08",
     "category": "健康",
     "subcategory": "常見疾病",
-    "cover_image": "images/articles/cat-ckd-complete-guide.jpg",
+    "cover_image": "",
     "tags": [
       "CKD",
       "腎病",
@@ -36,7 +36,7 @@ window.ARTICLES_INDEX = [
     "date": "2026-04-08",
     "category": "健康",
     "subcategory": "常見疾病",
-    "cover_image": "https://image.pollinations.ai/prompt/Senior%20cat%20at%20veterinary%20examination%2C%20thyroid%20health%20monitoring%2C%20elderly%20cat%20wellness%20check%2C%20professional%20vet%20with%20stethoscope%2C%20professional%20pet%20photography%2C%20soft%20natural%20bokeh%20lighting%2C%20photorealistic%20high%20quality%2C%204K%20sharp%20focus%2C%20warm%20tones?width=800&height=450&nologo=true&model=flux-schnell&seed=42",
+    "cover_image": "",
     "tags": [
       "甲狀腺亢進",
       "老貓",

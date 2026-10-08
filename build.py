@@ -1110,7 +1110,7 @@ def build_articles() -> list[dict]:
             "date": str(date),
             "category": category,
             "subcategory": subcategory,
-            "cover_image": cover_image,
+            "cover_image": "" if COVER_PLACEHOLDER else cover_image,
             "tags": meta.get("tags", []),
             "quality": quality,
             "last_reviewed": str(last_reviewed) if last_reviewed else "",
