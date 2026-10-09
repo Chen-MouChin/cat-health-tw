@@ -267,7 +267,7 @@
         </span>
       </div>
       <div class="fb-hint">
-        送出按鈕會打開你的信件 App，預填好內容寄到開發者信箱。
+        送出按鈕會打開你的信件 App，預填好內容寄到開發者信箱 <span id="fbAddr">https://chen-mouchin.github.io/cat-health-tw/about.html</span>。
         <button type="button" class="fb-copy-btn" id="fbCopyBtn" onclick="copyEmail()" style="margin-left:0.4rem">複製信箱</button>
       </div>
       <p class="fb-hint" id="fbStatus" role="status" aria-live="polite"></p>
@@ -276,8 +276,12 @@
   </main>
 
   <script>
-    // Email 拆字組裝 — 避簡單爬蟲收集
-    const FB_TO = 'https://chen-mouchin.github.io/cat-health-tw/about.html';
+    // 信箱防自動收集：原始碼只放反轉的片段，@ 用字元碼，整份 HTML 搜不到完整地址；
+    // 只有使用者按「送出」或「複製信箱」時才組出來。畫面上給人看的寫成 [at] [dot]。
+    // 換信箱時改這兩段（各自反轉）與畫面上的 fbAddr 文字
+    const FB_PARTS = ['', ''];
+    const fbRev = (s) => s.split('').reverse().join('');
+    const fbAddress = () => fbRev(FB_PARTS[0]) + String.fromCharCode(64) + fbRev(FB_PARTS[1]);
 
     // 送出節流：表單打開不到 3 秒就送出多半是機器人；送出後 60 秒內不能再送。
     // 這是網頁端的節流，擋的是連點與簡單的機器人；表單本身沒有伺服器，不會被灌爆
@@ -318,7 +322,7 @@
         `來源頁面：${location.href}`,
         `時間：${new Date().toISOString()}`,
       ].join('\n');
-      const url = `mailto:${FB_TO}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      const url = `mailto:${fbAddress()}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
       try { localStorage.setItem(FB_KEY, String(Date.now())); } catch (e) {}
       fbSay('已打開你的信件 App，寄出後我們就會收到。沒有跳出來的話，可以用「複製信箱」自己寄。');
       fbCooldown();
@@ -329,13 +333,13 @@
     function copyEmail() {
       const btn = document.getElementById('fbCopyBtn');
       if (btn.classList.contains('copied')) return;  // 顯示「已複製」的期間不重複觸發
-      navigator.clipboard.writeText(FB_TO).then(() => {
+      navigator.clipboard.writeText(fbAddress()).then(() => {
         btn.classList.add('copied');
         const orig = btn.textContent;
         btn.textContent = '已複製';
         setTimeout(() => { btn.classList.remove('copied'); btn.textContent = orig; }, 1500);
       }).catch(() => {
-        fbSay('複製失敗，請手動記下：' + FB_TO);
+        fbSay('複製失敗，請手動記下：https://chen-mouchin.github.io/cat-health-tw/about.html（[at] 換成 @、[dot] 換成 .）');
       });
     }
   </script>
