@@ -1,0 +1,35 @@
+name: 網站回饋
+description: 資料錯誤、缺漏建議、一般意見或合作洽詢。從網站「關於」頁送出會自動帶入內容。
+title: "[回饋] "
+labels: ["feedback"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        謝謝你花時間告訴我們。**這則留言會公開**，請不要留電話、地址或寵物病歷等個人資料；我們會直接在這裡回覆你。
+  - type: dropdown
+    id: topic
+    attributes:
+      label: 主題
+      options:
+        - 資料錯誤
+        - 缺漏建議
+        - 一般意見
+        - 合作洽詢
+        - 其他
+    validations:
+      required: true
+  - type: textarea
+    id: message
+    attributes:
+      label: 訊息
+      description: 如果是資料錯誤，請附上文章或文獻名稱與正確資訊；如果是建議，請說明你想看到什麼內容。
+    validations:
+      required: true
+  - type: input
+    id: page
+    attributes:
+      label: 你在看的頁面
+      description: 網址或文章標題（選填）
+    validations:
+      required: false

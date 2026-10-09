@@ -251,24 +251,15 @@
       </div>
       <div class="fb-row">
         <label for="fb-message">訊息 <span style="color:var(--text-faint,#a1a1a6);font-weight:400">（必填）</span></label>
-        <textarea id="fb-message" required maxlength="2000" placeholder="如果是資料錯誤，請附上文章 / 文獻 ID 與正確資訊；如果是建議，請說明你想看到什麼內容..."></textarea>
-      </div>
-      <div class="fb-row">
-        <label for="fb-email">你的 Email <span style="color:var(--text-faint,#a1a1a6);font-weight:400">（選填，留下會回覆你）</span></label>
-        <input type="email" id="fb-email" maxlength="120" placeholder="optional@example.com">
+        <textarea id="fb-message" required maxlength="2000" placeholder="如果是資料錯誤，請附上文章 / 文獻名稱與正確資訊；如果是建議，請說明你想看到什麼內容..."></textarea>
       </div>
       <!-- honeypot：機器人會填這欄 -->
       <input type="text" id="fb-hp" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
       <div class="fb-actions">
-        <button type="submit" class="fb-submit" id="fbSubmit">送出（開信件 App）</button>
-        <span class="fb-alt">
-          或
-          <a href="https://github.com/Chen-MouChin/cat-health-tw/issues/new" target="_blank" rel="noopener">在 GitHub 開 Issue</a>
-        </span>
+        <button type="submit" class="fb-submit" id="fbSubmit">送出（到 GitHub 確認）</button>
       </div>
       <div class="fb-hint">
-        送出按鈕會打開你的信件 App，預填好內容寄到開發者信箱 <span id="fbAddr">https://chen-mouchin.github.io/cat-health-tw/about.html</span>。
-        <button type="button" class="fb-copy-btn" id="fbCopyBtn" onclick="copyEmail()" style="margin-left:0.4rem">複製信箱</button>
+        送出會打開一個已經填好的 GitHub 留言頁，按下「Create」就完成，我們會直接在那裡回覆你。<strong>留言是公開的</strong>，請不要寫電話、地址等個人資料。
       </div>
       <p class="fb-hint" id="fbStatus" role="status" aria-live="polite"></p>
       </form>
@@ -276,72 +267,64 @@
   </main>
 
   <script>
-    // 信箱防自動收集：原始碼只放反轉的片段，@ 用字元碼，整份 HTML 搜不到完整地址；
-    // 只有使用者按「送出」或「複製信箱」時才組出來。畫面上給人看的寫成 [at] [dot]。
-    // 換信箱時改這兩段（各自反轉）與畫面上的 fbAddr 文字
-    const FB_PARTS = ['', ''];
-    const fbRev = (s) => s.split('').reverse().join('');
-    const fbAddress = () => fbRev(FB_PARTS[0]) + String.fromCharCode(64) + fbRev(FB_PARTS[1]);
+    // 回饋：主要管道是預填好的 GitHub Issue（範本 .github/ISSUE_TEMPLATE/feedback.yml，自動貼 feedback 標籤），
+    // 收到的留言用 python scripts/pull_feedback.py 整理成 research/feedback.md。網站上不公開任何信箱。
+    const FB_REPO = 'https://github.com/Chen-MouChin/cat-health-tw/issues/new';
 
-    // 送出節流：表單打開不到 3 秒就送出多半是機器人；送出後 60 秒內不能再送。
-    // 這是網頁端的節流，擋的是連點與簡單的機器人；表單本身沒有伺服器，不會被灌爆
+    // 送出節流：表單打開不到 3 秒就送出多半是機器人；送出後 60 秒內不能再送
     const FB_MIN_FILL_MS = 3000, FB_COOLDOWN_MS = 60000, FB_KEY = 'fb_last_sent';
     const fbOpenedAt = Date.now();
     let fbTimer = null;
     function fbSay(msg) { document.getElementById('fbStatus').textContent = msg; }
     function fbLastSent() { try { return Number(localStorage.getItem(FB_KEY)) || 0; } catch (e) { return 0; } }
     function fbCooldown() {
-      const btn = document.getElementById('fbSubmit');
+      const btns = [document.getElementById('fbSubmit')];
       clearInterval(fbTimer);
       const tick = () => {
         const left = Math.ceil((fbLastSent() + FB_COOLDOWN_MS - Date.now()) / 1000);
-        if (left > 0) { btn.disabled = true; btn.textContent = `已送出，${left} 秒後可再送`; }
-        else { btn.disabled = false; btn.textContent = '送出（開信件 App）'; clearInterval(fbTimer); }
+        if (left > 0) { btns.forEach(b => b.disabled = true); btns[0].textContent = `已送出，${left} 秒後可再送`; }
+        else { btns.forEach(b => b.disabled = false); btns[0].textContent = '送出（到 GitHub 確認）'; clearInterval(fbTimer); }
       };
       tick();
       fbTimer = setInterval(tick, 1000);
     }
     if (fbLastSent() + FB_COOLDOWN_MS > Date.now()) fbCooldown();
 
-    function submitFeedback(ev) {
-      ev.preventDefault();
-      // honeypot 檢查
-      if (document.getElementById('fb-hp').value) return false;
-      if (Date.now() - fbOpenedAt < FB_MIN_FILL_MS) { fbSay('請再確認一下內容，幾秒後再送出。'); return false; }
-      if (fbLastSent() + FB_COOLDOWN_MS > Date.now()) { fbCooldown(); return false; }
+    // 共用的檢查：honeypot、最短填寫時間、冷卻、必填。通過回傳 {topic, msg}，否則 null
+    function fbReady() {
+      if (document.getElementById('fb-hp').value) return null;
+      if (Date.now() - fbOpenedAt < FB_MIN_FILL_MS) { fbSay('請再確認一下內容，幾秒後再送出。'); return null; }
+      if (fbLastSent() + FB_COOLDOWN_MS > Date.now()) { fbCooldown(); return null; }
       const topic = document.getElementById('fb-topic').value;
       const msg = document.getElementById('fb-message').value.trim();
-      const email = document.getElementById('fb-email').value.trim();
-      if (!topic || !msg) return false;
-      const subject = `[貓健康站 回饋] ${topic}`;
-      const body = [
-        msg,
-        '',
-        '---',
-        email ? `回覆 Email：${email}` : '（未提供 email）',
-        `來源頁面：${location.href}`,
-        `時間：${new Date().toISOString()}`,
-      ].join('\n');
-      const url = `mailto:${fbAddress()}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      if (!topic || !msg) { fbSay('請選主題並填寫訊息。'); return null; }
+      return { topic, msg };
+    }
+    function fbSent(text) {
       try { localStorage.setItem(FB_KEY, String(Date.now())); } catch (e) {}
-      fbSay('已打開你的信件 App，寄出後我們就會收到。沒有跳出來的話，可以用「複製信箱」自己寄。');
+      fbSay(text);
       fbCooldown();
-      window.location.href = url;
+    }
+
+    function submitFeedback(ev) {
+      ev.preventDefault();
+      const f = fbReady();
+      if (!f) return false;
+      // Issue 表單的欄位用 id 預填：topic、message、page（見 feedback.yml）
+      const params = new URLSearchParams({
+        template: 'feedback.yml',
+        title: `[回饋] ${f.topic}：${f.msg.slice(0, 30)}`,
+        topic: f.topic,
+        message: f.msg,
+        page: document.referrer || location.href,
+      });
+      const w = window.open(`${FB_REPO}?${params}`, '_blank', 'noopener');
+      fbSent(w === null
+        ? '瀏覽器擋下了新分頁。請允許彈出視窗後再按一次。'
+        : '已在新分頁打開 GitHub 留言頁，按下「Create」就送出了。');
       return false;
     }
 
-    function copyEmail() {
-      const btn = document.getElementById('fbCopyBtn');
-      if (btn.classList.contains('copied')) return;  // 顯示「已複製」的期間不重複觸發
-      navigator.clipboard.writeText(fbAddress()).then(() => {
-        btn.classList.add('copied');
-        const orig = btn.textContent;
-        btn.textContent = '已複製';
-        setTimeout(() => { btn.classList.remove('copied'); btn.textContent = orig; }, 1500);
-      }).catch(() => {
-        fbSay('複製失敗，請手動記下：https://chen-mouchin.github.io/cat-health-tw/about.html（[at] 換成 @、[dot] 換成 .）');
-      });
-    }
   </script>
 
   <!-- site-foot -->
