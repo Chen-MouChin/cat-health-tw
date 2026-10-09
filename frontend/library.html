@@ -395,7 +395,8 @@ async function load() {
   document.getElementById('stat-approved').textContent = entries.filter(e => e.status === 'approved').length;
   document.getElementById('stat-oa').textContent = entries.filter(e => e.open_access).length;
 
-  document.getElementById('q').addEventListener('input', render);
+  let qTimer = null;  // 停止輸入 200ms 才重繪
+  document.getElementById('q').addEventListener('input', () => { clearTimeout(qTimer); qTimer = setTimeout(render, 200); });
 
   // 從 URL ?q= 預填搜尋（首頁搜尋框跳轉用）
   const urlQ = new URL(location.href).searchParams.get('q');

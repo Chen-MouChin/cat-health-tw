@@ -251,16 +251,16 @@
       </div>
       <div class="fb-row">
         <label for="fb-message">訊息 <span style="color:var(--text-faint,#a1a1a6);font-weight:400">（必填）</span></label>
-        <textarea id="fb-message" required placeholder="如果是資料錯誤，請附上文章 / 文獻 ID 與正確資訊；如果是建議，請說明你想看到什麼內容..."></textarea>
+        <textarea id="fb-message" required maxlength="2000" placeholder="如果是資料錯誤，請附上文章 / 文獻 ID 與正確資訊；如果是建議，請說明你想看到什麼內容..."></textarea>
       </div>
       <div class="fb-row">
         <label for="fb-email">你的 Email <span style="color:var(--text-faint,#a1a1a6);font-weight:400">（選填，留下會回覆你）</span></label>
-        <input type="email" id="fb-email" placeholder="optional@example.com">
+        <input type="email" id="fb-email" maxlength="120" placeholder="optional@example.com">
       </div>
       <!-- honeypot：機器人會填這欄 -->
       <input type="text" id="fb-hp" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
       <div class="fb-actions">
-        <button type="submit" class="fb-submit">📧 送出（開信件 App）</button>
+        <button type="submit" class="fb-submit" id="fbSubmit">送出（開信件 App）</button>
         <span class="fb-alt">
           或
           <a href="https://github.com/Chen-MouChin/cat-health-tw/issues/new" target="_blank" rel="noopener">在 GitHub 開 Issue</a>
@@ -268,8 +268,9 @@
       </div>
       <div class="fb-hint">
         送出按鈕會打開你的信件 App，預填好內容寄到開發者信箱。
-        <button type="button" class="fb-copy-btn" id="fbCopyBtn" onclick="copyEmail()" style="margin-left:0.4rem">📋 複製信箱</button>
+        <button type="button" class="fb-copy-btn" id="fbCopyBtn" onclick="copyEmail()" style="margin-left:0.4rem">複製信箱</button>
       </div>
+      <p class="fb-hint" id="fbStatus" role="status" aria-live="polite"></p>
       </form>
     </details>
   </main>
@@ -278,10 +279,32 @@
     // Email 拆字組裝 — 避簡單爬蟲收集
     const FB_TO = 'https://chen-mouchin.github.io/cat-health-tw/about.html';
 
+    // 送出節流：表單打開不到 3 秒就送出多半是機器人；送出後 60 秒內不能再送。
+    // 這是網頁端的節流，擋的是連點與簡單的機器人；表單本身沒有伺服器，不會被灌爆
+    const FB_MIN_FILL_MS = 3000, FB_COOLDOWN_MS = 60000, FB_KEY = 'fb_last_sent';
+    const fbOpenedAt = Date.now();
+    let fbTimer = null;
+    function fbSay(msg) { document.getElementById('fbStatus').textContent = msg; }
+    function fbLastSent() { try { return Number(localStorage.getItem(FB_KEY)) || 0; } catch (e) { return 0; } }
+    function fbCooldown() {
+      const btn = document.getElementById('fbSubmit');
+      clearInterval(fbTimer);
+      const tick = () => {
+        const left = Math.ceil((fbLastSent() + FB_COOLDOWN_MS - Date.now()) / 1000);
+        if (left > 0) { btn.disabled = true; btn.textContent = `已送出，${left} 秒後可再送`; }
+        else { btn.disabled = false; btn.textContent = '送出（開信件 App）'; clearInterval(fbTimer); }
+      };
+      tick();
+      fbTimer = setInterval(tick, 1000);
+    }
+    if (fbLastSent() + FB_COOLDOWN_MS > Date.now()) fbCooldown();
+
     function submitFeedback(ev) {
       ev.preventDefault();
       // honeypot 檢查
       if (document.getElementById('fb-hp').value) return false;
+      if (Date.now() - fbOpenedAt < FB_MIN_FILL_MS) { fbSay('請再確認一下內容，幾秒後再送出。'); return false; }
+      if (fbLastSent() + FB_COOLDOWN_MS > Date.now()) { fbCooldown(); return false; }
       const topic = document.getElementById('fb-topic').value;
       const msg = document.getElementById('fb-message').value.trim();
       const email = document.getElementById('fb-email').value.trim();
@@ -296,19 +319,23 @@
         `時間：${new Date().toISOString()}`,
       ].join('\n');
       const url = `mailto:${FB_TO}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      try { localStorage.setItem(FB_KEY, String(Date.now())); } catch (e) {}
+      fbSay('已打開你的信件 App，寄出後我們就會收到。沒有跳出來的話，可以用「複製信箱」自己寄。');
+      fbCooldown();
       window.location.href = url;
       return false;
     }
 
     function copyEmail() {
       const btn = document.getElementById('fbCopyBtn');
+      if (btn.classList.contains('copied')) return;  // 顯示「已複製」的期間不重複觸發
       navigator.clipboard.writeText(FB_TO).then(() => {
         btn.classList.add('copied');
         const orig = btn.textContent;
-        btn.textContent = '✓ 已複製';
+        btn.textContent = '已複製';
         setTimeout(() => { btn.classList.remove('copied'); btn.textContent = orig; }, 1500);
       }).catch(() => {
-        alert('複製失敗，請手動記下：' + FB_TO);
+        fbSay('複製失敗，請手動記下：' + FB_TO);
       });
     }
   </script>

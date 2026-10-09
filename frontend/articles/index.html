@@ -190,7 +190,8 @@
         });
         if (empty) empty.hidden = shown > 0;
       }
-      input.addEventListener('input', function(){ filter(input.value); });
+      var qTimer = null;  // 停止輸入 200ms 才篩選
+      input.addEventListener('input', function(){ clearTimeout(qTimer); qTimer = setTimeout(function(){ filter(input.value); }, 200); });
       // 從 URL ?q= 預填（首頁搜尋框跳轉用）
       var urlQ = new URLSearchParams(location.search).get('q');
       if (urlQ) { input.value = urlQ; filter(urlQ); }

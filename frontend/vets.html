@@ -504,8 +504,11 @@ function loadMore() {
 }
 
 document.getElementById('totalCount').textContent = DATA.length.toLocaleString();
+// 停止輸入 200ms 才重算，2,001 筆不必每打一個字就重繪一次
+let qTimer = null;
 document.getElementById('q').addEventListener('input', (e) => {
-  filters.q = e.target.value; shown = pageSize(); render();
+  clearTimeout(qTimer);
+  qTimer = setTimeout(() => { filters.q = e.target.value; shown = pageSize(); render(); }, 200);
 });
 
 // 同步 URL 參數 → 按鈕 active 狀態
