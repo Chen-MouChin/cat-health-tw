@@ -25,6 +25,14 @@
 
 ---
 
+## 2026-10-10
+
+**個資清理與 repo 重開**
+- 回饋改走 GitHub Issue（`.github/ISSUE_TEMPLATE/feedback.yml`，標籤 `feedback`），`scripts/pull_feedback.py` 整理成 `research/feedback.md`。網站、程式碼、爬蟲 User-Agent 都不再放信箱，爬蟲改留關於頁網址。
+- 改寫全部歷史：commit 作者改 GitHub noreply；舊 commit 內容裡的信箱與反轉字串全部清掉。
+- 舊 PR #1、#2 的快取清不掉，所以**舊 repo 改名 `cat-health-tw-old` 並設為私人**，另開同名的新公開 repo 推上乾淨歷史（34 個 commit、0 個 PR），重開 Pages 並部署。網址不變。舊 repo 確認不需要後可以刪。
+- 另一台電腦：`git fetch` 後 `git reset --hard origin/main`（remote 網址不變）。
+
 ## 2026-10-09（下午）
 
 **全站流程順過：不會再產生壞頁，工具可信**
