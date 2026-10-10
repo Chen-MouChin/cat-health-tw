@@ -38,8 +38,8 @@ import os
 import re
 import subprocess
 import sys
-import threading
 import urllib.parse
+import hashlib
 import hmac
 import http.cookies
 import ipaddress
@@ -62,7 +62,13 @@ WB = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT / "scripts"))
 import lint_articles as lint  # noqa: E402
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import reviews  # noqa: E402
+
 LOCK = threading.Lock()
+BUILD_LOCK = threading.Lock()          # build.py 一次只跑一個，兩個人同時按也會排隊
+STORE = reviews.Store(ROOT)
+OWNER_NAME = "Chen-MouChin"
 FOOTNOTE_RE = re.compile(r"\[\^([A-Za-z0-9][A-Za-z0-9_\-\.]*)\]")
 PY = sys.executable
 RESEARCH = ROOT / "research"
@@ -74,6 +80,22 @@ CORE_SLUGS = {
     "cat-toxic-substances-taiwan", "cat-emergency-care-taiwan", "cat-common-symptoms-taiwan",
     "cat-fip-guide-taiwan", "cat-diabetes-care", "cat-hyperthyroidism-senior", "cat-neutering-aftercare-taiwan",
 }
+
+
+def build_site() -> dict:
+    """重建網站並回填 cited_by。用 BUILD_LOCK 排隊，避免兩個 build 同時寫 frontend/。"""
+    with BUILD_LOCK:
+        r = run([PY, "build.py"], 600)
+        r2 = run([PY, "scripts/sync_cited_by.py"], 120)
+    r["stdout"] += "\n[sync_cited_by]\n" + r2["stdout"]
+    r["ok"] = r["code"] == 0
+    if not r["ok"]:
+        r["error"] = (r["stderr"] or r["stdout"])[-400:]
+    return r
+
+
+def text_hash(s: str) -> str:
+    return hashlib.sha256(s.encode("utf-8")).hexdigest()[:16]
 
 
 def gh_exe() -> str:
@@ -115,8 +137,12 @@ def parse_fm(text: str) -> tuple[dict, str, str]:
     return fm, m.group(1), m.group(2)
 
 
+CIT_IO = threading.Lock()   # citations.json 的讀與 replace 不重疊（Windows 會拒絕 replace 正在讀的檔）
+
+
 def load_citations() -> dict:
-    return json.loads(CITATIONS.read_text(encoding="utf-8"))
+    with CIT_IO:
+        return json.loads(CITATIONS.read_text(encoding="utf-8"))
 
 
 def save_citations(data: dict) -> None:
@@ -128,8 +154,9 @@ def save_citations(data: dict) -> None:
     meta["rejected"] = sum(1 for v in items if v.get("status") == "rejected")
     data["_meta"] = meta
     tmp = CITATIONS.with_suffix(".json.tmp")
-    tmp.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    tmp.replace(CITATIONS)
+    with CIT_IO:
+        tmp.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        reviews.replace_retry(tmp, CITATIONS)
 
 
 _LINT_CACHE: dict[str, dict] = {}
@@ -180,11 +207,14 @@ def list_articles() -> list[dict]:
         fms.append((p, fm, body))
     slugs = {fm.get("slug") or p.stem for p, fm, _ in fms}
     notes = batch_notes()
+    recs = STORE.all()
     out = []
     for p, fm, body in fms:
         r = lint_article(p, citations, slugs)
         slug = fm.get("slug") or p.stem
+        rv = STORE.summary(recs.get(slug) or STORE.load(slug), fm.get("quality", "draft"))
         out.append({
+            **rv,
             "core": slug in CORE_SLUGS,
             "has_notes": slug in notes,
             "title_h1_mismatch": bool(fm.get("title")) and first_h1(body) != "" and fm.get("title") != first_h1(body),
@@ -243,7 +273,26 @@ def article_detail(slug: str) -> dict | None:
         } if c else {})})
     sources = re.findall(r'^\s+-\s+"?(.+?)"?\s*$', fm_raw.split("sources:")[1].split("\n\n")[0], re.M) if "sources:" in fm_raw else []
     h1 = first_h1(body)
+    rec = STORE.load(slug)
+    # 舊版寫在 frontmatter 的 review_notes 轉成一則註解（只轉一次）
+    legacy = (fm.get("review_notes") or "").strip()
+    if legacy and not rec.get("legacy_migrated"):
+        with reviews.LOCK:
+            rec = STORE.load(slug)
+            if not rec.get("legacy_migrated"):   # 鎖內再檢查一次，同時多個請求也只轉一次
+                STORE._add_comment(rec, "舊備註", "", legacy, "")
+                rec["legacy_migrated"] = True
+                STORE.save(rec)
+    quality = fm.get("quality", "draft")
+    missing_cites = [c["key"] for c in cites if not c["found"]]
+    unapproved = [c["key"] for c in cites if c["found"] and c.get("status") != "approved"]
     return {
+        "review": {**STORE.summary(rec, quality), "checklist": rec["checklist"], "comments": rec["comments"],
+                   "log": rec["log"][-80:][::-1], "approved_by": rec.get("approved_by", ""),
+                   "approved_at": rec.get("approved_at", "")},
+        "checklist_def": reviews.CHECKLIST,
+        "gate": {"fails": len(r["fails"]), "missing_cites": missing_cites, "unapproved_cites": unapproved},
+        "raw_hash": text_hash(text),
         "file": p.name, "slug": slug, "frontmatter": fm, "sources": sources,
         "body": body, "lint": {"fails": r["fails"], "warns": r["warns"], "chars": r["chars"]},
         "citations": cites, "html": f"/site/articles/{slug}.html",
@@ -253,13 +302,21 @@ def article_detail(slug: str) -> dict | None:
     }
 
 
-def save_raw(slug: str, raw: str) -> dict:
-    """工作檯直接編輯內文：先寫、跑 lint，有 FAIL 就還原並回報，壞的 Markdown 不進 build。"""
+def save_raw(slug: str, raw: str, base_hash: str = "", who: str = "", action: str = "修改內文") -> dict:
+    """工作檯直接編輯內文：先寫、跑 lint，有 FAIL 就還原並回報，壞的 Markdown 不進 build。
+    base_hash 是打開編輯時的版本；檔案在那之後被改過就回 conflict，不蓋掉別人的修改。"""
     p = find_article(slug)
     if not p:
         raise FileNotFoundError(slug)
     with LOCK:
         before = p.read_text(encoding="utf-8")
+        if base_hash and text_hash(before) != base_hash:
+            last = next((e for e in reversed(STORE.load(slug)["log"]) if e["action"] in ("修改內文", "套用建議")), None)
+            by = f"{last['who']} 在 {last['at'][11:16]} " if last else ""
+            return {"ok": False, "conflict": True,
+                    "error": f"這篇在你打開之後被{by}改過。你的修改還在編輯框裡，請先複製起來，重新載入後再貼上。"}
+        if raw == before:
+            return {"ok": True, "unchanged": True, "warns": []}
         p.write_text(raw, encoding="utf-8")
         _LINT_MTIME.clear()
         citations = load_citations()
@@ -269,15 +326,36 @@ def save_raw(slug: str, raw: str) -> dict:
             p.write_text(before, encoding="utf-8")
             _LINT_MTIME.clear()
             return {"ok": False, "error": "lint 有 FAIL，沒有儲存", "fails": r["fails"]}
-    return {"ok": True, "warns": r["warns"]}
+        STORE.note_event(slug, who or OWNER_NAME, action, diff=reviews.make_diff(before, raw))
+    return {"ok": True, "warns": r["warns"], "raw_hash": text_hash(raw)}
 
 
-def set_quality(slug: str, quality: str, note: str) -> dict:
+def approval_gate(slug: str) -> dict:
+    """核准上線前的檢查：lint 沒有 FAIL、註腳都對得到文獻庫；引用的文獻還沒核准要另外確認。"""
+    d = article_detail(slug)
+    g = d["gate"]
+    blockers = []
+    if g["fails"]:
+        blockers.append(f"lint 有 {g['fails']} 個 FAIL")
+    if g["missing_cites"]:
+        blockers.append("文獻庫沒有：" + "、".join(g["missing_cites"]))
+    return {"blockers": blockers, "unapproved": g["unapproved_cites"], "stage": d["review"]["stage"]}
+
+
+def set_quality(slug: str, quality: str, note: str, who: str = OWNER_NAME, confirm_unapproved: bool = False) -> dict:
     if quality not in ("draft", "reviewed", "featured", "archived"):
         raise ValueError("quality 只能是 draft / reviewed / featured / archived")
     p = find_article(slug)
     if not p:
         raise FileNotFoundError(slug)
+    gate = None
+    if quality in ("reviewed", "featured"):
+        gate = approval_gate(slug)
+        if gate["blockers"]:
+            return {"ok": False, "error": "還不能上線：" + "；".join(gate["blockers"])}
+        if gate["unapproved"] and not confirm_unapproved:
+            return {"ok": False, "need_confirm": gate["unapproved"],
+                    "error": f"這篇引用的 {len(gate['unapproved'])} 筆文獻還沒核准"}
     with LOCK:
         text = p.read_text(encoding="utf-8")
         m = re.match(r"^(---\r?\n)(.*?)(\r?\n---\r?\n)(.*)$", text, re.S)
@@ -302,16 +380,21 @@ def set_quality(slug: str, quality: str, note: str) -> dict:
 
         set_line("quality", quality)
         set_line("last_reviewed", today if quality in ("reviewed", "featured") else "null")
-        # 備註留空 = 清掉舊備註，避免退回 draft 後殘留上一輪的字
-        set_line("review_notes", json.dumps(note, ensure_ascii=False) if note else None)
+        # 審稿備註改存在 research/reviews/（不進 git），frontmatter 不留
+        set_line("review_notes", None)
         new = head + "\n".join(lines) + sep + body
         if quality == "archived":
             dest = ARTICLES / "_archived" / p.name
             dest.parent.mkdir(exist_ok=True)
             dest.write_text(new, encoding="utf-8")
             p.unlink()
+            STORE.note_event(slug, who, "淘汰", note)
             return {"ok": True, "moved": str(dest.relative_to(ROOT))}
         p.write_text(new, encoding="utf-8")
+    if quality in ("reviewed", "featured"):
+        STORE.mark_approved(slug, who, quality, direct=gate["stage"] != "passed")
+    else:
+        STORE.owner_reject(slug, who, note)
     return {"ok": True}
 
 
@@ -334,6 +417,11 @@ def overview() -> dict:
         if k != "_meta" and v.get("status") != "approved" and set(v.get("cited_by") or []) & pub_slugs
     )
     title_h1 = sum(1 for a in arts if a["title_h1_mismatch"])
+    stages = {}
+    for a in arts:
+        stages[a["stage"]] = stages.get(a["stage"], 0) + 1
+    waiting = [{"slug": a["slug"], "title": a["title"], "by": a["last_by"], "at": a["last_activity"]}
+               for a in arts if a["stage"] == "passed"]
     meta_js = FRONTEND / "js" / "meta.js"
     built = ""
     if meta_js.exists():
@@ -347,6 +435,7 @@ def overview() -> dict:
                      "core_reviewed": sum(1 for a in arts if a["core"] and a["quality"] in PUBLISHED),
                      "core_total": len(CORE_SLUGS), "title_h1_mismatch": title_h1},
         "blockers": blockers,
+        "review": {"stages": stages, "waiting": waiting, "labels": reviews.STAGES},
         "citations": {"total": len(items), "by_status": st,
                       "title_zh": sum(1 for v in items if v.get("title_zh")),
                       "abstract_zh": sum(1 for v in items if v.get("abstract_zh")),
@@ -500,6 +589,9 @@ class Handler(SimpleHTTPRequestHandler):
             self._json({"error": "Host not allowed"}, 403)
             return False
         self.role = client_role(self.client_address[0], self.headers.get("Cookie", ""), query_token)
+        name = urllib.parse.unquote(self.headers.get("X-Reviewer", "")).strip()
+        name = re.sub(r"[\x00-\x1f<>]", "", name)[:20]
+        self.who = OWNER_NAME if self.role == "owner" else (name or "小幫手")
         if not self.role:
             self._json({"error": "需要通行碼：請用工作檯啟動時印出的網址開啟"}, 403)
             return False
@@ -554,6 +646,12 @@ class Handler(SimpleHTTPRequestHandler):
                     self.end_headers()
                     return
                 return self._file(WB / "index.html")
+            if path.startswith("/vendor/"):
+                # 前端函式庫放本機，辦公室網路斷線也能用
+                name = path[len("/vendor/"):]
+                if not re.match(r"^[\w.\-]+$", name):
+                    return self.send_error(404)
+                return self._file(WB / "vendor" / name)
             if path.startswith("/site/"):
                 rel = path[len("/site/"):] or "index.html"
                 target = (FRONTEND / rel).resolve()
@@ -568,7 +666,9 @@ class Handler(SimpleHTTPRequestHandler):
                         target = draft
                 return self._file(target)
             if path == "/api/overview":
-                return self._json({**overview(), "role": self.role})
+                return self._json({**overview(), "role": self.role, "who": self.who})
+            if path == "/api/activity":
+                return self._json(STORE.activity())
             if path == "/api/deploy/status":
                 return self._json(deploy_status())
             if path == "/api/articles":
@@ -582,7 +682,8 @@ class Handler(SimpleHTTPRequestHandler):
                     if files: p = files[0]
                 if not p.exists():
                     return self._json({"error": "not found"}, 404)
-                return self._json({"raw": p.read_text(encoding="utf-8")})
+                text = p.read_text(encoding="utf-8")
+                return self._json({"raw": text, "raw_hash": text_hash(text)})
             
             m = re.match(r"^/api/articles/([A-Za-z0-9\-]+)$", path)
             if m:
@@ -618,23 +719,71 @@ class Handler(SimpleHTTPRequestHandler):
             return
         if path in OWNER_ONLY and self.role != "owner":
             return self._json({"error": "commit、push、部署只能在主機本機操作"}, 403)
+        if re.match(r"^/api/articles/[A-Za-z0-9\-]+/quality$", path) and self.role != "owner":
+            return self._json({"error": "核准上線、退回與淘汰由網站負責人操作；你可以按「初審通過」或「退回修改」"}, 403)
         try:
             body = self._body()
             m_raw = re.match(r"^/api/articles/([A-Za-z0-9\-]+)/raw$", path)
             if m_raw:
                 if "raw" not in body:
                     return self._json({"error": "沒有 raw"}, 400)
-                return self._json(save_raw(m_raw.group(1), body["raw"]))
+                res = save_raw(m_raw.group(1), body["raw"], body.get("base_hash", ""), self.who)
+                if res.get("ok") and not res.get("unchanged"):
+                    b = build_site()
+                    res["build_ok"] = b["ok"]
+                return self._json(res, 409 if res.get("conflict") else 200)
+
+            m = re.match(r"^/api/review/([A-Za-z0-9\-]+)/(claim|release|check|stage|comment)$", path)
+            if m:
+                slug, act = m.groups()
+                if not find_article(slug):
+                    return self._json({"error": "not found"}, 404)
+                if act == "claim":
+                    return self._json(STORE.claim(slug, self.who, force=bool(body.get("force")) and self.role == "owner"))
+                if act == "release":
+                    return self._json(STORE.release(slug, self.who))
+                if act == "check":
+                    return self._json(STORE.set_check(slug, self.who, body.get("key", ""), body.get("value", "")))
+                if act == "stage":
+                    return self._json(STORE.set_stage(slug, self.who, body.get("stage", ""), body.get("note", "")))
+                return self._json(STORE.add_comment(slug, self.who, body.get("quote", ""), body.get("text", ""), body.get("suggestion", "")))
+            m = re.match(r"^/api/review/([A-Za-z0-9\-]+)/comment/([0-9a-f]{8})/(reply|resolve|delete|apply)$", path)
+            if m:
+                slug, cid, act = m.groups()
+                if act == "reply":
+                    return self._json(STORE.reply(slug, self.who, cid, body.get("text", "")))
+                if act == "resolve":
+                    return self._json(STORE.resolve(slug, self.who, cid, bool(body.get("resolved", True))))
+                if act == "delete":
+                    return self._json(STORE.delete_comment(slug, self.who, cid, self.role == "owner"))
+                # 套用建議：原文剛好出現一次才自動改，經過 lint 把關，再重建
+                c = next((x for x in STORE.load(slug)["comments"] if x["id"] == cid), None)
+                if not c or not c.get("suggestion"):
+                    return self._json({"ok": False, "error": "這則註解沒有建議文字"})
+                fp = find_article(slug)
+                before = fp.read_text(encoding="utf-8")
+                new, why = reviews.apply_suggestion(before, c["quote"], c["suggestion"])
+                if new is None:
+                    return self._json({"ok": False, "error": why})
+                res = save_raw(slug, new, text_hash(before), self.who, "套用建議")
+                if not res.get("ok"):
+                    return self._json(res)
+                STORE.resolve(slug, self.who, cid, True, "已套用")
+                b = build_site()
+                res["build_ok"] = b["ok"]
+                return self._json(res)
 
             m = re.match(r"^/api/articles/([A-Za-z0-9\-]+)/quality$", path)
             if m:
-                res = set_quality(m.group(1), body.get("quality", ""), body.get("note", ""))
+                res = set_quality(m.group(1), body.get("quality", ""), body.get("note", ""), self.who,
+                                  bool(body.get("confirm_unapproved")))
+                if not res.get("ok"):
+                    return self._json(res)
                 _LINT_MTIME.clear()
                 # 品質一改，frontend/ 的已審清單就變了（上架或下架），順手重建
-                b = run([PY, "build.py"], 600)
-                run([PY, "scripts/sync_cited_by.py"], 120)
-                res["build_ok"] = b["code"] == 0
-                res["build_out"] = (b["stdout"] + b["stderr"])[-800:]
+                b = build_site()
+                res["build_ok"] = b["ok"]
+                res["build_out"] = (b["stdout"] + b.get("stderr", ""))[-800:]
                 return self._json(res)
             m = re.match(r"^/api/citations/([A-Za-z0-9][A-Za-z0-9_\-\.]*)$", path)
             if m:
@@ -643,6 +792,9 @@ class Handler(SimpleHTTPRequestHandler):
                     key = m.group(1)
                     if key not in data:
                         return self._json({"error": "not found"}, 404)
+                    # 核准文獻只給擁有者；審稿者可以核對原文、改摘要、標成需要再看
+                    if body.get("status") in ("approved", "rejected") and self.role != "owner" and body.get("status") != data[key].get("status"):
+                        return self._json({"error": "文獻的核准與不採用由網站負責人操作"}, 403)
                     # approve 前必須先開過原文：url_verified 要是 true（本次送的或已存的）
                     if body.get("status") == "approved":
                         verified = body["url_verified"] if "url_verified" in body else data[key].get("url_verified")
@@ -661,10 +813,7 @@ class Handler(SimpleHTTPRequestHandler):
             if m:
                 return self._json(run([PY, "scrapers/literature/verify_citation.py", m.group(1)], 600))
             if path == "/api/build":
-                r = run([PY, "build.py"], 600)
-                r2 = run([PY, "scripts/sync_cited_by.py"], 120)
-                r["stdout"] += "\n[sync_cited_by]\n" + r2["stdout"]
-                return self._json(r)
+                return self._json(build_site())
             if path == "/api/lint":
                 _LINT_MTIME.clear()
                 r = run([PY, "scripts/lint_articles.py"], 300)
@@ -676,6 +825,8 @@ class Handler(SimpleHTTPRequestHandler):
             if path == "/api/deploy":
                 return self._json(deploy())
             return self.send_error(404)
+        except (ValueError, FileNotFoundError) as e:
+            return self._json({"ok": False, "error": str(e)}, 400)
         except Exception as e:  # noqa: BLE001
             return self._json({"error": str(e)}, 500)
 

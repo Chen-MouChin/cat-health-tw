@@ -21,7 +21,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 python -m venv .venv && .venv/Scripts/activate      # Windows
 pip install -r requirements.txt                     # 只有 markdown；爬蟲另裝 scrapers/requirements.txt
 
-# 工作檯（人工審核用，本機）：文章 r/d/f/x、文獻 approve、重建、commit/push
+# 工作檯（人工審核用）：兩段式審稿（小幫手初審 → 負責人核准）、反白加註解、修改紀錄、文獻核對、commit/push/部署
+# 審稿資料在 research/reviews/（不進 git）；只有核准結果寫回 frontmatter。細節見 workbench/README.md
 python workbench/server.py                          # http://127.0.0.1:8010/ ；Vue 3 走 CDN，無 build；預設只綁本機，--lan 給區網小幫手（HTTPS 自簽憑證、通行碼、私有網段、commit/push/部署限本機），不開到公網
 
 # 核心循環：改 content/ 或 build.py → 重建 → 本機預覽
@@ -33,6 +34,7 @@ python sandbox/serve.py                             # http://localhost:8000/，�
 # 測試 / 檢查
 python scripts/lint_articles.py [--slug X] [--fix]  # 文章寫作規範檢查（品牌、引用、路徑、AI 痕跡）；Edit 文章後 hook 會自動跑
 python test_search.py                               # 搜尋演算法 100 案例；非 0 exit 代表失敗
+python workbench/test_workbench.py                  # 工作檯 25 項（權限、兩段式審核、存檔衝突、git）；在暫存複製上跑，改工作檯後必跑
 python scripts/smoke_test.py --base http://localhost:8000   # 需先起 server；全站連結/sitemap 200 檢查
 python scripts/perf_audit.py                        # 本機 SEO/大小 audit → research/perf-report.md
 python research/quality_dashboard.py                # 三資料源品質報表 → research/quality-report.md

@@ -5,18 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>貓健康站 工作檯</title>
 <link rel="icon" href="/site/favicon.svg">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.4.21/vue.global.prod.min.js"></script>
+<!-- Vue 3.4.21（MIT），放在 workbench/vendor/，integrity 與 cdnjs 原檔相同 -->
+<script src="/vendor/vue.global.prod.min.js" integrity="sha384-wdamyDHEiblYHsu/XTokGtIeFekZu7xN37Yvkl0NZ7PnhwRB+nwE1ByT7VlwiypE"></script>
 <style>
-  :root { --bg:#f9f6f0; --card:#fff; --text:#1d1d1f; --muted:#6e6e73; --faint:#a1a1a6; --border:#e8e4db; --gold:#b8860b; --green:#5b8a6e; --red:#b04a3a; --amber:#8a7340; }
+  :root { --bg:#f9f6f0; --card:#fff; --text:#1d1d1f; --muted:#6e6e73; --faint:#a1a1a6; --border:#e8e4db; --gold:#b8860b; --green:#3b6a50; --green-bg:#e8f3ea; --red:#b04a3a; --amber:#8a7340; --amber-bg:#f5f0e8; --blue:#2d4a8a; --blue-bg:#e9eef8; --hl:#fff1b8; }
   * { box-sizing:border-box; }
+  [v-cloak] { display:none; }
   body { margin:0; font-family: system-ui, "Noto Sans TC", "Microsoft JhengHei", sans-serif; background:var(--bg); color:var(--text); font-size:14px; }
-  header.top { display:flex; align-items:center; gap:14px; padding:8px 16px; background:rgba(255,255,255,.92); border-bottom:1px solid var(--border); position:sticky; top:0; z-index:10; }
+  header.top { display:flex; align-items:center; gap:14px; padding:8px 16px; background:rgba(255,255,255,.94); border-bottom:1px solid var(--border); position:sticky; top:0; z-index:10; flex-wrap:wrap; }
   header.top img { height:26px; }
   header.top .t { font-weight:700; }
-  nav.tabs { display:flex; gap:4px; margin-left:16px; }
+  nav.tabs { display:flex; gap:4px; margin-left:8px; flex-wrap:wrap; }
   nav.tabs button { border:1px solid transparent; background:transparent; padding:6px 12px; border-radius:14px; cursor:pointer; font:inherit; color:var(--text); }
   nav.tabs button.on { background:var(--text); color:#fff; }
-  .right { margin-left:auto; display:flex; gap:8px; align-items:center; color:var(--muted); font-size:12px; }
+  nav.tabs .badge { display:inline-block; min-width:18px; padding:0 5px; margin-left:4px; border-radius:9px; background:var(--gold); color:#fff; font-size:11px; line-height:18px; }
+  .right { margin-left:auto; display:flex; gap:10px; align-items:center; color:var(--muted); font-size:12px; }
+  .me { display:inline-flex; align-items:center; gap:6px; padding:3px 10px; border-radius:12px; background:#f3efe6; color:var(--text); }
   main { padding:16px; }
   .cards { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:12px; }
   .card { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:14px 16px; }
@@ -26,69 +30,141 @@
   .bar { height:6px; background:#ece8df; border-radius:3px; overflow:hidden; margin-top:8px; }
   .bar i { display:block; height:100%; background:var(--green); }
   .bar i.warn { background:var(--gold); }
-  table { width:100%; border-collapse:collapse; font-size:13px; }
-  th { text-align:left; color:var(--muted); font-weight:500; padding:6px 8px; border-bottom:1px solid var(--border); }
-  td { padding:6px 8px; border-bottom:1px solid #f0ece4; vertical-align:top; }
-  tr.sel td { background:#f3efe6; }
-  tr[data-click] { cursor:pointer; }
-  .pill { display:inline-block; font-size:11px; padding:1px 7px; border-radius:8px; border:1px solid transparent; }
-  .q-draft { background:#f5f0e8; color:var(--amber); border-color:#d4c8b0; }
-  .q-reviewed { background:#e8f3ea; color:#2f6b3a; border-color:#b8d8bf; }
-  .q-featured { background:#e9eef8; color:#2d4a8a; border-color:#b9c8ea; }
-  .q-archived { background:#eee; color:#666; }
-  .notes { white-space:pre-wrap; font-size:12px; line-height:1.55; background:#fbf7ee; border-left:3px solid var(--gold); padding:8px 10px; border-radius:0 6px 6px 0; max-height:40vh; overflow:auto; }
+  .pill { display:inline-block; font-size:11px; padding:1px 8px; border-radius:9px; border:1px solid transparent; white-space:nowrap; }
+  .st-todo { background:#f1efe9; color:#555; border-color:#ddd8cc; }
+  .st-claimed { background:var(--blue-bg); color:var(--blue); border-color:#b9c8ea; }
+  .st-changes { background:#f6e3df; color:var(--red); border-color:#e4bdb4; }
+  .st-passed { background:var(--amber-bg); color:var(--amber); border-color:#d4c8b0; }
+  .st-approved { background:var(--green-bg); color:var(--green); border-color:#b8d8bf; }
+  .s-approved { background:var(--green-bg); color:var(--green); }
+  .s-pending_review, .s-needs_review { background:var(--amber-bg); color:var(--amber); }
+  .s-rejected { background:#f6e3df; color:var(--red); }
   .tag-core { font-size:10px; color:var(--gold); border:1px solid var(--gold); border-radius:6px; padding:0 4px; }
   .mismatch { color:var(--red); font-size:12px; }
-  .s-approved { background:#e8f3ea; color:#2f6b3a; }
-  .s-pending_review, .s-needs_review { background:#f5f0e8; color:var(--amber); }
-  .s-rejected { background:#f6e3df; color:var(--red); }
   .fail { color:var(--red); font-weight:600; }
   .warn { color:var(--amber); }
   .ok { color:var(--green); }
-  button.btn { font:inherit; border:1px solid var(--border); background:#fff; padding:6px 12px; border-radius:8px; cursor:pointer; color:var(--text); }
-  button.btn:hover { background:#f3efe6; }
+  button.btn, a.btn { font:inherit; border:1px solid var(--border); background:#fff; padding:6px 12px; border-radius:8px; cursor:pointer; color:var(--text); text-decoration:none; display:inline-block; }
+  button.btn:hover, a.btn:hover { background:#f3efe6; }
   button.btn.primary { background:var(--text); color:#fff; border-color:var(--text); }
+  button.btn.green { background:var(--green); color:#fff; border-color:var(--green); }
   button.btn.gold { background:var(--gold); color:#fff; border-color:var(--gold); }
   button.btn.danger { color:var(--red); }
-  button.btn:disabled { opacity:.5; cursor:default; }
+  button.btn.sm, a.btn.sm { padding:2px 8px; font-size:12px; }
+  button.btn:disabled { opacity:.45; cursor:default; }
   input, select, textarea { font:inherit; border:1px solid var(--border); border-radius:8px; padding:6px 8px; background:#fff; color:var(--text); }
-  textarea { width:100%; min-height:80px; resize:vertical; }
+  textarea { width:100%; min-height:70px; resize:vertical; }
   .toolbar { display:flex; gap:8px; align-items:center; flex-wrap:wrap; margin-bottom:12px; }
-  .review { display:grid; grid-template-columns:300px minmax(0,1fr) 360px; gap:12px; height:calc(100vh - 92px); }
-  .review .col { background:var(--card); border:1px solid var(--border); border-radius:12px; overflow:auto; }
-  .review iframe { width:100%; height:100%; border:0; background:#fff; }
-  .list-item { padding:8px 12px; border-bottom:1px solid #f0ece4; cursor:pointer; }
-  .list-item:hover { background:#faf7f1; }
-  .list-item.sel { background:#f3efe6; }
-  .list-item .t { font-size:13px; }
-  .list-item .m { font-size:11px; color:var(--muted); display:flex; gap:8px; margin-top:2px; }
-  .side { padding:12px 14px; display:flex; flex-direction:column; gap:12px; font-size:13px; }
-  .side h4 { margin:0; font-size:12px; color:var(--muted); font-weight:500; }
-  .cite { border:1px solid var(--border); border-radius:8px; padding:8px 10px; }
-  .cite .k { font-family:ui-monospace, monospace; font-size:11px; color:var(--muted); }
-  .cite .a { font-size:12px; color:#444; margin-top:4px; max-height:5.5em; overflow:auto; }
-  .lint li { margin:2px 0; }
-  .actions { display:flex; gap:6px; flex-wrap:wrap; }
-  kbd { font-family:ui-monospace, monospace; font-size:11px; background:#f0ece4; padding:0 5px; border-radius:4px; }
-  pre.out { background:#1d1d1f; color:#e8e4db; padding:12px; border-radius:8px; font-size:12px; max-height:360px; overflow:auto; white-space:pre-wrap; }
-  .toast { position:fixed; bottom:16px; right:16px; background:var(--text); color:#fff; padding:10px 14px; border-radius:10px; font-size:13px; z-index:50; }
   .muted { color:var(--muted); }
   .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
-  .cit-row textarea { min-height:60px; }
   details summary { cursor:pointer; color:var(--muted); font-size:12px; }
+  kbd { font-family:ui-monospace, monospace; font-size:11px; background:#f0ece4; padding:0 5px; border-radius:4px; }
+  pre.out { background:#1d1d1f; color:#e8e4db; padding:12px; border-radius:8px; font-size:12px; max-height:360px; overflow:auto; white-space:pre-wrap; }
+  .toast { position:fixed; bottom:16px; right:16px; background:var(--text); color:#fff; padding:10px 14px; border-radius:10px; font-size:13px; z-index:60; max-width:420px; }
+  .toast.err { background:var(--red); }
+
+  /* 審稿頁：清單｜文章｜側欄 */
+  .review { display:grid; grid-template-columns:290px minmax(0,1fr) 380px; gap:12px; height:calc(100vh - 92px); }
+  .col { background:var(--card); border:1px solid var(--border); border-radius:12px; overflow:auto; min-height:0; }
+  .queue { display:flex; flex-wrap:wrap; gap:4px; padding:10px 12px 6px; }
+  .queue button { font:inherit; font-size:12px; border:1px solid var(--border); background:#fff; border-radius:12px; padding:2px 9px; cursor:pointer; }
+  .queue button.on { background:var(--text); color:#fff; border-color:var(--text); }
+  .list-item { padding:9px 12px; border-bottom:1px solid #f0ece4; cursor:pointer; }
+  .list-item:hover { background:#faf7f1; }
+  .list-item.sel { background:#f3efe6; box-shadow:inset 3px 0 0 var(--gold); }
+  .list-item .t { font-size:13px; line-height:1.4; }
+  .list-item .m { font-size:11px; color:var(--muted); display:flex; gap:6px; margin-top:4px; flex-wrap:wrap; align-items:center; }
+  .center { display:flex; flex-direction:column; }
+  .seg { display:flex; gap:4px; align-items:center; padding:8px 12px; border-bottom:1px solid #eee; flex-wrap:wrap; }
+  .seg button { font:inherit; font-size:13px; border:1px solid var(--border); background:#fff; border-radius:8px; padding:4px 10px; cursor:pointer; }
+  .seg button.on { background:var(--text); color:#fff; border-color:var(--text); }
+  .seg .hint { margin-left:auto; font-size:12px; color:var(--muted); }
+  .center iframe { flex:1; width:100%; border:0; background:#fff; min-height:0; }
+  .editor { flex:1; display:flex; flex-direction:column; min-height:0; }
+  .editor textarea { flex:1; border:0; border-radius:0; padding:16px; font-family:ui-monospace, monospace; font-size:14px; line-height:1.6; background:#fafafa; resize:none; min-height:0; }
+  .editor .bar2 { display:flex; gap:8px; padding:8px 12px; border-top:1px solid #eee; align-items:center; flex-wrap:wrap; }
+  .history { padding:12px 16px; overflow:auto; }
+  .ev { border-bottom:1px solid #f0ece4; padding:8px 0; font-size:13px; }
+  .ev .who { font-weight:600; }
+  .ev .at { color:var(--muted); font-size:12px; margin-left:6px; }
+  .diff { margin-top:6px; font-family:ui-monospace, monospace; font-size:12px; line-height:1.5; background:#fbfaf7; border:1px solid var(--border); border-radius:6px; padding:6px 0; overflow:auto; max-height:360px; }
+  .diff div { padding:0 10px; white-space:pre-wrap; word-break:break-all; }
+  .diff .add { background:#e6f4ea; color:#1f5130; }
+  .diff .del { background:#fbe9e6; color:#7a2a1e; }
+  .diff .add .hl { background:#a8dbb6; color:#0f3a1d; font-weight:600; border-radius:2px; }
+  .diff .del .hl { background:#f0b3a8; color:#5c1a10; text-decoration:line-through; border-radius:2px; }
+  .diff .hunk { color:var(--faint); }
+
+  .side { display:flex; flex-direction:column; }
+  .stabs { display:flex; border-bottom:1px solid var(--border); position:sticky; top:0; background:#fff; z-index:2; }
+  .stabs button { flex:1; font:inherit; font-size:13px; border:0; background:transparent; padding:10px 4px; cursor:pointer; color:var(--muted); border-bottom:2px solid transparent; }
+  .stabs button.on { color:var(--text); border-bottom-color:var(--gold); font-weight:600; }
+  .pane { padding:12px 14px; display:flex; flex-direction:column; gap:14px; font-size:13px; }
+  .pane h4 { margin:0 0 6px; font-size:12px; color:var(--muted); font-weight:500; }
+  .steps { margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:6px; }
+  .steps li { display:flex; gap:8px; align-items:flex-start; color:var(--muted); }
+  .steps li .n { flex:none; width:20px; height:20px; border-radius:50%; border:1px solid var(--border); display:inline-flex; align-items:center; justify-content:center; font-size:11px; background:#fff; }
+  .steps li.done { color:var(--text); }
+  .steps li.done .n { background:var(--green); color:#fff; border-color:var(--green); }
+  .steps li.now { color:var(--text); font-weight:600; }
+  .steps li.now .n { border-color:var(--gold); color:var(--gold); }
+  .check { display:flex; gap:8px; align-items:flex-start; padding:6px 0; border-bottom:1px dashed #eee; }
+  .check .lbl { flex:1; line-height:1.45; }
+  .check .opts { display:flex; gap:4px; flex:none; }
+  .check .opts button { font:inherit; font-size:12px; border:1px solid var(--border); background:#fff; border-radius:6px; padding:1px 7px; cursor:pointer; }
+  .check .opts button.on.ok { background:var(--green); color:#fff; border-color:var(--green); }
+  .check .opts button.on.na { background:#888; color:#fff; border-color:#888; }
+  .check .by { font-size:11px; color:var(--faint); }
+  .decide { border:1px solid var(--border); border-radius:10px; padding:10px 12px; background:#fcfbf8; }
+  .decide .why { font-size:12px; color:var(--amber); margin-top:6px; }
+  .claimbox { display:flex; gap:8px; align-items:center; flex-wrap:wrap; padding:8px 10px; border-radius:8px; background:#f6f4ee; }
+  .composer { border:1px solid var(--gold); border-radius:10px; padding:10px; background:#fffdf6; }
+  .quote { font-size:12px; color:#555; border-left:3px solid var(--gold); padding:3px 8px; background:#fbf7ea; border-radius:0 4px 4px 0; margin-bottom:6px; cursor:pointer; line-height:1.5; }
+  .cmt { border:1px solid var(--border); border-radius:10px; padding:9px 11px; }
+  .cmt.on { box-shadow:0 0 0 2px var(--gold); }
+  .cmt .head { display:flex; gap:6px; align-items:baseline; font-size:12px; }
+  .cmt .head b { font-size:13px; }
+  .cmt .body { margin-top:4px; white-space:pre-wrap; line-height:1.55; }
+  .sugg { margin-top:6px; font-size:12px; border:1px solid #cfe3d4; background:#f2f8f3; border-radius:6px; padding:5px 8px; white-space:pre-wrap; }
+  .sugg .lab { color:var(--green); font-weight:600; }
+  .reply { margin:6px 0 0 10px; padding-left:8px; border-left:2px solid #eee; font-size:12px; white-space:pre-wrap; }
+  .cmt .acts { display:flex; gap:6px; margin-top:8px; flex-wrap:wrap; }
+  .cite { border:1px solid var(--border); border-radius:8px; padding:8px 10px; }
+  .cite .k { font-family:ui-monospace, monospace; font-size:11px; color:var(--muted); }
+  .cite .a { font-size:12px; color:#444; margin-top:6px; max-height:7em; overflow:auto; border-left:3px solid var(--gold); padding:4px 8px; background:#faf9f6; line-height:1.5; }
+  .ctx { margin-top:6px; padding:5px 8px; border-left:3px solid var(--faint); font-size:12px; color:#444; line-height:1.5; }
+  .notes { white-space:pre-wrap; font-size:12px; line-height:1.55; background:#fbf7ee; border-left:3px solid var(--gold); padding:8px 10px; border-radius:0 6px 6px 0; max-height:40vh; overflow:auto; }
+  .feed .row { display:flex; gap:8px; padding:6px 0; border-bottom:1px solid #f0ece4; font-size:13px; align-items:baseline; }
+  .feed .row .at { color:var(--faint); font-size:12px; flex:none; width:88px; }
+  .feed a { cursor:pointer; color:var(--text); text-decoration:underline; text-decoration-color:var(--border); }
+  .cit-row textarea { min-height:60px; }
+
+  .modal-bg { position:fixed; inset:0; background:rgba(29,29,31,.4); z-index:50; display:flex; align-items:center; justify-content:center; padding:16px; }
+  .modal { background:#fff; border-radius:14px; padding:20px 22px; max-width:520px; width:100%; box-shadow:0 10px 40px rgba(0,0,0,.2); }
+  .modal h2 { margin:0 0 8px; font-size:18px; }
+  .modal ol { padding-left:20px; line-height:1.8; margin:8px 0 14px; }
+
+  @media (max-width: 1100px) {
+    .review { grid-template-columns:1fr; height:auto; }
+    .review > .col:first-child { max-height:40vh; }
+    .center { height:75vh; }
+    .grid2 { grid-template-columns:1fr; }
+  }
 </style>
 </head>
 <body>
-<div id="app">
+<div id="app" v-cloak>
   <header class="top">
     <img src="/site/images/logo/lockup-horizontal.svg" alt="貓健康站">
     <span class="t">工作檯</span>
     <nav class="tabs">
-      <button v-for="t in tabs" :key="t.id" :class="{on: tab===t.id}" @click="go(t.id)">{{ t.label }}</button>
+      <button v-for="t in tabs" :key="t.id" :class="{on: tab===t.id}" @click="go(t.id)">{{ t.label }}<span v-if="t.badge" class="badge">{{ t.badge }}</span></button>
     </nav>
     <div class="right">
-      <span v-if="ov">{{ ov.git.branch }} · 未 commit {{ ov.git.changed }} 檔 · 上次 build {{ fmtTime(ov.built_at) }}</span>
-      <button class="btn" @click="loadOverview">重新整理</button>
+      <span v-if="ov && isOwner">未 commit {{ ov.git.changed }} 檔 · 上次 build {{ fmtTime(ov.built_at) }}</span>
+      <span class="me" v-if="ov">{{ isOwner ? '網站負責人' : '審稿' }}：{{ me }} <a v-if="!isOwner" href="#" @click.prevent="askName=true" class="muted" style="font-size:11px">改名</a></span>
+      <button class="btn sm" @click="refreshAll">重新整理</button>
+      <a href="#" class="muted" @click.prevent="showGuide=true">說明</a>
     </div>
   </header>
 
@@ -96,192 +172,351 @@
     <!-- 儀表板 -->
     <section v-if="tab==='dash'">
       <div class="cards" v-if="ov">
-        <div class="card">
-          <h3>文章 reviewed + featured</h3>
-          <div class="big">{{ (ov.articles.by_quality.reviewed||0)+(ov.articles.by_quality.featured||0) }} <span class="muted" style="font-size:14px">/ {{ ov.thresholds.reviewed }} 門檻</span></div>
-          <div class="bar"><i :style="{width: pct((ov.articles.by_quality.reviewed||0)+(ov.articles.by_quality.featured||0), ov.thresholds.reviewed)}"></i></div>
-          <div class="sub">共 {{ ov.articles.total }} 篇，draft {{ ov.articles.by_quality.draft||0 }}</div>
+        <div class="card" v-if="isOwner">
+          <h3>等你核准（初審通過）</h3>
+          <div class="big" :class="ov.review.waiting.length ? 'warn' : 'ok'">{{ ov.review.waiting.length }}</div>
+          <div class="sub" v-if="ov.review.waiting.length">
+            <div v-for="w in ov.review.waiting" :key="w.slug" style="margin-top:4px"><a href="#" @click.prevent="openReview(w.slug)">{{ w.title }}</a> <span class="muted">· {{ w.by }}</span></div>
+          </div>
+          <div class="sub" v-else>目前沒有等待核准的文章</div>
         </div>
         <div class="card">
-          <h3>寫作規範 lint</h3>
-          <div class="big" :class="ov.articles.fails? 'fail':'ok'">{{ ov.articles.fails }} FAIL</div>
-          <div class="sub">{{ ov.articles.warns }} WARN · 零 FAIL {{ ov.articles.zero_fail }}/{{ ov.articles.total }} · 有註腳 {{ ov.articles.with_footnotes }} 篇</div>
+          <h3>審稿進度</h3>
+          <div style="display:flex; gap:6px; flex-wrap:wrap; margin-top:2px">
+            <span v-for="(label, k) in ov.review.labels" :key="k" class="pill" :class="'st-'+k" style="cursor:pointer" @click="openQueue(k)">{{ label }} {{ ov.review.stages[k] || 0 }}</span>
+          </div>
+          <div class="bar"><i :style="{width: pct(ov.review.stages.approved||0, ov.articles.total)}"></i></div>
+          <div class="sub">已上線 {{ ov.review.stages.approved||0 }} / {{ ov.articles.total }} 篇 · 申請 AdSense 門檻 {{ ov.thresholds.reviewed }} 篇</div>
         </div>
         <div class="card">
-          <h3>文獻 approved</h3>
-          <div class="big">{{ ov.citations.by_status.approved||0 }} <span class="muted" style="font-size:14px">/ {{ ov.thresholds.approved }} 門檻</span></div>
-          <div class="bar"><i :style="{width: pct(ov.citations.by_status.approved||0, ov.thresholds.approved)}"></i></div>
-          <div class="sub">共 {{ ov.citations.total }} 筆 · 被引用 {{ ov.citations.cited }} 筆</div>
-        </div>
-        <div class="card">
-          <h3>文獻完整度</h3>
-          <div class="sub" style="margin-top:0">url 已驗證 {{ pct(ov.citations.url_verified, ov.citations.total) }}（門檻 90%）</div>
-          <div class="bar"><i :class="{warn: ov.citations.url_verified/ov.citations.total<0.9}" :style="{width: pct(ov.citations.url_verified, ov.citations.total)}"></i></div>
-          <div class="sub">中文摘要 {{ pct(ov.citations.abstract_zh, ov.citations.total) }}（門檻 80%）</div>
-          <div class="bar"><i :class="{warn: ov.citations.abstract_zh/ov.citations.total<0.8}" :style="{width: pct(ov.citations.abstract_zh, ov.citations.total)}"></i></div>
-          <div class="sub">中文標題 {{ pct(ov.citations.title_zh, ov.citations.total) }}</div>
-        </div>
-      </div>
-      <div class="cards" style="margin-top:12px" v-if="ov">
-        <div class="card">
-          <h3>核心 10 篇審核進度</h3>
+          <h3>核心 10 篇</h3>
           <div class="big">{{ ov.articles.core_reviewed }} <span class="muted" style="font-size:14px">/ {{ ov.articles.core_total }}</span></div>
           <div class="bar"><i :style="{width: pct(ov.articles.core_reviewed, ov.articles.core_total)}"></i></div>
-          <div class="sub">title 與 H1 不一致 {{ ov.articles.title_h1_mismatch }} 篇</div>
+          <div class="sub">優先審這幾篇，清單上標「核心」</div>
         </div>
-        <div class="card">
-          <h3>上線 blocker：已審文章引用、尚未 approved 的文獻</h3>
+        <div class="card" v-if="isOwner">
+          <h3>上線 blocker：已上線文章引用、尚未核准的文獻</h3>
           <div class="big" :class="ov.blockers.length ? 'fail' : 'ok'">{{ ov.blockers.length }}</div>
           <div class="sub" v-if="ov.blockers.length">
             <a href="#" v-for="k in ov.blockers" :key="k" @click.prevent="goCite(k)" style="margin-right:8px; font-family:ui-monospace,monospace; font-size:11px">{{ k }}</a>
           </div>
-          <div class="sub" v-else>已審文章引用的文獻都 approved 了</div>
+          <div class="sub" v-else>已上線文章引用的文獻都核准了</div>
         </div>
       </div>
-      <div class="card" style="margin-top:12px">
-        <h3>今天該做什麼</h3>
-        <ol style="margin:0; padding-left:18px; line-height:1.8">
-          <li>「文章審核」讀一篇，右欄先看「這篇要注意什麼」。沒問題按 <kbd>r</kbd> 兩次，有問題按 <kbd>d</kbd> 並留備註，要淘汰按 <kbd>x</kbd>。標完會自動重建。</li>
-          <li>「文獻核對」把已審文章引用的文獻打開原文核對，勾「url 已驗證」再 approve。上面的 blocker 歸零才算能上線。</li>
-          <li>「建置與發佈」commit、push，然後按「部署到 Pages」。push 本身不會上線。</li>
-        </ol>
+      <div class="grid2" style="margin-top:12px">
+        <div class="card">
+          <h3>最近動態</h3>
+          <div class="feed" v-if="activity.length">
+            <div class="row" v-for="(e, i) in activity.slice(0, 25)" :key="i">
+              <span class="at">{{ fmtAgo(e.at) }}</span>
+              <span><b>{{ e.who }}</b> {{ e.action }} <a @click="openReview(e.slug)">{{ titleOf(e.slug) }}</a><span class="muted" v-if="e.detail">：{{ e.detail }}</span></span>
+            </div>
+          </div>
+          <div class="muted" v-else>還沒有審稿紀錄。到「文章審核」挑一篇開始。</div>
+        </div>
+        <div class="card">
+          <h3>怎麼審一篇</h3>
+          <ol style="margin:0; padding-left:18px; line-height:1.9">
+            <li>到「文章審核」，清單預設只列可以審的文章。點一篇，按<b>「我來審這篇」</b>，別人就知道你在審。</li>
+            <li>讀左邊的文章。覺得哪裡怪，<b>反白那段文字</b>，按「加註解」。想直接改字，就在「建議改成」寫新的句子。</li>
+            <li>右邊「文獻」頁可以對照每個註腳的原文摘要。</li>
+            <li>回到「審稿」頁，把檢查清單一項一項勾完。</li>
+            <li>沒問題按<b>「初審通過」</b>；需要改按<b>「退回修改」</b>。<span v-if="isOwner">初審通過的文章會出現在「等你核准」，你按「核准上線」才會公開。</span><span v-else>網站負責人核准後才會公開。</span></li>
+          </ol>
+        </div>
+      </div>
+      <div class="cards" style="margin-top:12px" v-if="ov && isOwner">
+        <div class="card">
+          <h3>寫作規範 lint</h3>
+          <div class="big" :class="ov.articles.fails? 'fail':'ok'">{{ ov.articles.fails }} FAIL</div>
+          <div class="sub">{{ ov.articles.warns }} WARN · 零 FAIL {{ ov.articles.zero_fail }}/{{ ov.articles.total }}</div>
+        </div>
+        <div class="card">
+          <h3>文獻核准</h3>
+          <div class="big">{{ ov.citations.by_status.approved||0 }} <span class="muted" style="font-size:14px">/ {{ ov.thresholds.approved }} 門檻</span></div>
+          <div class="bar"><i :style="{width: pct(ov.citations.by_status.approved||0, ov.thresholds.approved)}"></i></div>
+          <div class="sub">共 {{ ov.citations.total }} 筆 · 被引用 {{ ov.citations.cited }} 筆 · 網址已驗證 {{ pct(ov.citations.url_verified, ov.citations.total) }}</div>
+        </div>
       </div>
     </section>
 
     <!-- 文章審核 -->
     <section v-if="tab==='review'" class="review">
       <div class="col">
-        <div class="toolbar" style="padding:10px 12px 0">
-          <select v-model="fq"><option value="">全部品質</option><option value="draft">draft</option><option value="reviewed">reviewed</option><option value="featured">featured</option></select>
+        <div class="queue">
+          <button v-for="q in queues" :key="q.id" :class="{on: fq===q.id}" @click="fq=q.id">{{ q.label }} {{ q.n }}</button>
+        </div>
+        <div class="toolbar" style="padding:0 12px; margin-bottom:6px">
+          <input v-model="fs" placeholder="搜尋標題" style="flex:1; min-width:90px">
           <select v-model="fc"><option value="">全部分類</option><option v-for="c in categories" :value="c">{{ c }}</option></select>
-          <input v-model="fs" placeholder="搜尋標題" style="width:110px">
-          <select v-model="sortBy"><option value="todo">未審優先</option><option value="core">核心優先</option><option value="notes">有改稿備註優先</option><option value="chars">字數多→少</option><option value="lint">lint 問題多→少</option><option value="file">檔名</option></select>
         </div>
-        <div class="muted" style="padding:4px 12px 8px; font-size:11px">{{ filtered.length }} 篇 · 已審 {{ reviewedCount }} / {{ arts.length }} · <kbd>n</kbd>/<kbd>p</kbd> 上下篇</div>
+        <div class="muted" style="padding:0 12px 8px; font-size:11px">{{ filtered.length }} 篇 · <kbd>n</kbd>/<kbd>p</kbd> 上下篇</div>
         <div v-for="a in filtered" :key="a.slug" class="list-item" :class="{sel: cur && cur.slug===a.slug}" @click="open(a.slug)">
-          <div class="t"><span v-if="a.core" class="tag-core">核心</span> {{ a.title }} <span v-if="a.title_h1_mismatch" class="mismatch" title="title 與 H1 不一致">≠H1</span></div>
-          <div class="m"><span class="pill" :class="'q-'+a.quality">{{ a.quality }}</span><span>{{ a.category }}</span><span>{{ a.chars }} 字</span><span>註腳 {{ a.footnotes }}</span><span :class="a.fails?'fail':''">F{{ a.fails }}</span><span class="warn">W{{ a.warns }}</span></div>
+          <div class="t"><span v-if="a.core" class="tag-core">核心</span> {{ a.title }}</div>
+          <div class="m">
+            <span class="pill" :class="'st-'+a.stage">{{ a.stage_label }}<template v-if="a.claimed_by">・{{ a.claimed_by }}</template></span>
+            <span v-if="a.open_comments" class="warn">💬 {{ a.open_comments }}</span>
+            <span>{{ a.category }}</span>
+            <span v-if="a.fails" class="fail">FAIL {{ a.fails }}</span>
+            <span v-if="a.last_activity" :title="a.last_activity">{{ fmtAgo(a.last_activity) }}</span>
+          </div>
         </div>
+        <div v-if="!filtered.length" class="muted" style="padding:16px 12px">這個分類目前沒有文章。</div>
       </div>
-        <div class="col" style="display:flex; flex-direction:column;">
-          <div v-if="cur" style="padding: 8px 12px; border-bottom: 1px solid #eee; display:flex; justify-content:flex-end;">
-            <button v-if="!isEditMode" class="btn" @click="startEdit">✏️ 編輯內文 (Markdown)</button>
-            <div v-else>
-              <button class="btn" @click="isEditMode = false">取消</button>
-              <button class="btn primary" @click="saveEdit" :disabled="busy">💾 儲存修改</button>
+
+      <div class="col center">
+        <template v-if="cur">
+          <div class="seg">
+            <button :class="{on: view==='read'}" @click="setView('read')">閱讀</button>
+            <button :class="{on: view==='edit'}" @click="setView('edit')">編輯內文</button>
+            <button :class="{on: view==='history'}" @click="setView('history')">修改紀錄 {{ cur.review.log.length }}</button>
+            <span class="hint" v-if="view==='read'">反白文字就能加註解</span>
+          </div>
+          <iframe v-if="view==='read'" ref="frame" :src="cur.html + '?wb=' + bump" @load="onIframeLoad"></iframe>
+          <div v-else-if="view==='edit'" class="editor">
+            <textarea v-model="rawContent" :disabled="busy" spellcheck="false"></textarea>
+            <div class="bar2">
+              <button class="btn primary" @click="saveEdit" :disabled="busy || rawContent===rawOrig">儲存修改</button>
+              <button class="btn" @click="setView('read')" :disabled="busy">取消</button>
+              <span class="muted" style="font-size:12px">存檔前會檢查寫作規範，有 FAIL 不會存。每次儲存都記在「修改紀錄」，看得到改了哪幾行。</span>
+            </div>
+            <div v-if="editErr" style="padding:8px 12px; color:var(--red); font-size:13px; white-space:pre-wrap; border-top:1px solid #eee">{{ editErr }}</div>
+          </div>
+          <div v-else class="history">
+            <div v-if="!cur.review.log.length" class="muted">這篇還沒有紀錄。</div>
+            <div class="ev" v-for="(e, i) in cur.review.log" :key="i">
+              <span class="who">{{ e.who }}</span> {{ e.action }}<span class="at">{{ fmtTime(e.at) }}</span>
+              <div class="muted" v-if="e.detail" style="margin-top:2px">{{ e.detail }}</div>
+              <div class="diff" v-if="e.diff">
+                <div v-for="(l, j) in diffLines(e.diff)" :key="j" :class="l.c"><span v-for="(x, k) in l.parts" :key="k" :class="{hl: x.hl}">{{ x.t }}</span></div>
+              </div>
             </div>
           </div>
-          <template v-if="!isEditMode">
-            <iframe v-if="cur" :src="cur.html + '?wb=' + bump" @load="onIframeLoad" style="flex:1;"></iframe>
-            <div v-else class="muted" style="padding:24px">請在左側選擇文章</div>
-          </template>
-          <template v-else>
-            <textarea v-model="rawContent" style="flex:1; border:0; padding:16px; font-family:monospace; font-size:14px; background:#fafafa; resize:none;" :disabled="busy"></textarea>
-          </template>
-        </div>
+        </template>
+        <div v-else class="muted" style="padding:24px; line-height:1.8">從左邊選一篇文章開始。<br>清單上的顏色是審稿階段：灰色待審、藍色有人在審、紅色退回修改、黃色初審通過、綠色已上線。</div>
+      </div>
+
       <div class="col side" v-if="cur">
-        <div>
-          <h4>{{ cur.file }}</h4>
-          <div style="margin-top:4px"><span class="pill" :class="'q-'+cur.frontmatter.quality">{{ cur.frontmatter.quality }}</span>
-            <span class="muted" v-if="cur.frontmatter.last_reviewed && cur.frontmatter.last_reviewed!=='null'"> 審核 {{ cur.frontmatter.last_reviewed }}</span></div>
-          <div v-if="cur.title_h1_mismatch" class="mismatch" style="margin-top:4px">title 與 H1 不一致：<br>title「{{ cur.frontmatter.title }}」<br>H1「{{ cur.h1 }}」</div>
+        <div class="stabs">
+          <button :class="{on: stab==='review'}" @click="stab='review'">審稿</button>
+          <button :class="{on: stab==='comments'}" @click="stab='comments'">註解 {{ openComments.length || '' }}</button>
+          <button :class="{on: stab==='cites'}" @click="stab='cites'">文獻 {{ cur.citations.length }}</button>
+          <button :class="{on: stab==='more'}" @click="stab='more'">其他</button>
         </div>
-        <div v-if="cur.batch_notes">
-          <h4>這篇要注意什麼（AI 改稿紀錄）</h4>
-          <div class="notes">{{ cur.batch_notes }}</div>
-        </div>
-        <div>
-          <h4>審核</h4>
-          <textarea v-model="note" placeholder="備註（選填）：要補什麼、哪裡存疑"></textarea>
-          <div class="actions" style="margin-top:6px">
-            <button class="btn primary" @click="mark('reviewed')">{{ armed==='reviewed' ? '再按一次確認' : '通過' }} <kbd>r</kbd><kbd>r</kbd></button>
-            <button class="btn gold" @click="mark('featured')">精選 <kbd>f</kbd></button>
-            <button class="btn" @click="mark('draft')">退回 draft <kbd>d</kbd></button>
-            <button class="btn danger" @click="mark('archived')">淘汰 <kbd>x</kbd></button>
+
+        <!-- 審稿 -->
+        <div class="pane" v-if="stab==='review'">
+          <div>
+            <div style="font-weight:600; line-height:1.4">{{ cur.frontmatter.title }}</div>
+            <div style="margin-top:6px; display:flex; gap:6px; align-items:center; flex-wrap:wrap">
+              <span class="pill" :class="'st-'+cur.review.stage">{{ cur.review.stage_label }}</span>
+              <span class="muted" style="font-size:12px" v-if="cur.review.stage==='approved' && cur.frontmatter.last_reviewed">審核 {{ cur.frontmatter.last_reviewed }}</span>
+              <span class="muted" style="font-size:12px">{{ cur.frontmatter.category }} · {{ cur.lint.chars }} 字</span>
+            </div>
+            <div v-if="cur.title_h1_mismatch" class="mismatch" style="margin-top:4px">標題與內文 H1 不一致</div>
           </div>
-          <div class="muted" style="font-size:11px; margin-top:6px">通過會把 last_reviewed 設為今天並存回 .md，淘汰會移到 _archived/；任何一種都會自動重建。通過要按兩次（鍵盤 r r），避免誤觸。</div>
+
+          <div class="claimbox" v-if="cur.review.stage!=='approved'">
+            <template v-if="cur.review.stage==='claimed' && cur.review.claimed_by===me">
+              <span>你正在審這篇。</span>
+              <button class="btn sm" @click="release">先放下</button>
+            </template>
+            <template v-else-if="cur.review.stage==='claimed'">
+              <span><b>{{ cur.review.claimed_by }}</b> 正在審這篇。可以先看、加註解，但建議換一篇審。</span>
+              <button v-if="isOwner" class="btn sm" @click="claim(true)">改由我審</button>
+            </template>
+            <template v-else>
+              <span class="muted">還沒有人認領。</span>
+              <button class="btn primary sm" @click="claim(false)">我來審這篇</button>
+            </template>
+          </div>
+
+          <div>
+            <h4>步驟</h4>
+            <ol class="steps">
+              <li v-for="(s, i) in steps" :key="i" :class="s.state"><span class="n">{{ s.state==='done' ? '✓' : i+1 }}</span><span>{{ s.label }}</span></li>
+            </ol>
+          </div>
+
+          <div>
+            <h4>檢查清單（{{ checkedCount }}/{{ cur.checklist_def.length }}）</h4>
+            <div class="check" v-for="[k, label] in cur.checklist_def" :key="k">
+              <div class="lbl">{{ label }}
+                <div class="by" v-if="cur.review.checklist[k]">{{ cur.review.checklist[k].by }} · {{ fmtAgo(cur.review.checklist[k].at) }}</div>
+              </div>
+              <div class="opts">
+                <button class="ok" :class="{on: chk(k)==='ok'}" @click="setCheck(k, chk(k)==='ok' ? '' : 'ok')">沒問題</button>
+                <button class="na" :class="{on: chk(k)==='na'}" @click="setCheck(k, chk(k)==='na' ? '' : 'na')">不適用</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 審稿者的決定 -->
+          <div class="decide" v-if="cur.review.stage!=='approved'">
+            <h4>{{ isOwner ? '初審' : '你的判斷' }}</h4>
+            <textarea v-model="stageNote" placeholder="給下一位的話（選填；退回修改時要寫原因，或先在文章上加註解）" style="min-height:54px"></textarea>
+            <div style="display:flex; gap:6px; margin-top:6px; flex-wrap:wrap">
+              <button class="btn green" @click="setStage('passed')" :disabled="busy || !canPass">初審通過</button>
+              <button class="btn danger" @click="setStage('changes')" :disabled="busy">退回修改</button>
+            </div>
+            <div class="why" v-if="!canPass">{{ passWhy }}</div>
+          </div>
+
+          <!-- 擁有者的決定 -->
+          <div class="decide" v-if="isOwner" style="border-color:var(--gold)">
+            <h4>上線（只有你看得到）</h4>
+            <div style="font-size:12px; line-height:1.6">
+              <div :class="cur.gate.fails ? 'fail' : 'ok'">寫作規範：{{ cur.gate.fails ? cur.gate.fails + ' 個 FAIL，要先修' : '沒有 FAIL' }}</div>
+              <div v-if="cur.gate.missing_cites.length" class="fail">文獻庫沒有：{{ cur.gate.missing_cites.join('、') }}</div>
+              <div :class="cur.gate.unapproved_cites.length ? 'warn' : 'ok'">引用文獻：{{ cur.gate.unapproved_cites.length ? cur.gate.unapproved_cites.length + ' 筆還沒核准' : '都已核准' }}</div>
+              <div v-if="cur.review.stage!=='passed' && cur.review.stage!=='approved'" class="warn">這篇還沒經過初審</div>
+            </div>
+            <div style="display:flex; gap:6px; margin-top:8px; flex-wrap:wrap">
+              <template v-if="cur.review.stage!=='approved'">
+                <button class="btn primary" @click="approve('reviewed')" :disabled="busy || cur.gate.fails>0 || cur.gate.missing_cites.length>0">核准上線</button>
+                <button class="btn gold" @click="approve('featured')" :disabled="busy || cur.gate.fails>0 || cur.gate.missing_cites.length>0">核准並精選</button>
+              </template>
+              <button v-else class="btn" @click="ownerReject">下架，退回修改</button>
+              <button class="btn danger" @click="archive" :disabled="busy">淘汰</button>
+            </div>
+          </div>
+          <div class="muted" style="font-size:12px" v-else-if="cur.review.stage==='passed'">已初審通過，等網站負責人核准。</div>
         </div>
-        <div>
-          <h4>Lint</h4>
-          <div v-if="!cur.lint.fails.length && !cur.lint.warns.length" class="ok">乾淨</div>
-          <ul class="lint" style="margin:4px 0; padding-left:16px">
-            <li v-for="f in cur.lint.fails" class="fail">{{ f[0] }}：{{ f[1] }}</li>
-            <li v-for="w in cur.lint.warns" class="warn">{{ w[0] }}：{{ w[1] }}</li>
-          </ul>
+
+        <!-- 註解 -->
+        <div class="pane" v-if="stab==='comments'">
+          <div class="composer" v-if="draft.open">
+            <div class="quote" v-if="draft.quote">「{{ draft.quote }}」</div>
+            <div v-if="draft.quote && !quoteInRaw" class="muted" style="font-size:11px; margin-bottom:6px">這段在原稿裡的格式不同（可能含粗體或註腳），建議文字之後要手動套用。</div>
+            <textarea v-model="draft.text" ref="draftBox" placeholder="哪裡有問題？例如：這個數字和文獻摘要對不上、這句太急迫"></textarea>
+            <textarea v-if="draft.quote" v-model="draft.suggestion" placeholder="建議改成（選填）：直接寫新的句子" style="margin-top:6px; min-height:50px"></textarea>
+            <div style="display:flex; gap:6px; margin-top:6px">
+              <button class="btn primary sm" @click="addComment" :disabled="busy || (!draft.text.trim() && !draft.suggestion.trim())">送出註解</button>
+              <button class="btn sm" @click="closeDraft">取消</button>
+            </div>
+          </div>
+          <button v-else class="btn sm" @click="startComment('')">＋ 加一則整篇的註解</button>
+          <div class="muted" style="font-size:12px" v-if="!cur.review.comments.length">還沒有註解。在文章上反白一段文字，就能針對那段加註解。</div>
+
+          <div class="cmt" v-for="c in openComments" :key="c.id" :class="{on: activeCid===c.id}" :id="'cmt-'+c.id">
+            <div class="head"><b>{{ c.who }}</b><span class="muted">{{ fmtAgo(c.at) }}</span></div>
+            <div class="quote" v-if="c.quote" @click="focusQuote(c)" title="在文章中標出這段">「{{ c.quote }}」</div>
+            <div class="body" v-if="c.text">{{ c.text }}</div>
+            <div class="sugg" v-if="c.suggestion"><span class="lab">建議改成：</span>{{ c.suggestion }}</div>
+            <div class="reply" v-for="(r, i) in c.replies" :key="i"><b>{{ r.who }}</b>：{{ r.text }}</div>
+            <div v-if="replyTo===c.id" style="margin-top:6px">
+              <textarea v-model="replyText" placeholder="回覆" style="min-height:44px"></textarea>
+              <div style="display:flex; gap:6px; margin-top:4px"><button class="btn primary sm" @click="sendReply(c)" :disabled="!replyText.trim()">送出</button><button class="btn sm" @click="replyTo=''">取消</button></div>
+            </div>
+            <div class="acts">
+              <button class="btn sm green" v-if="c.suggestion" @click="applySugg(c)" :disabled="busy">套用建議</button>
+              <button class="btn sm" @click="resolve(c, true)">已解決</button>
+              <button class="btn sm" @click="replyTo=c.id; replyText=''">回覆</button>
+              <button class="btn sm danger" v-if="c.who===me || isOwner" @click="delComment(c)">刪除</button>
+            </div>
+          </div>
+          <details v-if="resolvedComments.length">
+            <summary>已解決 {{ resolvedComments.length }} 則</summary>
+            <div class="cmt" v-for="c in resolvedComments" :key="c.id" style="margin-top:8px; opacity:.75">
+              <div class="head"><b>{{ c.who }}</b><span class="muted">{{ fmtAgo(c.at) }} · {{ c.resolved_by }} {{ c.resolved_how || '標成已解決' }}</span></div>
+              <div class="quote" v-if="c.quote">「{{ c.quote }}」</div>
+              <div class="body" v-if="c.text">{{ c.text }}</div>
+              <div class="sugg" v-if="c.suggestion"><span class="lab">建議改成：</span>{{ c.suggestion }}</div>
+              <div class="reply" v-for="(r, i) in c.replies" :key="i"><b>{{ r.who }}</b>：{{ r.text }}</div>
+              <div class="acts"><button class="btn sm" @click="resolve(c, false)">重新打開</button></div>
+            </div>
+          </details>
         </div>
-        <div>
-          <h4>句內引用的文獻（{{ cur.citations.length }}）</h4>
-          <div v-if="!cur.citations.length" class="muted">沒有 [^KEY] 註腳。</div>
-          <div v-for="c in cur.citations" :key="c.key" :id="'cite-card-' + c.key" class="cite" style="margin-top:6px">
-            <div class="k">{{ c.key }} <span v-if="c.found" class="pill" :class="'s-'+c.status">{{ c.status }}</span><span v-else class="pill s-rejected">文獻庫沒有</span></div>
+
+        <!-- 文獻 -->
+        <div class="pane" v-if="stab==='cites'">
+          <div class="muted" style="font-size:12px">文章裡的註腳編號點了會跳到這裡。逐筆確認：這句話寫的，摘要裡真的有。</div>
+          <div v-if="!cur.citations.length" class="muted">這篇沒有註腳。</div>
+          <div v-for="c in cur.citations" :key="c.key" :id="'cite-card-' + c.key" class="cite">
+            <div class="k">{{ c.key }} <span v-if="c.found" class="pill" :class="'s-'+c.status">{{ citeLabel(c.status) }}</span><span v-else class="pill s-rejected">文獻庫沒有</span></div>
             <div v-if="c.found" style="margin-top:4px"><b>{{ c.title_zh || c.title }}</b> <span class="muted">{{ c.year }}</span></div>
-            
-            <div v-if="c.contexts && c.contexts.length" style="margin-top:8px; padding:6px 8px; background:#fff; border-left:3px solid var(--faint); border-radius:0 4px 4px 0; font-size:12px; color:#444; line-height:1.5">
-              <div v-for="(ctx, i) in c.contexts" :key="i" style="margin-bottom:4px" v-html="fmtCtx(ctx, c.key)"></div>
+            <div class="ctx" v-for="(ctx, i) in c.contexts" :key="i" v-html="fmtCtx(ctx, c.key)"></div>
+            <div v-if="c.found && c.abstract_zh" class="a">{{ c.abstract_zh }}</div>
+            <div v-if="c.found && c.url" style="margin-top:8px; display:flex; gap:8px; align-items:center; flex-wrap:wrap">
+              <a :href="c.url" target="_blank" rel="noopener" class="btn sm primary" style="color:#fff">開啟原文 ↗</a>
+              <label style="font-size:12px; cursor:pointer"><input type="checkbox" :checked="c.url_verified" @change="citeSet(c.key, {url_verified: $event.target.checked})"> 我開過原文，網址有效</label>
             </div>
-            
-            <div v-if="c.found && c.abstract_zh" class="a" style="margin-top:8px; border-left:3px solid var(--gold); padding-left:8px; background:#faf9f6; border-radius:0 4px 4px 0; padding:6px 8px; line-height:1.5">{{ c.abstract_zh }}</div>
-            
-            <div v-if="c.found && c.url" style="margin-top:10px">
-              <a :href="c.url" target="_blank" rel="noopener" class="btn" style="background:var(--text); color:#fff; border-color:var(--text); text-decoration:none; display:inline-block; font-size:12px; padding:4px 10px;">開啟原文對照 ↗</a>
-              <label style="font-size:11px; margin-left:8px; cursor:pointer"><input type="checkbox" :checked="c.url_verified" @change="citeSet(c.key, {url_verified: $event.target.checked})"> url 已驗證</label>
-            </div>
-            
-            <div v-if="c.found" class="actions" style="margin-top:8px; border-top:1px solid var(--border); padding-top:8px">
-              <button class="btn" style="padding:2px 8px; font-size:12px" @click="citeSet(c.key,{status:'approved', url_verified:true})">標記 approved</button>
-              <button class="btn" style="padding:2px 8px; font-size:12px" @click="goCite(c.key)">編輯文獻內容</button>
+            <div v-if="c.found && isOwner" style="margin-top:8px; display:flex; gap:6px">
+              <button class="btn sm" @click="citeSet(c.key,{status:'approved', url_verified:true})" :disabled="c.status==='approved'">核准這筆文獻</button>
+              <button class="btn sm" @click="goCite(c.key)">編輯文獻</button>
             </div>
           </div>
         </div>
-        <details>
-          <summary>frontmatter sources（{{ cur.sources.length }}）</summary>
-          <ul style="padding-left:16px; font-size:12px; color:#555"><li v-for="s in cur.sources">{{ s }}</li></ul>
-        </details>
+
+        <!-- 其他 -->
+        <div class="pane" v-if="stab==='more'">
+          <div v-if="cur.batch_notes">
+            <h4>AI 改稿時留下的提醒</h4>
+            <div class="notes">{{ cur.batch_notes }}</div>
+          </div>
+          <div>
+            <h4>寫作規範檢查</h4>
+            <div v-if="!cur.lint.fails.length && !cur.lint.warns.length" class="ok">乾淨</div>
+            <ul style="margin:4px 0; padding-left:16px">
+              <li v-for="f in cur.lint.fails" class="fail">{{ f[0] }}：{{ f[1] }}</li>
+              <li v-for="w in cur.lint.warns" class="warn">{{ w[0] }}：{{ w[1] }}</li>
+            </ul>
+          </div>
+          <details>
+            <summary>frontmatter sources（{{ cur.sources.length }}）</summary>
+            <ul style="padding-left:16px; font-size:12px; color:#555"><li v-for="s in cur.sources">{{ s }}</li></ul>
+          </details>
+          <div class="muted" style="font-size:12px">檔案：{{ cur.file }}</div>
+        </div>
       </div>
     </section>
 
     <!-- 文獻核對 -->
     <section v-if="tab==='cites'">
       <div class="toolbar">
-        <select v-model="cs" @change="loadCites"><option value="">全部狀態</option><option value="pending_review">pending_review</option><option value="needs_review">needs_review</option><option value="approved">approved</option><option value="rejected">rejected</option></select>
+        <select v-model="cs" @change="loadCites"><option value="">全部狀態</option><option value="pending_review">待審</option><option value="needs_review">需要再看</option><option value="approved">已核准</option><option value="rejected">不採用</option></select>
         <label><input type="checkbox" v-model="onlyCited"> 只看被引用的</label>
         <input v-model="cq" placeholder="搜尋 key / 標題" style="width:200px">
         <span class="muted">{{ citesFiltered.length }} 筆</span>
+        <span class="muted" v-if="!isOwner" style="font-size:12px">你可以核對原文、修中文摘要；核准由網站負責人按。</span>
       </div>
       <div class="card" v-for="c in citesFiltered" :key="c.key" style="margin-bottom:10px">
         <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap">
-          <span class="k" style="font-family:ui-monospace,monospace; font-size:12px">{{ c.key }}</span>
-          <span class="pill" :class="'s-'+c.status">{{ c.status }}</span>
+          <span style="font-family:ui-monospace,monospace; font-size:12px">{{ c.key }}</span>
+          <span class="pill" :class="'s-'+c.status">{{ citeLabel(c.status) }}</span>
           <span class="muted" style="font-size:12px">{{ c.source }} · {{ c.year }} · 被 {{ c.cited_by.length }} 篇引用</span>
           <a v-if="c.url" :href="c.url" target="_blank" rel="noopener" style="font-size:12px">原文 ↗</a>
-          <label style="font-size:12px"><input type="checkbox" v-model="c.url_verified"> url 已驗證</label>
-          <span style="margin-left:auto" class="actions">
-            <button class="btn" @click="verify(c)" :disabled="busy">跑 verify_citation</button>
-            <button class="btn primary" @click="citeSave(c,'approved')" :disabled="!c.url_verified" :title="c.url_verified ? '' : '先打開原文核對並勾「url 已驗證」'">approve</button>
-            <button class="btn" @click="citeSave(c,'pending_review')">pending</button>
-            <button class="btn danger" @click="citeSave(c,'rejected')">reject</button>
+          <label style="font-size:12px"><input type="checkbox" v-model="c.url_verified"> 網址已驗證</label>
+          <span style="margin-left:auto; display:flex; gap:6px; flex-wrap:wrap">
+            <button class="btn" @click="verify(c)" :disabled="busy" v-if="isOwner">跑 verify_citation</button>
+            <button class="btn" @click="citeSave(c, c.status)">儲存</button>
+            <template v-if="isOwner">
+              <button class="btn primary" @click="citeSave(c,'approved')" :disabled="!c.url_verified" :title="c.url_verified ? '' : '先打開原文核對並勾「網址已驗證」'">核准</button>
+              <button class="btn danger" @click="citeSave(c,'rejected')">不採用</button>
+            </template>
+            <button class="btn" @click="citeSave(c,'needs_review')" v-else>標成需要再看</button>
           </span>
         </div>
         <div class="grid2 cit-row" style="margin-top:8px">
           <div><div class="muted" style="font-size:12px">英文標題</div><div style="font-size:13px">{{ c.title }}</div>
             <div class="muted" style="font-size:12px; margin-top:6px">中文標題</div><input v-model="c.title_zh" style="width:100%">
-            <div class="muted" style="font-size:12px; margin-top:6px">原文網址 (URL)</div><input v-model="c.url" style="width:100%" placeholder="https://..."></div>
-          <div><div class="muted" style="font-size:12px">中文摘要 (提供給使用者對照，可換行)</div><textarea v-model="c.abstract_zh"></textarea></div>
+            <div class="muted" style="font-size:12px; margin-top:6px">原文網址</div><input v-model="c.url" style="width:100%" placeholder="https://..."></div>
+          <div><div class="muted" style="font-size:12px">中文摘要（改寫，不照抄原文）</div><textarea v-model="c.abstract_zh"></textarea></div>
         </div>
         <div style="margin-top:6px"><div class="muted" style="font-size:12px">備註</div><input v-model="c.notes" style="width:100%"></div>
         <pre class="out" v-if="c._out" style="margin-top:8px">{{ c._out }}</pre>
       </div>
     </section>
 
-    <!-- 建置與發佈 -->
-    <section v-if="tab==='build'">
+    <!-- 建置與發佈（只有擁有者） -->
+    <section v-if="tab==='build' && isOwner">
       <div class="grid2">
         <div class="card">
           <h3>建置</h3>
-          <div class="actions">
-            <button class="btn primary" @click="runBuild" :disabled="busy">重建網站（build.py + 回填 cited_by）</button>
+          <div style="display:flex; gap:6px; flex-wrap:wrap">
+            <button class="btn primary" @click="runBuild" :disabled="busy">重建網站</button>
             <button class="btn" @click="runLint" :disabled="busy">全站 lint</button>
-            <a class="btn" href="/site/" target="_blank" style="text-decoration:none">開啟預覽 ↗</a>
+            <a class="btn" href="/site/" target="_blank">開啟預覽 ↗</a>
           </div>
           <pre class="out" v-if="out" style="margin-top:10px">{{ out }}</pre>
         </div>
@@ -289,9 +524,9 @@
           <h3>Git</h3>
           <div class="muted" style="font-size:12px">{{ git.branch_line }}</div>
           <pre class="out" style="max-height:180px; margin-top:8px">{{ git.status || '（工作樹乾淨）' }}</pre>
-          <input v-model="msg" placeholder="commit 訊息，例如：review: 10 篇核心文章通過審核" style="width:100%; margin-top:8px">
-          <div class="actions" style="margin-top:8px">
-            <button class="btn primary" @click="commit" :disabled="busy || !msg">commit（先 fetch，落後會 rebase，不 stash）</button>
+          <input v-model="msg" placeholder="commit 訊息，例如：review: 5 篇核准上線" style="width:100%; margin-top:8px">
+          <div style="display:flex; gap:6px; margin-top:8px; flex-wrap:wrap">
+            <button class="btn primary" @click="commit" :disabled="busy || !msg">commit（先 fetch，落後會 rebase）</button>
             <button class="btn" @click="push" :disabled="busy">push（只推到 GitHub，不會上線）</button>
             <button class="btn" @click="loadGit">重新整理</button>
           </div>
@@ -308,188 +543,482 @@
             </template>
             <template v-else>無法讀部署狀態：{{ dep.error }}</template>
           </div>
-          <div class="actions" style="margin-top:8px">
+          <div style="display:flex; gap:6px; margin-top:8px; flex-wrap:wrap">
             <button class="btn gold" @click="runDeploy" :disabled="busy">部署到 Pages</button>
             <button class="btn" @click="loadDeploy">重新整理狀態</button>
-            <a class="btn" v-if="dep && dep.last" :href="dep.last.url" target="_blank" style="text-decoration:none">看 Actions ↗</a>
-            <a class="btn" href="https://chen-mouchin.github.io/cat-health-tw/" target="_blank" style="text-decoration:none">開線上站 ↗</a>
+            <a class="btn" v-if="dep && dep.last" :href="dep.last.url" target="_blank">看 Actions ↗</a>
+            <a class="btn" href="https://chen-mouchin.github.io/cat-health-tw/" target="_blank">開線上站 ↗</a>
           </div>
           <pre class="out" v-if="depOut" style="margin-top:8px; max-height:120px">{{ depOut }}</pre>
         </div>
       </div>
     </section>
   </main>
-  <div class="toast" v-if="toast">{{ toast }}</div>
+
+  <!-- 名字 -->
+  <div class="modal-bg" v-if="askName">
+    <div class="modal">
+      <h2>你的名字</h2>
+      <p class="muted" style="margin:0 0 10px">會顯示在你的註解與審稿紀錄上，讓大家知道誰審了哪篇。只存在這台工作檯，不會出現在公開網站或 GitHub。</p>
+      <input v-model="nameInput" maxlength="20" placeholder="例如：小美" style="width:100%" @keydown.enter="saveName" ref="nameBox">
+      <div style="display:flex; gap:6px; margin-top:12px; justify-content:flex-end">
+        <button class="btn" v-if="me && me!=='小幫手'" @click="askName=false">取消</button>
+        <button class="btn primary" @click="saveName" :disabled="!nameInput.trim()">開始</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 說明 -->
+  <div class="modal-bg" v-if="showGuide && !askName" @click.self="closeGuide">
+    <div class="modal">
+      <h2>{{ isOwner ? '工作檯怎麼用' : '謝謝你幫忙審稿' }}</h2>
+      <ol>
+        <li>到「文章審核」，點一篇，按<b>「我來審這篇」</b>。</li>
+        <li>讀文章。哪裡怪，<b>反白那段字 → 加註解</b>；想改字就寫在「建議改成」。</li>
+        <li>「文獻」頁對照每個註腳的原文摘要。</li>
+        <li>勾完檢查清單，按<b>「初審通過」</b>或<b>「退回修改」</b>。</li>
+      </ol>
+      <p class="muted" style="margin:0 0 12px; font-size:13px">{{ isOwner ? '初審通過的文章會出現在儀表板的「等你核准」，你按「核准上線」才會公開，再到「建置與發佈」commit、push、部署。' : '你按的「初審通過」不會直接公開，網站負責人核准後才上線。改壞了也沒關係，每次修改都有紀錄。' }}</p>
+      <div style="text-align:right"><button class="btn primary" @click="closeGuide">知道了</button></div>
+    </div>
+  </div>
+
+  <div class="toast" :class="{err: toastErr}" v-if="toast">{{ toast }}</div>
 </div>
 
 <script>
-const { createApp, ref, computed, onMounted, watch } = Vue;
-const H = { 'Content-Type': 'application/json', 'X-Workbench': '1' };
-const api = {
-  get: (u) => fetch(u).then(r => r.json()),
-  post: (u, b) => fetch(u, { method: 'POST', headers: H, body: JSON.stringify(b || {}) }).then(r => r.json()),
+const { createApp, ref, computed, onMounted, watch, nextTick } = Vue;
+const store = {
+  get(k) { try { return localStorage.getItem(k) || ''; } catch (e) { return ''; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} },
 };
+let reviewerName = store.get('wb_name');
+const headers = () => ({ 'Content-Type': 'application/json', 'X-Workbench': '1', 'X-Reviewer': encodeURIComponent(reviewerName || '') });
+const api = {
+  get: (u) => fetch(u, { headers: { 'X-Reviewer': encodeURIComponent(reviewerName || '') } }).then(r => r.json()),
+  post: (u, b) => fetch(u, { method: 'POST', headers: headers(), body: JSON.stringify(b || {}) }).then(r => r.json()),
+};
+const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
 createApp({
   setup() {
-    const allTabs = [{ id: 'dash', label: '儀表板' }, { id: 'review', label: '文章審核' }, { id: 'cites', label: '文獻核對' }, { id: 'build', label: '建置與發佈' }];
-    // 區網的審稿者沒有 commit／push／部署權限，不顯示那一頁
-    const tabs = computed(() => ov.value && ov.value.role === 'reviewer' ? allTabs.filter(t => t.id !== 'build') : allTabs);
-    const tab = ref(location.hash.replace('#', '') || 'dash');
-    const ov = ref(null), arts = ref([]), cur = ref(null), note = ref(''), bump = ref(0);
-      const isEditMode = ref(false), rawContent = ref('');
-    const fq = ref(''), fc = ref(''), fs = ref(''), sortBy = ref('todo'), armed = ref(''), dep = ref(null), depOut = ref('');
-    let armTimer = null;
+    const ov = ref(null), arts = ref([]), cur = ref(null), bump = ref(0), activity = ref([]);
+    const isOwner = computed(() => ov.value && ov.value.role === 'owner');
+    const me = computed(() => ov.value ? ov.value.who : '');
+    const tabs = computed(() => {
+      const t = [{ id: 'dash', label: '儀表板' }, { id: 'review', label: '文章審核', badge: isOwner.value && ov.value ? ov.value.review.waiting.length : 0 }, { id: 'cites', label: '文獻核對' }];
+      if (isOwner.value) t.push({ id: 'build', label: '建置與發佈' });
+      return t;
+    });
+    // 網址 #review/<slug> 直接打開某篇，可以把連結傳給小幫手
+    const [hashTab, hashSlug] = decodeURIComponent(location.hash.replace('#', '')).split('/');
+    const tab = ref(hashTab || 'dash');
+    const view = ref('read'), stab = ref('review');
+    const rawContent = ref(''), rawOrig = ref(''), rawHash = ref(''), editErr = ref('');
+    const fq = ref(''), fc = ref(''), fs = ref('');
+    const stageNote = ref('');
+    const draft = ref({ open: false, quote: '', text: '', suggestion: '' });
+    const draftBox = ref(null), frame = ref(null), nameBox = ref(null);
+    const activeCid = ref(''), replyTo = ref(''), replyText = ref('');
+    const askName = ref(false), nameInput = ref(reviewerName), showGuide = ref(false);
+    const dep = ref(null), depOut = ref('');
     const cites = ref([]), cs = ref(''), cq = ref(''), onlyCited = ref(true);
-    const out = ref(''), git = ref({ status: '', log: '', branch_line: '' }), msg = ref(''), busy = ref(false), toast = ref('');
-    const say = (m) => { toast.value = m; setTimeout(() => toast.value = '', 2500); };
+    const out = ref(''), git = ref({ status: '', log: '', branch_line: '' }), msg = ref(''), busy = ref(false);
+    const toast = ref(''), toastErr = ref(false);
+    let toastTimer = null;
+    const say = (m, err) => { toast.value = m; toastErr.value = !!err; clearTimeout(toastTimer); toastTimer = setTimeout(() => toast.value = '', err ? 5000 : 2600); };
+
     const pct = (a, b) => b ? Math.min(100, Math.round(a / b * 100)) + '%' : '0%';
-    const fmtTime = (s) => s ? s.replace('T', ' ').replace('Z', ' UTC') : '未知';
-    const fmtCtx = (t, k) => t.replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(new RegExp(`\\[\\^${k}\\]`,'g'), `<strong style="color:#1d1d1f; background:#e8e4db; padding:0 4px; border-radius:4px;">[^${k}]</strong>`);
+    const fmtTime = (s) => s ? s.replace('T', ' ').replace('Z', ' UTC').slice(0, 19) : '未知';
+    function fmtAgo(s) {
+      if (!s) return '';
+      const d = (Date.now() - new Date(s).getTime()) / 1000;
+      if (d < 60) return '剛剛';
+      if (d < 3600) return Math.floor(d / 60) + ' 分鐘前';
+      if (d < 86400) return Math.floor(d / 3600) + ' 小時前';
+      if (d < 86400 * 7) return Math.floor(d / 86400) + ' 天前';
+      return s.slice(5, 10).replace('-', '/');
+    }
+    const fmtCtx = (t, k) => esc(t).replace(new RegExp(`\\[\\^${k}\\]`, 'g'), `<strong style="background:#e8e4db; padding:0 4px; border-radius:4px;">[^${k}]</strong>`);
+    const citeLabel = (s) => ({ approved: '已核准', pending_review: '待審', needs_review: '需要再看', rejected: '不採用' }[s] || s || '');
+    const titleOf = (slug) => (arts.value.find(a => a.slug === slug) || {}).title || slug;
+    // 修改紀錄：一行刪、一行加成對時，只把中間真的改到的字標深色，長段落也看得出改了哪裡
+    function diffLines(d) {
+      const rows = d.split('\n').filter(l => !l.startsWith('---') && !l.startsWith('+++')).map(l => ({
+        t: l.startsWith('@@') ? '⋯' : l.slice(1) || ' ',
+        c: l.startsWith('+') ? 'add' : l.startsWith('-') ? 'del' : l.startsWith('@@') ? 'hunk' : '',
+      }));
+      for (const r of rows) r.parts = [{ t: r.t, hl: false }];
+      for (let i = 0; i < rows.length - 1; i++) {
+        const a = rows[i], b = rows[i + 1];
+        if (a.c !== 'del' || b.c !== 'add') continue;
+        let p = 0; while (p < a.t.length && p < b.t.length && a.t[p] === b.t[p]) p++;
+        let s = 0; while (s < a.t.length - p && s < b.t.length - p && a.t[a.t.length - 1 - s] === b.t[b.t.length - 1 - s]) s++;
+        const cut = (t) => [{ t: t.slice(0, p), hl: false }, { t: t.slice(p, t.length - s), hl: true }, { t: t.slice(t.length - s), hl: false }].filter(x => x.t);
+        a.parts = cut(a.t); b.parts = cut(b.t);
+        i++;
+      }
+      return rows;
+    }
+
+    // ---- 清單 ----
     const categories = computed(() => [...new Set(arts.value.map(a => a.category))].filter(Boolean));
-    const isPub = (a) => a.quality === 'reviewed' || a.quality === 'featured';
-    const reviewedCount = computed(() => arts.value.filter(isPub).length);
-    const SORTS = {
-      todo: (a, b) => (isPub(a) - isPub(b)) || (b.core - a.core) || (b.has_notes - a.has_notes) || a.file.localeCompare(b.file),
-      core: (a, b) => (b.core - a.core) || (isPub(a) - isPub(b)) || a.file.localeCompare(b.file),
-      notes: (a, b) => (b.has_notes - a.has_notes) || (isPub(a) - isPub(b)) || a.file.localeCompare(b.file),
-      chars: (a, b) => b.chars - a.chars,
-      lint: (a, b) => (b.fails * 10 + b.warns) - (a.fails * 10 + a.warns),
-      file: (a, b) => a.file.localeCompare(b.file),
-    };
-    const filtered = computed(() => arts.value
-      .filter(a => (!fq.value || a.quality === fq.value) && (!fc.value || a.category === fc.value) && (!fs.value || a.title.includes(fs.value)))
-      .slice().sort(SORTS[sortBy.value] || SORTS.file));
-    const citesFiltered = computed(() => cites.value.filter(c => (!onlyCited.value || c.cited_by.length) && (!cq.value || c.key.includes(cq.value) || (c.title || '').includes(cq.value) || (c.title_zh || '').includes(cq.value))));
+    const count = (st) => arts.value.filter(a => st.includes(a.stage)).length;
+    const queues = computed(() => {
+      const q = [
+        { id: 'mine', label: '可以審的', st: ['todo', 'changes', 'claimed'] },
+        { id: 'passed', label: '初審通過', st: ['passed'] },
+        { id: 'changes', label: '退回修改', st: ['changes'] },
+        { id: 'approved', label: '已上線', st: ['approved'] },
+        { id: 'all', label: '全部', st: ['todo', 'claimed', 'changes', 'passed', 'approved'] },
+      ];
+      return q.map(x => ({ ...x, n: count(x.st) }));
+    });
+    const STAGE_ORDER = { claimed: 0, changes: 1, todo: 2, passed: 3, approved: 4 };
+    const filtered = computed(() => {
+      const q = queues.value.find(x => x.id === fq.value) || queues.value[0];
+      return arts.value
+        .filter(a => q.st.includes(a.stage) && (!fc.value || a.category === fc.value) && (!fs.value || a.title.includes(fs.value)))
+        .slice().sort((a, b) => {
+          // 自己認領的最前面，其次核心、有未處理註解的
+          const mine = (x) => x.stage === 'claimed' && x.claimed_by === me.value ? 0 : 1;
+          return (mine(a) - mine(b)) || (STAGE_ORDER[a.stage] - STAGE_ORDER[b.stage]) || (b.core - a.core) || (b.open_comments - a.open_comments) || a.file.localeCompare(b.file);
+        });
+    });
+
+    // ---- 單篇 ----
+    const openComments = computed(() => cur.value ? cur.value.review.comments.filter(c => !c.resolved) : []);
+    const resolvedComments = computed(() => cur.value ? cur.value.review.comments.filter(c => c.resolved) : []);
+    const chk = (k) => (cur.value && cur.value.review.checklist[k] || {}).value || '';
+    const checkedCount = computed(() => cur.value ? cur.value.checklist_def.filter(([k]) => chk(k)).length : 0);
+    const canPass = computed(() => cur.value && checkedCount.value === cur.value.checklist_def.length && !openComments.value.length);
+    const passWhy = computed(() => {
+      if (!cur.value) return '';
+      const left = cur.value.checklist_def.length - checkedCount.value;
+      const parts = [];
+      if (left) parts.push(`檢查清單還有 ${left} 項`);
+      if (openComments.value.length) parts.push(`還有 ${openComments.value.length} 則註解沒處理（套用、回覆後標成已解決，或改按退回修改）`);
+      return parts.join('；');
+    });
+    const steps = computed(() => {
+      if (!cur.value) return [];
+      const r = cur.value.review;
+      const claimed = (r.stage === 'claimed' && r.claimed_by === me.value) || ['passed', 'approved'].includes(r.stage);
+      const listDone = checkedCount.value === cur.value.checklist_def.length;
+      const decided = ['passed', 'approved'].includes(r.stage);
+      const s = [
+        { label: '按「我來審這篇」', done: claimed },
+        { label: '讀文章，反白有問題的地方加註解', done: claimed && (r.comments.length > 0 || listDone) },
+        { label: '對照「文獻」頁的摘要', done: chk('cites') !== '' },
+        { label: '勾完檢查清單', done: listDone },
+        { label: '按「初審通過」或「退回修改」', done: decided },
+      ];
+      let nowSet = false;
+      return s.map(x => { let state = x.done ? 'done' : ''; if (!x.done && !nowSet) { state = 'now'; nowSet = true; } return { ...x, state }; });
+    });
+    const quoteInRaw = computed(() => cur.value && draft.value.quote ? cur.value.body.includes(draft.value.quote) : true);
 
     async function loadOverview() { ov.value = await api.get('/api/overview'); }
     async function loadArts() { arts.value = await api.get('/api/articles'); }
+    async function loadActivity() { activity.value = await api.get('/api/activity'); }
     async function loadCites() { cites.value = await api.get('/api/citations' + (cs.value ? '?status=' + cs.value : '')); }
     async function loadGit() { git.value = await api.get('/api/git'); }
-          async function startEdit() {
-        busy.value = true;
-        const r = await api.get('/api/articles/' + cur.value.slug + '/raw');
-        busy.value = false;
-        if (r.error) return say(r.error);
-        rawContent.value = r.raw;
-        isEditMode.value = true;
-      }
-      async function saveEdit() {
-        busy.value = true;
-        const r = await api.post('/api/articles/' + cur.value.slug + '/raw', { raw: rawContent.value });
-        if (r.error) { busy.value = false; out.value = (r.fails || []).map(f => f.join('：')).join('\n'); return say(r.error + (r.fails ? '：' + r.fails.length + ' 個 FAIL，看「建置與發佈」的輸出' : '')); }
-        const b = await api.post('/api/build');
-        busy.value = false;
-        if (!b.ok) say('儲存成功，但建置失敗：' + b.error);
-        else say('儲存並建置成功！');
-        isEditMode.value = false;
-        bump.value++;
-      }
-      async function open(slug) { cur.value = await api.get('/api/articles/' + slug); note.value = cur.value.review_notes || ''; bump.value++; isEditMode.value = false; }
-    function go(t) { tab.value = t; location.hash = t; if (t === 'review' && !arts.value.length) loadArts(); if (t === 'cites' && !cites.value.length) loadCites(); if (t === 'build') { loadGit(); loadDeploy(); } }
-    async function mark(q) {
-      if (!cur.value || busy.value) return;
-      if (q === 'archived' && !confirm('確定淘汰？檔案會移到 _archived/')) return;
-      // 通過要按兩次（兩秒內），誤觸一次不會上架
-      if (q === 'reviewed' && armed.value !== 'reviewed') {
-        armed.value = 'reviewed'; say('再按一次 r 確認通過');
-        clearTimeout(armTimer); armTimer = setTimeout(() => { armed.value = ''; }, 2000);
-        return;
-      }
-      armed.value = '';
-      busy.value = true; say('寫入並重建中…');
-      const r = await api.post('/api/articles/' + cur.value.slug + '/quality', { quality: q, note: note.value });
-      busy.value = false;
-      if (r.error) return say('失敗：' + r.error);
-      say((q === 'archived' ? '已移到 _archived' : '已標 ' + q) + (r.build_ok ? '，已重建' : '，但重建失敗，看「建置與發佈」'));
-      if (!r.build_ok) out.value = r.build_out || '';
-      const i = filtered.value.findIndex(a => a.slug === cur.value.slug);
-      await loadArts(); loadOverview(); bump.value++;
-      if (q === 'archived') { cur.value = null; return; }
-      const next = filtered.value[i + 1]; if (next) open(next.slug); else open(cur.value.slug);
-    }
     async function loadDeploy() { dep.value = await api.get('/api/deploy/status'); }
+    async function refreshAll() { await Promise.all([loadOverview(), loadArts(), loadActivity()]); if (cur.value) await reload(); say('已更新'); }
+
+    async function open(slug) {
+      const d = await api.get('/api/articles/' + slug);
+      if (d.error) return say(d.error, true);
+      cur.value = d; stageNote.value = '';
+      try { history.replaceState(null, '', '#review/' + slug); } catch (e) {} editErr.value = ''; draft.value = { open: false, quote: '', text: '', suggestion: '' };
+      replyTo.value = ''; activeCid.value = '';
+      if (view.value === 'edit') view.value = 'read';
+      bump.value++;
+      if (stab.value === 'more') stab.value = 'review';
+    }
+    async function reload(rebuilt) {
+      if (!cur.value) return;
+      const d = await api.get('/api/articles/' + cur.value.slug);
+      if (!d.error) cur.value = d;
+      if (rebuilt) bump.value++;
+      else if (frame.value && frame.value.contentDocument) paintHighlights(frame.value.contentDocument);
+      loadArts(); loadActivity(); loadOverview();
+    }
+    function openReview(slug) { go('review'); fq.value = 'all'; open(slug); }
+    function openQueue(st) { go('review'); fq.value = { todo: 'mine', claimed: 'mine', changes: 'changes', passed: 'passed', approved: 'approved' }[st] || 'all'; }
+    function go(t) {
+      tab.value = t; if (!(t === 'review' && cur.value)) location.hash = t;
+      if (t === 'review' && !arts.value.length) loadArts();
+      if (t === 'cites' && !cites.value.length) loadCites();
+      if (t === 'build') { loadGit(); loadDeploy(); }
+      if (t === 'dash') loadActivity();
+    }
+    function step(d) { if (!filtered.value.length) return; if (!cur.value) return open(filtered.value[0].slug); const i = filtered.value.findIndex(a => a.slug === cur.value.slug); const n = filtered.value[i + d]; if (n) open(n.slug); }
+
+    // ---- 檢視切換與編輯 ----
+    async function setView(v) {
+      if (view.value === 'edit' && v !== 'edit' && rawContent.value !== rawOrig.value && !confirm('編輯的內容還沒儲存，確定離開？')) return;
+      if (v === 'edit') {
+        const r = await api.get('/api/articles/' + cur.value.slug + '/raw');
+        if (r.error) return say(r.error, true);
+        rawContent.value = r.raw; rawOrig.value = r.raw; rawHash.value = r.raw_hash; editErr.value = '';
+      }
+      view.value = v;
+      if (v === 'read') bump.value++;
+    }
+    async function saveEdit() {
+      busy.value = true; editErr.value = '';
+      const r = await api.post('/api/articles/' + cur.value.slug + '/raw', { raw: rawContent.value, base_hash: rawHash.value });
+      busy.value = false;
+      if (r.conflict) { editErr.value = r.error; return say('別人剛改過這篇', true); }
+      if (!r.ok) { editErr.value = (r.error || '儲存失敗') + (r.fails ? '\n' + r.fails.map(f => '・' + f[0] + '：' + f[1]).join('\n') : ''); return say('沒有儲存，看編輯框下方的原因', true); }
+      rawOrig.value = rawContent.value; rawHash.value = r.raw_hash || rawHash.value;
+      say(r.unchanged ? '內容沒有變' : (r.build_ok === false ? '已儲存，但預覽重建失敗' : '已儲存，預覽已更新'));
+      view.value = 'read';
+      await reload(true);
+    }
+
+    // ---- 認領、清單、階段 ----
+    async function claim(force) {
+      const r = await api.post(`/api/review/${cur.value.slug}/claim`, { force });
+      if (!r.ok) return say(r.error, true);
+      say('開始審這篇'); reload();
+    }
+    async function release() { await api.post(`/api/review/${cur.value.slug}/release`); say('已放下'); reload(); }
+    async function setCheck(k, v) {
+      const r = await api.post(`/api/review/${cur.value.slug}/check`, { key: k, value: v });
+      if (!r.ok) return say(r.error, true);
+      if (v) cur.value.review.checklist[k] = { value: v, by: me.value, at: new Date().toISOString() };
+      else delete cur.value.review.checklist[k];
+    }
+    async function setStage(st) {
+      busy.value = true;
+      const r = await api.post(`/api/review/${cur.value.slug}/stage`, { stage: st, note: stageNote.value });
+      busy.value = false;
+      if (!r.ok) return say(r.error + (r.missing ? '：' + r.missing.join('、') : ''), true);
+      say(st === 'passed' ? '初審通過，已通知網站負責人' : '已退回修改');
+      stageNote.value = '';
+      const i = filtered.value.findIndex(a => a.slug === cur.value.slug);
+      await reload();
+      const next = filtered.value[i] && filtered.value[i].slug !== cur.value.slug ? filtered.value[i] : filtered.value[i + 1];
+      if (next && !isOwner.value) open(next.slug);
+    }
+    async function approve(q) {
+      if (cur.value.review.stage !== 'passed' && !confirm('這篇還沒經過初審，確定直接核准上線？')) return;
+      busy.value = true; say('核准並重建中…');
+      let r = await api.post(`/api/articles/${cur.value.slug}/quality`, { quality: q });
+      if (r.need_confirm) {
+        if (!confirm(`${r.error}：\n${r.need_confirm.join('\n')}\n\n仍要核准上線？`)) { busy.value = false; return; }
+        r = await api.post(`/api/articles/${cur.value.slug}/quality`, { quality: q, confirm_unapproved: true });
+      }
+      busy.value = false;
+      if (!r.ok) return say(r.error, true);
+      say(r.build_ok ? '已核准，記得到「建置與發佈」commit、push、部署' : '已核准，但重建失敗', !r.build_ok);
+      reload(true);
+    }
+    async function ownerReject() {
+      const note = prompt('退回原因（會變成一則註解）：', '');
+      if (note === null) return;
+      busy.value = true;
+      const r = await api.post(`/api/articles/${cur.value.slug}/quality`, { quality: 'draft', note });
+      busy.value = false;
+      if (!r.ok) return say(r.error, true);
+      say('已下架並退回修改'); reload(true);
+    }
+    async function archive() {
+      if (!confirm('確定淘汰？檔案會移到 _archived/，不會出現在清單上。')) return;
+      busy.value = true;
+      const r = await api.post(`/api/articles/${cur.value.slug}/quality`, { quality: 'archived', note: '' });
+      busy.value = false;
+      if (!r.ok) return say(r.error, true);
+      say('已淘汰'); cur.value = null; loadArts(); loadOverview();
+    }
+
+    // ---- 註解 ----
+    function startComment(quote) {
+      draft.value = { open: true, quote, text: '', suggestion: '' };
+      stab.value = 'comments';
+      nextTick(() => draftBox.value && draftBox.value.focus());
+    }
+    function closeDraft() { draft.value = { open: false, quote: '', text: '', suggestion: '' }; }
+    async function addComment() {
+      busy.value = true;
+      const r = await api.post(`/api/review/${cur.value.slug}/comment`, { quote: draft.value.quote, text: draft.value.text, suggestion: draft.value.suggestion });
+      busy.value = false;
+      if (!r.ok) return say(r.error, true);
+      closeDraft(); say('已加註解'); reload();
+    }
+    async function sendReply(c) {
+      const r = await api.post(`/api/review/${cur.value.slug}/comment/${c.id}/reply`, { text: replyText.value });
+      if (!r.ok) return say(r.error, true);
+      replyTo.value = ''; reload();
+    }
+    async function resolve(c, v) { await api.post(`/api/review/${cur.value.slug}/comment/${c.id}/resolve`, { resolved: v }); reload(); }
+    async function delComment(c) { if (!confirm('刪除這則註解？')) return; const r = await api.post(`/api/review/${cur.value.slug}/comment/${c.id}/delete`); if (!r.ok) return say(r.error, true); reload(); }
+    async function applySugg(c) {
+      busy.value = true;
+      const r = await api.post(`/api/review/${cur.value.slug}/comment/${c.id}/apply`);
+      busy.value = false;
+      if (!r.ok) return say(r.error + (r.fails ? '（' + r.fails.map(f => f[0]).join('、') + '）' : ''), true);
+      say('已套用到原稿，記在修改紀錄'); reload(true);
+    }
+
+    // ---- 文章預覽：反白加註解、標出已有註解、註腳跳文獻 ----
+    function paintHighlights(doc) {
+      if (!doc || !cur.value) return;
+      doc.querySelectorAll('mark.wb-hl').forEach(m => { const p = m.parentNode; p.replaceChild(doc.createTextNode(m.textContent), m); p.normalize(); });
+      const root = doc.querySelector('article') || doc.body;
+      for (const c of openComments.value) {
+        if (!c.quote) continue;
+        const walker = doc.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+        let node;
+        while ((node = walker.nextNode())) {
+          const i = node.nodeValue.indexOf(c.quote);
+          if (i < 0) continue;
+          const range = doc.createRange();
+          range.setStart(node, i); range.setEnd(node, i + c.quote.length);
+          const mark = doc.createElement('mark');
+          mark.className = 'wb-hl'; mark.dataset.cid = c.id; mark.title = c.who + '：' + (c.text || c.suggestion);
+          range.surroundContents(mark);
+          mark.addEventListener('click', () => { stab.value = 'comments'; activeCid.value = c.id; nextTick(() => { const el = document.getElementById('cmt-' + c.id); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' }); }); });
+          break;
+        }
+      }
+    }
+    function focusQuote(c) {
+      activeCid.value = c.id;
+      const doc = frame.value && frame.value.contentDocument;
+      if (view.value !== 'read' || !doc) return say('切到「閱讀」才看得到位置');
+      const m = doc.querySelector(`mark.wb-hl[data-cid="${c.id}"]`);
+      if (!m) return say('預覽裡找不到這段（可能已經改過）');
+      doc.querySelectorAll('mark.wb-hl.on').forEach(x => x.classList.remove('on'));
+      m.classList.add('on'); m.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+    function onIframeLoad(e) {
+      const doc = e.target.contentDocument;
+      if (!doc || !cur.value) return;
+      const style = doc.createElement('style');
+      style.textContent = `
+        mark.wb-hl { background:#fff1b8; color:inherit; cursor:pointer; border-radius:2px; box-shadow:0 1px 0 #e0c060; }
+        mark.wb-hl.on { background:#ffd76a; }
+        .wb-add { position:absolute; z-index:9999; background:#1d1d1f; color:#fff; border:0; border-radius:8px; padding:6px 12px; font:600 13px system-ui, sans-serif; cursor:pointer; box-shadow:0 4px 14px rgba(0,0,0,.25); }
+        .wb-tip { position:absolute; background:#1d1d1f; color:#fff; padding:10px 14px; border-radius:8px; font:13px/1.5 system-ui, sans-serif; max-width:300px; z-index:9998; pointer-events:none; opacity:0; transition:opacity .15s; }
+        .wb-tip.show { opacity:1; }
+        .wb-tip b { color:#e0b84a; display:block; margin-bottom:4px; }`;
+      doc.head.appendChild(style);
+      paintHighlights(doc);
+
+      // 反白 → 「加註解」按鈕
+      const btn = doc.createElement('button');
+      btn.className = 'wb-add'; btn.textContent = '💬 加註解'; btn.style.display = 'none';
+      doc.body.appendChild(btn);
+      let picked = '';
+      const root = doc.querySelector('article') || doc.body;
+      const hide = () => { btn.style.display = 'none'; };
+      doc.addEventListener('mouseup', (ev) => {
+        if (ev.target === btn) return;
+        setTimeout(() => {
+          const sel = doc.getSelection();
+          const txt = sel ? sel.toString().replace(/\s+/g, ' ').trim() : '';
+          if (!txt || txt.length < 2 || txt.length > 400 || !root.contains(sel.anchorNode)) return hide();
+          picked = txt;
+          const r = sel.getRangeAt(0).getBoundingClientRect();
+          btn.style.left = Math.max(8, r.left + doc.documentElement.scrollLeft) + 'px';
+          btn.style.top = (r.top + doc.documentElement.scrollTop - 40) + 'px';
+          btn.style.display = 'block';
+        }, 0);
+      });
+      btn.addEventListener('mousedown', (ev) => ev.preventDefault());
+      btn.addEventListener('click', () => { hide(); doc.getSelection().removeAllRanges(); startComment(picked); });
+      doc.addEventListener('scroll', hide);
+
+      // 註腳：滑過看摘要，點了跳到右欄文獻
+      const tip = doc.createElement('div'); tip.className = 'wb-tip'; doc.body.appendChild(tip);
+      const map = {}; cur.value.citations.forEach(c => { map[c.key] = c; });
+      doc.querySelectorAll('sup.fn a[data-cite]').forEach(link => {
+        const c = map[link.getAttribute('data-cite')];
+        link.addEventListener('mouseenter', () => {
+          if (!c) return;
+          tip.innerHTML = `<b>${esc(c.title_zh || c.title || c.key)}</b>${esc(c.abstract_zh ? c.abstract_zh.slice(0, 110) + '…' : '（沒有摘要）')}`;
+          const r = link.getBoundingClientRect();
+          tip.style.left = (r.left + doc.documentElement.scrollLeft) + 'px';
+          tip.style.top = (r.bottom + doc.documentElement.scrollTop + 8) + 'px';
+          tip.classList.add('show');
+        });
+        link.addEventListener('mouseleave', () => tip.classList.remove('show'));
+        link.addEventListener('click', (ev) => {
+          ev.preventDefault();
+          stab.value = 'cites';
+          nextTick(() => { const el = document.getElementById('cite-card-' + link.getAttribute('data-cite')); if (el) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); el.style.boxShadow = '0 0 0 2px #b8860b'; setTimeout(() => el.style.boxShadow = '', 1500); } });
+        });
+      });
+    }
+
+    // ---- 文獻 ----
+    async function citeSet(key, patch) { const r = await api.post('/api/citations/' + key, patch); if (r.error) return say(r.error, true); say('已更新'); if (cur.value) reload(); loadOverview(); }
+    async function citeSave(c, status) {
+      if (status === 'approved' && !c.url_verified) return say('先打開原文核對並勾「網址已驗證」，才能核准', true);
+      const r = await api.post('/api/citations/' + c.key, { status, title_zh: c.title_zh, abstract_zh: c.abstract_zh, notes: c.notes, url: c.url, url_verified: !!c.url_verified });
+      if (r.error) return say(r.error, true);
+      c.status = status; say(c.key + ' 已儲存'); loadOverview();
+    }
+    async function verify(c) { busy.value = true; c._out = '執行中…'; const r = await api.post('/api/verify/' + c.key); c._out = (r.stdout || '') + (r.stderr || r.error || ''); busy.value = false; }
+    function goCite(key) { cs.value = ''; cq.value = key; onlyCited.value = false; go('cites'); loadCites(); }
+
+    // ---- 建置與發佈 ----
+    async function runBuild() { busy.value = true; out.value = '建置中…'; const r = await api.post('/api/build'); out.value = (r.stdout || '') + (r.stderr || ''); busy.value = false; bump.value++; loadOverview(); loadGit(); }
+    async function runLint() { busy.value = true; out.value = 'lint 中…'; const r = await api.post('/api/lint'); out.value = r.stdout; busy.value = false; loadArts(); loadOverview(); }
+    async function commit() { busy.value = true; const r = await api.post('/api/git/commit', { message: msg.value }); busy.value = false; if (!r.ok) { out.value = (r.error || '') + '\n' + JSON.stringify(r.steps || [], null, 1); return say('commit 失敗，看輸出', true); } say('已 commit'); msg.value = ''; loadGit(); loadOverview(); }
+    async function push() { if (!confirm('push 到 GitHub（不會自動上線，上線要另外按「部署到 Pages」）。確定？')) return; busy.value = true; const r = await api.post('/api/git/push'); busy.value = false; out.value = (r.stdout || '') + (r.stderr || ''); say(r.code === 0 ? '已 push' : 'push 失敗', r.code !== 0); loadGit(); loadDeploy(); }
     async function runDeploy() {
       if (!confirm('觸發 GitHub Actions 部署，幾分鐘後線上會更新成遠端 main 的內容。確定？')) return;
       busy.value = true; depOut.value = '觸發中…';
       const r = await api.post('/api/deploy');
       busy.value = false; depOut.value = (r.error || '') + (r.stdout || '') + (r.stderr || '');
-      say(r.code === 0 ? '已觸發部署，約 1 到 2 分鐘' : '部署觸發失敗');
+      say(r.code === 0 ? '已觸發部署，約 1 到 2 分鐘' : '部署觸發失敗', r.code !== 0);
       setTimeout(loadDeploy, 5000);
     }
-    function step(d) { if (!cur.value) { if (filtered.value[0]) open(filtered.value[0].slug); return; } const i = filtered.value.findIndex(a => a.slug === cur.value.slug); const n = filtered.value[i + d]; if (n) open(n.slug); }
-    async function citeSet(key, patch) { const r = await api.post('/api/citations/' + key, patch); if (r.error) return say(r.error); say(key + ' 已更新'); if (cur.value) open(cur.value.slug); loadOverview(); }
-    async function citeSave(c, status) { if (status === 'approved' && !c.url_verified) return say('先打開原文核對並勾「url 已驗證」，才能 approve'); const r = await api.post('/api/citations/' + c.key, { status, title_zh: c.title_zh, abstract_zh: c.abstract_zh, notes: c.notes, url: c.url, url_verified: !!c.url_verified }); if (r.error) return say(r.error); c.status = status; say(c.key + ' 已設為 ' + status); loadOverview(); }
-    async function verify(c) { busy.value = true; c._out = '執行中…'; const r = await api.post('/api/verify/' + c.key); c._out = (r.stdout || '') + (r.stderr || ''); busy.value = false; }
-    function goCite(key) { cs.value = ''; cq.value = key; onlyCited.value = false; go('cites'); loadCites(); }
-    async function runBuild() { busy.value = true; out.value = '建置中…'; const r = await api.post('/api/build'); out.value = r.stdout + (r.stderr || ''); busy.value = false; bump.value++; loadOverview(); loadGit(); }
-    async function runLint() { busy.value = true; out.value = 'lint 中…'; const r = await api.post('/api/lint'); out.value = r.stdout; busy.value = false; loadArts(); loadOverview(); }
-    async function commit() { busy.value = true; const r = await api.post('/api/git/commit', { message: msg.value }); busy.value = false; if (!r.ok) { out.value = (r.error || '') + '\n' + JSON.stringify(r.steps || [], null, 1); return say('commit 失敗，看輸出'); } say('已 commit'); msg.value = ''; loadGit(); loadOverview(); }
-    async function push() { if (!confirm('push 到 GitHub（不會自動上線，上線要另外按「部署到 Pages」）。確定？')) return; busy.value = true; const r = await api.post('/api/git/push'); busy.value = false; out.value = r.stdout + r.stderr; say(r.code === 0 ? '已 push' : 'push 失敗'); loadGit(); loadDeploy(); }
 
-    function onIframeLoad(e) {
-      if (!cur.value || !cur.value.citations) return;
-      const doc = e.target.contentWindow.document;
-      if (!doc) return;
-      
-      const style = doc.createElement('style');
-      style.textContent = `
-        .wb-tooltip { position:absolute; background:#1d1d1f; color:#fff; padding:10px 14px; border-radius:8px; font-size:13px; line-height:1.5; max-width:300px; z-index:9999; pointer-events:none; opacity:0; transition:opacity 0.2s; box-shadow:0 4px 12px rgba(0,0,0,0.2); }
-        .wb-tooltip.show { opacity:1; }
-        .wb-tooltip .title { font-weight:bold; margin-bottom:4px; color:#b8860b; }
-      `;
-      doc.head.appendChild(style);
-
-      const tooltip = doc.createElement('div');
-      tooltip.className = 'wb-tooltip';
-      doc.body.appendChild(tooltip);
-
-      const citesMap = {};
-      cur.value.citations.forEach(c => { citesMap[c.key] = c; });
-
-      const links = doc.querySelectorAll('sup.fn a[data-cite]');
-      links.forEach(link => {
-        link.addEventListener('mouseenter', () => {
-          const key = link.getAttribute('data-cite');
-          const cite = citesMap[key];
-          if (!cite) return;
-          
-          const title = cite.title_zh || cite.title || key;
-          const desc = cite.abstract_zh ? cite.abstract_zh.substring(0, 100) + '...' : '（無摘要）';
-          tooltip.innerHTML = `<div class="title">${title}</div><div>${desc}</div>`;
-          
-          const rect = link.getBoundingClientRect();
-          tooltip.style.left = (rect.left + doc.documentElement.scrollLeft) + 'px';
-          tooltip.style.top = (rect.bottom + doc.documentElement.scrollTop + 8) + 'px';
-          tooltip.classList.add('show');
-        });
-        
-        link.addEventListener('mouseleave', () => {
-          tooltip.classList.remove('show');
-        });
-
-        link.addEventListener('click', (ev) => {
-          ev.preventDefault();
-          const key = link.getAttribute('data-cite');
-          const el = document.getElementById('cite-card-' + key);
-          if (el) {
-            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            el.style.transition = 'background 0.3s';
-            el.style.background = '#f3efe6';
-            setTimeout(() => { el.style.background = ''; }, 1500);
-          }
-        });
-      });
+    // ---- 名字與說明 ----
+    async function saveName() {
+      const n = nameInput.value.trim().slice(0, 20);
+      if (!n) return;
+      reviewerName = n; store.set('wb_name', n); askName.value = false;
+      await loadOverview();
+      if (!store.get('wb_guide')) showGuide.value = true;
     }
+    function closeGuide() { showGuide.value = false; store.set('wb_guide', '1'); }
+    watch(askName, (v) => { if (v) nextTick(() => nameBox.value && nameBox.value.focus()); });
 
-    onMounted(() => {
-      loadOverview(); go(tab.value);
+    onMounted(async () => {
+      await loadOverview();
+      if (ov.value && ov.value.role === 'reviewer') {
+        if (!reviewerName) askName.value = true;
+        else if (!store.get('wb_guide')) showGuide.value = true;
+        if (!hashTab) tab.value = 'review';
+      }
+      if (tab.value === 'build' && !isOwner.value) tab.value = 'dash';
+      fq.value = isOwner.value && ov.value.review.waiting.length ? 'passed' : 'mine';
+      await loadArts();
+      go(tab.value);
+      if (hashSlug && tab.value === 'review') { fq.value = 'all'; open(hashSlug); }
       document.addEventListener('keydown', (e) => {
-        if (tab.value !== 'review' || ['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement.tagName)) return;
-        if (e.key === 'r') mark('reviewed'); else if (e.key === 'd') mark('draft'); else if (e.key === 'f') mark('featured'); else if (e.key === 'x') mark('archived');
-        else if (e.key === 'n') step(1); else if (e.key === 'p') step(-1);
+        if (tab.value !== 'review' || askName.value || ['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement.tagName)) return;
+        if (e.key === 'n') step(1); else if (e.key === 'p') step(-1);
+        else if (e.key === 'Escape') closeDraft();
       });
+      window.addEventListener('beforeunload', (e) => { if (view.value === 'edit' && rawContent.value !== rawOrig.value) { e.preventDefault(); e.returnValue = ''; } });
     });
-    return { tabs, tab, go, ov, arts, cur, note, bump, fq, fc, fs, sortBy, armed, dep, depOut, reviewedCount, categories, filtered, open, mark, step, cites, cs, cq, onlyCited, citesFiltered, loadCites, citeSet, citeSave, verify, goCite, out, git, msg, busy, toast, runBuild, runLint, commit, push, loadGit, loadOverview, loadDeploy, runDeploy, pct, fmtTime, fmtCtx, onIframeLoad, isEditMode, rawContent, startEdit, saveEdit };
+
+    return {
+      ov, arts, cur, bump, activity, isOwner, me, tabs, tab, view, stab, rawContent, rawOrig, editErr, fq, fc, fs, stageNote, draft, draftBox, frame, nameBox,
+      activeCid, replyTo, replyText, askName, nameInput, showGuide, dep, depOut, cites, cs, cq, onlyCited, out, git, msg, busy, toast, toastErr,
+      pct, fmtTime, fmtAgo, fmtCtx, citeLabel, titleOf, diffLines, categories, queues, filtered, openComments, resolvedComments, chk, checkedCount, canPass, passWhy, steps, quoteInRaw,
+      citesFiltered: computed(() => cites.value.filter(c => (!onlyCited.value || c.cited_by.length) && (!cq.value || c.key.includes(cq.value) || (c.title || '').includes(cq.value) || (c.title_zh || '').includes(cq.value)))),
+      loadCites, loadGit, loadDeploy, refreshAll, open, openReview, openQueue, go, setView, saveEdit, claim, release, setCheck, setStage, approve, ownerReject, archive,
+      startComment, closeDraft, addComment, sendReply, resolve, delComment, applySugg, focusQuote, onIframeLoad, citeSet, citeSave, verify, goCite,
+      runBuild, runLint, commit, push, runDeploy, saveName, closeGuide,
+    };
   }
 }).mount('#app');
 </script>

@@ -17,28 +17,52 @@ python workbench/server.py --lan           # 開給同區網的小幫手審稿
 - 憑證是自簽的，存在 `build/workbench-cert/`（不進 git），IP 換了或快過期會自動重產。小幫手第一次開會看到「連線不是私人連線」：點網址列的警告圖示看憑證，SHA-256 指紋和工作檯印出的一樣，再按「繼續前往」。指紋不一樣就不要繼續，代表中間有人攔截。
 - 需要 `cryptography` 套件（`pip install cryptography`）。
 - 小幫手開過一次網址後，通行碼存在瀏覽器 cookie，網址列不留通行碼。
-- 小幫手可以審文章（r/d/x、編輯內文）、核對文獻、重建預覽、跑 lint。commit、push、部署只能在主機本機操作，「建置與發佈」頁不會顯示給小幫手。
+- 小幫手是「審稿者」：可以認領、加註解、勾檢查清單、按初審通過或退回修改、編輯內文、核對文獻原文與摘要、重建預覽。核准上線、文獻核准、commit、push、部署只有主機本機的負責人能做，「建置與發佈」頁不會顯示給小幫手。
+- 小幫手第一次進來會被問名字，顯示在註解與紀錄上；只存在工作檯，不進 git。
 - 只接受私有網段（192.168.x.x、10.x.x.x、172.16–31.x.x）的連線，公網位址一律拒絕；Host 標頭對不上也拒絕。
 - 只在自己的辦公室網路開。Windows 防火牆跳出詢問時，只勾「私人網路」。用完 Ctrl+C 關掉。
 
-## 審核流程
+## 審核流程（兩段式）
 
-1. **儀表板**先看三個數字：核心 10 篇審了幾篇、全站 reviewed 幾篇、上線 blocker（已審文章引用但還沒 approved 的文獻）有幾筆。blocker 可以直接點進文獻核對。
-2. **文章審核**：左側清單預設「未審優先」，核心文章標「核心」，title 與 H1 不一致的標「≠H1」。選一篇後右欄最上面是「這篇要注意什麼」，內容來自 `research/review-batch-*.md`：AI 改稿時刪掉的數字、需要人判斷的點。中間是渲染後的文章，草稿從 `build/drafts/` 讀，和上線版同一個模板。
-3. 看完按 `r` 兩次通過（防誤觸）、`d` 退回並留備註、`x` 淘汰、`n`/`p` 上下篇。任何一種都會自動重建，不用再跑建置。
-4. **文獻核對**：被引用的文獻先打開原文，核對摘要有沒有寫錯，勾「url 已驗證」才能 approve。沒勾的 approve 按鈕是灰的，後端也會擋。
-5. **建置與發佈**：commit（先 fetch，落後就 rebase，不 stash；衝突會停下來交給人）、push（只推到 GitHub）、**部署到 Pages**（這才是上線，跑 GitHub Actions，約 1 到 2 分鐘）。卡片會顯示本機、遠端、線上三個 commit 短碼，哪一段還沒推一眼看得出來。
+```
+待審 → 審稿中（有人認領）→ 初審通過 → 負責人核准上線
+                    ↘ 退回修改 ↗
+```
 
-## 編輯內文
+**小幫手（或負責人自己）做初審：**
+1. 「文章審核」清單預設只列「可以審的」。點一篇，按「我來審這篇」。認領 2 小時沒動作會自動釋出，別人看得到誰在審哪篇。
+2. 讀中間的文章。**反白一段字 → 加註解**；想直接改字，在「建議改成」寫新句子。註解會在文章上標黃，點標記跳到那則註解。
+3. 右欄「文獻」頁：每個註腳附上它在文中的句子和文獻摘要，逐筆對照。點文章裡的註腳編號也會跳過來。
+4. 「審稿」頁勾完 5 項檢查清單（每項可選「沒問題」或「不適用」）。
+5. 所有註解處理完（套用建議、回覆後標成已解決）才能按「初審通過」；要改的按「退回修改」並寫原因。
 
-文章審核頁右上「編輯內文」可以直接改 Markdown。儲存時先跑 lint，有 FAIL 不會存、會列出哪裡錯；過了才 build。
+**負責人核准：**
+- 儀表板「等你核准」列出初審通過的文章，頁首「文章審核」也有數字提示。
+- 核准前自動檢查：lint 有 FAIL 或註腳對不到文獻庫就不能核准；引用的文獻還沒核准會要你再確認一次。沒經過初審也能直接核准，但會跳提醒並記在紀錄上。
+- 核准會把 frontmatter 改成 `quality: reviewed`（或 featured）、寫 `last_reviewed`、重建。之後到「建置與發佈」commit、push、部署才會上線。
+
+**修改紀錄：** 每次存檔與套用建議都記下是誰、什麼時候、改了哪幾行（中間欄「修改紀錄」）。兩個人同時改同一篇時，後存的人會收到「這篇在你打開之後被某某改過」，不會蓋掉別人的修改。
+
+**資料存在哪：** 審稿階段、註解、檢查清單、紀錄存在 `research/reviews/{slug}.json`（不進 git，公開 repo 看不到小幫手名字與註解）。只有核准結果寫回文章 frontmatter。要備份就備份 `research/`。
+
+網址 `#review/<slug>` 會直接打開那篇，可以把連結傳給小幫手。
+
+## 測試
+
+```bash
+python workbench/test_workbench.py    # 25 項：單元、API 權限、兩段式審核、存檔衝突、build 排隊、git、部署（假 gh）
+python workbench/e2e_workbench.py     # 選用：用 Chrome 走一遍小幫手審稿到負責人核准，截圖在 build/e2e/（要 pip install playwright）
+```
+
+兩個都在暫存資料夾的 repo 複製上跑，另建假遠端，不碰真的文章與 git。改工作檯之後先跑 `test_workbench.py` 再 commit。
 
 ## 技術
 
-- 後端 `server.py`：`ThreadingHTTPServer`。讀寫 `content/articles/*.md` 的 frontmatter（quality、last_reviewed、review_notes）、`content/references/citations.json`；透過 subprocess 跑 `build.py`、`scripts/sync_cited_by.py`、`scripts/lint_articles.py`、`scrapers/literature/verify_citation.py`、git、gh。
+- 後端 `server.py`：`ThreadingHTTPServer`。讀寫 `content/articles/*.md` 的 frontmatter（quality、last_reviewed）、`research/reviews/*.json`（審稿流程，`reviews.py`）、`content/references/citations.json`；透過 subprocess 跑 `build.py`、`scripts/sync_cited_by.py`、`scripts/lint_articles.py`、`scrapers/literature/verify_citation.py`、git、gh。
 - 前端 `index.html`：Vue 3 單檔，沒有其他框架。
 - `/site/` 只能讀 `frontend/`；`/site/articles/` 找不到的草稿從 `build/drafts/articles/` 補。
-- 所有 POST 要帶 `X-Workbench: 1` 標頭，擋跨站表單。
+- 所有 POST 要帶 `X-Workbench: 1` 標頭，擋跨站表單；審稿者名字放在 `X-Reviewer`。
+- build 用一把鎖排隊，兩個人同時觸發不會互相覆蓋。
 - 部署用 gh CLI，第一次要在終端機 `gh auth login`。沒裝的話 winget 的預設位置 `C:\Program Files\GitHub CLI\gh.exe` 也會找。
 - commit 訊息自動加 `Co-Authored-By: Claude`。
 
@@ -49,9 +73,15 @@ python workbench/server.py --lan           # 開給同區網的小幫手審稿
 | GET | `/api/overview` | 統計、blocker、git 狀態 |
 | GET | `/api/articles` | 清單（含 core、has_notes、title_h1_mismatch） |
 | GET | `/api/articles/<slug>` | 單篇：frontmatter、lint、引用文獻與上下文、改稿備註 |
-| GET/POST | `/api/articles/<slug>/raw` | 讀寫 Markdown 原文；POST 先 lint |
-| POST | `/api/articles/<slug>/quality` | 改 quality，順手 build |
-| GET/POST | `/api/citations[/<key>]` | 文獻清單與修改；approve 需 url_verified |
+| GET/POST | `/api/articles/<slug>/raw` | 讀寫 Markdown 原文；POST 帶 base_hash，版本不符回 409；先 lint |
+| POST | `/api/articles/<slug>/quality` | 核准上線／下架／淘汰（只限負責人），核准前把關，順手 build |
+| POST | `/api/review/<slug>/claim`、`release` | 認領、放下 |
+| POST | `/api/review/<slug>/check` | 檢查清單一項（ok / na / 空） |
+| POST | `/api/review/<slug>/stage` | 初審通過（passed）、退回修改（changes） |
+| POST | `/api/review/<slug>/comment` | 加註解（quote、text、suggestion） |
+| POST | `/api/review/<slug>/comment/<id>/reply`、`resolve`、`delete`、`apply` | 回覆、解決、刪除、套用建議 |
+| GET | `/api/activity` | 最近審稿動態 |
+| GET/POST | `/api/citations[/<key>]` | 文獻清單與修改；核准需 url_verified，核准與不採用只限負責人 |
 | POST | `/api/verify/<key>` | 跑 verify_citation.py |
 | POST | `/api/build`、`/api/lint` | 重建、全站 lint |
 | GET | `/api/git`、POST `/api/git/commit`、`/api/git/push` | git |
