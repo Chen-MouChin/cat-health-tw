@@ -218,6 +218,48 @@ def _load_citations() -> dict:
 FOOTNOTE_RE = re.compile(r"\[\^([A-Za-z0-9][A-Za-z0-9_\-\.]*)\]")
 
 
+def _main_sources(body_md: str, meta: dict, limit: int = 3) -> list[tuple[str, str]]:
+    """這篇最主要依據的文獻：被引用次數最多的前幾筆，同次數取先出現的。回傳 [(key, 顯示名稱)]。
+    frontmatter 可用 based_on: [KEY, ...] 指定順序與篩選。"""
+    citations = _load_citations()
+    keys = FOOTNOTE_RE.findall(body_md)
+    if not keys:
+        return []
+    picked = meta.get("based_on")
+    if isinstance(picked, list) and picked:
+        order = [k for k in picked if k in citations]
+    else:
+        first = {}
+        for i, k in enumerate(keys):
+            first.setdefault(k, i)
+        order = sorted(set(keys), key=lambda k: (-keys.count(k), first[k]))
+    out = []
+    for k in order[:limit]:
+        c = citations.get(k)
+        if c:
+            out.append((k, c.get("title_zh") or c.get("title") or k))
+    return out
+
+
+def _citation_jsonld(keys: list[str]) -> str:
+    """JSON-LD 的 citation：文章引用的每一筆文獻（名稱與網址）。"""
+    citations = _load_citations()
+    items = []
+    for k in keys:
+        c = citations.get(k)
+        if not c:
+            continue
+        item = {"@type": "CreativeWork", "name": c.get("title") or c.get("title_zh") or k}
+        if c.get("url"):
+            item["url"] = c["url"]
+        if c.get("year"):
+            item["datePublished"] = str(c["year"])
+        items.append(item)
+    if not items:
+        return ""
+    return "\n    \"citation\": " + json.dumps(items, ensure_ascii=False) + ","
+
+
 def _process_footnotes(body_md: str, slug: str) -> tuple[str, str, list[str]]:
     """把 [^KEY] 換成上標連結，回傳 (新 markdown, 參考文獻 HTML, 使用到的 key 依序)。
 
@@ -530,6 +572,7 @@ ARTICLE_TEMPLATE = """\
     "headline": {title_json},
     "datePublished": "{date}",{date_modified_json}
     "author": {{"@type": "Person", "name": "Chen-MouChin", "url": "https://github.com/Chen-MouChin"}},
+{citation_json}
     "publisher": {{"@type": "Organization", "name": "貓健康站", "url": "{site_url}", "publishingPrinciples": "{site_url}/editorial.html"}}
   }}
   </script>
@@ -549,6 +592,7 @@ ARTICLE_TEMPLATE = """\
     article h1 {{ margin: 0; font-size: 30px; line-height: 1.3; letter-spacing: 0.01em; text-wrap: balance; color: var(--text); }}
     .article-meta {{ display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; margin: 12px 0 0; font-size: 14px; color: var(--text-muted); }}
     .article-meta a {{ font-weight: 600; }}
+    .article-meta .based-on {{ flex-basis: 100%; color: var(--text-2); line-height: 1.6; }}
     .lede {{ margin-top: 10px; }}
 
     /* 內文 */
@@ -903,6 +947,7 @@ def build_articles() -> list[dict]:
         is_public = quality in PUBLISHED_QUALITIES
         last_reviewed = meta.get("last_reviewed", "")
 
+        main_sources = _main_sources(body_md, meta)
         body_md, references_html, cited_keys = _process_footnotes(body_md, slug)
         body_html = _md_to_html(body_md)
         if is_public:
@@ -981,6 +1026,11 @@ def build_articles() -> list[dict]:
         )
         if lr:
             editor_meta_html += f'\n      <span>✅ 審核 {_escape_html(lr)}</span>'
+        if main_sources:
+            links = "、".join(
+                f'<a href="../library.html?id={k}">{_escape_html(name)}</a>' for k, name in main_sources
+            )
+            editor_meta_html += f'\n      <span class="based-on">本文主要依據：{links}</span>'
         date_modified_json = f'\n    "dateModified": "{_escape_html(lr)}",' if lr else ""
 
         # 文末「找獸醫」CTA（從文章 frontmatter 的 find_vet 欄位）
@@ -1085,6 +1135,7 @@ def build_articles() -> list[dict]:
             brand_svg=BRAND_SVG,
             cat_svg=CAT_SVG,
             site_head=site_head("../", "articles"),
+            citation_json=_citation_jsonld(cited_keys),
             site_foot=site_foot("../"),
             title=title,
             title_json=json.dumps(title),
