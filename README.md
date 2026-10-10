@@ -40,7 +40,7 @@ pip install -r requirements.txt
 python build.py                                  # 重建前端
 python -m http.server 8000 --bind 127.0.0.1 --directory frontend  # 預覽 localhost:8000
 python scripts/lint_articles.py                  # 寫作規範檢查
-python workbench/server.py                       # 審核工作檯 http://127.0.0.1:8010/（只綁本機）
+python workbench/server.py                       # 審核工作檯 http://127.0.0.1:8010/（--lan 開給區網小幫手，需通行碼）
 ```
 
 ## 部署

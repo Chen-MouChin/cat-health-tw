@@ -26,7 +26,8 @@ Python 標準庫 HTTP 伺服器 + Vue 3（CDN）單頁前端，不需要 npm、�
     POST /api/deploy                    gh workflow run「Deploy to GitHub Pages」，這才是上線
     /api/deploy/status                  最近一次部署的狀態
 
-安全：只綁 127.0.0.1，其他位址啟動時拒絕。POST 需帶 X-Workbench: 1 標頭（擋跨站表單）。
+安全：預設只綁 127.0.0.1。--lan 開給區網的小幫手：要帶啟動時印出的通行碼，只能審稿，commit／push／部署只限本機；
+公網位址一律拒絕，Host 標頭不對也拒絕。POST 需帶 X-Workbench: 1 標頭（擋跨站表單）。
 """
 from __future__ import annotations
 
@@ -39,6 +40,11 @@ import subprocess
 import sys
 import threading
 import urllib.parse
+import hmac
+import http.cookies
+import ipaddress
+import secrets
+import socket
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
@@ -401,9 +407,61 @@ def deploy_status() -> dict:
 # HTTP
 # ---------------------------------------------------------------------------
 
+# 區網模式的設定，main() 啟動時填入
+ACCESS = {"token": "", "hosts": set()}
+OWNER_ONLY = ("/api/git/commit", "/api/git/push", "/api/deploy")
+
+
+def client_role(ip: str, cookie_header: str, query_token: str) -> str:
+    """回傳 owner（本機）、reviewer（區網且通行碼正確）或空字串（拒絕）。"""
+    try:
+        addr = ipaddress.ip_address(ip)
+    except ValueError:
+        return ""
+    if getattr(addr, "ipv4_mapped", None):
+        addr = addr.ipv4_mapped
+    if addr.is_loopback:
+        return "owner"
+    if not ACCESS["token"] or not addr.is_private or addr.is_link_local:
+        return ""
+    jar = http.cookies.SimpleCookie()
+    try:
+        jar.load(cookie_header or "")
+    except http.cookies.CookieError:
+        pass
+    given = query_token or (jar["wb_token"].value if "wb_token" in jar else "")
+    return "reviewer" if given and hmac.compare_digest(given, ACCESS["token"]) else ""
+
+
+def lan_ip() -> str:
+    """本機在區網的 IP（只查路由，不送封包）。"""
+    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    try:
+        s.connect(("10.255.255.255", 1))
+        return s.getsockname()[0]
+    except OSError:
+        return "127.0.0.1"
+    finally:
+        s.close()
+
+
 class Handler(SimpleHTTPRequestHandler):
+    role = ""
+
+    def _gate(self, query_token: str = "") -> bool:
+        """所有請求先過這關：Host 標頭、來源位址、通行碼。不通過就回 403。"""
+        host = (self.headers.get("Host") or "").lower()
+        if host not in ACCESS["hosts"]:
+            self._json({"error": "Host not allowed"}, 403)
+            return False
+        self.role = client_role(self.client_address[0], self.headers.get("Cookie", ""), query_token)
+        if not self.role:
+            self._json({"error": "需要通行碼：請用工作檯啟動時印出的網址開啟"}, 403)
+            return False
+        return True
+
     def log_message(self, fmt, *args):  # 安靜一點
-        if "/api/" in (args[0] if args else ""):
+        if "/api/" in (str(args[0]) if args else ""):
             sys.stdout.write("%s - %s\n" % (self.address_string(), fmt % args))
 
     def _json(self, obj, code=200):
@@ -439,8 +497,17 @@ class Handler(SimpleHTTPRequestHandler):
         u = urllib.parse.urlsplit(self.path)
         path = urllib.parse.unquote(u.path)
         qs = urllib.parse.parse_qs(u.query)
+        if not self._gate(qs.get("t", [""])[0]):
+            return
         try:
             if path in ("/", "/index.html"):
+                if qs.get("t") and self.role == "reviewer":
+                    # 通行碼換成 cookie，網址列不留通行碼
+                    self.send_response(303)
+                    self.send_header("Set-Cookie", f"wb_token={ACCESS['token']}; HttpOnly; SameSite=Strict; Path=/")
+                    self.send_header("Location", "/")
+                    self.end_headers()
+                    return
                 return self._file(WB / "index.html")
             if path.startswith("/site/"):
                 rel = path[len("/site/"):] or "index.html"
@@ -456,7 +523,7 @@ class Handler(SimpleHTTPRequestHandler):
                         target = draft
                 return self._file(target)
             if path == "/api/overview":
-                return self._json(overview())
+                return self._json({**overview(), "role": self.role})
             if path == "/api/deploy/status":
                 return self._json(deploy_status())
             if path == "/api/articles":
@@ -502,6 +569,10 @@ class Handler(SimpleHTTPRequestHandler):
         if self.headers.get("X-Workbench") != "1":
             return self._json({"error": "missing X-Workbench header"}, 403)
         path = urllib.parse.unquote(urllib.parse.urlsplit(self.path).path)
+        if not self._gate():
+            return
+        if path in OWNER_ONLY and self.role != "owner":
+            return self._json({"error": "commit、push、部署只能在主機本機操作"}, 403)
         try:
             body = self._body()
             m_raw = re.match(r"^/api/articles/([A-Za-z0-9\-]+)/raw$", path)
@@ -566,15 +637,20 @@ class Handler(SimpleHTTPRequestHandler):
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--host", type=str, default="127.0.0.1", help="只給本機用；工作檯有寫入 API，不要綁 0.0.0.0 或開到公網")
+    ap.add_argument("--lan", action="store_true", help="開給同區網的小幫手審稿（要通行碼；commit／push／部署只限本機）")
     ap.add_argument("--port", type=int, default=8010)
     args = ap.parse_args()
-    # 工作檯能改文章、commit、push、部署，只准綁本機
-    if args.host not in ("127.0.0.1", "localhost", "::1"):
-        print(f"拒絕綁定 {args.host}：工作檯只能在本機使用（127.0.0.1）。")
-        return 2
-    srv = ThreadingHTTPServer((args.host, args.port), Handler)
-    print(f"貓健康站 工作檯 → http://{args.host}:{args.port}/   (Ctrl+C 停止)")
+    host = "0.0.0.0" if args.lan else "127.0.0.1"
+    ACCESS["hosts"] = {f"127.0.0.1:{args.port}", f"localhost:{args.port}"}
+    srv = ThreadingHTTPServer((host, args.port), Handler)
+    print(f"貓健康站 工作檯 → http://127.0.0.1:{args.port}/   (Ctrl+C 停止)")
+    if args.lan:
+        ip = lan_ip()
+        ACCESS["token"] = secrets.token_urlsafe(12)
+        ACCESS["hosts"].add(f"{ip}:{args.port}")
+        print(f" 區網審稿網址（給小幫手，含通行碼，每次啟動都會換）：http://{ip}:{args.port}/?t={ACCESS['token']}")
+        print(" 小幫手可以審文章、核對文獻、重建預覽；commit、push、部署只能在這台電腦操作。")
+        print(" 只在自己的辦公室網路開；Windows 防火牆只允許「私人網路」。用完 Ctrl+C 關掉。")
     try:
         srv.serve_forever()
     except KeyboardInterrupt:

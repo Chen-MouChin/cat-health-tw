@@ -331,7 +331,9 @@ const api = {
 };
 createApp({
   setup() {
-    const tabs = [{ id: 'dash', label: '儀表板' }, { id: 'review', label: '文章審核' }, { id: 'cites', label: '文獻核對' }, { id: 'build', label: '建置與發佈' }];
+    const allTabs = [{ id: 'dash', label: '儀表板' }, { id: 'review', label: '文章審核' }, { id: 'cites', label: '文獻核對' }, { id: 'build', label: '建置與發佈' }];
+    // 區網的審稿者沒有 commit／push／部署權限，不顯示那一頁
+    const tabs = computed(() => ov.value && ov.value.role === 'reviewer' ? allTabs.filter(t => t.id !== 'build') : allTabs);
     const tab = ref(location.hash.replace('#', '') || 'dash');
     const ov = ref(null), arts = ref([]), cur = ref(null), note = ref(''), bump = ref(0);
       const isEditMode = ref(false), rawContent = ref('');
