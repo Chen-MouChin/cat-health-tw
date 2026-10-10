@@ -1,0 +1,2 @@
+# 前端函式庫照原樣保存，不轉換換行；轉了會讓 index.html 的 integrity 對不上
+workbench/vendor/*.js -text
