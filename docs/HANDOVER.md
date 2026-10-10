@@ -1,6 +1,6 @@
 # 交接文件
 
-最後更新：2026-09-29
+最後更新：2026-10-10
 對象：接手這個 repo 的人或 AI session。讀完這份，應該能在 30 分鐘內跑起網站、知道每個工具做什麼、知道哪些事不能做。
 
 進度看 [PROGRESS.md](PROGRESS.md)，計畫看 [ROADMAP.md](ROADMAP.md)，待辦看 [TODO.md](TODO.md)，寫作規範看 `.claude/skills/cat-health-writing/SKILL.md`。
@@ -11,7 +11,7 @@
 
 ## 下次開工（2026-09-29 留）
 
-這次的改動都已合併進 main：首頁改版、手機定位找附近獸醫院、全站連結色與鍵盤焦點、六項錯誤修正、部署改成只能手動觸發。網站尚未公開（不開 GitHub Pages），測試用 ngrok。
+這次的改動都已合併進 main：首頁改版、手機定位找附近獸醫院、全站連結色與鍵盤焦點、六項錯誤修正、部署改成只能手動觸發。2026-10-08 起網站已在 GitHub Pages 公開，見第 4 點。
 
 **1. 同步 main**
 
@@ -22,19 +22,15 @@ git pull
 
 本機有自己的分支或還沒 commit 的改動：先 commit，再 `git merge main`。衝突在 `frontend/` 產出物的話不要手改，解完跑 `python build.py` 重建再 commit。
 
-**2. 起站，用 ngrok 給手機測**
+**2. 本機起站與手機測試**
 
 ```bash
 python build.py                           # 改過 content/ 或 build.py 才需要
 python sandbox/serve.py                   # http://localhost:8000/；沒有 sandbox/ 就用 python -m http.server 8000 --bind 127.0.0.1 --directory frontend
-ngrok config add-authtoken <你的 token>    # 第一次用 ngrok 才需要
-ngrok http 8000 --basic-auth "帳號:密碼"    # 密碼至少 8 碼
 ```
 
-- 手機打開 ngrok 給的 https 網址。瀏覽器只在 HTTPS 下給定位，「找我附近的獸醫院」要這樣才測得到。
-- 免費版第一次進站會先出現 ngrok 提醒頁，按 Visit Site。
-- 加了 `--basic-auth` 要輸入帳密才看得到，連結外流也沒關係。
-- ngrok 要在自己電腦跑。雲端 Claude session 的網路政策擋掉 ngrok（`ngrok.com`、`bin.equinox.io`、`connect.ngrok-agent.com`），而且容器用完就回收。
+- 本機 server 一律只綁 127.0.0.1，不開到區網或公網；工作檯綁其他位址會拒絕啟動。
+- 手機測試用部署後的線上網址（HTTPS），「找我附近的獸醫院」的定位要 HTTPS 才會給。
 
 **3. 手機測試清單**
 
@@ -76,7 +72,7 @@ python workbench/server.py                 # http://127.0.0.1:8010/ 審核工作
 python scripts/lint_articles.py            # 寫作規範檢查，FAIL 必須為 0
 ```
 
-部署：`deploy.yml` 把 `frontend/` 原樣上傳到 GitHub Pages，**不跑 build.py**，所以產出物要 commit。目前 repo（private）沒開 Pages，網站尚未公開：2026-09-29 決定先內部開發、用 ngrok 測試，deploy 只能手動觸發，push 到 main 不會上線。
+部署：`deploy.yml` 把 `frontend/` 原樣上傳到 GitHub Pages，**不跑 build.py**，所以產出物要 commit。repo 已 public、Pages 已開（2026-10-08）；deploy 只能手動觸發，push 到 main 不會上線。
 
 ## 3. 目錄與角色
 
@@ -159,7 +155,7 @@ python scripts/lint_articles.py            # 寫作規範檢查，FAIL 必須為
 
 | 項目 | 狀態 | 誰 |
 |---|---|---|
-| GitHub repo `Chen-MouChin/cat-health-tw` | 有（private）。Pages 沒開：private repo 要 GitHub Pro 才能用，而且 Pages 站是公開的。先內部開發、用 ngrok 測試 | 上線時決定託管 |
+| GitHub repo `Chen-MouChin/cat-health-tw` | 有（public，2026-10-08 重開，乾淨歷史）。Pages 已開，Source = GitHub Actions，手動觸發部署 | 有自己網域後改 SITE_URL |
 | 自訂網域 | 未買。README 寫 cat-health.tw。買好後依上線託管方式設 DNS（用 GitHub Pages 的話：Cloudflare DNS 指 Pages IP、`frontend/CNAME`、勾 Enforce HTTPS），並改 build.py `SITE_URL` 與所有 canonical | 買網域是你 |
 | AdSense | 未申請。github.io 子網域不會過，要先有網域。站內隱私政策與廣告佔位已備。申請時機：20 到 30 篇 reviewed 之後 | 申請是你 |
 | Google Search Console | 未設 | 網域好後 |

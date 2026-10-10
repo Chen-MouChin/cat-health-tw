@@ -27,8 +27,7 @@ python workbench/server.py                          # http://127.0.0.1:8010/ ；
 # 核心循環：改 content/ 或 build.py → 重建 → 本機預覽
 python build.py                                     # 無參數，全量重建（見下方「Build pipeline」）
 python sandbox/serve.py                             # http://localhost:8000/，服務 frontend/，關快取
-# 內部測試（網站尚未公開）：本機起站後用 ngrok 開 HTTPS 網址給手機或同事看，定位功能要 HTTPS 才能測
-ngrok http 8000 --basic-auth "帳號:至少8碼的密碼"
+# 本機 server 一律只綁 127.0.0.1，不開到區網或公網。手機測試（含定位，需要 HTTPS）用部署後的線上網址
 # 或 python -m http.server 8000 --bind 127.0.0.1 --directory frontend
 
 # 測試 / 檢查
