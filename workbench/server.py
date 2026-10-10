@@ -26,7 +26,7 @@ Python 標準庫 HTTP 伺服器 + Vue 3（CDN）單頁前端，不需要 npm、�
     POST /api/deploy                    gh workflow run「Deploy to GitHub Pages」，這才是上線
     /api/deploy/status                  最近一次部署的狀態
 
-安全：預設只綁 127.0.0.1。--lan 開給區網的小幫手：要帶啟動時印出的通行碼，只能審稿，commit／push／部署只限本機；
+安全：預設只綁 127.0.0.1。--lan 另開 https://<區網 IP>（自簽憑證，加密傳輸）給小幫手：要帶啟動時印出的通行碼，只能審稿，commit／push／部署只限本機；
 公網位址一律拒絕，Host 標頭不對也拒絕。POST 需帶 X-Workbench: 1 標頭（擋跨站表單）。
 """
 from __future__ import annotations
@@ -45,6 +45,8 @@ import http.cookies
 import ipaddress
 import secrets
 import socket
+import ssl
+import threading
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
@@ -433,6 +435,49 @@ def client_role(ip: str, cookie_header: str, query_token: str) -> str:
     return "reviewer" if given and hmac.compare_digest(given, ACCESS["token"]) else ""
 
 
+CERT_DIR = ROOT / "build" / "workbench-cert"   # build/ 不進 git
+
+
+def ensure_cert(ip: str) -> tuple[Path, Path, str]:
+    """區網 HTTPS 用的自簽憑證。沒有、過期或 IP 換了就重產。回傳 (cert, key, SHA-256 指紋)。"""
+    from cryptography import x509
+    from cryptography.hazmat.primitives import hashes, serialization
+    from cryptography.hazmat.primitives.asymmetric import ec
+    from cryptography.x509.oid import NameOID
+
+    cert_p, key_p = CERT_DIR / "cert.pem", CERT_DIR / "key.pem"
+    if cert_p.exists() and key_p.exists():
+        cert = x509.load_pem_x509_certificate(cert_p.read_bytes())
+        try:
+            sans = cert.extensions.get_extension_for_class(x509.SubjectAlternativeName).value
+            ips = {str(a) for a in sans.get_values_for_type(x509.IPAddress)}
+        except x509.ExtensionNotFound:
+            ips = set()
+        still_valid = cert.not_valid_after_utc > dt.datetime.now(dt.timezone.utc) + dt.timedelta(days=7)
+        if ip in ips and still_valid:
+            return cert_p, key_p, cert.fingerprint(hashes.SHA256()).hex(":").upper()
+
+    CERT_DIR.mkdir(parents=True, exist_ok=True)
+    key = ec.generate_private_key(ec.SECP256R1())
+    name = x509.Name([x509.NameAttribute(NameOID.COMMON_NAME, "cat-health workbench")])
+    now = dt.datetime.now(dt.timezone.utc)
+    cert = (
+        x509.CertificateBuilder()
+        .subject_name(name).issuer_name(name)
+        .public_key(key.public_key())
+        .serial_number(x509.random_serial_number())
+        .not_valid_before(now - dt.timedelta(minutes=5))
+        .not_valid_after(now + dt.timedelta(days=365))
+        .add_extension(x509.SubjectAlternativeName([x509.IPAddress(ipaddress.ip_address(ip))]), critical=False)
+        .add_extension(x509.BasicConstraints(ca=False, path_length=None), critical=True)
+        .sign(key, hashes.SHA256())
+    )
+    key_p.write_bytes(key.private_bytes(serialization.Encoding.PEM, serialization.PrivateFormat.PKCS8,
+                                        serialization.NoEncryption()))
+    cert_p.write_bytes(cert.public_bytes(serialization.Encoding.PEM))
+    return cert_p, key_p, cert.fingerprint(hashes.SHA256()).hex(":").upper()
+
+
 def lan_ip() -> str:
     """本機在區網的 IP（只查路由，不送封包）。"""
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -504,7 +549,7 @@ class Handler(SimpleHTTPRequestHandler):
                 if qs.get("t") and self.role == "reviewer":
                     # 通行碼換成 cookie，網址列不留通行碼
                     self.send_response(303)
-                    self.send_header("Set-Cookie", f"wb_token={ACCESS['token']}; HttpOnly; SameSite=Strict; Path=/")
+                    self.send_header("Set-Cookie", f"wb_token={ACCESS['token']}; HttpOnly; Secure; SameSite=Strict; Path=/")
                     self.send_header("Location", "/")
                     self.end_headers()
                     return
@@ -640,21 +685,44 @@ def main() -> int:
     ap.add_argument("--lan", action="store_true", help="開給同區網的小幫手審稿（要通行碼；commit／push／部署只限本機）")
     ap.add_argument("--port", type=int, default=8010)
     args = ap.parse_args()
-    host = "0.0.0.0" if args.lan else "127.0.0.1"
     ACCESS["hosts"] = {f"127.0.0.1:{args.port}", f"localhost:{args.port}"}
-    srv = ThreadingHTTPServer((host, args.port), Handler)
+    # 本機：http，只綁 127.0.0.1
+    srv = ThreadingHTTPServer(("127.0.0.1", args.port), Handler)
     print(f"貓健康站 工作檯 → http://127.0.0.1:{args.port}/   (Ctrl+C 停止)")
+    servers = [srv]
     if args.lan:
+        # 區網：https，只綁區網 IP；同一個 port，位址不同不衝突
         ip = lan_ip()
+        if ip == "127.0.0.1":
+            print("找不到區網 IP，--lan 沒有開。")
+            return 2
+        try:
+            cert_p, key_p, fp = ensure_cert(ip)
+        except ImportError:
+            print("區網 HTTPS 需要 cryptography：pip install cryptography")
+            return 2
+        ctx = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
+        ctx.minimum_version = ssl.TLSVersion.TLSv1_2
+        ctx.load_cert_chain(cert_p, key_p)
+        lan = ThreadingHTTPServer((ip, args.port), Handler)
+        lan.socket = ctx.wrap_socket(lan.socket, server_side=True)
+        servers.append(lan)
         ACCESS["token"] = secrets.token_urlsafe(12)
         ACCESS["hosts"].add(f"{ip}:{args.port}")
-        print(f" 區網審稿網址（給小幫手，含通行碼，每次啟動都會換）：http://{ip}:{args.port}/?t={ACCESS['token']}")
+        print(f" 區網審稿網址（給小幫手，含通行碼，每次啟動都會換）：https://{ip}:{args.port}/?t={ACCESS['token']}")
+        print(f" 憑證指紋 SHA-256：{fp}")
+        print(" 第一次開會出現「連線不是私人連線」：先在瀏覽器的憑證資訊比對上面的指紋，一樣再按「繼續前往」。")
         print(" 小幫手可以審文章、核對文獻、重建預覽；commit、push、部署只能在這台電腦操作。")
         print(" 只在自己的辦公室網路開；Windows 防火牆只允許「私人網路」。用完 Ctrl+C 關掉。")
+    for s in servers[1:]:
+        threading.Thread(target=s.serve_forever, daemon=True).start()
     try:
         srv.serve_forever()
     except KeyboardInterrupt:
         pass
+    finally:
+        for s in servers:
+            s.server_close()
     return 0
 
 

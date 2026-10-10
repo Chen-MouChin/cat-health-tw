@@ -22,7 +22,7 @@ python -m venv .venv && .venv/Scripts/activate      # Windows
 pip install -r requirements.txt                     # 只有 markdown；爬蟲另裝 scrapers/requirements.txt
 
 # 工作檯（人工審核用，本機）：文章 r/d/f/x、文獻 approve、重建、commit/push
-python workbench/server.py                          # http://127.0.0.1:8010/ ；Vue 3 走 CDN，無 build；預設只綁本機，--lan 給區網小幫手（通行碼、私有網段、commit/push/部署限本機），不開到公網
+python workbench/server.py                          # http://127.0.0.1:8010/ ；Vue 3 走 CDN，無 build；預設只綁本機，--lan 給區網小幫手（HTTPS 自簽憑證、通行碼、私有網段、commit/push/部署限本機），不開到公網
 
 # 核心循環：改 content/ 或 build.py → 重建 → 本機預覽
 python build.py                                     # 無參數，全量重建（見下方「Build pipeline」）
