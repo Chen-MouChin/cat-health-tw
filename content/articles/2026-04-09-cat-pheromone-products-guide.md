@@ -4,7 +4,7 @@ slug: cat-pheromone-products-guide
 date: 2026-04-09
 category: 行為
 tags: [費洛蒙, 壓力, 焦慮, 噴霧, 擴散器, 多貓, 引介]
-description: "費洛蒙擴散器和噴霧不是萬靈丹，但對特定壓力情境有明確效果。了解臉部費洛蒙與安撫費洛蒙的差異、適用情境、台灣取得方式，以及費洛蒙無效時該怎麼辦。"
+description: "費洛蒙擴散器和噴霧對特定壓力情境有效果。了解臉部費洛蒙與安撫費洛蒙的差異、適用情境、台灣取得方式，以及費洛蒙無效時該怎麼辦。"
 sources:
   - "ISFM Feline Stress and Welfare Guidelines 2020: 合成費洛蒙在環境管理中的循證應用"
   - "International Cat Care: Pheromone Therapy — F3/F4 費洛蒙機制、臨床研究回顧"

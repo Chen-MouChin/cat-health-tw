@@ -78,6 +78,8 @@ BRAND_RE = re.compile("|".join(re.escape(b) for b in BRANDS), re.I)
 URGENT_RE = re.compile(r"立刻|馬上|現在就|不要等|衝急診|衝醫院|緊急狀況|🚨|‼")
 ABSOLUTE_RE = re.compile(r"絕對(?:不|禁止|避免|能|要|會)|永遠(?!有食物)|(?<!不)一定能|保證(?!金|成分)|必定|毫無疑問|從不(?!吃)")
 AI_PHRASE_RE = re.compile(r"值得注意的是|重要的是|讓我們|一起來|不只是[^，。]{1,20}更是|總而言之|換句話說|這意味著|毫無疑問|你有沒有想過")
+# 防禦句型黑名單：寫我們怎麼做，不寫我們不是什麼、不做什麼
+DEFENSIVE_RE = re.compile(r"不假裝|假裝是|我們不是|我們並非|而不是|並非|不靠|不憑|不是[^，。；\n]{1,30}[，,]?\s*而是|不替(?:你|讀者)|我們無法|我們做不到")
 DASH_RE = re.compile(r"——|—|→|≠")
 EMOJI_RE = re.compile(
     "[\U0001F300-\U0001FAFF\U00002600-\U000027BF\U0001F000-\U0001F2FF⭐⭕‼⁉™ℹ↔-↙↩↪⌚⌛⌨⏏⏩-⏳⏸-⏺Ⓜ▪▫▶◀◻-◾⤴⤵⬅-⬇⬛⬜〰〽㊗㊙️✅❌❎❓-❕❗➕-➗➰➿]"
@@ -195,6 +197,8 @@ def lint_one(path: Path, citations: dict, known_slugs: set[str]) -> dict:
             fails.append(("absolute-word", f"L{i}: …{line[max(0, m.start()-8):m.end()+8].strip()}…"))
         for m in AI_PHRASE_RE.finditer(line):
             fails.append(("ai-phrase", f"L{i}: {m.group(0)}"))
+        for m in DEFENSIVE_RE.finditer(line):
+            fails.append(("defensive", f"L{i}: …{line[max(0, m.start()-8):m.end()+8].strip()}…"))
 
     # fake direct quotes
     for m in QUOTED_PARA_RE.finditer(body):
@@ -286,6 +290,22 @@ def fix_one(path: Path) -> list[str]:
 # main
 # ---------------------------------------------------------------------------
 
+def lint_pages() -> list[tuple[str, int, str]]:
+    """手寫頁面的可見文字也套防禦句型黑名單（script/style 與標籤先拿掉）。"""
+    root = ARTICLES.parent.parent / "frontend"
+    hits = []
+    for page in sorted(root.glob("*.html")):
+        html = page.read_text(encoding="utf-8")
+        keep_lines = lambda m: "\n" * m.group(0).count("\n")
+        html = re.sub(r"<(script|style)\b.*?</\1>", keep_lines, html, flags=re.S | re.I)
+        html = HTML_COMMENT_RE.sub(keep_lines, html)
+        for i, line in enumerate(html.splitlines(), 1):
+            text = re.sub(r"<[^>]+>", "", line)
+            for m in DEFENSIVE_RE.finditer(text):
+                hits.append((page.name, i, text[max(0, m.start()-10):m.end()+10].strip()))
+    return hits
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--slug")
@@ -294,7 +314,15 @@ def main() -> int:
     ap.add_argument("--fix", action="store_true")
     ap.add_argument("--json", action="store_true")
     ap.add_argument("--verbose", "-v", action="store_true", help="逐項列出所有 FAIL/WARN")
+    ap.add_argument("--pages", action="store_true", help="只檢查 frontend/ 手寫頁面的防禦句型")
     args = ap.parse_args()
+
+    if args.pages:
+        hits = lint_pages()
+        for name, i, ctx in hits:
+            print(f"FAIL defensive  {name}:{i}  …{ctx}…")
+        print(f"手寫頁面防禦句型：{len(hits)} 處")
+        return 1 if hits else 0
 
     citations = {k: v for k, v in json.loads(CITATIONS.read_text(encoding="utf-8")).items() if k != "_meta"}
     files = sorted(p for p in ARTICLES.glob("*.md") if p.name != "README.md")
@@ -342,6 +370,12 @@ def main() -> int:
     print(f"\n{len(results)} 篇 · FAIL {total_f} · WARN {total_w}")
     clean = sum(1 for r in results if not r["fails"])
     print(f"零 FAIL：{clean}/{len(results)} 篇")
+    if not single:
+        hits = lint_pages()
+        for name, i, ctx in hits:
+            print(f"    FAIL defensive  {name}:{i}  …{ctx}…")
+        print(f"手寫頁面防禦句型：{len(hits)} 處")
+        total_f += len(hits)
     return 1 if args.strict and total_f else 0
 
 

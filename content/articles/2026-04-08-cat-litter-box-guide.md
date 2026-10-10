@@ -4,7 +4,7 @@ slug: cat-litter-box-guide
 date: 2026-04-08
 category: 環境
 tags: [貓砂, 貓砂盆, 豆腐砂, 礦砂, 居家, 清潔]
-description: "貓砂材質（豆腐砂、礦砂、水晶砂、木屑砂、紙砂）怎麼選、砂盆要多大、該放幾個、放哪裡、多久清一次，以及哪些排尿狀況其實是生病而不是砂盆問題。"
+description: "貓砂材質（豆腐砂、礦砂、水晶砂、木屑砂、紙砂）怎麼選、砂盆要多大、該放幾個、放哪裡、多久清一次，以及哪些排尿狀況其實是生病，建議請獸醫看看。"
 sources:
   - "2014 ISFM/AAFP Guidelines for Diagnosing and Solving House-Soiling Behavior in Cats: 砂盆數量、位置、基質是排除疾病後的行為介入"
   - "2013 ISFM/AAFP Environmental Needs Guidelines: 關鍵資源（食、水、貓砂）要多處且分隔"
