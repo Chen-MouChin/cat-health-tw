@@ -22,14 +22,14 @@ python -m venv .venv && .venv/Scripts/activate      # Windows
 pip install -r requirements.txt                     # 只有 markdown；爬蟲另裝 scrapers/requirements.txt
 
 # 工作檯（人工審核用，本機）：文章 r/d/f/x、文獻 approve、重建、commit/push
-python workbench/server.py                          # http://127.0.0.1:8010/ ；Vue 3 走 CDN，無 build
+python workbench/server.py                          # http://127.0.0.1:8010/ ；Vue 3 走 CDN，無 build；只綁本機，不開到區網或公網
 
 # 核心循環：改 content/ 或 build.py → 重建 → 本機預覽
 python build.py                                     # 無參數，全量重建（見下方「Build pipeline」）
 python sandbox/serve.py                             # http://localhost:8000/，服務 frontend/，關快取
 # 內部測試（網站尚未公開）：本機起站後用 ngrok 開 HTTPS 網址給手機或同事看，定位功能要 HTTPS 才能測
 ngrok http 8000 --basic-auth "帳號:至少8碼的密碼"
-# 或 python -m http.server 8000 --directory frontend
+# 或 python -m http.server 8000 --bind 127.0.0.1 --directory frontend
 
 # 測試 / 檢查
 python scripts/lint_articles.py [--slug X] [--fix]  # 文章寫作規範檢查（品牌、引用、路徑、AI 痕跡）；Edit 文章後 hook 會自動跑

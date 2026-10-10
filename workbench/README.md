@@ -7,7 +7,7 @@
 ```bash
 python workbench/server.py                 # http://127.0.0.1:8010/，只給本機
 python workbench/server.py --port 9000
-python workbench/server.py --host 0.0.0.0  # 開給同區網的手機或同事；寫入 API 也會一起開，用完就關
+# 只綁 127.0.0.1；其他位址會被拒絕
 ```
 
 ## 審核流程

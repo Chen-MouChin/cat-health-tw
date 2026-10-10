@@ -26,7 +26,7 @@ Python 標準庫 HTTP 伺服器 + Vue 3（CDN）單頁前端，不需要 npm、�
     POST /api/deploy                    gh workflow run「Deploy to GitHub Pages」，這才是上線
     /api/deploy/status                  最近一次部署的狀態
 
-安全：預設只綁 127.0.0.1；要給區網用請明示 --host 0.0.0.0。POST 需帶 X-Workbench: 1 標頭（擋跨站表單）。
+安全：只綁 127.0.0.1，其他位址啟動時拒絕。POST 需帶 X-Workbench: 1 標頭（擋跨站表單）。
 """
 from __future__ import annotations
 
@@ -566,14 +566,15 @@ class Handler(SimpleHTTPRequestHandler):
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--host", type=str, default="127.0.0.1", help="預設只給本機；區網用 --host 0.0.0.0（寫入 API 會一起開給同網路的人）")
+    ap.add_argument("--host", type=str, default="127.0.0.1", help="只給本機用；工作檯有寫入 API，不要綁 0.0.0.0 或開到公網")
     ap.add_argument("--port", type=int, default=8010)
     args = ap.parse_args()
+    # 工作檯能改文章、commit、push、部署，只准綁本機
+    if args.host not in ("127.0.0.1", "localhost", "::1"):
+        print(f"拒絕綁定 {args.host}：工作檯只能在本機使用（127.0.0.1）。")
+        return 2
     srv = ThreadingHTTPServer((args.host, args.port), Handler)
-    display_host = "127.0.0.1" if args.host == "0.0.0.0" else args.host
-    print(f"貓健康站 工作檯 → http://{display_host}:{args.port}/   (Ctrl+C 停止)")
-    if args.host == "0.0.0.0":
-        print(f" 已開給區網：同網路的裝置用本機 IP 連，例如 http://192.168.X.X:{args.port}/ ；注意寫入 API 也開著")
+    print(f"貓健康站 工作檯 → http://{args.host}:{args.port}/   (Ctrl+C 停止)")
     try:
         srv.serve_forever()
     except KeyboardInterrupt:

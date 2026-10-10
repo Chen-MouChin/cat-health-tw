@@ -26,7 +26,7 @@ git pull
 
 ```bash
 python build.py                           # 改過 content/ 或 build.py 才需要
-python sandbox/serve.py                   # http://localhost:8000/；沒有 sandbox/ 就用 python -m http.server 8000 --directory frontend
+python sandbox/serve.py                   # http://localhost:8000/；沒有 sandbox/ 就用 python -m http.server 8000 --bind 127.0.0.1 --directory frontend
 ngrok config add-authtoken <你的 token>    # 第一次用 ngrok 才需要
 ngrok http 8000 --basic-auth "帳號:密碼"    # 密碼至少 8 碼
 ```
@@ -71,7 +71,7 @@ python -m venv .venv && .venv/Scripts/activate
 pip install -r requirements.txt            # markdown；fontTools 與 Pillow 只有做 Logo 才需要
 
 python build.py                            # content/ → frontend/
-python sandbox/serve.py                    # http://localhost:8000/ 預覽（sandbox/ 不進 git，沒有就用 python -m http.server 8000 --directory frontend）
+python sandbox/serve.py                    # http://localhost:8000/ 預覽（sandbox/ 不進 git，沒有就用 python -m http.server 8000 --bind 127.0.0.1 --directory frontend）
 python workbench/server.py                 # http://127.0.0.1:8010/ 審核工作檯
 python scripts/lint_articles.py            # 寫作規範檢查，FAIL 必須為 0
 ```

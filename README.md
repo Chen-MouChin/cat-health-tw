@@ -38,9 +38,9 @@ python -m venv .venv && .venv/Scripts/activate   # Windows
 pip install -r requirements.txt
 
 python build.py                                  # 重建前端
-python -m http.server 8000 --directory frontend  # 預覽 localhost:8000
+python -m http.server 8000 --bind 127.0.0.1 --directory frontend  # 預覽 localhost:8000
 python scripts/lint_articles.py                  # 寫作規範檢查
-python workbench/server.py                       # 審核工作檯 http://127.0.0.1:8010/（區網加 --host 0.0.0.0）
+python workbench/server.py                       # 審核工作檯 http://127.0.0.1:8010/（只綁本機）
 ```
 
 ## 部署
