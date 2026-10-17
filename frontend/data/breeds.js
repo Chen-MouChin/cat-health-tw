@@ -1,7 +1,7 @@
 window.BREEDS = {
   "_meta": {
     "count": 68,
-    "generated_at": "2026-10-17 13:35"
+    "generated_at": "2026-10-17 17:09"
   },
   "breeds": [
     {
@@ -5351,6 +5351,123 @@ window.BREEDS = {
       "data_source": "thecatapi"
     },
     {
+      "id": "buri",
+      "slug": "buri",
+      "name_zh": "波米拉貓",
+      "name_en": "Burmilla",
+      "alt_names": [],
+      "origin": "英國",
+      "origin_en": "United Kingdom",
+      "country_code": "GB",
+      "life_span_years": [
+        10.0,
+        15.0
+      ],
+      "weight_kg": [
+        3.0,
+        6.0
+      ],
+      "temperament_zh": [
+        "隨和",
+        "友善",
+        "聰明",
+        "活躍",
+        "愛玩",
+        "社交"
+      ],
+      "temperament_en": [
+        "Easy Going",
+        "Friendly",
+        "Intelligent",
+        "Lively",
+        "Playful",
+        "Social"
+      ],
+      "scores": {
+        "energy": 3,
+        "grooming": 3,
+        "intelligence": 3,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 3,
+        "social_needs": 4,
+        "vocalisation": 5,
+        "health_issues": 3,
+        "shedding": 3,
+        "adaptability": 5
+      },
+      "score_labels": {
+        "energy": "活力",
+        "grooming": "梳毛需求",
+        "intelligence": "智商",
+        "affection": "親人度",
+        "child_friendly": "親小孩",
+        "stranger_friendly": "親陌生人",
+        "social_needs": "社交需求",
+        "vocalisation": "叫聲多寡",
+        "health_issues": "健康問題",
+        "shedding": "掉毛量",
+        "adaptability": "適應力"
+      },
+      "tags": {
+        "hairless": false,
+        "natural": false,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": true
+      },
+      "description_en": "The Burmilla is a fairly placid cat. She tends to be an easy cat to get along with, requiring minimal care. The Burmilla is affectionate and sweet and makes a good companion, the Burmilla is an ideal companion to while away a lonely evening. Loyal, devoted, and affectionate, this cat will stay by its owner, always keeping them company.",
+      "description_zh": "",
+      "description_zh_status": "pending",
+      "tw_notes": {},
+      "wikipedia_url_en": "https://en.wikipedia.org/wiki/Burmilla",
+      "wikipedia_url_zh": "",
+      "images": [
+        {
+          "url": "https://cdn2.thecatapi.com/images/r530zDuJU.jpg",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        },
+        {
+          "url": "https://cdn2.thecatapi.com/images/jvg3XfEdC.jpg",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        },
+        {
+          "url": "https://cdn2.thecatapi.com/images/3Wjx1Tq7X.jpg",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        },
+        {
+          "url": "https://cdn2.thecatapi.com/images/wgoLPWPZQ.jpg",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        },
+        {
+          "url": "https://cdn2.thecatapi.com/images/J4Jv10E7O.jpg",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        },
+        {
+          "url": "https://cdn2.thecatapi.com/images/p2U4ZXgKL.jpg",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        }
+      ],
+      "thecatapi_url": "https://thecatapi.com/breeds/buri",
+      "data_source": "thecatapi"
+    },
+    {
       "id": "amis",
       "slug": "amis",
       "name_zh": "澳洲霧貓",
@@ -6704,123 +6821,6 @@ window.BREEDS = {
         }
       ],
       "thecatapi_url": "https://thecatapi.com/breeds/mcoo",
-      "data_source": "thecatapi"
-    },
-    {
-      "id": "buri",
-      "slug": "buri",
-      "name_zh": "緬甸玳瑁貓",
-      "name_en": "Burmilla",
-      "alt_names": [],
-      "origin": "英國",
-      "origin_en": "United Kingdom",
-      "country_code": "GB",
-      "life_span_years": [
-        10.0,
-        15.0
-      ],
-      "weight_kg": [
-        3.0,
-        6.0
-      ],
-      "temperament_zh": [
-        "隨和",
-        "友善",
-        "聰明",
-        "活躍",
-        "愛玩",
-        "社交"
-      ],
-      "temperament_en": [
-        "Easy Going",
-        "Friendly",
-        "Intelligent",
-        "Lively",
-        "Playful",
-        "Social"
-      ],
-      "scores": {
-        "energy": 3,
-        "grooming": 3,
-        "intelligence": 3,
-        "affection": 5,
-        "child_friendly": 4,
-        "stranger_friendly": 3,
-        "social_needs": 4,
-        "vocalisation": 5,
-        "health_issues": 3,
-        "shedding": 3,
-        "adaptability": 5
-      },
-      "score_labels": {
-        "energy": "活力",
-        "grooming": "梳毛需求",
-        "intelligence": "智商",
-        "affection": "親人度",
-        "child_friendly": "親小孩",
-        "stranger_friendly": "親陌生人",
-        "social_needs": "社交需求",
-        "vocalisation": "叫聲多寡",
-        "health_issues": "健康問題",
-        "shedding": "掉毛量",
-        "adaptability": "適應力"
-      },
-      "tags": {
-        "hairless": false,
-        "natural": false,
-        "rare": false,
-        "rex": false,
-        "suppressed_tail": false,
-        "short_legs": false,
-        "hypoallergenic": false,
-        "indoor": false,
-        "lap": true
-      },
-      "description_en": "The Burmilla is a fairly placid cat. She tends to be an easy cat to get along with, requiring minimal care. The Burmilla is affectionate and sweet and makes a good companion, the Burmilla is an ideal companion to while away a lonely evening. Loyal, devoted, and affectionate, this cat will stay by its owner, always keeping them company.",
-      "description_zh": "",
-      "description_zh_status": "pending",
-      "tw_notes": {},
-      "wikipedia_url_en": "https://en.wikipedia.org/wiki/Burmilla",
-      "wikipedia_url_zh": "",
-      "images": [
-        {
-          "url": "https://cdn2.thecatapi.com/images/r530zDuJU.jpg",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        },
-        {
-          "url": "https://cdn2.thecatapi.com/images/jvg3XfEdC.jpg",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        },
-        {
-          "url": "https://cdn2.thecatapi.com/images/3Wjx1Tq7X.jpg",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        },
-        {
-          "url": "https://cdn2.thecatapi.com/images/wgoLPWPZQ.jpg",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        },
-        {
-          "url": "https://cdn2.thecatapi.com/images/J4Jv10E7O.jpg",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        },
-        {
-          "url": "https://cdn2.thecatapi.com/images/p2U4ZXgKL.jpg",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        }
-      ],
-      "thecatapi_url": "https://thecatapi.com/breeds/buri",
       "data_source": "thecatapi"
     },
     {

@@ -91,9 +91,7 @@
     "url_verified": true,
     "verified_at": "2026-10-14",
     "notes": "完全 OA。提供「如何看貓的個性」的框架，不做品種比較。與 Salonen/Wilhelmy 不同層級：這篇是個體層級理論框架。",
-    "cited_by": [
-      "mixed-breed-cats-taiwan"
-    ]
+    "cited_by": []
   },
   "SALONEN-2019-BREED-BEHAVIOUR": {
     "title": "Breed differences of heritable behaviour traits in cats",
@@ -180,14 +178,7 @@
     "status": "approved",
     "url_verified": true,
     "notes": "PDF 原文標題為 modified 2019，但 IRIS 網站 2023 重新發布。數值經 PDF 原文逐字核實。 2026-10-14：IRIS 網站已換成 2026 版，文章改引 IRIS-CKD-2026。",
-    "cited_by": [
-      "cat-ckd-complete-guide",
-      "cat-common-symptoms-taiwan",
-      "cat-end-of-life-care-taiwan",
-      "cat-eye-ear-problems-taiwan",
-      "cat-life-stages-care-taiwan",
-      "cat-vaccination-wellness-taiwan"
-    ],
+    "cited_by": [],
     "verified_at": null
   },
   "IRIS-CKD-TREATMENT-2023": {
@@ -215,12 +206,7 @@
     "status": "approved",
     "url_verified": true,
     "notes": "17 頁 PDF 逐字核實。已修正 3 處原摘要中非原文內容：(1)刪除皮下輸液具體 ml 數 (2)刪除 Stage 4 特定磷目標 (3)刪除餵食管建議。14/14 項經 regex 比對原文確認。 2026-10-14：IRIS 網站已換成 2026 版，文章改引 IRIS-CKD-TREATMENT-2026。",
-    "cited_by": [
-      "cat-ckd-complete-guide",
-      "cat-end-of-life-care-taiwan",
-      "cat-food-selection-taiwan",
-      "cat-life-stages-care-taiwan"
-    ]
+    "cited_by": []
   },
   "ISFM-DIABETES-2015": {
     "title": "ISFM Consensus Guidelines on the Practical Management of Diabetes Mellitus in Cats",
@@ -283,17 +269,17 @@
     "verified_at": "2026-10-14"
   },
   "AAFP-FIP-DIAGNOSIS-2022": {
-    "title": "AAFP/EveryCat Feline Infectious Peritonitis Diagnosis Guidelines",
+    "title": "2022 AAFP/EveryCat Feline Infectious Peritonitis Diagnosis Guidelines",
     "title_zh": "AAFP/EveryCat 貓傳染性腹膜炎診斷指引",
-    "authors": "AAFP & EveryCat Health Foundation",
+    "authors": "Thayer V, Gogolski S, Felten S, Hartmann K, et al.",
     "source": "AAFP",
-    "journal": null,
+    "journal": "Journal of Feline Medicine and Surgery 24(9):905-933",
     "url": "https://catvets.com/resource/aafp-everycat-feline-infectious-peritonitis-diagnosis-fip-guidelines/",
     "year": 2022,
     "type": "guideline",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "2022 年最新 FIP 診斷流程：臨床表現+生化+積液分析+Rivalta+RT-PCR。含決策樹流程圖。反映 GS-441524 時代的診斷需求。",
+    "abstract_zh": "AAFP 與 EveryCat 基金會的貓傳染性腹膜炎（FIP）診斷指引。FIP 是貓冠狀病毒在個別貓體內突變造成的，2 歲以下的貓特別容易發病；估計獸醫院貓的死亡病例中約 0.3%–1.4% 死於 FIP（摘要）。表 1 整理風險因素：來自繁殖場、收容所或中途；近期有壓力事件，例如結紮手術、打疫苗、搬家、家裡多了新成員；未結紮的公貓；部分純種貓；多貓家庭與超過 5 隻的擁擠環境。澳洲與美國北卡的研究分別有 55% 與 67% 的病貓不到 2 歲；北卡研究中純種貓約 1.3% 得病，混種貓約 0.35%；另一項研究有 56.7% 的病貓發病前有壓力事件（Signalment and history 一節）。FIP 沒有單一決定性的檢查，要從病史、年齡品種等基本資料與身體檢查開始，一塊塊累積懷疑程度。有積液時檢驗的陽性預測值較高，積液通常蛋白質超過 35 g/L、白蛋白球蛋白比低於 0.4；只有約 56% 的病貓發燒（Diagnosis 各節）。",
     "keywords": [
       "FIP",
       "診斷",
@@ -306,10 +292,15 @@
     ],
     "status": "pending_review",
     "url_verified": true,
-    "notes": "AAFP 官網免費下載",
+    "notes": "AAFP 官網免費下載\n2026-10-17 合併重複條目 AAFP-2022-AAFP-EVERYCAT-FELINE-INFECTIOUS-PER-2022，補上期刊出處，摘要依原文改寫。",
     "cited_by": [
       "cat-fip-guide-taiwan"
-    ]
+    ],
+    "doi": "10.1177/1098612X221118761",
+    "pmid": "36002137",
+    "pmcid": "PMC10812230",
+    "pdf_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10812230/pdf/10.1177_1098612X221118761.pdf",
+    "verified_at": "2026-10-17"
   },
   "ACVIM-HCM-2020": {
     "title": "ACVIM Consensus Statement: Guidelines for the Classification, Diagnosis, and Management of Cardiomyopathies in Cats",
@@ -341,17 +332,17 @@
     ]
   },
   "AAFP-HYPERTHYROIDISM-2016": {
-    "title": "AAFP Guidelines for the Management of Feline Hyperthyroidism",
+    "title": "2016 AAFP Guidelines for the Management of Feline Hyperthyroidism",
     "title_zh": "AAFP 貓甲狀腺亢進管理指引",
-    "authors": "Carney HC, Ward CR, Bailey SJ, et al.",
+    "authors": "Carney HC, Ward CR, Bailey SJ, Bruyette D, et al.",
     "source": "AAFP",
-    "journal": "Journal of Feline Medicine and Surgery",
-    "url": "https://catvets.com/resource/guidelines-practice-guidelines-feline-hyperthyroidism/",
+    "journal": "Journal of Feline Medicine and Surgery 18(5):400-416",
+    "url": "https://catvets.com/resource/management-of-feline-hyperthyroidism-guidelines/",
     "year": 2016,
     "type": "guideline",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "貓甲亢的四種治療選擇：甲巯咪唑（Methimazole）、放射碘（I-131）、手術、處方飼料（y/d）。含診斷流程、監測頻率、腎甲亢共病管理。",
+    "abstract_zh": "AAFP 的貓甲狀腺機能亢進（甲亢）管理指引。甲亢是美國中老年貓最常見的內分泌疾病，10 歲以上的貓約 10% 罹患；世界各地老貓的盛行率約 1.5%–11.4%（Introduction、Summary Points）。指引把診斷分成六個臨床類別，主張不論有沒有其他疾病，甲亢貓都要治療（摘要）。四種常用治療（治療選項比較表）：放射性碘治癒率至少 95%、復發約 5%；甲巰咪唑（methimazole）服藥期間有效率至少 95%，停藥就會復發，最多 25% 的貓出現藥物反應；切除兩側甲狀腺治癒率至少 90%；低碘處方飼料只吃這種飼料期間有效率至少 82%，停吃就復發。甲巰咪唑起始劑量是每隻貓 1.25–2.5 mg、一天兩次（Antithyroid drugs 一節）。指引也說明甲巰咪唑本身不傷腎，治療後腎指數上升多半是原本被甲亢蓋住的腎病（Myths 一節）。",
     "keywords": [
       "甲亢",
       "甲狀腺",
@@ -364,7 +355,7 @@
     ],
     "status": "pending_review",
     "url_verified": true,
-    "notes": "AAFP 官網免費｜2026-10-15 小幫手要求補 PDF：加 PMC 全文 PDF 與 DOI。",
+    "notes": "AAFP 官網免費｜2026-10-15 小幫手要求補 PDF：加 PMC 全文 PDF 與 DOI。\n2026-10-17 合併重複條目 AAFP-2016-MANAGEMENT-OF-FELINE-HYPERTHYROIDIS-2016，補上期刊出處，摘要依原文改寫。",
     "cited_by": [
       "cat-common-symptoms-taiwan",
       "cat-hyperthyroidism-senior",
@@ -373,7 +364,8 @@
     "doi": "10.1177/1098612X16643252",
     "pmid": "27143042",
     "pmcid": "PMC11132203",
-    "pdf_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11132203/pdf/10.1177_1098612X16643252.pdf"
+    "pdf_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11132203/pdf/10.1177_1098612X16643252.pdf",
+    "verified_at": "2026-10-17"
   },
   "AAFP-VACCINATION-2020": {
     "title": "2020 AAFP/AAHA Feline Vaccination Guidelines",
@@ -440,7 +432,7 @@
     ],
     "status": "approved",
     "url_verified": true,
-    "notes": "AAFP 官網免費｜2026-10-15 小幫手要求補 PDF：加 PMC 全文 PDF 與 DOI。",
+    "notes": "AAFP 官網免費｜2026-10-15 小幫手要求補 PDF：加 PMC 全文 PDF 與 DOI。\n2026-10-17 合併重複條目 AAFP-2020-FELINE-RETROVIRUS-MANAGEMENT-2020，補上期刊出處。",
     "cited_by": [
       "cat-adoption-guide-taiwan",
       "cat-indoor-vs-outdoor-taiwan",
@@ -483,7 +475,6 @@
       "cat-common-symptoms-taiwan",
       "cat-end-of-life-care-taiwan",
       "cat-hcm-heart-disease",
-      "cat-hyperthyroidism-senior",
       "cat-ibd-intestinal-disease",
       "cat-life-stages-care-taiwan",
       "cat-litter-box-guide",
@@ -546,22 +537,21 @@
     "notes": "2025 最新版，AAFP 官網免費；2026-10-09 合併重複 key AAFP-2025-FELINEVMA-FELINE-ORAL-HEALTH-AND-DE-2025（原 notes：auto-crawled from catvets.com/guidelines）",
     "cited_by": [
       "cat-dental-health-taiwan",
-      "cat-food-selection-taiwan",
       "cat-life-stages-care-taiwan"
     ]
   },
   "AAFP-NSAID-2024": {
-    "title": "2024 Consensus Guidelines on the Long-term Use of NSAIDs in Cats",
+    "title": "2024 ISFM and AAFP Consensus Guidelines on the Long-term Use of NSAIDs in Cats",
     "title_zh": "2024 貓長期使用 NSAIDs 共識指引",
-    "authors": "AAFP",
+    "authors": "Taylor S, Gruen M, KuKanich K, Lascelles BDX, et al.",
     "source": "AAFP",
-    "journal": null,
-    "url": "https://catvets.com/2024-long-term-use-of-nsaids-in-cats-guidelines/",
+    "journal": "Journal of Feline Medicine and Surgery 26(4):1098612X241241951",
+    "url": "https://catvets.com/resource/2024-long-tern-use-of-nsaids-in-cats-guidelines/",
     "year": 2024,
     "type": "consensus_guideline",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "貓長期使用 NSAIDs（如 meloxicam/robenacoxib）的安全性評估、腎功能監測、退化性關節病（OA）的疼痛管理方案。含 Solensia（frunevetmab）抗體療法。",
+    "abstract_zh": "這份指引取代 2010 年版，談慢性疼痛的貓怎麼長期使用非類固醇消炎止痛藥（NSAIDs）。貓身上研究最多、可長期使用的是美洛昔康（meloxicam）與羅貝考昔（robenacoxib）；貓的葡萄醣醛酸化代謝能力差，人用的乙醯胺酚（acetaminophen）不能給貓（NSAIDs in cats 一節）。開藥前要做身體檢查、量收縮壓，並驗血球與血液生化（Summary Points）。有退化性關節病的貓，最多 69% 同時有慢性腎病（NSAIDS and comorbidities 一節），不過腎病穩定的貓經過個別評估仍可使用（Summary Points）。最常見的副作用在腸胃，長期用藥的貓最多 14% 出現嘔吐（The gastrointestinal tract 一節）；貓不吃飯時要先停藥、問獸醫（Choosing the dosage regimen 一節）。藥有沒有效主要看行為，例如跳躍、上下樓梯、玩耍有沒有恢復（Monitoring 一節）。",
     "keywords": [
       "NSAID",
       "疼痛",
@@ -574,11 +564,16 @@
       "arthritis"
     ],
     "status": "pending_review",
-    "url_verified": false,
-    "notes": "AAFP 官網免費",
+    "url_verified": true,
+    "notes": "AAFP 官網免費\n2026-10-17 合併重複條目 AAFP-2024-ISFM-AAFP-CONSENSUS-GUIDELINES-ON-T-2024，補上期刊出處，摘要依原文改寫。",
     "cited_by": [
       "cat-life-stages-care-taiwan"
-    ]
+    ],
+    "doi": "10.1177/1098612X241241951",
+    "pmid": "38587872",
+    "pmcid": "PMC11103309",
+    "pdf_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11103309/pdf/10.1177_1098612X241241951.pdf",
+    "verified_at": "2026-10-17"
   },
   "AAFP-NUTRITION-2018": {
     "title": "Feeding cats for optimal mental and behavioral well-being",
@@ -644,7 +639,6 @@
     "url_verified": true,
     "notes": "AAFP 官網免費。皮下輸液教學文章的核心引用；2026-10-09 合併重複 key AAFP-2013-FLUID-THERAPY-2013（原 notes：auto-crawled from catvets.com/guidelines | 摘要依指引範圍整理（原文 PDF，catvets landing）。202）｜2026-10-17 小幫手要求補 PDF：加 AAHA 官網 PDF。核對 Table 5 脫水評估：輕度約 5%（皮膚彈性略差、黏膜半乾、眼睛正常）、中度約 8%（皮膚彈性明顯變差、黏膜乾、脈搏弱快、眼球凹陷）、重度超過 10%（另有心跳快、血壓低、意識改變），不是每隻動物都有全部徵象。",
     "cited_by": [
-      "cat-ckd-complete-guide",
       "cat-water-urinary-health-taiwan"
     ],
     "pdf_url": "https://www.aaha.org/wp-content/uploads/globalassets/02-guidelines/fluid-therapy/fluid_therapy_guidelines.pdf",
@@ -722,17 +716,17 @@
     "pdf_url": "https://journals.sagepub.com/doi/pdf/10.1177/1098612X13477537"
   },
   "AAFP-HOSPICE-2023": {
-    "title": "2023 AAFP Feline Hospice & Palliative Care Guidelines",
+    "title": "2023 AAFP/IAAHPC Feline Hospice and Palliative Care Guidelines",
     "title_zh": "2023 AAFP 貓安寧療護指引",
-    "authors": "AAFP",
+    "authors": "Eigner DR, Breitreiter K, Carmack T, Cox S, et al.",
     "source": "AAFP",
-    "journal": null,
+    "journal": "Journal of Feline Medicine and Surgery 25(9):1098612X231201683",
     "url": "https://catvets.com/resource/2023-feline-hospice-and-palliative-care-guidelines/",
     "year": 2023,
     "type": "guideline",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "貓的安寧照護原則：疼痛評估（Grimace Scale）、生活品質量表、轉介安寧的時機、安樂死討論、飼主悲傷支持。",
+    "abstract_zh": "AAFP 與國際動物安寧緩和照護協會（IAAHPC）的貓安寧與緩和照護指引。貓確診會縮短壽命的疾病後，照護目標從治癒改成舒適與生活品質，就是安寧照護（定義一節）。照顧的對象擴大為「照護單位」，飼主的需要也算在內；並用「照護預算」和飼主談能投入的時間、金錢與心力（摘要、Unit of care 一節）。指引提出五步驟照護計畫：了解飼主的需求與目標、說明病程、擬定個人化計畫、執行照護、在貓過世前後給予情緒支持（Five-step plan 一節）。生活品質可以用經過驗證的 20 題線上量表追蹤（Validated QOL instruments 一節）。12 歲以上的貓最多 90% 有退化性關節病，所以疼痛評估是照護重點（Recognition of pain 一節）。餵藥對貓壓力太大時，可考慮放食道胃管，用來給藥、補水與營養（Use of feeding tubes 一節）。安樂死只簡短提及，細節見 AAFP 的臨終教育工具包。",
     "keywords": [
       "安寧",
       "安樂死",
@@ -746,11 +740,16 @@
     ],
     "status": "pending_review",
     "url_verified": true,
-    "notes": "AAFP 官網免費",
+    "notes": "AAFP 官網免費\n2026-10-17 合併重複條目 AAFP-2023-AAFP-IAAHPC-FELINE-HOSPICE-PALLIATI-2023，補上期刊出處，摘要依原文改寫。",
     "cited_by": [
       "cat-cancer-tumors-guide",
       "cat-end-of-life-care-taiwan"
-    ]
+    ],
+    "doi": "10.1177/1098612X231201683",
+    "pmid": "37768060",
+    "pmcid": "PMC10812026",
+    "pdf_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10812026/pdf/10.1177_1098612X231201683.pdf",
+    "verified_at": "2026-10-17"
   },
   "CORNELL-CKD": {
     "title": "Chronic Kidney Disease — Cornell Feline Health Center",
@@ -953,7 +952,7 @@
     "title_zh": "WSAVA 犬貓疫苗接種指引（2024 更新版）",
     "authors": "Day MJ, Horzinek MC, Schultz RD, Squires RA",
     "source": "WSAVA",
-    "journal": null,
+    "journal": "Journal of Small Animal Practice 2024;65(5):277-316",
     "url": "https://wsava.org/committees/vaccination-guidelines-group/",
     "year": 2024,
     "type": "guideline",
@@ -972,7 +971,7 @@
     ],
     "status": "pending_review",
     "url_verified": true,
-    "notes": "WSAVA 免費 PDF｜2026-10-17 小幫手要求補 PDF：加 WSAVA 官方中文版 PDF（貓的部分從第 23 頁開始）。",
+    "notes": "WSAVA 免費 PDF｜2026-10-17 小幫手要求補 PDF：加 WSAVA 官方中文版 PDF（貓的部分從第 23 頁開始）。\n2026-10-17 合併重複條目 WSAVA-VACCINATION-GUIDELINES-2022，補上期刊出處。",
     "cited_by": [
       "cat-life-stages-care-taiwan",
       "cat-upper-respiratory-infection",
@@ -980,20 +979,22 @@
       "kitten-care-complete-taiwan"
     ],
     "pdf_url": "https://wsava.org/wp-content/uploads/2024/05/Chinese-Ver-2024-Vaccination-Guideline-for-Dogs-Cats.pdf",
-    "verified_at": "2026-10-17"
+    "verified_at": "2026-10-17",
+    "doi": "10.1111/jsap.13718",
+    "pmid": "38568777"
   },
   "WSAVA-NUTRITION-2011": {
     "title": "WSAVA Nutritional Assessment Guidelines",
     "title_zh": "WSAVA 營養評估指引",
-    "authors": "WSAVA Global Nutrition Committee",
+    "authors": "WSAVA Nutritional Assessment Guidelines Task Force: Freeman L, Becvarova I, Cave N, MacKay C, Nguyen P, Rama B, Takashima G, Tiffin R, Tsjimoto H, van Beukelen P",
     "source": "WSAVA",
-    "journal": null,
-    "url": "https://wsava.org/committees/global-nutrition-committee/",
+    "journal": "Journal of Small Animal Practice 2011;52(7):385-396（同文另刊 J Feline Med Surg 2011;13(7):516-525，doi 10.1016/j.jfms.2011.05.009，PMID 21704901，PMC11107980）",
+    "url": "https://wsava.org/wp-content/uploads/2020/01/WSAVA-Nutrition-Assessment-Guidelines-2011-JSAP.pdf",
     "year": 2011,
     "type": "guideline",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "貓犬營養評估的標準化流程：體態評分（BCS 1-9）、肌肉量評估（MCS）、飲食史採集、營養相關疾病篩檢。",
+    "abstract_zh": "WSAVA 把營養評估列為體溫、脈搏、呼吸、疼痛之後的第五項生命徵象，建議每次看診都做（前言）。先用簡易篩檢找風險因子，例如零食與餐桌食物超過每日熱量 10%、非傳統飲食、體重不明原因變化；有風險再做延伸評估（表 1）。體態評分（BCS）評的是脂肪，指引採 9 分制，多數寵物的目標是 4 到 5 分，6 分以上與疾病風險的關聯似乎開始上升；肌肉狀況評分（MCS）另外評肌肉量，兩者不一定一致，過重的動物也可能肌肉流失，中長毛動物要用手摸才準（BCS and MCS 節）。熱量可用飼料標示或公式當起點，但貓的個體差異可達上下 50%，之後依體重與體態調整（行動計畫節）。WSAVA 全球營養工具包裡的貓 BCS 表、MCS 表、健康成貓熱量表、飲食紀錄表、住院餵食指南是另外的文件，引用時應分開列。",
     "keywords": [
       "營養",
       "BCS",
@@ -1006,11 +1007,14 @@
     ],
     "status": "pending_review",
     "url_verified": true,
-    "notes": "WSAVA 免費 PDF",
+    "notes": "WSAVA 免費 PDF\n2026-10-17 合併重複條目 WSAVA-NUTRITION-GUIDELINES-2022，補上期刊出處，摘要依原文改寫。",
     "cited_by": [
-      "cat-food-selection-taiwan",
+      "cat-life-stages-care-taiwan",
       "cat-obesity-weight-management"
-    ]
+    ],
+    "doi": "10.1111/j.1748-5827.2011.01079.x",
+    "pmid": "21649660",
+    "verified_at": "2026-10-17"
   },
   "ASPCA-TOXIC-PLANTS": {
     "title": "Toxic and Non-Toxic Plants List — ASPCA",
@@ -1130,25 +1134,6 @@
     "notes": "發表在 ISFM 的 JFMS 期刊，付費牆但摘要免費 | DOI link verified (HEAD blocked by publisher, browser OK)",
     "cited_by": []
   },
-  "AAFP-CAT-FRIENDLY-VETERINARY-ENVIRONMENT-GUID-2020": {
-    "title": "2022 ISFM/AAFP Cat Friendly Veterinary Environment Guidelines",
-    "title_zh": "2022 ISFM/AAFP 貓友善獸醫環境指引",
-    "authors": "AAFP",
-    "source": "AAFP",
-    "journal": null,
-    "url": "https://catvets.com/resource/isfm-aafp-cat-friendly-veterinary-environment-guidelines/",
-    "year": 2022,
-    "type": "guideline",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "說明如何調整獸醫診療環境以減少貓的壓力。針對獸醫團隊，提供候診室、檢查室等空間的實用設計建議，無需昂貴改建即可提升貓就診體驗。",
-    "keywords": [],
-    "disease_tags": [],
-    "status": "needs_review",
-    "url_verified": true,
-    "notes": "auto-crawled from catvets.com/guidelines",
-    "cited_by": []
-  },
   "AAFP-CAT-FRIENDLY-VETERINARY-INTERACTION-GUID-2020": {
     "title": "Cat Friendly Veterinary Interaction Guidelines: Approach and Handling Techniques",
     "title_zh": "",
@@ -1166,50 +1151,7 @@
     "status": "pending_review",
     "url_verified": false,
     "notes": "auto-crawled from catvets.com/guidelines | 摘要依指引範圍整理（原文 PDF）。2026-06-10",
-    "cited_by": [
-      "cat-pheromone-products-guide",
-      "cat-leaving-home-taiwan"
-    ]
-  },
-  "AAFP-2024-ISFM-AAFP-CONSENSUS-GUIDELINES-ON-T-2024": {
-    "title": "2024 ISFM/AAFP Consensus Guidelines on the Long-term Use of NSAIDs in Cats",
-    "title_zh": "2024 ISFM/AAFP 貓長期使用 NSAIDs 共識指引",
-    "authors": "AAFP",
-    "source": "AAFP",
-    "journal": null,
-    "url": "https://catvets.com/2024-long-term-use-of-nsaids-in-cats-guidelines/",
-    "year": 2024,
-    "type": "guideline",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "針對慢性疼痛貓使用 NSAIDs 的決策指引（取代 2010 版）。涵蓋有共病的貓，提供降低副作用、與飼主合作的實用建議。",
-    "keywords": [],
-    "disease_tags": [],
-    "status": "needs_review",
-    "url_verified": false,
-    "notes": "auto-crawled from catvets.com/guidelines",
     "cited_by": []
-  },
-  "AAFP-2023-AAFP-IAAHPC-FELINE-HOSPICE-PALLIATI-2023": {
-    "title": "2023 AAFP/IAAHPC Feline Hospice and Palliative Care Guidelines",
-    "title_zh": "2023 AAFP/IAAHPC 貓安寧緩和照護指引",
-    "authors": "AAFP",
-    "source": "AAFP",
-    "journal": null,
-    "url": "https://catvets.com/resource/2023-feline-hospice-and-palliative-care-guidelines/",
-    "year": 2023,
-    "type": "guideline",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "針對貓臨終與舒緩照護，強調溝通、倫理與個人化護理。重點在整體照護計畫、「照護預算」與「照護單位」概念，涵蓋舒適照護與情緒福祉評估。",
-    "keywords": [],
-    "disease_tags": [],
-    "status": "needs_review",
-    "url_verified": false,
-    "notes": "auto-crawled from catvets.com/guidelines",
-    "cited_by": [
-      "cat-end-of-life-care-taiwan"
-    ]
   },
   "AAFP-2022-AAFP-ISFM-CAT-FRIENDLY-VETERINARY-I-2022": {
     "title": "2022 AAFP/ISFM Cat Friendly Veterinary Interaction Guidelines: Approach and Handling Techniques",
@@ -1235,43 +1177,26 @@
   "AAFP-2022-ISFM-AAFP-CAT-FRIENDLY-VETERINARY-E-2022": {
     "title": "2022 ISFM/AAFP Cat Friendly Veterinary Environment Guidelines",
     "title_zh": "",
-    "authors": "AAFP",
+    "authors": "Taylor S, St Denis K, Collins S, Dowgray N, et al.",
     "source": "AAFP",
-    "journal": null,
+    "journal": "Journal of Feline Medicine and Surgery 24(11):1133-1163",
     "url": "https://catvets.com/resource/isfm-aafp-cat-friendly-veterinary-environment-guidelines/",
     "year": 2022,
     "type": "guideline",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "",
+    "abstract_zh": "ISFM 與 AAFP 專家小組整理的診所環境指引，重點是讓貓在就診與住院時少受驚嚇。候診區最好和狗分開，至少讓貓看不到、聽不到、聞不到狗；外出籠放在高處，不放地上；可以用布蓋住外出籠讓貓躲（候診區一節）。看診盡量排長一點，理想是 20 分鐘以上（看診室一節）。貓的熱中性區是攝氏 30–38 度，所以貓病房要比醫院其他區域暖；住院區要安靜、有暗的休息時段，籠子朝同一方向排，讓貓彼此看不到（住院區一節）。ISFM 的標準是住院 24 小時內的貓籠至少 2700 平方公分、高 39 公分，超過 24 小時至少 3600 平方公分、高 55 公分（Box 7）。指引強調多數調整不必大改裝也做得到（摘要）。",
     "keywords": [],
     "disease_tags": [],
     "status": "pending_review",
     "url_verified": true,
-    "notes": "auto-crawled from catvets.com/guidelines",
-    "cited_by": []
-  },
-  "AAFP-2022-AAFP-EVERYCAT-FELINE-INFECTIOUS-PER-2022": {
-    "title": "2022 AAFP/EveryCat Feline Infectious Peritonitis Diagnosis Guidelines",
-    "title_zh": "2022 AAFP/EveryCat 貓傳染性腹膜炎（FIP）診斷指引",
-    "authors": "AAFP",
-    "source": "AAFP",
-    "journal": null,
-    "url": "https://catvets.com/guidelines/practice-guidelines/fip-diagnosis-guidelines/",
-    "year": 2022,
-    "type": "guideline",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "為獸醫提供 FIP 診斷所需的關鍵資訊。FIP 是貓最重要的傳染病之一，特別好發於 2 歲以下貓。指引整理品種、病史、理學檢查與診斷檢驗，附臨床圖、表格與影片資源。",
-    "keywords": [],
-    "disease_tags": [],
-    "status": "needs_review",
-    "url_verified": false,
-    "notes": "auto-crawled from catvets.com/guidelines",
-    "cited_by": [
-      "cat-fip-guide-taiwan",
-      "cat-upper-respiratory-infection"
-    ]
+    "notes": "auto-crawled from catvets.com/guidelines\n2026-10-17 合併重複條目 AAFP-CAT-FRIENDLY-VETERINARY-ENVIRONMENT-GUID-2020，補上期刊出處，摘要依原文改寫。",
+    "cited_by": [],
+    "doi": "10.1177/1098612X221128763",
+    "pmid": "36259498",
+    "pmcid": "PMC10845436",
+    "pdf_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10845436/pdf/10.1177_1098612X221128763.pdf",
+    "verified_at": "2026-10-17"
   },
   "AAFP-2022-AAFP-AAHA-ANTIMICROBIAL-STEWARDSHIP-2022": {
     "title": "2022 AAFP/AAHA Antimicrobial Stewardship",
@@ -1364,25 +1289,6 @@
     "notes": "auto-crawled from catvets.com/guidelines",
     "cited_by": []
   },
-  "AAFP-2020-FELINE-RETROVIRUS-MANAGEMENT-2020": {
-    "title": "2020 AAFP Feline Retrovirus Testing and Management Guidelines",
-    "title_zh": "2020 AAFP 貓反轉錄病毒（FeLV/FIV）檢測與管理指引",
-    "authors": "AAFP",
-    "source": "AAFP",
-    "journal": null,
-    "url": "https://catvets.com/resource/guidelines-practice-guidelines-retrovirus-management-guidelines-feline-retrovirus-management/",
-    "year": 2020,
-    "type": "guideline",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "由國際專家小組編制，涵蓋貓白血病病毒（FeLV）與貓免疫缺陷病毒（FIV）的檢測與管理。強調透過教育、檢測與疫苗接種降低傳播，並納入最新定量檢測與臨床決策資訊。",
-    "keywords": [],
-    "disease_tags": [],
-    "status": "needs_review",
-    "url_verified": true,
-    "notes": "auto-crawled from catvets.com/guidelines",
-    "cited_by": []
-  },
   "AAFP-2019-ZOONOSES-2019": {
     "title": "2019 Zoonoses",
     "title_zh": "",
@@ -1450,25 +1356,6 @@
     "notes": "auto-crawled from catvets.com/guidelines",
     "cited_by": []
   },
-  "AAFP-2016-MANAGEMENT-OF-FELINE-HYPERTHYROIDIS-2016": {
-    "title": "2016 AAFP Guidelines for the Management of Feline Hyperthyroidism",
-    "title_zh": "2016 AAFP 貓甲狀腺機能亢進管理指引",
-    "authors": "AAFP",
-    "source": "AAFP",
-    "journal": null,
-    "url": "https://catvets.com/resource/guidelines-practice-guidelines-feline-hyperthyroidism/",
-    "year": 2016,
-    "type": "guideline",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "貓甲亢的診斷與管理策略，將患者分為六個臨床類別。強調所有罹病貓都應治療，提供現有治療方案、監測方法與循證建議，協助獸醫早期診斷與管理。",
-    "keywords": [],
-    "disease_tags": [],
-    "status": "needs_review",
-    "url_verified": true,
-    "notes": "auto-crawled from catvets.com/guidelines",
-    "cited_by": []
-  },
   "AAFP-2015-PAIN-MANAGEMENT-2015": {
     "title": "2015 Pain Management",
     "title_zh": "",
@@ -1505,10 +1392,7 @@
     "status": "pending_review",
     "url_verified": true,
     "notes": "auto-crawled from catvets.com/guidelines | 摘要依指引範圍整理，2026-06-10",
-    "cited_by": [
-      "cat-inappropriate-elimination",
-      "cat-litter-box-guide"
-    ]
+    "cited_by": []
   },
   "AAFP-2013-ENVIRONMENTAL-NEEDS-2013": {
     "title": "2013 Environmental Needs",
@@ -1528,42 +1412,41 @@
     "url_verified": true,
     "notes": "auto-crawled from catvets.com/guidelines | 摘要依已發表指引範圍整理（原文 PDF）。2026-06-10 2026-10-14 補 PDF（小幫手 建議），PMC 版免費。",
     "cited_by": [
-      "cat-environment-enrichment-taiwan",
       "cat-hepatic-lipidosis",
       "cat-home-safety-taiwan",
       "cat-inappropriate-elimination",
       "cat-indoor-vs-outdoor-taiwan",
       "cat-litter-box-guide",
-      "cat-natural-behavior-taiwan",
       "cat-upper-respiratory-infection",
       "cat-water-urinary-health-taiwan",
-      "cat-zoomies-night-activity",
-      "multi-cat-household-taiwan",
       "new-cat-first-week-guide",
-      "solo-cat-mental-health"
+      "should-i-adopt-cat-decision-taiwan"
     ],
     "pdf_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11383066/pdf/10.1177_1098612X13477537.pdf"
   },
   "AAFP-2012-FELINE-FRIENDLY-NURSING-CARE-2012": {
-    "title": "2012 AAFP/ISFM Feline-Friendly Nursing Care Guidelines",
+    "title": "AAFP and ISFM Feline-Friendly Nursing Care Guidelines",
     "title_zh": "2012 AAFP/ISFM 貓友善護理照護指引",
-    "authors": "AAFP",
+    "authors": "Carney HC, Little S, Brownlee-Tomasso D, Harvey AM, et al.",
     "source": "AAFP",
-    "journal": null,
-    "url": "https://catvets.com/resource/guidelines-practice-guidelines-nursing-care-guidelines/",
+    "journal": "Journal of Feline Medicine and Surgery 14(5):337-349",
+    "url": "https://catvets.com/resource/nursing-care-guidelines/",
     "year": 2012,
     "type": "guideline",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "由 AAFP 與 ISFM 共同發布，為獸醫團隊提供基礎護理實作建議。將護理定義為任何促進貓健康或協助病傷恢復的互動，兼顧身心健康。",
+    "abstract_zh": "AAFP 與 ISFM 的貓友善護理指引。指引所說的護理，是獸醫團隊在診所、或飼主在家裡，任何幫助貓維持健康或從病傷恢復、同時顧到身體與情緒的互動；首要目標是讓貓在整個就醫過程覺得安全（摘要）。減少診所壓力有實際好處：住院貓籠內的毛巾噴了合成貓臉費洛蒙後，理毛和進食明顯增加；有小外出籠可以躲、環境裡又有費洛蒙時，貓在 24 小時內吃得比較多（Improved patient outcomes 一節）。被貓咬傷或抓傷沒有處理時，感染率達 30%–50%，手部傷口特別容易感染（Improved safety 一節）。實作建議包括：看診室與住院區保持溫暖、桌面防滑；籠子排列讓貓彼此看不到，提供紙箱或毛巾讓貓躲；住院時餵貓平常吃的食物，處方飼料等回家、食慾恢復再換；其他方法都無效時考慮放餵食管；伊莉莎白頸圈用軟的材質（各區護理建議、飲食一節）。",
     "keywords": [],
     "disease_tags": [],
-    "status": "needs_review",
+    "status": "pending_review",
     "url_verified": true,
-    "notes": "auto-crawled from catvets.com/guidelines",
-    "cited_by": [
-      "cat-pregnancy-birth-nursing-taiwan"
-    ]
+    "notes": "2026-10-17 核對：舊網址 301 轉到 catvets.com/resource/nursing-care-guidelines/，已換新網址。期刊上的正式標題沒有「2012」，2012 是出版年。PMC 只有掃描 PDF，用 Europe PMC 的 PDF 全文核對。cited_by 的 cat-pregnancy-birth-nursing-taiwan 是 ASPCA「Nursing Cat」字面誤配，文中沒有引用本指引，建議移除。",
+    "cited_by": [],
+    "doi": "10.1177/1098612X12445002",
+    "pmid": "22511476",
+    "pmcid": "PMC11132257",
+    "pdf_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11132257/pdf/10.1177_1098612X12445002.pdf",
+    "verified_at": "2026-10-17"
   },
   "AAFP-2006-BARTONELLA-SPP-2006": {
     "title": "2006 Bartonella spp.",
@@ -1602,7 +1485,6 @@
     "url_verified": true,
     "notes": "auto-crawled from catvets.com/guidelines | 摘要依指引範圍整理，2026-06-10 2026-10-14 補 PDF（小幫手 建議），PMC 版免費。",
     "cited_by": [
-      "cat-aggression-causes-treatment",
       "cat-inappropriate-elimination",
       "kitten-socialization"
     ],
@@ -1686,7 +1568,8 @@
       "cat-emergency-care-taiwan",
       "cat-home-safety-taiwan",
       "cat-indoor-vs-outdoor-taiwan",
-      "cat-life-stages-care-taiwan"
+      "cat-life-stages-care-taiwan",
+      "cat-toxic-substances-taiwan"
     ],
     "verified_at": "2026-10-17"
   },
@@ -1797,9 +1680,9 @@
     ]
   },
   "CORNELL-GRIEVING-THE-LOSS-OF-YOUR-CAT-2024": {
-    "title": "Grieving the Loss of Your Cat — Cornell Feline Health Center",
-    "title_zh": "失去貓咪的哀悼 — Cornell 貓健康中心",
-    "authors": "Cornell University College of Veterinary Medicine",
+    "title": "Grieving the Loss of Your Cat",
+    "title_zh": "失去貓之後的哀傷",
+    "authors": "Cornell Feline Health Center, Cornell University College of Veterinary Medicine",
     "source": "Cornell",
     "journal": null,
     "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/grieving-loss-your-cat",
@@ -1807,15 +1690,16 @@
     "type": "educational",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "失去貓可能與失去人類伴侶一樣痛苦。哀悼是健康自然反應，沒有「正常」時間表。介紹哀傷階段、何時該求助專業，以及紀念與調適策略。",
+    "abstract_zh": "康乃爾貓健康中心寫給飼主的衛教頁。失去貓的衝擊可能和失去家人一樣大，不管是意外還是早有預期；哀傷是健康的自然反應，沒有標準時間表，難過、焦慮、疲倦、內疚或鬆一口氣都正常。哀傷可能有否認、憤怒、討價還價、低落、接受幾個階段，但不一定每個都經歷，也沒有固定順序和期限；討價還價常是反覆想『如果早點發現、按時給藥、沒讓牠出門』。睡眠、飲食、日常工作或和家人朋友的互動持續受影響時，可以找社工、心理師、家族治療師等專業協助（When to consult a professional 節）。頁面也談到做安樂死決定的困難，並列出辦追思、灑骨灰、留毛、種樹、做相簿、以貓的名義捐款等紀念方式。頁面沒有數字。",
     "keywords": [],
     "disease_tags": [],
-    "status": "needs_review",
+    "status": "pending_review",
     "url_verified": true,
-    "notes": "auto-crawled from Cornell Feline Health Topics",
+    "notes": "2026-10-17 核對：頁面存在，標題 Grieving the Loss of Your Cat；頁面沒有 Updated 日期，Wayback 最早存檔 2024-06-18，年份 2024 可接受（建議註明頁面無日期，存取日 2026-10-17）。文章有 2 處宣稱原文沒有：『出現不想活的念頭』、『Cornell 把自責列為最常見的反應之一』。",
     "cited_by": [
       "cat-end-of-life-care-taiwan"
-    ]
+    ],
+    "verified_at": "2026-10-17"
   },
   "CORNELL-HISTOPLASMOSIS-2024": {
     "title": "Histoplasmosis",
@@ -1853,13 +1737,16 @@
     "status": "pending_review",
     "url_verified": true,
     "notes": "2026-10-17 讀原文核對（last updated 2021）。",
-    "cited_by": [],
+    "cited_by": [
+      "cat-food-selection-taiwan",
+      "cat-water-urinary-health-taiwan"
+    ],
     "verified_at": "2026-10-17"
   },
   "CORNELL-RESPIRATORY-INFECTIONS-2024": {
-    "title": "Respiratory Infections — Cornell Feline Health Center",
-    "title_zh": "貓呼吸道感染 — Cornell 貓健康中心",
-    "authors": "Cornell University College of Veterinary Medicine",
+    "title": "Respiratory Infections",
+    "title_zh": "貓呼吸道感染",
+    "authors": "Cornell Feline Health Center, Cornell University College of Veterinary Medicine",
     "source": "Cornell",
     "journal": null,
     "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/respiratory-infections",
@@ -1867,18 +1754,18 @@
     "type": "educational",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "貓呼吸道感染常見於高密度群體環境，病因包含病毒、細菌、真菌與原蟲。上呼吸道感染症狀有眼鼻分泌物、咳嗽、打噴嚏；下呼吸道可能進展為肺炎與呼吸困難。疫苗能降低嚴重度。",
+    "abstract_zh": "康乃爾貓健康中心的呼吸道感染衛教頁。這類感染在收容所、繁殖場、街貓群等高密度族群特別常見，病原有病毒、細菌、真菌與原蟲；疫苗大幅減少了嚴重病例，但沒有消滅病原（開頭）。上呼吸道感染的症狀有眼鼻分泌物、咳嗽、打噴嚏、結膜炎、口腔潰瘍、沒精神、不吃；下呼吸道感染會咳嗽、呼吸困難或變快，休息時每分鐘不應超過 35 下。疱疹病毒：最多 97% 的貓一生中會接觸，最多 80% 成為終身感染，其中最多 45% 會在壓力下間歇排毒；補充離胺酸的效果有爭議。卡里西病毒：小群飼養約 10% 感染，收容所等擁擠環境可達 90%，可能往下造成肺炎，罕見的全身型約三分之二死亡。披衣菌：約 20% 有上呼吸道症狀的貓與約 3% 外觀健康的貓帶菌。隱球菌：約 4% 的貓無症狀帶原，貓接觸後發病的機率約為狗的 6 倍。博德氏菌：高密度族群中約 5% 有症狀的貓與 1.5% 外觀正常的貓帶菌。疱疹與卡里西疫苗建議所有貓接種，不能完全防止感染，但能降低嚴重程度（各病原 Prevention 節）。",
     "keywords": [],
     "disease_tags": [],
-    "status": "needs_review",
+    "status": "pending_review",
     "url_verified": true,
-    "notes": "auto-crawled from Cornell Feline Health Topics",
+    "notes": "2026-10-17 核對：頁面存在，頁尾標 Updated June 2018。key 寫 2024 不符，year 應為 2018。11 處引用多數支持；『多貓家庭』『上呼吸道最常見是 FHV-1 與 FCV』兩點原文沒有直接寫。fiv-felv-management-taiwan 內文沒有引用此 key，cited_by 應移除。",
     "cited_by": [
       "cat-emergency-care-taiwan",
       "cat-eye-ear-problems-taiwan",
-      "cat-upper-respiratory-infection",
-      "fiv-felv-management-taiwan"
-    ]
+      "cat-upper-respiratory-infection"
+    ],
+    "verified_at": "2026-10-17"
   },
   "CORNELL-SAFE-TOYS-AND-GIFTS-2024": {
     "title": "Safe toys and gifts",
@@ -1938,9 +1825,9 @@
     "cited_by": []
   },
   "CORNELL-TICKS-AND-YOUR-CAT-FAQS-2024": {
-    "title": "Ticks and Your Cat — FAQs (Cornell Feline Health Center)",
-    "title_zh": "貓與蜱蟲 FAQ — Cornell 貓健康中心",
-    "authors": "Cornell University College of Veterinary Medicine",
+    "title": "Ticks and Your Cat – FAQs",
+    "title_zh": "貓與壁蝨常見問題",
+    "authors": "Cornell Feline Health Center, Cornell University College of Veterinary Medicine",
     "source": "Cornell",
     "journal": null,
     "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/ticks-and-your-cat-faq",
@@ -1948,15 +1835,16 @@
     "type": "educational",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "貓與蜱蟲常見問題。蜱蟲是寄生性節肢動物，可能傳播血小板減少症、鮑氏焦蟲病等。預防最佳做法：飼養室內貓 + 使用獸醫核可的防蜱產品。",
+    "abstract_zh": "康乃爾貓健康中心的壁蝨問答。全球有 800 多種壁蝨，會傳病給貓的只有十幾種；壁蝨偏好溫暖潮濕、草地與樹林交界的地方，一項研究發現草坪上 82% 的若蟲落在離草坪邊緣 3 公尺內。壁蝨不會飛也不會跳，是從植物爬到經過的動物身上，上身後 10 分鐘到 2 小時內咬住，可附著數天到數週。貓會感染萊姆病菌，但目前沒有貓發病的可靠紀錄。較常經壁蝨傳給貓的病有血巴東體症（貓傳染性貧血）、貓焦蟲病（Cytauxzoon）、巴貝斯焦蟲病，較少見的有兔熱病與艾利希體症。發現壁蝨時戴手套，用夾子貼近皮膚一次直直拉出，泡進異丙醇；之後幾天到幾週若貓虛弱、沒精神、食慾變差，要聯絡獸醫。預防方法是讓貓待在室內，以及只用核可給貓使用的防壁蝨產品，劑型與獸醫討論。",
     "keywords": [],
     "disease_tags": [],
-    "status": "needs_review",
+    "status": "pending_review",
     "url_verified": true,
-    "notes": "auto-crawled from Cornell Feline Health Topics",
+    "notes": "2026-10-17 核對：頁面存在，頁尾標 Last updated 2021。key 寫 2024 不符，year 應為 2021。原條目 abstract_zh 寫『血小板減少症』，原文清單沒有這一項（原文是血巴東體症、貓焦蟲病、巴貝斯焦蟲病、兔熱病、艾利希體症），文章 cat-parasite-prevention-taiwan 第 53 行沿用了這個錯誤。原文是美國情境（Cytauxzoon、兔熱病等），台灣的壁蝨病種要另找來源。",
     "cited_by": [
       "cat-parasite-prevention-taiwan"
-    ]
+    ],
+    "verified_at": "2026-10-17"
   },
   "CORNELL-FELINE-PANCREATITIS-SERIOUS-2024": {
     "title": "Feline Pancreatitis: Serious",
@@ -1999,25 +1887,28 @@
     "cited_by": []
   },
   "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022": {
-    "title": "WSAVA Animal Welfare Guidelines",
-    "title_zh": "WSAVA 動物福祉指引",
-    "authors": "WSAVA",
+    "title": "WSAVA Animal Welfare Guidelines for companion animal practitioners and veterinary teams",
+    "title_zh": "WSAVA 伴侶動物執業獸醫與團隊動物福祉指引",
+    "authors": "Ryan S, Bacon H, Endenburg N, Hazel S, Jouppi R, Lee N, Seksel K, Takashima G; WSAVA Animal Welfare Guidelines Group",
     "source": "WSAVA",
-    "journal": null,
-    "url": "https://wsava.org/global-guidelines/animal-welfare-guidelines/",
+    "journal": "Journal of Small Animal Practice 2019;60(5):E1-E46（WSAVA 網站 PDF 版標 2018）",
+    "url": "https://wsava.org/wp-content/uploads/2019/12/WSAVA-Animal-Welfare-Guidelines-2018.pdf",
     "year": 2018,
     "type": "guideline",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "幫助獸醫團隊縮小全球對動物福利認知的差距，並處理影響福利的倫理議題。除了身體健康建議，也倡導心理、社交與環境福祉。",
+    "abstract_zh": "WSAVA 動物福祉小組寫給小動物獸醫團隊的工作指引，主要對象是犬貓。前言把動物福祉定義為動物在身體、心理、社交與環境四方面的安適，獸醫除了治病，也要照顧這些非身體層面的需求。全文分六章（目錄）：福祉的辨識與評估、福祉的測量與監測（以五域模型 Five Domains 為框架）、就診前後的福祉需求、倫理與道德難題、與飼主溝通福祉議題，以及診所以外的推廣。前言引用的調查提到，獸醫和飼主談過人與動物連結的價值時，飼主遵循建議、回來做健檢的可能性最多高出 77%（前言，引 HABRI 2016）。",
     "keywords": [
       "WSAVA"
     ],
     "disease_tags": [],
-    "status": "needs_review",
-    "url_verified": false,
-    "notes": "auto-crawled from wsava.org",
-    "cited_by": []
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "2026-10-17 核對：WSAVA 網站 PDF 標題頁為 2018 版；期刊版 JSAP 2019;60(5):E1-E46，doi 10.1111/jsap.12998，PMID 31026337（Wiley 開放閱讀）。key 年份 2022 不符（實為 2018／2019）。全站文章內文沒有引用此 key。原指引頁 https://wsava.org/global-guidelines/animal-welfare-guidelines/ 仍在（本次直連被限流 429，以 Wayback 2026-10-07 存檔確認內容與 PDF 連結）。",
+    "cited_by": [],
+    "doi": "10.1111/jsap.12998",
+    "pmid": "31026337",
+    "verified_at": "2026-10-17"
   },
   "WSAVA-DENTAL-GUIDELINES-2022": {
     "title": "Dental Guidelines",
@@ -2041,60 +1932,30 @@
     "cited_by": []
   },
   "WSAVA-GASTROINTESTINAL-GUIDELINES-2022": {
-    "title": "WSAVA Endoscopic, Biopsy and Histopathologic Guidelines for the Evaluation of Gastrointestinal Inflammation in Companion Animals",
-    "title_zh": "WSAVA 犬貓胃腸發炎內視鏡／切片／組織病理評估指引",
-    "authors": "WSAVA",
+    "title": "Endoscopic, biopsy, and histopathologic guidelines for the evaluation of gastrointestinal inflammation in companion animals",
+    "title_zh": "犬貓胃腸道發炎的內視鏡、切片與組織病理評估指引（WSAVA 胃腸標準化小組／ACVIM 共識聲明）",
+    "authors": "Washabau RJ, Day MJ, Willard MD, Hall EJ, Jergens AE, Mansell J, Minami T, Bilzer TW; WSAVA International Gastrointestinal Standardization Group",
     "source": "WSAVA",
-    "journal": null,
-    "url": "https://wsava.org/global-guidelines/gastrointestinal-guidelines/",
-    "year": 2009,
+    "journal": "Journal of Veterinary Internal Medicine 2010;24(1):10-26",
+    "url": "https://doi.org/10.1111/j.1939-1676.2009.0443.x",
+    "year": 2010,
     "type": "guideline",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "為犬貓胃腸道病理組織學評估制定全球統一標準，提供一致的疾病診斷與分期，促進胃腸疾病臨床試驗發展。",
+    "abstract_zh": "WSAVA 國際胃腸標準化小組 2004 年成立，目標是替犬貓胃腸病的病史、理學檢查、檢驗、影像、內視鏡、切片、組織病理判讀到治療反應訂出共同標準。2004 到 2008 年的第一階段先後發表內視鏡、切片與發炎組織判讀的建議，2008 年應美國獸醫內科學院（ACVIM）之邀整理成這份共識聲明，2010 年刊於 JVIM（〈Generation of the Guidelines〉一節）。WSAVA 網站的執行摘要說明，這套組織病理標準讓犬貓胃腸發炎有一致的診斷與分期，也讓後續的對照臨床試驗有共同基準。配套的組織判讀圖譜見 Day 等 2008 年 J Comp Pathol 專刊（PMID 18336828），WSAVA 網站另提供上、下消化道內視鏡報告表。",
     "keywords": [
       "WSAVA"
     ],
     "disease_tags": [],
-    "status": "needs_review",
-    "url_verified": false,
-    "notes": "auto-crawled from wsava.org",
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "2026-10-17 核對：WSAVA 指引頁 https://wsava.org/global-guidelines/gastrointestinal-guidelines/ 只有執行摘要與內視鏡報告表，沒有指引全文。正式出處為 JVIM 2010;24(1):10-26（Wiley 免費閱讀，OpenAlex 標 bronze OA），另有勘誤 JVIM 2010;24(3):796。key 年份 2022 不符（實為 2010，線上 2009-12）。全文 PDF 本次被 Wiley 擋（403），內文只核到 Crossref／OpenAlex 提供的開頭段落與 WSAVA 摘要。cat-common-symptoms-taiwan 內文沒有引用此 key，cited_by 應移除。",
     "cited_by": [
-      "cat-ibd-intestinal-disease",
-      "cat-common-symptoms-taiwan"
-    ]
-  },
-  "WSAVA-NUTRITION-GUIDELINES-2022": {
-    "title": "WSAVA Global Nutrition Guidelines",
-    "title_zh": "WSAVA 全球營養指引",
-    "authors": "WSAVA",
-    "source": "WSAVA",
-    "journal": null,
-    "url": "https://wsava.org/global-guidelines/global-nutrition-guidelines/",
-    "year": 2011,
-    "type": "guideline",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "幫助獸醫團隊為寵物制定最佳個人化營養計畫。提供身體狀況評分表、熱量需求建議、飲食歷史表等實用工具，協助評估與飼主衛教。",
-    "keywords": [
-      "WSAVA"
+      "cat-ibd-intestinal-disease"
     ],
-    "disease_tags": [],
-    "status": "needs_review",
-    "url_verified": false,
-    "notes": "auto-crawled from wsava.org",
-    "cited_by": [
-      "barf-raw-food-taiwan",
-      "cat-food-by-life-stage",
-      "cat-food-selection-taiwan",
-      "cat-hepatic-lipidosis",
-      "cat-life-stages-care-taiwan",
-      "cat-obesity-weight-management",
-      "cat-pregnancy-birth-nursing-taiwan",
-      "cat-treats-supplements-taiwan",
-      "cat-water-urinary-health-taiwan",
-      "kitten-care-complete-taiwan"
-    ]
+    "doi": "10.1111/j.1939-1676.2009.0443.x",
+    "pmid": "20391635",
+    "verified_at": "2026-10-17"
   },
   "WSAVA-HEREDITARY-DISEASE-GUIDELINES-2022": {
     "title": "Hereditary Disease Guidelines",
@@ -2116,32 +1977,34 @@
     "url_verified": false,
     "notes": "auto-crawled from wsava.org | 摘要依指引範圍整理，2026-06-10",
     "cited_by": [
-      "cat-hcm-heart-disease",
-      "scottish-fold-breed-guide-taiwan"
+      "cat-hcm-heart-disease"
     ]
   },
   "WSAVA-LIVER-DISEASE-GUIDELINES-2022": {
-    "title": "WSAVA Standards for Clinical and Histological Diagnosis of Canine and Feline Liver Diseases (2024)",
-    "title_zh": "WSAVA 犬貓肝病臨床與組織學診斷標準（2024）",
-    "authors": "WSAVA",
+    "title": "WSAVA Standards for Clinical and Histological Diagnosis of Canine and Feline Liver Diseases",
+    "title_zh": "WSAVA 犬貓肝病臨床與組織學診斷標準",
+    "authors": "WSAVA Liver Standardization Group (Rothuizen J, Bunch SE, Charles JA, Cullen JM, Desmet VJ, Szatmári V, Twedt DC, van den Ingh TSGAM, Van Winkle T, Washabau RJ)",
     "source": "WSAVA",
-    "journal": null,
-    "url": "https://wsava.org/global-guidelines/liver-disease-guidelines/",
-    "year": 2024,
+    "journal": "Saunders Elsevier 專書，2006（ISBN 978-0-7020-2791-8）",
+    "url": "https://www.sciencedirect.com/book/9780702027918/wsava-standards-for-clinical-and-histological-diagnosis-of-canine-and-feline-liver-diseases",
+    "year": 2006,
     "type": "guideline",
     "language": "en",
-    "open_access": true,
-    "abstract_zh": "為犬貓肝病組織學評估建立全球統一標準：統一命名法、明確的組織學診斷標準，以及疾病慢性程度與嚴重度的精確定義。",
+    "open_access": false,
+    "abstract_zh": "WSAVA 肝臟標準化小組替犬貓肝病的組織學評估訂出全球共同標準，包括統一的命名、明確的組織學診斷條件，以及病程慢性度分期與嚴重度分級的定義（WSAVA 指引頁執行摘要）。全書章節涵蓋肝組織的採樣與處理、先天性門脈分流與門脈高壓的超音波判讀，以及循環、膽道、肝實質（含可逆性肝細胞損傷、肝炎與肝硬化、代謝性儲積疾病）與腫瘤性疾病的形態分類（ScienceDirect 目錄）。內容以切片的組織學為主，不是細胞學判讀標準。",
     "keywords": [
       "WSAVA"
     ],
     "disease_tags": [],
     "status": "needs_review",
-    "url_verified": false,
-    "notes": "auto-crawled from wsava.org",
+    "url_verified": true,
+    "notes": "2026-10-17 核對：WSAVA 指引頁 https://wsava.org/global-guidelines/liver-disease-guidelines/ 可開，『Download the Book』連到 ScienceDirect 專書，版權頁為 2006 Elsevier，各章標 No access。原條目寫 2024、key 寫 2022 都不符，實為 2006。不符合『PubMed open-access』條件，但出自 WSAVA，可依本站來源規則決定是否保留。WSAVA 頁面上的 endorsement 名單看起來是牙科指引的（含 Academy of Veterinary Dentistry），疑似網站誤植，不要當成此文件的背書。",
     "cited_by": [
       "cat-hepatic-lipidosis"
-    ]
+    ],
+    "doi": null,
+    "pmid": null,
+    "verified_at": "2026-10-17"
   },
   "WSAVA-MICROCHIP-IDENTIFICATION-GUIDE-2022": {
     "title": "Microchip Identification Guidelines",
@@ -2226,30 +2089,6 @@
     "url_verified": false,
     "notes": "auto-crawled from wsava.org",
     "cited_by": []
-  },
-  "WSAVA-VACCINATION-GUIDELINES-2022": {
-    "title": "2024 WSAVA Guidelines for the Vaccination of Dogs and Cats",
-    "title_zh": "2024 WSAVA 犬貓疫苗接種指引",
-    "authors": "WSAVA",
-    "source": "WSAVA",
-    "journal": null,
-    "url": "https://wsava.org/global-guidelines/vaccination-guidelines/",
-    "year": 2024,
-    "type": "guideline",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "由 WSAVA 制定，提供全球獸醫師最新科學依據下的犬貓疫苗建議。涵蓋核心與非核心疫苗實踐指導，並附亞洲與拉美地區專門建議。",
-    "keywords": [
-      "WSAVA"
-    ],
-    "disease_tags": [],
-    "status": "needs_review",
-    "url_verified": false,
-    "notes": "auto-crawled from wsava.org",
-    "cited_by": [
-      "cat-parasite-prevention-taiwan",
-      "cat-vaccination-wellness-taiwan"
-    ]
   },
   "WSAVA-ADVOCACY-AND-COMMUNICATIONS-CO-2022": {
     "title": "Advocacy and Communications Committee",
@@ -2403,9 +2242,7 @@
     "status": "pending_review",
     "url_verified": true,
     "notes": "2026-10-17 讀原文核對；舊摘要「少於 1-2 片花瓣」原文已沒有。文章已改引 FDA，不再引用這筆（Pet Poison Helpline 不在允許來源清單）。",
-    "cited_by": [
-      "cat-toxic-substances-taiwan"
-    ],
+    "cited_by": [],
     "verified_at": "2026-10-17"
   },
   "VCA-PLANTS-TOXIC-CATS": {
@@ -2620,7 +2457,6 @@
     "verified_at": "2026-04-29",
     "notes": "FLUTD 病因學的觀念基石，從「膀胱病」轉向「系統性壓力症候群」。 2026-10-14 補 PDF（小幫手 建議），PMC 版免費。",
     "cited_by": [
-      "cat-anxiety-stress-management",
       "cat-inappropriate-elimination",
       "cat-litter-box-guide",
       "cat-water-urinary-health-taiwan",
@@ -2728,7 +2564,6 @@
     "verified_at": "2026-06-10",
     "notes": "第25/19條經 WebFetch law.moa.gov.tw 逐字核對（2026-06-10）。｜2026-10-17 補第 22-5 條（寵物食品標示），讀全國法規資料庫 pcode=M0060027 核對（修正日期 110-05-19）。｜2026-10-17 補第5、22、29、31、32條，讀全國法規資料庫核對。",
     "cited_by": [
-      "cat-adoption-guide-taiwan",
       "cat-food-selection-taiwan",
       "cat-home-safety-taiwan",
       "cat-laws-taiwan",
@@ -2792,8 +2627,7 @@
     "notes": "年份經 WebFetch 立法院頁逐字核對為2017（民106），非文章原寫的2022（renting 驗證，2026-06-10）。",
     "cited_by": [
       "cat-adoption-guide-taiwan",
-      "cat-laws-taiwan",
-      "renting-with-cats-taiwan"
+      "cat-laws-taiwan"
     ]
   },
   "MOA-CAT-REGISTRATION-2024": {
@@ -2863,10 +2697,8 @@
     "notes": "2026-10-17 讀原文核對；舊摘要的 3 月齡、罰鍰、2013 年鼬獾等內容不在這頁，改引 APHIA-RABIES-VACCINE-FAQ。",
     "cited_by": [
       "cat-adoption-guide-taiwan",
-      "cat-aggression-causes-treatment",
       "cat-indoor-vs-outdoor-taiwan",
       "cat-laws-taiwan",
-      "cat-leaving-home-taiwan",
       "cat-life-stages-care-taiwan",
       "cat-vaccination-wellness-taiwan",
       "kitten-care-complete-taiwan"
@@ -3010,7 +2842,8 @@
     "cited_by": [
       "barf-raw-food-taiwan",
       "cat-food-selection-taiwan",
-      "cat-parasite-prevention-taiwan"
+      "cat-parasite-prevention-taiwan",
+      "cat-toxoplasma-pregnancy"
     ]
   },
   "FREDRIKSSON-AHOMAA-2017-RMBD": {
@@ -3544,8 +3377,7 @@
     "verified_at": "2026-10-15",
     "notes": "2026-10-15 讀 PMC 全文核對混種與純種的數字。",
     "cited_by": [
-      "mixed-breed-cats-taiwan",
-      "should-i-adopt-cat-decision-taiwan"
+      "mixed-breed-cats-taiwan"
     ]
   },
   "KAELIN-2025-ORANGE-COAT": {
@@ -6241,5 +6073,59 @@
     "type": "educational",
     "url": "https://tica.org/breed/chausie/",
     "abstract_zh": "Chausie 源自家貓與叢林貓的配種，運動能力強、幾乎一直在動，長時間獨處可能適應不好。"
+  },
+  "WSAVA-BCS-CAT-2025": {
+    "title": "Body Condition Score — Cat (WSAVA Global Nutrition Toolkit)",
+    "title_zh": "貓的體態評分表（WSAVA 全球營養工具包）",
+    "authors": "WSAVA Global Nutrition Committee",
+    "source": "WSAVA",
+    "journal": null,
+    "url": "https://wsava.org/wp-content/uploads/2025/06/WSAVA_BCSCat_BCSCat_Nutrition_250612.pdf",
+    "year": 2025,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "WSAVA 營養工具包裡給貓用的 9 分制體態評分圖表，分成過瘦、理想、過重三段。4 到 5 分是理想；6 分已經超過理想，肋骨還摸得到但上面的脂肪略多，腰線和腹部脂肪墊存在但不明顯；7 分肋骨不容易摸到，腰線不容易看出來；8 分摸不到肋骨、沒有腰線。表上也註明，6 分對部分貓（尤其老貓）可以接受。",
+    "keywords": [
+      "BCS",
+      "體態評分",
+      "肥胖"
+    ],
+    "disease_tags": [
+      "obesity"
+    ],
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-17",
+    "notes": "2026-10-17 新增：核對 cat-hepatic-lipidosis 時發現過重門檻出自這份圖表，不在 2011 營養評估指引本文。",
+    "cited_by": [
+      "cat-hepatic-lipidosis"
+    ]
+  },
+  "TW-MOHW-1925-HOTLINE": {
+    "title": "安心專線108年12月20日正式單軌使用1925 號碼改變 關心不變",
+    "title_zh": "衛福部 1925 安心專線",
+    "authors": "衛生福利部心理及口腔健康司",
+    "source": "衛生福利部",
+    "journal": null,
+    "url": "https://mohw.gov.tw/cp-16-50587-1.html",
+    "year": 2019,
+    "type": "government",
+    "language": "zh-TW",
+    "open_access": true,
+    "abstract_zh": "衛福部的安心專線提供全國民眾心理諮詢，2019 年 12 月 20 日起只用 1925 這個號碼。市話或手機撥 1925，全年無休、24 小時、免付費；專線也負責自殺危機處理，必要時聯繫警察緊急救援。",
+    "keywords": [
+      "安心專線",
+      "1925",
+      "心理諮詢"
+    ],
+    "disease_tags": [],
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-17",
+    "notes": "2026-10-17 新增：讀衛福部原頁面（建檔 108-12-19）。",
+    "cited_by": [
+      "cat-end-of-life-care-taiwan"
+    ]
   }
 }
