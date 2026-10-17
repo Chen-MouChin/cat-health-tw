@@ -1,0 +1,33 @@
+name: Deploy to GitHub Pages
+
+# 發佈 frontend/ 到 GitHub Pages。
+# 本 repo 只放網站成品，由原始碼 repo 的 scripts/publish_site.py 推送；部署手動觸發。
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 同時只跑一個部署，新的取代排隊中的舊的
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # frontend/ 已是建好的靜態站，直接發佈
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./frontend
+      - id: deployment
+        uses: actions/deploy-pages@v4

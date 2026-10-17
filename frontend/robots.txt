@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# 不要爬資料檔（大檔案）
+Disallow: /data.js
+Disallow: /data/
+
+Sitemap: https://chen-mouchin.github.io/cat-health-tw/sitemap.xml

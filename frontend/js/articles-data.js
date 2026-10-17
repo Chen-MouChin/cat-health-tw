@@ -1,0 +1,1 @@
+window.ARTICLES_INDEX = [];
