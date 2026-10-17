@@ -118,7 +118,7 @@
   <a class="er-pill" href="vets.html?only24h=1&amp;near=1"><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>24h 醫院</a>
   <nav class="main-nav" aria-label="主要分頁">
     <a href="articles/index.html">文章</a>
-    <a href="vets.html">獸醫院</a>
+    <a href="vets.html">動物醫院</a>
     <a href="library.html">文獻庫</a>
     <a href="breeds.html">品種</a>
     <a href="about.html" aria-current="page">關於</a>
@@ -131,14 +131,14 @@
   <main id="main">
     <h2>本站介紹</h2>
     <p>
-      <strong>貓健康站（貓咪大全）</strong> 是一個為台灣養貓人設計的一站式資訊平台，
+      <strong>貓健康站</strong> 是一個為台灣養貓人設計的一站式資訊平台，
       整合幾條主線：
     </p>
     <ul>
-      <li><strong>學術文獻庫</strong>：<span data-stat="citations">221</span> 筆 ISFM / AAFP / IRIS / WSAVA 等權威指引索引，每筆回溯原文核實。</li>
+      <li><strong>學術文獻庫</strong>：<span data-stat="citations">222</span> 筆 ISFM / AAFP / IRIS / WSAVA 等權威指引索引，每筆回溯原文核實。</li>
       <li><strong>知識庫文章</strong>：以學術來源為基礎的貓咪健康與行為文章，目前逐篇請人審核，審完再公開。</li>
       <li><strong>品種圖鑑</strong>：<span data-stat="breeds">68</span> 種貓咪品種，含遺傳病風險警示與並排比較。資料來源：TheCatAPI + Wikipedia。</li>
-      <li><strong>獸醫院查詢</strong>：全台 22 縣市 <span data-stat="vets">2,001</span> 家動物醫院（台灣本島完整 + 澎湖、金門；連江縣無登記動物醫院），可篩 24 小時醫院、貓專科、依縣市/區搜尋。</li>
+      <li><strong>動物醫院查詢</strong>：全台 22 縣市 <span data-stat="vets">2,001</span> 家動物醫院（台灣本島完整 + 澎湖、金門；連江縣無登記動物醫院），可篩 24 小時醫院、貓專科、依縣市/區搜尋。</li>
     </ul>
 
   <div class="card-hover about-break"><div class="about-art cat-art" aria-hidden="true"><!-- cat-art:1 --><svg aria-hidden="true" focusable="false" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
@@ -159,10 +159,10 @@
         <tr><th>資料類型</th><th>來源</th><th>更新頻率</th></tr>
       </thead>
       <tbody>
-        <tr><td>學術文獻庫</td><td>ISFM / AAFP / IRIS / WSAVA / ABCD / Cornell / PubMed OA</td><td>每筆人工核實後加入</td></tr>
+        <tr><td>學術文獻庫</td><td>國際獸醫指引、大學獸醫中心、同儕審查期刊、台灣官方資料（完整清單見<a href="editorial.html">編輯方針</a>）</td><td>每筆核實後加入</td></tr>
         <tr><td>知識庫文章</td><td>同上學術來源</td><td>手動審稿後發佈</td></tr>
         <tr><td>品種圖鑑</td><td>TheCatAPI（thecatapi.com）</td><td>資料庫版本更新時</td></tr>
-        <tr><td>獸醫院列表</td><td>農業部公開資料；座標以 © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a>（ODbL）定位</td><td>年度更新</td></tr>
+        <tr><td>動物醫院列表</td><td>農業部公開資料；座標以 © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a>（ODbL）定位</td><td>年度更新</td></tr>
       </tbody>
     </table>
 
@@ -181,7 +181,7 @@
       </li>
       <li>
         <strong>地址解析（geocoding）</strong>：用 OSM Nominatim 補 lat/lng，
-        全台 <span data-stat="vets">2,001</span> 家都有座標，手機可定位找附近最近的醫院。
+        全台 <span data-stat="vets_located">1,988</span> 家有座標，手機可定位找附近最近的醫院。
         OSM 查不到門牌時會退回街道或行政區中心，<span data-stat="vets_approx">179</span> 家只精確到這個程度，距離會標「約」；
         另有 <span data-stat="vets_misplaced">13</span> 家被對到別的縣市，暫不列入距離排序，待重新定位。
       </li>
@@ -191,16 +191,16 @@
     </ul>
     <p style="font-size:0.88rem;color:var(--text-muted,#6e6e73)">
       <strong>結果</strong>：基於農業部全國公開登記，全台 22 縣市共 <span data-stat="vets">2,001</span> 家動物醫院，
-      全部完成地址補齊與 GPS 座標標記，可在前端做縣市篩選與距離排序。
+      地址全部補齊，<span data-stat="vets_located">1,988</span> 家有座標，可在前端做縣市篩選與距離排序。
     </p>
     <p style="font-size:0.78rem;color:var(--text-faint,#a1a1a6);margin-top:0.6rem">
-      Google 地圖收錄的店家更多，也有評論、照片和營業時間。本站以農業部登記名冊為底，
+      本站以農業部登記名冊為底，
       另外標出 24 小時急診與貓專科，半夜找急診或找貓友善的醫院時，可以很快縮小範圍。
     </p>
 
     <h2>本站如何維持運作</h2>
     <p>
-      貓健康站 是個人開發的非商業專案。這裡公開站運的金錢面：
+      貓健康站 是個人開發的非商業專案：
     </p>
     <table class="source-table">
       <thead>
@@ -229,8 +229,7 @@
     <p>
       本站由 <a href="https://github.com/Chen-MouChin" target="_blank" rel="noopener">Chen-MouChin</a>
       個人開發維護，開放原始碼精神，技術棧以靜態 HTML + Python 爬蟲為主。
-      文章由人工擬綱、AI（Claude）起草、人工逐篇審核與修改調整；誰寫、怎麼審、引用什麼、錯了怎麼改，全部寫在
-      <a href="editorial.html">編輯方針</a>。
+      文章怎麼寫、怎麼審，見<a href="editorial.html">編輯方針</a>。
     </p>
 
     <h2>意見回饋</h2>
@@ -342,7 +341,7 @@
     </svg></div>
   <nav aria-label="頁尾">
     <a href="articles/index.html">文章</a>
-    <a href="vets.html">獸醫院</a>
+    <a href="vets.html">動物醫院</a>
     <a href="library.html">文獻庫</a>
     <a href="breeds.html">品種</a>
     <a href="about.html">關於</a>
@@ -350,7 +349,7 @@
     <a href="privacy.html">隱私權政策</a>
   </nav>
   <p>本站內容僅供參考。</p>
-  <p class="foot-src">學術來源：ISFM · WSAVA · IRIS · AAFP · ABCD · Cornell · PubMed OA</p>
+  <p class="foot-src">學術來源：ISFM · AAFP · WSAVA · IRIS · Cornell · iCatCare · PubMed OA</p>
 </footer>
 <!-- /site-foot -->
 </div>

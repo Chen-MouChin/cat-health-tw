@@ -606,7 +606,7 @@ main { max-width: 1100px; margin: 0 auto; padding: 0 1rem 2rem; }
   <a class="er-pill" href="vets.html?only24h=1&amp;near=1"><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>24h 醫院</a>
   <nav class="main-nav" aria-label="主要分頁">
     <a href="articles/index.html">文章</a>
-    <a href="vets.html">獸醫院</a>
+    <a href="vets.html">動物醫院</a>
     <a href="library.html">文獻庫</a>
     <a href="breeds.html" aria-current="page">品種</a>
     <a href="about.html">關於</a>
@@ -669,7 +669,7 @@ main { max-width: 1100px; margin: 0 auto; padding: 0 1rem 2rem; }
       <button class="filter-chip" data-filter="hypo" data-value="true" title="Fel d 1 蛋白產量相對較低的品種清單（研究支持）">相對較低</button>
     </div>
     <div class="filter-group">
-      <button class="filter-chip filter-special" id="mixedBreedBtn" title="台灣 80% 家貓是米克斯，不是這 68 個品種">🐈‍⬛ 我家是米克斯</button>
+      <button class="filter-chip filter-special" id="mixedBreedBtn" title="米克斯不在這 68 個品種裡">🐈‍⬛ 我家是米克斯</button>
     </div>
     <div class="filter-group">
       <span class="filter-label">警示</span>
@@ -683,14 +683,14 @@ main { max-width: 1100px; margin: 0 auto; padding: 0 1rem 2rem; }
   <!-- 米克斯文章引導（點米克斯按鈕後出現） -->
   <div class="mixed-notice" id="mixedNotice" hidden>
     <strong>🐈‍⬛ 米克斯：基因混合的台灣家貓主流</strong>
-    <p>台灣超過 80% 家貓是米克斯（混血、無單一品種血統）。米克斯的健康、個性、花色都比純種更多元。</p>
+    <p>米克斯是混血、沒有單一品種血統的貓。米克斯的健康、個性、花色都比純種更多元。</p>
     <span data-draft-link="articles/mixed-breed-cats-taiwan.html" class="mixed-cta">📖 閱讀完整米克斯指南 →</span>
   </div>
 
   <div class="hypo-notice" id="hypoNotice" hidden>
     <strong>⚠️ 沒有 100% 低過敏的貓。</strong>
     所謂「低過敏品種」只是 <strong>Fel d 1 蛋白產量相對較少</strong>（依部分研究），仍會引起過敏反應。
-    過敏體質者強烈建議：<strong>領養 / 認購前親自接觸該品種，確認自身反應再決定</strong>。
+    過敏體質者建議：<strong>領養 / 認購前親自接觸該品種，確認自身反應再決定</strong>。
   </div>
 
   <div class="breeds-grid" id="grid"></div>
@@ -704,7 +704,7 @@ main { max-width: 1100px; margin: 0 auto; padding: 0 1rem 2rem; }
       <div class="lg-text">
         <strong>學術研究觀察 — Salonen et al. 2019</strong>
         <span class="desc">
-          <em>Scientific Reports</em>（IF 4.6, Q1 多學科）· n=5,726 隻芬蘭貓 · 19 品種 · 同儕審查 · 開放取用（Open Access，免費可讀全文）。
+          <em>Scientific Reports</em>（2025 年 IF 4.9，JCR 多學科 Q1）· n=5,726 隻芬蘭貓 · 19 品種 · 同儕審查 · 開放取用（Open Access，免費可讀全文）。
           測 10 項行為（攻擊性 / 害羞 / 社交 / 活動量 / 過度梳理等）+ 遺傳力估算。
           <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6538663/" target="_blank" rel="noopener">PMC 全文</a>。<br>
           <strong>本站收錄 TheCatAPI 67 品種 + 歐短手補 = 共 68 種</strong>。
@@ -719,7 +719,7 @@ main { max-width: 1100px; margin: 0 auto; padding: 0 1rem 2rem; }
       <div class="lg-text">
         <strong>補充研究 — Wilhelmy et al. 2016</strong>
         <span class="desc">
-          <em>Journal of Veterinary Behavior</em>（IF 2.0, Q2 獸醫科學）· n=574 · 12 品種 · 🔒 付費期刊（僅摘要公開）。
+          <em>Journal of Veterinary Behavior</em>（2025 年 IF 1.9，JCR 獸醫科學 Q2、行為科學 Q3）· n=574 · 12 品種 · 🔒 付費期刊（僅摘要公開）。
           與 Salonen 互補：聚焦問題行為（攻擊性 / 分離焦慮 / 噪音恐懼 / 不當排尿）。
           發現暹羅/東基尼斯分離焦慮率明顯較高。
           <a href="https://www.sciencedirect.com/science/article/abs/pii/S1558787816300284" target="_blank" rel="noopener">摘要</a>
@@ -732,7 +732,7 @@ main { max-width: 1100px; margin: 0 auto; padding: 0 1rem 2rem; }
       <div class="lg-text">
         <strong>個體貓格框架 — Litchfield et al. 2017「Feline Five」</strong>
         <span class="desc">
-          <em>PLOS ONE</em>（IF 3.7, Q1）· n=2,802（澳紐）· 同儕審查 · 開放取用。
+          <em>PLOS ONE</em>（2025 年 IF 2.8，JCR 多學科 Q2）· n=2,802（澳紐）· 同儕審查 · 開放取用。
           仿人類 Big Five 為貓歸納 5 大「貓格」維度：<strong>神經質 / 外向 / 支配 / 衝動 / 隨和</strong>。
           <u>這是針對個體的研究</u>，提供「如何看單隻貓的個性」的學術框架。
           <a href="https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0183455" target="_blank" rel="noopener">全文</a>
@@ -752,9 +752,7 @@ main { max-width: 1100px; margin: 0 auto; padding: 0 1rem 2rem; }
     </div>
 
     <div class="legend-meta">
-      <strong>關於 Impact Factor (IF)：</strong> 期刊影響因子是該期刊近兩年論文平均被引次數，反映的是整本期刊，單篇論文的品質要另外看。
-      獸醫行為學領域 IF 普遍 2-5（人醫頂刊 IF 50+）— 因此 IF 4.6 在此領域屬中上水準。
-      評估單篇論文應同時看：樣本量、研究設計、利益衝突聲明、結果可重現性。<br>
+      <strong>關於影響因子（IF）：</strong>期刊影響因子是該期刊近兩年論文平均被引次數，反映的是整本期刊，單篇論文的品質要另外看。不同領域差很多：獸醫行為學的 Journal of Veterinary Behavior 是 1.9，人醫頂尖期刊 NEJM 是 84.5、The Lancet 是 109.0，所以 IF 只適合和同領域的期刊比較。評估單篇論文應同時看：樣本量、研究設計、利益衝突聲明、結果可重現性。（數字為 2025 年 Journal Citation Reports，經 <a href="https://www.bioxbio.com/journal/J-VET-BEHAV" target="_blank" rel="noopener">BioxBio</a>、維基百科、<a href="https://www.letpub.com/journal-selector/journal/5420" target="_blank" rel="noopener">LetPub</a> 比對）<br>
       <strong>沒有 icon 的品種</strong>也可能有遺傳風險（如布偶、緬因的 HCM），但已有 DNA 檢測可以篩檢，和為了外觀刻意培育造成的問題性質不同。
       <strong>個體差異 &gt; 品種差異</strong>，實際飼養體驗請以個別貓咪為準。
     </div>
@@ -774,7 +772,7 @@ main { max-width: 1100px; margin: 0 auto; padding: 0 1rem 2rem; }
     </svg></div>
   <nav aria-label="頁尾">
     <a href="articles/index.html">文章</a>
-    <a href="vets.html">獸醫院</a>
+    <a href="vets.html">動物醫院</a>
     <a href="library.html">文獻庫</a>
     <a href="breeds.html">品種</a>
     <a href="about.html">關於</a>
@@ -782,7 +780,7 @@ main { max-width: 1100px; margin: 0 auto; padding: 0 1rem 2rem; }
     <a href="privacy.html">隱私權政策</a>
   </nav>
   <p>本站內容僅供參考。</p>
-  <p class="foot-src">學術來源：ISFM · WSAVA · IRIS · AAFP · ABCD · Cornell · PubMed OA</p>
+  <p class="foot-src">學術來源：ISFM · AAFP · WSAVA · IRIS · Cornell · iCatCare · PubMed OA</p>
 </footer>
 <!-- /site-foot -->
 </div>
@@ -798,7 +796,7 @@ const data = (window.BREEDS && window.BREEDS.breeds) || [];
 
 // Salonen 2019 學術研究觀察 — 涵蓋 19 品種裡與本站重疊的 19 種
 // 引用：citations.json#SALONEN-2019-BREED-BEHAVIOUR
-// IF 4.6（Q1 多學科）/ n=5,726 / 19 品種 / Scientific Reports 2019
+// 2025 年 IF 4.9（JCR 多學科 Q1）/ n=5,726 / 19 品種 / Scientific Reports 2019
 // 4 個行為群集：溫和冷靜 / 活潑社交 / 敏感 / 易攻擊
 const SALONEN_BREEDS = {
   // === 原 8 種（依論文事實校正）===
@@ -830,9 +828,9 @@ const SALONEN_BREEDS = {
 const SALONEN_META = {
   citation: 'Salonen et al. 2019',
   journal: 'Scientific Reports',
-  if: 4.6,
-  if_year: 2024,
-  quartile: 'Q1（多學科）',
+  if: 4.9,
+  if_year: 2025,
+  quartile: 'JCR 多學科 Q1',
   n: 5726,
   url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6538663/',
 };
@@ -858,9 +856,9 @@ const WILHELMY_BREEDS = {
 const WILHELMY_META = {
   citation: 'Wilhelmy et al. 2016',
   journal: 'J Veterinary Behavior',
-  if: 2.0,
-  if_year: 2024,
-  quartile: 'Q2（獸醫科學）',
+  if: 1.9,
+  if_year: 2025,
+  quartile: 'JCR 獸醫科學 Q2、行為科學 Q3',
   n: 574,
   url: 'https://www.sciencedirect.com/science/article/abs/pii/S1558787816300284',
   paywall: true,
@@ -1456,7 +1454,7 @@ function renderAcademicBlock(id) {
       <div class="acad-cite">
         <a href="${SALONEN_META.url}" target="_blank" rel="noopener">${SALONEN_META.citation}</a>
         · <em>${SALONEN_META.journal}</em>
-        · IF ${SALONEN_META.if}（${SALONEN_META.quartile}）
+        · ${SALONEN_META.if_year} 年 IF ${SALONEN_META.if}（${SALONEN_META.quartile}）
         · n=${SALONEN_META.n.toLocaleString()} · OA
       </div>
     </div>
@@ -1469,7 +1467,7 @@ function renderAcademicBlock(id) {
       <div class="acad-cite">
         <a href="${WILHELMY_META.url}" target="_blank" rel="noopener">${WILHELMY_META.citation}</a>
         · <em>${WILHELMY_META.journal}</em>
-        · IF ${WILHELMY_META.if}（${WILHELMY_META.quartile}）
+        · ${WILHELMY_META.if_year} 年 IF ${WILHELMY_META.if}（${WILHELMY_META.quartile}）
         · n=${WILHELMY_META.n} · 🔒 付費期刊
       </div>
     </div>
@@ -1570,7 +1568,7 @@ function openModal(id, opts) {
       ${warn}
       <div class="temperament-tags">${tempHtml}</div>
       ${renderAcademicBlock(b.id)}
-      ${desc}${renderRefs(b.health_refs, '健康資訊出處')}
+      ${desc}${renderRefs(b.health_refs, '出處')}
       ${renderComparePicker(b.id)}
       <div class="modal-links">${linksHtml}</div>
     </div>

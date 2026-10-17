@@ -1,7 +1,7 @@
 window.BREEDS = {
   "_meta": {
     "count": 68,
-    "generated_at": "2026-10-17 17:09"
+    "generated_at": "2026-10-18 00:55"
   },
   "breeds": [
     {
@@ -77,7 +77,7 @@ window.BREEDS = {
         "lap": false
       },
       "description_en": "The Dragon Li is loyal, but not particularly affectionate. They are known to be very intelligent, and their natural breed status means that they're very active. She is is gentle with people, and has a reputation as a talented hunter of rats and other vermin.",
-      "description_zh": "中國原生家貓品種，金棕色虎斑帶古銅色澤。獨立性強、警覺性高，捕鼠能力突出。台灣極罕見，幾乎都是對岸引入。",
+      "description_zh": "中國原生家貓品種，金棕色虎斑帶古銅色澤。獨立性強、警覺性高，捕鼠能力突出。",
       "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/Dragon_Li",
@@ -193,7 +193,7 @@ window.BREEDS = {
         "lap": true
       },
       "description_en": "The Birman is a docile, quiet cat who loves people and will follow them from room to room. Expect the Birman to want to be involved in what you’re doing. He communicates in a soft voice, mainly to remind you that perhaps it’s time for dinner or maybe for a nice cuddle on the sofa. He enjoys being held and will relax in your arms like a furry baby.",
-      "description_zh": "重點色長毛 + 招牌「白手套」（四足末端純白色）。性格溫柔安靜，喜歡跟人但不過度黏。長毛打理需求中等，每週梳 1-2 次即可。台灣偶見。",
+      "description_zh": "重點色長毛 + 招牌「白手套」（四足末端純白色）。性格溫柔安靜，喜歡跟人但不過度黏。CFA 表示每週梳一次就夠。",
       "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/Birman",
@@ -261,7 +261,13 @@ window.BREEDS = {
         }
       ],
       "thecatapi_url": "https://thecatapi.com/breeds/birm",
-      "data_source": "thecatapi"
+      "data_source": "thecatapi",
+      "health_refs": [
+        {
+          "t": "CFA：Birman",
+          "u": "https://cfa.org/breed/birman/"
+        }
+      ]
     },
     {
       "id": "rblu",
@@ -488,7 +494,7 @@ window.BREEDS = {
         "lap": false
       },
       "description_en": "Perhaps the only thing about the California spangled cat that isn’t wild-like is its personality. Known to be affectionate, gentle and sociable, this breed enjoys spending a great deal of time with its owners. They are very playful, often choosing to perch in high locations and show off their acrobatic skills.",
-      "description_zh": "1980 年代美國培育的豹紋家貓，用家貓選育出斑點花紋，沒有野生貓血統。數量很少，台灣幾乎看不到。",
+      "description_zh": "1980 年代美國培育的豹紋家貓，用家貓選育出斑點花紋，沒有野生貓血統。",
       "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/California_Spangled",
@@ -577,7 +583,7 @@ window.BREEDS = {
         "lap": false
       },
       "description_en": "The character of the Kurilian Bobtail is independent, highly intelligent, clever, inquisitive, sociable, playful, trainable, absent of aggression and very gentle. They are devoted to their humans and when allowed are either on the lap of or sleeping in bed with their owners.",
-      "description_zh": "俄羅斯千島群島原生品種，天然短尾，體型強壯結實。獨立、聰明、會社交。台灣極罕見。",
+      "description_zh": "俄羅斯千島群島原生品種，天然短尾，體型強壯結實。獨立、聰明、會社交。",
       "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/Kurilian_Bobtail",
@@ -667,7 +673,7 @@ window.BREEDS = {
         "lap": true
       },
       "description_en": "The Havana Brown is human oriented, playful, and curious. She has a strong desire to spend time with her people and involve herself in everything they do. Being naturally inquisitive, the Havana Brown reaches out with a paw to touch and feel when investigating curiosities in its environment. They are truly sensitive by nature and frequently gently touch their human companions as if they are extending a paw of friendship.",
-      "description_zh": "全身均勻深棕色短毛、綠眼，整體像「巧克力雕像」。性格親人愛玩、好奇心強。全球年產不到 20 隻，台灣幾乎沒有。",
+      "description_zh": "全身均勻深棕色短毛、綠眼，整體像「巧克力雕像」。性格親人愛玩、好奇心強。數量稀少，CFA 提醒不一定找得到繁殖者。",
       "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/Havana_Brown",
@@ -735,7 +741,13 @@ window.BREEDS = {
         }
       ],
       "thecatapi_url": "https://thecatapi.com/breeds/hbro",
-      "data_source": "thecatapi"
+      "data_source": "thecatapi",
+      "health_refs": [
+        {
+          "t": "CFA：Havana Brown",
+          "u": "https://cfa.org/breed/havana-brown/"
+        }
+      ]
     },
     {
       "id": "hima",
@@ -964,8 +976,8 @@ window.BREEDS = {
         "lap": false
       },
       "description_en": "For those owners who desire a feline capable of evoking the great outdoors, the strikingly beautiful Chausie retains a bit of the wild in its appearance but has the house manners of our friendly, familiar moggies. Very playful, this cat needs a large amount of space to be able to fully embrace its hunting instincts.",
-      "description_zh": "",
-      "description_zh_status": "pending",
+      "description_zh": "外型保留一點野性，在家的規矩和一般家貓差不多。很愛玩，需要大一點的空間讓牠發揮狩獵本能。",
+      "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/Chausie",
       "wikipedia_url_zh": "",
@@ -1103,8 +1115,8 @@ window.BREEDS = {
         "lap": false
       },
       "description_en": "This is a smart and intelligent cat which bonds well with humans. With its affectionate and playful personality the Angora is a top choice for families. The Angora gets along great with other pets in the home, but it will make clear who is in charge, and who the house belongs to",
-      "description_zh": "",
-      "description_zh_status": "pending",
+      "description_zh": "聰明，和人感情好，親人又愛玩，適合有家人同住的家庭。能和家裡其他寵物相處，但會讓大家知道誰說了算。",
+      "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/Turkish_Angora",
       "wikipedia_url_zh": "",
@@ -1245,7 +1257,7 @@ window.BREEDS = {
         "lap": false
       },
       "description_en": "While the Turkish Van loves to jump and climb, play with toys, retrieve and play chase, she is is big and ungainly; this is one cat who doesn’t always land on his feet. While not much of a lap cat, the Van will be happy to cuddle next to you and sleep in your bed. ",
-      "description_zh": "土耳其原生半長毛品種，白底配色彩花紋（多為頭尾），**愛玩水著名**（會跳進浴缸）。體型大、活力強、需大空間。台灣少見。",
+      "description_zh": "土耳其原生半長毛品種，白底配色彩花紋（多為頭尾），**愛玩水著名**（會跳進浴缸）。體型大、活力強、需大空間。",
       "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/Turkish_Van",
@@ -1390,7 +1402,7 @@ window.BREEDS = {
         "lap": true
       },
       "description_en": "The Egyptian Mau is gentle and reserved. She loves her people and desires attention and affection from them but is wary of others. Early, continuing socialization is essential with this sensitive and sometimes shy cat, especially if you plan to show or travel with her. Otherwise, she can be easily startled by unexpected noises or events.",
-      "description_zh": "古埃及壁畫可見的天然斑點花紋（全身佈滿圓形 / 長條斑點）。短跑速度可達 48 km/h，活動量極大、需垂直空間。台灣罕見。",
+      "description_zh": "古埃及壁畫可見的天然斑點花紋（全身佈滿圓形 / 長條斑點）。活動量大、需垂直空間。",
       "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/Egyptian_Mau",
@@ -1525,7 +1537,7 @@ window.BREEDS = {
         "lap": true
       },
       "description_en": "Loving, loyal, social and inquisitive, the Cyprus cat forms strong ties with their families and love nothing more than to be involved in everything that goes on in their surroundings. They are not overly active by nature which makes them the perfect companion for people who would like to share their homes with a laid-back relaxed feline companion. ",
-      "description_zh": "塞普勒斯島原生家貓，考古證實 9000+ 年歷史（人類最早馴化貓之一）。體型強壯、適應力強。塞普勒斯以外幾乎沒有。",
+      "description_zh": "塞普勒斯島原生家貓，體型強壯、適應力強。",
       "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/Cyprus_cat",
@@ -1636,7 +1648,7 @@ window.BREEDS = {
         "lap": true
       },
       "description_en": "The Selkirk Rex is an incredibly patient, loving, and tolerant breed. The Selkirk also has a silly side and is sometimes described as clownish. She loves being a lap cat and will be happy to chat with you in a quiet voice if you talk to her. ",
-      "description_zh": "自然捲毛突變的長 / 短毛品種，外型像「絨毛玩具」。性格溫和有耐心。捲毛需定期梳避免結團。台灣少見。",
+      "description_zh": "自然捲毛突變的長 / 短毛品種，外型像「絨毛玩具」。性格溫和有耐心。捲毛需定期梳避免結團。",
       "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/Selkirk_Rex",
@@ -1775,7 +1787,7 @@ window.BREEDS = {
         "lap": false
       },
       "description_en": "The Cheetoh has a super affectionate nature and real love for their human companions; they are intelligent with the ability to learn quickly. You can expect that a Cheetoh will be a fun-loving kitty who enjoys playing, running, and jumping through every room in your house.",
-      "description_zh": "孟加拉貓 × 歐西貓的雜交品種（2000s 培育），豹紋外型 + 較親人個性（比孟加拉溫和）。極新品種，台灣幾乎沒有。",
+      "description_zh": "孟加拉貓 × 歐西貓的雜交品種（2000s 培育），豹紋外型 + 較親人個性（比孟加拉溫和）。",
       "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/Bengal_cat#Cheetoh",
@@ -1908,8 +1920,8 @@ window.BREEDS = {
         "lap": false
       },
       "description_en": "Bengals are a lot of fun to live with, but they're definitely not the cat for everyone, or for first-time cat owners. Extremely intelligent, curious and active, they demand a lot of interaction and woe betide the owner who doesn't provide it.",
-      "description_zh": "",
-      "description_zh_status": "pending",
+      "description_zh": "一起生活很有樂趣，但不是每個人都適合，也不建議新手飼主。非常聰明、好奇、活潑，需要大量互動，互動不夠牠會不開心。",
+      "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/Bengal_(cat)",
       "wikipedia_url_zh": "",
@@ -2049,8 +2061,8 @@ window.BREEDS = {
         "lap": true
       },
       "description_en": "The the golden eyes and the shiny black coa of the Bopmbay is absolutely striking. Likely to bond most with one family member, the Bombay will follow you from room to room and will almost always have something to say about what you are doing, loving attention and to be carried around, often on his caregiver's shoulder.",
-      "description_zh": "",
-      "description_zh_status": "pending",
+      "description_zh": "金色眼睛配上發亮的黑色短毛。通常和家裡某一個人最親，會跟著你走來走去，對你在做的事很有意見；喜歡被關注、被抱著走，常趴在照顧者肩上。",
+      "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/Bombay_(cat)",
       "wikipedia_url_zh": "",
@@ -2158,7 +2170,7 @@ window.BREEDS = {
         "lap": true
       },
       "description_en": "The Nebelung may have a reserved nature, but she loves to play (being especially fond of retrieving) and enjoys jumping or climbing to high places where she can study people and situations at her leisure before making up her mind about whether she wants to get involved.",
-      "description_zh": "俄羅斯藍貓的長毛版，銀藍色長毛、綠眼。性格內斂，跟主人親近，對陌生人保留。長毛需定期梳。台灣罕見。",
+      "description_zh": "俄羅斯藍貓的長毛版，銀藍色長毛、綠眼。性格內斂，跟主人親近，對陌生人保留。長毛需定期梳。",
       "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/Nebelung",
@@ -2295,8 +2307,8 @@ window.BREEDS = {
         "lap": false
       },
       "description_en": "Balinese are curious, outgoing, intelligent cats with excellent communication skills. They are known for their chatty personalities and are always eager to tell you their views on life, love, and what you’ve served them for dinner. ",
-      "description_zh": "",
-      "description_zh_status": "pending",
+      "description_zh": "好奇、外向、聰明，很會溝通。以愛講話出名，常對你發表牠對生活和晚餐的看法。",
+      "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/Balinese_(cat)",
       "wikipedia_url_zh": "",
@@ -2436,8 +2448,8 @@ window.BREEDS = {
         "lap": true
       },
       "description_en": "Ragdolls love their people, greeting them at the door, following them around the house, and leaping into a lap or snuggling in bed whenever given the chance. They are the epitome of a lap cat, enjoy being carried and collapsing into the arms of anyone who holds them.",
-      "description_zh": "",
-      "description_zh_status": "pending",
+      "description_zh": "很黏人，會到門口迎接、在家裡跟著人走，一有機會就跳上大腿或鑽進被窩。典型的大腿貓，喜歡被抱，被抱起時常整隻放鬆。",
+      "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/Ragdoll",
       "wikipedia_url_zh": "",
@@ -2575,8 +2587,8 @@ window.BREEDS = {
         "lap": true
       },
       "description_en": "This is a confident cat who loves people and will follow them around, waiting for any opportunity to sit in a lap or give a kiss. He enjoys being handled, making it easy to take him to the veterinarian or train him for therapy work. The Cornish Rex stay in kitten mode most of their lives and well into their senior years. ",
-      "description_zh": "",
-      "description_zh_status": "pending",
+      "description_zh": "自信、親人，會跟著人走，等機會坐上大腿或湊過來親人。不排斥被抱和觸摸，所以帶去看獸醫或做陪伴訓練都比較容易。大半輩子都像幼貓一樣活潑，到老也是。",
+      "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/Cornish_Rex",
       "wikipedia_url_zh": "",
@@ -2718,8 +2730,8 @@ window.BREEDS = {
         "lap": true
       },
       "description_en": "The favourite perch of the Devon Rex is right at head level, on the shoulder of her favorite person. She takes a lively interest in everything that is going on and refuses to be left out of any activity. Count on her to stay as close to you as possible, occasionally communicating his opinions in a quiet voice. She loves people and welcomes the attentions of friends and family alike.",
-      "description_zh": "",
-      "description_zh_status": "pending",
+      "description_zh": "最喜歡待在和人頭一樣高的地方，例如最愛的人的肩膀上。對身邊發生的事都很有興趣，什麼活動都要參一腳。會盡量黏在你身邊，偶爾小聲表達意見。親人，家人朋友都歡迎。",
+      "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/Devon_Rex",
       "wikipedia_url_zh": "",
@@ -2857,7 +2869,7 @@ window.BREEDS = {
         "lap": false
       },
       "description_en": "Native to the Greek islands known as the Cyclades in the Aegean Sea, these are natural cats, meaning they developed without humans getting involved in their breeding. As a breed, Aegean Cats are rare, although they are numerous on their home islands. They are generally friendly toward people and can be excellent cats for families with children.",
-      "description_zh": "希臘愛琴海諸島的天然家貓，多色短毛 + 白色斑塊。社交、聰明、體格強健。希臘以外幾乎看不到。",
+      "description_zh": "希臘愛琴海諸島的天然家貓，多色短毛 + 白色斑塊。社交、聰明、體格強健。",
       "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/Aegean_cat",
@@ -2970,7 +2982,7 @@ window.BREEDS = {
         "lap": true
       },
       "description_en": "LaPerms are gentle and affectionate but also very active. Unlike many active breeds, the LaPerm is also quite content to be a lap cat. The LaPerm will often follow your lead; that is, if they are busy playing and you decide to sit and relax, simply pick up your LaPerm and sit down with it, and it will stay in your lap, devouring the attention you give it.",
-      "description_zh": "自然捲毛突變品種，全身蓬鬆捲毛 + 大耳。性格親人活潑。**少數飼主回報「相對較不致敏」的品種之一**（捲毛掉毛少 → Fel d 1 散佈少），但無確切研究。台灣少見。",
+      "description_zh": "自然捲毛突變品種，全身蓬鬆捲毛 + 大耳。性格親人活潑。",
       "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/LaPerm",
@@ -3117,8 +3129,8 @@ window.BREEDS = {
         "lap": false
       },
       "description_en": "The Norwegian Forest Cat is a sweet, loving cat. She appreciates praise and loves to interact with her parent. She makes a loving companion and bonds with her parents once she accepts them for her own. She is still a hunter at heart. She loves to chase toys as if they are real. She is territorial and patrols several times each day to make certain that all is fine.",
-      "description_zh": "",
-      "description_zh_status": "pending",
+      "description_zh": "溫和親人，喜歡被稱讚、和家人互動；認定家人之後感情很深。骨子裡還是獵人，追玩具像在追真的獵物。有地盤意識，每天會巡視好幾次。",
+      "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/Norwegian_Forest_Cat",
       "wikipedia_url_zh": "",
@@ -3259,8 +3271,8 @@ window.BREEDS = {
         "lap": true
       },
       "description_en": "The Sphynx is an intelligent, inquisitive, extremely friendly people-oriented breed. Sphynx commonly greet their owners  at the front door, with obvious excitement and happiness. She has an unexpected sense of humor that is often at odds with her dour expression.",
-      "description_zh": "",
-      "description_zh_status": "pending",
+      "description_zh": "聰明、好奇，非常親人。常在門口興奮地迎接主人。表情看起來嚴肅，個性卻很逗趣。",
+      "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/Sphynx_(cat)",
       "wikipedia_url_zh": "",
@@ -3406,7 +3418,7 @@ window.BREEDS = {
         "lap": true
       },
       "description_en": "The Singapura is usually cautious when it comes to meeting new people, but loves attention from his family so much that she sometimes has the reputation of being a pest. This is a highly active, curious and affectionate cat. She may be small, but she knows she’s in charge",
-      "description_zh": "**全球公認最小型純種貓**（成貓 2-4 kg），新加坡街貓培育。米黃色 ticked tabby 紋路、大耳大眼、像永遠長不大的小貓。活潑黏人。",
+      "description_zh": "新加坡街貓培育，CFA 說牠是體型最小的純種貓之一，成年公貓約 2.7 到 3.2 公斤、母貓約 1.8 到 2.3 公斤。米黃色 ticked tabby 紋路、大耳大眼、像永遠長不大的小貓。活潑黏人。",
       "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/Singapura_(cat)",
@@ -3474,7 +3486,13 @@ window.BREEDS = {
         }
       ],
       "thecatapi_url": "https://thecatapi.com/breeds/sing",
-      "data_source": "thecatapi"
+      "data_source": "thecatapi",
+      "health_refs": [
+        {
+          "t": "CFA：Singapura",
+          "u": "https://cfa.org/breed/singapura/"
+        }
+      ]
     },
     {
       "id": "jbob",
@@ -3706,7 +3724,7 @@ window.BREEDS = {
         "lap": true
       },
       "description_en": "The Khao Manee is highly intelligent, with an extrovert and inquisitive nature, however they are also very calm and relaxed, making them an idea lap cat.",
-      "description_zh": "泰國原生的白色短毛品種，常見鴛鴦眼（一藍一金）。聰明外向、愛叫。白貓的白毛基因同時和藍眼、先天性失聰有關，iCatCare 指出雙眼都是藍色的白貓，失聰機率是雙眼非藍色白貓的 3 到 5 倍。購買時可以請繁殖者提供腦幹聽覺誘發反應測試（BAER）的結果。台灣極罕見。",
+      "description_zh": "泰國原生的白色短毛品種，常見鴛鴦眼（一藍一金）。聰明外向、愛叫。白貓的白毛基因同時和藍眼、先天性失聰有關，iCatCare 指出雙眼都是藍色的白貓，失聰機率是雙眼非藍色白貓的 3 到 5 倍。購買時可以請繁殖者提供腦幹聽覺誘發反應測試（BAER）的結果。",
       "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/Khao_Manee",
@@ -3808,8 +3826,8 @@ window.BREEDS = {
         "lap": true
       },
       "description_en": "While Siamese cats are extremely fond of their people, they will follow you around and supervise your every move, being talkative and opinionated. They are a demanding and social cat, that do not like being left alone for long periods.",
-      "description_zh": "",
-      "description_zh_status": "pending",
+      "description_zh": "很黏家人，會跟著你、盯著你做的每件事，愛講話也很有主見。需要陪伴、社交性強，不喜歡長時間獨處。",
+      "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/Siamese_(cat)",
       "wikipedia_url_zh": "",
@@ -3951,8 +3969,8 @@ window.BREEDS = {
         "lap": true
       },
       "description_en": "The Manx is a placid, sweet cat that is gentle and playful. She never seems to get too upset about anything. She is a loving companion and adores being with people.",
-      "description_zh": "",
-      "description_zh_status": "pending",
+      "description_zh": "個性平穩溫和，也愛玩，很少為什麼事緊張。親人，喜歡待在人身邊。",
+      "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/Manx_(cat)",
       "wikipedia_url_zh": "",
@@ -4078,8 +4096,8 @@ window.BREEDS = {
         "lap": true
       },
       "description_en": "The Cymric is a placid, sweet cat. They do not get too upset about anything that happens in their world. They are loving companions and adore people. They are smart and dexterous, capable of using his paws to get into cabinets or to open doors.",
-      "description_zh": "",
-      "description_zh_status": "pending",
+      "description_zh": "個性平穩溫和，很少為周遭的事緊張，親人。聰明、腳掌靈活，會用前腳打開櫃子或門。",
+      "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/Cymric_(cat)",
       "wikipedia_url_zh": "",
@@ -4203,8 +4221,8 @@ window.BREEDS = {
         "lap": true
       },
       "description_en": "The Munchkin is an outgoing cat who enjoys being handled. She has lots of energy and is faster and more agile than she looks. The shortness of their legs does not seem to interfere with their running and leaping abilities.",
-      "description_zh": "",
-      "description_zh_status": "pending",
+      "description_zh": "外向，不排斥被抱和觸摸。精力充沛，動作比外表看起來更快、更靈活。",
+      "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/Munchkin_(cat)",
       "wikipedia_url_zh": "",
@@ -4348,8 +4366,8 @@ window.BREEDS = {
         "lap": true
       },
       "description_en": "Intelligent and generous with their affection, a Tonkinese will supervise all activities with curiosity. Loving, social, active, playful, yet content to be a lap cat",
-      "description_zh": "",
-      "description_zh_status": "pending",
+      "description_zh": "聰明、很會撒嬌，什麼事都好奇地在旁邊看。親人、愛社交、活潑愛玩，也願意安靜當大腿貓。",
+      "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/Tonkinese_(cat)",
       "wikipedia_url_zh": "",
@@ -4707,7 +4725,7 @@ window.BREEDS = {
         "lap": true
       },
       "description_en": "The European Burmese is a very affectionate, intelligent, and loyal cat. They thrive on companionship and will want to be with you, participating in everything you do. While they might pick a favorite family member, chances are that they will interact with everyone in the home, as well as any visitors that come to call. They are inquisitive and playful, even as adults. ",
-      "description_zh": "歐洲型緬甸貓（vs 美國型短臉），臉較長楔形、體型較纖細。性格活潑黏人、愛說話。台灣常見的多為美國型，購買時需跟繁殖場確認血統。",
+      "description_zh": "歐洲型緬甸貓（vs 美國型短臉），臉較長楔形、體型較纖細。性格活潑黏人、愛說話。購買時可以跟繁殖場確認血統。",
       "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "",
@@ -4854,7 +4872,7 @@ window.BREEDS = {
         "lap": false
       },
       "description_en": "Loyal and devoted to their owners, the Ocicat is intelligent, confident, outgoing, and seems to have many dog traits. They can be trained to fetch toys, walk on a lead, taught to 'speak', come when called, and follow other commands. ",
-      "description_zh": "1960s 美國培育（暹羅 × 阿比西尼亞 × 美短），野性外表 + 家貓性格。活躍、聰明、可訓練握手坐下、愛玩水。台灣少見。",
+      "description_zh": "1960s 美國培育（暹羅 × 阿比西尼亞 × 美短），野性外表 + 家貓性格。活躍、聰明、可訓練握手坐下、愛玩水。",
       "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/Ocicat",
@@ -4995,8 +5013,8 @@ window.BREEDS = {
         "lap": true
       },
       "description_en": "The Chartreux is generally silent but communicative. Short play sessions, mixed with naps and meals are their perfect day. Whilst appreciating any attention you give them, they are not demanding, content instead to follow you around devotedly, sleep on your bed and snuggle with you if you’re not feeling well.",
-      "description_zh": "",
-      "description_zh_status": "pending",
+      "description_zh": "通常很安靜，但會用自己的方式溝通。理想的一天是短短玩一下、睡覺、吃飯。喜歡被關注但不纏人，會默默跟著你、睡在你床上，你不舒服時會窩過來。",
+      "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/Chartreux",
       "wikipedia_url_zh": "",
@@ -5138,8 +5156,8 @@ window.BREEDS = {
         "lap": false
       },
       "description_en": "Savannah is the feline version of a dog. Actively seeking social interaction, they are given to pouting if left out. Remaining kitten-like through life. Profoundly loyal to immediate family members whilst questioning the presence of strangers. Making excellent companions that are loyal, intelligent and eager to be involved.",
-      "description_zh": "",
-      "description_zh_status": "pending",
+      "description_zh": "個性像狗，會主動找人互動，被冷落會鬧彆扭。一輩子都像幼貓。對家人非常忠心，對陌生人比較有戒心。忠誠、聰明，什麼事都想參與。",
+      "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/Savannah_cat",
       "wikipedia_url_zh": "",
@@ -5280,8 +5298,8 @@ window.BREEDS = {
         "lap": true
       },
       "description_en": "Persians are sweet, gentle cats that can be playful or quiet and laid-back. Great with families and children, they absolutely love to lounge around the house. While they don’t mind a full house or active kids, they’ll usually hide when they need some alone time.",
-      "description_zh": "",
-      "description_zh_status": "pending",
+      "description_zh": "溫和親人，可以活潑，也可以安靜悠閒。和家人、小孩處得好，最愛在家裡躺著。不排斥熱鬧的家或好動的孩子，但需要獨處時通常會躲起來。",
+      "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/Persian_(cat)",
       "wikipedia_url_zh": "",
@@ -5421,8 +5439,8 @@ window.BREEDS = {
         "lap": true
       },
       "description_en": "The Burmilla is a fairly placid cat. She tends to be an easy cat to get along with, requiring minimal care. The Burmilla is affectionate and sweet and makes a good companion, the Burmilla is an ideal companion to while away a lonely evening. Loyal, devoted, and affectionate, this cat will stay by its owner, always keeping them company.",
-      "description_zh": "",
-      "description_zh_status": "pending",
+      "description_zh": "個性平穩，好相處，照顧起來不費力。親人溫和，是很好的伴，忠心又黏人，會一直待在飼主身邊。",
+      "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/Burmilla",
       "wikipedia_url_zh": "",
@@ -5538,7 +5556,7 @@ window.BREEDS = {
         "lap": true
       },
       "description_en": "The Australian Mist thrives on human companionship. Tolerant of even the youngest of children, these friendly felines enjoy playing games and being part of the hustle and bustle of a busy household. They make entertaining companions for people of all ages, and are happy to remain indoors between dusk and dawn or to be wholly indoor pets.",
-      "description_zh": "澳洲原生品種（緬甸 × 阿比西尼亞 × 澳洲家貓），全身霧狀斑紋（顏色暈染感）。個性溫和、適合家庭。澳洲以外少見。",
+      "description_zh": "澳洲原生品種（緬甸 × 阿比西尼亞 × 澳洲家貓），全身霧狀斑紋（顏色暈染感）。個性溫和、適合家庭。",
       "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/Australian_Mist",
@@ -5641,8 +5659,8 @@ window.BREEDS = {
         "lap": false
       },
       "description_en": "Javanese are endlessly interested, intelligent and active. They tend to enjoy jumping to great heights, playing with fishing pole-type or other interactive toys and just generally investigating their surroundings. He will attempt to copy things you do, such as opening doors or drawers.",
-      "description_zh": "",
-      "description_zh_status": "pending",
+      "description_zh": "好奇心旺盛、聰明活潑。喜歡跳到高處、玩逗貓棒這類互動玩具，到處探索。會模仿你的動作，例如開門或開抽屜。",
+      "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/Javanese_cat",
       "wikipedia_url_zh": "",
@@ -5778,7 +5796,7 @@ window.BREEDS = {
         "lap": true
       },
       "description_en": "Companionable and affectionate, the Pixie-bob wants to be an integral part of the family. The Pixie-Bob’s ability to bond with their humans along with their patient personas make them excellent companions for children.",
-      "description_zh": "北美短尾貓（外型像短尾大山貓 Bobcat 但**無野生血統**，純家貓選育）。體型大、忠誠像狗。**多趾（polydactyl）為品種特徵之一**。台灣罕見。",
+      "description_zh": "北美短尾貓（外型像短尾大山貓 Bobcat 但**無野生血統**，純家貓選育）。體型大、忠誠像狗。**多趾（polydactyl）為品種特徵之一**。",
       "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/Pixiebob",
@@ -5913,7 +5931,7 @@ window.BREEDS = {
         "lap": true
       },
       "description_en": "The Toyger has a sweet, calm personality and is generally friendly. He's outgoing enough to walk on a leash, energetic enough to play fetch and other interactive games, and confident enough to get along with other cats and friendly dogs.",
-      "description_zh": "1980 年代培育的孟加拉貓變種，目標是做出像「迷你老虎」的直條紋外型。活躍聰明，可以訓練。數量少，極罕見。",
+      "description_zh": "1980 年代培育的孟加拉貓變種，目標是做出像「迷你老虎」的直條紋外型。活躍聰明，可以訓練。",
       "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/Toyger",
@@ -6054,8 +6072,8 @@ window.BREEDS = {
         "lap": true
       },
       "description_en": "The Exotic Shorthair is a gentle friendly cat that has the same personality as the Persian. They love having fun, don’t mind the company of other cats and dogs, also love to curl up for a sleep in a safe place. Exotics love their own people, but around strangers they are cautious at first. Given time, they usually warm up to visitors.",
-      "description_zh": "",
-      "description_zh_status": "pending",
+      "description_zh": "溫和友善，個性和波斯貓一樣。愛玩，能和其他貓狗相處，也喜歡找安全的地方蜷起來睡。和自己家人很親，對陌生人一開始比較謹慎，熟了之後通常就會放鬆。",
+      "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/Exotic_Shorthair",
       "wikipedia_url_zh": "",
@@ -6191,8 +6209,8 @@ window.BREEDS = {
         "lap": true
       },
       "description_en": "The Bambino is a breed of cat that was created as a cross between the Sphynx and the Munchkin breeds. The Bambino cat has short legs, large upright ears, and is usually hairless. They love to be handled and cuddled up on the laps of their family members.",
-      "description_zh": "",
-      "description_zh_status": "pending",
+      "description_zh": "由斯芬克斯無毛貓和曼赤肯短腿貓雜交培育的品種，腿短、耳朵大而直立，通常沒有毛。喜歡被抱、窩在家人腿上。",
+      "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/Bambino_cat",
       "wikipedia_url_zh": "",
@@ -6324,7 +6342,7 @@ window.BREEDS = {
         "lap": false
       },
       "description_en": "The Korat is a natural breed, and one of the oldest stable cat breeds. They are highly intelligent and confident cats that can be fearless, although they are startled by loud sounds and sudden movements. Korats form strong bonds with their people and like to cuddle and stay nearby.",
-      "description_zh": "泰國原生的銀藍色短毛貓，心型臉、綠眼。科拉特貓身上找過兩種神經節苷脂沉積症（gangliosidosis），GM1 與 GM2，都是會逐漸惡化的神經疾病，致病突變已經找到。購買前可以請繁殖者提供父母貓的 DNA 檢測結果。台灣罕見。",
+      "description_zh": "泰國原生的銀藍色短毛貓，心型臉、綠眼。科拉特貓身上找過兩種神經節苷脂沉積症（gangliosidosis），GM1 與 GM2，都是會逐漸惡化的神經疾病，致病突變已經找到。購買前可以請繁殖者提供父母貓的 DNA 檢測結果。",
       "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/Korat",
@@ -6461,7 +6479,7 @@ window.BREEDS = {
         "lap": true
       },
       "description_en": "York Chocolate cats are known to be true lap cats with a sweet temperament. They love to be cuddled and petted. Their curious nature makes them follow you all the time and participate in almost everything you do, even if it's related to water: unlike many other cats, York Chocolates love it.",
-      "description_zh": "1980s 紐約培育的純巧克力色長毛品種，已接近滅絕（年生不到 20 隻）。台灣幾乎沒有。",
+      "description_zh": "1980s 紐約培育的純巧克力色長毛品種。",
       "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/York_Chocolate",
@@ -6607,8 +6625,8 @@ window.BREEDS = {
         "lap": false
       },
       "description_en": "The Somali lives life to the fullest. He climbs higher, jumps farther, plays harder. Nothing escapes the notice of this highly intelligent and inquisitive cat. Somalis love the company of humans and other animals.",
-      "description_zh": "",
-      "description_zh_status": "pending",
+      "description_zh": "活力十足，爬得高、跳得遠、玩得很瘋。非常聰明、好奇，身邊的事都逃不過牠的眼睛。喜歡有人和其他動物作伴。",
+      "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/Somali_(cat)",
       "wikipedia_url_zh": "",
@@ -6753,8 +6771,8 @@ window.BREEDS = {
         "lap": true
       },
       "description_en": "They are known for their size and luxurious long coat Maine Coons are considered a gentle giant. The good-natured and affable Maine Coon adapts well to many lifestyles and personalities. She likes being with people and has the habit of following them around, but isn’t needy. Most Maine Coons love water and they can be quite good swimmers.",
-      "description_zh": "",
-      "description_zh_status": "pending",
+      "description_zh": "以體型大和豐厚的長毛出名，被稱為溫柔的巨人。個性好、隨和，能適應不同的生活方式和家人個性。喜歡待在人身邊、跟著人走，但不纏人。不少緬因貓不怕水。",
+      "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/Maine_Coon",
       "wikipedia_url_zh": "",
@@ -7158,7 +7176,7 @@ window.BREEDS = {
         "lap": true
       },
       "description_en": "American Bobtails are loving and incredibly intelligent cats possessing a distinctive wild appearance. They are extremely interactive cats that bond with their human family with great devotion.",
-      "description_zh": "天然短尾、體型結實，性格像狗，會玩接物、學指令。研究發現部分美國短尾貓帶有和曼島貓（Manx）相同的 T 基因突變，這類突變只要帶一份，尾巴就會變短。台灣少見。",
+      "description_zh": "天然短尾、體型結實，性格像狗，會玩接物、學指令。研究發現部分美國短尾貓帶有和曼島貓（Manx）相同的 T 基因突變，這類突變只要帶一份，尾巴就會變短。",
       "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/American_Bobtail",
@@ -7400,7 +7418,7 @@ window.BREEDS = {
         "lap": true
       },
       "description_en": "The American Wirehair tends to be a calm and tolerant cat who takes life as it comes. His favorite hobby is bird-watching from a sunny windowsill, and his hunting ability will stand you in good stead if insects enter the house.",
-      "description_zh": "美國短毛貓的硬毛突變版，毛質像鋼絲，捲曲有彈性。性格溫和有耐心。數量少，台灣幾乎沒有。",
+      "description_zh": "美國短毛貓的硬毛突變版，毛質像鋼絲，捲曲有彈性。性格溫和有耐心。",
       "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/American_Wirehair",
@@ -7509,8 +7527,8 @@ window.BREEDS = {
         "lap": true
       },
       "description_en": "The British Shorthair is a very pleasant cat to have as a companion, ans is easy going and placid. The British is a fiercely loyal, loving cat and will attach herself to every one of her family members. While loving to play, she doesn't need hourly attention. If she is in the mood to play, she will find someone and bring a toy to that person. The British also plays well by herself, and thus is a good companion for single people.",
-      "description_zh": "",
-      "description_zh_status": "pending",
+      "description_zh": "個性隨和平穩，是很好相處的伴。對家人很忠心，和每個家人都親。愛玩但不需要時時陪，想玩的時候會自己叼玩具來找人；也能自己玩，獨居的人也適合。",
+      "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/British_Shorthair",
       "wikipedia_url_zh": "",
@@ -7650,7 +7668,7 @@ window.BREEDS = {
         "lap": false
       },
       "description_en": "The British Longhair is a very laid-back relaxed cat, often perceived to be very independent although they will enjoy the company of an equally relaxed and likeminded cat. They are an affectionate breed, but very much on their own terms and tend to prefer to choose to come and sit with their owners rather than being picked up.",
-      "description_zh": "英國短毛貓的長毛版，體型同樣圓潤敦實，性格慵懶溫和。英短是康乃爾大學貓健康中心列出的肥厚型心肌病（HCM）較常見品種之一。貓結紮後代謝率大約下降兩成，食量要跟著調整，避免過重。長毛需定期梳。台灣比英短少見。",
+      "description_zh": "英國短毛貓的長毛版，體型同樣圓潤敦實，性格慵懶溫和。英短是康乃爾大學貓健康中心列出的肥厚型心肌病（HCM）較常見品種之一。貓結紮後代謝率大約下降兩成，食量要跟著調整，避免過重。長毛需定期梳。",
       "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/British_Longhair",
@@ -7787,8 +7805,8 @@ window.BREEDS = {
         "lap": false
       },
       "description_en": "The Scottish Fold is a sweet, charming breed. She is an easy cat to live with and to care for. She is affectionate and is comfortable with all members of her family. Her tail should be handled gently. Folds are known for sleeping on their backs, and for sitting with their legs stretched out and their paws on their belly. This is called the \"Buddha Position\".",
-      "description_zh": "",
-      "description_zh_status": "pending",
+      "description_zh": "個性甜美，好相處，照顧起來不難。親人，和每個家人都處得好。尾巴要輕輕碰。常仰躺著睡，或坐著把腿伸直、前腳放在肚子上，被稱為「佛陀坐姿」。",
+      "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/Scottish_Fold",
       "wikipedia_url_zh": "",
@@ -8076,8 +8094,8 @@ window.BREEDS = {
         "lap": true
       },
       "description_en": "The Siberians dog like temperament and affection makes the ideal lap cat and will live quite happily indoors. Very agile and powerful, the Siberian cat can easily leap and reach high places, including the tops of refrigerators and even doors. ",
-      "description_zh": "",
-      "description_zh_status": "pending",
+      "description_zh": "個性像狗，很親人，是理想的大腿貓，養在室內也能過得很好。身手矯健有力，跳上冰箱甚至門框頂端都很輕鬆。",
+      "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/Siberian_(cat)",
       "wikipedia_url_zh": "",
@@ -8213,8 +8231,8 @@ window.BREEDS = {
         "lap": true
       },
       "description_en": "Colorpoint Shorthairs are an affectionate breed, devoted and loyal to their people. Sensitive to their owner’s moods, Colorpoints are more than happy to sit at your side or on your lap and purr words of encouragement on a bad day. They will constantly seek out your lap whenever it is open and in the moments when your lap is preoccupied they will stretch out in sunny spots on the ground.",
-      "description_zh": "",
-      "description_zh_status": "pending",
+      "description_zh": "親人，對家人忠心，能察覺飼主的情緒，你心情不好時會陪在旁邊或坐上大腿呼嚕。只要你的腿空著就會來佔位，腿沒空時就去曬太陽的地方伸懶腰。",
+      "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/Colorpoint_Shorthair",
       "wikipedia_url_zh": "",
@@ -8344,7 +8362,7 @@ window.BREEDS = {
         "lap": false
       },
       "description_en": "Arabian Mau cats are social and energetic. Due to their energy levels, these cats do best in homes where their owners will be able to provide them with plenty of playtime, attention and interaction from their owners. These kitties are friendly, intelligent, and adaptable, and will even get along well with other pets and children.",
-      "description_zh": "中東阿拉伯半島的原生家貓，高活動量、適應沙漠氣候。短毛易整理。台灣罕見。",
+      "description_zh": "中東阿拉伯半島的原生家貓，高活動量、適應沙漠氣候。短毛易整理。",
       "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/Arabian_Mau",
@@ -8459,8 +8477,8 @@ window.BREEDS = {
         "lap": true
       },
       "description_en": "The Abyssinian is easy to care for, and a joy to have in your home. They’re affectionate cats and love both people and other animals.",
-      "description_zh": "",
-      "description_zh_status": "pending",
+      "description_zh": "好照顧，養在家裡很有樂趣。親人，和人、其他動物都處得來。",
+      "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/Abyssinian_(cat)",
       "wikipedia_url_zh": "",
@@ -8596,8 +8614,8 @@ window.BREEDS = {
         "lap": true
       },
       "description_en": "The Snowshoe is a vibrant, energetic, affectionate and intelligent cat. They love being around people which makes them ideal for families, and becomes unhappy when left alone for long periods of time. Usually attaching themselves to one person, they do whatever they can to get your attention.",
-      "description_zh": "",
-      "description_zh_status": "pending",
+      "description_zh": "活潑、精力旺盛、親人又聰明。喜歡有人在身邊，適合家庭，長時間獨處會不開心。通常會特別黏某一個人，想盡辦法引起你注意。",
+      "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/Snowshoe_(cat)",
       "wikipedia_url_zh": "",
@@ -8733,8 +8751,8 @@ window.BREEDS = {
         "lap": false
       },
       "description_en": "Donskoy are affectionate, intelligent, and easy-going. They demand lots of attention and interaction. The Donskoy also gets along well with other pets. It is now thought the same gene that causes degrees of hairlessness in the Donskoy also causes alterations in cat personality, making them calmer the less hair they have.",
-      "description_zh": "",
-      "description_zh_status": "pending",
+      "description_zh": "親人、聰明、隨和，需要很多關注和互動。能和其他寵物相處。",
+      "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/Donskoy_(cat)",
       "wikipedia_url_zh": "",
@@ -8831,7 +8849,7 @@ window.BREEDS = {
         "lap": true
       },
       "description_en": "The Chantilly is a devoted companion and prefers company to being left alone. While the Chantilly is not demanding, she will \"chirp\" and \"talk\" as if having a conversation. This breed is affectionate, with a sweet temperament. It can stay still for extended periods, happily lounging in the lap of its loved one. This quality makes the Tiffany an ideal traveling companion, and an ideal house companion for senior citizens and the physically handicapped.",
-      "description_zh": "巧克力色長毛品種（又稱 Foreign Longhair），1960 年代在美國培育。性格溫和忠誠，會跟主人「說話」。數量少，台灣幾乎沒有。",
+      "description_zh": "巧克力色長毛品種（又稱 Foreign Longhair），1960 年代在美國培育。性格溫和忠誠，會跟主人「說話」。",
       "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/Chantilly-Tiffany",

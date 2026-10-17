@@ -12,9 +12,9 @@
     "authors": "Jacqueline Wilhelmy, James Serpell, Dorothy Brown, Carlo Siracusa",
     "source": "Journal of Veterinary Behavior",
     "journal": "Journal of Veterinary Behavior (Elsevier)",
-    "journal_impact_factor": 2.0,
-    "journal_if_year": 2024,
-    "journal_quartile": "Q2（獸醫科學）",
+    "journal_impact_factor": 1.9,
+    "journal_if_year": 2025,
+    "journal_quartile": "JCR 獸醫科學 Q2、行為科學 Q3",
     "url": "https://www.sciencedirect.com/science/article/abs/pii/S1558787816300284",
     "doi": "10.1016/j.jveb.2016.03.009",
     "year": 2016,
@@ -53,7 +53,7 @@
     "status": "approved",
     "url_verified": true,
     "verified_at": "2026-10-14",
-    "notes": "付費期刊但可用摘要。與 Salonen 2019 互補：Salonen 偏活動量/社交，Wilhelmy 偏攻擊性/焦慮。",
+    "notes": "付費期刊但可用摘要。與 Salonen 2019 互補：Salonen 偏活動量/社交，Wilhelmy 偏攻擊性/焦慮。\n2026-10-18 期刊影響因子改為 2025 年 JCR 數字，經 BioxBio、維基百科、LetPub、Journal Metrics 比對。",
     "cited_by": [
       "mixed-breed-cats-taiwan"
     ]
@@ -64,9 +64,9 @@
     "authors": "Carla A Litchfield, Gillian Quinton, Hayley Tindle, Belinda Chiera, K Heidy Kikillus, Philip Roetman",
     "source": "PLOS ONE",
     "journal": "PLOS ONE",
-    "journal_impact_factor": 3.7,
-    "journal_if_year": 2024,
-    "journal_quartile": "Q1（多學科）",
+    "journal_impact_factor": 2.8,
+    "journal_if_year": 2025,
+    "journal_quartile": "JCR 多學科 Q2",
     "url": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0183455",
     "doi": "10.1371/journal.pone.0183455",
     "pmid": "28832622",
@@ -90,7 +90,7 @@
     "status": "approved",
     "url_verified": true,
     "verified_at": "2026-10-14",
-    "notes": "完全 OA。提供「如何看貓的個性」的框架，不做品種比較。與 Salonen/Wilhelmy 不同層級：這篇是個體層級理論框架。",
+    "notes": "完全 OA。提供「如何看貓的個性」的框架，不做品種比較。與 Salonen/Wilhelmy 不同層級：這篇是個體層級理論框架。\n2026-10-18 期刊影響因子改為 2025 年 JCR 數字，經 BioxBio、維基百科、LetPub、Journal Metrics 比對。",
     "cited_by": []
   },
   "SALONEN-2019-BREED-BEHAVIOUR": {
@@ -99,9 +99,9 @@
     "authors": "Milla Salonen, Katariina Vapalahti, Katriina Tiira, Asko Mäki-Tanila, Hannes Lohi",
     "source": "Scientific Reports",
     "journal": "Scientific Reports (Nature Publishing Group)",
-    "journal_impact_factor": 4.6,
-    "journal_if_year": 2024,
-    "journal_quartile": "Q1（多學科）",
+    "journal_impact_factor": 4.9,
+    "journal_if_year": 2025,
+    "journal_quartile": "JCR 多學科 Q1",
     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6538663/",
     "doi": "10.1038/s41598-019-44324-x",
     "pmid": "31138836",
@@ -147,7 +147,7 @@
     "status": "approved",
     "url_verified": true,
     "verified_at": "2026-04-18",
-    "notes": "Q1 期刊，樣本量大，方法嚴謹。是目前品種行為研究最大規模的同儕審查論文之一。",
+    "notes": "Q1 期刊，樣本量大，方法嚴謹。是目前品種行為研究最大規模的同儕審查論文之一。\n2026-10-18 期刊影響因子改為 2025 年 JCR 數字，經 BioxBio、維基百科、LetPub、Journal Metrics 比對。",
     "cited_by": [
       "mixed-breed-cats-taiwan"
     ]
@@ -953,7 +953,7 @@
     "authors": "Day MJ, Horzinek MC, Schultz RD, Squires RA",
     "source": "WSAVA",
     "journal": "Journal of Small Animal Practice 2024;65(5):277-316",
-    "url": "https://wsava.org/committees/vaccination-guidelines-group/",
+    "url": "https://wsava.org/wp-content/uploads/2024/04/WSAVA-Vaccination-guidelines-2024.pdf",
     "year": 2024,
     "type": "guideline",
     "language": "en",
@@ -971,7 +971,7 @@
     ],
     "status": "pending_review",
     "url_verified": true,
-    "notes": "WSAVA 免費 PDF｜2026-10-17 小幫手要求補 PDF：加 WSAVA 官方中文版 PDF（貓的部分從第 23 頁開始）。\n2026-10-17 合併重複條目 WSAVA-VACCINATION-GUIDELINES-2022，補上期刊出處。",
+    "notes": "WSAVA 免費 PDF｜2026-10-17 小幫手要求補 PDF：加 WSAVA 官方中文版 PDF（貓的部分從第 23 頁開始）。\n2026-10-17 合併重複條目 WSAVA-VACCINATION-GUIDELINES-2022，補上期刊出處。\n2026-10-17 改指向 WSAVA 頁面摺疊裡的原始文件：網址改英文版全文 PDF；pdf_url 保留官方中文版。另有貓疫苗一覽表 https://wsava.org/wp-content/uploads/2025/06/Cats-Vaccination-Table.pdf",
     "cited_by": [
       "cat-life-stages-care-taiwan",
       "cat-upper-respiratory-infection",
@@ -1007,7 +1007,7 @@
     ],
     "status": "pending_review",
     "url_verified": true,
-    "notes": "WSAVA 免費 PDF\n2026-10-17 合併重複條目 WSAVA-NUTRITION-GUIDELINES-2022，補上期刊出處，摘要依原文改寫。",
+    "notes": "WSAVA 免費 PDF\n2026-10-17 合併重複條目 WSAVA-NUTRITION-GUIDELINES-2022，補上期刊出處，摘要依原文改寫。\n2026-10-17 官方中文版：https://wsava.org/wp-content/uploads/2020/01/Global-Nutritional-Assesment-Guidelines-Chinese.pdf",
     "cited_by": [
       "cat-life-stages-care-taiwan",
       "cat-obesity-weight-management"
@@ -1911,13 +1911,13 @@
     "verified_at": "2026-10-17"
   },
   "WSAVA-DENTAL-GUIDELINES-2022": {
-    "title": "Dental Guidelines",
+    "title": "World Small Animal Veterinary Association Global Dental Guidelines",
     "title_zh": "",
-    "authors": "WSAVA",
+    "authors": "Niemiec B, et al.",
     "source": "WSAVA",
-    "journal": null,
-    "url": "https://wsava.org/global-guidelines/dental-guidelines/",
-    "year": 2022,
+    "journal": "Journal of Small Animal Practice 2026;67(10):859-987",
+    "url": "https://onlinelibrary.wiley.com/doi/epdf/10.1111/jsap.70057",
+    "year": 2026,
     "type": "guideline",
     "language": "en",
     "open_access": true,
@@ -1926,10 +1926,12 @@
       "WSAVA"
     ],
     "disease_tags": [],
-    "status": "pending_review",
-    "url_verified": false,
-    "notes": "auto-crawled from wsava.org",
-    "cited_by": []
+    "status": "needs_review",
+    "url_verified": true,
+    "notes": "auto-crawled from wsava.org\n2026-10-17 改指向 WSAVA 頁面摺疊裡的原始文件：2026 年新版刊在 JSAP，WSAVA 頁面只剩這一版的英文全文（2019 版只剩翻譯）。摘要還沒寫，要讀原文補。另有刷牙衛教 https://wsava.org/wp-content/uploads/2022/06/GDC-Toothbrushing-Toolkit-1.pdf",
+    "cited_by": [],
+    "doi": "10.1111/jsap.70057",
+    "verified_at": "2026-10-17"
   },
   "WSAVA-GASTROINTESTINAL-GUIDELINES-2022": {
     "title": "Endoscopic, biopsy, and histopathologic guidelines for the evaluation of gastrointestinal inflammation in companion animals",
@@ -1958,27 +1960,29 @@
     "verified_at": "2026-10-17"
   },
   "WSAVA-HEREDITARY-DISEASE-GUIDELINES-2022": {
-    "title": "Hereditary Disease Guidelines",
-    "title_zh": "",
+    "title": "The Role of Health-Conscious Breeding and Genetic Testing in Reducing the Impact of Hereditary Disease: A Position Paper from the WSAVA Hereditary Disease Committee",
+    "title_zh": "WSAVA 遺傳性疾病委員會立場聲明：以重視健康的繁育與基因檢測減少遺傳病",
     "authors": "WSAVA",
     "source": "WSAVA",
     "journal": null,
-    "url": "https://wsava.org/global-guidelines/hereditary-disease/",
-    "year": 2022,
+    "url": "https://wsava.org/wp-content/uploads/2020/01/WSAVA-Hereditary-Disease-Committee-Position-Paper-HDC-Edited.pdf",
+    "year": 2020,
     "type": "guideline",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "WSAVA 遺傳性疾病指引。涵蓋純種貓常見遺傳病的辨識、繁育前篩檢與避免繁殖帶病基因的原則，可作為折耳貓骨軟骨發育不全等品種遺傳病的參考框架。",
+    "abstract_zh": "WSAVA 遺傳性疾病委員會的立場聲明，呼籲獸醫師與繁殖者採取重視健康的繁育。選種種畜時要納入能否自然繁殖，並排除容易導致遺傳病的極端外型，例如體型過大或過小、皮膚皺褶、極短的臉；品種本身有致病外型時，應往較溫和的外型選育。繁殖前要做健康篩檢：查病史、請獸醫做身體檢查、做該品種適用的基因檢測，各品種的建議可向品種俱樂部、貓犬協會與動物健康組織查詢。基因檢測要針對該品種驗證過，同一個突變不一定在每個品種都會致病，所以某品種的 DNA 檢測不一定適用其他品種；檢測要交給有品管的專業實驗室。一次驗上百個突變的組合檢測越來越普遍，但要濾掉與該品種無關的結果。基因諮詢要依遺傳模式、突變的外顯率、品種與該突變在品種內的頻率個別判斷，避免在繁殖、治療或安樂死上做出不當決定。委員會維護一個可依品種、疾病、實驗室搜尋的犬貓遺傳病 DNA 檢測實驗室資料庫。",
     "keywords": [
       "WSAVA"
     ],
     "disease_tags": [],
     "status": "pending_review",
-    "url_verified": false,
-    "notes": "auto-crawled from wsava.org | 摘要依指引範圍整理，2026-06-10",
+    "url_verified": true,
+    "notes": "auto-crawled from wsava.org | 摘要依指引範圍整理，2026-06-10\n2026-10-17 改指向 WSAVA 頁面摺疊裡的原始文件：原本指向遺傳病委員會首頁，實際文件是這份立場聲明（PDF 未標年份，2020-01 上傳）。摘要依 PDF 原文重寫，原摘要提到的折耳貓骨軟骨發育不全不在原文裡。",
     "cited_by": [
       "cat-hcm-heart-disease"
-    ]
+    ],
+    "pdf_url": "https://wsava.org/wp-content/uploads/2020/01/WSAVA-Hereditary-Disease-Committee-Position-Paper-HDC-Edited.pdf",
+    "verified_at": "2026-10-17"
   },
   "WSAVA-LIVER-DISEASE-GUIDELINES-2022": {
     "title": "WSAVA Standards for Clinical and Histological Diagnosis of Canine and Feline Liver Diseases",
@@ -2028,12 +2032,12 @@
     "cited_by": []
   },
   "WSAVA-PAIN-GUIDELINES-2022": {
-    "title": "Pain Guidelines",
+    "title": "2022 WSAVA guidelines for the recognition, assessment and treatment of pain",
     "title_zh": "",
-    "authors": "WSAVA",
+    "authors": "Monteiro BP, et al.",
     "source": "WSAVA",
-    "journal": null,
-    "url": "https://wsava.org/global-guidelines/pain-guidelines/",
+    "journal": "Journal of Small Animal Practice 2023;64(4):177-254",
+    "url": "https://onlinelibrary.wiley.com/doi/10.1111/jsap.13566",
     "year": 2022,
     "type": "guideline",
     "language": "en",
@@ -2043,19 +2047,21 @@
       "WSAVA"
     ],
     "disease_tags": [],
-    "status": "pending_review",
-    "url_verified": false,
-    "notes": "auto-crawled from wsava.org",
-    "cited_by": []
+    "status": "needs_review",
+    "url_verified": true,
+    "notes": "auto-crawled from wsava.org\n2026-10-17 改指向 WSAVA 頁面摺疊裡的原始文件：改指向 JSAP 全文。貓結紮的止痛流程另有 https://wsava.org/wp-content/uploads/2024/08/Castration-and-OVH-cats.pdf；各情況疼痛程度表 https://wsava.org/wp-content/uploads/2020/01/WSAVA-Global-Pain-Council-Perceived-levels-of-pain.pdf。摘要還沒寫。",
+    "cited_by": [],
+    "doi": "10.1111/jsap.13566",
+    "verified_at": "2026-10-17"
   },
   "WSAVA-PROFESSIONAL-WELLNESS-GUIDELIN-2022": {
-    "title": "Professional Wellness Guidelines",
+    "title": "WSAVA professional wellness guidelines",
     "title_zh": "",
-    "authors": "WSAVA",
+    "authors": "Paton M, et al.",
     "source": "WSAVA",
-    "journal": null,
-    "url": "https://wsava.org/global-guidelines/professional-wellness-guidelines/",
-    "year": 2022,
+    "journal": "Journal of Small Animal Practice 2024;65(3):153-175",
+    "url": "https://doi.org/10.1111/jsap.13689",
+    "year": 2024,
     "type": "guideline",
     "language": "en",
     "open_access": true,
@@ -2064,19 +2070,22 @@
       "WSAVA"
     ],
     "disease_tags": [],
-    "status": "pending_review",
-    "url_verified": false,
-    "notes": "auto-crawled from wsava.org",
-    "cited_by": []
+    "status": "needs_review",
+    "url_verified": true,
+    "notes": "auto-crawled from wsava.org\n2026-10-17 改指向 WSAVA 頁面摺疊裡的原始文件：改指向 JSAP 全文；pdf_url 是 WSAVA 的重點圖表。摘要還沒寫。",
+    "cited_by": [],
+    "doi": "10.1111/jsap.13689",
+    "pdf_url": "https://wsava.org/wp-content/uploads/2025/05/Professional_Wellness_Guidelines-FINAL.pdf",
+    "verified_at": "2026-10-17"
   },
   "WSAVA-REPRODUCTION-CONTROL-GUIDELINE-2022": {
-    "title": "Reproduction Control Guidelines",
+    "title": "WSAVA guidelines for the control of reproduction in dogs and cats",
     "title_zh": "",
-    "authors": "WSAVA",
+    "authors": "Romagnoli S, et al.",
     "source": "WSAVA",
-    "journal": null,
-    "url": "https://wsava.org/global-guidelines/reproduction-guidelines/",
-    "year": 2022,
+    "journal": "Journal of Small Animal Practice 2024;65(7):424-559",
+    "url": "https://wsava.org/wp-content/uploads/2024/05/J-of-Small-Animal-Practice-2024-Romagnoli-WSAVA-guidelines-for-the-control-of-reproduction-in-dogs-and-cats.pdf",
+    "year": 2024,
     "type": "guideline",
     "language": "en",
     "open_access": true,
@@ -2085,73 +2094,13 @@
       "WSAVA"
     ],
     "disease_tags": [],
-    "status": "pending_review",
-    "url_verified": false,
-    "notes": "auto-crawled from wsava.org",
-    "cited_by": []
-  },
-  "WSAVA-ADVOCACY-AND-COMMUNICATIONS-CO-2022": {
-    "title": "Advocacy and Communications Committee",
-    "title_zh": "",
-    "authors": "WSAVA",
-    "source": "WSAVA",
-    "journal": null,
-    "url": "https://wsava.org/committees/advocacy-and-communications-committee/",
-    "year": 2022,
-    "type": "guideline",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "",
-    "keywords": [
-      "WSAVA"
-    ],
-    "disease_tags": [],
-    "status": "pending_review",
-    "url_verified": false,
-    "notes": "auto-crawled from wsava.org",
-    "cited_by": []
-  },
-  "WSAVA-MEMBERSHIP-AND-NOMINATION-COMM-2022": {
-    "title": "Membership and Nomination Committee",
-    "title_zh": "",
-    "authors": "WSAVA",
-    "source": "WSAVA",
-    "journal": null,
-    "url": "https://wsava.org/committees/membership-and-nomination-committee/",
-    "year": 2022,
-    "type": "guideline",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "",
-    "keywords": [
-      "WSAVA"
-    ],
-    "disease_tags": [],
-    "status": "pending_review",
-    "url_verified": false,
-    "notes": "auto-crawled from wsava.org",
-    "cited_by": []
-  },
-  "WSAVA-PROFESSIONAL-WELLNESS-COMMITTE-2022": {
-    "title": "Professional Wellness Committee",
-    "title_zh": "",
-    "authors": "WSAVA",
-    "source": "WSAVA",
-    "journal": null,
-    "url": "https://wsava.org/committees/professional-wellness-group/",
-    "year": 2022,
-    "type": "guideline",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "",
-    "keywords": [
-      "WSAVA"
-    ],
-    "disease_tags": [],
-    "status": "pending_review",
-    "url_verified": false,
-    "notes": "auto-crawled from wsava.org",
-    "cited_by": []
+    "status": "needs_review",
+    "url_verified": true,
+    "notes": "auto-crawled from wsava.org\n2026-10-17 改指向 WSAVA 頁面摺疊裡的原始文件：改指向 2024 年 JSAP 全文 PDF；摘要版 https://wsava.org/wp-content/uploads/2024/06/Executive-Summary.pdf。摘要還沒寫。",
+    "cited_by": [],
+    "doi": "10.1111/jsap.13724",
+    "pdf_url": "https://wsava.org/wp-content/uploads/2024/05/J-of-Small-Animal-Practice-2024-Romagnoli-WSAVA-guidelines-for-the-control-of-reproduction-in-dogs-and-cats.pdf",
+    "verified_at": "2026-10-17"
   },
   "ASPCA-CAT-PLANT-LIST-2024": {
     "title": "Cat Plant List",
@@ -3982,7 +3931,7 @@
     "type": "guideline",
     "language": "en",
     "abstract_zh": "WSAVA 營養評估檢核表。飼主填寫：活動量、體重狀況、室內或戶外、目前吃的所有食物（主食、零食、潔牙產品、餵藥用的食物）的品牌、形式、份量、次數與開始時間，以及保健品。醫療團隊填寫：目前體重、理想體重、體態評分（9 分或 5 分制）、肌肉狀況評分（正常、輕度、中度、重度流失），再依篩檢風險因子決定要不要做延伸評估。",
-    "notes": "2026-10-17 小幫手提供，讀 PDF 原文核對。"
+    "notes": "2026-10-17 小幫手提供，讀 PDF 原文核對。\n2026-10-17 官方中文版：https://wsava.org/wp-content/uploads/2020/01/8-%E7%87%9F%E9%A4%8A%E8%A9%95%E4%BC%B0%E6%AA%A2%E6%A0%B8%E8%A1%A8.pdf"
   },
   "VCA-CAT-FOOD-LABELS": {
     "journal": null,
@@ -4064,12 +4013,12 @@
     "title_zh": "WSAVA：給貓零食",
     "authors": "WSAVA Global Nutrition Committee",
     "source": "WSAVA",
-    "url": "https://wsava.org/wp-content/uploads/2024/06/Feeding-treats-to-your-cat-v2.pdf",
-    "pdf_url": "https://wsava.org/wp-content/uploads/2024/06/Feeding-treats-to-your-cat-v2.pdf",
+    "url": "https://wsava.org/wp-content/uploads/2025/11/WSAVA_GuidetoTreats_Cats_251107.pdf",
+    "pdf_url": "https://wsava.org/wp-content/uploads/2025/11/WSAVA_GuidetoTreats_Cats_251107.pdf",
     "year": 2024,
     "type": "guideline",
     "abstract_zh": "WSAVA 給飼主的零食衛教單。零食指完整均衡主食以外給貓的任何食物，包括點心、咬嚼物、保健品和餵藥用的食物。零食應少於每日熱量的 10%，不能取代正餐；市售零食沒有標熱量就問廠商。依體重的每日零食熱量上限（以理想體態的健康成貓估算）：2.5 公斤 18 大卡、3 公斤 20、3.5 公斤 21、4 公斤 22、4.5 公斤 24、5 公斤 25、5.5 公斤 26、6 公斤 26、7 公斤 28。骨頭（熟的、生的）可能造成嚴重傷害，生的動物性零食有病原風險；有毒食物包括蔥蒜韭、葡萄與葡萄乾、巧克力、木糖醇、酒精與生麵團、含咖啡因飲料，乳製品也應避免（許多貓乳糖不耐）。有疾病、飲食敏感或吃處方飲食的貓，一般零食可能不適合。附常見人類食物的熱量：1 盎司（28 公克）去皮熟雞胸肉 47 大卡、水煮鮪魚罐頭 36 大卡、熟鮭魚 39 大卡、切達起司 120 大卡。",
-    "notes": "2026-10-17 讀 PDF 原文核對。"
+    "notes": "2026-10-17 讀 PDF 原文核對。\n2026-10-17 改指向 WSAVA 頁面摺疊裡的原始文件：WSAVA 換上 2025-11 改版，內容與數字和 2024 版相同（已比對兩份 PDF）。"
   },
   "WSAVA-NUTRITION-FAQ-2018": {
     "journal": null,
@@ -6097,7 +6046,7 @@
     "status": "pending_review",
     "url_verified": true,
     "verified_at": "2026-10-17",
-    "notes": "2026-10-17 新增：核對 cat-hepatic-lipidosis 時發現過重門檻出自這份圖表，不在 2011 營養評估指引本文。",
+    "notes": "2026-10-17 新增：核對 cat-hepatic-lipidosis 時發現過重門檻出自這份圖表，不在 2011 營養評估指引本文。\n2026-10-17 官方中文版（2020 年版，英文版已在 2025 年更新）：https://wsava.org/wp-content/uploads/2020/10/Body-Condition-Score-Chart-Cat-Chinese-updated-August-2020.pdf",
     "cited_by": [
       "cat-hepatic-lipidosis"
     ]
@@ -6127,5 +6076,114 @@
     "cited_by": [
       "cat-end-of-life-care-taiwan"
     ]
+  },
+  "WSAVA-MCS-CAT": {
+    "journal": null,
+    "open_access": true,
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-17",
+    "disease_tags": [
+      "nutrition"
+    ],
+    "cited_by": [],
+    "authors": "WSAVA Global Nutrition Committee",
+    "source": "WSAVA",
+    "type": "guideline",
+    "language": "en",
+    "title": "Muscle Condition Score — Cat (WSAVA Global Nutrition Toolkit)",
+    "title_zh": "WSAVA 貓肌肉狀態評分表",
+    "url": "https://wsava.org/wp-content/uploads/2020/01/Muscle-Condition-Score-Chart-for-Cats.pdf",
+    "year": 2014,
+    "keywords": [
+      "肌肉狀態評分",
+      "肌肉流失",
+      "營養評估"
+    ],
+    "abstract_zh": "WSAVA 營養委員會的貓肌肉狀態評分圖（圖由 Tufts 大學提供）。用看和摸脊椎、肩胛骨、頭骨、髂骨翼來評估，肌肉流失通常最早出現在脊椎兩側的肌肉。分成正常、輕度流失、中度流失、重度流失四級，各附一張示意圖。體態評分偏胖（高於 5/9）的貓也可能有明顯肌肉流失，偏瘦（低於 4/9）的貓肌肉可能還正常，所以每次看診都要同時評估體態與肌肉；輕度流失和偏胖的貓尤其要用手摸。",
+    "notes": "2026-10-17 從 WSAVA 營養指引頁摺疊裡的工具包加入；PDF 是圖片，看圖核對。官方中文版：https://wsava.org/wp-content/uploads/2020/01/4-%E8%82%8C%E8%82%89%E7%8B%80%E6%85%8B%E8%A9%95%E5%88%86%E8%A1%A8-%E8%B2%93.pdf",
+    "pdf_url": "https://wsava.org/wp-content/uploads/2020/01/Muscle-Condition-Score-Chart-for-Cats.pdf"
+  },
+  "WSAVA-CALORIE-CAT-2020": {
+    "journal": null,
+    "open_access": true,
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-17",
+    "disease_tags": [
+      "nutrition"
+    ],
+    "cited_by": [],
+    "authors": "WSAVA Global Nutrition Committee",
+    "source": "WSAVA",
+    "type": "guideline",
+    "language": "en",
+    "title": "Calorie Needs for an Average Healthy Adult Cat in Ideal Body Condition",
+    "title_zh": "WSAVA 理想體態健康成貓每日熱量需求表",
+    "url": "https://wsava.org/wp-content/uploads/2020/07/Calorie-Needs-for-Healthy-Adult-Cats-updated-July-2020.pdf",
+    "year": 2020,
+    "keywords": [
+      "熱量需求",
+      "維持能量需求",
+      "餵食量"
+    ],
+    "abstract_zh": "WSAVA 營養委員會整理的理想體態健康成貓每日熱量參考表（2020 年 7 月更新），依 2006 年 NRC 的維持能量需求公式計算：體態精實的成貓用 100 大卡乘以體重（公斤）的 0.67 次方，容易胖的成貓用 130 大卡乘以體重的 0.4 次方，表上的範圍就是兩個算法之間。例如 3 公斤每天 200 到 210 大卡、4 公斤 225 到 250 大卡、5 公斤 250 到 290 大卡、6 公斤 265 到 330 大卡。表格只供參考，每隻貓需求不同，以維持理想精實體態為準。",
+    "notes": "2026-10-17 從 WSAVA 營養指引頁摺疊裡的工具包加入，讀 PDF 原文核對。",
+    "pdf_url": "https://wsava.org/wp-content/uploads/2020/07/Calorie-Needs-for-Healthy-Adult-Cats-updated-July-2020.pdf"
+  },
+  "WSAVA-SAVVY-CAT-OWNER-2013": {
+    "journal": null,
+    "open_access": true,
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-17",
+    "disease_tags": [
+      "nutrition"
+    ],
+    "cited_by": [],
+    "authors": "WSAVA Global Nutrition Committee",
+    "source": "WSAVA",
+    "type": "guideline",
+    "language": "en",
+    "title": "The Savvy Cat Owner's Guide: Nutrition on the Internet",
+    "title_zh": "WSAVA 飼主上網查貓營養資訊指南",
+    "url": "https://wsava.org/wp-content/uploads/2020/01/The-Savvy-Cat-Owner-s-Guide-to-Nutrition-on-the-Internet.pdf",
+    "year": 2013,
+    "keywords": [
+      "營養資訊",
+      "網路資訊",
+      "飼主衛教"
+    ],
+    "abstract_zh": "WSAVA 營養委員會給飼主的衛教單，教人判斷網路上的貓營養資訊。建議：網路資訊拿去和獸醫討論，用來補充而不是取代獸醫的說明；查作者背景，「寵物營養師」沒有統一的訓練標準，有公信力的是通過美國或歐洲獸醫營養專科學院認證的獸醫營養專科醫師；看網址是商業、教育或非營利機構；看說法有沒有引用同儕審查的研究，引用人、鼠、狗的研究不一定適用於貓；注意資料是否過時；個人經驗分享容易誤導；網站上的飼料排名多半依主觀或價格、成分等標準，應改用科學與品管等客觀標準；對誇大的說法保持懷疑。文末列出營養指引、飼料法規、營養諮詢、自製飲食、肥胖、保健品、生食等主題的可信網站。",
+    "notes": "2026-10-17 從 WSAVA 營養指引頁摺疊裡的工具包加入，讀 PDF 原文核對。官方中文版：https://wsava.org/wp-content/uploads/2020/01/13-%E9%A4%8A%E8%B2%93%E7%A7%98%E7%AC%88-%E7%B6%B2%E8%B7%AF%E4%B8%8A%E7%9A%84%E7%87%9F%E9%A4%8A%E5%AD%B8%E7%9F%A5%E8%AD%98.pdf",
+    "pdf_url": "https://wsava.org/wp-content/uploads/2020/01/The-Savvy-Cat-Owner-s-Guide-to-Nutrition-on-the-Internet.pdf"
+  },
+  "WSAVA-HOSPITAL-FEEDING-2013": {
+    "journal": null,
+    "open_access": true,
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-17",
+    "disease_tags": [
+      "nutrition"
+    ],
+    "cited_by": [],
+    "authors": "WSAVA Global Nutrition Committee",
+    "source": "WSAVA",
+    "type": "guideline",
+    "language": "en",
+    "title": "Feeding Guide for Hospitalized Dogs and Cats",
+    "title_zh": "WSAVA 住院犬貓餵食指南",
+    "url": "https://wsava.org/wp-content/uploads/2020/08/Feeding-Guide-for-Hospitalized-Dogs-and-Cats.pdf",
+    "year": 2013,
+    "keywords": [
+      "住院營養",
+      "厭食",
+      "餵食管",
+      "靜止能量需求"
+    ],
+    "abstract_zh": "WSAVA 營養委員會給醫療團隊的住院餵食指南。依厭食或食慾不振的天數（含在家的天數）決定介入：1 到 2 天要開餵食醫囑、每天記錄吃了多少與臨床狀況；3 到 4 天若沒有快要康復，多半需要營養支持，若要麻醉可考慮順便放餵食管；5 天就一定要營養支持，放餵食管或開始靜脈營養。已經營養不良的動物，血流動力學穩定後就要開始。餵食計畫要寫明飲食、途徑、份量與頻率，目標是達到靜止能量需求，可能要 2 到 3 天才達到。能吃就先試自行進食或誘食，吃不夠再用輔助餵食；依消化道功能與預計天數選擇鼻胃管、食道胃管、胃管、空腸管或靜脈營養。附體重對應的靜止能量需求表，例如 3 公斤每天 160 大卡、4 公斤 198 大卡、5 公斤 234 大卡。",
+    "notes": "2026-10-17 從 WSAVA 營養指引頁摺疊裡的工具包加入，讀 PDF 原文核對。官方中文版：https://wsava.org/wp-content/uploads/2020/01/11-%E4%BD%8F%E9%99%A2%E7%8A%AC%E8%B2%93%E9%A4%B5%E9%A3%9F%E6%8C%87%E5%8D%97.pdf",
+    "pdf_url": "https://wsava.org/wp-content/uploads/2020/08/Feeding-Guide-for-Hospitalized-Dogs-and-Cats.pdf"
   }
 }

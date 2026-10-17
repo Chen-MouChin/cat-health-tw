@@ -7,16 +7,16 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
   <link rel="apple-touch-icon" href="favicon-180.png">
   <meta property="og:image" content="https://chen-mouchin.github.io/cat-health-tw/images/og-default.png">
-<title>獸醫院查詢 — 貓健康站</title>
+<title>全台 24 小時動物醫院與貓專科獸醫院查詢 — 貓健康站</title>
 <meta name="description" content="全台 22 縣市動物醫院查詢：本島 19 縣市 + 澎湖、金門共 2,001 家（基於農業部公開登記；連江縣無登記動物醫院）。可篩 24h 急診 + 貓專科，手機可定位找附近最近的醫院。">
 <link rel="stylesheet" href="css/theme.css?v=20261016">
 <link rel="stylesheet" href="css/site.css?v=20261016">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"CollectionPage","name":"獸醫院查詢 — 貓健康站","description":"全台 22 縣市 2,001 家動物醫院查詢（本島完整 + 澎湖金門）。可篩 24h 急診 + 貓專科。資料來源：農業部動保司。","url":"https://chen-mouchin.github.io/cat-health-tw/vets.html","inLanguage":"zh-TW"}
+{"@context":"https://schema.org","@type":"CollectionPage","name":"全台 24 小時動物醫院與貓專科獸醫院查詢 — 貓健康站","description":"全台 22 縣市 2,001 家動物醫院查詢（本島完整 + 澎湖金門）。可篩 24h 急診 + 貓專科。資料來源：農業部動保司。","url":"https://chen-mouchin.github.io/cat-health-tw/vets.html","inLanguage":"zh-TW"}
 </script>
 <script src="js/theme.js"></script>
 <style>
-/* 獸醫院查詢｜共用外殼在 site.css；這裡只放查詢工具自己的版面。
+/* 動物醫院查詢｜共用外殼在 site.css；這裡只放查詢工具自己的版面。
    紅色不用在這頁：24h 只是資料標籤，判斷交給獸醫。 */
 .vets-col { max-width: 760px; margin: 0 auto; }
 .page-head .meta-line { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; margin-top: 10px; font-size: 14px; color: var(--text-muted); }
@@ -66,12 +66,13 @@
 
 .empty { padding: 32px 0; text-align: center; color: var(--text-muted); }
 .load-more { display: flex; margin: 16px auto 0; }
+.city-pages { margin: 28px 0 0; font-size: 14px; line-height: 2; color: var(--text-2); }
 
 @media (min-width: 880px) {
   .vet-list { grid-template-columns: 1fr; }
 }
 </style>
-  <meta property="og:title" content="獸醫院查詢 — 貓健康站">
+  <meta property="og:title" content="全台 24 小時動物醫院與貓專科獸醫院查詢 — 貓健康站">
   <meta property="og:description" content="全台 22 縣市 2,001 家動物醫院查詢 · 可篩 24h 急診 + 貓專科。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://chen-mouchin.github.io/cat-health-tw/vets.html">
@@ -88,7 +89,7 @@
   <a class="er-pill" href="vets.html?only24h=1&amp;near=1"><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>24h 醫院</a>
   <nav class="main-nav" aria-label="主要分頁">
     <a href="articles/index.html">文章</a>
-    <a href="vets.html" aria-current="page">獸醫院</a>
+    <a href="vets.html" aria-current="page">動物醫院</a>
     <a href="library.html">文獻庫</a>
     <a href="breeds.html">品種</a>
     <a href="about.html">關於</a>
@@ -133,7 +134,7 @@
                 <path d="M 17 37 C 17 34.5, 20.5 34.5, 20.5 37" fill="var(--cat-white)"/>
                 <path d="M 27.5 37 C 27.5 34.5, 31 34.5, 31 37" fill="var(--cat-white)"/>
             </svg><!-- /cat-art --></div>
-    <h1>獸醫院查詢</h1>
+    <h1>動物醫院查詢</h1>
     <p class="lede">全台 22 縣市共 <strong id="totalCount">—</strong> 家動物醫院，資料來自農業部動保司的公開登記。</p>
     <p class="meta-line"><a href="about.html#data-quality" class="data-quality-badge" title="100% 有地址；99% 有可用 GPS 座標，部分只精確到街道或行政區">99% 有座標，看資料怎麼補的</a></p>
   </div>
@@ -146,7 +147,7 @@
   </div>
 
   <div class="toolbar2">
-    <button id="btnLoc" class="btn" type="button" onclick="requestLocation()"><svg class="i" aria-hidden="true"><use href="#i-locate"/></svg>找我附近的獸醫院</button>
+    <button id="btnLoc" class="btn" type="button" onclick="requestLocation()"><svg class="i" aria-hidden="true"><use href="#i-locate"/></svg>找我附近的動物醫院</button>
     <button id="btn24h" class="btn btn-quiet" type="button" onclick="toggle24h()">只看 24 小時</button>
     <button id="btnCat" class="btn btn-quiet" type="button" onclick="toggleCat()">只看貓專科</button>
     <span class="loc-status" id="locStatus" role="status"></span>
@@ -164,6 +165,8 @@
   <div class="hint" id="hint">載入中...</div>
   <div class="vet-list" id="list"></div>
   <button class="btn btn-quiet load-more" id="loadMore" type="button" style="display:none" onclick="loadMore()">顯示更多</button>
+
+  <!-- city-pages --><p class="city-pages">各縣市完整名單：<a href="vets/taipei.html">台北市</a> · <a href="vets/new-taipei.html">新北市</a> · <a href="vets/keelung.html">基隆市</a> · <a href="vets/taoyuan.html">桃園市</a> · <a href="vets/hsinchu-city.html">新竹市</a> · <a href="vets/hsinchu-county.html">新竹縣</a> · <a href="vets/miaoli.html">苗栗縣</a> · <a href="vets/taichung.html">台中市</a> · <a href="vets/changhua.html">彰化縣</a> · <a href="vets/nantou.html">南投縣</a> · <a href="vets/yunlin.html">雲林縣</a> · <a href="vets/chiayi-city.html">嘉義市</a> · <a href="vets/chiayi-county.html">嘉義縣</a> · <a href="vets/tainan.html">台南市</a> · <a href="vets/kaohsiung.html">高雄市</a> · <a href="vets/pingtung.html">屏東縣</a> · <a href="vets/yilan.html">宜蘭縣</a> · <a href="vets/hualien.html">花蓮縣</a> · <a href="vets/taitung.html">台東縣</a> · <a href="vets/penghu.html">澎湖縣</a> · <a href="vets/kinmen.html">金門縣</a></p><!-- /city-pages -->
 
   <aside class="ad" aria-label="贊助" hidden>
     <span class="ad-label">贊助</span>
@@ -183,7 +186,7 @@
     </svg></div>
   <nav aria-label="頁尾">
     <a href="articles/index.html">文章</a>
-    <a href="vets.html">獸醫院</a>
+    <a href="vets.html">動物醫院</a>
     <a href="library.html">文獻庫</a>
     <a href="breeds.html">品種</a>
     <a href="about.html">關於</a>
@@ -191,7 +194,7 @@
     <a href="privacy.html">隱私權政策</a>
   </nav>
   <p>本站內容僅供參考。</p>
-  <p class="foot-src">學術來源：ISFM · WSAVA · IRIS · AAFP · ABCD · Cornell · PubMed OA</p>
+  <p class="foot-src">學術來源：ISFM · AAFP · WSAVA · IRIS · Cornell · iCatCare · PubMed OA</p>
 </footer>
 <!-- /site-foot -->
 <p class="foot-src" style="margin:8px 0 0">醫院資料：農業部動物保護司公開資料；地圖座標：© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a>（ODbL）</p>
@@ -255,7 +258,7 @@ function setLocButton() {
   const btn = document.getElementById('btnLoc');
   btn.disabled = false;
   btn.classList.toggle('active', !!myLoc);
-  btn.innerHTML = '<svg class="i" aria-hidden="true"><use href="#i-locate"/></svg>' + (myLoc ? '附近模式（再按一次關閉）' : '找我附近的獸醫院');
+  btn.innerHTML = '<svg class="i" aria-hidden="true"><use href="#i-locate"/></svg>' + (myLoc ? '附近模式（再按一次關閉）' : '找我附近的動物醫院');
 }
 
 function requestLocation() {
@@ -482,7 +485,7 @@ function render() {
     container.innerHTML = '';
     hint.innerHTML = (myLoc && noCoord)
       ? `<div class="empty">符合條件的 ${noCoord} 家座標疑似有誤，無法算距離。關閉附近模式就看得到。</div>`
-      : '<div class="empty"><div class="empty-art cat-art" aria-hidden="true">' + EMPTY_ART + '</div>沒有符合條件的獸醫院</div>';
+      : '<div class="empty"><div class="empty-art cat-art" aria-hidden="true">' + EMPTY_ART + '</div>沒有符合條件的動物醫院</div>';
     moreBtn.style.display = 'none';
     return;
   }
