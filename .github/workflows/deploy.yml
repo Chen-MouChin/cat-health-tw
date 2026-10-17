@@ -1,7 +1,7 @@
 name: Deploy to GitHub Pages
 
 # 發佈 frontend/ 到 GitHub Pages。
-# 本 repo 只放網站成品，由原始碼 repo 的 scripts/publish_site.py 推送；部署手動觸發。
+# 本 repo 只放網站成品，由 Chen-MouChin/cat-health-tw-src 的 scripts/publish_site.py 推送；部署手動觸發。
 on:
   workflow_dispatch:
 
