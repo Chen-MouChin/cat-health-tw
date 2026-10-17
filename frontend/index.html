@@ -8,7 +8,7 @@
   <link rel="apple-touch-icon" href="favicon-180.png">
   <meta property="og:image" content="https://chen-mouchin.github.io/cat-health-tw/images/og-default.png">
   <title>貓健康站 — 台灣貓健康知識庫</title>
-  <meta name="description" content="台灣貓健康知識庫：0 篇深度文章、2,001 家動物醫院、68 種品種圖鑑、221 筆學術引用。每筆引用回溯 ISFM/AAFP/IRIS 原文，無業配。">
+  <meta name="description" content="台灣貓健康知識庫：2,001 家動物醫院、68 種品種圖鑑、221 筆學術引用。每筆引用回溯 ISFM/AAFP/IRIS 原文，無業配。">
   <meta property="og:title" content="貓健康站 — 台灣貓健康知識庫">
   <meta property="og:description" content="找獸醫、查症狀、學品種、看文獻 — 一站搞定，引用回溯原文。">
   <meta property="og:type" content="website">
@@ -21,7 +21,7 @@
     "name": "貓健康站",
     "alternateName": "貓咪大全",
     "url": "https://chen-mouchin.github.io/cat-health-tw/",
-    "description": "台灣貓健康知識庫：0 篇深度文章、2,001 家動物醫院、68 種品種圖鑑、221 筆學術引用。",
+    "description": "台灣貓健康知識庫：2,001 家動物醫院、68 種品種圖鑑、221 筆學術引用。",
     "inLanguage": "zh-TW",
     "potentialAction": {
       "@type": "SearchAction",
@@ -39,7 +39,7 @@
   <style>
     /* 首頁｜主調：溫暖插畫 × 公共服務（設計需求書第二版 5-1），原型在 docs/design/home-prototype.html
        手機單欄從 390px 起；880px 以上主視覺左右分、數字一列、入口四欄。
-       顏色一律用 theme.css 的 token。數字與草稿標籤由 build.py 依實際資料寫入，不要手改。 */
+       顏色一律用 theme.css 的 token。本檔由原稿 content/pages/index.html 經 build.py 產生，要改請改原稿。 */
     @font-face {
       /* jf 粉圓子集，只含主標的字。主標改字後執行 python scripts/fetch_home_font.py */
       font-family: "Huninn";
@@ -114,6 +114,7 @@
     .stats-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px 4px; text-align: center; }
     .stats-grid li { grid-column: span 2; display: flex; flex-direction: column; }
     .stats-grid li:nth-child(-n+2) { grid-column: span 3; }
+    .stats-4 li { grid-column: span 3; } /* 文章還沒上線、只有四項時排成 2×2 */
     .num { font-size: 32px; font-weight: 800; line-height: 1.15; color: var(--primary-deep); font-variant-numeric: tabular-nums; }
     .stats-grid span { font-size: 15px; font-weight: 600; }
 
@@ -197,6 +198,7 @@
       .btn-er { grid-area: btn; width: auto; padding: 0 28px; }
       .stats-grid { grid-template-columns: repeat(5, 1fr); }
       .stats-grid li, .stats-grid li:nth-child(-n+2) { grid-column: auto; }
+      .stats-4 { grid-template-columns: repeat(4, 1fr); }
       .cards { grid-template-columns: repeat(4, 1fr); }
       .posts { grid-template-columns: repeat(3, 1fr); }
       .principles ul { grid-template-columns: repeat(3, 1fr); column-gap: 24px; }
@@ -259,11 +261,10 @@
   </section>
 
   <section class="stats" aria-label="網站收錄">
-    <p class="vh">全台 22 縣市、2,001 家獸醫院、0 篇文章、221 筆文獻、68 種品種。</p>
-    <ul class="stats-grid" aria-hidden="true">
+    <p class="vh">全台 22 縣市、2,001 家獸醫院、221 筆文獻、68 種品種。</p>
+    <ul class="stats-grid stats-4" aria-hidden="true">
       <li><b class="num" data-to="22">22</b><span>縣市</span></li>
       <li><b class="num" data-stat="vets" data-to="2001">2,001</b><span>家獸醫院</span></li>
-      <li><b class="num" data-stat="articles" data-to="0">0</b><span>篇文章</span></li>
       <li><b class="num" data-stat="citations" data-to="221">221</b><span>筆文獻</span></li>
       <li><b class="num" data-stat="breeds" data-to="68">68</b><span>種品種</span></li>
     </ul>
@@ -277,44 +278,6 @@
     <a class="card" href="breeds.html"><span class="card-ic"><svg class="i" aria-hidden="true"><use href="#i-cat"/></svg></span><h3>品種圖鑑</h3><p>含遺傳病風險整理</p></a>
   </nav>
 
-  <section aria-labelledby="common-title" hidden>
-    <h2 class="sec-h" id="common-title"><svg class="mark" viewBox="0 0 30 14" aria-hidden="true" focusable="false"><path pathLength="1" d="M1 7.5h9l2.2-5 3.6 9.5 3-7.5 1.7 3H29"/></svg>常見狀況</h2>
-    <ul class="pills">
-      <li hidden data-draft-of="cat-emergency-care-taiwan"><a class="pill" data-draft-href="articles/cat-emergency-care-taiwan.html">急診判斷</a></li>
-      <li hidden data-draft-of="male-cat-urethral-obstruction"><a class="pill" data-draft-href="articles/male-cat-urethral-obstruction.html">公貓尿道阻塞</a></li>
-      <li hidden data-draft-of="cat-ckd-complete-guide"><a class="pill" data-draft-href="articles/cat-ckd-complete-guide.html">慢性腎病 CKD</a></li>
-      <li hidden data-draft-of="cat-toxic-substances-taiwan"><a class="pill" data-draft-href="articles/cat-toxic-substances-taiwan.html">誤食中毒</a></li>
-      <li hidden data-draft-of="cat-common-symptoms-taiwan"><a class="pill" data-draft-href="articles/cat-common-symptoms-taiwan.html">嘔吐與便秘</a></li>
-      <li hidden data-draft-of="cat-diabetes-care"><a class="pill" data-draft-href="articles/cat-diabetes-care.html">糖尿病</a></li>
-      <li hidden data-draft-of="cat-hyperthyroidism-senior"><a class="pill" data-draft-href="articles/cat-hyperthyroidism-senior.html">甲狀腺亢進</a></li>
-      <li hidden data-draft-of="cat-fip-guide-taiwan"><a class="pill" data-draft-href="articles/cat-fip-guide-taiwan.html">FIP 腹膜炎</a></li>
-      <li hidden data-draft-of="cat-vaccination-wellness-taiwan"><a class="pill" data-draft-href="articles/cat-vaccination-wellness-taiwan.html">疫苗與健檢</a></li>
-      <li hidden data-draft-of="cat-neutering-aftercare-taiwan"><a class="pill" data-draft-href="articles/cat-neutering-aftercare-taiwan.html">結紮</a></li>
-    </ul>
-  </section>
-
-  <section aria-labelledby="core-title" hidden>
-    <h2 class="sec-h" id="core-title"><svg class="mark" viewBox="0 0 30 14" aria-hidden="true" focusable="false"><path pathLength="1" d="M1 7.5h9l2.2-5 3.6 9.5 3-7.5 1.7 3H29"/></svg>推薦文章</h2>
-    <div class="posts">
-      <article class="post" hidden>
-        <p class="post-meta"><span>健康 › 急症辨識</span><span class="tag-draft" data-quality-of="cat-emergency-care-taiwan">草稿</span></p>
-        <h3><span data-draft-link="articles/cat-emergency-care-taiwan.html">貓咪急診判斷與居家急救：何時該衝醫院，路上能做什麼</span></h3>
-        <p>把貓的症狀分成四級：立刻急診、今天就醫、本週預約、居家觀察。</p>
-      </article>
-      <article class="post" hidden>
-        <p class="post-meta"><span>健康 › 急症辨識</span><span class="tag-draft" data-quality-of="male-cat-urethral-obstruction">草稿</span></p>
-        <h3><span data-draft-link="articles/male-cat-urethral-obstruction.html">公貓尿道阻塞：辨識急症與黃金救治時間</span></h3>
-        <p>公貓尿道阻塞在 24 到 48 小時內可能致命，常被誤認為便秘。</p>
-      </article>
-      <article class="post" hidden>
-        <p class="post-meta"><span>健康 › 常見疾病</span><span class="tag-draft" data-quality-of="cat-ckd-complete-guide">草稿</span></p>
-        <h3><span data-draft-link="articles/cat-ckd-complete-guide.html">貓咪慢性腎病（CKD）：分期、飲食與居家照護</span></h3>
-        <p>IRIS 2023 分期怎麼看、哪些症狀建議請獸醫看看、低磷飲食與補水。</p>
-      </article>
-    </div>
-    <a class="more" href="articles/index.html">看全部 0 篇文章<svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-  </section>
-
   <!-- 廣告位：AdSense 上線後拿掉 hidden，在 .ad 裡放廣告碼（每頁最多 3 個，不可夾在急診資訊中間） -->
   <aside class="ad" aria-label="贊助" hidden>
     <span class="ad-label">贊助</span>
@@ -325,7 +288,7 @@
     <div class="principles">
       <ul>
         <li><svg class="mark" aria-hidden="true"><use href="#i-mark"/></svg><div><b>數字附出處</b><p>每個數字句尾都有編號，點了看原始文獻。</p></div></li>
-        <li><svg class="mark" aria-hidden="true"><use href="#i-mark"/></svg><div><b>草稿會標示</b><p>還沒經人工審核的文章，標題旁會寫「草稿」。</p></div></li>
+        <li><svg class="mark" aria-hidden="true"><use href="#i-mark"/></svg><div><b>審核過才上線</b><p>每篇文章經人工審核才公開。</p></div></li>
         <li><svg class="mark" aria-hidden="true"><use href="#i-mark"/></svg><div><b>沒有業配</b><p>不收廠商費用、不放聯盟連結，網站靠 Google 廣告維持。</p></div></li>
       </ul>
       <a class="more" href="editorial.html">看編輯方針<svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
