@@ -2603,9 +2603,9 @@
       "law",
       "taiwan"
     ],
-    "status": "pending_review",
-    "url_verified": false,
-    "notes": "2026-09-06 依 WebSearch 結果摘要（農業部全球資訊網、動保資訊網新聞稿），尚待 WebFetch 逐字核對。",
+    "status": "approved",
+    "url_verified": true,
+    "notes": "2026-09-06 依 WebSearch 結果摘要（農業部全球資訊網、動保資訊網新聞稿），尚待 WebFetch 逐字核對。｜2026-10-18 讀農業部新聞稿原文（發布日期 113-12-17）逐句核對：公告日 113-12-16、第 19 條第 1 項、114-01-01 起、1 年緩衝至 115-01-01、第 31 條第 1 項第 8 款 3,000–15,000 元、登記不需同時施打狂犬病疫苗，皆相符。",
     "cited_by": [
       "cat-adoption-guide-taiwan",
       "cat-cost-insurance-taiwan",
@@ -2617,7 +2617,8 @@
       "mixed-breed-cats-taiwan",
       "rehoming-cat-responsibly-taiwan",
       "renting-with-cats-taiwan"
-    ]
+    ],
+    "verified_at": "2026-10-18"
   },
   "APHIA-CAT-RABIES-2025": {
     "title": "貓狂犬病防疫措施 Q&A",
@@ -2629,7 +2630,7 @@
     "type": "government",
     "language": "zh",
     "open_access": true,
-    "abstract_zh": "防檢署「貓狂犬病防疫措施 Q&A」（更新日期 114 年 6 月）。符合要件且經縣市政府公告的貓，自 114 年 7 月 1 日起可不強制施打狂犬病疫苗：飼養或管領於室內，外出時以箱籠裝載、能有效防止貓伸出四肢、頭、尾或逃脫；室內指以屋頂或天花板及四壁或其他物隔間、能防止貓逃脫的空間。7 月 1 日前仍依縣市公告施打；在動物醫院從箱籠拿出看診仍屬室內；寵物旅館的貓建議諮詢獸醫評估。",
+    "abstract_zh": "防檢署「貓狂犬病防疫措施 Q&A」（更新日期 114 年 6 月）。符合要件且經縣市政府公告的貓，自 114 年 7 月 1 日起可不強制施打狂犬病疫苗：飼養或管領於室內，外出時以箱籠裝載、能有效防止貓伸出四肢、頭、尾或逃脫；室內指以屋頂或天花板及四壁或其他物隔間、能防止貓逃脫的空間，庭院和開放的陽台不算。7 月 1 日前仍依縣市公告施打；在動物醫院從箱籠拿出看診仍屬室內；寵物旅館的貓建議諮詢獸醫評估。",
     "keywords": [
       "狂犬病",
       "疫苗",
@@ -2643,9 +2644,9 @@
       "vaccination",
       "rabies"
     ],
-    "status": "pending_review",
-    "url_verified": false,
-    "notes": "2026-10-17 讀原文核對；舊摘要的 3 月齡、罰鍰、2013 年鼬獾等內容不在這頁，改引 APHIA-RABIES-VACCINE-FAQ。",
+    "status": "approved",
+    "url_verified": true,
+    "notes": "2026-10-17 讀原文核對；舊摘要的 3 月齡、罰鍰、2013 年鼬獾等內容不在這頁，改引 APHIA-RABIES-VACCINE-FAQ。｜2026-10-18 讀防檢署 Q&A 原文（更新日期 114 年 6 月）逐句核對：免打要件、114-07-01 起、室內定義、7 月 1 日前仍依縣市公告施打、看診時從箱籠拿出仍屬室內、寵物旅館建議諮詢獸醫，皆相符；補上原文 Q6「庭院及開放之陽台不符合」。",
     "cited_by": [
       "cat-adoption-guide-taiwan",
       "cat-indoor-vs-outdoor-taiwan",
@@ -2654,7 +2655,7 @@
       "cat-vaccination-wellness-taiwan",
       "kitten-care-complete-taiwan"
     ],
-    "verified_at": "2026-10-17"
+    "verified_at": "2026-10-18"
   },
   "GANDOLFI-2016-TRPV4": {
     "title": "A dominant TRPV4 variant underlies osteochondrodysplasia in Scottish fold cats",
@@ -2680,14 +2681,14 @@
       "genetic",
       "orthopedic"
     ],
-    "status": "pending_review",
-    "url_verified": false,
-    "notes": "PMID 待 WebFetch 核對。｜2026-10-17 小幫手指出原本的文獻不是這個主題：舊網址 PMID 26911261 是一篇人類情緒性進食的論文，改成正確的 PMID 27063440，讀 PubMed 摘要核對。",
+    "status": "approved",
+    "url_verified": true,
+    "notes": "PMID 待 WebFetch 核對。｜2026-10-17 小幫手指出原本的文獻不是這個主題：舊網址 PMID 26911261 是一篇人類情緒性進食的論文，改成正確的 PMID 27063440，讀 PubMed 摘要核對。｜2026-10-18 以 PubMed E-utilities 讀摘要原文核對：44 隻折耳貓、54 隻對照、p.V342F（c.1024G>T）、648 隻未受影響的貓沒有此變異，皆相符。",
     "cited_by": [
       "scottish-fold-breed-guide-taiwan"
     ],
     "doi": "10.1016/j.joca.2016.03.019",
-    "verified_at": "2026-10-17"
+    "verified_at": "2026-10-18"
   },
   "GUNN-MOORE-2007-FCDS": {
     "title": "Cognitive dysfunction and the neurobiology of ageing in cats",
@@ -2695,13 +2696,13 @@
     "authors": "Danièlle Gunn-Moore, Kelly Moffat, Lori-Ann Christie, Elizabeth Head",
     "source": "Journal of Small Animal Practice",
     "journal": "J Small Anim Pract",
-    "url": "https://onlinelibrary.wiley.com/doi/10.1111/j.1748-5827.2007.00386.x",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/17617164/",
     "doi": "10.1111/j.1748-5827.2007.00386.x",
     "year": 2007,
     "type": "review",
     "language": "en",
     "open_access": false,
-    "abstract_zh": "回顧貓認知功能障礙症候群（FCDS）的臨床表現與神經病理，並引述行為問卷調查：11 至 14 歲貓約 28% 出現至少一項與認知障礙相符的行為改變，15 歲以上約 50%。強調需先排除甲狀腺亢進、高血壓、疼痛等可治療的疾病。",
+    "abstract_zh": "回顧貓認知功能障礙的臨床表現與神經病理。摘要引述一項研究：11 至 14 歲的家貓有 28% 出現至少一項老年才開始的行為問題，15 歲以上超過 50%。行為改變也可能來自全身性疾病、腦部疾病或單純的行為問題，強調要先完整檢查有沒有可治療的疾病，再調整飲食與環境。",
     "keywords": [
       "認知功能障礙",
       "老貓",
@@ -2714,12 +2715,14 @@
       "behavior"
     ],
     "status": "pending_review",
-    "url_verified": false,
-    "notes": "DOI 待核對；28%/50% 數字為此文常被引用的結果。",
+    "url_verified": true,
+    "notes": "2026-10-18 以 PubMed E-utilities 讀摘要原文（PMID 17617164）核對：原文是「28% 出現至少一項老年才開始的行為問題，15 歲以上超過 50%」，不是「與認知障礙相符的行為改變」「約 50%」，摘要與引用的文章已改。全文在 Wiley 付費，沒有讀到；原本寫的甲亢、高血壓、疼痛不在摘要裡，已拿掉。期刊不是開放取用，是否留用待負責人決定。",
     "cited_by": [
       "cat-cognitive-dysfunction",
       "cat-life-stages-care-taiwan"
-    ]
+    ],
+    "pmid": "17617164",
+    "verified_at": "2026-10-18"
   },
   "ASPCA-RAW-FOOD": {
     "title": "People Foods to Avoid Feeding Your Pets",

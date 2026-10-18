@@ -699,8 +699,8 @@ function render() {
     const interleaved = [];
     cards.forEach((card, i) => {
       interleaved.push(card);
-      // 第 10、20、30... 之後插廣告，但最後一筆後不插
-      if ((i + 1) % 10 === 0 && i < cards.length - 1) {
+      // 只在第 10 筆之後插一張；加上頁面上的一個廣告位，每頁最多 2 個
+      if (i === 9 && i < cards.length - 1) {
         interleaved.push(renderAdInFeed());
       }
     });
@@ -733,7 +733,7 @@ function escapeHtml(s) {
   return (s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
 
-// 每 5 筆插一張廣告卡（同 banner ad unit，不同樣式）
+// 清單中的廣告卡（同 banner ad unit，不同樣式），只插一張
 function renderAdInFeed() {
   return '';  // AdSense 上線前不放佔位卡；上線後拿掉這行
   const lbl = currentLang === 'zh' ? '贊助' : 'Sponsored';
