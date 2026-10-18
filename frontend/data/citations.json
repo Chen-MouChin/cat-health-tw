@@ -363,7 +363,8 @@
     "cited_by": [
       "cat-common-symptoms-taiwan",
       "cat-hyperthyroidism-senior",
-      "cat-life-stages-care-taiwan"
+      "cat-life-stages-care-taiwan",
+      "cat-zoomies-night-activity"
     ],
     "doi": "10.1177/1098612X16643252",
     "pmid": "27143042",
@@ -571,6 +572,7 @@
     "url_verified": true,
     "notes": "AAFP 官網免費\n2026-10-17 合併重複條目 AAFP-2024-ISFM-AAFP-CONSENSUS-GUIDELINES-ON-T-2024，補上期刊出處，摘要依原文改寫。｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
+      "cat-emergency-care-taiwan",
       "cat-life-stages-care-taiwan"
     ],
     "doi": "10.1177/1098612X241241951",
@@ -605,11 +607,14 @@
     "url_verified": true,
     "notes": "AAFP 官網免費｜2026-10-17 讀 PMC 全文核對（小幫手指出這篇講的是益智餵食，不是乾濕食選擇；確認屬實，摘要已改）。｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
+      "cat-environment-enrichment-taiwan",
       "cat-food-selection-taiwan",
       "cat-hepatic-lipidosis",
       "cat-life-stages-care-taiwan",
+      "cat-natural-behavior-taiwan",
       "cat-obesity-weight-management",
       "cat-water-urinary-health-taiwan",
+      "cat-zoomies-night-activity",
       "kitten-care-complete-taiwan"
     ],
     "doi": "10.1177/1098612X18791877",
@@ -679,6 +684,7 @@
       "cat-cognitive-dysfunction",
       "cat-inappropriate-elimination",
       "cat-litter-box-guide",
+      "cat-pheromone-products-guide",
       "male-cat-urethral-obstruction",
       "multi-cat-household-taiwan"
     ],
@@ -900,7 +906,7 @@
     "type": "educational",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "VCA 的貓急救說明（Weir、Llera、Ward）。內容：什麼是急救、緊急時先做什麼、怎麼保定受傷的貓、休克的徵象（心跳快而脈搏弱、黏膜蒼白、精神極差，可能嘔吐）與處理、人工呼吸與心肺復甦。休克後即使看起來恢復也要盡快就醫。頁面沒有列排尿、抽搐、中毒等急診徵兆清單。",
+    "abstract_zh": "VCA 的貓急救說明（Weir、Llera、Ward）。內容：什麼是急救、緊急時先做什麼、怎麼保定受傷的貓、休克的徵象（心跳快而脈搏弱、黏膜蒼白、精神極差，可能嘔吐）與處理、人工呼吸與心肺復甦。休克後即使看起來恢復也要盡快就醫。頁面沒有列排尿、抽搐、中毒等急診徵兆清單。\n\n■ 全文核對補充（2026-10-18）\n原文核對：急救目的是保住性命、減輕疼痛與不適、降低永久傷殘的風險；先聯絡動物醫院說明狀況並取得急救建議，盡快到醫院；讓貓保暖（中暑除外）、盡量安靜、少移動；用結實紙箱或拿掉上蓋的外出籠運送，不要從小門硬塞。現有 abstract_zh 沒寫這些，建議補。",
     "keywords": [
       "急診",
       "緊急",
@@ -913,7 +919,7 @@
     ],
     "status": "pending_review",
     "url_verified": true,
-    "notes": "VCA 免費，獸醫撰寫｜2026-10-17 讀原文核對（小幫手指出這篇講休克與心肺復甦）；舊摘要的急診徵兆清單原文沒有，已改。｜2026-10-17 其他 8 篇與急診篇的急診徵兆清單改引 VCA-CAT-EMERGENCIES、VCA-SIGNS-ILLNESS-CATS、VCA-FALLS-CATS；只剩急診篇「急救不能取代就醫」那句引用本頁（原文：即使看起來恢復也要盡快就醫）。",
+    "notes": "VCA 免費，獸醫撰寫｜2026-10-17 讀原文核對（小幫手指出這篇講休克與心肺復甦）；舊摘要的急診徵兆清單原文沒有，已改。｜2026-10-17 其他 8 篇與急診篇的急診徵兆清單改引 VCA-CAT-EMERGENCIES、VCA-SIGNS-ILLNESS-CATS、VCA-FALLS-CATS；只剩急診篇「急救不能取代就醫」那句引用本頁（原文：即使看起來恢復也要盡快就醫）。｜2026-10-18 讀原文補充摘要（整篇補出處時）。",
     "cited_by": [
       "cat-emergency-care-taiwan"
     ],
@@ -1109,7 +1115,7 @@
     "url_verified": false,
     "notes": "發表在 ISFM 的 JFMS 期刊，付費牆但摘要免費 | DOI link verified (HEAD blocked by publisher, browser OK)",
     "cited_by": [
-      "solo-cat-mental-health"
+      "cat-environment-enrichment-taiwan"
     ]
   },
   "AAFP-CAT-FRIENDLY-VETERINARY-INTERACTION-GUID-2020": {
@@ -1401,6 +1407,7 @@
       "cat-indoor-vs-outdoor-taiwan",
       "cat-litter-box-guide",
       "cat-obesity-weight-management",
+      "cat-pheromone-products-guide",
       "cat-upper-respiratory-infection",
       "cat-water-urinary-health-taiwan",
       "male-cat-urethral-obstruction",
@@ -1426,7 +1433,9 @@
     "status": "pending_review",
     "url_verified": true,
     "notes": "2026-10-17 核對：舊網址 301 轉到 catvets.com/resource/nursing-care-guidelines/，已換新網址。期刊上的正式標題沒有「2012」，2012 是出版年。PMC 只有掃描 PDF，用 Europe PMC 的 PDF 全文核對。cited_by 的 cat-pregnancy-birth-nursing-taiwan 是 ASPCA「Nursing Cat」字面誤配，文中沒有引用本指引，建議移除。",
-    "cited_by": [],
+    "cited_by": [
+      "cat-pheromone-products-guide"
+    ],
     "doi": "10.1177/1098612X12445002",
     "pmid": "22511476",
     "pmcid": "PMC11132257",
@@ -1470,6 +1479,7 @@
     "url_verified": true,
     "notes": "auto-crawled from catvets.com/guidelines | 摘要依指引範圍整理，2026-06-10 2026-10-14 補 PDF（小幫手 建議），PMC 版免費。｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
+      "cat-environment-enrichment-taiwan",
       "cat-inappropriate-elimination",
       "kitten-socialization"
     ],
@@ -2924,7 +2934,8 @@
     "verified_at": "2026-10-14",
     "notes": "2026-10-14 由查證 agent 核對。PMC 全文。",
     "cited_by": [
-      "cat-anxiety-stress-management"
+      "cat-anxiety-stress-management",
+      "cat-pheromone-products-guide"
     ]
   },
   "VITALE-2018-PHEROMONES": {
@@ -2940,7 +2951,7 @@
     "type": "review",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "回顧合成費洛蒙用於貓行為問題的研究。各研究結果不一致，有回顧認為證據不足，部分研究由廠商出資，貓的個體反應差異也大。作者建議逐案評估、注意擺放位置，並搭配環境豐富化與正向強化，不單獨使用。",
+    "abstract_zh": "回顧合成費洛蒙用於貓行為問題的研究。各研究結果不一致，有回顧認為證據不足，部分研究由廠商出資，貓的個體反應差異也大。作者建議逐案評估、注意擺放位置，並搭配環境豐富化與正向強化，不單獨使用。\n\n■ 全文核對補充（2026-10-18，費洛蒙文）\n合成臉部費洛蒙（F3）的用途是減少噴尿、亂抓等負面的氣味標記，也被提出用於過度理毛與焦慮；合成安撫費洛蒙（FAP）被提出用來減少多貓家庭的衝突與攻擊、增進貓之間的關係，以及環境改變時減壓（產品用途表）。一項盲測、對照安慰劑的研究中，F3 噴劑減輕了貓在動物醫院的壓力。FAP 用於多貓攻擊只有一項 45 個多貓家庭的先導研究，兩組攻擊都減少，使用 FAP 的那組減少得明顯較多，作者認為需要更多研究。",
     "keywords": [
       "費洛蒙",
       "行為問題",
@@ -2994,7 +3005,7 @@
     "type": "guideline",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "處理多貓家庭中貓與貓緊張關係的指引。提到費洛蒙可能改善情緒，但效果細微，貓察覺到危險時容易被蓋過；市售很多產品自稱含費洛蒙，要確認真的含貓費洛蒙類似物。引介新貓時，可在新貓進門前 24 到 48 小時先插上擴散器。",
+    "abstract_zh": "處理多貓家庭中貓與貓緊張關係的指引。提到費洛蒙可能改善情緒，但效果細微，貓察覺到危險時容易被蓋過；市售很多產品自稱含費洛蒙，要確認真的含貓費洛蒙類似物。引介新貓時，可在新貓進門前 24 到 48 小時先插上擴散器。\n\n■ 全文核對補充（2026-10-18）\n全文核對補充（2026-10-18）：家貓社交很有彈性，可以和其他貓建立親密關係，但沒有同伴也能生存；流浪貓可以離開不喜歡的群體，家貓（尤其只待室內的）不行；在有限空間增加貓數可能讓緊張變多，但有研究發現環境合適時有些貓在較高密度下也能相處（Myth 1）。一份 2492 個多貓家庭的調查中，87.7% 有緊張跡象，73.3% 說緊張從新貓進門開始（Introduction）。短暫不合、用哈氣或單方追逐結束互動是正常社交行為；若伴隨頻繁、激烈或持久的打鬥或有貓躲藏，要排除疾病並尋求行為協助（Myth 7）。幼貓社會化敏感期約 2 到 9 週，過了仍能學習（Myth 8）。安全處每隻貓一處再多一處；高邊的窩提供視線遮蔽，有兩個出入口可防被堵；不同高度的垂直空間讓貓能監看其他貓靠近；可為被欺負的貓設有全套資源的安全房並裝晶片貓門（Pillar 1；Figure 1、3）。食物、水、安全處放在每隻貓的核心區域，食物與水分開、多個彼此看不到的餵食與飲水點；砂盆與抓板放在各樓層不同位置；資源間加視線屏障；有衝突時要增加資源（Pillar 2；Figure 9）。感情好的貓吃飯時也要分開，無法分房可用倒放紙箱擋視線（Figure 10）；貓聚在備餐處或吃飯時間可能造成壓力（Pillar 3）。合成費洛蒙可能改善情緒但效果細微，察覺危險時易被蓋過，要確認產品真含貓費洛蒙類似物（Pillar 5）。只待室內的貓空間有限，較易出現緊張（Five pillars）。緊張最常見的表現是抑制正常行為（食慾差、不活動、睡不好、不排泄）或躲避；較細微的跡象有盯視、走開、躲藏、擋路，盯視最常見；過度梳毛、標記、排泄習慣改變也可能是表現；即使細微也影響福祉；互動要長期觀察（Recognizing tension；Figure 12–16）。扭打不出聲多半在玩；單方追逐、有叫聲、之後反覆不動、直接接觸較少多半不是玩；會打架的貓平常不太會有友善互動（Is it play or fighting?）。靠在一起睡、互相理毛、磨蹭、碰鼻子是好關係的訊號（Signs of a good cat-cat relationship）。任何行為改變都要請獸醫排除疾病，行為改變可能是生病的第一個徵兆；睡覺位置改變、吃飯前盯視揮爪、吃很快就走、因怕而不去砂盆都可能是緊張（Is it medical, behavioral or both?）。愛玩的貓常去煩老貓或膽小的貓，每天兩次以上、每次 5 分鐘以上的陪玩可把精力引到玩具；盯視時用家具、靠墊、紙板擋住視線再各自引去玩（Caregiver techniques）。引介步驟（Steps for creating a smooth transition）：原本的貓年紀大又有病時一般不建議再領養（Step 1）；進門前 24–48 小時在客廳與過渡房間插費洛蒙擴散器，例子是臉部費洛蒙搭配多貓配方或二合一產品（Step 3）；步驟 5–11 可能要幾週甚至幾個月，任何時候出現緊張就退一步（When bringing the new cat home）；放鬆後（通常幾天）每天交換寢具（Step 6）；再用布輪流擦臉部腺體交換氣味（Step 7）；隔著關上的門兩側玩，每次 5–20 分鐘，持續哈氣低吼時不處罰、在門前加屏障做中間區（Step 8）；新貓探索公共區、原本的貓再回去（Step 9）；用紗門、玻璃門或高柵欄短時間互看，不放鬆就退回（Step 10）；監督下近距離接觸可用胸背帶牽繩或半遮外出籠，需事先訓練，準備大毛巾或紙板擋視線，現場放玩具零食，不碰正在哈氣低吼甩尾的貓以免轉向攻擊；順利後逐步拉長相處、減少監督（Step 11）。分開打架的貓用大毛巾、毯子或紙板避免人受傷，分開後讓貓冷靜恢復作息，需幾小時到幾天（General principles）。重新引介步驟與新貓引介類似但更難、更需耐心，緊張越久越明顯越可能需要行為專科（Intercat tension within households > Reintegration training）。放著讓貓自己解決有損福祉，不被接受（Intercat tension involving outdoor cats 段末）。\n\n■ 全文核對補充（2026-10-18，費洛蒙文）\n貓之間緊張的內在誘因包括疼痛或疾病讓貓比較易怒，可能把情緒轉向其他貓；任何行為改變的貓都應該由獸醫評估、排除醫療問題；經常、激烈或持續的打架或躲藏，要先排除潛在的醫療問題，再提供行為支持。",
     "keywords": [
       "多貓",
       "引介",
@@ -3003,9 +3014,10 @@
     "status": "pending_review",
     "url_verified": true,
     "verified_at": "2026-10-14",
-    "notes": "2026-10-14 由查證 agent 核對。PMC 全文；Box 5（費洛蒙實用建議）是圖片，未讀到。",
+    "notes": "2026-10-14 由查證 agent 核對。PMC 全文；Box 5（費洛蒙實用建議）是圖片，未讀到。｜2026-10-18 讀原文補充摘要（整篇補出處時）。",
     "cited_by": [
       "cat-anxiety-stress-management",
+      "cat-pheromone-products-guide",
       "multi-cat-household-taiwan"
     ]
   },
@@ -3105,8 +3117,8 @@
     "verified_at": "2026-10-14",
     "notes": "2026-10-14 查證 agent 讀過全文。小幫手 建議貓砂盆一文引用這頁。",
     "cited_by": [
-      "cat-litter-box-guide",
-      "cat-inappropriate-elimination"
+      "cat-inappropriate-elimination",
+      "cat-litter-box-guide"
     ]
   },
   "MOA-PET-POPULATION-2023": {
@@ -4147,6 +4159,7 @@
       "nutrition"
     ],
     "cited_by": [
+      "cat-emergency-care-taiwan",
       "cat-home-grooming-guide",
       "cat-treats-supplements-taiwan"
     ],
@@ -4456,6 +4469,7 @@
       "behavior"
     ],
     "cited_by": [
+      "cat-environment-enrichment-taiwan",
       "multi-cat-household-taiwan",
       "new-cat-first-week-guide"
     ],
@@ -4510,6 +4524,8 @@
     ],
     "cited_by": [
       "cat-adoption-guide-taiwan",
+      "cat-emergency-care-taiwan",
+      "cat-environment-enrichment-taiwan",
       "new-cat-first-week-guide",
       "rehoming-cat-responsibly-taiwan"
     ],
@@ -4863,7 +4879,7 @@
     "title_zh": "VCA：認識貓生病的徵兆",
     "authors": "Malcolm Weir, DVM; Tammy Hunter, DVM; Cheryl Yuill, DVM",
     "url": "https://vcahospitals.com/know-your-pet/recognizing-signs-of-illness-in-cats",
-    "abstract_zh": "VCA 的貓生病徵兆說明（2024-05-08 更新）。貓沒有好好吃東西超過 24 小時，要立即就醫；食慾或喝水量的任何改變都值得注意；嘔吐要注意，特別是吐出透明泡沫或帶膽汁的液體；沒有排尿是危及生命的緊急狀況，尿量變少或在砂盆用力時要立即就醫；呼吸有問題的貓常會伸長頭和脖子，出現呼吸問題要立即就醫。",
+    "abstract_zh": "VCA 的貓生病徵兆說明（2024-05-08 更新）。貓沒有好好吃東西超過 24 小時，要立即就醫；食慾或喝水量的任何改變都值得注意；嘔吐要注意，特別是吐出透明泡沫或帶膽汁的液體；沒有排尿是危及生命的緊急狀況，尿量變少或在砂盆用力時要立即就醫；呼吸有問題的貓常會伸長頭和脖子，出現呼吸問題要立即就醫。\n\n■ 全文核對補充（2026-10-18）\n2026-10-18 讀原文核對，文章新用到以下內容，abstract_zh 尚未寫到，請補：生病的貓可能吃得多或少、喝得多或少；不舒服的貓理毛變差，毛凌亂、油膩、打結，過度理毛也可能有問題（Grooming）；反覆打噴嚏或咳嗽是健康問題的徵象，健康的貓耳朵不應有髒東西（Other symptoms）；慢性病的貓可能慢慢變瘦，要沿肋骨和背脊摸才發現（Weight）；砂盆尿量變多代表無法保留水分，變少代表腎臟或膀胱問題（Urination）；淺呼吸、張口呼吸、喘可能是呼吸道或肺部問題（Breathing）；生病的貓常退縮、躲起來，也有貓變黏人或易怒（Behavior）；覺得貓不對勁就盡早預約門診檢查。",
     "cited_by": [
       "cat-common-symptoms-taiwan",
       "cat-emergency-care-taiwan",
@@ -4872,7 +4888,7 @@
       "cat-ibd-intestinal-disease",
       "cat-neutering-aftercare-taiwan"
     ],
-    "notes": "2026-10-17 讀原文核對。"
+    "notes": "2026-10-17 讀原文核對。｜2026-10-18 讀原文補充摘要（整篇補出處時）。"
   },
   "VCA-FALLS-CATS": {
     "journal": null,
@@ -6291,7 +6307,8 @@
     "verified_at": "2026-10-18",
     "notes": "2026-10-18 讀原文核對",
     "cited_by": [
-      "cat-emergency-care-taiwan"
+      "cat-emergency-care-taiwan",
+      "cat-natural-behavior-taiwan"
     ]
   },
   "AAHA-PET-FIRST-AID-KIT": {
@@ -6513,7 +6530,7 @@
     "type": "educational",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "兩位獸醫行為專科醫師撰寫（2019-07 編修）。貓打獵與探索最活躍在黃昏與黎明，稱為晨昏性；家裡只有一隻寵物時，貓常在白天休息，飼主回家帶來餵食、遊戲與互動後牠的一天才開始；夜間活動可能是社交遊戲與討關注（開頭段落）。建議下午到傍晚多陪玩、餵食、互動，給幾次用追逐玩具的社交遊戲，晚上不要讓貓打盹（處理建議）。夜裡叫的貓要忽略，走過去或給任何關注都會獎勵這種要求；有些飼主不小心用一點食物、撫摸或關注獎勵了這個行為（處理建議）。不要整夜提供食物，調整餵食時間或食物種類可能幫助改變睡眠時間（處理建議）。持續干擾可把貓關在臥室外（處理建議）。原文沒有談甲狀腺亢進、認知功能障礙等醫療原因。",
+    "abstract_zh": "兩位獸醫行為專科醫師撰寫（2019-07 編修）。貓打獵與探索最活躍在黃昏與黎明，稱為晨昏性；家裡只有一隻寵物時，貓常在白天休息，飼主回家帶來餵食、遊戲與互動後牠的一天才開始；夜間活動可能是社交遊戲與討關注（開頭段落）。建議下午到傍晚多陪玩、餵食、互動，給幾次用追逐玩具的社交遊戲，晚上不要讓貓打盹（處理建議）。夜裡叫的貓要忽略，走過去或給任何關注都會獎勵這種要求；有些飼主不小心用一點食物、撫摸或關注獎勵了這個行為（處理建議）。不要整夜提供食物，調整餵食時間或食物種類可能幫助改變睡眠時間（處理建議）。持續干擾可把貓關在臥室外（處理建議）。原文沒有談甲狀腺亢進、認知功能障礙等醫療原因。\n\n■ 全文核對補充（2026-10-18，夜間暴衝文）\n把貓關在臥室外時，那裡要有砂盆、可以攀爬、抓和待高處的地方，以及牠喜歡的玩具；原文沒有提到睡窩與水。不要整夜提供食物，會讓貓保持清醒；可以把餵食時間提早或延後幾小時，白天改成少量多餐；原文沒有要求固定時間。白天給幾次用追逐玩具的社交遊戲，下午到傍晚多陪玩、餵食、互動。",
     "status": "pending_review",
     "url_verified": true,
     "verified_at": "2026-10-18",
@@ -6532,13 +6549,15 @@
     "type": "research_paper",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "把室內貓的環境分成幾個系統逐一說明豐富化做法。行為系統：窗台讓貓觀察野生動物、給貓看的影片，可以當遊戲與娛樂的豐富化；新鮮貓薄荷與盆栽綠葉對貓有吸引力；玩具每幾天輪換維持新鮮感；會自己跑、模仿獵物的電動玩具；光點遊戲後一定要給零食或玩具；玩耍和跟蹤、追逐、撲、咬的獵捕序列密切相關（Behavioral System）。營養系統：把食物放進益智玩具、可塞濕食的中空玩具（Nutritional System）。大的開口箱子給貓自己的空間（Physical Resource System）。原文沒有談鳥餵食器、魚缸、音樂、木天蓼、響片訓練。",
+    "abstract_zh": "把室內貓的環境分成幾個系統逐一說明豐富化做法。行為系統：窗台讓貓觀察野生動物、給貓看的影片，可以當遊戲與娛樂的豐富化；新鮮貓薄荷與盆栽綠葉對貓有吸引力；玩具每幾天輪換維持新鮮感；會自己跑、模仿獵物的電動玩具；光點遊戲後一定要給零食或玩具；玩耍和跟蹤、追逐、撲、咬的獵捕序列密切相關（Behavioral System）。營養系統：把食物放進益智玩具、可塞濕食的中空玩具（Nutritional System）。排泄系統：大型、無蓋的盒子（例如塑膠收納箱）當砂盆，讓貓有空間正常排泄（The Elimination System）。行為系統：抓板放在家中常去、靠近休息處的地方；貓常抓所在區域顯眼的直立物（Behavioral System）。原文沒有談鳥餵食器、魚缸、音樂、木天蓼、響片訓練。",
     "status": "pending_review",
     "url_verified": true,
     "verified_at": "2026-10-18",
-    "notes": "2026-10-18 讀原文核對",
+    "notes": "2026-10-18 讀原文核對｜2026-10-18 讀 PMC 全文更正：原摘要寫「大的開口箱子給貓自己的空間」，原文講的是砂盆（The Elimination System），沒有提到給貓休息或躲藏的紙箱。",
     "cited_by": [
-      "solo-cat-mental-health"
+      "cat-environment-enrichment-taiwan",
+      "cat-natural-behavior-taiwan",
+      "cat-zoomies-night-activity"
     ]
   },
   "BOL-2017-CAT-OLFACTORY-PLANTS": {
@@ -6557,7 +6576,7 @@
     "verified_at": "2026-10-18",
     "notes": "2026-10-18 讀原文核對",
     "cited_by": [
-      "solo-cat-mental-health"
+      "cat-environment-enrichment-taiwan"
     ]
   },
   "KOGAN-2017-CLICKER-SHELTER": {
@@ -6576,7 +6595,619 @@
     "verified_at": "2026-10-18",
     "notes": "2026-10-18 讀原文核對",
     "cited_by": [
-      "solo-cat-mental-health"
+      "cat-environment-enrichment-taiwan"
+    ]
+  },
+  "CORNELL-EAR-MITES": {
+    "title": "Ear Mites: Tiny Critters Can Pose Major Threat",
+    "title_zh": "耳疥蟲：小蟲也可能造成大問題",
+    "authors": "Cornell Feline Health Center（引述 William Miller Jr.）",
+    "source": "Cornell Feline Health Center",
+    "url": "https://vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/ear-mites-tiny-critters-can-pose-major-threat",
+    "year": null,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "康乃爾貓健康中心的耳疥蟲衛教文，引述該校皮膚科教授 William Miller Jr.：耳疥蟲傳染力極強，貓和貓近距離接觸就會傳過去；外出的貓較常見。懷疑有耳疥蟲要盡快看獸醫。頁面沒有寫家裡其他寵物要不要一起治療。頁面未標日期。",
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-18",
+    "notes": "2026-10-18 讀原文核對。",
+    "cited_by": [
+      "cat-eye-ear-problems-taiwan"
+    ]
+  },
+  "BEUGNET-2014-EAR-MITE-PREVENTION": {
+    "title": "Preventive efficacy of a topical combination of fipronil – (S)-methoprene – eprinomectin – praziquantel against ear mite (Otodectes cynotis) infestation of cats through a natural infestation model",
+    "title_zh": "外用複方驅蟲劑預防貓耳疥蟲感染的效果：自然感染模型",
+    "authors": "Beugnet F, Bouhsira É, Halos L, Franc M",
+    "source": "Parasite",
+    "journal": "Parasite 2014;21:40",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4141585/",
+    "year": 2014,
+    "type": "research_paper",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "耳疥蟲在動物之間直接接觸傳染。研究讓感染的貓和沒有感染的貓同住，模擬自然傳染：沒有用藥的對照組到第 28 天全部被傳染，共找到 129 隻活蟲；用了外用複方驅蟲劑的貓只有 3 隻被傳染、共 5 隻活蟲，預防效果約 96%。作者認為這種同住傳染在現實中一定會發生，每月使用可能可以完全控制風險。文中沒有直接建議同住的貓都要治療。",
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-18",
+    "notes": "2026-10-18 讀 PMC 全文核對；Parasite 為開放取用期刊。",
+    "cited_by": [
+      "cat-eye-ear-problems-taiwan"
+    ]
+  },
+  "VCA-CAT-ZOOMIES": {
+    "title": "Cat zoomies: Understanding these crazy bursts of energy",
+    "title_zh": "貓的 Zoomies：理解這陣瘋狂的精力爆發",
+    "authors": "VCA Animal Hospitals",
+    "source": "VCA Animal Hospitals",
+    "url": "https://vcahospitals.com/resources/behavior-cat/cat-zoomies-explained",
+    "year": null,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "VCA 衛教頁（未標作者與日期）。Zoomies 是一陣陣狂熱的遊戲爆發，英文學名 FRAP（frenetic random activity periods），誘因仍不太清楚（開頭）。貓常在白天休息，到晚上累積了精力（Nocturnal habits and pent-up energy）。家貓仍保有跟蹤、追逐、撲的衝動，瘋跑時可能像在追想像中的對手（Predatory instincts）。偶爾發作屬正常；頻率或強度明顯改變時可能需要看獸醫（When to see a veterinarian）。頁面另有保健品販售區塊，正文為衛教內容。",
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-18",
+    "notes": "2026-10-19 負責人決定不引用：正文下方有保健品商品卡（含品牌與價格）。夜間暴衝文改用 VCA-KITTEN-ZOOMIES 與 VCA-CAT-NOCTURNAL-ACTIVITY",
+    "cited_by": []
+  },
+  "VCA-KITTEN-ZOOMIES": {
+    "title": "Understanding Kitten Zoomies",
+    "title_zh": "認識幼貓的 Zoomies",
+    "authors": "VCA Animal Hospitals",
+    "source": "VCA Animal Hospitals",
+    "url": "https://vcahospitals.com/pediatric/kitten/behavior-training/understanding-kitten-zoomies",
+    "year": null,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "VCA 幼貓衛教頁（未標作者與日期）。Zoomies 是一陣過動，狂奔、撲跳，有些貓會叫（定義）。可能原因：精力累積、精神刺激不足、狩獵本能啟動；有些貓用完砂盆後會短暫瘋跑（原因）。幼貓比較常見，年輕的貓偶爾也會有，是正常行為（年齡）。活動量異常增加或瘋跑時有攻擊性，要找獸醫排除疾病，甲狀腺機能亢進是可能原因之一（就醫）。\n\n■ 全文核對補充（2026-10-19）\n原文寫暴衝是貓一輩子都會有的正常行為；建議白天鼓勵、夜間暴衝可用白天的遊戲與精神刺激減少；有些貓接觸貓薄荷後也會暴衝。就醫的說法是活動量異常增加或暴衝時有攻擊性，沒有給次數或強度的門檻。頁面沒有商品卡。",
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-18",
+    "notes": "2026-10-19 讀原文核對（取代 VCA-CAT-ZOOMIES）",
+    "cited_by": [
+      "cat-zoomies-night-activity"
+    ]
+  },
+  "ICATCARE-PLAYING-WITH-CAT": {
+    "title": "Playing with your cat",
+    "title_zh": "和貓玩",
+    "authors": "International Cat Care",
+    "source": "International Cat Care",
+    "url": "https://icatcare.org/articles/playing-with-your-cat",
+    "year": 2025,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "iCatCare 衛教文（2024-11 發表，2025-09 更新）。貓是短跑型，狂熱活動一分鐘就是不錯的成果，幼貓幾分鐘就累。遊戲要涵蓋完整狩獵順序：搜尋、跟蹤、追逐、撲、抓到、把玩，跳過抓到的遊戲會造成挫折。逗貓棒要一陣一陣不規律地動，不用時收好。雷射光點只能追不能抓，最後換成逗貓棒讓貓抓到收尾。幼貓遊戲要慢慢結束，把注意力轉到食物上，避免挫折和埋伏攻擊。貓在黎明黃昏較活躍，選雙方方便的時間玩；原文沒有談睡前遊戲。\niCatCare 衛教文（2024-11 發表、2025-09 更新）。每隻貓想玩的程度不同，貓玩起來像短跑選手，一分鐘的激烈活動就算不錯。玩具在貓面前忽動忽停、隨機移動；缺少撲和抓的步驟會讓貓挫折，雷射筆讓貓跟蹤、追、撲但抓不到，理想上結束前換成逗貓棒收尾；遊戲要漸漸結束；玩具準備兩三個輪流給。可把乾零食放進紙袋或紙蛋盒讓貓翻找。\niCatCare 衛教頁（2024-11 首發，2025-09 更新）。玩耍會用到貓獵捕的完整順序：尋找、跟蹤、追、撲、抓到、擺弄；少了撲和抓的步驟，有些遊戲會讓貓挫折。雷射筆讓貓跟蹤、追、撲卻抓不到，最後換逗貓棒收尾，讓遊戲在正向的感受中結束。貓玩耍像短跑選手，一分鐘的激烈活動就是好結果；幼貓容易膩也容易累，可能只玩幾分鐘。任何年紀的貓有機會都會玩並從中受益；老貓動作要溫和，配合行動能力。逗貓棒在貓面前隨機抖動、可拖過紙箱或隧道；玩具被獵殺後很快失去吸引力，準備兩三個輪流換；像真獵物、老鼠大小的毛茸茸玩具很受歡迎；貓薄荷讓很多（不是全部）貓興奮。一週兩三次給新紙箱探索。不要用手腳逗幼貓，長大後會把手指腳趾跟遊戲連在一起。",
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-18",
+    "notes": "2026-10-18 讀原文核對",
+    "cited_by": [
+      "cat-environment-enrichment-taiwan",
+      "cat-natural-behavior-taiwan",
+      "cat-zoomies-night-activity"
+    ]
+  },
+  "CERNA-2020-CDS-VOCALISATION": {
+    "title": "Potential Causes of Increased Vocalisation in Elderly Cats with Cognitive Dysfunction Syndrome as Assessed by Their Owners",
+    "title_zh": "飼主評估的認知功能障礙老貓叫聲增加的可能原因",
+    "authors": "Černá P, Gardiner H, Sordo L, Tørnqvist-Johnsen C, Gunn-Moore DA",
+    "source": "Animals (Basel) 2020;10(6):1092. doi:10.3390/ani10061092",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7341261/",
+    "year": 2020,
+    "type": "research_paper",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "貓認知功能障礙是排除性診斷，高血壓、甲狀腺機能亢進、FIV、弓蟲復發都可能造成類似行為改變，需做視網膜檢查、量血壓、血液生化含 T4、尿液等排除（Introduction）。行為徵象以 VISHDAAL 總結，V 指叫聲增加，尤其在夜間（Introduction, Table 1）。37 隻 CDS 貓的飼主認為主要原因是迷失方向（40.5%）與討關注（40.5%）；迷失方向的貓常在別的房間叫、漫無目的地走（Results）。超過六成飼主偶爾或經常半夜被吵醒（Results）。",
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-18",
+    "notes": "2026-10-18 讀 PMC 全文核對；MDPI 期刊，非 Frontiers",
+    "cited_by": [
+      "cat-zoomies-night-activity"
+    ]
+  },
+  "VCA-PHEROMONES": {
+    "title": "Pheromones",
+    "title_zh": "費洛蒙",
+    "authors": "Kayla Hyland, DVM",
+    "source": "VCA Animal Hospitals",
+    "url": "https://vcahospitals.com/know-your-pet/pheromones",
+    "year": 2026,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "VCA 用藥衛教頁（2026-08-18 更新）。費洛蒙是天然或合成、模仿動物用來溝通之氣味的物質，用於貓狗的噴尿標記、貓之間的攻擊、壓力事件、恐懼症等行為調整（What are pheromones）。有擴散器、噴劑、項圈；擴散器插電使用，通常約可用 4 週；噴劑不要直接噴在動物身上，噴在毯子、毛巾、外出籠等物品上（How are they given）。照說明使用不太會有副作用，但要留意過敏反應，例如呼吸不規則、起疹、發燒、臉部腫脹（Side effects）。嚴重攻擊行為的動物不要使用，與壓力無關的行為問題要謹慎使用（Risk factors）。\n\n■ 全文核對補充（2026-10-18，費洛蒙文）\n嚴重攻擊行為的寵物不要使用（DO NOT USE）；開始使用前，獸醫可能建議先做檢查排除身體疾病。過敏反應（呼吸不規則、起疹、發燒、臉部腫脹）沒有報告過，但如果出現，要立刻聯絡獸醫。",
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-18",
+    "notes": "2026-10-18 讀原文核對",
+    "cited_by": [
+      "cat-pheromone-products-guide"
+    ]
+  },
+  "VCA-CAT-MARKING-SPRAYING": {
+    "title": "Cat Behavior Problems - Marking and Spraying Behavior",
+    "title_zh": "貓的行為問題：標記與噴尿",
+    "authors": "Ellen Lindell, Debra Horwitz, Gary Landsberg（皆為獸醫行為專科醫師）",
+    "source": "VCA Animal Hospitals",
+    "url": "https://vcahospitals.com/know-your-pet/cat-behavior-problems-marking-and-spraying-behavior",
+    "year": 2026,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "貓的腳掌、臉頰、下巴、頭頂和尾巴根部有氣味腺；用臉頰磨蹭是一種標記，臉頰的費洛蒙似乎有安撫貓的作用，鼓勵臉部標記有助減少噴尿（費洛蒙段落）。在貓噴過尿的地方使用合成臉部費洛蒙（室內擴散器，或直接噴在噴尿處），可能減少噴尿、讓貓改用臉頰標記。作息改變、新的人或寵物、新家具、裝修都可能引發焦慮與標記；窗外的貓、多貓緊張也可能是原因（誘因段落）。持續在砂盆外排泄要先看獸醫，藥物可作為輔助。",
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-18",
+    "notes": "2026-10-18 讀原文核對",
+    "cited_by": [
+      "cat-pheromone-products-guide"
+    ]
+  },
+  "ICATCARE-SEIZURES-2025": {
+    "title": "Seizures in cats",
+    "title_zh": "貓的癲癇發作",
+    "authors": "International Cat Care",
+    "source": "International Cat Care (iCatCare)",
+    "url": "https://icatcare.org/articles/seizures-in-cats",
+    "year": 2025,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "iCatCare 的貓癲癇衛教頁（2024-06-21 首次發表，2025-09-26 更新）。發作時保持冷靜、不要打擾貓，確認牠不會從樓梯或家具上摔下來，並記下開始的時間；多數發作一到三分鐘內自行停止，恢復可能要幾秒到幾小時，期間可能看起來迷糊、看不見、走不穩。單次發作超過五分鐘，或接連發作（叢集發作）時，立即聯絡獸醫團隊（發作時怎麼做一節）。記錄發作次數、每次多久、嚴重程度與出現哪些表現的發作日誌，搭配影片，能幫獸醫調整治療（治療一節）。",
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-18",
+    "notes": "2026-10-18 讀原文核對；頁面未署名作者",
+    "cited_by": [
+      "cat-emergency-care-taiwan"
+    ]
+  },
+  "VCA-AFTER-VACCINATION": {
+    "title": "Care for Your Pet After Vaccination",
+    "title_zh": "寵物打完疫苗後的照顧",
+    "authors": "Courtney Barnes, Ryan Llera, Rania Gollakner, Ernest Ward",
+    "source": "VCA Animal Hospitals",
+    "url": "https://vcahospitals.com/know-your-pet/care-for-your-pet-after-vaccination",
+    "year": 2026,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "VCA 的疫苗後照顧說明（2026-04-17 更新，犬貓通用）。常見的輕微副作用有活動力下降（疲倦）、食慾變差、輕微發燒，很少需要就醫；任一症狀超過 24 小時，或寵物看起來非常不舒服，就通知獸醫（Minor side effects 段）。注射處的小硬塊應在 14 天內開始變小消失；鼻內疫苗的呼吸道症狀可能持續 2 到 4 天。虛脫或昏倒、呼吸困難、持續嚴重咳嗽、蕁麻疹、眼睛口鼻臉部腫脹、持續嘔吐或腹瀉屬於緊急狀況，要立即就醫（嚴重反應段）。",
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-18",
+    "notes": "2026-10-18 讀原文核對",
+    "cited_by": [
+      "cat-emergency-care-taiwan"
+    ]
+  },
+  "ICATCARE-SOCIAL-STRUCTURE": {
+    "title": "The social structure of cat life",
+    "title_zh": "貓的社會結構",
+    "authors": "International Cat Care",
+    "source": "iCatCare",
+    "url": "https://icatcare.org/articles/the-social-structure-of-cat-life",
+    "year": 2025,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "iCatCare 衛教文（2025-06 發表、2025-09 更新）。貓科動物是獨居的掠食者，不形成有社會結構的群體，獅子例外；家貓的社交行為差異大，主要取決於當地貓的數量，有些母貓會組成小群體，野化貓常圍著食物來源形成小群落，但仍各自打獵，貓不是群居的狗那類動物（開頭與 Free-living cats 段）。家中的貓群由飼主決定，有些貓會覺得群居生活吃力；家裡已經有衝突或貓有健康問題時，不建議再帶新貓回家（Living with other cats 段）。",
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-18",
+    "notes": "2026-10-18 讀原文核對",
+    "cited_by": [
+      "cat-environment-enrichment-taiwan"
+    ]
+  },
+  "ICATCARE-MULTI-CAT": {
+    "title": "Multi-cat households",
+    "title_zh": "多貓家庭",
+    "authors": "International Cat Care",
+    "source": "iCatCare",
+    "url": "https://icatcare.org/articles/multi-cat-households",
+    "year": 2025,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "iCatCare 衛教文（2025-03 發表、2025-09 更新）。家貓天性並非群居，但適應力強，能調整和其他貓一起生活；有些貓有選擇時多半會避開其他貓、選擇獨居。一起長大的手足比較容易處得好。",
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-18",
+    "notes": "2026-10-18 讀原文核對",
+    "cited_by": [
+      "cat-environment-enrichment-taiwan"
+    ]
+  },
+  "ICATCARE-THINKING-OF-GETTING-A-CAT": {
+    "title": "Thinking of getting a cat?",
+    "title_zh": "考慮養貓之前",
+    "authors": "International Cat Care",
+    "source": "iCatCare",
+    "url": "https://icatcare.org/articles/thinking-of-getting-a-cat",
+    "year": 2025,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "iCatCare 衛教文（2025-03 發表、2025-09 更新）。貓相當獨立，通常比狗更能獨自待較長時間；很多貓仍偏好家裡沒有其他貓，手足比較容易建立好關係。不能出門的貓，飼主要在家裡額外提供環境資源，包括固定安排的遊戲時間。",
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-18",
+    "notes": "2026-10-18 讀原文核對",
+    "cited_by": [
+      "cat-environment-enrichment-taiwan"
+    ]
+  },
+  "VCA-CAT-PLAY-TOYS": {
+    "title": "Cat Behavior and Training - Play and Play Toys",
+    "title_zh": "貓的遊戲與玩具",
+    "authors": "Ellen Lindell, Debra Horwitz, Gary Landsberg",
+    "source": "VCA Animal Hospitals",
+    "url": "https://vcahospitals.com/know-your-pet/cat-behavior-and-training---play-and-play-toys",
+    "year": 2023,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "三位獸醫行為專科醫師撰寫（2023-05-03 更新）。多數貓每天有幾次、每次約 10 分鐘的遊戲會有好處，長短依貓的興趣調整。狩獵遊戲最好用貓最後抓得到、咬得到的玩具，貓要成功才不會失去興趣；玩具一次給 4 到 5 個、每週輪換。會掉出食物的玩具稱為益智餵食器或覓食玩具，能給室內貓豐富化與運動，對不愛動的貓特別有用。",
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-18",
+    "notes": "2026-10-18 讀原文核對",
+    "cited_by": [
+      "cat-environment-enrichment-taiwan"
+    ]
+  },
+  "VCA-PLAY-PREDATORY-AGGRESSION": {
+    "title": "Play and Predatory Aggression in Cats",
+    "title_zh": "貓的遊戲攻擊與掠食性攻擊",
+    "authors": "Debra Horwitz, Gary Landsberg",
+    "source": "VCA Animal Hospitals",
+    "url": "https://vcahospitals.com/know-your-pet/play-and-predatory-aggression-in-cats",
+    "year": 2019,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "兩位獸醫行為專科醫師撰寫（2019-07-18 編修）。刺激不足、多餘精力沒用掉、缺少適當遊戲機會，可能造成對人的遊戲攻擊，內容包含跟蹤、撲、咬等掠食動作；可能延續到成年，2 歲以下、沒有其他貓同伴的貓特別常見。要給貓充足、由飼主主導的遊戲出口，可以跟蹤、追、拍、撲的移動玩具最能刺激遊戲。很想要社交遊戲的貓，家裡加一隻幼貓當玩伴有幫助，前提是兩隻貓都對貓有足夠社會化。\nVCA 衛教頁，獸醫行為專科 Horwitz、Landsberg 撰（2019-07 編修）。玩耍可能包含跟蹤、撲、咬等掠食動作；幼貓較常見，但可能持續到成年。前兆是尾巴大力左右甩、耳朵往後、瞳孔放大。避免體罰，疼痛可能讓攻擊更多；不理貓甚至走出房間，讓貓學到得不到互動。互動玩具如擺動的繩子、逗貓棒；要有讓貓充分運動的有氧遊戲；記錄貓最常攻擊的時段，事先安排陪玩；每天輪換玩具，讓貓有幾樣新的或不同的東西。",
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-18",
+    "notes": "2026-10-18 讀原文核對",
+    "cited_by": [
+      "cat-environment-enrichment-taiwan",
+      "cat-natural-behavior-taiwan"
+    ]
+  },
+  "VCA-BEHAVIOR-PRODUCTS-CATS": {
+    "title": "Behavior Management Products for Cats",
+    "title_zh": "貓的行為管理用品",
+    "authors": "Debra Horwitz, Gary Landsberg",
+    "source": "VCA Animal Hospitals",
+    "url": "https://vcahospitals.com/know-your-pet/behavior-management-products-for-cats",
+    "year": 2019,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "兩位獸醫行為專科醫師撰寫（2019-07-19 編修）。雷射玩具對有些貓會造成問題，抓不到光點讓貓挫折；停止後貓還繼續找光點時，給牠喜歡的零食或玩具當獎勵結束遊戲，或換別的遊戲。互動玩具提供和飼主社交遊戲的機會；有可放食物的圓形或蛋形玩具，可調整開口改變難度。",
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-18",
+    "notes": "2026-10-18 讀原文核對",
+    "cited_by": [
+      "cat-environment-enrichment-taiwan"
+    ]
+  },
+  "VCA-COMPULSIVE-DISORDERS-CATS": {
+    "title": "Cat Behavior Problems - Compulsive Disorders in Cats",
+    "title_zh": "貓的強迫行為",
+    "authors": "Debra Horwitz, Gary Landsberg",
+    "source": "VCA Animal Hospitals",
+    "url": "https://vcahospitals.com/know-your-pet/cat-behavior-problems-compulsive-disorders-in-cats",
+    "year": 2019,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "兩位獸醫行為專科醫師撰寫（2019-07-19 編修）。心因性脫毛表現為過度舔毛或拔掉一撮撮毛，可能從衝突、挫折或焦慮情境下的轉移行為開始。診斷先排除或治療醫療原因，多數掉毛的貓其實有皮膚病，沒有找到醫療問題才歸為強迫行為。處理包括增加和飼主的互動遊戲（追逐玩具、訓練）與環境刺激：玩具每天變化維持新鮮感，紙箱、紙袋、新的攀爬和高處休息點可增加刺激。\nVCA 衛教頁，Horwitz、Landsberg 撰（2019-07 編修）。過度理毛可能是過度舔或拔出一撮撮毛。心因性禿毛可能始於衝突、挫折或焦慮下的轉移行為，之後可能變成強迫行為。多數掉毛的貓有潛在皮膚病，例如跳蚤或其他體外寄生蟲；認定純屬行為問題前，常建議類固醇試驗與 8 週以上的食物試驗（新蛋白或水解蛋白飲食）；沒有找到醫療原因才診斷心因性禿毛。處理：找出造成焦慮的環境或社交變化；增加互動遊戲與刺激，例如塞食物的玩具、紙箱、攀爬處；抗組織胺、抗焦慮藥或費洛蒙可能有幫助。",
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-18",
+    "notes": "2026-10-18 讀原文核對",
+    "cited_by": [
+      "cat-environment-enrichment-taiwan",
+      "cat-natural-behavior-taiwan"
+    ]
+  },
+  "VCA-OVERGROOMING-YOUNG-CATS": {
+    "title": "Self-inflicted bald spots on young cats",
+    "title_zh": "幼貓自己舔出的禿塊",
+    "authors": "VCA Animal Hospitals",
+    "source": "VCA Animal Hospitals",
+    "url": "https://vcahospitals.com/pediatric/kitten/behavior-training/over-grooming-in-cats",
+    "year": 2026,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "VCA 幼貓衛教頁（頁面未標日期）。貓可能因焦慮或強迫行為過度理毛；焦慮引起的過度理毛常讓身體側面、肚子、腿內側或背部毛變稀，看不出底下皮膚發炎。要請獸醫處理底層的皮膚病、過敏或疼痛。\nVCA 幼貓衛教頁。禿毛多半來自皮膚問題或過度理毛；皮膚病造成的常見發紅發炎、小紅疹、破皮或膿皰。跳蚤常讓貓舔屁股或尾巴根部；痛的關節被反覆舔，那裡的毛會慢慢掉。焦慮或強迫行為造成的掉毛常在身體側邊、肚子、腿內側或背上，沒有明顯皮膚發炎；誘因包括搬家、飼主長時間出遠門、家裡來了新寶寶、伴侶或室友。皮膚病、過敏或疼痛要看獸醫治療；壓力大的變化期可問獸醫抗焦慮藥；家裡改變盡量慢慢來。",
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-18",
+    "notes": "2026-10-18 讀原文核對",
+    "cited_by": [
+      "cat-environment-enrichment-taiwan",
+      "cat-natural-behavior-taiwan"
+    ]
+  },
+  "VCA-PET-SLEEP": {
+    "title": "Is your pet sleeping too much?",
+    "title_zh": "寵物睡太多嗎？",
+    "authors": "VCA Animal Hospitals",
+    "source": "VCA Animal Hospitals",
+    "url": "https://vcahospitals.com/resources/behavior-cat/concerns/is-your-pet-sleeping-too-much",
+    "year": 2026,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "VCA 衛教頁（頁面未標日期）。貓一天睡 12 到 16 小時。作息固定的寵物，作息改變可能代表有問題；睡眠改變同時出現嘔吐、咳嗽、掉毛等其他問題時要檢查；不確定時聯絡獸醫說明觀察到的情況。",
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-18",
+    "notes": "2026-10-18 讀原文核對",
+    "cited_by": [
+      "cat-environment-enrichment-taiwan"
+    ]
+  },
+  "ICATCARE-CAT-COMMUNICATION": {
+    "title": "Cat Communication",
+    "title_zh": "貓的溝通方式",
+    "authors": "International Cat Care",
+    "source": "International Cat Care",
+    "url": "https://icatcare.org/articles/cat-communication",
+    "year": 2024,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "iCatCare 衛教頁（2024-11 首發，2025-09 更新）。眼睛、耳朵、嘴巴的位置與動作加上全身姿勢都有意義。尾巴豎起表示友善接近；夾在後腿間常是焦慮或害怕；尾巴平舉、慢慢左右擺可能是挫折。耳朵豎起往外轉、瞳孔縮小通常是挫折；瞳孔放大、耳朵平貼頭部常是害怕；放鬆的貓耳朵朝前。睜大眼睛很少眨眼地盯著，出現在貓之間對峙，或盯著威脅想蒐集資訊；眼睛放鬆、會眨、半閉是滿足、無威脅的信號（Visual communication）。翻身露肚通常是對貓、狗或人的友善打招呼，表示放鬆、自在或想玩。毛豎起讓輪廓變大，背上和尾巴毛豎起是防禦姿勢；尾巴炸開加弓背、側身站是叫對方走開的敵意信號。觸覺溝通包括互相磨蹭與互相理毛，過程中會交換氣味；氣味與費洛蒙讓同群生活的貓認出友善的個體（Tactile、Olfactory communication）。",
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-18",
+    "notes": "2026-10-18 讀原文核對",
+    "cited_by": [
+      "cat-natural-behavior-taiwan"
+    ]
+  },
+  "ICATCARE-CAT-FRIENDLY-INTERACTION": {
+    "title": "Cat Friendly Interaction",
+    "title_zh": "對貓友善的互動方式",
+    "authors": "International Cat Care",
+    "source": "International Cat Care",
+    "url": "https://icatcare.org/articles/cat-friendly-interaction",
+    "year": 2025,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "iCatCare 衛教頁（2025-11 首發，2026-08 更新）。多數貓喜歡被摸臉頰、下巴和頭（綠區），身體和尾巴較不自在（黃區），避免摸腿、肚子和尾巴根部（紅區）。避免直視或靠太近，會讓貓覺得受威脅。不舒服的徵兆包括甩尾巴、背上皮膚抽動、一邊或兩邊耳朵轉向或平貼、頭猛然轉向你的手。貓不靠近或在互動中走開就是不要；讓貓自己決定要不要被摸、摸多少、摸哪裡、摸多久。",
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-18",
+    "notes": "2026-10-18 讀原文核對",
+    "cited_by": [
+      "cat-natural-behavior-taiwan"
+    ]
+  },
+  "ICATCARE-GROOMING-YOUR-CAT": {
+    "title": "Grooming your cat",
+    "title_zh": "幫貓梳毛",
+    "authors": "International Cat Care",
+    "source": "International Cat Care",
+    "url": "https://icatcare.org/articles/grooming-your-cat",
+    "year": 2025,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "iCatCare 衛教頁（2025-03 首發，2025-09 更新）。多數貓一天花不少時間理毛。理毛的功能：清掉掉落的毛、把毛理順讓保溫更有效；清除寄生蟲；天熱時把口水抹在毛上蒸發散熱；刺激皮膚分泌油脂讓毛有光澤；把自己的氣味抹遍全身；貓互相理毛能維繫社交關係。",
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-18",
+    "notes": "2026-10-18 讀原文核對",
+    "cited_by": [
+      "cat-natural-behavior-taiwan"
+    ]
+  },
+  "ICATCARE-HUNTING-BEHAVIOUR": {
+    "title": "Understanding the hunting behaviour of cats",
+    "title_zh": "了解貓的獵捕行為",
+    "authors": "International Cat Care",
+    "source": "International Cat Care",
+    "url": "https://icatcare.org/articles/understanding-the-hunting-behaviour-of-cats",
+    "year": 2024,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "iCatCare 衛教頁（2024-11 首發，2025-09 更新）。研究發現成貓玩像真獵物的玩具時，玩得更激烈、更久；選看起來、摸起來像獵物的玩具。短而多次的遊戲最接近貓天生的獵捕模式，建議多陪貓玩。",
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-18",
+    "notes": "2026-10-18 讀原文核對",
+    "cited_by": [
+      "cat-natural-behavior-taiwan"
+    ]
+  },
+  "VCA-KITTEN-BODY-LANGUAGE": {
+    "title": "How To Read Your Kitten's Body Language",
+    "title_zh": "如何解讀幼貓的肢體語言",
+    "authors": "VCA Animal Hospitals",
+    "source": "VCA Animal Hospitals",
+    "url": "https://vcahospitals.com/pediatric/kitten/behavior-training/how-to-read-your-cats-body-language",
+    "year": null,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "VCA 幼貓衛教頁。眼神柔和、瞳孔細通常是放鬆；睜大、瞳孔放大可能是緊張焦慮，但暗處、貓薄荷或興奮也會讓瞳孔放大；貓可能用慢眨眼友善打招呼。放鬆時耳朵豎起朝前、會轉向聲音；緊張時耳朵平貼（俗稱飛機耳）。尾巴豎起而鬆、尾尖微彎是放鬆有自信；豎起而僵硬、毛炸開是害怕；煩躁時左右甩尾；準備撲時也會甩尾。放鬆時可能自信地走向你、翻身或伸展；壓低身體偷偷移動是害怕；弓背、毛炸開表示受威脅。",
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-18",
+    "notes": "2026-10-18 讀原文核對；頁面未標日期與作者",
+    "cited_by": [
+      "cat-natural-behavior-taiwan"
+    ]
+  },
+  "VCA-KITTEN-TAIL-MEANINGS": {
+    "title": "How does your young cat communicate with their tail?",
+    "title_zh": "幼貓怎麼用尾巴溝通",
+    "authors": "VCA Animal Hospitals",
+    "source": "VCA Animal Hospitals",
+    "url": "https://vcahospitals.com/pediatric/kitten/behavior-training/kitten-tail-meanings",
+    "year": null,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "VCA 幼貓衛教頁。尾巴豎直、放鬆走向你是友善有自信，尾端微彎；尾巴毛炸開可能是受威脅，給牠空間；尾巴壓低貼地或夾在兩腿間可能是害怕、焦慮或疼痛；搖、甩、拍、猛甩尾巴通常是煩躁或生氣，可能是不喜歡你摸的方式或玩夠了，讓牠自己靜一靜；看到你時尾巴抖動通常是興奮；尾端抽動可能是狩獵本能，被吵醒時也可能是輕微不耐。",
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-18",
+    "notes": "2026-10-18 讀原文核對；頁面未標日期與作者",
+    "cited_by": [
+      "cat-natural-behavior-taiwan"
+    ]
+  },
+  "CORNELL-FELINE-AGGRESSION": {
+    "title": "Feline Behavior Problems: Aggression",
+    "title_zh": "貓的行為問題：攻擊",
+    "authors": "Cornell Feline Health Center",
+    "source": "Cornell University College of Veterinary Medicine",
+    "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/feline-behavior-problems-aggression",
+    "year": 2016,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "康乃爾貓健康中心衛教頁（2016-12 更新）。撫摸誘發攻擊前，貓常出現瞳孔放大、尾巴甩動、耳朵往後轉；一有攻擊徵兆就停止撫摸，接著一段時間不要碰牠（Petting-induced aggression）。害怕的貓會壓低身體、尾巴收在身體下、耳朵平貼、哈氣、露牙，毛豎起（Fear aggression）。玩耍攻擊時貓會跟蹤目標，從躲藏處撲出；轉移注意用的玩具要離手遠一點；不要體罰；走開、不理正在玩耍攻擊的貓（Play aggression）。",
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-18",
+    "notes": "2026-10-18 讀原文核對",
+    "cited_by": [
+      "cat-natural-behavior-taiwan"
+    ]
+  },
+  "CORNELL-CATS-LICK-TOO-MUCH": {
+    "title": "Cats that Lick Too Much",
+    "title_zh": "舔太多的貓",
+    "authors": "Cornell Feline Health Center",
+    "source": "Cornell University College of Veterinary Medicine",
+    "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/cats-lick-too-much",
+    "year": null,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "康乃爾貓健康中心衛教頁。引述該校獸醫 Pamela Perry：貓一天約 30% 到 50% 的時間在理毛。舔毛作為轉移行為可以讓貓平靜，但可能變成習慣。一直舔尾巴根部可能是跳蚤；花粉或食物過敏的貓可能舔背、肚子或其他部位；會癢的病舔的範圍較廣。搬家、家裡多了或少了一隻寵物、作息改變都可能讓貓焦慮；改變要慢慢來，每天撥 10 到 15 分鐘陪玩；必要時獸醫可開短期抗焦慮藥。",
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-18",
+    "notes": "2026-10-18 讀原文核對；頁面未標日期",
+    "cited_by": [
+      "cat-natural-behavior-taiwan"
+    ]
+  },
+  "VCA-CAT-ARTHRITIS-SIGNS": {
+    "title": "14 signs your cat's arthritis is acting up",
+    "title_zh": "貓關節炎發作的 14 個徵兆",
+    "authors": "VCA Animal Hospitals",
+    "source": "VCA Animal Hospitals",
+    "url": "https://vcahospitals.com/resources/conditions-cat/bone-joint-muscle/signs-your-cats-arthritis-is-acting-up",
+    "year": null,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "VCA 衛教頁。關節炎徵兆清單包括：理毛變困難，毛況變差。",
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-18",
+    "notes": "2026-10-18 讀原文核對；頁面未標日期與作者",
+    "cited_by": [
+      "cat-natural-behavior-taiwan"
+    ]
+  },
+  "HUMPHREY-2020-SLOW-BLINK": {
+    "title": "The role of cat eye narrowing movements in cat-human communication",
+    "title_zh": "貓瞇眼動作在人貓溝通中的角色",
+    "authors": "Humphrey T, Proops L, Forman J, Spooner R, McComb K",
+    "source": "Scientific Reports 10:16503 (doi:10.1038/s41598-020-73426-0)",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7536207/",
+    "year": 2020,
+    "type": "research_paper",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "兩個實驗（摘要、Discussion）。實驗一在 14 個家庭 21 隻貓：飼主對貓慢眨時，貓半眨眼與瞇眼的次數比沒有互動時多。實驗二在 8 個家庭 24 隻貓：不認識的研究者慢眨，貓瞇眼較多，也比較會走近研究者的手（對照組避開眼神接觸，作者提醒視線方向可能有影響）。作者認為慢眨可能是人貓之間的正向情緒溝通，但需要更多研究才能下定論。",
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-18",
+    "notes": "2026-10-18 讀原文核對",
+    "cited_by": [
+      "cat-natural-behavior-taiwan"
+    ]
+  },
+  "TW-PCC-VGHTPE": {
+    "title": "毒藥物防治諮詢中心：服務項目",
+    "title_zh": "臺北榮總毒藥物防治諮詢中心：服務項目",
+    "authors": "臺北榮民總醫院職業醫學及臨床毒物部",
+    "source": "臺北榮民總醫院（國立公立醫院）",
+    "url": "https://www.pcc-vghtpe.tw/about4.htm",
+    "year": null,
+    "type": "government",
+    "language": "zh",
+    "open_access": true,
+    "abstract_zh": "台灣的毒藥物防治諮詢中心，由臺北榮總職業醫學及臨床毒物部營運，24 小時諮詢電話 02-2871-7121、02-2875-7525 分機 85500。服務項目：農藥毒性與中毒急救、藥物濫用與成癮防治、有毒植物（含中草藥）、有毒生物咬刺傷（毒蛇、毒魚、蜜蜂、虎頭蜂等）。服務項目與民眾常見問題頁（active12.htm）都沒有提到動物、寵物或獸醫。頁面未標日期。",
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-18",
+    "notes": "2026-10-18 讀 about4.htm 與 active12.htm 核對。同日另查農業部、防檢署（0800-761-590 是動物疫病諮詢）、1959 動物保護專線（虐待通報與救援）、臺北市動保處 24 小時緊急救援專線 8791-3064（協助寵物緊急就醫，不是中毒諮詢），都沒有給飼主的寵物毒物諮詢專線。",
+    "cited_by": [
+      "cat-toxic-substances-taiwan"
+    ]
+  },
+  "ASPCA-POISON-CONTROL": {
+    "title": "ASPCA Animal Poison Control Center",
+    "title_zh": "ASPCA 動物毒物控制中心",
+    "authors": "ASPCA",
+    "source": "ASPCA",
+    "url": "https://www.aspca.org/pet-care/aspca-poison-control",
+    "year": null,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "美國防止虐待動物協會（ASPCA）的動物毒物控制中心，24 小時、全年無休，電話 (888) 426-4435；官網寫可能收取諮詢費，沒有說明是否接受美國以外的來電。",
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-18",
+    "notes": "2026-10-18 讀官網核對。",
+    "cited_by": [
+      "cat-toxic-substances-taiwan"
+    ]
+  },
+  "ASPCA-DESTRUCTIVE-SCRATCHING": {
+    "title": "Destructive Scratching",
+    "title_zh": "破壞性抓撓",
+    "authors": "ASPCA",
+    "source": "ASPCA Pet Care",
+    "url": "https://www.aspca.org/pet-care/cat-care/common-cat-behavior-issues/destructive-scratching",
+    "year": 2026,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "美國防止虐待動物協會（ASPCA）衛教頁，頁面沒有標示更新日期。貓抓東西是為了標記地盤或對其他貓發出威嚇訊號，也會藉此磨掉外層磨損的舊爪、露出較新較利的爪（Why cats scratch 段）。每隻貓偏好不同：有的喜歡平放的抓板，有的喜歡直立或斜放；有的喜歡直紋可以耙，有的喜歡橫紋可以勾；可以試瓦楞紙、地毯、木頭、麻繩、布料等材質，找出偏好後在家裡不同位置多放幾個同類型的（建議段）。抓柱要穩，用的時候不會移動或倒塌，高度要夠貓完整伸展；放在貓會想攀上去的地方（建議段）。原文沒有寫建議的抓板數量。",
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-18",
+    "notes": "2026-10-18 讀原文核對。頁面只有 ©2026 版權年，無更新日期，year 暫填 2026。",
+    "cited_by": [
+      "cat-environment-enrichment-taiwan"
     ]
   }
 }
