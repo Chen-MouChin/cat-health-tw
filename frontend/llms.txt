@@ -6,7 +6,7 @@
 
 ## 主要頁面
 
-- [動物醫院查詢](https://chen-mouchin.github.io/cat-health-tw/vets.html)：全台動物醫院，可定位，可篩夜間急診（台北市、台中市政府公告名單）與貓專科，標出國際貓友善認證
+- [動物醫院查詢](https://chen-mouchin.github.io/cat-health-tw/vets.html)：全台動物醫院，可定位，可篩夜間急診（台北市、台中市、彰化縣、高雄市政府公告名單）與貓專科，標出國際貓友善認證
 - [學術文獻庫](https://chen-mouchin.github.io/cat-health-tw/library.html)：文章引用的指引與研究，每筆附原文連結，多數附中文摘要
 - [編輯方針](https://chen-mouchin.github.io/cat-health-tw/editorial.html)：誰在寫、怎麼審、引用哪些來源
 - [關於本站](https://chen-mouchin.github.io/cat-health-tw/about.html)：資料來源與網站運作

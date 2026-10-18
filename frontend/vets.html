@@ -397,7 +397,7 @@ function updateFilterHint() {
          + '另外標出國際貓醫學會（ISFM）貓友善認證的醫院，依 iCatCare 官方名錄。';
   } else if (filters.only24h) {
     html = '<strong>關於「夜間急診」</strong>：'
-         + '名單取自縣市政府公告，目前只有台北市、台中市有公告，其他縣市還沒標。'
+         + '名單來自台北市、台中市、高雄市政府的公告，另收醫院自己官網公告的夜間急診（目前彰化縣 1 家）；其他縣市政府沒有公告名單。'
          + '各院的夜間時段不同，以各醫院公告為準。';
   }
   if (html) {
@@ -496,7 +496,7 @@ function render() {
   if (myLoc) {
     text = fallback
       ? `${radiusKm} km 內沒有符合條件的醫院，改列出最近的 ${list.length} 家`
-        + (filters.only24h ? '。夜間急診名單目前只有台北市、台中市，也可以關掉「只看夜間急診」看附近所有醫院' : '')
+        + (filters.only24h ? '。夜間急診名單目前只有台北市、台中市、高雄市與彰化縣 1 家，也可以關掉「只看夜間急診」看附近所有醫院' : '')
       : `${radiusKm ? radiusKm + ' km 內' : ''}共 ${list.length} 家，由近到遠`;
     if (list.length > shown) text += `（先列最近 ${shown} 家）`;
     if (noCoord) text += ` · 另有 ${noCoord} 家座標疑似有誤，沒列入`;
