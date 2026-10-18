@@ -20,7 +20,8 @@ window.WARN_BREEDS = {
    },
    {
     "t": "iCatCare：蘇格蘭摺耳貓骨軟骨發育不全",
-    "u": "https://icatcare.org/articles/scottish-fold-osteochondrodysplasia"
+    "u": "https://icatcare.org/",
+    "u_orig": "https://icatcare.org/articles/scottish-fold-osteochondrodysplasia"
    }
   ]
  },
@@ -36,7 +37,8 @@ window.WARN_BREEDS = {
    },
    {
     "t": "iCatCare：貓的遺傳疾病",
-    "u": "https://icatcare.org/articles/inherited-disorders-in-cats"
+    "u": "https://icatcare.org/",
+    "u_orig": "https://icatcare.org/articles/inherited-disorders-in-cats"
    },
    {
     "t": "GCCF：不受理的品種",
@@ -60,7 +62,8 @@ window.WARN_BREEDS = {
    },
    {
     "t": "VCA：貓的多囊腎",
-    "u": "https://vcahospitals.com/know-your-pet/polycystic-kidney-disease-in-cats"
+    "u": "https://vcahospitals.com/",
+    "u_orig": "https://vcahospitals.com/know-your-pet/polycystic-kidney-disease-in-cats"
    }
   ]
  },
@@ -80,7 +83,8 @@ window.WARN_BREEDS = {
    },
    {
     "t": "VCA：貓的多囊腎",
-    "u": "https://vcahospitals.com/know-your-pet/polycystic-kidney-disease-in-cats"
+    "u": "https://vcahospitals.com/",
+    "u_orig": "https://vcahospitals.com/know-your-pet/polycystic-kidney-disease-in-cats"
    }
   ]
  },
@@ -164,7 +168,8 @@ window.WARN_BREEDS = {
    },
    {
     "t": "VCA：British Shorthair",
-    "u": "https://vcahospitals.com/know-your-pet/cat-breeds/british-shorthair"
+    "u": "https://vcahospitals.com/",
+    "u_orig": "https://vcahospitals.com/know-your-pet/cat-breeds/british-shorthair"
    }
   ]
  },
@@ -176,7 +181,8 @@ window.WARN_BREEDS = {
   "refs": [
    {
     "t": "VCA：Sphynx",
-    "u": "https://vcahospitals.com/know-your-pet/cat-breeds/sphynx"
+    "u": "https://vcahospitals.com/",
+    "u_orig": "https://vcahospitals.com/know-your-pet/cat-breeds/sphynx"
    },
    {
     "t": "Åhman 2009：無毛貓皮膚的馬拉色菌",
@@ -184,7 +190,8 @@ window.WARN_BREEDS = {
    },
    {
     "t": "iCatCare：Sphynx",
-    "u": "https://icatcare.org/articles/sphynx"
+    "u": "https://icatcare.org/",
+    "u_orig": "https://icatcare.org/articles/sphynx"
    },
    {
     "t": "Meurs 2021：無毛貓心肌病 ALMS1",
@@ -204,7 +211,8 @@ window.WARN_BREEDS = {
    },
    {
     "t": "iCatCare：貓的遺傳疾病",
-    "u": "https://icatcare.org/articles/inherited-disorders-in-cats"
+    "u": "https://icatcare.org/",
+    "u_orig": "https://icatcare.org/articles/inherited-disorders-in-cats"
    },
    {
     "t": "CFA：Manx",
@@ -332,11 +340,13 @@ window.WARN_BREEDS = {
    },
    {
     "t": "VCA：Devon Rex",
-    "u": "https://vcahospitals.com/know-your-pet/cat-breeds/devon-rex"
+    "u": "https://vcahospitals.com/",
+    "u_orig": "https://vcahospitals.com/know-your-pet/cat-breeds/devon-rex"
    },
    {
     "t": "iCatCare：貓的遺傳疾病",
-    "u": "https://icatcare.org/articles/inherited-disorders-in-cats"
+    "u": "https://icatcare.org/",
+    "u_orig": "https://icatcare.org/articles/inherited-disorders-in-cats"
    }
   ]
  },
@@ -352,7 +362,8 @@ window.WARN_BREEDS = {
    },
    {
     "t": "VCA：Cornish Rex",
-    "u": "https://vcahospitals.com/know-your-pet/cat-breeds/cornish-rex"
+    "u": "https://vcahospitals.com/",
+    "u_orig": "https://vcahospitals.com/know-your-pet/cat-breeds/cornish-rex"
    }
   ]
  },
@@ -380,7 +391,8 @@ window.WARN_BREEDS = {
   "refs": [
    {
     "t": "iCatCare：Sphynx",
-    "u": "https://icatcare.org/articles/sphynx"
+    "u": "https://icatcare.org/",
+    "u_orig": "https://icatcare.org/articles/sphynx"
    },
    {
     "t": "Struck 2020：曼基短腿貓的 UGDH 變異",
@@ -520,7 +532,8 @@ window.WARN_BREEDS = {
    },
    {
     "t": "VCA：貓的多囊腎",
-    "u": "https://vcahospitals.com/know-your-pet/polycystic-kidney-disease-in-cats"
+    "u": "https://vcahospitals.com/",
+    "u_orig": "https://vcahospitals.com/know-your-pet/polycystic-kidney-disease-in-cats"
    }
   ]
  },
@@ -536,7 +549,8 @@ window.WARN_BREEDS = {
    },
    {
     "t": "iCatCare：Sphynx",
-    "u": "https://icatcare.org/articles/sphynx"
+    "u": "https://icatcare.org/",
+    "u_orig": "https://icatcare.org/articles/sphynx"
    }
   ]
  }

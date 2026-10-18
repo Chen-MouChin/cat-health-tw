@@ -1,7 +1,7 @@
 window.BREEDS = {
   "_meta": {
     "count": 68,
-    "generated_at": "2026-10-18 15:17"
+    "generated_at": "2026-10-19 03:11"
   },
   "breeds": [
     {
@@ -1032,7 +1032,8 @@ window.BREEDS = {
       "health_refs": [
         {
           "t": "iCatCare：貓的遺傳疾病",
-          "u": "https://icatcare.org/articles/inherited-disorders-in-cats"
+          "u": "https://icatcare.org/",
+          "u_orig": "https://icatcare.org/articles/inherited-disorders-in-cats"
         },
         {
           "t": "Farnworth 2016：扁臉與呼吸問題",
@@ -1040,7 +1041,8 @@ window.BREEDS = {
         },
         {
           "t": "VCA：貓的多囊腎",
-          "u": "https://vcahospitals.com/know-your-pet/polycystic-kidney-disease-in-cats"
+          "u": "https://vcahospitals.com/",
+          "u_orig": "https://vcahospitals.com/know-your-pet/polycystic-kidney-disease-in-cats"
         }
       ]
     },
@@ -6163,7 +6165,8 @@ window.BREEDS = {
         },
         {
           "t": "iCatCare：貓的遺傳疾病",
-          "u": "https://icatcare.org/articles/inherited-disorders-in-cats"
+          "u": "https://icatcare.org/",
+          "u_orig": "https://icatcare.org/articles/inherited-disorders-in-cats"
         }
       ]
     },
@@ -6858,11 +6861,13 @@ window.BREEDS = {
       "health_refs": [
         {
           "t": "iCatCare：蘇格蘭摺耳貓骨軟骨發育不全",
-          "u": "https://icatcare.org/articles/scottish-fold-osteochondrodysplasia"
+          "u": "https://icatcare.org/",
+          "u_orig": "https://icatcare.org/articles/scottish-fold-osteochondrodysplasia"
         },
         {
           "t": "VCA：幼貓的梳理",
-          "u": "https://vcahospitals.com/pediatric/kitten/behavior-training/how-to-groom-a-kitten"
+          "u": "https://vcahospitals.com/",
+          "u_orig": "https://vcahospitals.com/pediatric/kitten/behavior-training/how-to-groom-a-kitten"
         }
       ]
     },
@@ -7306,7 +7311,8 @@ window.BREEDS = {
       "health_refs": [
         {
           "t": "iCatCare：白貓的遺傳性耳聾",
-          "u": "https://icatcare.org/articles/inherited-deafness-in-white-cats"
+          "u": "https://icatcare.org/",
+          "u_orig": "https://icatcare.org/articles/inherited-deafness-in-white-cats"
         }
       ]
     },
@@ -7584,7 +7590,8 @@ window.BREEDS = {
         },
         {
           "t": "iCatCare：貓的肥胖",
-          "u": "https://icatcare.org/articles/obesity-in-cats"
+          "u": "https://icatcare.org/",
+          "u_orig": "https://icatcare.org/articles/obesity-in-cats"
         }
       ]
     },

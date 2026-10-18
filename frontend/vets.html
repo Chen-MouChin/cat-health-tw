@@ -513,7 +513,7 @@ function render() {
 function renderCard(v) {
   const badge24 = v.e === 1 ? `<span class="badge-24h">夜間急診${v.et ? ' ' + escapeHtml(v.et) : ''}</span>` : '';
   const badgeCat = v.cat === 1 ? `<span class="badge-cat">貓專科</span>` : '';
-  const badgeCf = v.cf ? `<a class="badge-cat" href="https://icatcare.org/cat-friendly-clinics" target="_blank" rel="noopener" title="國際貓醫學會（ISFM）Cat Friendly Clinic 認證，2026-10-18 查">國際貓友善認證 ${escapeHtml(v.cf)}級</a>` : '';
+  const badgeCf = v.cf ? `<a class="badge-cat" href="https://icatcare.org/" target="_blank" rel="noopener" title="國際貓醫學會（ISFM）Cat Friendly Clinic 認證，2026-10-18 查">國際貓友善認證 ${escapeHtml(v.cf)}級</a>` : '';
   const pos = v.d ? `<span class="pos">${escapeHtml(v.c)} · ${escapeHtml(v.d)}</span>` : `<span class="pos">${escapeHtml(v.c)}</span>`;
   // ap=1：座標只精確到街道或行政區中心，距離標「約」
   const dist = (v._d != null)
