@@ -177,9 +177,10 @@
     ],
     "status": "approved",
     "url_verified": true,
-    "notes": "PDF 原文標題為 modified 2019，但 IRIS 網站 2023 重新發布。數值經 PDF 原文逐字核實。 2026-10-14：IRIS 網站已換成 2026 版，文章改引 IRIS-CKD-2026。",
+    "notes": "PDF 原文標題為 modified 2019，但 IRIS 網站 2023 重新發布。數值經 PDF 原文逐字核實。 2026-10-14：IRIS 網站已換成 2026 版，文章改引 IRIS-CKD-2026。｜2026-10-18 小幫手 K 反映和 IRIS-CKD-TREATMENT-2023 看起來重複：兩筆是 IRIS 的兩份不同文件（分期／治療建議），只是原文網址是同一個指引頁；加 ref_note 在網頁上說明，不合併。",
     "cited_by": [],
-    "verified_at": null
+    "verified_at": null,
+    "ref_note": "IRIS 網站的指引頁同時放了「分期」和「治療建議」兩份文件，「原文」都連到這一頁。這筆是「分期」。「治療建議」是另一筆文獻。"
   },
   "IRIS-CKD-TREATMENT-2023": {
     "title": "IRIS Treatment Recommendations for CKD in Cats",
@@ -205,8 +206,11 @@
     ],
     "status": "approved",
     "url_verified": true,
-    "notes": "17 頁 PDF 逐字核實。已修正 3 處原摘要中非原文內容：(1)刪除皮下輸液具體 ml 數 (2)刪除 Stage 4 特定磷目標 (3)刪除餵食管建議。14/14 項經 regex 比對原文確認。 2026-10-14：IRIS 網站已換成 2026 版，文章改引 IRIS-CKD-TREATMENT-2026。",
-    "cited_by": []
+    "notes": "17 頁 PDF 逐字核實。已修正 3 處原摘要中非原文內容：(1)刪除皮下輸液具體 ml 數 (2)刪除 Stage 4 特定磷目標 (3)刪除餵食管建議。14/14 項經 regex 比對原文確認。 2026-10-14：IRIS 網站已換成 2026 版，文章改引 IRIS-CKD-TREATMENT-2026。｜2026-10-18 小幫手 K 反映和 IRIS-CKD-2023 看起來重複：兩筆是 IRIS 的兩份不同文件（治療建議／分期），只是原文網址是同一個指引頁；加 ref_note 在網頁上說明，不合併。",
+    "cited_by": [
+      "cat-common-symptoms-taiwan"
+    ],
+    "ref_note": "IRIS 網站的指引頁同時放了「分期」和「治療建議」兩份文件，「原文」都連到這一頁。這筆是「治療建議」。「分期」是另一筆文獻。"
   },
   "ISFM-DIABETES-2015": {
     "title": "ISFM Consensus Guidelines on the Practical Management of Diabetes Mellitus in Cats",
@@ -675,7 +679,8 @@
       "cat-cognitive-dysfunction",
       "cat-inappropriate-elimination",
       "cat-litter-box-guide",
-      "male-cat-urethral-obstruction"
+      "male-cat-urethral-obstruction",
+      "multi-cat-household-taiwan"
     ],
     "pdf_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11148882/pdf/10.1177/1098612X14539092.pdf",
     "verified_at": "2026-10-12"
@@ -744,6 +749,7 @@
       "cat-ckd-complete-guide",
       "cat-common-symptoms-taiwan",
       "cat-emergency-care-taiwan",
+      "cat-end-of-life-care-taiwan",
       "cat-life-stages-care-taiwan",
       "cat-water-urinary-health-taiwan"
     ]
@@ -776,6 +782,7 @@
       "cat-common-symptoms-taiwan",
       "cat-diabetes-care",
       "cat-food-selection-taiwan",
+      "cat-inappropriate-elimination",
       "cat-life-stages-care-taiwan",
       "cat-obesity-weight-management",
       "cat-water-urinary-health-taiwan"
@@ -938,9 +945,11 @@
     "url_verified": true,
     "notes": "WSAVA 免費 PDF｜2026-10-17 小幫手要求補 PDF：加 WSAVA 官方中文版 PDF（貓的部分從第 23 頁開始）。\n2026-10-17 合併重複條目 WSAVA-VACCINATION-GUIDELINES-2022，補上期刊出處。\n2026-10-17 改指向 WSAVA 頁面摺疊裡的原始文件：網址改英文版全文 PDF；pdf_url 保留官方中文版。另有貓疫苗一覽表 https://wsava.org/wp-content/uploads/2025/06/Cats-Vaccination-Table.pdf｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
+      "cat-cancer-tumors-guide",
       "cat-life-stages-care-taiwan",
       "cat-upper-respiratory-infection",
       "cat-vaccination-wellness-taiwan",
+      "fiv-felv-management-taiwan",
       "kitten-care-complete-taiwan"
     ],
     "pdf_url": "https://wsava.org/wp-content/uploads/2024/05/Chinese-Ver-2024-Vaccination-Guideline-for-Dogs-Cats.pdf",
@@ -1099,7 +1108,9 @@
     "status": "pending_review",
     "url_verified": false,
     "notes": "發表在 ISFM 的 JFMS 期刊，付費牆但摘要免費 | DOI link verified (HEAD blocked by publisher, browser OK)",
-    "cited_by": []
+    "cited_by": [
+      "solo-cat-mental-health"
+    ]
   },
   "AAFP-CAT-FRIENDLY-VETERINARY-INTERACTION-GUID-2020": {
     "title": "Cat Friendly Veterinary Interaction Guidelines: Approach and Handling Techniques",
@@ -1138,7 +1149,8 @@
     "url_verified": true,
     "notes": "auto-crawled from catvets.com/guidelines｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
-      "cat-anxiety-stress-management"
+      "cat-anxiety-stress-management",
+      "cat-pheromone-products-guide"
     ]
   },
   "AAFP-2022-ISFM-AAFP-CAT-FRIENDLY-VETERINARY-E-2022": {
@@ -1623,6 +1635,7 @@
     "url_verified": true,
     "notes": "2026-10-17 讀原文核對。",
     "cited_by": [
+      "cat-emergency-care-taiwan",
       "cat-indoor-vs-outdoor-taiwan"
     ],
     "verified_at": "2026-10-17"
@@ -1647,6 +1660,7 @@
     "cited_by": [
       "cat-cancer-tumors-guide",
       "cat-common-symptoms-taiwan",
+      "cat-emergency-care-taiwan",
       "cat-end-of-life-care-taiwan",
       "cat-ibd-intestinal-disease",
       "cat-life-stages-care-taiwan"
@@ -2882,7 +2896,8 @@
     "url_verified": false,
     "notes": "2026-10-14 由查證 agent 核對。出版社網站免費閱讀（Unpaywall 標 bronze OA，不在 PMC）。AVMA 網站擋爬蟲（403），全文由第三方鏡像 PDF 讀取，請負責人開原網址確認後再核准。小幫手 2026-10-13 建議加入。",
     "cited_by": [
-      "barf-raw-food-taiwan"
+      "barf-raw-food-taiwan",
+      "cat-parasite-prevention-taiwan"
     ]
   },
   "MILLS-2011-SPRAYING-META": {
@@ -2936,7 +2951,9 @@
     "verified_at": "2026-10-14",
     "notes": "2026-10-14 由查證 agent 核對。PMC 全文。",
     "cited_by": [
-      "cat-anxiety-stress-management"
+      "cat-anxiety-stress-management",
+      "cat-pheromone-products-guide",
+      "multi-cat-household-taiwan"
     ]
   },
   "STELLA-2011-SICKNESS-BEHAVIOR": {
@@ -2988,7 +3005,8 @@
     "verified_at": "2026-10-14",
     "notes": "2026-10-14 由查證 agent 核對。PMC 全文；Box 5（費洛蒙實用建議）是圖片，未讀到。",
     "cited_by": [
-      "cat-anxiety-stress-management"
+      "cat-anxiety-stress-management",
+      "multi-cat-household-taiwan"
     ]
   },
   "IRIS-CKD-2026": {
@@ -3017,7 +3035,7 @@
     "status": "approved",
     "url_verified": true,
     "verified_at": "2026-10-14",
-    "notes": "2026-10-14 下載 PDF 逐頁核對。取代 IRIS-CKD-2023（IRIS 網站已改放 2026 版），貓的分期數值與 2023 版相同。小幫手 指出舊的兩筆文獻連到同一頁，改成各自的 PDF。｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
+    "notes": "2026-10-14 下載 PDF 逐頁核對。取代 IRIS-CKD-2023（IRIS 網站已改放 2026 版），貓的分期數值與 2023 版相同。小幫手 指出舊的兩筆文獻連到同一頁，改成各自的 PDF。｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。｜2026-10-18 小幫手 K 反映和 IRIS-CKD-TREATMENT-2026 看起來重複：兩筆是 IRIS 的兩份不同文件（分期／治療建議），只是原文網址是同一個指引頁；加 ref_note 在網頁上說明，不合併。",
     "cited_by": [
       "cat-ckd-complete-guide",
       "cat-common-symptoms-taiwan",
@@ -3025,7 +3043,8 @@
       "cat-eye-ear-problems-taiwan",
       "cat-life-stages-care-taiwan",
       "cat-vaccination-wellness-taiwan"
-    ]
+    ],
+    "ref_note": "IRIS 網站的指引頁同時放了「分期」和「治療建議」兩份文件，「原文」都連到這一頁。這筆是「分期」，「PDF」連到這份文件本身。「治療建議」是另一筆文獻。"
   },
   "IRIS-CKD-TREATMENT-2026": {
     "title": "IRIS Treatment Recommendations for CKD in Cats (2026)",
@@ -3054,13 +3073,14 @@
     "status": "approved",
     "url_verified": true,
     "verified_at": "2026-10-14",
-    "notes": "2026-10-14 下載 PDF 逐頁核對（22 頁）。取代 IRIS-CKD-TREATMENT-2023。和 2023 版的差異：第 2 期血磷上限 4.5（舊版 4.6）；貧血加入 HIF-PH 抑制劑；臨界蛋白尿可考慮治療但無證據能延緩惡化。｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
+    "notes": "2026-10-14 下載 PDF 逐頁核對（22 頁）。取代 IRIS-CKD-TREATMENT-2023。和 2023 版的差異：第 2 期血磷上限 4.5（舊版 4.6）；貧血加入 HIF-PH 抑制劑；臨界蛋白尿可考慮治療但無證據能延緩惡化。｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。｜2026-10-18 小幫手 K 反映和 IRIS-CKD-2026 看起來重複：兩筆是 IRIS 的兩份不同文件（治療建議／分期），只是原文網址是同一個指引頁；加 ref_note 在網頁上說明，不合併。",
     "cited_by": [
       "cat-ckd-complete-guide",
       "cat-end-of-life-care-taiwan",
       "cat-food-selection-taiwan",
       "cat-life-stages-care-taiwan"
-    ]
+    ],
+    "ref_note": "IRIS 網站的指引頁同時放了「分期」和「治療建議」兩份文件，「原文」都連到這一頁。這筆是「治療建議」，「PDF」連到這份文件本身。「分期」是另一筆文獻。"
   },
   "CORNELL-HOUSE-SOILING": {
     "title": "Feline Behavior Problems: House Soiling",
@@ -3662,6 +3682,7 @@
     "verified_at": "2026-10-17",
     "notes": "2026-10-17 讀原文核對數字（頁面標示 Updated June 2018；排卵囊時間另有一句寫 1 到 5 天、另一句寫最少 24 小時，兩個都照原文寫）。｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
+      "cat-parasite-prevention-taiwan",
       "cat-toxoplasma-pregnancy"
     ]
   },
@@ -3811,6 +3832,7 @@
     "verified_at": "2026-10-17",
     "notes": "2026-10-17 讀原文核對。罰則條文為動物傳染病防治條例第 13 條（地方主管機關得令預防注射）與第 45 條第 2 款（3 萬到 15 萬元），全國法規資料庫 pcode=M0130003，查詢日期 2026-10-17。",
     "cited_by": [
+      "cat-adoption-guide-taiwan",
       "cat-aggression-causes-treatment",
       "cat-indoor-vs-outdoor-taiwan",
       "cat-laws-taiwan",
@@ -4377,7 +4399,9 @@
       "dental"
     ],
     "cited_by": [
-      "cat-home-grooming-guide"
+      "cat-dental-health-taiwan",
+      "cat-home-grooming-guide",
+      "cat-life-stages-care-taiwan"
     ],
     "language": "en",
     "type": "educational",
@@ -4403,6 +4427,7 @@
       "behavior"
     ],
     "cited_by": [
+      "cat-adoption-guide-taiwan",
       "new-cat-first-week-guide",
       "rehoming-cat-responsibly-taiwan"
     ],
@@ -4431,6 +4456,7 @@
       "behavior"
     ],
     "cited_by": [
+      "multi-cat-household-taiwan",
       "new-cat-first-week-guide"
     ],
     "language": "en",
@@ -4483,6 +4509,7 @@
       "behavior"
     ],
     "cited_by": [
+      "cat-adoption-guide-taiwan",
       "new-cat-first-week-guide",
       "rehoming-cat-responsibly-taiwan"
     ],
@@ -4839,6 +4866,7 @@
     "abstract_zh": "VCA 的貓生病徵兆說明（2024-05-08 更新）。貓沒有好好吃東西超過 24 小時，要立即就醫；食慾或喝水量的任何改變都值得注意；嘔吐要注意，特別是吐出透明泡沫或帶膽汁的液體；沒有排尿是危及生命的緊急狀況，尿量變少或在砂盆用力時要立即就醫；呼吸有問題的貓常會伸長頭和脖子，出現呼吸問題要立即就醫。",
     "cited_by": [
       "cat-common-symptoms-taiwan",
+      "cat-emergency-care-taiwan",
       "cat-end-of-life-care-taiwan",
       "cat-hepatic-lipidosis",
       "cat-ibd-intestinal-disease",
@@ -4869,6 +4897,7 @@
     "url": "https://vcahospitals.com/know-your-pet/first-aid-for-falls-in-cats",
     "abstract_zh": "VCA 的貓墜落急救說明。從高處掉落的貓可能扭傷、骨折、頭部外傷、胸腔或腹腔受傷，下巴骨折很常見；斷掉的肋骨刺穿肺臟會造成肺塌陷，脾臟或肝臟受傷可能大量出血。有些貓墜落後看起來正常、還會走動玩耍，之後才變得精神差、虛弱或呼吸困難，要密切觀察好幾天，這些延遲出現的問題是需要立即處理的緊急狀況；嚴重的墜落傷要立即讓獸醫評估治療。",
     "cited_by": [
+      "cat-emergency-care-taiwan",
       "cat-home-safety-taiwan"
     ],
     "notes": "2026-10-17 讀原文核對。"
@@ -6027,7 +6056,8 @@
     "verified_at": "2026-10-17",
     "notes": "2026-10-17 新增：核對 cat-hepatic-lipidosis 時發現過重門檻出自這份圖表，不在 2011 營養評估指引本文。\n2026-10-17 官方中文版（2020 年版，英文版已在 2025 年更新）：https://wsava.org/wp-content/uploads/2020/10/Body-Condition-Score-Chart-Cat-Chinese-updated-August-2020.pdf",
     "cited_by": [
-      "cat-hepatic-lipidosis"
+      "cat-hepatic-lipidosis",
+      "cat-obesity-weight-management"
     ],
     "zh_url": "https://wsava.org/wp-content/uploads/2020/10/Body-Condition-Score-Chart-Cat-Chinese-updated-August-2020.pdf"
   },
@@ -6168,5 +6198,385 @@
     "notes": "2026-10-17 從 WSAVA 營養指引頁摺疊裡的工具包加入，讀 PDF 原文核對。官方中文版：https://wsava.org/wp-content/uploads/2020/01/11-%E4%BD%8F%E9%99%A2%E7%8A%AC%E8%B2%93%E9%A4%B5%E9%A3%9F%E6%8C%87%E5%8D%97.pdf",
     "pdf_url": "https://wsava.org/wp-content/uploads/2020/08/Feeding-Guide-for-Hospitalized-Dogs-and-Cats.pdf",
     "zh_url": "https://wsava.org/wp-content/uploads/2020/01/11-%E4%BD%8F%E9%99%A2%E7%8A%AC%E8%B2%93%E9%A4%B5%E9%A3%9F%E6%8C%87%E5%8D%97.pdf"
+  },
+  "VCA-BLEEDING-CATS": {
+    "title": "First Aid for Bleeding Cats",
+    "title_zh": "貓出血的急救",
+    "authors": "Malcolm Weir, Ryan Llera, Lynn Buzhardt (VCA Animal Hospitals)",
+    "source": "VCA Animal Hospitals",
+    "url": "https://vcahospitals.com/know-your-pet/first-aid-for-bleeding-cats",
+    "year": 2025,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "VCA 的貓出血急救說明（2025-07-18 更新）。胸腹看不到的內出血比外傷出血更危險；短時間大量失血可能休克，休克的貓心跳快、血壓低，牙齦可能發白、呼吸急促（What happens when a cat is bleeding?）。腳上大量出血：用乾淨毛巾包住傷口穩穩壓住，可以的話把腳抬到比心臟高；毛巾濕透不要拿掉，在上面再疊一條繼續壓，拿掉可能扯掉血塊讓出血更多，盡快去醫院（腿部傷口段）。腳掌出血壓 10 到 15 分鐘仍未停止要去急診（腳掌段）。內出血在家無法控制，懷疑時送醫（內出血段）。受傷的貓可能咬人或抓人，要小心保定（precautions 段）。頁面沒有談止血帶。",
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-18",
+    "notes": "2026-10-18 讀原文核對",
+    "cited_by": [
+      "cat-emergency-care-taiwan"
+    ]
+  },
+  "VCA-FROSTBITE-CATS": {
+    "title": "Frostbite in Cats",
+    "title_zh": "貓的凍傷",
+    "authors": "Malcolm Weir, Tammy Hunter, Ernest Ward (VCA Animal Hospitals)",
+    "source": "VCA Animal Hospitals",
+    "url": "https://vcahospitals.com/know-your-pet/frostbite-in-cats",
+    "year": 2024,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "VCA 的貓凍傷說明（2024-06-11 更新）。處理方式：盡快把貓移到溫暖乾燥的地方；有失溫（核心體溫低）時先處理失溫，用溫暖乾燥的毛巾或毯子包住身體慢慢回溫，熱水袋用毛巾包好放在身體旁邊；凍傷部位不要搓揉按摩，不要用電熱墊或吹風機這類直接乾熱加熱凍傷部位，可用 37 到 45°C 溫水（How is frostbite treated?）。不要給人用止痛藥，乙醯胺酚、阿斯匹靈對貓有毒。",
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-18",
+    "notes": "2026-10-18 讀原文核對；文章只引用失溫回溫做法",
+    "cited_by": [
+      "cat-emergency-care-taiwan"
+    ]
+  },
+  "ICATCARE-CATS-POISONS": {
+    "title": "Cats and poisons",
+    "title_zh": "貓與毒物",
+    "authors": "International Cat Care",
+    "source": "International Cat Care",
+    "url": "https://icatcare.org/articles/cats-and-poisons",
+    "year": 2025,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "iCatCare 的貓中毒衛教（2025-09-26 更新）。懷疑中毒時：把貓帶離毒源、和其他動物隔開；立即聯絡獸醫團隊，說明什麼時候、在哪裡、怎麼中毒；可以的話把包裝、植物或那樣東西帶去醫院；毒物沾到皮膚、毛或腳掌時，盡量別讓貓再舔，在獸醫指示下用溫和洗劑和水徹底清洗（What should I do if I think my cat has been poisoned?）。只沾在毛上的輕度汙染可能可以在家處理，但先和獸醫討論；清洗和剪毛常在醫院做比較安全。",
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-18",
+    "notes": "2026-10-18 讀原文核對",
+    "cited_by": [
+      "cat-emergency-care-taiwan"
+    ]
+  },
+  "ICATCARE-ACUTE-PAIN-2022": {
+    "title": "Recognising and managing acute pain in cats: information for owners/caregivers",
+    "title_zh": "辨識與處理貓的急性疼痛（飼主版）",
+    "authors": "International Cat Care",
+    "source": "International Cat Care（Cat Carer Guide PDF）",
+    "url": "https://icatcare.org/resources/cat-carer-guide-acute-pain.pdf",
+    "year": 2022,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "iCatCare 給飼主的急性疼痛指南（2022）。貓很會隱藏不舒服（Signs of pain in cats）。在家裡，貓的行為和平常不同通常是疼痛最明顯的訊號；例子有睡得比較多、在不尋常的地方睡或躲起來（例如床底、衣櫃裡）、駝背休息、動作改變或跛行、不願跳上跳下或爬樓梯、對玩沒興趣、理毛變少、食慾或吃法改變、在砂盆外排尿排便、對人或其他動物有攻擊性、不想被摸或梳毛；表情變化有眼睛瞇起、耳朵往後、口鼻緊繃、鬍鬚僵直往兩側伸出（第 2 頁清單）。擔心貓在痛時聯絡獸醫。",
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-18",
+    "notes": "2026-10-18 讀原文核對（pdftotext 讀全文）",
+    "cited_by": [
+      "cat-emergency-care-taiwan"
+    ]
+  },
+  "VCA-PAIN-SIGNS-CATS": {
+    "title": "How Do I Know if My Cat is in Pain?",
+    "title_zh": "怎麼知道貓在痛",
+    "authors": "Malcolm Weir, Robin Downing (VCA Animal Hospitals)",
+    "source": "VCA Animal Hospitals",
+    "url": "https://vcahospitals.com/know-your-pet/how-do-i-know-if-my-cat-is-in-pain",
+    "year": 2025,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "VCA 的貓疼痛徵兆（2025-11-14 更新）。貓本能會隱藏疼痛。徵兆分類：叫聲（比平常多叫、低吼哈氣）；活動（不願上下樓梯或跳上家具、跛行）；日常習慣（理毛變少，毛凌亂打結；也有貓過度舔痛處，舔到掉毛或皮膚發炎；躲藏、退縮；吃喝變少；在砂盆外排泄）；攻擊性（被摸時出手、不願被梳毛或抱起）；姿勢與表情。",
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-18",
+    "notes": "2026-10-18 讀原文核對",
+    "cited_by": [
+      "cat-emergency-care-taiwan"
+    ]
+  },
+  "AAHA-PET-FIRST-AID-KIT": {
+    "title": "How to Make a Pet First Aid Kit (and Actually Use It)",
+    "title_zh": "怎麼準備寵物急救包",
+    "authors": "Chloe DiVita (AAHA)",
+    "source": "American Animal Hospital Association",
+    "url": "https://www.aaha.org/resources/how-to-make-a-pet-first-aid-kit-and-actually-use-it/",
+    "year": 2025,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "AAHA 的寵物急救包說明（2025-05-21）。每個急救包應有：紗布、固定紗布的自黏繃帶與醫療膠帶、寵物用藥膏或擦拭巾、體溫計、剪刀、鑷子、寵物可用的抗組織胺（劑量先問獸醫）、拋棄式手套、注射器或滴管（用來給生理食鹽水等液體）、生理食鹽水（清潔擦傷、沖洗眼睛）、小手電筒、毯子或毛巾（保暖或包住寵物運送，可用來包住不讓人抓的貓）、冰敷包、緊急聯絡名單、病歷影本（What Every Kit Should Contain）。用品集中在一個盒子，放在家裡常經過、容易拿到的地方，約每六個月檢查一次（Maintaining Your First Aid Kit）。急救不能取代獸醫照護；比抓傷深的傷口先問獸醫再清（Basic First Aid for Pets）。",
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-18",
+    "notes": "2026-10-18 讀原文核對（WebFetch 403，curl 取原頁）",
+    "cited_by": [
+      "cat-emergency-care-taiwan"
+    ]
+  },
+  "CORNELL-CONJUNCTIVITIS": {
+    "title": "Conjunctivitis",
+    "title_zh": "康乃爾貓健康中心：貓結膜炎",
+    "authors": "Cornell Feline Health Center",
+    "source": "Cornell",
+    "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/conjunctivitis",
+    "year": null,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "結膜炎是貓最常見的眼睛疾病，很多貓一生中至少會有一次輕微的（第一段）。症狀可在單眼或雙眼，也常在第三眼瞼看到：瞇眼、頻繁眨眼、分泌物依原因可能是透明水狀或濃稠深色，結膜與第三眼瞼紅腫（症狀段）。灰塵、空氣中化學物質、戶外植物可引起；最常見的原因是疱疹病毒、卡里西病毒，或披衣菌、黴漿菌兩種細菌；FIV、FeLV 感染的貓也較常見（原因段）。主要發生在年輕的貓，多貓環境最常見；多數貓之後會產生免疫，帶疱疹病毒的貓會週期性復發（年齡段）。多數會自己好，但貓眼睛不舒服又有分泌物時應就醫排除更嚴重的眼病；常用抗生素眼藥 3 到 4 次／天、2 到 3 週，懷疑疱疹時加抗病毒眼藥（治療段）。頁面沒有標日期。",
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-18",
+    "notes": "2026-10-18 讀原文核對",
+    "cited_by": [
+      "cat-eye-ear-problems-taiwan"
+    ]
+  },
+  "CORNELL-VISION-PROBLEMS": {
+    "title": "Feline Vision Problems: A Host of Possible Causes",
+    "title_zh": "康乃爾貓健康中心：貓視力問題的多種原因",
+    "authors": "Cornell Feline Health Center",
+    "source": "Cornell",
+    "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/feline-vision-problems-host-possible-causes",
+    "year": null,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "結膜炎是最常診斷的貓眼疾，多半是上呼吸道感染的一部分；葡萄膜炎是最常造成失明的疾病，多與 FIV、FeLV、FIP 等感染有關；第二常見是視網膜剝離，多與高血壓、甲狀腺亢進或腎病有關（疾病段）。看不見的貓可能撞家具、找不到砂盆或食碗（行為徵兆段）。飼主可留意虹膜顏色改變、眼睛變霧、兩邊瞳孔不一樣；健康的眼睛明亮清澈、瞳孔等大、不瞇眼、眼角幾乎沒有淚水、眼瞼內側粉紅、第三眼瞼不凸出（最後兩段）。頁面沒有標日期。",
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-18",
+    "notes": "2026-10-18 讀原文核對",
+    "cited_by": [
+      "cat-eye-ear-problems-taiwan"
+    ]
+  },
+  "VCA-CAT-CONJUNCTIVITIS": {
+    "title": "Conjunctivitis in Cats",
+    "title_zh": "VCA：貓結膜炎",
+    "authors": "VCA Animal Hospitals（LifeLearn）",
+    "source": "VCA",
+    "url": "https://vcahospitals.com/know-your-pet/conjunctivitis-in-cats",
+    "year": 2023,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "2023-05-10 更新。結膜炎的徵兆：單眼或雙眼過度流淚、混濁或黃綠色分泌物、結膜發紅，可能瞇眼或怕光，出現應就醫（症狀段）。感染是最常見原因：疱疹病毒、卡里西病毒，常續發其他細菌，披衣菌與黴漿菌也可直接引起（感染原因段）。非感染原因：波斯、喜馬拉雅等長毛品種可能天生眼瞼內翻，睫毛持續摩擦眼球刺激角膜；另有異物等（非感染原因段）。",
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-18",
+    "notes": "2026-10-18 讀原文核對",
+    "cited_by": [
+      "cat-eye-ear-problems-taiwan"
+    ]
+  },
+  "VCA-CAT-CORNEAL-ULCERS": {
+    "title": "Corneal Ulcers in Cats",
+    "title_zh": "VCA：貓角膜潰瘍",
+    "authors": "VCA Animal Hospitals（LifeLearn）",
+    "source": "VCA",
+    "url": "https://vcahospitals.com/know-your-pet/corneal-ulcers-in-cats",
+    "year": 2025,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "2025-07-25 更新。角膜是眼球表面透明的膜；潰瘍讓角膜積水而變混濁，蝕穿到最深層破裂時眼內液體流出、眼球塌陷，造成無法挽回的損傷（定義段）。最常見原因是外傷（磨眼、抓傷、尖刺）與病毒感染如貓疱疹病毒；洗毛精等化學灼傷也常見；眼瞼內翻等眼瞼異常也會刺激角膜（原因段）。很痛，多數貓用爪子或地毯揉眼，瞇眼、快速眨眼或緊閉，眼角可能積分泌物（症狀段）。用螢光染劑診斷，潰瘍處染成綠色（診斷段）。擦傷與表淺潰瘍一般 3 到 5 天癒合；抗生素眼藥、止痛、戴頭套，懷疑疱疹時加抗病毒藥；深潰瘍需密集用藥，可能手術（治療段）。可能惡化到失明，治療 2 到 3 天後應回診（惡化段）。類固醇太早用會延遲癒合（血管新生段）。",
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-18",
+    "notes": "2026-10-18 讀原文核對",
+    "cited_by": [
+      "cat-eye-ear-problems-taiwan"
+    ]
+  },
+  "VCA-CAT-UVEITIS": {
+    "title": "Uveitis in Cats",
+    "title_zh": "VCA：貓葡萄膜炎",
+    "authors": "VCA Animal Hospitals（LifeLearn）",
+    "source": "VCA",
+    "url": "https://vcahospitals.com/know-your-pet/uveitis-in-cats",
+    "year": 2023,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "2023-02-06 更新。葡萄膜包括虹膜、睫狀體與脈絡膜，可單眼或雙眼（定義段）。原因：FeLV、FIV、FIP 等病毒，細菌、寄生蟲（弓形蟲）、黴菌感染，糖尿病、高血壓、毒物、免疫疾病、外傷、水晶體損傷、眼內腫瘤；有時找不到原因（原因段）。會痛，貓可能揉眼、瞇眼或痙攣性眨眼，多數怕光；眼睛通常很紅，常有透明水狀分泌物，前葡萄膜炎時眼睛可能混濁；急性時瞳孔通常縮小，慢性時虹膜可能變色、可能白內障（症狀段）。因為是許多全身疾病的症狀，要做完整身體檢查，依情況驗血、驗尿、X 光、傳染病檢查；背後的疾病也要治療（診斷、治療段）。嚴重可導致永久失明（預後段）。",
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-18",
+    "notes": "2026-10-18 讀原文核對",
+    "cited_by": [
+      "cat-eye-ear-problems-taiwan"
+    ]
+  },
+  "VCA-CHERRY-EYE": {
+    "title": "Cherry Eye",
+    "title_zh": "VCA：櫻桃眼（第三眼瞼腺脫出）",
+    "authors": "VCA Animal Hospitals（LifeLearn）",
+    "source": "VCA",
+    "url": "https://vcahospitals.com/know-your-pet/cherry-eye",
+    "year": 2026,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "2026-07-10 更新，內容以狗為主。櫻桃眼是第三眼瞼腺脫出；第三眼瞼內的腺體分泌相當比例的淚膜（定義段）。外觀是下眼瞼靠鼻側紅腫、像櫻桃的突起（外觀段）。易發品種列狗，另提緬甸貓和波斯貓也會發生（原因段）。治療是手術把腺體放回原位，不建議切除，因為切除後容易乾眼（治療段）。",
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-18",
+    "notes": "2026-10-18 讀原文核對",
+    "cited_by": [
+      "cat-eye-ear-problems-taiwan"
+    ]
+  },
+  "VCA-CAT-EAR-MITES": {
+    "title": "Ear Mites in Cats and Dogs",
+    "title_zh": "VCA：貓狗耳疥蟲",
+    "authors": "VCA Animal Hospitals（LifeLearn）",
+    "source": "VCA",
+    "url": "https://vcahospitals.com/know-your-pet/ear-mites-otodectes-in-cats",
+    "year": 2025,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "2025-03-28 更新。耳疥蟲（Otodectes cynotis）寄生在貓、狗、雪貂，多在耳道，也可在皮膚表面；傳染力高，靠與受感染動物直接接觸傳播；肉眼幾乎看不到（定義段）。卵到成蟲約 3 週，成蟲活約 2 個月持續繁殖（生活史段）。幼犬幼貓常見；症狀有抓耳甩頭、深色蠟狀或結痂分泌物、耳朵周圍結痂疹子（症狀段）。用耳鏡或顯微鏡看到蟲確診，很痛時可能需鎮靜（診斷段）。有每天點的耳藥或單次使用的產品，藥殺不死卵；續發細菌、酵母菌感染要治療；徹底清耳能提高效果，很痛時延後或鎮靜下清；治療後可能回診確認（治療段）。頁面沒有寫同住動物是否都要治療。",
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-18",
+    "notes": "2026-10-18 讀原文核對",
+    "cited_by": [
+      "cat-eye-ear-problems-taiwan"
+    ]
+  },
+  "VCA-CAT-EAR-INFECTIONS": {
+    "title": "Ear Infections in Cats (Otitis Externa)",
+    "title_zh": "VCA：貓外耳炎",
+    "authors": "VCA Animal Hospitals（LifeLearn）",
+    "source": "VCA",
+    "url": "https://vcahospitals.com/know-your-pet/ear-infections-in-cats",
+    "year": 2026,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "2026-04-02 更新。外耳炎是外耳道感染，貓最常見的原因是耳疥蟲；細菌與酵母菌引起的外耳炎在狗比貓常見（開頭）。甩頭抓耳，耳朵紅腫、可能有臭味，分泌物黑、褐或黃色；症狀和耳疥蟲相似，耳疥蟲多見於幼貓和外出貓，常續發細菌或黴菌感染，就醫時蟲可能已不見（症狀段）。不能自行用成藥：需確認耳膜完整，破裂時某些藥會造成聽力喪失；可能是異物、息肉或腫瘤（成藥段）。耳鏡檢查、細胞學決定用藥，抗生素、抗黴菌或加消炎藥的複方（診斷、治療段）。貓本來不易耳朵感染，尤其反覆發作時要找原因，如耳疥蟲、耳道形狀特殊、過敏等免疫疾病；找不到原因時效果差或停藥復發（治療段）。",
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-18",
+    "notes": "2026-10-18 讀原文核對",
+    "cited_by": [
+      "cat-eye-ear-problems-taiwan"
+    ]
+  },
+  "VCA-CAT-QUALITY-OF-LIFE": {
+    "title": "Quality of Life at the End of Life for Your Cat",
+    "title_zh": "VCA：貓臨終的生活品質",
+    "authors": "VCA Animal Hospitals（LifeLearn）",
+    "source": "VCA",
+    "url": "https://vcahospitals.com/know-your-pet/quality-of-life-at-the-end-of-life-for-your-cat",
+    "year": 2024,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "2024-08-14 更新。獸醫腫瘤科醫師 Alice Villalobos 設計的貓生活品質量表，用來衡量並調整安寧照護計畫（量表段）。七個類別 HHHHHMM：Hurt、Hunger、Hydration、Hygiene、Happiness、Mobility、More good days than bad，每項 1 到 10 分，10 最好；每項 5 分以上或總分超過 35，表示生活品質可接受、繼續臨終照護合理（量表段）。Hurt 包含呼吸順暢；Hunger 可先手餵；Hydration 可皮下補液；Hygiene 看能否梳理清潔；Happiness 看互動；Mobility 看能否自己移動；壞日子太多時生活品質受損（各類別段）。量表也能幫忙做安樂死決定（最後兩段）。",
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-18",
+    "notes": "2026-10-18 讀原文核對",
+    "cited_by": [
+      "cat-end-of-life-care-taiwan"
+    ]
+  },
+  "VCA-CAT-FOREIGN-BODIES": {
+    "title": "Ingestion of Foreign Bodies in Cats",
+    "title_zh": "VCA：貓誤食異物",
+    "authors": "Ryan Llera, DVM; Malcolm Weir, DVM; Ernest Ward, DVM; updated by Amy Panning, DVM",
+    "source": "VCA",
+    "url": "https://vcahospitals.com/know-your-pet/foreign-bodies-in-cats",
+    "year": 2024,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "VCA 的貓誤食異物衛教頁。貓好奇心強，常吞下線、毛線、紙、橡皮筋、植物和小玩具（Why do cats ingest things 節）。貓吞線很容易，線一進嘴就很難吐出來，因為舌頭上的倒刺（spines）會把線卡住；線可能纏在舌根或卡在胃裡，線狀異物會把腸子拉得像手風琴一樣皺起、割傷腸組織，嚴重時要切除一段腸子再接合（How serious is foreign body ingestion? 節）。頁面沒有描述倒刺的方向。",
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-18",
+    "notes": "2026-10-18 讀原文核對；頁面無更新日期，year 暫填 2024",
+    "cited_by": [
+      "cat-home-safety-taiwan"
+    ]
+  },
+  "VCA-CAT-NOCTURNAL-ACTIVITY": {
+    "title": "Cat Behavior Problems - Nocturnal Activity",
+    "title_zh": "貓的行為問題：夜間活動",
+    "authors": "Horwitz D, Landsberg G",
+    "source": "VCA Animal Hospitals",
+    "url": "https://vcahospitals.com/know-your-pet/cat-behavior-problems-nocturnal-activity",
+    "year": 2019,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "兩位獸醫行為專科醫師撰寫（2019-07 編修）。貓打獵與探索最活躍在黃昏與黎明，稱為晨昏性；家裡只有一隻寵物時，貓常在白天休息，飼主回家帶來餵食、遊戲與互動後牠的一天才開始；夜間活動可能是社交遊戲與討關注（開頭段落）。建議下午到傍晚多陪玩、餵食、互動，給幾次用追逐玩具的社交遊戲，晚上不要讓貓打盹（處理建議）。夜裡叫的貓要忽略，走過去或給任何關注都會獎勵這種要求；有些飼主不小心用一點食物、撫摸或關注獎勵了這個行為（處理建議）。不要整夜提供食物，調整餵食時間或食物種類可能幫助改變睡眠時間（處理建議）。持續干擾可把貓關在臥室外（處理建議）。原文沒有談甲狀腺亢進、認知功能障礙等醫療原因。",
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-18",
+    "notes": "2026-10-18 讀原文核對",
+    "cited_by": [
+      "cat-zoomies-night-activity"
+    ]
+  },
+  "HERRON-2010-INDOOR-ENRICHMENT": {
+    "title": "Environmental Enrichment for Indoor Cats",
+    "title_zh": "室內貓的環境豐富化",
+    "authors": "Herron ME, Buffington CAT",
+    "source": "Compendium: Continuing Education for Veterinarians 32(12):E4（PMC 作者稿）",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3922041/",
+    "year": 2010,
+    "type": "research_paper",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "把室內貓的環境分成幾個系統逐一說明豐富化做法。行為系統：窗台讓貓觀察野生動物、給貓看的影片，可以當遊戲與娛樂的豐富化；新鮮貓薄荷與盆栽綠葉對貓有吸引力；玩具每幾天輪換維持新鮮感；會自己跑、模仿獵物的電動玩具；光點遊戲後一定要給零食或玩具；玩耍和跟蹤、追逐、撲、咬的獵捕序列密切相關（Behavioral System）。營養系統：把食物放進益智玩具、可塞濕食的中空玩具（Nutritional System）。大的開口箱子給貓自己的空間（Physical Resource System）。原文沒有談鳥餵食器、魚缸、音樂、木天蓼、響片訓練。",
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-18",
+    "notes": "2026-10-18 讀原文核對",
+    "cited_by": [
+      "solo-cat-mental-health"
+    ]
+  },
+  "BOL-2017-CAT-OLFACTORY-PLANTS": {
+    "title": "Responsiveness of cats (Felidae) to silver vine (Actinidia polygama), Tatarian honeysuckle (Lonicera tatarica), valerian (Valeriana officinalis) and catnip (Nepeta cataria)",
+    "title_zh": "貓對木天蓼、韃靼忍冬、纈草與貓薄荷的反應",
+    "authors": "Bol S, Caspers J, Buckingham L, et al.",
+    "source": "BMC Veterinary Research 13:70",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5356310/",
+    "year": 2017,
+    "type": "research_paper",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "測試 100 隻家貓：對木天蓼有反應的 79%、貓薄荷 68%、韃靼忍冬 53%、纈草根 47%（Results）。對貓薄荷沒反應的 31 隻貓中，22 隻（71%）對木天蓼有反應，10 隻對韃靼忍冬、6 隻對纈草根（Results）。作者認為這些植物可像貓薄荷一樣作為嗅覺豐富化，是對貓薄荷沒反應的貓的替代選擇；用於減壓等用途前還需要對照研究（Conclusions）。",
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-18",
+    "notes": "2026-10-18 讀原文核對",
+    "cited_by": [
+      "solo-cat-mental-health"
+    ]
+  },
+  "KOGAN-2017-CLICKER-SHELTER": {
+    "title": "Assessment of Clicker Training for Shelter Cats",
+    "title_zh": "收容所貓的響片訓練評估",
+    "authors": "Kogan L, Kolus C, Schoenfeld-Tacher R",
+    "source": "Animals (Basel) 7(10):73",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5664032/",
+    "year": 2017,
+    "type": "research_paper",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "響片是按下會發出喀嚓聲的手持工具，在貓做出想要的動作時按下，一兩秒內給食物獎勵，聲音成為通往獎勵的橋樑（Introduction）。100 隻收容所貓收案，19 隻因被認養或生病退出；每隻在兩週內完成 15 次、每次 5 分鐘的訓練，訓練前後評估坐下、擊掌等 4 個口令動作（Methods）。作者結論是貓可在短時間內有效學會響片訓練的動作（Conclusions）。正向強化訓練讓互動可預測、增加動物的掌控感（Introduction）；響片訓練提供和人相處的社會化時間，正向互動有助減輕收容所貓的壓力（Discussion）。只在一處收容所進行，推論要保守（Discussion，研究限制）。",
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-18",
+    "notes": "2026-10-18 讀原文核對",
+    "cited_by": [
+      "solo-cat-mental-health"
+    ]
   }
 }

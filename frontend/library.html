@@ -786,6 +786,8 @@ function renderCard(cid, e) {
       ${keywords ? `<div class="card-keywords">${keywords}</div>` : ''}
       ${citedBy.length ? `<div class="cited-by" id="cited-by-${cid}" hidden>${renderCitedByList(citedBy)}</div>` : ''}
       ${e.url ? `<div class="card-link"><svg class="i" aria-hidden="true"><use href="#i-link"/></svg><a href="${escapeHtml(e.url)}" target="_blank" rel="noopener">${currentLang === 'zh' ? '開啟原文' : 'Open source'}</a></div>` : ''}
+      ${e.pdf_url ? `<div class="card-link"><svg class="i" aria-hidden="true"><use href="#i-link"/></svg><a href="${escapeHtml(e.pdf_url)}" target="_blank" rel="noopener">PDF</a></div>` : ''}
+      ${e.ref_note ? `<div class="card-meta">${escapeHtml(e.ref_note)}</div>` : ''}
       ${e.zh_url ? `<div class="card-link"><svg class="i" aria-hidden="true"><use href="#i-link"/></svg><a href="${escapeHtml(e.zh_url)}" target="_blank" rel="noopener">${currentLang === 'zh' ? '官方中文版' : 'Official Chinese version'}</a></div>` : ''}
     </div>
   `;

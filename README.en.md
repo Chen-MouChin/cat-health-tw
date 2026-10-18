@@ -18,7 +18,7 @@ The site is written in Traditional Chinese.
 
 ## Content principles
 
-- **Academic and educational sources**: only ISFM, iCatCare, WSAVA, IRIS, AAFP (FelineVMA), AAHA, Cornell Feline Health Center, VCA, ASPCA, FDA, and open-access papers on PubMed. Frontiers journals are not cited.
+- **Academic and educational sources**: only ISFM, iCatCare, WSAVA, IRIS, AAFP (FelineVMA), AAHA, Cornell Feline Health Center, VCA, ASPCA, FDA, the AVMA journals (JAVMA, AJVR), and open-access papers on PubMed. Frontiers journals are not cited.
 - **Taiwan sources**: laws, statistics and announcements cite original government pages (Laws & Regulations Database of the ROC, Ministry of Agriculture, Ministry of Health and Welfare, and city or county animal protection offices).
 - **Review**: drafts are written with AI assistance, then reviewed and approved by people before publication. The process is described in the [editorial policy](https://chen-mouchin.github.io/cat-health-tw/editorial.html) (Chinese).
 - **Tone**: medical content is advisory and explains when it is a good idea to see a veterinarian.
