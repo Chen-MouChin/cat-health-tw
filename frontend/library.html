@@ -260,7 +260,7 @@ const I18N = {
     badge_oa: 'OA 免費', badge_paid: '付費', badge_verified: 'URL ✓',
     badge_untranslated: '未翻譯', badge_no_abstract: '缺摘要',
     found: '筆',
-    only_untranslated: '只看未翻譯', only_no_abstract: '只看缺摘要',
+    only_has_abstract: '只看有中文摘要',
   },
   en: {
     title: 'Citation Library',
@@ -280,7 +280,7 @@ const I18N = {
     badge_oa: 'Open Access', badge_paid: 'Paywall', badge_verified: 'URL ✓',
     badge_untranslated: 'No ZH', badge_no_abstract: 'No abstract',
     found: 'records',
-    only_untranslated: 'Untranslated only', only_no_abstract: 'Missing abstract only',
+    only_has_abstract: 'With Chinese summary only',
   }
 };
 
@@ -358,8 +358,7 @@ let filters = {
   topics: new Set(),
   languages: new Set(),
   types: new Set(),
-  untranslated: false,
-  noAbstract: false,
+  hasAbstract: false,
 };
 
 function toggleGroup(name) {
@@ -367,7 +366,7 @@ function toggleGroup(name) {
 }
 
 function clearFilters() {
-  filters = { status:'all', sources:new Set(), topics:new Set(), languages:new Set(), types:new Set(), untranslated:false, noAbstract:false };
+  filters = { status:'all', sources:new Set(), topics:new Set(), languages:new Set(), types:new Set(), hasAbstract:false };
   document.getElementById('q').value = '';
   buildFilters();
   render();
@@ -450,16 +449,11 @@ function buildFilters() {
   sep1.style.cssText = 'color:#ccc;margin:0 0.3rem;font-size:0.75rem;align-self:center';
   sep1.textContent = '|';
   sf.appendChild(sep1);
-  // 快速：未翻譯
-  const untrCnt = entries.filter(e => !e.title_zh).length;
-  const bUntr = mkBtn(`⏳ ${t('only_untranslated')} (${untrCnt})`, filters.untranslated);
-  bUntr.onclick = () => { filters.untranslated = !filters.untranslated; buildFilters(); render(); };
-  sf.appendChild(bUntr);
-  // 快速：缺摘要
-  const noAbsCnt = entries.filter(e => !e.abstract_zh).length;
-  const bNoAbs = mkBtn(`📝 ${t('only_no_abstract')} (${noAbsCnt})`, filters.noAbstract);
-  bNoAbs.onclick = () => { filters.noAbstract = !filters.noAbstract; buildFilters(); render(); };
-  sf.appendChild(bNoAbs);
+  // 快速：只看有中文摘要
+  const absCnt = entries.filter(e => e.abstract_zh).length;
+  const bAbs = mkBtn(`${t('only_has_abstract')} (${absCnt})`, filters.hasAbstract);
+  bAbs.onclick = () => { filters.hasAbstract = !filters.hasAbstract; buildFilters(); render(); };
+  sf.appendChild(bAbs);
 
   // Source（多選）
   const srcCounts = {};
@@ -528,13 +522,13 @@ function buildFilters() {
   // Update counts in headers
   updateGroupCount('topic', filters.topics.size);
   updateGroupCount('source', filters.sources.size);
-  updateGroupCount('status', (filters.status === 'all' ? 0 : 1) + (filters.untranslated?1:0) + (filters.noAbstract?1:0));
+  updateGroupCount('status', (filters.status === 'all' ? 0 : 1) + (filters.hasAbstract?1:0));
   updateGroupCount('meta', filters.languages.size + filters.types.size);
 
   // Show/hide clear button
   const hasFilters = filters.status!=='all' || filters.sources.size || filters.topics.size
                      || filters.languages.size || filters.types.size
-                     || filters.untranslated || filters.noAbstract
+                     || filters.hasAbstract
                      || document.getElementById('q').value;
   document.getElementById('clear-btn').style.display = hasFilters ? 'inline' : 'none';
 }
@@ -671,11 +665,8 @@ function render() {
   if (filters.types.size) {
     filtered = filtered.filter(([_, e]) => filters.types.has(e.type));
   }
-  if (filters.untranslated) {
-    filtered = filtered.filter(([_, e]) => !e.title_zh);
-  }
-  if (filters.noAbstract) {
-    filtered = filtered.filter(([_, e]) => !e.abstract_zh);
+  if (filters.hasAbstract) {
+    filtered = filtered.filter(([_, e]) => e.abstract_zh);
   }
   if (q) {
     filtered = filtered.filter(([cid, e]) => {

@@ -221,13 +221,16 @@ main { max-width: 1100px; margin: 0 auto; padding: 0 1rem 2rem; }
 }
 .filter-clear:hover { color: var(--text, #1d1d1f); }
 
-/* 低過敏警告橫條（當啟用該 filter 才顯示）*/
+/* 低過敏說明（按「低過敏品種？」才顯示）*/
 .hypo-notice {
   background: #f5f0e8; border: 1px solid #d4c8b0; border-left: 3px solid #8a7340;
   color: #5c4a25;
   padding: 0.7rem 1rem; margin-bottom: 1rem; border-radius: 6px;
   font-size: 0.82rem; line-height: 1.6;
 }
+.hypo-notice strong { display: block; margin-bottom: 0.3rem; }
+.hypo-notice a { color: inherit; }
+.hypo-notice .mixed-cta { display: block; margin-top: 0.5rem; font-weight: 600; }
 
 .compare-back {
   background: transparent; border: 1px solid var(--border, #e5e5ea);
@@ -666,7 +669,7 @@ main { max-width: 1100px; margin: 0 auto; padding: 0 1rem 2rem; }
     </div>
     <div class="filter-group">
       <span class="filter-label">過敏原</span>
-      <button class="filter-chip" data-filter="hypo" data-value="true" title="Fel d 1 蛋白產量相對較低的品種清單（研究支持）">相對較低</button>
+      <button class="filter-chip filter-special" id="hypoBtn" type="button" title="看研究怎麼說">低過敏品種？</button>
     </div>
     <div class="filter-group">
       <button class="filter-chip filter-special" id="mixedBreedBtn" title="米克斯不在這 68 個品種裡">🐈‍⬛ 我家是米克斯</button>
@@ -688,9 +691,9 @@ main { max-width: 1100px; margin: 0 auto; padding: 0 1rem 2rem; }
   </div>
 
   <div class="hypo-notice" id="hypoNotice" hidden>
-    <strong>⚠️ 沒有 100% 低過敏的貓。</strong>
-    所謂「低過敏品種」只是 <strong>Fel d 1 蛋白產量相對較少</strong>（依部分研究），仍會引起過敏反應。
-    過敏體質者建議：<strong>領養 / 認購前親自接觸該品種，確認自身反應再決定</strong>。
+    <strong>目前沒有研究證實哪個品種比較不會引起過敏。</strong>
+    所有的貓都會產生主要的貓過敏原 Fel d 1，和品種、毛的長短無關（<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7156987/" target="_blank" rel="noopener">Satyaraj 2019</a>）。同樣是家貓，一年平均下來唾液裡的 Fel d 1 從每毫升 0.4 到 35 微克都有（<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6764004/" target="_blank" rel="noopener">Bastien 2019</a>）。
+    <span data-draft-link="articles/should-i-adopt-cat-decision-taiwan.html" class="mixed-cta">📖 家裡有人對貓過敏，見〈我適合養貓嗎？〉第 3 題 →</span>
   </div>
 
   <div class="breeds-grid" id="grid"></div>
@@ -896,7 +899,7 @@ const WARN_BREEDS = {
   pers: {
     level: 'moderate', icon: '⚠️',
     short: "短頭顱與多囊腎風險",
-    detail: "波斯貓屬短頭顱（brachycephalic）品種，文獻記載的相關問題包括鼻孔狹窄造成的呼吸道問題、鼻淚管彎折引起的淚溢、牙齒咬合不正與難產。多囊腎（PKD）是顯性遺傳，法國 2003 年的超音波篩檢中約四成波斯貓患病；英國推行基因篩檢後，帶有這個基因的比例從約 28% 降到約 2%。購買前可以詢問父母貓的 PKD 檢測結果，並留意鼻孔大小。",
+    detail: "波斯貓屬短頭顱（brachycephalic）品種，文獻記載的相關問題包括鼻孔狹窄造成的呼吸道問題、鼻淚管彎折引起的淚溢、牙齒咬合不正與難產。多囊腎（PKD）是顯性遺傳，法國 2003 年的超音波篩檢中約四成波斯貓患病；英國 Langford 獸醫實驗室的送驗資料中，多囊腎基因突變的陽性比例從 2005 年約 28% 降到 2016 年約 2%，研究者認為和繁殖前篩檢有關。購買前可以詢問父母貓的 PKD 檢測結果，並留意鼻孔大小。",
     refs: [
       { t: "O\'Neill 2019：英國波斯貓的疾病", u: "https://pmc.ncbi.nlm.nih.gov/articles/PMC6748978/" },
       { t: "Barthez 2003：法國波斯貓多囊腎盛行率", u: "https://pmc.ncbi.nlm.nih.gov/articles/PMC10822557/" },
@@ -927,7 +930,7 @@ const WARN_BREEDS = {
   mcoo: {
     level: 'moderate', icon: '⚠️',
     short: "心臟病基因與髖關節",
-    detail: "緬因貓（Maine Coon）是肥厚型心肌病（HCM）風險較高的品種，MYBPC3 基因的 A31P 突變可以檢測。基因檢測陰性的貓也有發病紀錄，美國獸醫內科學會（ACVIM）的共識建議再定期做心臟超音波。這個品種也較常見髖關節發育不全（hip dysplasia），瑞典篩檢資料中約 37% 的緬因貓有這個問題。購買前可以請繁殖者提供父母貓的檢測結果。",
+    detail: "緬因貓（Maine Coon）是肥厚型心肌病（HCM）風險較高的品種，MYBPC3 基因的 A31P 突變可以檢測。基因檢測陰性的貓也有發病紀錄，美國獸醫內科學會（ACVIM）的共識建議再定期做心臟超音波。這個品種也較常見髖關節發育不全（hip dysplasia），以瑞典為基地的 PawPeds 國際篩檢計畫在 2000 到 2019 年間拍過 X 光的 5,038 隻緬因貓中，約 37% 有不同程度（含輕度）的髖關節發育不全。購買前可以請繁殖者提供父母貓的檢測結果。",
     refs: [
       { t: "ACVIM 2020：貓心肌病共識", u: "https://onlinelibrary.wiley.com/doi/10.1111/jvim.15745" },
       { t: "Cornell：肥厚型心肌病", u: "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/hypertrophic-cardiomyopathy" },
@@ -1176,16 +1179,6 @@ const REX_BREEDS = new Set(['crex', 'drex', 'lape', 'srex']);
 // 無毛
 const HAIRLESS_BREEDS = new Set(['sphy', 'bamb', 'dons']);
 
-// 低過敏原品種（Fel d 1 蛋白產量相對較低，有獸醫文獻支持）
-// 來源：多篇貓過敏原研究 — 俄藍、西伯利亞、峇里、捲毛系、無毛系
-// 注意：沒有 100% 低過敏的貓，只是「相對較低」，不代表過敏者一定安全
-const HYPOALLERGENIC_BREEDS = new Set([
-  'rblu', 'sibe', 'bali', 'java',  // Fel d 1 相對低的長毛品種
-  'crex', 'drex', 'lape', 'srex',  // 捲毛（脫毛量少 → Fel d 1 散佈少）
-  'sphy', 'bamb', 'dons',          // 無毛（同上）
-  'bure'                            // 緬甸（有研究提及）
-]);
-
 function getHairLength(id) {
   if (LONG_HAIR_BREEDS.has(id)) return 'long';
   if (REX_BREEDS.has(id)) return 'rex';
@@ -1196,7 +1189,6 @@ function getHairLength(id) {
 const filters = {
   hair: null,         // 'short' / 'long' / 'rex'（可觀察事實）
   size: null,         // 'small' / 'medium' / 'large'（體重範圍的事實）
-  hypo: false,        // 低過敏原（Fel d 1 研究支持的品種清單）
   warn: null,         // 'severe' / 'legal' / 'moderate'（警示等級）
 };
 
@@ -1267,8 +1259,6 @@ function computeList() {
     if (filters.hair && getHairLength(b.id) !== filters.hair) return false;
     // 體型（體重範圍的事實）
     if (filters.size && getBodySize(b) !== filters.size) return false;
-    // 低過敏原（Fel d 1 研究支持的清單）
-    if (filters.hypo && !HYPOALLERGENIC_BREEDS.has(b.id)) return false;
     // 警示等級（severe / legal / moderate）
     if (filters.warn && WARN_BREEDS[b.id]?.level !== filters.warn) return false;
     return true;
@@ -1373,7 +1363,6 @@ function showCompareModal(breeds) {
     ['體重', breeds.map(b => b.weight_kg.length===2?`${b.weight_kg[0]}-${b.weight_kg[1]} kg`:'—')],
     ['體型', breeds.map(b => SIZE_LABEL[getBodySize(b)] || '—')],
     ['毛長', breeds.map(b => HAIR_LABEL[getHairLength(b.id)] || '—')],
-    ['低過敏', breeds.map(b => HYPOALLERGENIC_BREEDS.has(b.id) ? '相對較低 *' : '—')],
     ['性格', breeds.map(b => escapeHtml((b.temperament_zh||[]).join('、') || '—'))],
     ['別名', breeds.map(b => escapeHtml((b.alt_names||[]).slice(0,3).join('、') || '—'))],
   ];
@@ -1395,7 +1384,6 @@ function showCompareModal(breeds) {
       <div class="cmp-table" style="grid-template-columns: 90px repeat(${cols}, minmax(0, 1fr))">
         ${cells.join('')}
       </div>
-      <p class="cmp-footnote">* 低過敏：Fel d 1 蛋白量相對較低，並非完全無過敏原；個體差異大，過敏者投入前應實際接觸測試。</p>
     </div>
   `;
   modal.classList.add('open');
@@ -1632,24 +1620,30 @@ document.getElementById('filterBar').addEventListener('click', (e) => {
   if (!btn) return;  // 米克斯特殊按鈕無 data-filter，由它自己的 handler 處理
   const key = btn.dataset.filter;
   const val = btn.dataset.value;
-  if (key === 'hypo') {
-    filters.hypo = !filters.hypo;
-  } else {
-    filters[key] = filters[key] === val ? null : val;
-  }
+  filters[key] = filters[key] === val ? null : val;
   refreshFilterUI();
   render();
 });
 document.getElementById('filterClear').addEventListener('click', () => {
   filters.hair = filters.size = filters.warn = null;
-  filters.hypo = false;
   // 米克斯按鈕也清掉
   const mb = document.getElementById('mixedBreedBtn');
   const mn = document.getElementById('mixedNotice');
   if (mb) mb.classList.remove('active');
   if (mn) mn.hidden = true;
+  document.getElementById('hypoBtn').classList.remove('active');
+  document.getElementById('hypoNotice').hidden = true;
   refreshFilterUI();
   render();
+});
+
+// 低過敏按鈕：只顯示說明，不篩品種
+document.getElementById('hypoBtn').addEventListener('click', () => {
+  const hb = document.getElementById('hypoBtn');
+  const hn = document.getElementById('hypoNotice');
+  const open = !hb.classList.contains('active');
+  hb.classList.toggle('active', open);
+  hn.hidden = !open;
 });
 
 // 米克斯按鈕：toggle 顯示米克斯文章引導（不影響 grid 過濾）
@@ -1665,14 +1659,11 @@ function refreshFilterUI() {
   document.querySelectorAll('#filterBar .filter-chip[data-filter]').forEach(btn => {
     const key = btn.dataset.filter;
     const val = btn.dataset.value;
-    const on = (key === 'hypo') ? filters.hypo : filters[key] === val;
+    const on = filters[key] === val;
     btn.classList.toggle('active', on);
   });
-  const anyActive = filters.hair || filters.size || filters.hypo || filters.warn;
+  const anyActive = filters.hair || filters.size || filters.warn;
   document.getElementById('filterClear').style.display = anyActive ? 'inline' : 'none';
-  // 低過敏警告橫條 — 只有啟用該 filter 才顯示
-  const hn = document.getElementById('hypoNotice');
-  if (hn) hn.hidden = !filters.hypo;
 }
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') closeModal();

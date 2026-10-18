@@ -8,11 +8,11 @@
   <link rel="apple-touch-icon" href="favicon-180.png">
   <meta property="og:image" content="https://chen-mouchin.github.io/cat-health-tw/images/og-default.png">
 <title>全台動物醫院查詢：夜間急診與貓專科獸醫院 — 貓健康站</title>
-<meta name="description" content="全台 22 縣市動物醫院查詢：本島 19 縣市 + 澎湖、金門共 2,001 家（基於農業部公開登記；連江縣無登記動物醫院）。可篩夜間急診 + 貓專科，手機可定位找附近最近的醫院。">
+<meta name="description" content="全台 22 縣市動物醫院查詢，資料來自農業部與縣市政府公開資料（連江縣沒有登記的動物醫院）。可篩夜間急診與貓專科，手機可定位找附近的醫院。">
 <link rel="stylesheet" href="css/theme.css?v=20261016">
 <link rel="stylesheet" href="css/site.css?v=20261016">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"CollectionPage","name":"全台動物醫院查詢：夜間急診與貓專科獸醫院 — 貓健康站","description":"全台 22 縣市 2,001 家動物醫院查詢（本島完整 + 澎湖金門）。可篩夜間急診 + 貓專科。資料來源：農業部動保司。","url":"https://chen-mouchin.github.io/cat-health-tw/vets.html","inLanguage":"zh-TW"}
+{"@context":"https://schema.org","@type":"CollectionPage","name":"全台動物醫院查詢：夜間急診與貓專科獸醫院 — 貓健康站","description":"全台 22 縣市動物醫院查詢，可篩夜間急診與貓專科。資料來源：農業部與縣市政府公開資料。","url":"https://chen-mouchin.github.io/cat-health-tw/vets.html","inLanguage":"zh-TW"}
 </script>
 <script src="js/theme.js"></script>
 <style>
@@ -73,7 +73,7 @@
 }
 </style>
   <meta property="og:title" content="全台動物醫院查詢：夜間急診與貓專科獸醫院 — 貓健康站">
-  <meta property="og:description" content="全台 22 縣市 2,001 家動物醫院查詢 · 可篩夜間急診 + 貓專科。">
+  <meta property="og:description" content="全台 22 縣市動物醫院查詢，可篩夜間急診與貓專科。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://chen-mouchin.github.io/cat-health-tw/vets.html">
   <link rel="canonical" href="https://chen-mouchin.github.io/cat-health-tw/vets.html">
@@ -135,8 +135,8 @@
                 <path d="M 27.5 37 C 27.5 34.5, 31 34.5, 31 37" fill="var(--cat-white)"/>
             </svg><!-- /cat-art --></div>
     <h1>動物醫院查詢</h1>
-    <p class="lede">全台 22 縣市共 <strong id="totalCount">—</strong> 家動物醫院，資料來自農業部動保司的公開登記。</p>
-    <p class="meta-line"><a href="about.html#data-quality" class="data-quality-badge" title="100% 有地址；99% 有可用 GPS 座標，部分只精確到街道或行政區">99% 有座標，看資料怎麼補的</a></p>
+    <p class="lede">全台 22 縣市共 <strong id="totalCount">—</strong> 家動物醫院，資料來自農業部與縣市政府公開資料。</p>
+    <p class="meta-line"><a href="about.html#data-quality" class="data-quality-badge" title="部分醫院的位置只精確到街道或行政區，距離會標「約」">位置資料怎麼來的</a></p>
   </div>
 
   <p class="note-box notice">本清單來自政府公開登記資料。營業狀態、專長與夜間值班，以各醫院公告為準。</p>
@@ -197,7 +197,7 @@
   <p class="foot-src">學術來源：ISFM · AAFP · WSAVA · IRIS · Cornell · iCatCare · PubMed OA</p>
 </footer>
 <!-- /site-foot -->
-<p class="foot-src" style="margin:8px 0 0">醫院資料：農業部動物保護司公開資料；地圖座標：© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a>（ODbL）</p>
+<p class="foot-src" style="margin:8px 0 0">醫院資料：農業部與縣市政府公開資料；地圖座標：© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a>（ODbL）</p>
 </div>
 
 <script src="data/vets.js"></script>
@@ -269,7 +269,7 @@ function requestLocation() {
 // 位置只在瀏覽器裡算距離，不送出去
 function locate(fresh) {
   if (!window.isSecureContext) {
-    setLocStatus('定位只能在 HTTPS 網頁使用（本機測試請用 localhost）。');
+    setLocStatus('這個網頁沒辦法定位，請改點縣市或在搜尋框輸入區名。');
     return;
   }
   if (!navigator.geolocation) {
@@ -381,22 +381,17 @@ function updateFilterHint() {
   if (!hint) return;
   let html = '';
   if (filters.onlyCat && filters.only24h) {
-    html = '<strong>兩者都符合的醫院很少</strong><br>'
-         + '貓專科多是日間診所，夜間急診多是綜合醫院。'
-         + '夜間需要看診時，可以只開「只看夜間急診」，'
-         + '多數綜合醫院也能處理貓。';
+    html = '<strong>目前沒有兩個都符合的醫院</strong>：'
+         + '夜間急診名單裡沒有院名寫明貓專科的醫院。';
   } else if (filters.onlyCat) {
     html = '<strong>關於「貓專科」</strong>：'
-         + '多為日間經營的單一物種診所（避免狗叫聲讓貓緊迫）。'
-         + '夜間看診可改點 <strong>只看夜間急診</strong>。<br>'
-         + '<span style="font-size:0.78rem;opacity:0.8">'
-         + '※ 偵測來源：名字含「貓」字 + 已知貓專科名單。'
-         + '部分 ISFM Cat Friendly 認證醫院名單建置中，目前可能漏。'
-         + '</span>';
+         + '依獸醫師法施行細則，院名的「貓專科」指只看貓，不代表醫師具有專科資格（台灣沒有官方的獸醫專科醫師認證）。'
+         + '院名沒寫的，只收錄醫院自己公告只看貓的。'
+         + '另外標出國際貓醫學會（ISFM）貓友善認證的醫院，依 iCatCare 官方名錄。';
   } else if (filters.only24h) {
     html = '<strong>關於「夜間急診」</strong>：'
          + '名單取自縣市政府公告，目前只有台北市、台中市有公告，其他縣市還沒標。'
-         + '各院的夜間時段不同，有的只到半夜，出發前先打電話確認當下有沒有值班。';
+         + '各院的夜間時段不同，以各醫院公告為準。';
   }
   if (html) {
     hint.innerHTML = html;
@@ -511,6 +506,7 @@ function render() {
 function renderCard(v) {
   const badge24 = v.e === 1 ? `<span class="badge-24h">夜間急診${v.et ? ' ' + escapeHtml(v.et) : ''}</span>` : '';
   const badgeCat = v.cat === 1 ? `<span class="badge-cat">貓專科</span>` : '';
+  const badgeCf = v.cf ? `<a class="badge-cat" href="https://icatcare.org/cat-friendly-clinics" target="_blank" rel="noopener" title="國際貓醫學會（ISFM）Cat Friendly Clinic 認證，2026-10-18 查">國際貓友善認證 ${escapeHtml(v.cf)}級</a>` : '';
   const pos = v.d ? `<span class="pos">${escapeHtml(v.c)} · ${escapeHtml(v.d)}</span>` : `<span class="pos">${escapeHtml(v.c)}</span>`;
   // ap=1：座標只精確到街道或行政區中心，距離標「約」
   const dist = (v._d != null)
@@ -525,7 +521,7 @@ function renderCard(v) {
   const search = `<a href="https://www.google.com/search?q=${encodeURIComponent(v.n + ' ' + v.c)}" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#i-search"/></svg>搜尋評價</a>`;
   return `
     <div class="vet-card">
-      <div class="vet-name">${escapeHtml(v.n)}${badge24}${badgeCat}${pos}${dist}</div>
+      <div class="vet-name">${escapeHtml(v.n)}${badge24}${badgeCat}${badgeCf}${pos}${dist}</div>
       <div class="vet-meta">${telLink}${addr}</div>
       ${hours}
       <div class="vet-actions">${nav}${gmaps}${search}</div>
@@ -545,7 +541,7 @@ function loadMore() {
 }
 
 document.getElementById('totalCount').textContent = DATA.length.toLocaleString();
-// 停止輸入 200ms 才重算，2,001 筆不必每打一個字就重繪一次
+// 停止輸入 200ms 才重算，兩千多筆不必每打一個字就重繪一次
 let qTimer = null;
 document.getElementById('q').addEventListener('input', (e) => {
   clearTimeout(qTimer);
