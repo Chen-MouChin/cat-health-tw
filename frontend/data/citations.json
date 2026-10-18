@@ -24,7 +24,7 @@
     "paywall_note": "付費期刊，僅摘要公開可讀；本站引用限於已公開摘要與方法",
     "sample_size": 574,
     "study_design": "Feline Behavioral Assessment and Research Questionnaire（問卷研究）+ 飼主自陳 + 多變量分析",
-    "abstract_zh": "美國賓州大學團隊對 574 隻登記單一品種貓進行行為調查：\n\n■ 涵蓋 12 品種：阿比西尼亞、孟加拉、伯曼、緬甸、德文捲毛、緬因、挪威森林、東方貓、波斯、布偶、暹羅、東基尼斯\n■ 量測 20 個行為因子 + 7 個特定問題行為：\n  - 恐懼型攻擊性、領地攻擊性、不當社交、怕噪音、轉向攻擊、分離焦慮、排尿/便不當\n■ 主要發現：\n  - 品種間確實有顯著行為差異（p<0.05）\n  - 毛色差異多半反映品種差異（毛色本身影響有限）\n  - 少數例外：agouti 虎斑紋貓攻擊性較高\n  - 紅/橘貓對獵物興趣較高\n  - 斑塊（piebald）貓對陌生人攻擊性較低\n  - 暹羅與東基尼斯（Siamese/Tonkinese pattern）分離焦慮明顯較高\n■ 限制：樣本量中等（n=574）；飼主自陳偏誤；美國樣本以北美血統為主；付費期刊",
+    "abstract_zh": "美國賓州大學團隊對 574 隻登記單一品種貓進行行為調查：\n\n■ 涵蓋 12 品種：阿比西尼亞、孟加拉、伯曼、緬甸、德文捲毛、緬因、挪威森林、東方短毛貓、波斯、布偶、暹羅、東基尼斯\n■ 量測 20 個行為因子 + 7 個特定問題行為：\n  - 恐懼型攻擊性、領地攻擊性、不當社交、怕噪音、轉向攻擊、分離焦慮、排尿/便不當\n■ 主要發現：\n  - 品種間確實有顯著行為差異（p<0.05）\n  - 毛色差異多半反映品種差異（毛色本身影響有限）\n  - 少數例外：agouti 虎斑紋貓攻擊性較高\n  - 紅/橘貓對獵物興趣較高\n  - 斑塊（piebald）貓對陌生人攻擊性較低\n  - 暹羅與東基尼斯（Siamese/Tonkinese pattern）分離焦慮明顯較高\n■ 限制：樣本量中等（n=574）；飼主自陳偏誤；美國樣本以北美血統為主；付費期刊",
     "keywords": [
       "品種行為",
       "毛色",
@@ -5663,14 +5663,14 @@
     "language": "en",
     "notes": "2026-10-17 品種警示核對時讀原文確認。",
     "title": "To the Root of the Curl: A Signature of a Recent Selective Sweep Identifies a Mutation That Defines the Cornish Rex Cat Breed",
-    "title_zh": "康瓦耳捲毛貓的 LPAR6 突變",
+    "title_zh": "柯尼斯捲毛貓的 LPAR6 突變",
     "authors": "Gandolfi B, Alhaddad H, Affolter VK, et al.",
     "source": "PubMed OA",
     "year": 2013,
     "type": "study",
     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3694948/",
     "pmcid": "PMC3694948",
-    "abstract_zh": "康瓦耳捲毛貓的捲毛是固定的隱性性狀，研究在 LPAR6 基因找到一個 4 個鹼基的缺失，所有康瓦耳捲毛貓都帶兩份；這種捲毛沒有外層的護毛。"
+    "abstract_zh": "柯尼斯捲毛貓的捲毛是固定的隱性性狀，研究在 LPAR6 基因找到一個 4 個鹼基的缺失，所有柯尼斯捲毛貓都帶兩份；這種捲毛沒有外層的護毛。"
   },
   "MEURS-2021-SPHYNX-ALMS1": {
     "journal": "Orphanet Journal of Rare Diseases",
@@ -5805,13 +5805,13 @@
     "language": "en",
     "notes": "2026-10-17 品種警示核對時讀原文確認。",
     "title": "Cornish Rex",
-    "title_zh": "VCA：康瓦耳捲毛貓",
+    "title_zh": "VCA：柯尼斯捲毛貓",
     "authors": "VCA Animal Hospitals",
     "source": "VCA",
     "year": 2024,
     "type": "educational",
     "url": "https://vcahospitals.com/know-your-pet/cat-breeds/cornish-rex",
-    "abstract_zh": "康瓦耳捲毛貓沒有護毛，毛薄保暖差，常找溫暖處待著，定期洗澡有幫助；不是低敏品種。"
+    "abstract_zh": "柯尼斯捲毛貓沒有護毛，毛薄保暖差，常找溫暖處待著，定期洗澡有幫助；不是低敏品種。"
   },
   "GCCF-UNRECOGNISED-BREEDS": {
     "journal": null,

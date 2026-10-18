@@ -1,7 +1,7 @@
 window.BREEDS = {
   "_meta": {
     "count": 68,
-    "generated_at": "2026-10-18 00:55"
+    "generated_at": "2026-10-18 14:36"
   },
   "breeds": [
     {
@@ -511,9 +511,146 @@ window.BREEDS = {
       "data_source": "thecatapi"
     },
     {
+      "id": "pixi",
+      "slug": "pixi",
+      "name_zh": "北美洲短毛貓",
+      "name_en": "Pixie-bob",
+      "alt_names": [],
+      "origin": "美國",
+      "origin_en": "United States",
+      "country_code": "US",
+      "life_span_years": [
+        13.0,
+        16.0
+      ],
+      "weight_kg": [
+        4.0,
+        8.0
+      ],
+      "temperament_zh": [
+        "親人",
+        "社交",
+        "聰明",
+        "忠誠"
+      ],
+      "temperament_en": [
+        "Affectionate",
+        "Social",
+        "Intelligent",
+        "Loyal"
+      ],
+      "scores": {
+        "energy": 4,
+        "grooming": 1,
+        "intelligence": 5,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 4,
+        "social_needs": 4,
+        "vocalisation": 1,
+        "health_issues": 2,
+        "shedding": 3,
+        "adaptability": 5
+      },
+      "score_labels": {
+        "energy": "活力",
+        "grooming": "梳毛需求",
+        "intelligence": "智商",
+        "affection": "親人度",
+        "child_friendly": "親小孩",
+        "stranger_friendly": "親陌生人",
+        "social_needs": "社交需求",
+        "vocalisation": "叫聲多寡",
+        "health_issues": "健康問題",
+        "shedding": "掉毛量",
+        "adaptability": "適應力"
+      },
+      "tags": {
+        "hairless": false,
+        "natural": false,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": true,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": true
+      },
+      "description_en": "Companionable and affectionate, the Pixie-bob wants to be an integral part of the family. The Pixie-Bob’s ability to bond with their humans along with their patient personas make them excellent companions for children.",
+      "description_zh": "北美短尾貓（外型像短尾大山貓 Bobcat 但**無野生血統**，純家貓選育）。體型大、忠誠像狗。**多趾（polydactyl）為品種特徵之一**。",
+      "description_zh_status": "translated",
+      "tw_notes": {},
+      "wikipedia_url_en": "https://en.wikipedia.org/wiki/Pixiebob",
+      "wikipedia_url_zh": "",
+      "images": [
+        {
+          "url": "https://cdn2.thecatapi.com/images/fAYgJmLM8.jpg",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        },
+        {
+          "url": "https://cdn2.thecatapi.com/images/vjJDjiXQQ.jpg",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        },
+        {
+          "url": "https://cdn2.thecatapi.com/images/n6iJQcVtD.jpg",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        },
+        {
+          "url": "https://cdn2.thecatapi.com/images/HxENheThN.jpg",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        },
+        {
+          "url": "https://cdn2.thecatapi.com/images/qk67_tUAZ.jpg",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        },
+        {
+          "url": "https://cdn2.thecatapi.com/images/b4paC3RGM.jpg",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        },
+        {
+          "url": "https://cdn2.thecatapi.com/images/U0UIFP2CA.jpg",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        },
+        {
+          "url": "https://cdn2.thecatapi.com/images/z7fJRNeN6.jpg",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        },
+        {
+          "url": "https://cdn2.thecatapi.com/images/UFao82MoD.jpg",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        },
+        {
+          "url": "https://cdn2.thecatapi.com/images/zEpUrnbJg.jpg",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        }
+      ],
+      "thecatapi_url": "https://thecatapi.com/breeds/pixi",
+      "data_source": "thecatapi"
+    },
+    {
       "id": "kuri",
       "slug": "kuri",
-      "name_zh": "千島貓",
+      "name_zh": "千島短尾貓",
       "name_en": "Kurilian",
       "alt_names": [],
       "origin": "俄羅斯",
@@ -1852,6 +1989,134 @@ window.BREEDS = {
       "data_source": "thecatapi"
     },
     {
+      "id": "cymr",
+      "slug": "cymr",
+      "name_zh": "威爾斯貓",
+      "name_en": "Cymric",
+      "alt_names": [
+        "曼島長毛貓",
+        "Manx Longhair"
+      ],
+      "origin": "加拿大",
+      "origin_en": "Canada",
+      "country_code": "CA",
+      "life_span_years": [
+        8.0,
+        14.0
+      ],
+      "weight_kg": [
+        4.0,
+        6.0
+      ],
+      "temperament_zh": [
+        "溫柔",
+        "忠誠",
+        "聰明",
+        "愛玩"
+      ],
+      "temperament_en": [
+        "Gentle",
+        "Loyal",
+        "Intelligent",
+        "Playful"
+      ],
+      "scores": {
+        "energy": 5,
+        "grooming": 3,
+        "intelligence": 5,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 3,
+        "social_needs": 5,
+        "vocalisation": 3,
+        "health_issues": 3,
+        "shedding": 5,
+        "adaptability": 5
+      },
+      "score_labels": {
+        "energy": "活力",
+        "grooming": "梳毛需求",
+        "intelligence": "智商",
+        "affection": "親人度",
+        "child_friendly": "親小孩",
+        "stranger_friendly": "親陌生人",
+        "social_needs": "社交需求",
+        "vocalisation": "叫聲多寡",
+        "health_issues": "健康問題",
+        "shedding": "掉毛量",
+        "adaptability": "適應力"
+      },
+      "tags": {
+        "hairless": false,
+        "natural": false,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": true,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": true
+      },
+      "description_en": "The Cymric is a placid, sweet cat. They do not get too upset about anything that happens in their world. They are loving companions and adore people. They are smart and dexterous, capable of using his paws to get into cabinets or to open doors.",
+      "description_zh": "個性平穩溫和，很少為周遭的事緊張，親人。聰明、腳掌靈活，會用前腳打開櫃子或門。",
+      "description_zh_status": "translated",
+      "tw_notes": {},
+      "wikipedia_url_en": "https://en.wikipedia.org/wiki/Cymric_(cat)",
+      "wikipedia_url_zh": "",
+      "images": [
+        {
+          "url": "https://cdn2.thecatapi.com/images/dSiKP0JWG.jpg",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        },
+        {
+          "url": "https://cdn2.thecatapi.com/images/3dbtapCWM.jpg",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        },
+        {
+          "url": "https://cdn2.thecatapi.com/images/WXcD6qZEn.jpg",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        },
+        {
+          "url": "https://cdn2.thecatapi.com/images/OLP-tyC2i.jpg",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        },
+        {
+          "url": "https://cdn2.thecatapi.com/images/GQ61BDToD.jpg",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        },
+        {
+          "url": "https://cdn2.thecatapi.com/images/-y_6SBPrw.jpg",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        },
+        {
+          "url": "https://cdn2.thecatapi.com/images/CKVhCI0bz.jpg",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        },
+        {
+          "url": "https://cdn2.thecatapi.com/images/lF3ZTucYp.jpg",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        }
+      ],
+      "thecatapi_url": "https://thecatapi.com/breeds/cymr",
+      "data_source": "thecatapi"
+    },
+    {
       "id": "beng",
       "slug": "beng",
       "name_zh": "孟加拉貓",
@@ -2104,7 +2369,7 @@ window.BREEDS = {
     {
       "id": "nebe",
       "slug": "nebe",
-      "name_zh": "尼比隆貓",
+      "name_zh": "尼比龍貓",
       "name_en": "Nebelung",
       "alt_names": [
         "Longhaired Russian Blue"
@@ -2378,6 +2643,137 @@ window.BREEDS = {
       "data_source": "thecatapi"
     },
     {
+      "id": "bamb",
+      "slug": "bamb",
+      "name_zh": "巴比諾貓",
+      "name_en": "Bambino",
+      "alt_names": [],
+      "origin": "美國",
+      "origin_en": "United States",
+      "country_code": "US",
+      "life_span_years": [
+        12.0,
+        14.0
+      ],
+      "weight_kg": [
+        2.0,
+        4.0
+      ],
+      "temperament_zh": [
+        "親人",
+        "活躍",
+        "友善",
+        "聰明"
+      ],
+      "temperament_en": [
+        "Affectionate",
+        "Lively",
+        "Friendly",
+        "Intelligent"
+      ],
+      "scores": {
+        "energy": 5,
+        "grooming": 1,
+        "intelligence": 5,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 3,
+        "social_needs": 3,
+        "vocalisation": 3,
+        "health_issues": 1,
+        "shedding": 1,
+        "adaptability": 5
+      },
+      "score_labels": {
+        "energy": "活力",
+        "grooming": "梳毛需求",
+        "intelligence": "智商",
+        "affection": "親人度",
+        "child_friendly": "親小孩",
+        "stranger_friendly": "親陌生人",
+        "social_needs": "社交需求",
+        "vocalisation": "叫聲多寡",
+        "health_issues": "健康問題",
+        "shedding": "掉毛量",
+        "adaptability": "適應力"
+      },
+      "tags": {
+        "hairless": true,
+        "natural": false,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": true,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": true
+      },
+      "description_en": "The Bambino is a breed of cat that was created as a cross between the Sphynx and the Munchkin breeds. The Bambino cat has short legs, large upright ears, and is usually hairless. They love to be handled and cuddled up on the laps of their family members.",
+      "description_zh": "由斯芬克斯貓和曼赤肯貓雜交培育的品種，腿短、耳朵大而直立，通常沒有毛。喜歡被抱、窩在家人腿上。",
+      "description_zh_status": "translated",
+      "tw_notes": {},
+      "wikipedia_url_en": "https://en.wikipedia.org/wiki/Bambino_cat",
+      "wikipedia_url_zh": "",
+      "images": [
+        {
+          "url": "https://cdn2.thecatapi.com/images/s42I_BL-a.jpg",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        },
+        {
+          "url": "https://cdn2.thecatapi.com/images/Oaoo1ky3A.jpg",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        },
+        {
+          "url": "https://cdn2.thecatapi.com/images/MizM7dBMU.jpg",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        },
+        {
+          "url": "https://cdn2.thecatapi.com/images/p46ys1bGF.jpg",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        },
+        {
+          "url": "https://cdn2.thecatapi.com/images/jUY0Dt5iB.jpg",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        },
+        {
+          "url": "https://cdn2.thecatapi.com/images/wiHVRle1m.jpg",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        },
+        {
+          "url": "https://cdn2.thecatapi.com/images/lClcFEjwx.jpg",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        },
+        {
+          "url": "https://cdn2.thecatapi.com/images/wFQIf01uy.jpg",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        },
+        {
+          "url": "https://cdn2.thecatapi.com/images/5AdhMjeEu.jpg",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        }
+      ],
+      "thecatapi_url": "https://thecatapi.com/breeds/bamb",
+      "data_source": "thecatapi"
+    },
+    {
       "id": "ragd",
       "slug": "ragd",
       "name_zh": "布偶貓",
@@ -2516,145 +2912,6 @@ window.BREEDS = {
         }
       ],
       "thecatapi_url": "https://thecatapi.com/breeds/ragd",
-      "data_source": "thecatapi"
-    },
-    {
-      "id": "crex",
-      "slug": "crex",
-      "name_zh": "康瓦耳捲毛貓",
-      "name_en": "Cornish Rex",
-      "alt_names": [],
-      "origin": "英國",
-      "origin_en": "United Kingdom",
-      "country_code": "GB",
-      "life_span_years": [
-        11.0,
-        14.0
-      ],
-      "weight_kg": [
-        2.0,
-        4.0
-      ],
-      "temperament_zh": [
-        "親人",
-        "聰明",
-        "活潑",
-        "好奇",
-        "愛玩"
-      ],
-      "temperament_en": [
-        "Affectionate",
-        "Intelligent",
-        "Active",
-        "Curious",
-        "Playful"
-      ],
-      "scores": {
-        "energy": 5,
-        "grooming": 1,
-        "intelligence": 5,
-        "affection": 5,
-        "child_friendly": 4,
-        "stranger_friendly": 3,
-        "social_needs": 5,
-        "vocalisation": 1,
-        "health_issues": 2,
-        "shedding": 1,
-        "adaptability": 5
-      },
-      "score_labels": {
-        "energy": "活力",
-        "grooming": "梳毛需求",
-        "intelligence": "智商",
-        "affection": "親人度",
-        "child_friendly": "親小孩",
-        "stranger_friendly": "親陌生人",
-        "social_needs": "社交需求",
-        "vocalisation": "叫聲多寡",
-        "health_issues": "健康問題",
-        "shedding": "掉毛量",
-        "adaptability": "適應力"
-      },
-      "tags": {
-        "hairless": false,
-        "natural": false,
-        "rare": false,
-        "rex": true,
-        "suppressed_tail": false,
-        "short_legs": false,
-        "hypoallergenic": true,
-        "indoor": false,
-        "lap": true
-      },
-      "description_en": "This is a confident cat who loves people and will follow them around, waiting for any opportunity to sit in a lap or give a kiss. He enjoys being handled, making it easy to take him to the veterinarian or train him for therapy work. The Cornish Rex stay in kitten mode most of their lives and well into their senior years. ",
-      "description_zh": "自信、親人，會跟著人走，等機會坐上大腿或湊過來親人。不排斥被抱和觸摸，所以帶去看獸醫或做陪伴訓練都比較容易。大半輩子都像幼貓一樣活潑，到老也是。",
-      "description_zh_status": "translated",
-      "tw_notes": {},
-      "wikipedia_url_en": "https://en.wikipedia.org/wiki/Cornish_Rex",
-      "wikipedia_url_zh": "",
-      "images": [
-        {
-          "url": "https://cdn2.thecatapi.com/images/8CuEPFNuD.jpg",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        },
-        {
-          "url": "https://cdn2.thecatapi.com/images/kOAHCDEzA.jpg",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        },
-        {
-          "url": "https://cdn2.thecatapi.com/images/bAiN3T-rs.jpg",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        },
-        {
-          "url": "https://cdn2.thecatapi.com/images/DmP9GCClC.jpg",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        },
-        {
-          "url": "https://cdn2.thecatapi.com/images/unX21IBVB.jpg",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        },
-        {
-          "url": "https://cdn2.thecatapi.com/images/4-GdyX_fu.jpg",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        },
-        {
-          "url": "https://cdn2.thecatapi.com/images/gMjW5RYB0.jpg",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        },
-        {
-          "url": "https://cdn2.thecatapi.com/images/A5JigBZjG.jpg",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        },
-        {
-          "url": "https://cdn2.thecatapi.com/images/yqcbOxkWK.jpg",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        },
-        {
-          "url": "https://cdn2.thecatapi.com/images/_I6AsfuMg.png",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        }
-      ],
-      "thecatapi_url": "https://thecatapi.com/breeds/crex",
       "data_source": "thecatapi"
     },
     {
@@ -3202,7 +3459,7 @@ window.BREEDS = {
     {
       "id": "sphy",
       "slug": "sphy",
-      "name_zh": "斯芬克斯無毛貓",
+      "name_zh": "斯芬克斯貓",
       "name_en": "Sphynx",
       "alt_names": [
         "Canadian Hairless",
@@ -3654,105 +3911,6 @@ window.BREEDS = {
       ]
     },
     {
-      "id": "khao",
-      "slug": "khao",
-      "name_zh": "暹羅玉貓",
-      "name_en": "Khao Manee",
-      "alt_names": [
-        "Diamond Eye cat"
-      ],
-      "origin": "泰國",
-      "origin_en": "Thailand",
-      "country_code": "TH",
-      "life_span_years": [
-        10.0,
-        12.0
-      ],
-      "weight_kg": [
-        4.0,
-        6.0
-      ],
-      "temperament_zh": [
-        "冷靜",
-        "Relaxed",
-        "話多",
-        "愛玩",
-        "Warm"
-      ],
-      "temperament_en": [
-        "Calm",
-        "Relaxed",
-        "Talkative",
-        "Playful",
-        "Warm"
-      ],
-      "scores": {
-        "energy": 3,
-        "grooming": 3,
-        "intelligence": 4,
-        "affection": 4,
-        "child_friendly": 3,
-        "stranger_friendly": 3,
-        "social_needs": 3,
-        "vocalisation": 5,
-        "health_issues": 1,
-        "shedding": 3,
-        "adaptability": 4
-      },
-      "score_labels": {
-        "energy": "活力",
-        "grooming": "梳毛需求",
-        "intelligence": "智商",
-        "affection": "親人度",
-        "child_friendly": "親小孩",
-        "stranger_friendly": "親陌生人",
-        "social_needs": "社交需求",
-        "vocalisation": "叫聲多寡",
-        "health_issues": "健康問題",
-        "shedding": "掉毛量",
-        "adaptability": "適應力"
-      },
-      "tags": {
-        "hairless": false,
-        "natural": false,
-        "rare": false,
-        "rex": false,
-        "suppressed_tail": false,
-        "short_legs": false,
-        "hypoallergenic": false,
-        "indoor": false,
-        "lap": true
-      },
-      "description_en": "The Khao Manee is highly intelligent, with an extrovert and inquisitive nature, however they are also very calm and relaxed, making them an idea lap cat.",
-      "description_zh": "泰國原生的白色短毛品種，常見鴛鴦眼（一藍一金）。聰明外向、愛叫。白貓的白毛基因同時和藍眼、先天性失聰有關，iCatCare 指出雙眼都是藍色的白貓，失聰機率是雙眼非藍色白貓的 3 到 5 倍。購買時可以請繁殖者提供腦幹聽覺誘發反應測試（BAER）的結果。",
-      "description_zh_status": "translated",
-      "tw_notes": {},
-      "wikipedia_url_en": "https://en.wikipedia.org/wiki/Khao_Manee",
-      "wikipedia_url_zh": "",
-      "images": [
-        {
-          "url": "https://cdn2.thecatapi.com/images/165ok6ESN.jpg",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        },
-        {
-          "url": "https://cdn2.thecatapi.com/images/iyFN2mF8l.jpg",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        }
-      ],
-      "thecatapi_url": "https://thecatapi.com/breeds/khao",
-      "data_source": "thecatapi",
-      "health_refs": [
-        {
-          "t": "iCatCare：白貓的遺傳性耳聾",
-          "u": "https://icatcare.org/articles/inherited-deafness-in-white-cats"
-        }
-      ]
-    },
-    {
       "id": "siam",
       "slug": "siam",
       "name_zh": "暹羅貓",
@@ -4028,136 +4186,9 @@ window.BREEDS = {
       "data_source": "thecatapi"
     },
     {
-      "id": "cymr",
-      "slug": "cymr",
-      "name_zh": "曼島長毛貓",
-      "name_en": "Cymric",
-      "alt_names": [
-        "Spangle"
-      ],
-      "origin": "加拿大",
-      "origin_en": "Canada",
-      "country_code": "CA",
-      "life_span_years": [
-        8.0,
-        14.0
-      ],
-      "weight_kg": [
-        4.0,
-        6.0
-      ],
-      "temperament_zh": [
-        "溫柔",
-        "忠誠",
-        "聰明",
-        "愛玩"
-      ],
-      "temperament_en": [
-        "Gentle",
-        "Loyal",
-        "Intelligent",
-        "Playful"
-      ],
-      "scores": {
-        "energy": 5,
-        "grooming": 3,
-        "intelligence": 5,
-        "affection": 5,
-        "child_friendly": 4,
-        "stranger_friendly": 3,
-        "social_needs": 5,
-        "vocalisation": 3,
-        "health_issues": 3,
-        "shedding": 5,
-        "adaptability": 5
-      },
-      "score_labels": {
-        "energy": "活力",
-        "grooming": "梳毛需求",
-        "intelligence": "智商",
-        "affection": "親人度",
-        "child_friendly": "親小孩",
-        "stranger_friendly": "親陌生人",
-        "social_needs": "社交需求",
-        "vocalisation": "叫聲多寡",
-        "health_issues": "健康問題",
-        "shedding": "掉毛量",
-        "adaptability": "適應力"
-      },
-      "tags": {
-        "hairless": false,
-        "natural": false,
-        "rare": false,
-        "rex": false,
-        "suppressed_tail": true,
-        "short_legs": false,
-        "hypoallergenic": false,
-        "indoor": false,
-        "lap": true
-      },
-      "description_en": "The Cymric is a placid, sweet cat. They do not get too upset about anything that happens in their world. They are loving companions and adore people. They are smart and dexterous, capable of using his paws to get into cabinets or to open doors.",
-      "description_zh": "個性平穩溫和，很少為周遭的事緊張，親人。聰明、腳掌靈活，會用前腳打開櫃子或門。",
-      "description_zh_status": "translated",
-      "tw_notes": {},
-      "wikipedia_url_en": "https://en.wikipedia.org/wiki/Cymric_(cat)",
-      "wikipedia_url_zh": "",
-      "images": [
-        {
-          "url": "https://cdn2.thecatapi.com/images/dSiKP0JWG.jpg",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        },
-        {
-          "url": "https://cdn2.thecatapi.com/images/3dbtapCWM.jpg",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        },
-        {
-          "url": "https://cdn2.thecatapi.com/images/WXcD6qZEn.jpg",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        },
-        {
-          "url": "https://cdn2.thecatapi.com/images/OLP-tyC2i.jpg",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        },
-        {
-          "url": "https://cdn2.thecatapi.com/images/GQ61BDToD.jpg",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        },
-        {
-          "url": "https://cdn2.thecatapi.com/images/-y_6SBPrw.jpg",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        },
-        {
-          "url": "https://cdn2.thecatapi.com/images/CKVhCI0bz.jpg",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        },
-        {
-          "url": "https://cdn2.thecatapi.com/images/lF3ZTucYp.jpg",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        }
-      ],
-      "thecatapi_url": "https://thecatapi.com/breeds/cymr",
-      "data_source": "thecatapi"
-    },
-    {
       "id": "munc",
       "slug": "munc",
-      "name_zh": "曼赤肯短腿貓",
+      "name_zh": "曼赤肯貓",
       "name_en": "Munchkin",
       "alt_names": [],
       "origin": "美國",
@@ -4439,7 +4470,7 @@ window.BREEDS = {
     {
       "id": "orie",
       "slug": "orie",
-      "name_zh": "東方貓",
+      "name_zh": "東方短毛貓",
       "name_en": "Oriental",
       "alt_names": [
         "Foreign Type"
@@ -4584,6 +4615,145 @@ window.BREEDS = {
           "u": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6984347/"
         }
       ]
+    },
+    {
+      "id": "crex",
+      "slug": "crex",
+      "name_zh": "柯尼斯捲毛貓",
+      "name_en": "Cornish Rex",
+      "alt_names": [],
+      "origin": "英國",
+      "origin_en": "United Kingdom",
+      "country_code": "GB",
+      "life_span_years": [
+        11.0,
+        14.0
+      ],
+      "weight_kg": [
+        2.0,
+        4.0
+      ],
+      "temperament_zh": [
+        "親人",
+        "聰明",
+        "活潑",
+        "好奇",
+        "愛玩"
+      ],
+      "temperament_en": [
+        "Affectionate",
+        "Intelligent",
+        "Active",
+        "Curious",
+        "Playful"
+      ],
+      "scores": {
+        "energy": 5,
+        "grooming": 1,
+        "intelligence": 5,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 3,
+        "social_needs": 5,
+        "vocalisation": 1,
+        "health_issues": 2,
+        "shedding": 1,
+        "adaptability": 5
+      },
+      "score_labels": {
+        "energy": "活力",
+        "grooming": "梳毛需求",
+        "intelligence": "智商",
+        "affection": "親人度",
+        "child_friendly": "親小孩",
+        "stranger_friendly": "親陌生人",
+        "social_needs": "社交需求",
+        "vocalisation": "叫聲多寡",
+        "health_issues": "健康問題",
+        "shedding": "掉毛量",
+        "adaptability": "適應力"
+      },
+      "tags": {
+        "hairless": false,
+        "natural": false,
+        "rare": false,
+        "rex": true,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": true,
+        "indoor": false,
+        "lap": true
+      },
+      "description_en": "This is a confident cat who loves people and will follow them around, waiting for any opportunity to sit in a lap or give a kiss. He enjoys being handled, making it easy to take him to the veterinarian or train him for therapy work. The Cornish Rex stay in kitten mode most of their lives and well into their senior years. ",
+      "description_zh": "自信、親人，會跟著人走，等機會坐上大腿或湊過來親人。不排斥被抱和觸摸，所以帶去看獸醫或做陪伴訓練都比較容易。大半輩子都像幼貓一樣活潑，到老也是。",
+      "description_zh_status": "translated",
+      "tw_notes": {},
+      "wikipedia_url_en": "https://en.wikipedia.org/wiki/Cornish_Rex",
+      "wikipedia_url_zh": "",
+      "images": [
+        {
+          "url": "https://cdn2.thecatapi.com/images/8CuEPFNuD.jpg",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        },
+        {
+          "url": "https://cdn2.thecatapi.com/images/kOAHCDEzA.jpg",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        },
+        {
+          "url": "https://cdn2.thecatapi.com/images/bAiN3T-rs.jpg",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        },
+        {
+          "url": "https://cdn2.thecatapi.com/images/DmP9GCClC.jpg",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        },
+        {
+          "url": "https://cdn2.thecatapi.com/images/unX21IBVB.jpg",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        },
+        {
+          "url": "https://cdn2.thecatapi.com/images/4-GdyX_fu.jpg",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        },
+        {
+          "url": "https://cdn2.thecatapi.com/images/gMjW5RYB0.jpg",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        },
+        {
+          "url": "https://cdn2.thecatapi.com/images/A5JigBZjG.jpg",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        },
+        {
+          "url": "https://cdn2.thecatapi.com/images/yqcbOxkWK.jpg",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        },
+        {
+          "url": "https://cdn2.thecatapi.com/images/_I6AsfuMg.png",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        }
+      ],
+      "thecatapi_url": "https://thecatapi.com/breeds/crex",
+      "data_source": "thecatapi"
     },
     {
       "id": "esha",
@@ -5081,149 +5251,6 @@ window.BREEDS = {
         }
       ],
       "thecatapi_url": "https://thecatapi.com/breeds/char",
-      "data_source": "thecatapi"
-    },
-    {
-      "id": "sava",
-      "slug": "sava",
-      "name_zh": "沙瓦娜貓",
-      "name_en": "Savannah",
-      "alt_names": [],
-      "origin": "美國",
-      "origin_en": "United States",
-      "country_code": "US",
-      "life_span_years": [
-        17.0,
-        20.0
-      ],
-      "weight_kg": [
-        4.0,
-        11.0
-      ],
-      "temperament_zh": [
-        "好奇",
-        "社交",
-        "聰明",
-        "忠誠",
-        "外向",
-        "愛冒險",
-        "親人"
-      ],
-      "temperament_en": [
-        "Curious",
-        "Social",
-        "Intelligent",
-        "Loyal",
-        "Outgoing",
-        "Adventurous",
-        "Affectionate"
-      ],
-      "scores": {
-        "energy": 5,
-        "grooming": 1,
-        "intelligence": 5,
-        "affection": 5,
-        "child_friendly": 4,
-        "stranger_friendly": 5,
-        "social_needs": 5,
-        "vocalisation": 1,
-        "health_issues": 1,
-        "shedding": 3,
-        "adaptability": 5
-      },
-      "score_labels": {
-        "energy": "活力",
-        "grooming": "梳毛需求",
-        "intelligence": "智商",
-        "affection": "親人度",
-        "child_friendly": "親小孩",
-        "stranger_friendly": "親陌生人",
-        "social_needs": "社交需求",
-        "vocalisation": "叫聲多寡",
-        "health_issues": "健康問題",
-        "shedding": "掉毛量",
-        "adaptability": "適應力"
-      },
-      "tags": {
-        "hairless": false,
-        "natural": false,
-        "rare": false,
-        "rex": false,
-        "suppressed_tail": false,
-        "short_legs": false,
-        "hypoallergenic": false,
-        "indoor": false,
-        "lap": false
-      },
-      "description_en": "Savannah is the feline version of a dog. Actively seeking social interaction, they are given to pouting if left out. Remaining kitten-like through life. Profoundly loyal to immediate family members whilst questioning the presence of strangers. Making excellent companions that are loyal, intelligent and eager to be involved.",
-      "description_zh": "個性像狗，會主動找人互動，被冷落會鬧彆扭。一輩子都像幼貓。對家人非常忠心，對陌生人比較有戒心。忠誠、聰明，什麼事都想參與。",
-      "description_zh_status": "translated",
-      "tw_notes": {},
-      "wikipedia_url_en": "https://en.wikipedia.org/wiki/Savannah_cat",
-      "wikipedia_url_zh": "",
-      "images": [
-        {
-          "url": "https://cdn2.thecatapi.com/images/qf6MhNS8z.jpg",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        },
-        {
-          "url": "https://cdn2.thecatapi.com/images/62Onx4gRb.jpg",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        },
-        {
-          "url": "https://cdn2.thecatapi.com/images/zPterbCcd.jpg",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        },
-        {
-          "url": "https://cdn2.thecatapi.com/images/A54VUs7Q6.jpg",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        },
-        {
-          "url": "https://cdn2.thecatapi.com/images/a8nIYvs6S.jpg",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        },
-        {
-          "url": "https://cdn2.thecatapi.com/images/xBR2jSIG7.jpg",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        },
-        {
-          "url": "https://cdn2.thecatapi.com/images/IOjBCPLXA.jpg",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        },
-        {
-          "url": "https://cdn2.thecatapi.com/images/wu1YzlB9q.jpg",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        },
-        {
-          "url": "https://cdn2.thecatapi.com/images/G_2zGI5Wu.jpg",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        },
-        {
-          "url": "https://cdn2.thecatapi.com/images/ie5eM6OOa.jpg",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        }
-      ],
-      "thecatapi_url": "https://thecatapi.com/breeds/sava",
       "data_source": "thecatapi"
     },
     {
@@ -5730,143 +5757,6 @@ window.BREEDS = {
       "data_source": "thecatapi"
     },
     {
-      "id": "pixi",
-      "slug": "pixi",
-      "name_zh": "狸貓（Pixie-bob）",
-      "name_en": "Pixie-bob",
-      "alt_names": [],
-      "origin": "美國",
-      "origin_en": "United States",
-      "country_code": "US",
-      "life_span_years": [
-        13.0,
-        16.0
-      ],
-      "weight_kg": [
-        4.0,
-        8.0
-      ],
-      "temperament_zh": [
-        "親人",
-        "社交",
-        "聰明",
-        "忠誠"
-      ],
-      "temperament_en": [
-        "Affectionate",
-        "Social",
-        "Intelligent",
-        "Loyal"
-      ],
-      "scores": {
-        "energy": 4,
-        "grooming": 1,
-        "intelligence": 5,
-        "affection": 5,
-        "child_friendly": 4,
-        "stranger_friendly": 4,
-        "social_needs": 4,
-        "vocalisation": 1,
-        "health_issues": 2,
-        "shedding": 3,
-        "adaptability": 5
-      },
-      "score_labels": {
-        "energy": "活力",
-        "grooming": "梳毛需求",
-        "intelligence": "智商",
-        "affection": "親人度",
-        "child_friendly": "親小孩",
-        "stranger_friendly": "親陌生人",
-        "social_needs": "社交需求",
-        "vocalisation": "叫聲多寡",
-        "health_issues": "健康問題",
-        "shedding": "掉毛量",
-        "adaptability": "適應力"
-      },
-      "tags": {
-        "hairless": false,
-        "natural": false,
-        "rare": false,
-        "rex": false,
-        "suppressed_tail": true,
-        "short_legs": false,
-        "hypoallergenic": false,
-        "indoor": false,
-        "lap": true
-      },
-      "description_en": "Companionable and affectionate, the Pixie-bob wants to be an integral part of the family. The Pixie-Bob’s ability to bond with their humans along with their patient personas make them excellent companions for children.",
-      "description_zh": "北美短尾貓（外型像短尾大山貓 Bobcat 但**無野生血統**，純家貓選育）。體型大、忠誠像狗。**多趾（polydactyl）為品種特徵之一**。",
-      "description_zh_status": "translated",
-      "tw_notes": {},
-      "wikipedia_url_en": "https://en.wikipedia.org/wiki/Pixiebob",
-      "wikipedia_url_zh": "",
-      "images": [
-        {
-          "url": "https://cdn2.thecatapi.com/images/fAYgJmLM8.jpg",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        },
-        {
-          "url": "https://cdn2.thecatapi.com/images/vjJDjiXQQ.jpg",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        },
-        {
-          "url": "https://cdn2.thecatapi.com/images/n6iJQcVtD.jpg",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        },
-        {
-          "url": "https://cdn2.thecatapi.com/images/HxENheThN.jpg",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        },
-        {
-          "url": "https://cdn2.thecatapi.com/images/qk67_tUAZ.jpg",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        },
-        {
-          "url": "https://cdn2.thecatapi.com/images/b4paC3RGM.jpg",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        },
-        {
-          "url": "https://cdn2.thecatapi.com/images/U0UIFP2CA.jpg",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        },
-        {
-          "url": "https://cdn2.thecatapi.com/images/z7fJRNeN6.jpg",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        },
-        {
-          "url": "https://cdn2.thecatapi.com/images/UFao82MoD.jpg",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        },
-        {
-          "url": "https://cdn2.thecatapi.com/images/zEpUrnbJg.jpg",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        }
-      ],
-      "thecatapi_url": "https://thecatapi.com/breeds/pixi",
-      "data_source": "thecatapi"
-    },
-    {
       "id": "toyg",
       "slug": "toyg",
       "name_zh": "玩具虎貓",
@@ -6140,137 +6030,6 @@ window.BREEDS = {
         }
       ],
       "thecatapi_url": "https://thecatapi.com/breeds/esho",
-      "data_source": "thecatapi"
-    },
-    {
-      "id": "bamb",
-      "slug": "bamb",
-      "name_zh": "矮腳貓（Bambino）",
-      "name_en": "Bambino",
-      "alt_names": [],
-      "origin": "美國",
-      "origin_en": "United States",
-      "country_code": "US",
-      "life_span_years": [
-        12.0,
-        14.0
-      ],
-      "weight_kg": [
-        2.0,
-        4.0
-      ],
-      "temperament_zh": [
-        "親人",
-        "活躍",
-        "友善",
-        "聰明"
-      ],
-      "temperament_en": [
-        "Affectionate",
-        "Lively",
-        "Friendly",
-        "Intelligent"
-      ],
-      "scores": {
-        "energy": 5,
-        "grooming": 1,
-        "intelligence": 5,
-        "affection": 5,
-        "child_friendly": 4,
-        "stranger_friendly": 3,
-        "social_needs": 3,
-        "vocalisation": 3,
-        "health_issues": 1,
-        "shedding": 1,
-        "adaptability": 5
-      },
-      "score_labels": {
-        "energy": "活力",
-        "grooming": "梳毛需求",
-        "intelligence": "智商",
-        "affection": "親人度",
-        "child_friendly": "親小孩",
-        "stranger_friendly": "親陌生人",
-        "social_needs": "社交需求",
-        "vocalisation": "叫聲多寡",
-        "health_issues": "健康問題",
-        "shedding": "掉毛量",
-        "adaptability": "適應力"
-      },
-      "tags": {
-        "hairless": true,
-        "natural": false,
-        "rare": false,
-        "rex": false,
-        "suppressed_tail": false,
-        "short_legs": true,
-        "hypoallergenic": false,
-        "indoor": false,
-        "lap": true
-      },
-      "description_en": "The Bambino is a breed of cat that was created as a cross between the Sphynx and the Munchkin breeds. The Bambino cat has short legs, large upright ears, and is usually hairless. They love to be handled and cuddled up on the laps of their family members.",
-      "description_zh": "由斯芬克斯無毛貓和曼赤肯短腿貓雜交培育的品種，腿短、耳朵大而直立，通常沒有毛。喜歡被抱、窩在家人腿上。",
-      "description_zh_status": "translated",
-      "tw_notes": {},
-      "wikipedia_url_en": "https://en.wikipedia.org/wiki/Bambino_cat",
-      "wikipedia_url_zh": "",
-      "images": [
-        {
-          "url": "https://cdn2.thecatapi.com/images/s42I_BL-a.jpg",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        },
-        {
-          "url": "https://cdn2.thecatapi.com/images/Oaoo1ky3A.jpg",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        },
-        {
-          "url": "https://cdn2.thecatapi.com/images/MizM7dBMU.jpg",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        },
-        {
-          "url": "https://cdn2.thecatapi.com/images/p46ys1bGF.jpg",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        },
-        {
-          "url": "https://cdn2.thecatapi.com/images/jUY0Dt5iB.jpg",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        },
-        {
-          "url": "https://cdn2.thecatapi.com/images/wiHVRle1m.jpg",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        },
-        {
-          "url": "https://cdn2.thecatapi.com/images/lClcFEjwx.jpg",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        },
-        {
-          "url": "https://cdn2.thecatapi.com/images/wFQIf01uy.jpg",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        },
-        {
-          "url": "https://cdn2.thecatapi.com/images/5AdhMjeEu.jpg",
-          "author": "",
-          "license": "",
-          "source": "thecatapi.com"
-        }
-      ],
-      "thecatapi_url": "https://thecatapi.com/breeds/bamb",
       "data_source": "thecatapi"
     },
     {
@@ -7453,6 +7212,105 @@ window.BREEDS = {
       "data_source": "thecatapi"
     },
     {
+      "id": "khao",
+      "slug": "khao",
+      "name_zh": "考曼尼貓",
+      "name_en": "Khao Manee",
+      "alt_names": [
+        "Diamond Eye cat"
+      ],
+      "origin": "泰國",
+      "origin_en": "Thailand",
+      "country_code": "TH",
+      "life_span_years": [
+        10.0,
+        12.0
+      ],
+      "weight_kg": [
+        4.0,
+        6.0
+      ],
+      "temperament_zh": [
+        "冷靜",
+        "Relaxed",
+        "話多",
+        "愛玩",
+        "Warm"
+      ],
+      "temperament_en": [
+        "Calm",
+        "Relaxed",
+        "Talkative",
+        "Playful",
+        "Warm"
+      ],
+      "scores": {
+        "energy": 3,
+        "grooming": 3,
+        "intelligence": 4,
+        "affection": 4,
+        "child_friendly": 3,
+        "stranger_friendly": 3,
+        "social_needs": 3,
+        "vocalisation": 5,
+        "health_issues": 1,
+        "shedding": 3,
+        "adaptability": 4
+      },
+      "score_labels": {
+        "energy": "活力",
+        "grooming": "梳毛需求",
+        "intelligence": "智商",
+        "affection": "親人度",
+        "child_friendly": "親小孩",
+        "stranger_friendly": "親陌生人",
+        "social_needs": "社交需求",
+        "vocalisation": "叫聲多寡",
+        "health_issues": "健康問題",
+        "shedding": "掉毛量",
+        "adaptability": "適應力"
+      },
+      "tags": {
+        "hairless": false,
+        "natural": false,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": true
+      },
+      "description_en": "The Khao Manee is highly intelligent, with an extrovert and inquisitive nature, however they are also very calm and relaxed, making them an idea lap cat.",
+      "description_zh": "泰國原生的白色短毛品種，常見鴛鴦眼（一藍一金）。聰明外向、愛叫。白貓的白毛基因同時和藍眼、先天性失聰有關，iCatCare 指出雙眼都是藍色的白貓，失聰機率是雙眼非藍色白貓的 3 到 5 倍。購買時可以請繁殖者提供腦幹聽覺誘發反應測試（BAER）的結果。",
+      "description_zh_status": "translated",
+      "tw_notes": {},
+      "wikipedia_url_en": "https://en.wikipedia.org/wiki/Khao_Manee",
+      "wikipedia_url_zh": "",
+      "images": [
+        {
+          "url": "https://cdn2.thecatapi.com/images/165ok6ESN.jpg",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        },
+        {
+          "url": "https://cdn2.thecatapi.com/images/iyFN2mF8l.jpg",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        }
+      ],
+      "thecatapi_url": "https://thecatapi.com/breeds/khao",
+      "data_source": "thecatapi",
+      "health_refs": [
+        {
+          "t": "iCatCare：白貓的遺傳性耳聾",
+          "u": "https://icatcare.org/articles/inherited-deafness-in-white-cats"
+        }
+      ]
+    },
+    {
       "id": "bsho",
       "slug": "bsho",
       "name_zh": "英國短毛貓",
@@ -7729,6 +7587,149 @@ window.BREEDS = {
           "u": "https://icatcare.org/articles/obesity-in-cats"
         }
       ]
+    },
+    {
+      "id": "sava",
+      "slug": "sava",
+      "name_zh": "薩凡納貓",
+      "name_en": "Savannah",
+      "alt_names": [],
+      "origin": "美國",
+      "origin_en": "United States",
+      "country_code": "US",
+      "life_span_years": [
+        17.0,
+        20.0
+      ],
+      "weight_kg": [
+        4.0,
+        11.0
+      ],
+      "temperament_zh": [
+        "好奇",
+        "社交",
+        "聰明",
+        "忠誠",
+        "外向",
+        "愛冒險",
+        "親人"
+      ],
+      "temperament_en": [
+        "Curious",
+        "Social",
+        "Intelligent",
+        "Loyal",
+        "Outgoing",
+        "Adventurous",
+        "Affectionate"
+      ],
+      "scores": {
+        "energy": 5,
+        "grooming": 1,
+        "intelligence": 5,
+        "affection": 5,
+        "child_friendly": 4,
+        "stranger_friendly": 5,
+        "social_needs": 5,
+        "vocalisation": 1,
+        "health_issues": 1,
+        "shedding": 3,
+        "adaptability": 5
+      },
+      "score_labels": {
+        "energy": "活力",
+        "grooming": "梳毛需求",
+        "intelligence": "智商",
+        "affection": "親人度",
+        "child_friendly": "親小孩",
+        "stranger_friendly": "親陌生人",
+        "social_needs": "社交需求",
+        "vocalisation": "叫聲多寡",
+        "health_issues": "健康問題",
+        "shedding": "掉毛量",
+        "adaptability": "適應力"
+      },
+      "tags": {
+        "hairless": false,
+        "natural": false,
+        "rare": false,
+        "rex": false,
+        "suppressed_tail": false,
+        "short_legs": false,
+        "hypoallergenic": false,
+        "indoor": false,
+        "lap": false
+      },
+      "description_en": "Savannah is the feline version of a dog. Actively seeking social interaction, they are given to pouting if left out. Remaining kitten-like through life. Profoundly loyal to immediate family members whilst questioning the presence of strangers. Making excellent companions that are loyal, intelligent and eager to be involved.",
+      "description_zh": "個性像狗，會主動找人互動，被冷落會鬧彆扭。一輩子都像幼貓。對家人非常忠心，對陌生人比較有戒心。忠誠、聰明，什麼事都想參與。",
+      "description_zh_status": "translated",
+      "tw_notes": {},
+      "wikipedia_url_en": "https://en.wikipedia.org/wiki/Savannah_cat",
+      "wikipedia_url_zh": "",
+      "images": [
+        {
+          "url": "https://cdn2.thecatapi.com/images/qf6MhNS8z.jpg",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        },
+        {
+          "url": "https://cdn2.thecatapi.com/images/62Onx4gRb.jpg",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        },
+        {
+          "url": "https://cdn2.thecatapi.com/images/zPterbCcd.jpg",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        },
+        {
+          "url": "https://cdn2.thecatapi.com/images/A54VUs7Q6.jpg",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        },
+        {
+          "url": "https://cdn2.thecatapi.com/images/a8nIYvs6S.jpg",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        },
+        {
+          "url": "https://cdn2.thecatapi.com/images/xBR2jSIG7.jpg",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        },
+        {
+          "url": "https://cdn2.thecatapi.com/images/IOjBCPLXA.jpg",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        },
+        {
+          "url": "https://cdn2.thecatapi.com/images/wu1YzlB9q.jpg",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        },
+        {
+          "url": "https://cdn2.thecatapi.com/images/G_2zGI5Wu.jpg",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        },
+        {
+          "url": "https://cdn2.thecatapi.com/images/ie5eM6OOa.jpg",
+          "author": "",
+          "license": "",
+          "source": "thecatapi.com"
+        }
+      ],
+      "thecatapi_url": "https://thecatapi.com/breeds/sava",
+      "data_source": "thecatapi"
     },
     {
       "id": "sfol",
@@ -8689,7 +8690,9 @@ window.BREEDS = {
       "slug": "dons",
       "name_zh": "頓斯科伊貓",
       "name_en": "Donskoy",
-      "alt_names": [],
+      "alt_names": [
+        "唐斯芬克斯貓"
+      ],
       "origin": "俄羅斯",
       "origin_en": "Russia",
       "country_code": "RU",
@@ -8785,8 +8788,9 @@ window.BREEDS = {
       "name_zh": "香緹蒂芬妮貓",
       "name_en": "Chantilly-Tiffany",
       "alt_names": [
+        "查達利貓",
         "Chantilly",
-        " Foreign Longhair"
+        "Foreign Longhair"
       ],
       "origin": "美國",
       "origin_en": "United States",

@@ -1,13 +1,13 @@
 # 貓健康站
 
-> 台灣的貓健康知識庫：全台 2,070 家動物醫院（農業部公開登記）、222 筆獸醫學術文獻的中文摘要。文章引用國際獸醫指引，經人工審核才公開。
+> 台灣的貓健康知識庫：全台 2,070 家動物醫院（農業部與縣市政府公開資料）、222 筆獸醫學術文獻（198 筆有中文摘要）。文章引用國際獸醫指引，經人工審核才公開。
 
 本站內容僅供參考，診斷與治療由獸醫師負責。編輯流程、引用來源與更正方式見編輯方針。
 
 ## 主要頁面
 
-- [動物醫院查詢](https://chen-mouchin.github.io/cat-health-tw/vets.html)：全台動物醫院，可定位、篩夜間急診與貓專科
-- [學術文獻庫](https://chen-mouchin.github.io/cat-health-tw/library.html)：文章引用的指引與研究，每筆附原文連結與中文摘要
+- [動物醫院查詢](https://chen-mouchin.github.io/cat-health-tw/vets.html)：全台動物醫院，可定位，可篩夜間急診（台北市、台中市政府公告名單）與貓專科，標出國際貓友善認證
+- [學術文獻庫](https://chen-mouchin.github.io/cat-health-tw/library.html)：文章引用的指引與研究，每筆附原文連結，多數附中文摘要
 - [編輯方針](https://chen-mouchin.github.io/cat-health-tw/editorial.html)：誰在寫、怎麼審、引用哪些來源
 - [關於本站](https://chen-mouchin.github.io/cat-health-tw/about.html)：資料來源與網站運作
 
