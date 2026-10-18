@@ -1,6 +1,6 @@
 # 貓健康站
 
-> 台灣的貓健康知識庫：全台 2,071 家動物醫院（農業部公開登記）、222 筆獸醫學術文獻的中文摘要。文章引用國際獸醫指引，經人工審核才公開。
+> 台灣的貓健康知識庫：全台 2,070 家動物醫院（農業部公開登記）、222 筆獸醫學術文獻的中文摘要。文章引用國際獸醫指引，經人工審核才公開。
 
 本站內容僅供參考，診斷與治療由獸醫師負責。編輯流程、引用來源與更正方式見編輯方針。
 
@@ -21,7 +21,7 @@
 - [新竹縣（41 家）](https://chen-mouchin.github.io/cat-health-tw/vets/hsinchu-county.html)
 - [苗栗縣（38 家）](https://chen-mouchin.github.io/cat-health-tw/vets/miaoli.html)
 - [台中市（296 家）](https://chen-mouchin.github.io/cat-health-tw/vets/taichung.html)
-- [彰化縣（91 家）](https://chen-mouchin.github.io/cat-health-tw/vets/changhua.html)
+- [彰化縣（90 家）](https://chen-mouchin.github.io/cat-health-tw/vets/changhua.html)
 - [南投縣（26 家）](https://chen-mouchin.github.io/cat-health-tw/vets/nantou.html)
 - [雲林縣（73 家）](https://chen-mouchin.github.io/cat-health-tw/vets/yunlin.html)
 - [嘉義市（44 家）](https://chen-mouchin.github.io/cat-health-tw/vets/chiayi-city.html)
