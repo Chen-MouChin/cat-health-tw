@@ -9,8 +9,8 @@
   <meta property="og:image" content="https://chen-mouchin.github.io/cat-health-tw/images/og-default.png">
 <title>貓咪品種圖鑑 — 貓健康站</title>
 <meta name="description" content="台灣常見貓咪品種圖鑑：性格、壽命、體型、健康注意事項。資料來自 TheCatAPI 與 Wikipedia。">
-<link rel="stylesheet" href="css/theme.css?v=20261016">
-  <link rel="stylesheet" href="css/site.css?v=20261016">
+<link rel="stylesheet" href="css/theme.css?v=20261018">
+  <link rel="stylesheet" href="css/site.css?v=20261018">
 <script src="js/theme.js"></script>
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -68,7 +68,7 @@ main { max-width: 1100px; margin: 0 auto; padding: 0 1rem 2rem; }
 .cmp-grid {
   display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 0.4rem;
-  max-height: 320px; overflow-y: auto;
+  max-height: 320px; overflow-y: auto; overscroll-behavior: contain;
   padding: 0.2rem;
 }
 .cmp-item {
@@ -303,8 +303,14 @@ main { max-width: 1100px; margin: 0 auto; padding: 0 1rem 2rem; }
 .modal-content {
   background: var(--bg-card, #fff);
   border-radius: 14px;
-  max-width: 720px; width: 100%; max-height: 90vh;
+  max-width: 720px; width: 100%; max-height: 90vh; max-height: 90dvh;
   overflow-y: auto; position: relative;
+  overscroll-behavior: contain; -webkit-overflow-scrolling: touch;
+}
+body:has(.modal.open) { overflow: hidden; }
+@media (max-width: 600px) {
+  .modal { padding: 0.5rem; }
+  .modal-content { max-height: 94vh; max-height: 94dvh; }
 }
 .modal-close {
   position: absolute; top: 0.6rem; right: 0.6rem;
@@ -565,34 +571,15 @@ main { max-width: 1100px; margin: 0 auto; padding: 0 1rem 2rem; }
   font-size: 0.75rem; color: var(--text-muted, #6e6e73); line-height: 1.6;
 }
 
-/* 頂部警示圖例 — 顯眼但不刺眼 */
+/* 頂部警示圖例：一個小框三行，手機上不佔太多畫面 */
 .alert-legend {
-  display: flex; flex-wrap: wrap; gap: 0.6rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1rem; padding: 0.6rem 0.9rem;
+  border: 1px solid var(--border-strong); border-radius: 8px; background: var(--bg-card);
+  font-size: 0.8rem; line-height: 1.55; color: var(--text-2);
 }
-.alert-row {
-  display: flex; align-items: flex-start; gap: 0.55rem;
-  flex: 1; min-width: 280px;
-  padding: 0.7rem 0.9rem;
-  border-radius: 8px;
-  font-size: 0.8rem; line-height: 1.5;
-}
-.alert-row.severe {
-  background: #f5e8e8; border-left: 3px solid #8a4040; color: #5c2525;
-}
-.alert-row.legal {
-  background: #f5ede4; border-left: 3px solid #a06e30; color: #6b3f15;
-}
-.alert-row.moderate {
-  background: #f5f0e8; border-left: 3px solid #8a7340; color: #5c4a25;
-}
-.alert-row .a-icon { font-size: 1.1rem; line-height: 1.3; flex-shrink: 0; }
-.alert-row strong { display: block; margin-bottom: 0.15rem; font-size: 0.85rem; }
-.alert-row .a-text { color: inherit; }
-
-@media (max-width: 600px) {
-  .alert-row { min-width: 100%; }
-}
+.alert-legend .lg-title { font-weight: 700; color: var(--text); margin-bottom: 0.2rem; }
+.alert-legend p { margin: 0.15rem 0; }
+.alert-legend b { color: var(--text); }
 </style>
   <meta property="og:title" content="貓咪品種圖鑑 — 貓健康站">
   <meta property="og:description" content="68 種貓咪品種資料，含 Salonen 2019 學術研究觀察。可篩選、並排比較。">
@@ -625,27 +612,10 @@ main { max-width: 1100px; margin: 0 auto; padding: 0 1rem 2rem; }
 <main id="main">
   <!-- 名稱前 icon 的意義 — 進頁面就要看到 -->
   <div class="alert-legend">
-    <div class="alert-row severe">
-      <span class="a-icon">🚨</span>
-      <div>
-        <strong>名字前 🚨 = 嚴重健康風險</strong>
-        <span class="a-text">基因問題必發病、無法用 DNA 排除。BVA / ISFM 等獸醫協會建議停止繁殖。</span>
-      </div>
-    </div>
-    <div class="alert-row legal">
-      <span class="a-icon">🌍</span>
-      <div>
-        <strong>名字前 🌍 = 法規 / 倫理限制</strong>
-        <span class="a-text">含野生動物血統，多國禁養或限制；繁殖倫理有持續爭議。本身可能健康，但飼養前須確認當地法規。</span>
-      </div>
-    </div>
-    <div class="alert-row moderate">
-      <span class="a-icon">⚠️</span>
-      <div>
-        <strong>名字前 ⚠️ = 品種疾病風險</strong>
-        <span class="a-text">為外觀刻意培育（如極端短頭顱）導致呼吸/淚溢/難產，或某些遺傳病盛行率明顯偏高。</span>
-      </div>
-    </div>
+    <div class="lg-title">品種名稱前的標示</div>
+    <p>🚨 <b>嚴重健康風險</b>：品種的招牌外觀（折耳、短腿、短尾）來自會造成健康問題的基因變異。</p>
+    <p>🌍 <b>法規限制</b>：含野生貓科血統，部分國家或地區禁止或限制飼養。</p>
+    <p>⚠️ <b>品種疾病風險</b>：外觀培育帶來的問題（例如短頭顱的呼吸道問題），或某些遺傳病比較常見。</p>
   </div>
 
   <div class="toolbar">

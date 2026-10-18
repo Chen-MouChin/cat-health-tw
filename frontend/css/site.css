@@ -25,7 +25,7 @@ body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.75 var
 .er-pill { grid-area: er; display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 16px 0 12px; border-radius: var(--r-pill); background: var(--primary); color: var(--accent-on); font-size: 16px; font-weight: 700; text-decoration: none; box-shadow: 0 2px 0 var(--primary-deep); }
 .er-pill:hover { background: var(--primary-deep); color: var(--accent-on); }
 .er-pill .i { width: 20px; height: 20px; }
-.main-nav { grid-area: nav; display: flex; gap: 22px; margin-top: 6px; overflow-x: auto; border-bottom: 2px solid var(--primary-pale); scrollbar-width: none; }
+.main-nav { grid-area: nav; display: flex; gap: 22px; margin-top: 6px; overflow-x: auto; overscroll-behavior-x: contain; border-bottom: 2px solid var(--primary-pale); scrollbar-width: none; }
 .main-nav::-webkit-scrollbar { display: none; }
 .main-nav a { display: flex; align-items: center; min-height: 46px; color: var(--text); font-size: 16px; font-weight: 600; text-decoration: none; white-space: nowrap; }
 .main-nav a:hover { color: var(--primary); text-decoration: underline; }

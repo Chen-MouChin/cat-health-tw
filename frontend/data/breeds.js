@@ -1,7 +1,7 @@
 window.BREEDS = {
   "_meta": {
     "count": 68,
-    "generated_at": "2026-10-18 14:36"
+    "generated_at": "2026-10-18 15:17"
   },
   "breeds": [
     {
@@ -14,7 +14,7 @@ window.BREEDS = {
         " Lí hua māo (貍花貓)",
         " Li Hua"
       ],
-      "origin": "China",
+      "origin": "中國",
       "origin_en": "China",
       "country_code": "CN",
       "life_span_years": [
@@ -1617,7 +1617,7 @@ window.BREEDS = {
       "alt_names": [
         "Cypriot cat"
       ],
-      "origin": "Cyprus",
+      "origin": "賽普勒斯",
       "origin_en": "Cyprus",
       "country_code": "CY",
       "life_span_years": [
@@ -3608,7 +3608,7 @@ window.BREEDS = {
         " Kucinta",
         " Pura"
       ],
-      "origin": "Singapore",
+      "origin": "新加坡",
       "origin_en": "Singapore",
       "country_code": "SP",
       "life_span_years": [
@@ -4064,7 +4064,7 @@ window.BREEDS = {
         " Stubbin",
         " Rumpy"
       ],
-      "origin": "Isle of Man",
+      "origin": "曼島",
       "origin_en": "Isle of Man",
       "country_code": "IM",
       "life_span_years": [
@@ -5520,7 +5520,7 @@ window.BREEDS = {
       "alt_names": [
         "Spotted Mist"
       ],
-      "origin": "Australia",
+      "origin": "澳洲",
       "origin_en": "Australia",
       "country_code": "AU",
       "life_span_years": [
@@ -5535,7 +5535,7 @@ window.BREEDS = {
         "活躍",
         "社交",
         "愛玩樂",
-        "Relaxed",
+        "隨和",
         "親人"
       ],
       "temperament_en": [
@@ -6317,7 +6317,7 @@ window.BREEDS = {
         "Fox Cat",
         " Long-Haired Abyssinian"
       ],
-      "origin": "Somalia",
+      "origin": "索馬利亞",
       "origin_en": "Somalia",
       "country_code": "SO",
       "life_span_years": [
@@ -7124,7 +7124,7 @@ window.BREEDS = {
         "活躍",
         "忠誠",
         "愛玩",
-        "Sensible",
+        "懂事",
         "社交"
       ],
       "temperament_en": [
@@ -7232,10 +7232,10 @@ window.BREEDS = {
       ],
       "temperament_zh": [
         "冷靜",
-        "Relaxed",
+        "隨和",
         "話多",
         "愛玩",
-        "Warm"
+        "親切"
       ],
       "temperament_en": [
         "Calm",
@@ -8298,7 +8298,7 @@ window.BREEDS = {
       "alt_names": [
         "Alley cat"
       ],
-      "origin": "United Arab Emirates",
+      "origin": "阿拉伯聯合大公國",
       "origin_en": "United Arab Emirates",
       "country_code": "AE",
       "life_span_years": [
@@ -8569,7 +8569,7 @@ window.BREEDS = {
         "親人",
         "社交",
         "聰明",
-        "Sweet-tempered"
+        "脾氣好"
       ],
       "temperament_en": [
         "Affectionate",

@@ -112,3 +112,9 @@ a:focus-visible { outline-offset: 1px; background-color: var(--focus); color: va
   border-color: var(--accent);
   font-weight: 600;
 }
+
+/* 手機：轉向時不自動放大字；輸入框至少 16px，iOS 小於 16px 點下去會自動放大畫面 */
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+@media (max-width: 600px) {
+  input:not([type="checkbox"]):not([type="radio"]), select, textarea { font-size: 16px !important; }
+}
