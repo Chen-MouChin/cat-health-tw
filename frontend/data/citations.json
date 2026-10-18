@@ -981,7 +981,8 @@
     "pdf_url": "https://wsava.org/wp-content/uploads/2024/05/Chinese-Ver-2024-Vaccination-Guideline-for-Dogs-Cats.pdf",
     "verified_at": "2026-10-17",
     "doi": "10.1111/jsap.13718",
-    "pmid": "38568777"
+    "pmid": "38568777",
+    "zh_url": "https://wsava.org/wp-content/uploads/2024/05/Chinese-Ver-2024-Vaccination-Guideline-for-Dogs-Cats.pdf"
   },
   "WSAVA-NUTRITION-2011": {
     "title": "WSAVA Nutritional Assessment Guidelines",
@@ -1014,7 +1015,8 @@
     ],
     "doi": "10.1111/j.1748-5827.2011.01079.x",
     "pmid": "21649660",
-    "verified_at": "2026-10-17"
+    "verified_at": "2026-10-17",
+    "zh_url": "https://wsava.org/wp-content/uploads/2020/01/Global-Nutritional-Assesment-Guidelines-Chinese.pdf"
   },
   "ASPCA-TOXIC-PLANTS": {
     "title": "Toxic and Non-Toxic Plants List — ASPCA",
@@ -3931,7 +3933,8 @@
     "type": "guideline",
     "language": "en",
     "abstract_zh": "WSAVA 營養評估檢核表。飼主填寫：活動量、體重狀況、室內或戶外、目前吃的所有食物（主食、零食、潔牙產品、餵藥用的食物）的品牌、形式、份量、次數與開始時間，以及保健品。醫療團隊填寫：目前體重、理想體重、體態評分（9 分或 5 分制）、肌肉狀況評分（正常、輕度、中度、重度流失），再依篩檢風險因子決定要不要做延伸評估。",
-    "notes": "2026-10-17 小幫手提供，讀 PDF 原文核對。\n2026-10-17 官方中文版：https://wsava.org/wp-content/uploads/2020/01/8-%E7%87%9F%E9%A4%8A%E8%A9%95%E4%BC%B0%E6%AA%A2%E6%A0%B8%E8%A1%A8.pdf"
+    "notes": "2026-10-17 小幫手提供，讀 PDF 原文核對。\n2026-10-17 官方中文版：https://wsava.org/wp-content/uploads/2020/01/8-%E7%87%9F%E9%A4%8A%E8%A9%95%E4%BC%B0%E6%AA%A2%E6%A0%B8%E8%A1%A8.pdf",
+    "zh_url": "https://wsava.org/wp-content/uploads/2020/01/8-%E7%87%9F%E9%A4%8A%E8%A9%95%E4%BC%B0%E6%AA%A2%E6%A0%B8%E8%A1%A8.pdf"
   },
   "VCA-CAT-FOOD-LABELS": {
     "journal": null,
@@ -6049,7 +6052,8 @@
     "notes": "2026-10-17 新增：核對 cat-hepatic-lipidosis 時發現過重門檻出自這份圖表，不在 2011 營養評估指引本文。\n2026-10-17 官方中文版（2020 年版，英文版已在 2025 年更新）：https://wsava.org/wp-content/uploads/2020/10/Body-Condition-Score-Chart-Cat-Chinese-updated-August-2020.pdf",
     "cited_by": [
       "cat-hepatic-lipidosis"
-    ]
+    ],
+    "zh_url": "https://wsava.org/wp-content/uploads/2020/10/Body-Condition-Score-Chart-Cat-Chinese-updated-August-2020.pdf"
   },
   "TW-MOHW-1925-HOTLINE": {
     "title": "安心專線108年12月20日正式單軌使用1925 號碼改變 關心不變",
@@ -6102,7 +6106,8 @@
     ],
     "abstract_zh": "WSAVA 營養委員會的貓肌肉狀態評分圖（圖由 Tufts 大學提供）。用看和摸脊椎、肩胛骨、頭骨、髂骨翼來評估，肌肉流失通常最早出現在脊椎兩側的肌肉。分成正常、輕度流失、中度流失、重度流失四級，各附一張示意圖。體態評分偏胖（高於 5/9）的貓也可能有明顯肌肉流失，偏瘦（低於 4/9）的貓肌肉可能還正常，所以每次看診都要同時評估體態與肌肉；輕度流失和偏胖的貓尤其要用手摸。",
     "notes": "2026-10-17 從 WSAVA 營養指引頁摺疊裡的工具包加入；PDF 是圖片，看圖核對。官方中文版：https://wsava.org/wp-content/uploads/2020/01/4-%E8%82%8C%E8%82%89%E7%8B%80%E6%85%8B%E8%A9%95%E5%88%86%E8%A1%A8-%E8%B2%93.pdf",
-    "pdf_url": "https://wsava.org/wp-content/uploads/2020/01/Muscle-Condition-Score-Chart-for-Cats.pdf"
+    "pdf_url": "https://wsava.org/wp-content/uploads/2020/01/Muscle-Condition-Score-Chart-for-Cats.pdf",
+    "zh_url": "https://wsava.org/wp-content/uploads/2020/01/4-%E8%82%8C%E8%82%89%E7%8B%80%E6%85%8B%E8%A9%95%E5%88%86%E8%A1%A8-%E8%B2%93.pdf"
   },
   "WSAVA-CALORIE-CAT-2020": {
     "journal": null,
@@ -6156,7 +6161,8 @@
     ],
     "abstract_zh": "WSAVA 營養委員會給飼主的衛教單，教人判斷網路上的貓營養資訊。建議：網路資訊拿去和獸醫討論，用來補充而不是取代獸醫的說明；查作者背景，「寵物營養師」沒有統一的訓練標準，有公信力的是通過美國或歐洲獸醫營養專科學院認證的獸醫營養專科醫師；看網址是商業、教育或非營利機構；看說法有沒有引用同儕審查的研究，引用人、鼠、狗的研究不一定適用於貓；注意資料是否過時；個人經驗分享容易誤導；網站上的飼料排名多半依主觀或價格、成分等標準，應改用科學與品管等客觀標準；對誇大的說法保持懷疑。文末列出營養指引、飼料法規、營養諮詢、自製飲食、肥胖、保健品、生食等主題的可信網站。",
     "notes": "2026-10-17 從 WSAVA 營養指引頁摺疊裡的工具包加入，讀 PDF 原文核對。官方中文版：https://wsava.org/wp-content/uploads/2020/01/13-%E9%A4%8A%E8%B2%93%E7%A7%98%E7%AC%88-%E7%B6%B2%E8%B7%AF%E4%B8%8A%E7%9A%84%E7%87%9F%E9%A4%8A%E5%AD%B8%E7%9F%A5%E8%AD%98.pdf",
-    "pdf_url": "https://wsava.org/wp-content/uploads/2020/01/The-Savvy-Cat-Owner-s-Guide-to-Nutrition-on-the-Internet.pdf"
+    "pdf_url": "https://wsava.org/wp-content/uploads/2020/01/The-Savvy-Cat-Owner-s-Guide-to-Nutrition-on-the-Internet.pdf",
+    "zh_url": "https://wsava.org/wp-content/uploads/2020/01/13-%E9%A4%8A%E8%B2%93%E7%A7%98%E7%AC%88-%E7%B6%B2%E8%B7%AF%E4%B8%8A%E7%9A%84%E7%87%9F%E9%A4%8A%E5%AD%B8%E7%9F%A5%E8%AD%98.pdf"
   },
   "WSAVA-HOSPITAL-FEEDING-2013": {
     "journal": null,
@@ -6184,6 +6190,7 @@
     ],
     "abstract_zh": "WSAVA 營養委員會給醫療團隊的住院餵食指南。依厭食或食慾不振的天數（含在家的天數）決定介入：1 到 2 天要開餵食醫囑、每天記錄吃了多少與臨床狀況；3 到 4 天若沒有快要康復，多半需要營養支持，若要麻醉可考慮順便放餵食管；5 天就一定要營養支持，放餵食管或開始靜脈營養。已經營養不良的動物，血流動力學穩定後就要開始。餵食計畫要寫明飲食、途徑、份量與頻率，目標是達到靜止能量需求，可能要 2 到 3 天才達到。能吃就先試自行進食或誘食，吃不夠再用輔助餵食；依消化道功能與預計天數選擇鼻胃管、食道胃管、胃管、空腸管或靜脈營養。附體重對應的靜止能量需求表，例如 3 公斤每天 160 大卡、4 公斤 198 大卡、5 公斤 234 大卡。",
     "notes": "2026-10-17 從 WSAVA 營養指引頁摺疊裡的工具包加入，讀 PDF 原文核對。官方中文版：https://wsava.org/wp-content/uploads/2020/01/11-%E4%BD%8F%E9%99%A2%E7%8A%AC%E8%B2%93%E9%A4%B5%E9%A3%9F%E6%8C%87%E5%8D%97.pdf",
-    "pdf_url": "https://wsava.org/wp-content/uploads/2020/08/Feeding-Guide-for-Hospitalized-Dogs-and-Cats.pdf"
+    "pdf_url": "https://wsava.org/wp-content/uploads/2020/08/Feeding-Guide-for-Hospitalized-Dogs-and-Cats.pdf",
+    "zh_url": "https://wsava.org/wp-content/uploads/2020/01/11-%E4%BD%8F%E9%99%A2%E7%8A%AC%E8%B2%93%E9%A4%B5%E9%A3%9F%E6%8C%87%E5%8D%97.pdf"
   }
 }
