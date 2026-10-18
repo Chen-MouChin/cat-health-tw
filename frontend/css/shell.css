@@ -1,0 +1,97 @@
+/* shell.css — 全站頁首頁尾（首頁也用）。HTML 由 build.py 的 head_bar()／site_foot() 產生，行為在 js/theme.js。
+   結構參考負責人做的實驗室網站：頁首黏在上方、半透明霧面；手機收成「選單」，往下讀時讓出畫面、往上滑就回來；
+   頁尾分欄。配色用 theme.css 的苔綠、奶油米色，插畫用站上的線條貓。 */
+
+body { overflow-x: clip; }   /* 頁首頁尾的底色往兩側延伸到滿版，不能讓它撐出橫向捲軸 */
+
+/* ── 頁首 ── */
+.site-head {
+  position: sticky; top: 0; z-index: 100; isolation: isolate;
+  display: flex; align-items: center; gap: 10px;
+  min-height: 64px; padding: 10px 0;
+  transition: transform .28s cubic-bezier(.22, 1, .36, 1);
+}
+.site-head::before {   /* 滿版霧面底：內容欄只有 600／1000px 寬，底色往兩側延伸 */
+  content: ""; position: absolute; inset: 0 -100vmax; z-index: -1;
+  background: rgba(249, 246, 240, .92);
+  -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border-strong);
+  transition: box-shadow .2s;
+}
+html.head-scrolled .site-head::before { box-shadow: 0 6px 24px rgba(47, 74, 52, .08); }
+.brand { display: inline-flex; flex: none; color: var(--text); border-radius: 6px; }
+.brand svg { display: block; height: 34px; width: auto; }
+.head-tools { display: flex; align-items: center; gap: 8px; margin-left: auto; }
+.er-pill { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 14px 0 10px; border-radius: 999px; background: var(--primary); color: var(--accent-on); font-size: 16px; font-weight: 700; text-decoration: none; white-space: nowrap; box-shadow: 0 2px 0 var(--primary-deep); }
+.er-pill:hover { background: var(--primary-deep); color: var(--accent-on); }
+.er-pill .i { width: 20px; height: 20px; }
+.nav-toggle {
+  display: inline-flex; align-items: center; gap: 6px;
+  min-height: 44px; padding: 0 12px;
+  border: 1px solid var(--border-strong); border-radius: 12px;
+  background: var(--bg-card); color: var(--text);
+  font-family: inherit; font-size: 15px; font-weight: 700; line-height: 1; cursor: pointer; white-space: nowrap;
+}
+.nav-toggle svg { width: 18px; height: 18px; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; fill: none; }
+.nav-toggle[aria-expanded="true"] { background: var(--primary-pale); border-color: var(--primary); color: var(--primary-deep); }
+.main-nav a { color: var(--text); text-decoration: none; white-space: nowrap; }
+
+/* 手機、平板直放：分頁收進「選單」 */
+@media (max-width: 879px) {
+  .main-nav { display: none; }
+  .main-nav.open {
+    display: flex; flex-direction: column; gap: 2px;
+    position: absolute; top: 100%; left: -20px; right: -20px;
+    padding: 8px 20px 16px;
+    background: rgba(249, 246, 240, .98);
+    -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border-strong);
+    box-shadow: 0 14px 28px rgba(47, 74, 52, .10);
+  }
+  .main-nav a { display: flex; align-items: center; min-height: 48px; padding: 0 14px; border-radius: 12px; font-size: 17px; font-weight: 600; }
+  .main-nav a:hover { background: var(--primary-pale); }
+  .main-nav a[aria-current] { background: var(--primary-pale); color: var(--primary-deep); font-weight: 700; }
+  html.head-hidden .site-head { transform: translateY(-100%); }   /* 往下讀時讓出畫面，往上滑就回來 */
+}
+@media (max-width: 379px) {
+  .brand svg { height: 30px; }
+  .nav-toggle .lbl { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+}
+
+/* 桌機：分頁排在右邊，目前所在頁有淺綠底和一小段底線 */
+@media (min-width: 880px) {
+  .site-head { min-height: 76px; padding: 12px 0; gap: 16px; }
+  .brand svg { height: 38px; }
+  .main-nav { display: flex; gap: 4px; margin-left: auto; }
+  .main-nav a { position: relative; display: flex; align-items: center; min-height: 44px; padding: 0 14px; border-radius: 10px; font-size: 16px; font-weight: 600; transition: background .15s, color .15s; }
+  .main-nav a:hover { background: var(--primary-pale); color: var(--primary-deep); }
+  .main-nav a[aria-current] { background: var(--primary-pale); color: var(--primary-deep); font-weight: 700; }
+  .main-nav a[aria-current]::after { content: ""; position: absolute; left: 50%; bottom: 5px; width: 18px; height: 3px; border-radius: 999px; background: var(--primary); transform: translateX(-50%); }
+  .head-tools { margin-left: 4px; }
+  .nav-toggle { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { .site-head, .site-head::before, .main-nav a { transition: none; } }
+
+/* ── 頁尾 ── */
+.foot { position: relative; isolation: isolate; margin-top: 56px; padding: 36px 0 24px; font-size: 15px; line-height: 1.7; color: var(--text-2); }
+.foot::before { content: ""; position: absolute; inset: 0 -100vmax; z-index: -1; background: #f1ece1; border-top: 1px solid var(--border-strong); }
+.foot p { margin: 0; }
+.page:has(> .foot) { padding-bottom: 0; }   /* 頁尾底色貼齊頁面最下緣 */
+.foot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px 20px; padding-bottom: 24px; }
+.foot-about { grid-column: 1 / -1; display: grid; gap: 4px; }
+.foot-cat { width: 56px; margin-bottom: 4px; color: var(--primary); }
+.foot-cat svg { display: block; width: 100%; height: auto; }
+.foot-name { font-size: 17px; font-weight: 800; color: var(--text); }
+.foot-h { margin: 0 0 4px; padding: 0; border: 0; font-size: 13px; font-weight: 800; letter-spacing: .06em; line-height: 1.6; color: var(--text); }   /* 各頁自己的 h2 樣式不要帶進來 */
+.foot-col ul { list-style: none; margin: 0; padding: 0; }
+.foot-col a { display: inline-flex; align-items: center; min-height: 40px; color: var(--text-2); text-decoration: none; }
+.foot-col a:hover { color: var(--primary-deep); text-decoration: underline; }
+.foot-col a[aria-current] { color: var(--primary-deep); font-weight: 700; }
+.foot-bottom { display: grid; gap: 4px; padding-top: 16px; border-top: 1px solid var(--border-strong); font-size: 13px; color: var(--text-muted); }
+.foot-bottom a { color: inherit; }
+.foot-src { font-size: 13px; color: var(--text-muted); }
+@media (min-width: 880px) {
+  .foot { margin-top: 72px; padding-top: 44px; }
+  .foot-grid { grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 32px; }
+  .foot-about { grid-column: auto; }
+}

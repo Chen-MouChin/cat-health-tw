@@ -18,19 +18,6 @@ body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.75 var
 .skip:focus-visible { top: 8px; }
 .page { max-width: 600px; margin: 0 auto; padding: 0 20px 24px; }
 
-/* 頁首：與首頁相同 */
-.site-head { display: grid; grid-template-columns: 1fr auto; grid-template-areas: "brand er" "nav nav"; align-items: center; column-gap: 12px; padding-top: 12px; }
-.brand { grid-area: brand; display: inline-flex; justify-self: start; color: var(--text); border-radius: 6px; }
-.brand svg { display: block; height: 38px; width: auto; }
-.er-pill { grid-area: er; display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 16px 0 12px; border-radius: var(--r-pill); background: var(--primary); color: var(--accent-on); font-size: 16px; font-weight: 700; text-decoration: none; box-shadow: 0 2px 0 var(--primary-deep); }
-.er-pill:hover { background: var(--primary-deep); color: var(--accent-on); }
-.er-pill .i { width: 20px; height: 20px; }
-.main-nav { grid-area: nav; display: flex; gap: 22px; margin-top: 6px; overflow-x: auto; overscroll-behavior-x: contain; border-bottom: 2px solid var(--primary-pale); scrollbar-width: none; }
-.main-nav::-webkit-scrollbar { display: none; }
-.main-nav a { display: flex; align-items: center; min-height: 46px; color: var(--text); font-size: 16px; font-weight: 600; text-decoration: none; white-space: nowrap; }
-.main-nav a:hover { color: var(--primary); text-decoration: underline; }
-.main-nav a[aria-current] { color: var(--primary-deep); box-shadow: inset 0 -3px 0 var(--primary); }
-.main-nav a:focus-visible { outline-offset: -3px; }
 
 /* 頁面標題區 */
 .page-head { margin: 26px 0 18px; }
@@ -101,21 +88,11 @@ body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.75 var
 .ad { margin-top: 32px; }
 .ad-label { display: block; margin-bottom: 4px; font-size: 13px; letter-spacing: 0.1em; color: var(--text-muted); }
 
-/* 頁尾：與首頁相同 */
-.foot { display: grid; gap: 10px; margin-top: 48px; padding-top: 20px; border-top: 2px solid var(--primary-pale); font-size: 15px; color: var(--text-2); }
-.foot p { margin: 0; }
-.foot-cat { width: 64px; color: var(--primary); }
-.foot-cat svg { display: block; width: 100%; height: auto; }
 .cat-body { fill: var(--bg-card); }
 .cat-nose { fill: var(--blush); stroke: var(--blush); stroke-width: 0.8; stroke-linejoin: round; }
-.foot nav { display: flex; flex-wrap: wrap; column-gap: 18px; }
-.foot nav a { display: inline-flex; align-items: center; min-height: 44px; font-weight: 400; }
-.foot-src { font-size: 13px; color: var(--text-muted); }
 
 @media (min-width: 880px) {
   .page { max-width: 1000px; padding: 0 32px 32px; }
-  .site-head { grid-template-columns: auto 1fr auto; grid-template-areas: "brand nav er"; padding: 16px 0; border-bottom: 2px solid var(--primary-pale); }
-  .main-nav { justify-content: flex-end; margin: 0 8px 0 0; border: 0; }
   .page-head { margin: 36px 0 22px; }
   .page-head h1 { font-size: 40px; }
   .sec-h { font-size: 24px; }
