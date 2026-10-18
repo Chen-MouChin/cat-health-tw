@@ -968,7 +968,8 @@
     "cited_by": [
       "cat-emergency-care-taiwan"
     ],
-    "verified_at": "2026-10-17"
+    "verified_at": "2026-10-17",
+    "home_only": "VCA"
   },
   "WSAVA-VACCINATION-2024": {
     "title": "WSAVA Guidelines for the Vaccination of Dogs and Cats (2024 Update)",
@@ -1079,7 +1080,8 @@
     "notes": "ASPCA 免費，毒物清單的金標準｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
       "cat-toxic-substances-taiwan"
-    ]
+    ],
+    "home_only": "ASPCA"
   },
   "ASPCA-TOXIC-FOODS": {
     "title": "People Foods to Avoid Feeding Your Pets — ASPCA",
@@ -1112,7 +1114,8 @@
       "cat-toxic-substances-taiwan",
       "cat-water-urinary-health-taiwan"
     ],
-    "verified_at": "2026-10-17"
+    "verified_at": "2026-10-17",
+    "home_only": "ASPCA"
   },
   "SNOWDON-CAT-MUSIC-2015": {
     "title": "Cats Prefer Species-Appropriate Music",
@@ -1970,7 +1973,8 @@
     "status": "pending_review",
     "url_verified": true,
     "notes": "auto-crawled, search: kidney disease cat",
-    "cited_by": []
+    "cited_by": [],
+    "home_only": "VCA"
   },
   "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022": {
     "title": "WSAVA Animal Welfare Guidelines for companion animal practitioners and veterinary teams",
@@ -2211,7 +2215,8 @@
     "status": "pending_review",
     "url_verified": false,
     "notes": "ASPCA poison database",
-    "cited_by": []
+    "cited_by": [],
+    "home_only": "ASPCA"
   },
   "FDA-LILIES-CATS-2024": {
     "title": "Lovely Lilies and Curious Cats: A Dangerous Combination",
@@ -2307,7 +2312,8 @@
     "url_verified": true,
     "notes": "2026-10-17 讀原文核對；舊摘要列的品種名（虎斑、亞洲、星辰等）原文沒有，那份清單在 FDA 衛教文。｜2026-10-19 條款檢查：未確認：HTTP 429（已換掉）",
     "cited_by": [],
-    "verified_at": "2026-10-17"
+    "verified_at": "2026-10-17",
+    "home_only": "VCA"
   },
   "ICATCARE-LILY-POISONING": {
     "title": "Lily poisoning in cats — International Cat Care",
@@ -2340,7 +2346,8 @@
     "notes": "iCatCare = ISFM 母組織，權威｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
       "cat-toxic-substances-taiwan"
-    ]
+    ],
+    "home_only": "iCatCare"
   },
   "PEDERSEN-2019-FIP-GS441524": {
     "title": "Efficacy and safety of the nucleoside analog GS-441524 for treatment of cats with naturally occurring feline infectious peritonitis",
@@ -2830,7 +2837,8 @@
       "barf-raw-food-taiwan"
     ],
     "notes": "2026-10-08 核對。原登錄的 /news/raw-food-diets-pets 是 404，ASPCA 沒有專講生食的頁面，改用毒物控制中心的人類食物頁。",
-    "verified_at": "2026-10-08"
+    "verified_at": "2026-10-08",
+    "home_only": "ASPCA"
   },
   "AAHA-FLUID-2024": {
     "title": "2024 AAHA Fluid Therapy Guidelines for Dogs and Cats",
@@ -3314,7 +3322,8 @@
     "disease_tags": [
       "behavior"
     ],
-    "notes": "2026-10-15 讀網頁原文核對。｜2026-10-19 條款檢查：有"
+    "notes": "2026-10-15 讀網頁原文核對。｜2026-10-19 條款檢查：有",
+    "home_only": "VCA"
   },
   "VCA-CAT-FEARS-PHOBIAS": {
     "type": "guideline",
@@ -3339,7 +3348,8 @@
     "disease_tags": [
       "behavior"
     ],
-    "notes": "2026-10-15 讀網頁原文核對。｜2026-10-19 條款檢查：有"
+    "notes": "2026-10-15 讀網頁原文核對。｜2026-10-19 條款檢查：有",
+    "home_only": "VCA"
   },
   "TW-PET-BUSINESS-RULES": {
     "type": "law",
@@ -3693,7 +3703,8 @@
     "disease_tags": [
       "dermatology"
     ],
-    "notes": "2026-10-15 讀網頁原文核對。｜2026-10-19 條款檢查：有（LifeLearn 版權聲明）"
+    "notes": "2026-10-15 讀網頁原文核對。｜2026-10-19 條款檢查：有（LifeLearn 版權聲明）",
+    "home_only": "VCA"
   },
   "VCA-FLEA-ALLERGY-CATS": {
     "status": "pending_review",
@@ -3716,7 +3727,8 @@
     "disease_tags": [
       "dermatology"
     ],
-    "notes": "2026-10-15 讀網頁原文核對。｜2026-10-19 條款檢查：有（LifeLearn 版權聲明，2026-04-10 更新）"
+    "notes": "2026-10-15 讀網頁原文核對。｜2026-10-19 條款檢查：有（LifeLearn 版權聲明，2026-04-10 更新）",
+    "home_only": "VCA"
   },
   "VCA-FOOD-ALLERGY-CATS": {
     "status": "pending_review",
@@ -3739,7 +3751,8 @@
     "disease_tags": [
       "dermatology"
     ],
-    "notes": "2026-10-15 讀網頁原文核對。｜2026-10-19 條款檢查：有（LifeLearn 版權聲明）"
+    "notes": "2026-10-15 讀網頁原文核對。｜2026-10-19 條款檢查：有（LifeLearn 版權聲明）",
+    "home_only": "VCA"
   },
   "MOA-SHELTER-STATS-2024": {
     "title": "113年度全國公立動物收容所收容處理情形統計表",
@@ -3891,7 +3904,8 @@
     "url_verified": true,
     "verified_at": "2026-10-17",
     "notes": "2026-10-17 讀原文核對（頁面沒有作者與日期；圖片路徑為 2024）。｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。｜2026-10-19 條款檢查：未確認：HTTP 429（已換掉）",
-    "cited_by": []
+    "cited_by": [],
+    "home_only": "VCA"
   },
   "VCA-CAT-GAME-DAY": {
     "title": "Dos and don'ts for a cat-safe game day!",
@@ -3920,7 +3934,8 @@
     "url_verified": true,
     "verified_at": "2026-10-17",
     "notes": "2026-10-17 讀原文核對（頁面沒有作者與日期）。｜2026-10-19 條款檢查：未確認：HTTP 429（已換掉）",
-    "cited_by": []
+    "cited_by": [],
+    "home_only": "VCA"
   },
   "APHIA-RABIES-VACCINE-FAQ": {
     "title": "狂犬病疫苗",
@@ -4079,7 +4094,8 @@
     "type": "educational",
     "language": "en",
     "abstract_zh": "VCA 的貓飼料標示說明。原料要依重量由多到少排列，含水量高的原料比較重，所以含水的全雞可能排第一，即使飼料大部分是穀物。營養充足聲明可以用配方軟體與原料營養資料支持，也可以用飼餵試驗；飼餵試驗較理想，但較貴、較費時。保證成分分析列的是最低與最高百分比，不是確切含量，可以向廠商索取依實驗室分析的典型分析。要確認聲明對應的生命階段符合自己的貓。",
-    "notes": "2026-10-17 讀原文核對（頁面沒有日期）。｜2026-10-19 條款檢查：有"
+    "notes": "2026-10-17 讀原文核對（頁面沒有日期）。｜2026-10-19 條款檢查：有",
+    "home_only": "VCA"
   },
   "AAFCO-PFLM-TRIFOLD-2023": {
     "journal": null,
@@ -4230,7 +4246,8 @@
     "year": 2025,
     "type": "educational",
     "abstract_zh": "VCA 的魚油說明。魚油是來自冷水魚的保健品，用於發炎性疾病，例如皮膚過敏與皮膚炎，在貓狗都廣泛使用；保健品上市前不經美國 FDA 審查安全與效果。嚴重副作用包括異常瘀血或出血，貓特別要注意，出現時停用並聯絡獸醫；吃抗凝血藥的寵物要謹慎；找不到可靠來源時不要用，部分來源有重金屬中毒風險。保存在陰涼乾燥避光處，依廠商指示。頁面沒有給劑量。\n\n■ 全文核對補充（2026-10-18）\n魚油富含 EPA 與 DHA 兩種 omega-3 脂肪酸，有抗發炎作用，用於皮膚過敏（異位性皮膚炎）、皮膚炎、關節炎、腎病、心臟病、發炎性腸病等發炎性疾病，貓狗都常用（What is fish oil?）。",
-    "notes": "2026-10-17 讀原文核對。｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。｜2026-10-19 條款檢查：有（LifeLearn 授權內容，頁尾明文禁止用 AI 或自動化工具改寫、轉載、改編）"
+    "notes": "2026-10-17 讀原文核對。｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。｜2026-10-19 條款檢查：有（LifeLearn 授權內容，頁尾明文禁止用 AI 或自動化工具改寫、轉載、改編）",
+    "home_only": "VCA"
   },
   "VCA-PROBIOTICS": {
     "journal": null,
@@ -4257,7 +4274,8 @@
     "year": 2025,
     "type": "educational",
     "abstract_zh": "VCA 的益生菌說明。最常用來支持貓、狗、馬、兔的腸胃道，例如抗生素或壓力引起的腹瀉；保健品和草藥很少經過嚴謹的試驗確認效果，上市前也不經美國 FDA 審查。常見副作用是輕微脹氣或腸胃不適，少數出現過敏反應（呼吸不規則、疹子、發燒、臉腫）時停用並聯絡獸醫。依廠商指示保存，避光、防潮、避熱。",
-    "notes": "2026-10-17 讀原文核對。｜2026-10-19 條款檢查：有"
+    "notes": "2026-10-17 讀原文核對。｜2026-10-19 條款檢查：有",
+    "home_only": "VCA"
   },
   "CORNELL-HAIRBALLS": {
     "journal": null,
@@ -4317,7 +4335,8 @@
     "year": 2024,
     "type": "educational",
     "abstract_zh": "VCA 的毛球處理方法。定期梳毛，在貓理毛吞下之前把掉毛梳掉；化毛飼料或化毛零食常含纖維或潤滑成分，幫助毛髮通過；增加水源或加濕食幫助毛髮在消化道移動；反覆嘔吐等嚴重情況，獸醫可能開藥；定期健檢以排除其他疾病。",
-    "notes": "2026-10-17 讀原文核對（頁面沒有作者與日期）。｜2026-10-19 條款檢查：頁面本身沒有（VCA 自寫內容，頁尾只有 VCA 版權與 Terms & Conditions 連結，條款頁未讀）"
+    "notes": "2026-10-17 讀原文核對（頁面沒有作者與日期）。｜2026-10-19 條款檢查：頁面本身沒有（VCA 自寫內容，頁尾只有 VCA 版權與 Terms & Conditions 連結，條款頁未讀）",
+    "home_only": "VCA"
   },
   "SARTORE-2023-SCOTTISH-FOLD": {
     "open_access": true,
@@ -4413,7 +4432,8 @@
     "type": "educational",
     "url": "https://icatcare.org/",
     "abstract_zh": "iCatCare（國際貓科醫學會 ISFM 的母組織）的衛教文，2024 年 6 月首次發表、2025 年 9 月更新。繼續繁殖帶有已知會造成明顯疼痛疾病的基因變異的貓是不道德的，iCatCare 與英國獸醫協會（BVA）一起呼籲重視折耳貓的痛苦，唯一的預防方法是負責任的繁殖。症狀：不想動、姿勢與步態異常、跛行、跳不上去、四肢短而變形；疼痛相關的改變如躲藏、食慾變差、在砂盆外排泄、理毛變少；嚴重度差異大，有些貓沒有症狀，有些會逐漸惡化；關節病變可能讓尾巴、腳踝、膝蓋融合。底層疾病無法治療，獸醫可以用藥物控制疼痛；居家可用低矮或有階梯的床、墊高的食碗水碗、低邊砂盆、斜坡、在光滑地板鋪地毯。",
-    "notes": "2026-10-17 讀原文核對。"
+    "notes": "2026-10-17 讀原文核對。",
+    "home_only": "iCatCare"
   },
   "VCA-NAIL-TRIM": {
     "journal": null,
@@ -4437,7 +4457,8 @@
     "url": "https://vcahospitals.com/",
     "year": 2024,
     "abstract_zh": "室內貓每 2 到 4 週剪一次指甲，可以減少家具受損；老貓的指甲可能長到彎曲刺進肉墊，需要飼主幫忙。白色指甲看得到血線，深色指甲剪到指甲往下勾的地方；寧可分幾次、每次剪短一點，也不要一次剪太多。指甲剪有鍘刀式和剪刀式兩種。剪到血線時在指甲末端撒止血粉，沒有的話用麵粉或玉米粉。貓抗拒時可以剪一隻就給一次零食，整個過程中常常給小零食；貓強烈抗拒保定時停下來，請獸醫協助。",
-    "notes": "｜2026-10-19 條款檢查：有（LifeLearn 版權聲明，2025-03-19 更新）"
+    "notes": "｜2026-10-19 條款檢查：有（LifeLearn 版權聲明，2025-03-19 更新）",
+    "home_only": "VCA"
   },
   "VCA-GROOMING-COAT": {
     "journal": null,
@@ -4463,7 +4484,8 @@
     "url": "https://vcahospitals.com/",
     "year": 2026,
     "abstract_zh": "VCA 的梳毛與毛髮照顧（2026-02-13 更新）。長、絲狀或捲毛的貓要每天梳，避免打結；短毛貓可以少梳一些。短毛或底毛少的貓用硬毛刷；中長毛用長齒金屬梳或交錯齒的梳子；掉毛多可以用底毛梳。小的打結或毛球可以輕輕梳開；大的毛結只能用電剪，不要用剪刀，嚴重打結請美容師或獸醫處理。多數健康成貓很少需要洗澡，老貓、關節炎、過重或過敏的貓可能需要；只用貓專用洗毛精，例行洗澡建議無香料的低敏配方，洗後可用潤絲產品補充皮膚水分。工具可以請獸醫團隊依你的貓建議。",
-    "notes": "｜2026-10-19 條款檢查：有（LifeLearn 版權聲明，2026-02-13 更新）"
+    "notes": "｜2026-10-19 條款檢查：有（LifeLearn 版權聲明，2026-02-13 更新）",
+    "home_only": "VCA"
   },
   "VCA-KITTEN-GROOMING": {
     "journal": null,
@@ -4487,7 +4509,8 @@
     "url": "https://vcahospitals.com/",
     "year": 2024,
     "abstract_zh": "VCA 的幼貓梳理說明。貓不需要例行清耳朵；看到耳朵裡有髒污堆積、發紅或耳朵周圍有抓痕，預約獸醫排除疾病。室內幼貓每 2 到 4 週剪一次指甲，減少家具受損並避免指甲過長；會出門的幼貓建議留長一點保護自己。剪指甲時用非慣用手握住腳掌、輕壓肉墊讓指甲露出；多數貓的指甲淺色，看得到血線（含血管和神經的粉紅色部分），看不到時剪到指甲往下勾的地方；止血粉可以先備著，沒有時用麵粉或玉米粉。獸醫牙科醫師建議每天至少刷一次牙，做不到的話每週一兩次也比完全不刷好；用貓專用牙膏。",
-    "notes": "｜2026-10-19 條款檢查：沒有（pediatric/kitten 頁，只有 VCA 一般版權聲明，沒有 LifeLearn 的 AI 條款）"
+    "notes": "｜2026-10-19 條款檢查：沒有（pediatric/kitten 頁，只有 VCA 一般版權聲明，沒有 LifeLearn 的 AI 條款）",
+    "home_only": "VCA"
   },
   "CORNELL-EAR-DISORDERS": {
     "journal": null,
@@ -4572,7 +4595,8 @@
     "url": "https://vcahospitals.com/",
     "year": 2024,
     "abstract_zh": "把幼貓連同外出籠放進家裡安靜、少人走動的小房間，水、食物、貓砂盆放在外出籠門口附近，貓砂盡量沿用原本用的；打開外出籠門，讓貓自己願意時出來，來去自如；30 分鐘後還不出來，可以拿掉外出籠上蓋，輕輕讓牠看到食物、水和砂盆。讓牠有足夠時間熟悉這個房間，再一次一個房間慢慢擴大，飼主陪著。沒人看顧時要有安全的區域，食物和水要和砂盆分開，檢查有沒有幼貓會躲進去卡住的縫隙。和家中其他寵物見面時，原本的寵物用牽繩或有人抱著，有攻擊跡象才介入；餵食和睡覺的地方先分開，新幼貓要有可以爬高或躲起來避開衝突的地方；介紹通常需要一到兩週。\n\n■ 全文核對補充（2026-10-18）\n全文核對補充：家裡已有其他寵物時，新幼貓更需要待在限定區域，一方面要有自己的安全空間，一方面不要侵入原本寵物已占用的空間；餵食與睡覺的地方先分開一段時間（What should I do if I have other pets?）。",
-    "notes": "2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。｜2026-10-19 條款檢查：已全數換掉，未核對｜2026-10-19 條款檢查：有（LifeLearn 著作權聲明：The use of artificial intelligence or automated tools to further rewrite, republish, adapt, or repurpose this content… is prohibited）"
+    "notes": "2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。｜2026-10-19 條款檢查：已全數換掉，未核對｜2026-10-19 條款檢查：有（LifeLearn 著作權聲明：The use of artificial intelligence or automated tools to further rewrite, republish, adapt, or repurpose this content… is prohibited）",
+    "home_only": "VCA"
   },
   "VCA-INTRO-ADULT-CATS": {
     "journal": null,
@@ -4599,7 +4623,8 @@
     "url": "https://vcahospitals.com/",
     "year": 2024,
     "abstract_zh": "獸醫行為專科醫師撰寫。新貓先待在小房間（浴室、洗衣間、客房），裡面有食物、水和砂盆，讓牠在這個安全空間待幾天；這段期間分別陪兩隻貓。接著讓原本的貓進新貓的房間、新貓探索家裡其他地方，幾個小時後各自回去，交換幾次。再來讓兩隻貓隔著屏障看得到但碰不到，每次把食碗或玩具慢慢移近屏障。出現哈氣或低吼，就退回上一個順利的步驟。合成貓費洛蒙有噴劑和擴香，可能減輕壓力。",
-    "notes": "｜2026-10-19 條款檢查：已全數換掉，未核對｜2026-10-19 條款檢查：有｜2026-10-19 條款檢查：有"
+    "notes": "｜2026-10-19 條款檢查：已全數換掉，未核對｜2026-10-19 條款檢查：有｜2026-10-19 條款檢查：有",
+    "home_only": "VCA"
   },
   "VCA-SECOND-CAT": {
     "journal": null,
@@ -4624,7 +4649,8 @@
     "url": "https://vcahospitals.com/",
     "year": 2024,
     "abstract_zh": "新貓要有獨立的區域，有床、食物、砂盆和活動的地方。循序漸進的介紹可能需要幾天、幾週或幾個月；即使很小心，有些成貓始終不接受另一隻成貓。步驟：先分開幾天並交換床墊熟悉氣味；輪流讓兩隻貓待在對方的區域幾小時或一天；隔著屏障在兩側餵食、一起玩，幾週內慢慢移近；放鬆之後在監督下共處。每一步花幾天以上，讓壓力降到最低。",
-    "notes": "｜2026-10-19 條款檢查：有"
+    "notes": "｜2026-10-19 條款檢查：有",
+    "home_only": "VCA"
   },
   "ICATCARE-NEW-CAT-SETTLE": {
     "journal": null,
@@ -4656,7 +4682,8 @@
     "url": "https://icatcare.org/",
     "year": 2025,
     "abstract_zh": "iCatCare 衛教文（2024-10 發表，2025-09 更新）。幼貓一定要先待在一個房間，成貓尤其家裡已經有貓時也是；房間裡放食碗水碗、床、砂盆、玩具、貓抓柱。砂盆放在不顯眼的角落，食物放在對面，水離食物幾步遠、不要放在砂盆旁邊。幼貓可以用側放、裡面鋪毛毯的紙箱當躲藏處；成貓提供高處和隱蔽的安全處有助於安全感。把外出籠放進房間打開門，讓貓自己出來，不要強迫。貓躲起來時不要哄牠出來，坐在同一個房間讓牠自己靠近；不感興趣或焦慮就讓牠獨處。幼貓前幾週待在一個房間；有些貓要幾週才在新家感到安全。焦慮的貓可能只在半夜才吃東西、用砂盆，超過 24 小時要聯絡獸醫。孩子一開始在監督下短暫接觸。\n\n■ 全文核對補充（2026-10-18）\n全文核對補充：幼貓不要叫醒來摸或玩，要讓牠不被打擾地睡（Helping kittens settle in）。成貓若很想探索、家裡又沒有其他貓，不必限制在一個房間；有些貓要幾週才在新家感到安全（Helping adult cats settle in）。建議帶一些原本的寢具回家，讓幼貓有熟悉的東西。原文沒有提到不要用原本那隻貓用過的物品。\n\n■ 全文核對補充（2026-10-19）\n新貓剛到的頭幾天到幾週住在哪裡要先想好：幼貓尤其要先待在一個房間，成貓一開始待在一個房間也可能比較自在，家裡已經有貓時則必須如此。幼貓前幾週選一個安靜的房間；可以考慮沿用幼貓原本家裡用的貓砂，頭 1 到 2 週吃原本的食物，讓牠一開始有熟悉的東西。\n\n■ 全文核對補充（2026-10-19）\n幼貓選安靜的房間住前幾週；考慮用原本住處的同一種貓砂，前 1 到 2 週吃一樣的食物，讓牠熟悉；外出籠放進房間後小心打開門。幼貓到家頭 24 小時讓牠在安靜環境適應，不要一下子見很多新的人和小孩；互動要等幼貓主動，可伸手讓牠聞、蹭（Helping kittens settle in）。合成貓費洛蒙擴散器可能幫助新貓或幼貓適應時更有安全感。幼貓和成貓引介時有時可讓幼貓住大籠子，建議先尋求行為建議。範例圖是準備好所有資源的客房。",
-    "notes": "2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。"
+    "notes": "2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
+    "home_only": "iCatCare"
   },
   "TW-PET-REGISTRATION-RULES": {
     "title": "寵物登記管理辦法",
@@ -4718,7 +4745,8 @@
     "notes": "2026-10-17 讀原文核對。",
     "cited_by": [
       "rehoming-cat-responsibly-taiwan"
-    ]
+    ],
+    "home_only": "ASPCA"
   },
   "TW-CONDO-ACT-16": {
     "title": "公寓大廈管理條例第 16 條",
@@ -4949,7 +4977,8 @@
     "cited_by": [],
     "cited_by_add": [
       "cat-ckd-complete-guide"
-    ]
+    ],
+    "home_only": "VCA"
   },
   "VCA-CAT-EMERGENCIES": {
     "journal": null,
@@ -4975,7 +5004,8 @@
     "cited_by": [
       "cat-neutering-aftercare-taiwan"
     ],
-    "notes": "2026-10-17 讀原文核對，取代 VCA-EMERGENCY-SIGNS 在文章裡的急診徵兆引用。｜2026-10-19 條款檢查：該頁頁尾 LifeLearn 版權聲明有「The use of artificial intelligence or automated tools to rewrite, republish, adapt, or repurpose this content ... is prohibited」｜2026-10-19 條款檢查：有（LifeLearn 版權聲明）｜2026-10-19 條款檢查：有"
+    "notes": "2026-10-17 讀原文核對，取代 VCA-EMERGENCY-SIGNS 在文章裡的急診徵兆引用。｜2026-10-19 條款檢查：該頁頁尾 LifeLearn 版權聲明有「The use of artificial intelligence or automated tools to rewrite, republish, adapt, or repurpose this content ... is prohibited」｜2026-10-19 條款檢查：有（LifeLearn 版權聲明）｜2026-10-19 條款檢查：有",
+    "home_only": "VCA"
   },
   "VCA-SIGNS-ILLNESS-CATS": {
     "journal": null,
@@ -5004,7 +5034,8 @@
       "cat-hepatic-lipidosis",
       "cat-obesity-weight-management"
     ],
-    "notes": "2026-10-17 讀原文核對。｜2026-10-18 讀原文補充摘要（整篇補出處時）。｜2026-10-19 條款檢查：該頁頁尾 LifeLearn 版權聲明有「The use of artificial intelligence or automated tools to rewrite, republish, adapt, or repurpose this content ... is prohibited」｜2026-10-19 條款檢查：有（LifeLearn 版權聲明）｜2026-10-19 條款檢查：有"
+    "notes": "2026-10-17 讀原文核對。｜2026-10-18 讀原文補充摘要（整篇補出處時）。｜2026-10-19 條款檢查：該頁頁尾 LifeLearn 版權聲明有「The use of artificial intelligence or automated tools to rewrite, republish, adapt, or repurpose this content ... is prohibited」｜2026-10-19 條款檢查：有（LifeLearn 版權聲明）｜2026-10-19 條款檢查：有",
+    "home_only": "VCA"
   },
   "VCA-FALLS-CATS": {
     "journal": null,
@@ -5031,7 +5062,8 @@
     "cited_by": [
       "cat-emergency-care-taiwan"
     ],
-    "notes": "2026-10-17 讀原文核對。｜2026-10-19 條款檢查：該頁頁尾 LifeLearn 版權聲明有「The use of artificial intelligence or automated tools to rewrite, republish, adapt, or repurpose this content ... is prohibited」｜2026-10-19 條款檢查：有，頁尾版權聲明含同一句禁止 AI 改寫條款（2026-10-19 讀到）"
+    "notes": "2026-10-17 讀原文核對。｜2026-10-19 條款檢查：該頁頁尾 LifeLearn 版權聲明有「The use of artificial intelligence or automated tools to rewrite, republish, adapt, or repurpose this content ... is prohibited」｜2026-10-19 條款檢查：有，頁尾版權聲明含同一句禁止 AI 改寫條款（2026-10-19 讀到）",
+    "home_only": "VCA"
   },
   "ONEILL-2019-PERSIAN": {
     "journal": "Scientific Reports",
@@ -5627,7 +5659,8 @@
     "abstract_zh": "列出常見的貓遺傳病，包括多囊腎、肥厚型心肌病、低血鉀性肌病、緬甸貓頭部缺陷、神經節苷脂沉積症，以及波斯貓等品種的嚴重短頭；波斯貓多囊腎過去比例很高，靠 DNA 檢測後在許多國家已大幅下降。\n\n■ 全文核對補充（2026-10-19）\n過去波斯貓與相關品種最多一半以上有多囊腎，常導致慢性腎病與早死；現在可用血液或口腔拭子做 DNA 檢測找出帶病的貓、不讓牠繁殖，許多國家的發生率已大幅下降。\n\n■ 全文核對補充（2026-10-19）\n波斯貓與相關品種的多囊腎（PKD）：過去可能有一半或更多的波斯貓受影響，常造成慢性腎病與提早死亡；現在可用血液或口腔拭子做準確的 DNA 檢測，避免讓帶病的貓繁殖，許多國家的發生率已大幅下降。",
     "cited_by_add": [
       "cat-ckd-complete-guide"
-    ]
+    ],
+    "home_only": "iCatCare"
   },
   "ICATCARE-WHITE-DEAFNESS": {
     "open_access": true,
@@ -5650,7 +5683,8 @@
     "year": 2025,
     "type": "educational",
     "url": "https://icatcare.org/",
-    "abstract_zh": "白毛基因同時影響白毛、藍眼與失聰，雙眼都是藍色的白貓，失聰機率是雙眼非藍色白貓的 3 到 5 倍；失聰可能是單耳或雙耳，可以用 BAER 檢測。"
+    "abstract_zh": "白毛基因同時影響白毛、藍眼與失聰，雙眼都是藍色的白貓，失聰機率是雙眼非藍色白貓的 3 到 5 倍；失聰可能是單耳或雙耳，可以用 BAER 檢測。",
+    "home_only": "iCatCare"
   },
   "ICATCARE-OBESITY": {
     "open_access": true,
@@ -5675,7 +5709,8 @@
     "year": 2025,
     "type": "educational",
     "url": "https://icatcare.org/",
-    "abstract_zh": "結紮後的貓比較容易變胖，代謝率大約下降兩成，維持體態所需的食物也比較少。\n\n■ 全文核對補充（2026-10-19）\n比理想體重重 10% 到 19% 算過重；太胖或太瘦都可能縮短壽命。肥胖會提高風險或讓病情變重的疾病有糖尿病、下泌尿道疾病、關節炎、非過敏性皮膚病、呼吸道疾病，併發症包括麻醉風險、免疫力下降、難產、便祕、脂肪肝、耐力下降。理想體重依年齡和品種不同，所以常用體態評分（文中是 5 分制）。活動少、運動機會受限的室內貓比活動量大的貓容易變胖。過重時不要沒和醫療團隊討論就自己減少食物，突然限制食物可能讓貓生病，減重前也可能需要先做健康檢查。建議多用逗貓棒、球增加活動（老貓關節痛可能要先止痛或治療）、減少零食、用益智餵食器、和醫生討論減重飲食（能減少飢餓感又顧到維生素），並用廚房秤量飼料，用量杯或量匙很容易多裝。到達目標後定期量體重（在醫院或在家用嬰兒秤）避免回胖。減重太快可能引發脂肪肝，穩定慢慢減最好，嚴重過重的貓可能要一年才回到理想體態（When to contact your veterinary team）。"
+    "abstract_zh": "結紮後的貓比較容易變胖，代謝率大約下降兩成，維持體態所需的食物也比較少。\n\n■ 全文核對補充（2026-10-19）\n比理想體重重 10% 到 19% 算過重；太胖或太瘦都可能縮短壽命。肥胖會提高風險或讓病情變重的疾病有糖尿病、下泌尿道疾病、關節炎、非過敏性皮膚病、呼吸道疾病，併發症包括麻醉風險、免疫力下降、難產、便祕、脂肪肝、耐力下降。理想體重依年齡和品種不同，所以常用體態評分（文中是 5 分制）。活動少、運動機會受限的室內貓比活動量大的貓容易變胖。過重時不要沒和醫療團隊討論就自己減少食物，突然限制食物可能讓貓生病，減重前也可能需要先做健康檢查。建議多用逗貓棒、球增加活動（老貓關節痛可能要先止痛或治療）、減少零食、用益智餵食器、和醫生討論減重飲食（能減少飢餓感又顧到維生素），並用廚房秤量飼料，用量杯或量匙很容易多裝。到達目標後定期量體重（在醫院或在家用嬰兒秤）避免回胖。減重太快可能引發脂肪肝，穩定慢慢減最好，嚴重過重的貓可能要一年才回到理想體態（When to contact your veterinary team）。",
+    "home_only": "iCatCare"
   },
   "GCCF-ASIAN": {
     "open_access": true,
@@ -5891,7 +5926,8 @@
     "year": 2025,
     "type": "educational",
     "url": "https://icatcare.org/",
-    "abstract_zh": "無毛貓的肥厚型心肌病很可能會遺傳，也較常見皮膚酵母菌與其他皮膚問題；由舊品種配出的新品種很可能也帶有原品種的遺傳問題。iCatCare 的立場是不應繁殖無毛貓。"
+    "abstract_zh": "無毛貓的肥厚型心肌病很可能會遺傳，也較常見皮膚酵母菌與其他皮膚問題；由舊品種配出的新品種很可能也帶有原品種的遺傳問題。iCatCare 的立場是不應繁殖無毛貓。",
+    "home_only": "iCatCare"
   },
   "VCA-SPHYNX": {
     "journal": null,
@@ -5914,7 +5950,8 @@
     "year": 2024,
     "type": "educational",
     "url": "https://vcahospitals.com/",
-    "abstract_zh": "無毛貓皮膚會分泌油脂，建議每天擦拭、每週清耳朵；皮膚會曬傷，應減少日曬；不是低敏品種。"
+    "abstract_zh": "無毛貓皮膚會分泌油脂，建議每天擦拭、每週清耳朵；皮膚會曬傷，應減少日曬；不是低敏品種。",
+    "home_only": "VCA"
   },
   "VCA-DEVON-REX": {
     "journal": null,
@@ -5937,7 +5974,8 @@
     "year": 2024,
     "type": "educational",
     "url": "https://vcahospitals.com/",
-    "abstract_zh": "德文捲毛貓掉毛少，但不是低敏品種；可以用濕布或貓用濕紙巾擦拭身體。"
+    "abstract_zh": "德文捲毛貓掉毛少，但不是低敏品種；可以用濕布或貓用濕紙巾擦拭身體。",
+    "home_only": "VCA"
   },
   "VCA-CORNISH-REX": {
     "journal": null,
@@ -5960,7 +5998,8 @@
     "year": 2024,
     "type": "educational",
     "url": "https://vcahospitals.com/",
-    "abstract_zh": "柯尼斯捲毛貓沒有護毛，毛薄保暖差，常找溫暖處待著，定期洗澡有幫助；不是低敏品種。"
+    "abstract_zh": "柯尼斯捲毛貓沒有護毛，毛薄保暖差，常找溫暖處待著，定期洗澡有幫助；不是低敏品種。",
+    "home_only": "VCA"
   },
   "GCCF-UNRECOGNISED-BREEDS": {
     "journal": null,
@@ -6150,7 +6189,8 @@
     "year": 2024,
     "type": "educational",
     "url": "https://vcahospitals.com/",
-    "abstract_zh": "英國短毛貓活動量中等，建議量好餵食份量避免過重，每週梳毛。"
+    "abstract_zh": "英國短毛貓活動量中等，建議量好餵食份量避免過重，每週梳毛。",
+    "home_only": "VCA"
   },
   "TICA-CHAUSIE": {
     "journal": null,
@@ -6362,7 +6402,8 @@
     "notes": "2026-10-18 讀原文核對｜2026-10-19 條款檢查：該頁頁尾 LifeLearn 版權聲明有「The use of artificial intelligence or automated tools to rewrite, republish, adapt, or repurpose this content ... is prohibited」",
     "cited_by": [
       "cat-emergency-care-taiwan"
-    ]
+    ],
+    "home_only": "VCA"
   },
   "VCA-FROSTBITE-CATS": {
     "title": "Frostbite in Cats",
@@ -6379,7 +6420,8 @@
     "url_verified": true,
     "verified_at": "2026-10-18",
     "notes": "2026-10-18 讀原文核對；文章只引用失溫回溫做法｜2026-10-19 條款檢查：該頁頁尾 LifeLearn 版權聲明有「The use of artificial intelligence or automated tools to rewrite, republish, adapt, or repurpose this content ... is prohibited」",
-    "cited_by": []
+    "cited_by": [],
+    "home_only": "VCA"
   },
   "ICATCARE-CATS-POISONS": {
     "title": "Cats and poisons",
@@ -6398,7 +6440,8 @@
     "notes": "2026-10-18 讀原文核對",
     "cited_by": [
       "cat-emergency-care-taiwan"
-    ]
+    ],
+    "home_only": "iCatCare"
   },
   "ICATCARE-ACUTE-PAIN-2022": {
     "title": "Recognising and managing acute pain in cats: information for owners/caregivers",
@@ -6419,7 +6462,8 @@
       "cat-emergency-care-taiwan",
       "cat-natural-behavior-taiwan"
     ],
-    "cited_by_add": []
+    "cited_by_add": [],
+    "home_only": "iCatCare"
   },
   "VCA-PAIN-SIGNS-CATS": {
     "title": "How Do I Know if My Cat is in Pain?",
@@ -6436,7 +6480,8 @@
     "url_verified": true,
     "verified_at": "2026-10-18",
     "notes": "2026-10-18 讀原文核對｜2026-10-19 條款檢查：該頁頁尾 LifeLearn 版權聲明有「The use of artificial intelligence or automated tools to rewrite, republish, adapt, or repurpose this content ... is prohibited」｜2026-10-19 條款檢查：已全數換掉，未核對",
-    "cited_by": []
+    "cited_by": [],
+    "home_only": "VCA"
   },
   "AAHA-PET-FIRST-AID-KIT": {
     "title": "How to Make a Pet First Aid Kit (and Actually Use It)",
@@ -6520,7 +6565,8 @@
     "url_verified": true,
     "verified_at": "2026-10-18",
     "notes": "2026-10-18 讀原文核對｜2026-10-19 條款檢查：未確認：HTTP 429（已換掉）",
-    "cited_by": []
+    "cited_by": [],
+    "home_only": "VCA"
   },
   "VCA-CAT-CORNEAL-ULCERS": {
     "title": "Corneal Ulcers in Cats",
@@ -6537,7 +6583,8 @@
     "url_verified": true,
     "verified_at": "2026-10-18",
     "notes": "2026-10-18 讀原文核對｜2026-10-19 條款檢查：未確認：VCA 網站回 HTTP 429，讀不到頁面（已換掉，不影響）",
-    "cited_by": []
+    "cited_by": [],
+    "home_only": "VCA"
   },
   "VCA-CAT-UVEITIS": {
     "title": "Uveitis in Cats",
@@ -6554,7 +6601,8 @@
     "url_verified": true,
     "verified_at": "2026-10-18",
     "notes": "2026-10-18 讀原文核對｜2026-10-19 條款檢查：未確認：HTTP 429（已換掉）",
-    "cited_by": []
+    "cited_by": [],
+    "home_only": "VCA"
   },
   "VCA-CHERRY-EYE": {
     "title": "Cherry Eye",
@@ -6573,7 +6621,8 @@
     "notes": "2026-10-18 讀原文核對｜2026-10-19 條款檢查：有，頁尾版權聲明寫 The use of artificial intelligence or automated tools to rewrite, republish, adapt, or repurpose this content…（2026-10-19 讀到）",
     "cited_by": [
       "cat-eye-ear-problems-taiwan"
-    ]
+    ],
+    "home_only": "VCA"
   },
   "VCA-CAT-EAR-MITES": {
     "title": "Ear Mites in Cats and Dogs",
@@ -6590,7 +6639,8 @@
     "url_verified": true,
     "verified_at": "2026-10-18",
     "notes": "2026-10-18 讀原文核對｜2026-10-19 條款檢查：未確認：HTTP 429（已換掉）",
-    "cited_by": []
+    "cited_by": [],
+    "home_only": "VCA"
   },
   "VCA-CAT-EAR-INFECTIONS": {
     "title": "Ear Infections in Cats (Otitis Externa)",
@@ -6607,7 +6657,8 @@
     "url_verified": true,
     "verified_at": "2026-10-18",
     "notes": "2026-10-18 讀原文核對｜2026-10-19 條款檢查：未確認：HTTP 429（已換掉）",
-    "cited_by": []
+    "cited_by": [],
+    "home_only": "VCA"
   },
   "VCA-CAT-QUALITY-OF-LIFE": {
     "title": "Quality of Life at the End of Life for Your Cat",
@@ -6626,7 +6677,8 @@
     "notes": "2026-10-18 讀原文核對｜2026-10-19 條款檢查：有（LifeLearn 版權聲明）",
     "cited_by": [
       "cat-end-of-life-care-taiwan"
-    ]
+    ],
+    "home_only": "VCA"
   },
   "VCA-CAT-FOREIGN-BODIES": {
     "title": "Ingestion of Foreign Bodies in Cats",
@@ -6645,7 +6697,8 @@
     "notes": "2026-10-18 讀原文核對；頁面無更新日期，year 暫填 2024｜2026-10-19 條款檢查：有，頁尾版權聲明含同一句禁止 AI 改寫條款（2026-10-19 讀到）",
     "cited_by": [
       "cat-home-safety-taiwan"
-    ]
+    ],
+    "home_only": "VCA"
   },
   "VCA-CAT-NOCTURNAL-ACTIVITY": {
     "title": "Cat Behavior Problems - Nocturnal Activity",
@@ -6664,7 +6717,8 @@
     "notes": "2026-10-18 讀原文核對｜2026-10-19 條款檢查：有",
     "cited_by": [
       "cat-zoomies-night-activity"
-    ]
+    ],
+    "home_only": "VCA"
   },
   "HERRON-2010-INDOOR-ENRICHMENT": {
     "title": "Environmental Enrichment for Indoor Cats",
@@ -6784,7 +6838,8 @@
     "url_verified": true,
     "verified_at": "2026-10-18",
     "notes": "2026-10-19 負責人決定不引用：正文下方有保健品商品卡（含品牌與價格）。夜間暴衝文改用 VCA-KITTEN-ZOOMIES 與 VCA-CAT-NOCTURNAL-ACTIVITY",
-    "cited_by": []
+    "cited_by": [],
+    "home_only": "VCA"
   },
   "VCA-KITTEN-ZOOMIES": {
     "title": "Understanding Kitten Zoomies",
@@ -6803,7 +6858,8 @@
     "notes": "2026-10-19 讀原文核對（取代 VCA-CAT-ZOOMIES）｜2026-10-19 條款檢查：沒有（2026-10-19 抓頁面全文未見 artificial intelligence 字樣）",
     "cited_by": [
       "cat-zoomies-night-activity"
-    ]
+    ],
+    "home_only": "VCA"
   },
   "ICATCARE-PLAYING-WITH-CAT": {
     "title": "Playing with your cat",
@@ -6827,7 +6883,8 @@
     ],
     "cited_by_add": [
       "cat-zoomies-night-activity"
-    ]
+    ],
+    "home_only": "iCatCare"
   },
   "CERNA-2020-CDS-VOCALISATION": {
     "title": "Potential Causes of Increased Vocalisation in Elderly Cats with Cognitive Dysfunction Syndrome as Assessed by Their Owners",
@@ -6866,7 +6923,8 @@
     "notes": "2026-10-18 讀原文核對｜2026-10-19 條款檢查：有",
     "cited_by": [
       "cat-pheromone-products-guide"
-    ]
+    ],
+    "home_only": "VCA"
   },
   "VCA-CAT-MARKING-SPRAYING": {
     "title": "Cat Behavior Problems - Marking and Spraying Behavior",
@@ -6883,7 +6941,8 @@
     "url_verified": true,
     "verified_at": "2026-10-18",
     "notes": "2026-10-18 讀原文核對｜2026-10-19 條款檢查：有",
-    "cited_by": []
+    "cited_by": [],
+    "home_only": "VCA"
   },
   "ICATCARE-SEIZURES-2025": {
     "title": "Seizures in cats",
@@ -6902,7 +6961,8 @@
     "notes": "2026-10-18 讀原文核對；頁面未署名作者",
     "cited_by": [
       "cat-emergency-care-taiwan"
-    ]
+    ],
+    "home_only": "iCatCare"
   },
   "VCA-AFTER-VACCINATION": {
     "title": "Care for Your Pet After Vaccination",
@@ -6919,7 +6979,8 @@
     "url_verified": true,
     "verified_at": "2026-10-18",
     "notes": "2026-10-18 讀原文核對｜2026-10-19 條款檢查：該頁頁尾 LifeLearn 版權聲明有「The use of artificial intelligence or automated tools to rewrite, republish, adapt, or repurpose this content ... is prohibited」",
-    "cited_by": []
+    "cited_by": [],
+    "home_only": "VCA"
   },
   "ICATCARE-SOCIAL-STRUCTURE": {
     "title": "The social structure of cat life",
@@ -6938,7 +6999,8 @@
     "notes": "2026-10-18 讀原文核對",
     "cited_by": [
       "cat-environment-enrichment-taiwan"
-    ]
+    ],
+    "home_only": "iCatCare"
   },
   "ICATCARE-MULTI-CAT": {
     "title": "Multi-cat households",
@@ -6957,7 +7019,8 @@
     "notes": "2026-10-18 讀原文核對",
     "cited_by": [
       "cat-environment-enrichment-taiwan"
-    ]
+    ],
+    "home_only": "iCatCare"
   },
   "ICATCARE-THINKING-OF-GETTING-A-CAT": {
     "title": "Thinking of getting a cat?",
@@ -6976,7 +7039,8 @@
     "notes": "2026-10-18 讀原文核對",
     "cited_by": [
       "cat-environment-enrichment-taiwan"
-    ]
+    ],
+    "home_only": "iCatCare"
   },
   "VCA-CAT-PLAY-TOYS": {
     "title": "Cat Behavior and Training - Play and Play Toys",
@@ -6993,7 +7057,8 @@
     "url_verified": true,
     "verified_at": "2026-10-18",
     "notes": "2026-10-18 讀原文核對｜2026-10-19 條款檢查：有",
-    "cited_by": []
+    "cited_by": [],
+    "home_only": "VCA"
   },
   "VCA-PLAY-PREDATORY-AGGRESSION": {
     "title": "Play and Predatory Aggression in Cats",
@@ -7012,7 +7077,8 @@
     "notes": "2026-10-18 讀原文核對｜2026-10-19 條款檢查：已全數換掉，未核對｜2026-10-19 條款檢查：有",
     "cited_by": [
       "cat-environment-enrichment-taiwan"
-    ]
+    ],
+    "home_only": "VCA"
   },
   "VCA-BEHAVIOR-PRODUCTS-CATS": {
     "title": "Behavior Management Products for Cats",
@@ -7029,7 +7095,8 @@
     "url_verified": true,
     "verified_at": "2026-10-18",
     "notes": "2026-10-18 讀原文核對｜2026-10-19 條款檢查：有",
-    "cited_by": []
+    "cited_by": [],
+    "home_only": "VCA"
   },
   "VCA-COMPULSIVE-DISORDERS-CATS": {
     "title": "Cat Behavior Problems - Compulsive Disorders in Cats",
@@ -7048,7 +7115,8 @@
     "notes": "2026-10-18 讀原文核對｜2026-10-19 條款檢查：未核對（vcahospitals.com 回 429）｜2026-10-19 條款檢查：有",
     "cited_by": [
       "cat-natural-behavior-taiwan"
-    ]
+    ],
+    "home_only": "VCA"
   },
   "VCA-OVERGROOMING-YOUNG-CATS": {
     "title": "Self-inflicted bald spots on young cats",
@@ -7068,7 +7136,8 @@
     "cited_by": [
       "cat-environment-enrichment-taiwan",
       "cat-natural-behavior-taiwan"
-    ]
+    ],
+    "home_only": "VCA"
   },
   "VCA-PET-SLEEP": {
     "title": "Is your pet sleeping too much?",
@@ -7087,7 +7156,8 @@
     "notes": "2026-10-18 讀原文核對｜2026-10-19 條款檢查：沒有（頁面全文未見 artificial intelligence 字樣）",
     "cited_by": [
       "cat-environment-enrichment-taiwan"
-    ]
+    ],
+    "home_only": "VCA"
   },
   "ICATCARE-CAT-COMMUNICATION": {
     "title": "Cat Communication",
@@ -7106,7 +7176,8 @@
     "notes": "2026-10-18 讀原文核對",
     "cited_by": [
       "cat-natural-behavior-taiwan"
-    ]
+    ],
+    "home_only": "iCatCare"
   },
   "ICATCARE-CAT-FRIENDLY-INTERACTION": {
     "title": "Cat Friendly Interaction",
@@ -7125,7 +7196,8 @@
     "notes": "2026-10-18 讀原文核對",
     "cited_by": [
       "cat-natural-behavior-taiwan"
-    ]
+    ],
+    "home_only": "iCatCare"
   },
   "ICATCARE-GROOMING-YOUR-CAT": {
     "title": "Grooming your cat",
@@ -7145,7 +7217,8 @@
     "cited_by": [
       "cat-home-grooming-guide",
       "cat-natural-behavior-taiwan"
-    ]
+    ],
+    "home_only": "iCatCare"
   },
   "ICATCARE-HUNTING-BEHAVIOUR": {
     "title": "Understanding the hunting behaviour of cats",
@@ -7168,7 +7241,8 @@
     ],
     "cited_by_add": [
       "cat-environment-enrichment-taiwan"
-    ]
+    ],
+    "home_only": "iCatCare"
   },
   "VCA-KITTEN-BODY-LANGUAGE": {
     "title": "How To Read Your Kitten's Body Language",
@@ -7187,7 +7261,8 @@
     "notes": "2026-10-18 讀原文核對；頁面未標日期與作者｜2026-10-19 條款檢查：未核對（vcahospitals.com 回 429）",
     "cited_by": [
       "cat-natural-behavior-taiwan"
-    ]
+    ],
+    "home_only": "VCA"
   },
   "VCA-KITTEN-TAIL-MEANINGS": {
     "title": "How does your young cat communicate with their tail?",
@@ -7206,7 +7281,8 @@
     "notes": "2026-10-18 讀原文核對；頁面未標日期與作者｜2026-10-19 條款檢查：2026-10-19 抓取全文，沒有禁止 AI 改寫條款",
     "cited_by": [
       "cat-natural-behavior-taiwan"
-    ]
+    ],
+    "home_only": "VCA"
   },
   "CORNELL-FELINE-AGGRESSION": {
     "title": "Feline Behavior Problems: Aggression",
@@ -7276,7 +7352,8 @@
     "url_verified": true,
     "verified_at": "2026-10-18",
     "notes": "2026-10-18 讀原文核對；頁面未標日期與作者｜2026-10-19 條款檢查：已全數換掉，未核對",
-    "cited_by": []
+    "cited_by": [],
+    "home_only": "VCA"
   },
   "HUMPHREY-2020-SLOW-BLINK": {
     "title": "The role of cat eye narrowing movements in cat-human communication",
@@ -7333,7 +7410,8 @@
     "notes": "2026-10-18 讀官網核對。",
     "cited_by": [
       "cat-toxic-substances-taiwan"
-    ]
+    ],
+    "home_only": "ASPCA"
   },
   "ASPCA-DESTRUCTIVE-SCRATCHING": {
     "title": "Destructive Scratching",
@@ -7352,7 +7430,8 @@
     "notes": "2026-10-18 讀原文核對。頁面只有 ©2026 版權年，無更新日期，year 暫填 2026。",
     "cited_by": [
       "cat-environment-enrichment-taiwan"
-    ]
+    ],
+    "home_only": "ASPCA"
   },
   "ICATCARE-DENTAL-DISEASE": {
     "title": "Dental disease in cats",
@@ -7371,7 +7450,8 @@
     "notes": "2026-10-19 讀原文核對（小幫手 K 1017 審稿：牙齒文章檢核表）。網頁沒有寫年份，year 填 2024 待確認。",
     "cited_by": [
       "cat-dental-health-taiwan"
-    ]
+    ],
+    "home_only": "iCatCare"
   },
   "VCA-DENTAL-DISEASE-CATS": {
     "title": "Dental Disease in Cats",
@@ -7388,7 +7468,8 @@
     "url_verified": true,
     "verified_at": "2026-10-19",
     "notes": "2026-10-19 讀原文核對（小幫手 K 1017 審稿：牙齒文章檢核表）。頁面提到一個棉花棒品牌名，文章沒有引用。網頁沒有寫年份，year 填 2024 待確認。｜2026-10-19 條款檢查：有（LifeLearn 版權聲明）",
-    "cited_by": []
+    "cited_by": [],
+    "home_only": "VCA"
   },
   "WSAVA-CATS-VACCINATION-TABLE-2025": {
     "title": "Core and Non-Core Vaccines for Pet Cats (non-shelter) according to the 2024 guidelines for the vaccination of dogs and cats",
@@ -7424,7 +7505,8 @@
     "url_verified": true,
     "verified_at": "2026-10-19",
     "notes": "2026-10-19 讀原文核對（小幫手 K 問減重期間出現不吃、發黃等狀況代表什麼）。頁尾版權聲明禁止以 AI 改寫、轉載內容；文章只引用事實並用自己的話寫，請負責人確認可接受。｜2026-10-19 條款檢查：有",
-    "cited_by": []
+    "cited_by": [],
+    "home_only": "VCA"
   },
   "LY-PET-ADOPTION-2022": {
     "title": "寵物認養相關問題研析",
@@ -7481,7 +7563,8 @@
     "notes": "2026-10-19 讀原文核對｜2026-10-19 條款檢查：有",
     "cited_by": [
       "cat-pregnancy-birth-nursing-taiwan"
-    ]
+    ],
+    "home_only": "VCA"
   },
   "VCA-FEEDING-NURSING-CAT": {
     "title": "Feeding the Nursing Cat",
@@ -7500,7 +7583,8 @@
     "notes": "2026-10-19 讀原文核對｜2026-10-19 條款檢查：有",
     "cited_by": [
       "cat-pregnancy-birth-nursing-taiwan"
-    ]
+    ],
+    "home_only": "VCA"
   },
   "FONTAINE-2012-PREGNANCY-LACTATION": {
     "title": "Food Intake and Nutrition During Pregnancy, Lactation and Weaning in the Dam and Offspring",
@@ -7559,7 +7643,8 @@
     "notes": "2026-10-19 讀原文核對。頁面未標日期，年份為存取年。",
     "cited_by": [
       "cat-pregnancy-birth-nursing-taiwan"
-    ]
+    ],
+    "home_only": "iCatCare"
   },
   "CORNELL-SPAYING-NEUTERING": {
     "title": "Spaying and Neutering",
@@ -7686,7 +7771,8 @@
     "notes": "2026-10-19 讀原文核對；頁面與 iCatCare 使用條款無禁止 AI 改寫條款",
     "cited_by": [
       "cat-natural-behavior-taiwan"
-    ]
+    ],
+    "home_only": "iCatCare"
   },
   "ASPCA-INTRO-NEW-CAT": {
     "title": "Introducing Your Cat to a New Cat",
@@ -7705,7 +7791,8 @@
     "notes": "2026-10-19 讀原文核對；文章頁無禁止 AI 改寫條款。頁內提到一個費洛蒙商品名，文中未引用該處",
     "cited_by": [
       "multi-cat-household-taiwan"
-    ]
+    ],
+    "home_only": "ASPCA"
   },
   "ICATCARE-TRIMMING-CLAWS": {
     "title": "Trimming your cat's claws",
@@ -7724,7 +7811,8 @@
     "notes": "2026-10-19 讀原文核對；頁面與網站使用條款（terms-and-conditions）都沒有禁止 AI 改寫的條款，條款只有一般著作權（不得散布、修改原文）。",
     "cited_by": [
       "cat-home-grooming-guide"
-    ]
+    ],
+    "home_only": "iCatCare"
   },
   "ICATCARE-EVERYDAY-CARE": {
     "title": "Everyday care for your cat",
@@ -7743,7 +7831,8 @@
     "notes": "2026-10-19 讀原文核對；頁面與網站使用條款都沒有禁止 AI 改寫的條款。",
     "cited_by": [
       "cat-home-grooming-guide"
-    ]
+    ],
+    "home_only": "iCatCare"
   },
   "ASPCA-TRIM-CLAWS": {
     "title": "Trimming Your Cat's Claws",
@@ -7762,7 +7851,8 @@
     "notes": "2026-10-19 讀原文核對；頁面沒有禁止 AI 改寫的條款。ASPCA 網站使用條款（/about-us/legal-information）有一般著作權限制，另禁止用機器人或自動程式存取、複製網站內容（scraping 條款），沒有針對 AI 改寫的條款；文章只用自己的話轉述事實。網頁沒有寫年份，year 填 2024 待確認。",
     "cited_by": [
       "cat-home-grooming-guide"
-    ]
+    ],
+    "home_only": "ASPCA"
   },
   "ASPCA-GROOMING-TIPS": {
     "title": "Cat Grooming Tips",
@@ -7781,7 +7871,8 @@
     "notes": "2026-10-19 讀原文核對；頁面沒有禁止 AI 改寫的條款（網站使用條款同 ASPCA-TRIM-CLAWS 的說明）。頁面頂端有聯盟行銷連結的揭露，文章沒有引用任何商品。網頁沒有寫年份，year 填 2024 待確認。",
     "cited_by": [
       "cat-home-grooming-guide"
-    ]
+    ],
+    "home_only": "ASPCA"
   },
   "ICATCARE-FLEAS": {
     "title": "Fleas and flea control in cats",
@@ -7800,7 +7891,8 @@
     "notes": "2026-10-19 讀原文核對；頁面與網站使用條款都沒有禁止 AI 改寫的條款。",
     "cited_by": [
       "cat-skin-allergies"
-    ]
+    ],
+    "home_only": "iCatCare"
   },
   "CORNELL-VOMITING": {
     "title": "Vomiting",
@@ -7899,7 +7991,8 @@
     "notes": "2026-10-19 讀原文核對；頁面沒有禁止 AI 改寫的條款，網站使用條款是一般版權聲明（未經書面許可不得轉載、修改內容），文章只引用事實並用自己的話寫",
     "cited_by": [
       "cat-eye-ear-problems-taiwan"
-    ]
+    ],
+    "home_only": "iCatCare"
   },
   "ICATCARE-BLINDNESS": {
     "title": "Blindness in cats",
@@ -7918,7 +8011,8 @@
     "notes": "2026-10-19 讀原文核對；頁面沒有禁止 AI 改寫的條款，網站使用條款是一般版權聲明（未經書面許可不得轉載、修改內容），文章只引用事實並用自己的話寫",
     "cited_by": [
       "cat-eye-ear-problems-taiwan"
-    ]
+    ],
+    "home_only": "iCatCare"
   },
   "ICATCARE-EAR-PROBLEMS": {
     "title": "Ear Problems in Cats",
@@ -7937,7 +8031,8 @@
     "notes": "2026-10-19 讀原文核對；頁面沒有禁止 AI 改寫的條款，網站使用條款是一般版權聲明（未經書面許可不得轉載、修改內容），文章只引用事實並用自己的話寫",
     "cited_by": [
       "cat-eye-ear-problems-taiwan"
-    ]
+    ],
+    "home_only": "iCatCare"
   },
   "NARFSTROM-1999-HEREDITARY-EYE": {
     "title": "Hereditary and Congenital Ocular Disease in the Cat",
@@ -7994,7 +8089,8 @@
     "notes": "2026-10-19 讀原文核對；頁面沒有禁止 AI 改寫的條款，網站使用條款是一般版權聲明（未經書面許可不得轉載、修改內容），文章只引用事實並用自己的話寫",
     "cited_by": [
       "cat-home-safety-taiwan"
-    ]
+    ],
+    "home_only": "iCatCare"
   },
   "ASPCA-HIGH-RISE-SYNDROME": {
     "title": "High-Rise Syndrome: Lifesaving Tips for Cat Parents",
@@ -8013,7 +8109,8 @@
     "notes": "2026-10-19 讀原文核對；頁尾只有 ASPCA 版權聲明（All rights reserved），沒有禁止 AI 改寫的條款",
     "cited_by": [
       "cat-home-safety-taiwan"
-    ]
+    ],
+    "home_only": "ASPCA"
   },
   "ICATCARE-PUZZLE-FEEDERS": {
     "title": "Puzzle feeders for your cat",
@@ -8032,7 +8129,8 @@
     "notes": "2026-10-19 讀原文核對；頁面與 iCatCare 使用條款無禁止 AI 改寫條款",
     "cited_by": [
       "cat-environment-enrichment-taiwan"
-    ]
+    ],
+    "home_only": "iCatCare"
   },
   "ICATCARE-INTRODUCING-CATS": {
     "title": "Introducing cats",
@@ -8052,7 +8150,8 @@
     "cited_by": [
       "cat-environment-enrichment-taiwan",
       "new-cat-first-week-guide"
-    ]
+    ],
+    "home_only": "iCatCare"
   },
   "ASPCA-AGGRESSION-CATS": {
     "title": "Aggression in Cats",
@@ -8071,7 +8170,8 @@
     "notes": "2026-10-19 讀原文核對；頁面無標日期，year 填查詢年；頁面與 ASPCA 使用條款無禁止 AI 改寫條款",
     "cited_by": [
       "cat-environment-enrichment-taiwan"
-    ]
+    ],
+    "home_only": "ASPCA"
   },
   "FELINEVMA-INTRO-NEW-CAT": {
     "title": "Step-by-Step Guide: How to Introduce a New Cat to Other Cats in Your Home",

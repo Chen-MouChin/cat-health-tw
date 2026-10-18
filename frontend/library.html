@@ -73,6 +73,7 @@
 .card-link { margin-top: 10px; font-size: 14px; }
 .card-link a { font-weight: 700; word-break: break-all; }
 .card-link .i { width: 16px; height: 16px; vertical-align: -3px; margin-right: 4px; color: var(--text-muted); }
+.card-link-note { margin-top: 4px; font-size: 13px; color: var(--text-muted); word-break: normal; }
 .cited-by { margin: 10px 0 0; padding: 10px 14px; border-radius: 10px; background: var(--primary-pale); font-size: 14px; }
 .cited-by-label { margin-bottom: 4px; font-size: 13px; color: var(--text-muted); }
 .cited-by ul { margin: 0; padding-left: 1.2em; }
@@ -755,7 +756,10 @@ function renderCard(cid, e) {
       ${e.abstract_zh ? `<div class="card-abstract">${highlightTerms(e.abstract_zh)}</div>` : ''}
       ${keywords ? `<div class="card-keywords">${keywords}</div>` : ''}
       ${citedBy.length ? `<div class="cited-by" id="cited-by-${cid}" hidden>${renderCitedByList(citedBy)}</div>` : ''}
-      ${e.url ? `<div class="card-link"><svg class="i" aria-hidden="true"><use href="#i-link"/></svg><a href="${escapeHtml(e.url)}" target="_blank" rel="noopener">${currentLang === 'zh' ? '開啟原文' : 'Open source'}</a></div>` : ''}
+      ${e.url ? `<div class="card-link"><svg class="i" aria-hidden="true"><use href="#i-link"/></svg><a href="${escapeHtml(e.url)}" target="_blank" rel="noopener">${e.home_only
+          ? (currentLang === 'zh' ? `到 ${escapeHtml(e.home_only)} 網站搜尋` : `Search on ${escapeHtml(e.home_only)}`)
+          : (currentLang === 'zh' ? '開啟原文' : 'Open source')}</a>${e.home_only
+          ? `<div class="card-link-note">${currentLang === 'zh' ? '依該網站使用條款，連結只連到首頁，請用英文標題搜尋' : 'Per the site\'s terms, we link to its home page only. Search for the English title.'}</div>` : ''}</div>` : ''}
       ${e.pdf_url ? `<div class="card-link"><svg class="i" aria-hidden="true"><use href="#i-link"/></svg><a href="${escapeHtml(e.pdf_url)}" target="_blank" rel="noopener">PDF</a></div>` : ''}
       ${e.ref_note ? `<div class="card-meta">${escapeHtml(e.ref_note)}</div>` : ''}
       ${e.zh_url ? `<div class="card-link"><svg class="i" aria-hidden="true"><use href="#i-link"/></svg><a href="${escapeHtml(e.zh_url)}" target="_blank" rel="noopener">${currentLang === 'zh' ? '官方中文版' : 'Official Chinese version'}</a></div>` : ''}
