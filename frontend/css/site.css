@@ -84,9 +84,6 @@ body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.75 var
 @media (min-width: 640px) { .page-art { width: 104px; } }
 .cover-ph-label { font-size: 14px; font-weight: 700; color: var(--primary-deep); letter-spacing: 0.08em; }
 
-/* 廣告位：AdSense 上線前先隱藏 */
-.ad { margin-top: 32px; }
-.ad-label { display: block; margin-bottom: 4px; font-size: 13px; letter-spacing: 0.1em; color: var(--text-muted); }
 
 .cat-body { fill: var(--bg-card); }
 .cat-nose { fill: var(--blush); stroke: var(--blush); stroke-width: 0.8; stroke-linejoin: round; }

@@ -95,3 +95,9 @@ html.head-scrolled .site-head::before { box-shadow: 0 6px 24px rgba(47, 74, 52, 
   .foot-grid { grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 32px; }
   .foot-about { grid-column: auto; }
 }
+
+/* 全站唯一的公告位（捐款連結、重要公告），內容在 content/pages/notice.json */
+.foot-notice { display: grid; gap: 12px; margin-bottom: 28px; padding: 16px 18px; border-radius: 14px; background: var(--surface, #fff); border: 1px solid var(--border-strong); }
+.notice-group { display: grid; gap: 4px; }
+.notice-h { margin: 0; font-size: 16px; font-weight: 800; color: var(--text); }
+.notice-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }

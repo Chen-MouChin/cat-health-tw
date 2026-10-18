@@ -10,7 +10,7 @@
 <title>學術文獻庫 — 貓健康站</title>
 <meta name="description" content="貓健康知識的學術引用文獻庫，每筆來自國際獸醫指引、大學獸醫中心與同儕審查期刊，標「已審核」的逐項核對過原文">
 <link rel="stylesheet" href="css/theme.css?v=20261018">
-<link rel="stylesheet" href="css/shell.css?v=20261018">
+<link rel="stylesheet" href="css/shell.css?v=20261019">
 <link rel="stylesheet" href="css/site.css?v=20261018">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"CollectionPage","name":"學術文獻庫 — 貓健康站","description":"貓健康學術文獻庫：國際獸醫指引、大學獸醫中心與同儕審查期刊，每筆附原文連結與中文摘要，標「已審核」的逐項核對過原文。","url":"https://chen-mouchin.github.io/cat-health-tw/library.html","inLanguage":"zh-TW"}
@@ -210,9 +210,6 @@
 
   <div id="results"></div>
 
-  <aside class="ad" aria-label="贊助" hidden>
-    <span class="ad-label">贊助</span>
-  </aside>
 </main>
 
 <!-- site-foot -->
@@ -692,22 +689,7 @@ function render() {
   document.getElementById('hint-text').textContent = `${filtered.length} ${t('found')}`;
   buildFilters(); // refresh clear button state
 
-  // 產卡片 + 每 10 筆插一張廣告卡（總筆數 > 10 才啟用）
-  const cards = filtered.map(([cid, e]) => renderCard(cid, e));
-  let html;
-  if (cards.length > 10) {
-    const interleaved = [];
-    cards.forEach((card, i) => {
-      interleaved.push(card);
-      // 只在第 10 筆之後插一張；加上頁面上的一個廣告位，每頁最多 2 個
-      if (i === 9 && i < cards.length - 1) {
-        interleaved.push(renderAdInFeed());
-      }
-    });
-    html = interleaved.join('');
-  } else {
-    html = cards.join('');
-  }
+  const html = filtered.map(([cid, e]) => renderCard(cid, e)).join('');
   document.getElementById('results').innerHTML = html || `<div class="hint">${t('no_results')}</div>`;
 
   document.querySelectorAll('.card-abstract').forEach(el => {
@@ -731,18 +713,6 @@ function render() {
 
 function escapeHtml(s) {
   return (s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-}
-
-// 清單中的廣告卡（同 banner ad unit，不同樣式），只插一張
-function renderAdInFeed() {
-  return '';  // AdSense 上線前不放佔位卡；上線後拿掉這行
-  const lbl = currentLang === 'zh' ? '贊助' : 'Sponsored';
-  return `
-    <div class="ad-card-inline" data-ad-slot="banner">
-      <div class="ad-label">${lbl}</div>
-      <div class="ad-slot"><span>Ad Slot · in-feed (responsive)</span></div>
-    </div>
-  `;
 }
 
 function renderCard(cid, e) {
