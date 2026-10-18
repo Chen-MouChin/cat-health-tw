@@ -219,7 +219,7 @@
     "type": "consensus_guideline",
     "language": "en",
     "open_access": false,
-    "abstract_zh": "貓糖尿病的診斷標準（持續性高血糖+糖尿）、治療選擇（胰島素 vs 口服藥）、居家血糖監測方法、飲食管理（高蛋白低碳水）、緩解（remission）的定義和追蹤。",
+    "abstract_zh": "貓糖尿病的診斷標準（持續性高血糖+糖尿）、治療選擇（胰島素 vs 口服藥）、居家血糖監測方法、飲食管理（高蛋白低碳水）、緩解（remission）的定義和追蹤。\n\n■ 全文核對補充（2026-10-18）\n補充（原文核對）：多數貓糖尿病和人類第二型相似，來自 β 細胞功能異常加上胰島素阻抗；肥胖是胰島素阻抗的常見原因，阻抗降低、β 細胞功能改善時部分貓可緩解（Pathogenesis）。肥胖會降低胰島素敏感度，肥胖貓得病機率最高為理想體重貓的 4 倍；7 歲以上風險最高（Clinical signs and risk factors）。確診要有持續高血糖與尿糖，加上相符症狀，並先排除緊迫性高血糖（Diagnosis）。建議限制碳水（約 12% 代謝能以下），多數濕食屬低碳水（Diet）。專家小組建議盡可能使用長效胰島素（glargine、detemir 或 PZI），每天注射兩次（Insulin therapy）。血糖控制較好的貓較常緩解，延誤胰島素可能錯過逆轉葡萄糖毒性的時機（Goals of therapy；oral hypoglycaemics）。鼓勵飼主在家驗血糖，從耳緣靜脈或腳掌肉墊採血（Home monitoring）。低血糖徵兆有抽搐、倒臥、不吃、顫抖、嘔吐、步態不穩、沒精神，家中急救可在口腔黏膜大量塗蜂蜜或葡萄糖（Hypoglycaemia）。",
     "keywords": [
       "糖尿病",
       "胰島素",
@@ -232,7 +232,7 @@
     ],
     "status": "pending_review",
     "url_verified": false,
-    "notes": "JFMS 付費牆，但摘要免費。iCatCare 有對應的 owner guide 免費版 | DOI link verified (HEAD blocked by publisher, browser OK)",
+    "notes": "JFMS 付費牆，但摘要免費。iCatCare 有對應的 owner guide 免費版 | DOI link verified (HEAD blocked by publisher, browser OK)｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
       "cat-diabetes-care",
       "cat-life-stages-care-taiwan"
@@ -249,7 +249,7 @@
     "type": "guideline",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "FIP 的病原學（FCoV 突變）、臨床分型（濕性/乾性/混合）、診斷方法（Rivalta test/RT-PCR/免疫組化）、傳統治療和新藥（GS-441524/GC376）的早期證據。",
+    "abstract_zh": "FIP 的病原學（FCoV 突變）、臨床分型（濕性/乾性/混合）、診斷方法（Rivalta test/RT-PCR/免疫組化）、傳統治療和新藥（GS-441524/GC376）的早期證據。\n\n■ 全文核對補充（2026-10-18）\n全文補充：貓冠狀病毒普遍存在、主要感染腸道，多半沒有或只有輕微症狀，只有一小部分（通常不到 10%）的感染貓會發展成 FIP；一般認為是個別貓體內的病毒突變後改為感染單核球與巨噬細胞（Introduction；Pathogenesis）。多貓環境偶有 FIP 群聚，可能和壓力、遺傳或水平傳染有關，賽普勒斯的 FCoV-23 疫情被認為是水平傳染（Epidemiology）。2 歲以下、純種貓較常見，公貓略高，常有近期壓力事件，例如認養、待過收容所、結紮、打疫苗（Signalment and history）。",
     "keywords": [
       "FIP",
       "傳腹",
@@ -262,7 +262,7 @@
     ],
     "status": "approved",
     "url_verified": true,
-    "notes": "ABCD 指引免費 PDF。GS-441524 臨床數據近年大量更新",
+    "notes": "ABCD 指引免費 PDF。GS-441524 臨床數據近年大量更新｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
       "cat-fip-guide-taiwan"
     ],
@@ -279,7 +279,7 @@
     "type": "guideline",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "AAFP 與 EveryCat 基金會的貓傳染性腹膜炎（FIP）診斷指引。FIP 是貓冠狀病毒在個別貓體內突變造成的，2 歲以下的貓特別容易發病；估計獸醫院貓的死亡病例中約 0.3%–1.4% 死於 FIP（摘要）。表 1 整理風險因素：來自繁殖場、收容所或中途；近期有壓力事件，例如結紮手術、打疫苗、搬家、家裡多了新成員；未結紮的公貓；部分純種貓；多貓家庭與超過 5 隻的擁擠環境。澳洲與美國北卡的研究分別有 55% 與 67% 的病貓不到 2 歲；北卡研究中純種貓約 1.3% 得病，混種貓約 0.35%；另一項研究有 56.7% 的病貓發病前有壓力事件（Signalment and history 一節）。FIP 沒有單一決定性的檢查，要從病史、年齡品種等基本資料與身體檢查開始，一塊塊累積懷疑程度。有積液時檢驗的陽性預測值較高，積液通常蛋白質超過 35 g/L、白蛋白球蛋白比低於 0.4；只有約 56% 的病貓發燒（Diagnosis 各節）。",
+    "abstract_zh": "AAFP 與 EveryCat 基金會的貓傳染性腹膜炎（FIP）診斷指引。FIP 是貓冠狀病毒在個別貓體內突變造成的，2 歲以下的貓特別容易發病；估計獸醫院貓的死亡病例中約 0.3%–1.4% 死於 FIP（摘要）。表 1 整理風險因素：來自繁殖場、收容所或中途；近期有壓力事件，例如結紮手術、打疫苗、搬家、家裡多了新成員；未結紮的公貓；部分純種貓；多貓家庭與超過 5 隻的擁擠環境。澳洲與美國北卡的研究分別有 55% 與 67% 的病貓不到 2 歲；北卡研究中純種貓約 1.3% 得病，混種貓約 0.35%；另一項研究有 56.7% 的病貓發病前有壓力事件（Signalment and history 一節）。FIP 沒有單一決定性的檢查，要從病史、年齡品種等基本資料與身體檢查開始，一塊塊累積懷疑程度。有積液時檢驗的陽性預測值較高，積液通常蛋白質超過 35 g/L、白蛋白球蛋白比低於 0.4；只有約 56% 的病貓發燒（Diagnosis 各節）。\n\n■ 全文核對補充（2026-10-18）\n全文補充：血中冠狀病毒抗體只代表接觸過病毒，健康貓和 FIP 貓的抗體效價常沒有差別，約 10% 的 FIP 貓驗不到抗體，指引不建議用抗體檢查診斷 FIP（Detection of anti-FCoV antibodies）。Rivalta 試驗陰性時 FIP 可能性很低，陽性仍要用其他檢查確認（Effusion analysis）。病史和症狀相符、又用 RT-PCR 在積液或組織驗到病毒 RNA，FIP 的可能性高；確診要在病灶巨噬細胞中驗到病毒抗原（Diagnostic testing）。診斷要依個別貓的表現安排，附錄收有專家小組依不同表現整理的流程圖（同節）。",
     "keywords": [
       "FIP",
       "診斷",
@@ -292,7 +292,7 @@
     ],
     "status": "pending_review",
     "url_verified": true,
-    "notes": "AAFP 官網免費下載\n2026-10-17 合併重複條目 AAFP-2022-AAFP-EVERYCAT-FELINE-INFECTIOUS-PER-2022，補上期刊出處，摘要依原文改寫。",
+    "notes": "AAFP 官網免費下載\n2026-10-17 合併重複條目 AAFP-2022-AAFP-EVERYCAT-FELINE-INFECTIOUS-PER-2022，補上期刊出處，摘要依原文改寫。｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
       "cat-fip-guide-taiwan"
     ],
@@ -313,7 +313,7 @@
     "type": "consensus_statement",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "貓心肌病分類（HCM/DCM/RCM/ARVC/UCM）、超音波診斷標準、NT-proBNP 生物標記、藥物治療（atenolol/clopidogrel）、血栓預防。JVIM 全文免費。",
+    "abstract_zh": "貓心肌病分類（HCM/DCM/RCM/ARVC/UCM）、超音波診斷標準、NT-proBNP 生物標記、藥物治療（atenolol/clopidogrel）、血栓預防。JVIM 全文免費。\n\n■ 全文核對補充（2026-10-18）\n補充（2026-10-18 PMC 全文核對）：多數體型正常的貓，舒張末期左心室壁厚度小於 5 mm 算正常，6 mm 以上表示肥厚，5 到 6 mm 要綜合體型、家族史等判讀（5.9 Echocardiography）。不少患貓聽診正常，胸腔 X 光對輕中度變化不敏感（5.3.1、5.4）。atenolol 可降低心跳與左心室流出道壓差，但對無症狀 HCM 的 5 年存活沒有影響（6.1）。在 ATE 後存活的貓，clopidogrel 預防效果比阿斯匹靈好（6.2）；ATE 的貓能吃口服藥就開始 clopidogrel，每天 18.75 mg（6.5）。第一線醫院的 ATE 貓多數被安樂（6.5）。",
     "keywords": [
       "HCM",
       "心臟病",
@@ -326,7 +326,7 @@
     ],
     "status": "pending_review",
     "url_verified": false,
-    "notes": "JVIM 2018 後全 OA，全文免費 | DOI link verified (HEAD blocked by publisher, browser OK)",
+    "notes": "JVIM 2018 後全 OA，全文免費 | DOI link verified (HEAD blocked by publisher, browser OK)｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
       "cat-hcm-heart-disease"
     ]
@@ -342,7 +342,7 @@
     "type": "guideline",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "AAFP 的貓甲狀腺機能亢進（甲亢）管理指引。甲亢是美國中老年貓最常見的內分泌疾病，10 歲以上的貓約 10% 罹患；世界各地老貓的盛行率約 1.5%–11.4%（Introduction、Summary Points）。指引把診斷分成六個臨床類別，主張不論有沒有其他疾病，甲亢貓都要治療（摘要）。四種常用治療（治療選項比較表）：放射性碘治癒率至少 95%、復發約 5%；甲巰咪唑（methimazole）服藥期間有效率至少 95%，停藥就會復發，最多 25% 的貓出現藥物反應；切除兩側甲狀腺治癒率至少 90%；低碘處方飼料只吃這種飼料期間有效率至少 82%，停吃就復發。甲巰咪唑起始劑量是每隻貓 1.25–2.5 mg、一天兩次（Antithyroid drugs 一節）。指引也說明甲巰咪唑本身不傷腎，治療後腎指數上升多半是原本被甲亢蓋住的腎病（Myths 一節）。",
+    "abstract_zh": "AAFP 的貓甲狀腺機能亢進（甲亢）管理指引。甲亢是美國中老年貓最常見的內分泌疾病，10 歲以上的貓約 10% 罹患；世界各地老貓的盛行率約 1.5%–11.4%（Introduction、Summary Points）。指引把診斷分成六個臨床類別，主張不論有沒有其他疾病，甲亢貓都要治療（摘要）。四種常用治療（治療選項比較表）：放射性碘治癒率至少 95%、復發約 5%；甲巰咪唑（methimazole）服藥期間有效率至少 95%，停藥就會復發，最多 25% 的貓出現藥物反應；切除兩側甲狀腺治癒率至少 90%；低碘處方飼料只吃這種飼料期間有效率至少 82%，停吃就復發。甲巰咪唑起始劑量是每隻貓 1.25–2.5 mg、一天兩次（Antithyroid drugs 一節）。指引也說明甲巰咪唑本身不傷腎，治療後腎指數上升多半是原本被甲亢蓋住的腎病（Myths 一節）。\n\n■ 全文核對補充（2026-10-18）\n補充（原文核對）：甲亢是美國中老年貓最常見的內分泌疾病，10 歲以上最高約 10%（overview）。多數為良性結節性甲狀腺腫，初診時惡性癌約 2%（overview）。典型症狀包括變瘦、多吃、多喝多尿、叫聲變多、躁動、活動增加、呼吸快、心跳快、嘔吐、腹瀉、毛髮凌亂（Presenting signs）。確診需 T4（或 T4 加游離 T4）持續升高並有一項以上典型症狀；有症狀但 T4 正常的貓 2 到 4 週後驗 T4 與游離 T4，T4 偏高但症狀不明顯的貓 1 到 2 週後重驗（diagnostic categories 框）。甲亢與腎病常同時存在，治療後可能出現氮血症；刻意讓腎病貓保持輕微甲亢有害；手術或放射碘後第 30、60、90、180 天檢查（Managing CKD）。放射碘是多數貓的首選，單次成功率超過 95%；用藥試治療可預測確定性治療後腎功能惡化的風險（Radioactive iodine；Medical therapy）。Methimazole 起始 1.25 到 2.5 mg 每天兩次，副作用多在 4 到 6 週內出現；開始治療後 2 到 4 週回診，穩定後每 4 到 6 個月驗 T4、全血球、生化、尿液，腎功能不全的貓 T4 維持在參考範圍上半段（Monitoring）。老年篩檢已例行包含 T4（Summary Points）。",
     "keywords": [
       "甲亢",
       "甲狀腺",
@@ -355,7 +355,7 @@
     ],
     "status": "pending_review",
     "url_verified": true,
-    "notes": "AAFP 官網免費｜2026-10-15 小幫手要求補 PDF：加 PMC 全文 PDF 與 DOI。\n2026-10-17 合併重複條目 AAFP-2016-MANAGEMENT-OF-FELINE-HYPERTHYROIDIS-2016，補上期刊出處，摘要依原文改寫。",
+    "notes": "AAFP 官網免費｜2026-10-15 小幫手要求補 PDF：加 PMC 全文 PDF 與 DOI。\n2026-10-17 合併重複條目 AAFP-2016-MANAGEMENT-OF-FELINE-HYPERTHYROIDIS-2016，補上期刊出處，摘要依原文改寫。｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
       "cat-common-symptoms-taiwan",
       "cat-hyperthyroidism-senior",
@@ -378,7 +378,7 @@
     "type": "guideline",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "2020 AAHA/AAFP 貓疫苗接種指引（Stone 等，JFMS）。核心：FPV、FHV-1、FCV 不早於 6 週齡開始，每 3 到 4 週一劑到 16 到 20 週齡，考慮在 6 月齡（而非 1 歲）補一劑，之後每 3 年；寄宿等高壓環境前 7 到 10 天補打可能有幫助。FeLV：1 歲以下視為核心疫苗，低風險成貓為非核心，高風險者每年。非核心另有披衣菌、博德氏菌；FIP 疫苗不建議。FIV 疫苗 2002 到 2015 年在北美販售，接種過的貓抗體檢驗可能陽性超過 7 年。過敏性休克少見（約每萬劑 1 到 5 例），可能表現為嘔吐、腹瀉、呼吸窘迫、臉部或全身搔癢、臉腫、虛脫。不建議打在肩胛間，建議打在四肢遠端或尾巴遠端，萬一長肉瘤可以截肢保留 5 公分邊緣；含佐劑與無佐劑疫苗和肉瘤關係的研究結果互相矛盾。接種後腫塊依 3-2-1 原則切片：超過 3 個月仍在、直徑大於 2 公分、接種 1 個月後還在變大。病歷要記錄疫苗名稱、批號、注射部位與途徑。",
+    "abstract_zh": "2020 AAHA/AAFP 貓疫苗接種指引（Stone 等，JFMS）。核心：FPV、FHV-1、FCV 不早於 6 週齡開始，每 3 到 4 週一劑到 16 到 20 週齡，考慮在 6 月齡（而非 1 歲）補一劑，之後每 3 年；寄宿等高壓環境前 7 到 10 天補打可能有幫助。FeLV：1 歲以下視為核心疫苗，低風險成貓為非核心，高風險者每年。非核心另有披衣菌、博德氏菌；FIP 疫苗不建議。FIV 疫苗 2002 到 2015 年在北美販售，接種過的貓抗體檢驗可能陽性超過 7 年。過敏性休克少見（約每萬劑 1 到 5 例），可能表現為嘔吐、腹瀉、呼吸窘迫、臉部或全身搔癢、臉腫、虛脫。不建議打在肩胛間，建議打在四肢遠端或尾巴遠端，萬一長肉瘤可以截肢保留 5 公分邊緣；含佐劑與無佐劑疫苗和肉瘤關係的研究結果互相矛盾。接種後腫塊依 3-2-1 原則切片：超過 3 個月仍在、直徑大於 2 公分、接種 1 個月後還在變大。病歷要記錄疫苗名稱、批號、注射部位與途徑。\n\n■ 全文核對補充（2026-10-18）\n全文補充：幼貓的母源抗體量取決於母貓抗體濃度和吃到的初乳量，無法預測，所以要打一系列；研究顯示最多約三分之一的幼貓在 16 週那一劑沒有反應、到 20 週仍有干擾疫苗的母源抗體，工作小組因此和 WSAVA 一樣改在 6 月齡補一劑（Vaccination principles）。核心疫苗是 FHV-1、FCV、FPV、狂犬病，以及 1 歲以下的 FeLV；FeLV 對不會接觸陽性或狀態不明貓的低風險成貓屬非核心（Types of feline vaccines；Table 2）。注射型三合一不早於 6 週齡開始、每 3 到 4 週一劑到 16 到 20 週齡，之後每 3 年；鼻內型每年（Table 2）。接種前盡量確認健康，但有其他疾病（含反轉錄病毒感染）不一定不能打（Vaccination risk–benefit assessment）。FIV 疫苗接種後抗體陽性可超過 7 年，已有能區分感染與接種的診所內套組（Table 7）。病歷要記錄疫苗名稱、批號、效期、廠商、日期、施打者與注射部位和途徑，工作小組強烈建議完整記錄注射部位（Adverse postvaccination reactions；Update on feline injection-site sarcomas）。指引沒有寫「輪替注射部位」，也沒有表示不建議 FIV 疫苗。",
     "keywords": [
       "疫苗",
       "FVRCP",
@@ -391,7 +391,7 @@
     ],
     "status": "approved",
     "url_verified": true,
-    "notes": "AAFP 官網免費｜2026-10-17 小幫手要求補 PDF：SAGE 的 PDF（10.1177/1098612X20941784）擋程式下載，pdf_url 用 PMC 全文。",
+    "notes": "AAFP 官網免費｜2026-10-17 小幫手要求補 PDF：SAGE 的 PDF（10.1177/1098612X20941784）擋程式下載，pdf_url 用 PMC 全文。｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
       "cat-adoption-guide-taiwan",
       "cat-cancer-tumors-guide",
@@ -418,7 +418,7 @@
     "type": "guideline",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "FeLV 和 FIV 的篩檢策略、確認診斷（ELISA/IFA/PCR）、陽性貓管理（隔離/不隔離的依據）、共感染處理、預後評估。",
+    "abstract_zh": "FeLV 和 FIV 的篩檢策略、確認診斷（ELISA/IFA/PCR）、陽性貓管理（隔離/不隔離的依據）、共感染處理、預後評估。\n\n■ 全文核對補充（2026-10-18）\n全文補充：FeLV 靠密切接觸傳播，進展性感染的貓從唾液、鼻分泌物、乳汁、尿液、糞便排毒，互相理毛、共用食物飲水和貓砂盆都可能傳，打架也會；FIV 主要經咬傷傳，不打架的同住貓少傳，自然情況下母傳子少見（Transmission；Prevention of retrovirus infections）。接觸 FeLV 後的結果分流產性、退行性、進展性三種，取決於病毒量與免疫狀態，幼貓最容易進展性感染；進展性感染存活較短、多在數年內死於相關疾病，退行性感染不排毒、發病風險低，但免疫力下降時可能再活化（Outcomes following exposure to FeLV）。FIV 感染後有可長達多年的無症狀期，存活時間個體差異大、可和未感染貓相近（Pathogenesis of FIV；Longevity）。貓在剛取得、可能接觸感染貓後、打 FeLV 或 FIV 疫苗前、生病時都要篩檢；FIV 抗體陰性但可能剛感染，至少隔 60 天再驗；吃母奶的幼貓可因母源抗體 FIV 快篩陽性到 6 月齡，可用 PCR 複驗；FIV 疫苗抗體可持續超過 7 年（Diagnosis of retrovirus infections）。2013 年 AAFP 把 FIV 疫苗列為非核心、用於高風險貓，北美 2015 年停售（Feline immunodeficiency virus vaccination）。陽性貓理想上室內飼養、與陰性貓隔離；穩定不打架的家庭 FIV 傳染風險很低（Limiting transmission in the home）。陽性貓至少每 6 個月健檢，較容易有淋巴瘤、骨髓抑制、神經疾病與繼發感染（Healthcare；Management of clinical illness）。",
     "keywords": [
       "FeLV",
       "FIV",
@@ -432,7 +432,7 @@
     ],
     "status": "approved",
     "url_verified": true,
-    "notes": "AAFP 官網免費｜2026-10-15 小幫手要求補 PDF：加 PMC 全文 PDF 與 DOI。\n2026-10-17 合併重複條目 AAFP-2020-FELINE-RETROVIRUS-MANAGEMENT-2020，補上期刊出處。",
+    "notes": "AAFP 官網免費｜2026-10-15 小幫手要求補 PDF：加 PMC 全文 PDF 與 DOI。\n2026-10-17 合併重複條目 AAFP-2020-FELINE-RETROVIRUS-MANAGEMENT-2020，補上期刊出處。｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
       "cat-adoption-guide-taiwan",
       "cat-indoor-vs-outdoor-taiwan",
@@ -455,7 +455,7 @@
     "type": "guideline",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "2021 AAFP 貓高齡照護指引（JFMS）。高齡指 10 歲以上（依 2021 生命階段指引），有些貓 8 歲起就可視為高齡。許多疾病的發生率隨年齡增加，而且常同時有好幾種病；高齡貓每次就診要評估體重、體態與肌肉分數與水合狀態，眼睛檢查要看視網膜，及早發現高血壓造成的血管變化或水腫。檢驗項目包括血液、尿液、總 T4、血壓，依健康狀況與基礎結果加做心臟超音波、心電圖、X 光、超音波。極高齡、長期用藥或多種共病的貓，可能需要每 3 到 6 個月評估一次。另涵蓋疼痛、營養、麻醉、認知功能障礙、安寧照護與「照護預算」（財務、時間、情感、身體）概念。",
+    "abstract_zh": "2021 AAFP 貓高齡照護指引（JFMS）。高齡指 10 歲以上（依 2021 生命階段指引），有些貓 8 歲起就可視為高齡。許多疾病的發生率隨年齡增加，而且常同時有好幾種病；高齡貓每次就診要評估體重、體態與肌肉分數與水合狀態，眼睛檢查要看視網膜，及早發現高血壓造成的血管變化或水腫。檢驗項目包括血液、尿液、總 T4、血壓，依健康狀況與基礎結果加做心臟超音波、心電圖、X 光、超音波。極高齡、長期用藥或多種共病的貓，可能需要每 3 到 6 個月評估一次。另涵蓋疼痛、營養、麻醉、認知功能障礙、安寧照護與「照護預算」（財務、時間、情感、身體）概念。\n\n■ 全文核對補充（2026-10-18）\n補充（原文核對）：高齡依生命階段指引定為 10 歲以上，部分貓 8 歲就可算高齡（Introduction）。10 歲以上每次檢查都要量血壓，聽診找心雜音與心律不整（Physical examination）。基本檢查包括全血球、血液生化（含血糖、腎指數）、尿液分析、總 T4、血壓，從 7 到 10 歲開始至少每年做，年紀越大越頻繁；很老或多重疾病的貓可能每 3 到 6 個月評估；心臟超音波、NT-proBNP、果糖胺屬依狀況加做的附加檢查（Recommended diagnostics；Table 1）。照護要讓居家環境適合老貓：低入口砂盆、踏階或斜坡、墊高的碗、溫暖的休息處，資源在家中多處擺放（Management tools；Table 5）。認知功能障礙要先排除疾病與環境因素才能診斷（Cognitive dysfunction syndrome）。",
     "keywords": [
       "老貓",
       "高齡",
@@ -468,7 +468,7 @@
     ],
     "status": "pending_review",
     "url_verified": true,
-    "notes": "AAFP 官網免費；2026-10-09 合併重複 key AAFP-2021-FELINE-SENIOR-CARE-2021（原 notes：auto-crawled from catvets.com/guidelines） 2026-10-14 補 PDF（小幫手 建議），PMC 版免費。｜2026-10-17 讀 PMC 全文核對；舊摘要「Senior 11-14、Super Senior 15+」是舊版分法，2021 版不是這樣分，已改。",
+    "notes": "AAFP 官網免費；2026-10-09 合併重複 key AAFP-2021-FELINE-SENIOR-CARE-2021（原 notes：auto-crawled from catvets.com/guidelines） 2026-10-14 補 PDF（小幫手 建議），PMC 版免費。｜2026-10-17 讀 PMC 全文核對；舊摘要「Senior 11-14、Super Senior 15+」是舊版分法，2021 版不是這樣分，已改。｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
       "cat-adoption-guide-taiwan",
       "cat-cognitive-dysfunction",
@@ -521,7 +521,7 @@
     "type": "guideline",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "貓口腔疾病（牙周病/FORL/口炎）的診斷與治療。含居家口腔護理方法、麻醉下洗牙指引、口炎的全口拔牙決策。最新 2025 版。\n\n（合併自 AAFP-2025-FELINEVMA-FELINE-ORAL-HEALTH-AND-DE-2025 的摘要）為獸醫專業人士提供貓口腔健康與牙科護理的實證建議。涵蓋疾病診斷、患者評估、麻醉、手術與術後照護，強調團隊合作與飼主參與。",
+    "abstract_zh": "貓口腔疾病（牙周病/FORL/口炎）的診斷與治療。含居家口腔護理方法、麻醉下洗牙指引、口炎的全口拔牙決策。最新 2025 版。\n\n（合併自 AAFP-2025-FELINEVMA-FELINE-ORAL-HEALTH-AND-DE-2025 的摘要）為獸醫專業人士提供貓口腔健康與牙科護理的實證建議。涵蓋疾病診斷、患者評估、麻醉、手術與術後照護，強調團隊合作與飼主參與。\n\n■ 全文核對補充（2026-10-18）\n本指引現在名稱是 2025 FelineVMA feline oral health and dental care guidelines（JFMS，PMC12665832）。清醒時的口腔檢查之後，要在麻醉下才能拍 X 光與治療，麻醉是貓牙科的必要部分；指引反對無麻醉洗牙（摘要；Anesthesia 節）。獸醫應定期檢查清醒時的口腔，從第一次幼貓門診就開始談居家護理、每次回診都複習；應指導飼主用刷牙或擦拭定期清除牙菌斑，並用合作訓練讓貓願意配合（Empowering the caregiver）。牙周病的預防與治療核心是清除牙齦上與牙齦下的牙菌斑，治療依牙菌斑、牙結石、牙齦指數決定（Periodontal disease）。牙吸收要麻醉下檢查與全口 X 光，建議每年 X 光追蹤（Tooth resorption > Follow-up）。指引沒有訂洗牙的固定間隔，也沒有說刷牙是最有效的居家方法。",
     "keywords": [
       "牙科",
       "口炎",
@@ -534,7 +534,7 @@
     ],
     "status": "pending_review",
     "url_verified": true,
-    "notes": "2025 最新版，AAFP 官網免費；2026-10-09 合併重複 key AAFP-2025-FELINEVMA-FELINE-ORAL-HEALTH-AND-DE-2025（原 notes：auto-crawled from catvets.com/guidelines）",
+    "notes": "2025 最新版，AAFP 官網免費；2026-10-09 合併重複 key AAFP-2025-FELINEVMA-FELINE-ORAL-HEALTH-AND-DE-2025（原 notes：auto-crawled from catvets.com/guidelines）｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
       "cat-dental-health-taiwan",
       "cat-life-stages-care-taiwan"
@@ -551,7 +551,7 @@
     "type": "consensus_guideline",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "這份指引取代 2010 年版，談慢性疼痛的貓怎麼長期使用非類固醇消炎止痛藥（NSAIDs）。貓身上研究最多、可長期使用的是美洛昔康（meloxicam）與羅貝考昔（robenacoxib）；貓的葡萄醣醛酸化代謝能力差，人用的乙醯胺酚（acetaminophen）不能給貓（NSAIDs in cats 一節）。開藥前要做身體檢查、量收縮壓，並驗血球與血液生化（Summary Points）。有退化性關節病的貓，最多 69% 同時有慢性腎病（NSAIDS and comorbidities 一節），不過腎病穩定的貓經過個別評估仍可使用（Summary Points）。最常見的副作用在腸胃，長期用藥的貓最多 14% 出現嘔吐（The gastrointestinal tract 一節）；貓不吃飯時要先停藥、問獸醫（Choosing the dosage regimen 一節）。藥有沒有效主要看行為，例如跳躍、上下樓梯、玩耍有沒有恢復（Monitoring 一節）。",
+    "abstract_zh": "這份指引取代 2010 年版，談慢性疼痛的貓怎麼長期使用非類固醇消炎止痛藥（NSAIDs）。貓身上研究最多、可長期使用的是美洛昔康（meloxicam）與羅貝考昔（robenacoxib）；貓的葡萄醣醛酸化代謝能力差，人用的乙醯胺酚（acetaminophen）不能給貓（NSAIDs in cats 一節）。開藥前要做身體檢查、量收縮壓，並驗血球與血液生化（Summary Points）。有退化性關節病的貓，最多 69% 同時有慢性腎病（NSAIDS and comorbidities 一節），不過腎病穩定的貓經過個別評估仍可使用（Summary Points）。最常見的副作用在腸胃，長期用藥的貓最多 14% 出現嘔吐（The gastrointestinal tract 一節）；貓不吃飯時要先停藥、問獸醫（Choosing the dosage regimen 一節）。藥有沒有效主要看行為，例如跳躍、上下樓梯、玩耍有沒有恢復（Monitoring 一節）。\n\n■ 全文核對補充（2026-10-18）\nMeloxicam 與 robenacoxib 是在貓研究最多的 NSAIDs，有強的證據支持用於退化性關節病疼痛，包括穩定的早期慢性腎病貓（前言）。NSAIDs 以外的選擇中，抗神經生長因子單株抗體 frunevetmab 每月皮下注射一次，用於貓骨關節炎疼痛，WSAVA 與 AAHA 疼痛指引把它和 NSAIDs 並列為第一線；超過 6 個月的長期研究與合併用藥的安全性還需要更多資料（Alternatives to NSAIDs > Anti-NGF mAbs）。",
     "keywords": [
       "NSAID",
       "疼痛",
@@ -565,7 +565,7 @@
     ],
     "status": "pending_review",
     "url_verified": true,
-    "notes": "AAFP 官網免費\n2026-10-17 合併重複條目 AAFP-2024-ISFM-AAFP-CONSENSUS-GUIDELINES-ON-T-2024，補上期刊出處，摘要依原文改寫。",
+    "notes": "AAFP 官網免費\n2026-10-17 合併重複條目 AAFP-2024-ISFM-AAFP-CONSENSUS-GUIDELINES-ON-T-2024，補上期刊出處，摘要依原文改寫。｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
       "cat-life-stages-care-taiwan"
     ],
@@ -586,7 +586,7 @@
     "type": "consensus_statement",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "AAFP 2018 餵食共識（Sadek 等，JFMS）。貓是嚴格肉食的獨居獵食者，偏好少量多餐、單獨進食；一天一兩大餐、單一餵食點的方式不符合這些需求，可能導致活動少、壓力與過食肥胖。建議用益智餵食器（乾濕食都有）、覓食式餵食，以及多個分開的食物與水的位置；多貓家庭要依貓之間的關係安排餵食點。內容沒有比較濕食與乾糧。",
+    "abstract_zh": "AAFP 2018 餵食共識（Sadek 等，JFMS）。貓是嚴格肉食的獨居獵食者，偏好少量多餐、單獨進食；一天一兩大餐、單一餵食點的方式不符合這些需求，可能導致活動少、壓力與過食肥胖。建議用益智餵食器（乾濕食都有）、覓食式餵食，以及多個分開的食物與水的位置；多貓家庭要依貓之間的關係安排餵食點。內容沒有比較濕食與乾糧。\n\n■ 全文核對補充（2026-10-18）\n建議把貓一天的食量分成多次小餐（Frequent meals and appropriate nutrition），貓天性喜歡少量多次、單獨進食（The multi-cat household）。原文沒有談老貓消化能力，唯一提到吃太快後吐的情況是壓力造成的狼吞虎嚥（Stress-related problems）。",
     "keywords": [
       "營養",
       "餵食",
@@ -599,7 +599,7 @@
     ],
     "status": "pending_review",
     "url_verified": true,
-    "notes": "AAFP 官網免費｜2026-10-17 讀 PMC 全文核對（小幫手指出這篇講的是益智餵食，不是乾濕食選擇；確認屬實，摘要已改）。",
+    "notes": "AAFP 官網免費｜2026-10-17 讀 PMC 全文核對（小幫手指出這篇講的是益智餵食，不是乾濕食選擇；確認屬實，摘要已改）。｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
       "cat-food-selection-taiwan",
       "cat-hepatic-lipidosis",
@@ -655,7 +655,7 @@
     "type": "guideline",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "貓亂尿的醫學 vs 行為原因鑑別。FLUTD/CKD/糖尿病排除後的行為介入：貓砂盆數量/位置/基質、費洛蒙、環境修改。",
+    "abstract_zh": "貓亂尿的醫學 vs 行為原因鑑別。FLUTD/CKD/糖尿病排除後的行為介入：貓砂盆數量/位置/基質、費洛蒙、環境修改。\n\n■ 全文核對補充（2026-10-18）\n全文核對補充：飼主最常反映的貓行為問題之一，也是送到收容所的主要原因之一（Purpose of the Guidelines）。問題不是出於報復或生氣，而是貓的身體、社交或醫療需求沒被滿足（Summary Points）。四大類原因：疾病（含結石、慢性腎病、泌尿道感染、糖尿病、甲亢、關節炎）、特發性膀胱炎、標記行為、環境或社交因素（Assessing 第 4 步）。尿液標記：多半站著翹尾巴對垂直面噴少量，有些貓也會蹲著標記平面，標記的貓常仍在砂盆正常排尿；結紮能大幅減少與性有關的標記，但約 10% 結紮公貓、4% 結紮母貓仍會標記；環境改變、新寵物或新物品、窗外的貓都可能引發（Marking behavior）。砂盆：單貓兩個、放兩處；多貓傳統原則是比貓多一個，但不是硬性規定；長方形，長度為貓鼻尖到尾根的 1.5 倍，越大越好；盡量用無蓋盆，無蓋不會悶住氣味；細沙狀無香味凝結砂，深度至少 3 公分，避免砂盆墊、篩網、除臭粉；每天至少清一次，每 1 到 4 週洗盆，只用肥皂與熱水（Designing the optimal litter box）。位置避開噪音電器、人來人往處與其他貓出入口（Elimination related to environmental or social factors）。清潔：避免含氨清潔劑；含氯產品可去除水泥與塑膠地板氣味；10% 酵素洗衣粉刷洗去蛋白質、乾後噴異丙醇去脂肪；地毯底層與襯墊也要處理；尿漬在紫外線燈下會發光，可用來找位置（Urine marking；Appendix 2）。抗焦慮藥物都沒有核准用於貓，屬標示外使用，要由獸醫評估，只能搭配其他處理（Psychoactive drugs；Appendix 2）。",
     "keywords": [
       "亂尿",
       "貓砂盆",
@@ -669,7 +669,7 @@
     ],
     "status": "pending_review",
     "url_verified": true,
-    "notes": "AAFP 官網免費 2026-10-12：catvets 改版，舊網址 404，換成新網址；PDF 為 JFMS 原文。 2026-10-14 補 PDF（小幫手 建議），PMC 版免費。",
+    "notes": "AAFP 官網免費 2026-10-12：catvets 改版，舊網址 404，換成新網址；PDF 為 JFMS 原文。 2026-10-14 補 PDF（小幫手 建議），PMC 版免費。｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
       "cat-anxiety-stress-management",
       "cat-cognitive-dysfunction",
@@ -679,41 +679,6 @@
     ],
     "pdf_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11148882/pdf/10.1177/1098612X14539092.pdf",
     "verified_at": "2026-10-12"
-  },
-  "AAFP-ENVIRONMENT-2013": {
-    "title": "2013 ISFM/AAFP Environmental Needs Guidelines",
-    "title_zh": "2013 ISFM/AAFP 貓環境需求指引",
-    "authors": "ISFM & AAFP",
-    "source": "AAFP",
-    "journal": "Journal of Feline Medicine and Surgery",
-    "url": "https://catvets.com/resource/aafp-isfm-environmental-needs-guidelines/",
-    "year": 2013,
-    "type": "guideline",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "貓的五大環境需求：安全空間、多重資源點、遊戲機會、社交互動、嗅覺刺激。室內貓環境豐富化的具體做法。",
-    "keywords": [
-      "環境",
-      "豐富化",
-      "室內貓",
-      "垂直空間",
-      "遊戲"
-    ],
-    "disease_tags": [
-      "enrichment"
-    ],
-    "status": "pending_review",
-    "url_verified": true,
-    "notes": "AAFP 官網免費",
-    "cited_by": [
-      "cat-adoption-guide-taiwan",
-      "cat-anxiety-stress-management",
-      "cat-cognitive-dysfunction",
-      "cat-environment-enrichment-taiwan",
-      "cat-obesity-weight-management",
-      "male-cat-urethral-obstruction"
-    ],
-    "pdf_url": "https://journals.sagepub.com/doi/pdf/10.1177/1098612X13477537"
   },
   "AAFP-HOSPICE-2023": {
     "title": "2023 AAFP/IAAHPC Feline Hospice and Palliative Care Guidelines",
@@ -726,7 +691,7 @@
     "type": "guideline",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "AAFP 與國際動物安寧緩和照護協會（IAAHPC）的貓安寧與緩和照護指引。貓確診會縮短壽命的疾病後，照護目標從治癒改成舒適與生活品質，就是安寧照護（定義一節）。照顧的對象擴大為「照護單位」，飼主的需要也算在內；並用「照護預算」和飼主談能投入的時間、金錢與心力（摘要、Unit of care 一節）。指引提出五步驟照護計畫：了解飼主的需求與目標、說明病程、擬定個人化計畫、執行照護、在貓過世前後給予情緒支持（Five-step plan 一節）。生活品質可以用經過驗證的 20 題線上量表追蹤（Validated QOL instruments 一節）。12 歲以上的貓最多 90% 有退化性關節病，所以疼痛評估是照護重點（Recognition of pain 一節）。餵藥對貓壓力太大時，可考慮放食道胃管，用來給藥、補水與營養（Use of feeding tubes 一節）。安樂死只簡短提及，細節見 AAFP 的臨終教育工具包。",
+    "abstract_zh": "AAFP 與國際動物安寧緩和照護協會（IAAHPC）的貓安寧與緩和照護指引。貓確診會縮短壽命的疾病後，照護目標從治癒改成舒適與生活品質，就是安寧照護（定義一節）。照顧的對象擴大為「照護單位」，飼主的需要也算在內；並用「照護預算」和飼主談能投入的時間、金錢與心力（摘要、Unit of care 一節）。指引提出五步驟照護計畫：了解飼主的需求與目標、說明病程、擬定個人化計畫、執行照護、在貓過世前後給予情緒支持（Five-step plan 一節）。生活品質可以用經過驗證的 20 題線上量表追蹤（Validated QOL instruments 一節）。12 歲以上的貓最多 90% 有退化性關節病，所以疼痛評估是照護重點（Recognition of pain 一節）。餵藥對貓壓力太大時，可考慮放食道胃管，用來給藥、補水與營養（Use of feeding tubes 一節）。安樂死只簡短提及，細節見 AAFP 的臨終教育工具包。\n\n■ 全文核對補充（2026-10-18）\n安寧照護第一步要和飼主談照護預算、生活品質與存活時間的取捨，以及傾向安樂死或在安寧照護下離世（Step 1）。指引建議提供飼主辨識疼痛的工具，因為貓很會藏痛、很多飼主沒發現；急性疼痛工具包括看臉部表情的貓疼痛表情量表（Feline Grimace Scale，有手機 app）（Recognition of pain、Acute pain）。生活品質量表有兩個用途：追蹤治療效果，以及協助做安樂死決定（Validated QOL instruments）。疼痛在持續照護下仍無法緩解時，應該討論安樂死（Non-maleficence and beneficence）。maropitant 止吐效果好但可能控制不了噁心，ondansetron 可能對噁心較有效（Antiemetics）。補水可用溫水拌食物、多處水源與流動水，在不傷害生活品質時考慮居家皮下輸液（Hydration management）。在場的飼主應事先了解安樂死會進行的步驟（End of life）。指引沒有列安樂死時機清單，也沒有談轉介安寧的時機。",
     "keywords": [
       "安寧",
       "安樂死",
@@ -740,7 +705,7 @@
     ],
     "status": "pending_review",
     "url_verified": true,
-    "notes": "AAFP 官網免費\n2026-10-17 合併重複條目 AAFP-2023-AAFP-IAAHPC-FELINE-HOSPICE-PALLIATI-2023，補上期刊出處，摘要依原文改寫。",
+    "notes": "AAFP 官網免費\n2026-10-17 合併重複條目 AAFP-2023-AAFP-IAAHPC-FELINE-HOSPICE-PALLIATI-2023，補上期刊出處，摘要依原文改寫。｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
       "cat-cancer-tumors-guide",
       "cat-end-of-life-care-taiwan"
@@ -762,7 +727,7 @@
     "type": "educational",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "面向飼主的 CKD 完整說明：症狀（多喝多尿/體重下降/嘔吐）、診斷（血檢/尿檢/SDMA/超音波）、治療（飲食/輸液/藥物）、預後。",
+    "abstract_zh": "10 歲以上的貓最多 40%、15 歲以上最多 80% 有 CKD（導言）。症狀有多喝多尿、食慾差、精神差、毛髮凌亂、體重下降，高血壓與貧血也常見（Clinical Signs）；頁面沒有寫嘔吐或口臭。肌酸酐會受脫水與肌肉量影響，很瘦的貓腎功能下降時肌酸酐可能仍正常；SDMA 較不受這兩者影響，腎功能喪失約 40% 就會上升，肌酸酐要到約 75%（Diagnosis）。約 60% 的 CKD 貓會有高血壓（Diagnosis）。生病期間可能要在醫院打點滴維持水分（Treatment and Management）。第 2 期確診的貓平均存活 2 到 3 年，第 4 期平均不到 6 個月（Prognosis）。",
     "keywords": [
       "CKD",
       "腎病",
@@ -774,7 +739,7 @@
     ],
     "status": "pending_review",
     "url_verified": true,
-    "notes": "Cornell 免費，品質最高的飼主教育內容",
+    "notes": "Cornell 免費，品質最高的飼主教育內容｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
       "cat-ckd-complete-guide",
       "cat-common-symptoms-taiwan",
@@ -794,7 +759,7 @@
     "type": "educational",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "Cornell 貓健康中心的糖尿病說明。飼主最常注意到的兩個症狀是食慾好卻體重下降，以及多喝多尿。低碳水化合物飲食已證實能改善糖尿病貓的血糖調節；處方飲食有乾、濕兩種，對許多貓來說只餵濕食可能更有益；過重的貓要在獸醫監測下慢慢減重；很多獸醫建議在打胰島素時餵食，避免血糖過低；已緩解的貓應繼續吃低碳水飲食。頁面附有 Cornell 的糖尿病照護影片清單。",
+    "abstract_zh": "Cornell 貓健康中心的糖尿病說明。飼主最常注意到的兩個症狀是食慾好卻體重下降，以及多喝多尿。低碳水化合物飲食已證實能改善糖尿病貓的血糖調節；處方飲食有乾、濕兩種，對許多貓來說只餵濕食可能更有益；過重的貓要在獸醫監測下慢慢減重；很多獸醫建議在打胰島素時餵食，避免血糖過低；已緩解的貓應繼續吃低碳水飲食。頁面附有 Cornell 的糖尿病照護影片清單。\n\n■ 全文核對補充（2026-10-18）\n補充（原文核對）：貓的糖尿病多數屬第二型，問題在身體細胞對胰島素反應不良（開頭段）。主要風險因子並列肥胖、年紀增加、活動量少、公貓與使用類固醇，肥胖貓得病機率最高是理想體重貓的 4 倍，飼主能做的最重要的事是維持健康體重並每天陪玩（Risk Factors）。飼主在家最常注意到的兩個徵兆是食慾好卻變瘦、多喝多尿；少數控制不佳的貓後腳神經受損，出現腳跟貼地的蹠行姿勢，治療後常會恢復（Clinical Signs）。血糖曲線是監測的理想方法，飼主可學會在家從耳朵靜脈或腳掌肉墊採血，用驗證過的貓用血糖機測；剛確診時幾週做一次，穩定後拉長，穩定的貓也要每 3 到 4 個月做一次，不可自行改劑量（Monitoring）。及早積極治療可讓許多貓緩解，最重要的是及早開始胰島素並密切監測；確診六個月內沒緩解，幾乎都要終生打針（Prognosis and Remission）。",
     "keywords": [
       "糖尿病",
       "胰島素",
@@ -806,7 +771,7 @@
     ],
     "status": "pending_review",
     "url_verified": true,
-    "notes": "Cornell 免費",
+    "notes": "Cornell 免費｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
       "cat-common-symptoms-taiwan",
       "cat-diabetes-care",
@@ -828,7 +793,7 @@
     "type": "educational",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "Cornell 貓健康中心的下泌尿道疾病說明（2016 年 10 月更新）。症狀：排尿困難或疼痛、頻尿、排尿時叫、血尿、在砂盆外尿、常舔生殖器。最常見於中年、過重、少運動、用室內砂盆、出門受限、喝水少的貓，任何年齡都可能發生；公貓可能風險較高，多貓或搬家等壓力也有影響。特發性膀胱炎是最常見的診斷，其他原因有尿路結石（主要是鳥糞石與草酸鈣，草酸鈣近年變多）與尿道阻塞。公貓（含結紮公貓）尿道較長較窄，比母貓容易阻塞；完全阻塞到死亡的時間可能不到 24 到 48 小時，必須立即治療，通常要導尿。診斷先做理學檢查與驗尿，必要時加血檢、X 光、腹部超音波、尿液培養。預防：隨時提供乾淨的水、少量多餐、控制體重、砂盆比貓多一個且放在安靜乾淨處、環境豐富化、維持飲食與作息穩定。",
+    "abstract_zh": "Cornell 貓健康中心的下泌尿道疾病說明（2016 年 10 月更新）。症狀：排尿困難或疼痛、頻尿、排尿時叫、血尿、在砂盆外尿、常舔生殖器。最常見於中年、過重、少運動、用室內砂盆、出門受限、喝水少的貓，任何年齡都可能發生；公貓可能風險較高，多貓或搬家等壓力也有影響。特發性膀胱炎是最常見的診斷，其他原因有尿路結石（主要是鳥糞石與草酸鈣，草酸鈣近年變多）與尿道阻塞。公貓（含結紮公貓）尿道較長較窄，比母貓容易阻塞；完全阻塞到死亡的時間可能不到 24 到 48 小時，必須立即治療，通常要導尿。診斷先做理學檢查與驗尿，必要時加血檢、X 光、腹部超音波、尿液培養。預防：隨時提供乾淨的水、少量多餐、控制體重、砂盆比貓多一個且放在安靜乾淨處、環境豐富化、維持飲食與作息穩定。\n\n■ 全文核對補充（2026-10-18）\n尿道完全阻塞時，腎臟無法排除血中毒素、維持水分與電解質平衡，可能出現危及生命的電解質失衡（Urethral Obstruction）。阻塞的貓會用力蹲、頻繁嘗試排尿、幾乎沒尿，時間越久越痛苦、常痛到叫（Urethral Obstruction）。尿道栓由軟的物質組成，含礦物質、細胞與類似黏液的蛋白質，是結石以外常見的阻塞原因（Urethral Obstruction）。下泌尿道症狀可能由感染、發炎、飲食與行為問題引起，診斷可做尿液培養，阻塞解除後可能給抗生素處理細菌感染（Clinical Signs、Diagnosis、Urethral Obstruction）。換食物可能讓部分特發性膀胱炎的貓復發，所以飲食與餵食時間要固定；泌尿保健飼料可能降低阻塞機會，但沒有證據能減少下泌尿道症狀本身（Idiopathic Cystitis）。原文沒有點名鉀離子、急性腎衰竭或心律不整，風險因子沒有「只吃乾糧」。",
     "keywords": [
       "FLUTD",
       "FIC",
@@ -841,7 +806,7 @@
     ],
     "status": "pending_review",
     "url_verified": true,
-    "notes": "Cornell 免費",
+    "notes": "Cornell 免費｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
       "cat-emergency-care-taiwan",
       "cat-food-selection-taiwan",
@@ -863,7 +828,7 @@
     "type": "educational",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "貓甲亢的症狀（體重下降+食慾增加+心跳快）、診斷（T4/fT4）、四種治療選擇比較（藥物/放射碘/手術/飲食）。",
+    "abstract_zh": "貓甲亢的症狀（體重下降+食慾增加+心跳快）、診斷（T4/fT4）、四種治療選擇比較（藥物/放射碘/手術/飲食）。\n\n■ 全文核對補充（2026-10-18）\n補充（原文核對）：甲亢常見於中老年貓，多數由良性腺瘤造成，少數是惡性腺癌（開頭段）。最常見症狀是體重下降、食慾增加、多喝多尿，也可能嘔吐、腹瀉、過動，毛髮凌亂、打結或油膩（Clinical Signs）。多數病貓血中 T4 升高，少數 T4 在正常範圍，要加做其他檢查；也要評估心臟與腎臟（Diagnosis）。甲狀腺激素升高會讓心跳加快、心肌收縮變強（Secondary problems）。四種治療：藥物、放射碘、手術、飲食；藥物只能控制、需終生給藥；放射碘在可取得時是首選，約 95% 在三個月內治癒（Treatment）。",
     "keywords": [
       "甲亢",
       "甲狀腺",
@@ -876,7 +841,7 @@
     ],
     "status": "pending_review",
     "url_verified": true,
-    "notes": "Cornell 免費",
+    "notes": "Cornell 免費｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
       "cat-cognitive-dysfunction",
       "cat-common-symptoms-taiwan",
@@ -897,7 +862,7 @@
     "type": "educational",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "HCM 是貓最常見心臟病。左心室肥厚→心衰竭/血栓/猝死。診斷靠超音波。治療：atenolol/clopidogrel 預防血栓。｜2026-10-17 核對：Cornell 頁面寫 HCM 在部分品種較常見，包括緬因貓、布偶貓、英國短毛、美國短毛、斯芬克斯、孟加拉、夏特爾、挪威森林貓、西伯利亞貓與波斯貓；已在部分患貓找到幾個心臟基因的突變，新的基因檢測可能幫忙判斷風險，但頁面沒有點名基因或品種。",
+    "abstract_zh": "很多 HCM 的貓看起來沒有生病（Clinical signs）。HCM 的血栓最常堵住後腿血流，造成後腿突然疼痛，嚴重時癱瘓（Clinical signs）。確診靠心臟超音波，並要排除高血壓與甲亢；獸醫可能加做胸腔 X 光與心電圖（Diagnosis）。治療目標是控制心跳、緩解肺部積水、預防血栓（Treatment）。頁面沒有點名 atenolol 或 clopidogrel，也沒寫血栓卡住的位置或腳掌冰冷。\n2026-10-17 核對：Cornell 頁面寫 HCM 在部分品種較常見，包括緬因貓、布偶貓、英國短毛、美國短毛、斯芬克斯、孟加拉、夏特爾、挪威森林貓、西伯利亞貓與波斯貓；已在部分患貓找到幾個心臟基因的突變，新的基因檢測可能幫忙判斷風險，但頁面沒有點名基因或品種。",
     "keywords": [
       "HCM",
       "心臟病",
@@ -910,7 +875,7 @@
     ],
     "status": "pending_review",
     "url_verified": true,
-    "notes": "Cornell 免費",
+    "notes": "Cornell 免費｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
       "cat-emergency-care-taiwan",
       "cat-hcm-heart-disease",
@@ -958,7 +923,7 @@
     "type": "guideline",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "WSAVA 疫苗指引小組 2024 年犬貓疫苗指引（官方中文版，貓從第 23 頁起）。貓的核心疫苗是 FPV、FHV、FCV；幼貓每 2 到 4 週一劑，最後一劑在 16 週齡以上，建議 26 週齡左右再補一劑，不必等到 12 到 16 月齡。之後「低風險」貓（不去寄宿的獨居室內貓）每 3 年或更久補一次；「高風險」貓（常寄宿、會接觸感染貓）FCV、FHV 可能需要更頻繁，最多每年一次，寄宿前 1 到 2 週補打。FPV 免疫可維持多年；FCV、FHV 的保護只是部分的，打過疫苗的成貓仍可能感染 FCV；沒有疫苗能防止 FHV 感染，病毒會潛伏在神經組織、壓力時再活化。FPV 可用血清抗體檢測決定成貓是否補打。非核心：FeLV、FIV（只在日本、澳洲、紐西蘭上市，接種後產生的抗體會干擾診斷）、披衣菌（多貓且確認感染時作為控制措施）、博德氏菌（一般不用於家貓）。注射部位肉瘤（FISS）少見；有些證據顯示含佐劑疫苗影響較大，但也有專家認為證據不足；不要打在肩胛間，每次換不同部位，遠端肢體是黃金標準，支持 3-2-1 原則。",
+    "abstract_zh": "WSAVA 疫苗指引小組 2024 年犬貓疫苗指引（官方中文版，貓從第 23 頁起）。貓的核心疫苗是 FPV、FHV、FCV；幼貓每 2 到 4 週一劑，最後一劑在 16 週齡以上，建議 26 週齡左右再補一劑，不必等到 12 到 16 月齡。之後「低風險」貓（不去寄宿的獨居室內貓）每 3 年或更久補一次；「高風險」貓（常寄宿、會接觸感染貓）FCV、FHV 可能需要更頻繁，最多每年一次，寄宿前 1 到 2 週補打。FPV 免疫可維持多年；FCV、FHV 的保護只是部分的，打過疫苗的成貓仍可能感染 FCV；沒有疫苗能防止 FHV 感染，病毒會潛伏在神經組織、壓力時再活化。FPV 可用血清抗體檢測決定成貓是否補打。非核心：FeLV、FIV（只在日本、澳洲、紐西蘭上市，接種後產生的抗體會干擾診斷）、披衣菌（多貓且確認感染時作為控制措施）、博德氏菌（一般不用於家貓）。注射部位肉瘤（FISS）少見；有些證據顯示含佐劑疫苗影響較大，但也有專家認為證據不足；不要打在肩胛間，每次換不同部位，遠端肢體是黃金標準，支持 3-2-1 原則。\n\n■ 全文核對補充（2026-10-18）\n全文補充（英文版）：母源抗體量在不同窩、同窩之間都不同，不驗血無法預測何時退掉，所以要連續打多劑（Effects of maternally derived antibodies）。診所內的 FPV 抗體套組 20 到 30 分鐘出結果，但部分套組特異性不足，金標準仍是實驗室檢測（Serological testing）。FCV、FHV 的免疫只是部分的，寄宿壓力可能讓它變弱；對減毒活疫苗有反應的貓，貓瘟免疫可維持多年（Core vaccines for cats）。接種史不明的成貓，廠商多建議三合一打兩劑、間隔 2 到 4 週，VGG 支持（同節）。FISS 成因不確定，推測和局部慢性發炎有關；每次接種換不同部位，在病歷或疫苗卡記錄並輪替部位；疫苗保護遠大於 FISS 風險（Feline injection-site sarcoma）。",
     "keywords": [
       "疫苗",
       "WSAVA",
@@ -971,7 +936,7 @@
     ],
     "status": "pending_review",
     "url_verified": true,
-    "notes": "WSAVA 免費 PDF｜2026-10-17 小幫手要求補 PDF：加 WSAVA 官方中文版 PDF（貓的部分從第 23 頁開始）。\n2026-10-17 合併重複條目 WSAVA-VACCINATION-GUIDELINES-2022，補上期刊出處。\n2026-10-17 改指向 WSAVA 頁面摺疊裡的原始文件：網址改英文版全文 PDF；pdf_url 保留官方中文版。另有貓疫苗一覽表 https://wsava.org/wp-content/uploads/2025/06/Cats-Vaccination-Table.pdf",
+    "notes": "WSAVA 免費 PDF｜2026-10-17 小幫手要求補 PDF：加 WSAVA 官方中文版 PDF（貓的部分從第 23 頁開始）。\n2026-10-17 合併重複條目 WSAVA-VACCINATION-GUIDELINES-2022，補上期刊出處。\n2026-10-17 改指向 WSAVA 頁面摺疊裡的原始文件：網址改英文版全文 PDF；pdf_url 保留官方中文版。另有貓疫苗一覽表 https://wsava.org/wp-content/uploads/2025/06/Cats-Vaccination-Table.pdf｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
       "cat-life-stages-care-taiwan",
       "cat-upper-respiratory-infection",
@@ -995,7 +960,7 @@
     "type": "guideline",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "WSAVA 把營養評估列為體溫、脈搏、呼吸、疼痛之後的第五項生命徵象，建議每次看診都做（前言）。先用簡易篩檢找風險因子，例如零食與餐桌食物超過每日熱量 10%、非傳統飲食、體重不明原因變化；有風險再做延伸評估（表 1）。體態評分（BCS）評的是脂肪，指引採 9 分制，多數寵物的目標是 4 到 5 分，6 分以上與疾病風險的關聯似乎開始上升；肌肉狀況評分（MCS）另外評肌肉量，兩者不一定一致，過重的動物也可能肌肉流失，中長毛動物要用手摸才準（BCS and MCS 節）。熱量可用飼料標示或公式當起點，但貓的個體差異可達上下 50%，之後依體重與體態調整（行動計畫節）。WSAVA 全球營養工具包裡的貓 BCS 表、MCS 表、健康成貓熱量表、飲食紀錄表、住院餵食指南是另外的文件，引用時應分開列。",
+    "abstract_zh": "WSAVA 把營養評估列為體溫、脈搏、呼吸、疼痛之後的第五項生命徵象，建議每次看診都做（前言）。先用簡易篩檢找風險因子，例如零食與餐桌食物超過每日熱量 10%、非傳統飲食、體重不明原因變化；有風險再做延伸評估（表 1）。體態評分（BCS）評的是脂肪，指引採 9 分制，多數寵物的目標是 4 到 5 分，6 分以上與疾病風險的關聯似乎開始上升；肌肉狀況評分（MCS）另外評肌肉量，兩者不一定一致，過重的動物也可能肌肉流失，中長毛動物要用手摸才準（BCS and MCS 節）。熱量可用飼料標示或公式當起點，但貓的個體差異可達上下 50%，之後依體重與體態調整（行動計畫節）。WSAVA 全球營養工具包裡的貓 BCS 表、MCS 表、健康成貓熱量表、飲食紀錄表、住院餵食指南是另外的文件，引用時應分開列。\n\n■ 全文核對補充（2026-10-18）\n多數寵物的 BCS 目標是 9 分制的 4 到 5 分，飼主可能覺得「太瘦」，需要衛教；成年動物 6 分以上與疾病風險的關聯似乎開始上升（BCS and MCS 節）。指引本文沒有把 6 到 9 分再細分成過重和肥胖。BCS 與 MCS 沒有直接關係，過重的動物也可能有明顯的肌肉流失，肋骨或腹部摸得到脂肪時，容易把輕到中度的肌肉流失看成正常（BCS and MCS 節）。",
     "keywords": [
       "營養",
       "BCS",
@@ -1008,7 +973,7 @@
     ],
     "status": "pending_review",
     "url_verified": true,
-    "notes": "WSAVA 免費 PDF\n2026-10-17 合併重複條目 WSAVA-NUTRITION-GUIDELINES-2022，補上期刊出處，摘要依原文改寫。\n2026-10-17 官方中文版：https://wsava.org/wp-content/uploads/2020/01/Global-Nutritional-Assesment-Guidelines-Chinese.pdf",
+    "notes": "WSAVA 免費 PDF\n2026-10-17 合併重複條目 WSAVA-NUTRITION-GUIDELINES-2022，補上期刊出處，摘要依原文改寫。\n2026-10-17 官方中文版：https://wsava.org/wp-content/uploads/2020/01/Global-Nutritional-Assesment-Guidelines-Chinese.pdf｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
       "cat-life-stages-care-taiwan",
       "cat-obesity-weight-management"
@@ -1029,7 +994,7 @@
     "type": "database",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "ASPCA 毒物控制中心的完整植物毒性資料庫。可按貓/狗/馬篩選。每種植物附毒性程度、中毒症狀、處理方式。",
+    "abstract_zh": "ASPCA 毒物控制中心的完整植物毒性資料庫。可按貓/狗/馬篩選。每種植物附毒性程度、中毒症狀、處理方式。\n\n■ 全文核對補充（2026-10-18）\n清單收錄的是常遇到的植物，不是全部。任何植物吃下去都可能讓貓狗嘔吐、腸胃不適；列為無毒或只有輕微腸胃不適的植物，預期不會危及生命（頁首說明）。",
     "keywords": [
       "中毒",
       "植物",
@@ -1042,7 +1007,7 @@
     ],
     "status": "pending_review",
     "url_verified": true,
-    "notes": "ASPCA 免費，毒物清單的金標準",
+    "notes": "ASPCA 免費，毒物清單的金標準｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
       "cat-toxic-substances-taiwan"
     ]
@@ -1058,7 +1023,7 @@
     "type": "educational",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "ASPCA 動物毒物控制中心「不要餵寵物的人類食物」。蔥屬（洋蔥、大蒜、細香蔥）會刺激腸胃、傷害紅血球，貓比狗更敏感；巧克力、咖啡、咖啡因的毒性來自甲基黃嘌呤；木糖醇可能造成低血糖、依攝取量可能傷肝；酒精造成嘔吐、腹瀉、協調變差等；生麵團的酵母會在消化道膨脹產氣；鹽分過多造成口渴、多尿。葡萄、夏威夷豆的段落只寫狗；酪梨主要對鳥、兔、驢、馬和反芻動物有害。生肉、生蛋可能帶沙門氏菌、大腸桿菌，骨頭可能造成腸胃道受傷或阻塞。頁面沒有提到解毒劑或安全劑量。",
+    "abstract_zh": "ASPCA 動物毒物控制中心「不要餵寵物的人類食物」。蔥屬（洋蔥、大蒜、細香蔥）會刺激腸胃、傷害紅血球，貓比狗更敏感；巧克力、咖啡、咖啡因的毒性來自甲基黃嘌呤；木糖醇可能造成低血糖、依攝取量可能傷肝；酒精造成嘔吐、腹瀉、協調變差等；生麵團的酵母會在消化道膨脹產氣；鹽分過多造成口渴、多尿。葡萄、夏威夷豆的段落只寫狗；酪梨主要對鳥、兔、驢、馬和反芻動物有害。生肉、生蛋可能帶沙門氏菌、大腸桿菌，骨頭可能造成腸胃道受傷或阻塞。頁面沒有提到解毒劑或安全劑量。\n\n■ 全文核對補充（2026-10-18）\n巧克力、咖啡、咖啡因的毒性來自甲基黃嘌呤，可能造成吐、拉、喘、多喝多尿、過動、心律異常、顫抖、抽搐甚至死亡，顏色越深越危險（Chocolate, Coffee and Caffeine）。蔥屬（洋蔥、大蒜、細香蔥）會傷紅血球造成貧血，貓比狗更敏感（Onions, Garlic, Chives）。木糖醇見於口香糖、糖果、烘焙食品、牙膏，會造成低血糖與肝損傷（Xylitol）。葡萄、葡萄乾段落只寫狗會腎損傷，沒提貓（Grapes & Raisins）。",
     "keywords": [
       "中毒",
       "食物",
@@ -1071,7 +1036,7 @@
     ],
     "status": "pending_review",
     "url_verified": true,
-    "notes": "2026-10-17 讀原文核對；舊摘要寫「對貓、每種附中毒劑量」與原文不符，已改。",
+    "notes": "2026-10-17 讀原文核對；舊摘要寫「對貓、每種附中毒劑量」與原文不符，已改。｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
       "cat-emergency-care-taiwan",
       "cat-home-safety-taiwan",
@@ -1166,12 +1131,12 @@
     "type": "guideline",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "",
+    "abstract_zh": "\n\n■ 全文核對補充（2026-10-18）\n2022 AAFP/ISFM 貓友善獸醫互動指引（JFMS 2022，PMC10845437）。沒有做外出籠正向訓練的飼主，可以在出發前 15 分鐘先在外出籠和車內噴合成費洛蒙（Preparation prior to visiting > Caregiver role）；診間可準備噴過合成費洛蒙的毛巾蓋住外出籠，有些貓也喜歡被噴過的溫暖毛巾蓋住（Examination room preparation；Feline preferred locations）。",
     "keywords": [],
     "disease_tags": [],
     "status": "pending_review",
     "url_verified": true,
-    "notes": "auto-crawled from catvets.com/guidelines",
+    "notes": "auto-crawled from catvets.com/guidelines｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
       "cat-anxiety-stress-management"
     ]
@@ -1249,12 +1214,12 @@
     "type": "guideline",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "2021 AAHA/AAFP 貓生命階段指引（Quimby 等，JFMS）。分為幼貓（出生到 1 歲）、青年成貓（1 到 6 歲）、熟齡成貓（7 到 10 歲）、高齡（10 歲以上）與臨終期。所有貓至少每年檢查一次，高齡貓至少每 6 個月一次，有慢性病的更頻繁。檢驗頻率：幼貓與青年成貓做一次基準值、之後視需要；熟齡成貓每 1 到 2 年；高齡貓至少每年（建議每 6 個月）。提供各階段營養、行為與篩檢建議。",
+    "abstract_zh": "2021 AAHA/AAFP 貓生命階段指引（Quimby 等，JFMS）。分為幼貓（出生到 1 歲）、青年成貓（1 到 6 歲）、熟齡成貓（7 到 10 歲）、高齡（10 歲以上）與臨終期。所有貓至少每年檢查一次，高齡貓至少每 6 個月一次，有慢性病的更頻繁。檢驗頻率：幼貓與青年成貓做一次基準值、之後視需要；熟齡成貓每 1 到 2 年；高齡貓至少每年（建議每 6 個月）。提供各階段營養、行為與篩檢建議。\n\n■ 全文核對補充（2026-10-18）\n補充（原文核對）：2021 版把 2010 年的六個生命階段簡化為四個年齡階段加臨終期，共五個（Introduction；Table 1）。幼貓到 1 歲、青年 1 到 6 歲、熟齡 7 到 10 歲、高齡 10 歲以上（Table 1）。所有貓至少每年檢查一次，高齡貓至少每半年一次（Discussion items for all life stages）。檢驗頻率：熟齡每 1 到 2 年，高齡至少每年、建議每半年；熟齡貓也要考慮驗 T4（Recommended diagnostics based on life stage；Table 4）。",
     "keywords": [],
     "disease_tags": [],
     "status": "pending_review",
     "url_verified": true,
-    "notes": "auto-crawled from catvets.com/guidelines | 摘要依指引範圍整理（原文 PDF）。2026-06-10 2026-10-14 補 PDF（小幫手 建議），PMC 版免費。",
+    "notes": "auto-crawled from catvets.com/guidelines | 摘要依指引範圍整理（原文 PDF）。2026-06-10 2026-10-14 補 PDF（小幫手 建議），PMC 版免費。｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
       "cat-adoption-guide-taiwan",
       "cat-cancer-tumors-guide",
@@ -1302,12 +1267,12 @@
     "type": "guideline",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "2019 AAFP 人畜共通傳染病指引。涵蓋貓相關 zoonoses（弓形蟲、貓抓病／巴氏桿菌、皮癬菌、腸道寄生蟲等）的風險評估、預防與免疫低下族群（含孕婦）的衛教建議。",
+    "abstract_zh": "2019 AAFP 人畜共通傳染病指引。涵蓋貓相關 zoonoses（弓形蟲、貓抓病／巴氏桿菌、皮癬菌、腸道寄生蟲等）的風險評估、預防與免疫低下族群（含孕婦）的衛教建議。\n\n■ 全文核對補充（2026-10-18）\n全文補充：貓科是弓形蟲唯一的最終宿主，初次感染後從糞便排出大量卵囊；卵囊要在環境中孢子化才有感染力，所以直接接觸貓比接觸受污染環境更不容易感染；已感染過的貓再接觸時通常不排或只排少量；多數研究顯示養貓與人感染弓形蟲的關聯很小（Enteric zoonoses；Table 1）。飼主建議：家中糞便每天清，最好由免疫低下者以外的人清；貓砂盆髒了用肥皂水洗；只餵市售加工食品；園藝戴手套（General guidelines for cat owners）。肉類中心溫度：整塊肉 63°C、絞肉 71°C、禽肉 74°C（Panelists' advice 7）。",
     "keywords": [],
     "disease_tags": [],
     "status": "pending_review",
     "url_verified": true,
-    "notes": "auto-crawled from catvets.com/guidelines | 摘要依指引範圍整理，2026-06-10｜2026-10-15 小幫手要求補 PDF：加 PMC 全文 PDF 與 DOI。",
+    "notes": "auto-crawled from catvets.com/guidelines | 摘要依指引範圍整理，2026-06-10｜2026-10-15 小幫手要求補 PDF：加 PMC 全文 PDF 與 DOI。｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
       "cat-parasite-prevention-taiwan",
       "cat-skin-allergies",
@@ -1329,12 +1294,12 @@
     "type": "guideline",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "",
+    "abstract_zh": "\n\n■ 全文核對補充（2026-10-18）\n術前禁食是為了減少胃內容物、預防胃食道逆流與吸入；傳統的禁食 6 到 12 小時沒有實證，禁食久也不保證胃是空的，壓力、餐量、食物含水量低都會延緩胃排空。雖然沒有貓的資料，獸醫可以斟酌改成麻醉前 3 到 4 小時給少量濕食；水可以喝到術前給藥為止（Preanesthetic assessment > Fasting）。全文 PMC10816483。",
     "keywords": [],
     "disease_tags": [],
     "status": "pending_review",
     "url_verified": true,
-    "notes": "auto-crawled from catvets.com/guidelines",
+    "notes": "auto-crawled from catvets.com/guidelines｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
       "cat-neutering-aftercare-taiwan"
     ]
@@ -1407,20 +1372,26 @@
     "type": "guideline",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "AAFP/ISFM 2013 貓環境需求指引（Ellis 等，JFMS）。提出「健康貓環境的五大支柱」：(1) 提供安全的躲藏空間；(2) 多處且分隔的關鍵資源（食、水、貓砂、休息、玩耍）；(3) 提供遊戲與掠食行為的機會；(4) 正向、一致、可預測的人貓互動；(5) 尊重貓的嗅覺。為居家環境豐富化與行為問題的核心參考。",
+    "abstract_zh": "AAFP/ISFM 2013 貓環境需求指引（Ellis 等，JFMS）。提出「健康貓環境的五大支柱」：(1) 提供安全的躲藏空間；(2) 多處且分隔的關鍵資源（食、水、貓砂、休息、玩耍）；(3) 提供遊戲與掠食行為的機會；(4) 正向、一致、可預測的人貓互動；(5) 尊重貓的嗅覺。為居家環境豐富化與行為問題的核心參考。\n\n■ 全文核對補充（2026-10-18）\n全文核對補充：要讓貓只待室內、自由出門或兩者混合，由飼主決定，會受當地觀念、法規與環境安全影響；可行時讓貓接觸安全的戶外空間；圍起來的戶外空間保護貓不受傷，也避開掠食動物和流浪貓，減少傳染病接觸；牽繩散步也是安全選項，前提是用正向方式訓練過牽繩和胸背帶，散步時牽繩放鬆、讓貓選路；多貓家庭的躲藏處至少和貓一樣多（Pillar 1 > Other considerations；Figure 6）。食、水、砂盆、休息、玩耍、抓板都分開放，每種資源至少兩處；戶外也要有乾淨飲水（Pillar 2）。貓偏好熟悉環境，可預測與固定作息有助應對壓力（Introduction）。\n\n■ 併入的重複條目 AAFP-ENVIRONMENT-2013 摘要\n貓的五大環境需求：安全空間、多重資源點、遊戲機會、社交互動、嗅覺刺激。室內貓環境豐富化的具體做法。\n\n■ 全文核對補充（2026-10-18）\n全文核對補充（與 AAFP-2013-ENVIRONMENTAL-NEEDS-2013 為同一篇，建議合併）：貓偏好熟悉的領域，掌控感讓牠自在、壓力較低；可預測、熟悉與固定作息提升貓的應對能力；被迫離開熟悉環境（看醫生、搬家）或有新貓進入時，貓會迴避或躲起來，躲藏是一種應對方式（Introduction > The solitary hunter）。",
     "keywords": [],
     "disease_tags": [],
     "status": "pending_review",
     "url_verified": true,
-    "notes": "auto-crawled from catvets.com/guidelines | 摘要依已發表指引範圍整理（原文 PDF）。2026-06-10 2026-10-14 補 PDF（小幫手 建議），PMC 版免費。",
+    "notes": "auto-crawled from catvets.com/guidelines | 摘要依已發表指引範圍整理（原文 PDF）。2026-06-10 2026-10-14 補 PDF（小幫手 建議），PMC 版免費。｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。｜2026-10-18 併入重複條目 AAFP-ENVIRONMENT-2013（同一篇 Ellis 2013 JFMS 15:219）。",
     "cited_by": [
+      "cat-adoption-guide-taiwan",
+      "cat-anxiety-stress-management",
+      "cat-cognitive-dysfunction",
+      "cat-environment-enrichment-taiwan",
       "cat-hepatic-lipidosis",
       "cat-home-safety-taiwan",
       "cat-inappropriate-elimination",
       "cat-indoor-vs-outdoor-taiwan",
       "cat-litter-box-guide",
+      "cat-obesity-weight-management",
       "cat-upper-respiratory-infection",
       "cat-water-urinary-health-taiwan",
+      "male-cat-urethral-obstruction",
       "new-cat-first-week-guide",
       "should-i-adopt-cat-decision-taiwan"
     ],
@@ -1480,12 +1451,12 @@
     "type": "guideline",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "2004 AAFP 貓行為指引。涵蓋正常貓行為發展（含幼貓社會化期）、常見行為問題（攻擊、亂尿、焦慮）的分類與行為矯正原則，強調以環境與正向訓練取代懲罰。",
+    "abstract_zh": "2004 AAFP 貓行為指引。涵蓋正常貓行為發展（含幼貓社會化期）、常見行為問題（攻擊、亂尿、焦慮）的分類與行為矯正原則，強調以環境與正向訓練取代懲罰。\n\n■ 全文核對補充（2026-10-18）\n全文核對補充：貓對人的主要社會化期是 3 到 9 週；9 週前的早期社會化讓幼貓更願意靠近人、讓人抱，效果持續到成年；2 到 9 週完全沒被人接觸與抱的貓，日後和人相處不好的風險較高；之後幾週仍在學社交，社交遊戲約 3 個月大最多；有過一些社會化經驗的貓一輩子保有一些可塑性（Understanding normal behavior > Socialization）。過了敏感期仍可社會化，但慢很多（Mittens 圖說）。發育分期表：3 到 8 週為早期社會化、學社交技巧的敏感期；9 到 16 週為晚期社會化，社交遊戲達高峰（Appendix 2）。幼貓和母貓、手足待到至少 8 週，同時常接觸友善的人，社交行為較好；6 週前離開母貓不理想，太早分開的幼貓較多疑、有攻擊性；跟母貓手足一起長大能學會收斂玩耍力道；人工養孤兒幼貓很費力，照顧者要懂得安全地處理玩耍行為；個性和遺傳有關，買純種幼貓可看父母，冷靜友善的父母較理想（Prevention，選擇幼貓段落）。",
     "keywords": [],
     "disease_tags": [],
     "status": "pending_review",
     "url_verified": true,
-    "notes": "auto-crawled from catvets.com/guidelines | 摘要依指引範圍整理，2026-06-10 2026-10-14 補 PDF（小幫手 建議），PMC 版免費。",
+    "notes": "auto-crawled from catvets.com/guidelines | 摘要依指引範圍整理，2026-06-10 2026-10-14 補 PDF（小幫手 建議），PMC 版免費。｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
       "cat-inappropriate-elimination",
       "kitten-socialization"
@@ -1560,12 +1531,12 @@
     "type": "educational",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "Cornell 貓健康中心的居家危險物整理。食物：葡萄、洋蔥、葡萄乾、酪梨、巧克力、含木糖醇的東西都不能給貓。植物：百合毒性特別強，吃到極少量就可能致命性腎衰竭；聖誕紅、槲寄生、冬青、鬱金香、毛地黃、蔓綠絨、孤挺花、滿天星、石竹、繡球花也列為有毒。化學品：殺蟲劑、滅鼠劑、肥料、除草劑、除蝸牛餌、防凍劑、油漆稀釋劑、泳池藥劑、漂白水、清潔劑、消毒劑。藥物：人用藥和狗用除蚤藥對貓可能有急性毒性，常見的有阿斯匹靈、乙醯胺酚、布洛芬、維生素補充品。懷疑中毒時立即聯絡獸醫；除非被明確指示，不要催吐，有些毒物吐出來造成的傷害比留在胃裡大。",
+    "abstract_zh": "Cornell 貓健康中心的居家危險物整理。食物：葡萄、洋蔥、葡萄乾、酪梨、巧克力、含木糖醇的東西都不能給貓。植物：百合毒性特別強，吃到極少量就可能致命性腎衰竭；聖誕紅、槲寄生、冬青、鬱金香、毛地黃、蔓綠絨、孤挺花、滿天星、石竹、繡球花也列為有毒。化學品：殺蟲劑、滅鼠劑、肥料、除草劑、除蝸牛餌、防凍劑、油漆稀釋劑、泳池藥劑、漂白水、清潔劑、消毒劑。藥物：人用藥和狗用除蚤藥對貓可能有急性毒性，常見的有阿斯匹靈、乙醯胺酚、布洛芬、維生素補充品。懷疑中毒時立即聯絡獸醫；除非被明確指示，不要催吐，有些毒物吐出來造成的傷害比留在胃裡大。\n\n■ 全文核對補充（2026-10-18）\n頁面分植物、居家化學品、有毒食物、藥物四類。有毒食物清單：葡萄、葡萄乾、洋蔥、酪梨、含木糖醇的東西、巧克力（Toxic Foods）。居家化學品含漂白水、洗劑、消毒劑等清潔用品，以及殺蟲劑、滅鼠藥、防凍劑（Household Chemicals）。人用藥和狗用除蚤藥對貓可能有急性毒性，貓常會吃掉桌上或掉在地上的藥丸；常見中毒原因有阿斯匹靈、乙醯胺酚、布洛芬、維他命補充品（Medications）。沒有獸醫指示不要催吐，有些毒物吐出來的傷害比留在胃裡更大（What Should I Do 節）。頁面沒有談精油，也沒有談貓的肝臟代謝。",
     "keywords": [],
     "disease_tags": [],
     "status": "pending_review",
     "url_verified": true,
-    "notes": "2026-10-17 讀原文核對（頁面沒有更新日期）。",
+    "notes": "2026-10-17 讀原文核對（頁面沒有更新日期）。｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
       "cat-emergency-care-taiwan",
       "cat-home-safety-taiwan",
@@ -1667,12 +1638,12 @@
     "type": "educational",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "Cornell 貓健康中心：貓癌症警訊。列出飼主應警覺的徵兆——異常腫塊、久不癒合的傷口、食慾與體重下降、不明出血或分泌物、排泄習慣改變、跛行或行為改變等，強調早期就醫。",
+    "abstract_zh": "Cornell 貓健康中心：貓癌症警訊。列出飼主應警覺的徵兆——異常腫塊、久不癒合的傷口、食慾與體重下降、不明出血或分泌物、排泄習慣改變、跛行或行為改變等，強調早期就醫。\n\n■ 全文核對補充（2026-10-18）\n頁面導言寫，任何疾病越早發現、越早治療，預後越好，治療花費也越少（導言）。警訊依字母排列，包括行為改變、異常出血或分泌物、腹部腫脹、呼吸困難（每分鐘超過 40 次）、排便排尿困難、黃疸、食慾差、跛行、腫塊、毛髮打結、口腔異常（流口水帶血、口臭）、久不癒合的傷口、嘔吐或腹瀉、體重下降。建議每個月摸一次有沒有新腫塊、每個月量體重（Lumps and Bumps、Weight Loss）。頁面沒有談手術切除範圍。",
     "keywords": [],
     "disease_tags": [],
     "status": "pending_review",
     "url_verified": true,
-    "notes": "auto-crawled from Cornell Feline Health Topics | 摘要依指引範圍整理，2026-06-10",
+    "notes": "auto-crawled from Cornell Feline Health Topics | 摘要依指引範圍整理，2026-06-10｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
       "cat-cancer-tumors-guide",
       "cat-common-symptoms-taiwan",
@@ -1756,12 +1727,12 @@
     "type": "educational",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "康乃爾貓健康中心的呼吸道感染衛教頁。這類感染在收容所、繁殖場、街貓群等高密度族群特別常見，病原有病毒、細菌、真菌與原蟲；疫苗大幅減少了嚴重病例，但沒有消滅病原（開頭）。上呼吸道感染的症狀有眼鼻分泌物、咳嗽、打噴嚏、結膜炎、口腔潰瘍、沒精神、不吃；下呼吸道感染會咳嗽、呼吸困難或變快，休息時每分鐘不應超過 35 下。疱疹病毒：最多 97% 的貓一生中會接觸，最多 80% 成為終身感染，其中最多 45% 會在壓力下間歇排毒；補充離胺酸的效果有爭議。卡里西病毒：小群飼養約 10% 感染，收容所等擁擠環境可達 90%，可能往下造成肺炎，罕見的全身型約三分之二死亡。披衣菌：約 20% 有上呼吸道症狀的貓與約 3% 外觀健康的貓帶菌。隱球菌：約 4% 的貓無症狀帶原，貓接觸後發病的機率約為狗的 6 倍。博德氏菌：高密度族群中約 5% 有症狀的貓與 1.5% 外觀正常的貓帶菌。疱疹與卡里西疫苗建議所有貓接種，不能完全防止感染，但能降低嚴重程度（各病原 Prevention 節）。",
+    "abstract_zh": "康乃爾貓健康中心的呼吸道感染衛教頁。這類感染在收容所、繁殖場、街貓群等高密度族群特別常見，病原有病毒、細菌、真菌與原蟲；疫苗大幅減少了嚴重病例，但沒有消滅病原（開頭）。上呼吸道感染的症狀有眼鼻分泌物、咳嗽、打噴嚏、結膜炎、口腔潰瘍、沒精神、不吃；下呼吸道感染會咳嗽、呼吸困難或變快，休息時每分鐘不應超過 35 下。疱疹病毒：最多 97% 的貓一生中會接觸，最多 80% 成為終身感染，其中最多 45% 會在壓力下間歇排毒；補充離胺酸的效果有爭議。卡里西病毒：小群飼養約 10% 感染，收容所等擁擠環境可達 90%，可能往下造成肺炎，罕見的全身型約三分之二死亡。披衣菌：約 20% 有上呼吸道症狀的貓與約 3% 外觀健康的貓帶菌。隱球菌：約 4% 的貓無症狀帶原，貓接觸後發病的機率約為狗的 6 倍。博德氏菌：高密度族群中約 5% 有症狀的貓與 1.5% 外觀正常的貓帶菌。疱疹與卡里西疫苗建議所有貓接種，不能完全防止感染，但能降低嚴重程度（各病原 Prevention 節）。\n\n■ 全文核對補充（2026-10-18）\n貓呼吸道感染很常見，收容所、繁殖場、街貓群尤其多，病原包括病毒、細菌、真菌與原蟲；疫苗降低了重症，但沒有消滅這些高傳染力的病原（前言）。最多 97% 的貓一生中會接觸到貓疱疹病毒，接觸過的最多 80% 終生帶原，其中最多 45% 會在壓力時排毒（Feline herpesvirus）。貓卡里西病毒傳染力高、全球常見，小群飼養約 10% 感染，擁擠環境最多 90%（Feline calicivirus）。",
     "keywords": [],
     "disease_tags": [],
     "status": "pending_review",
     "url_verified": true,
-    "notes": "2026-10-17 核對：頁面存在，頁尾標 Updated June 2018。key 寫 2024 不符，year 應為 2018。11 處引用多數支持；『多貓家庭』『上呼吸道最常見是 FHV-1 與 FCV』兩點原文沒有直接寫。fiv-felv-management-taiwan 內文沒有引用此 key，cited_by 應移除。",
+    "notes": "2026-10-17 核對：頁面存在，頁尾標 Updated June 2018。key 寫 2024 不符，year 應為 2018。11 處引用多數支持；『多貓家庭』『上呼吸道最常見是 FHV-1 與 FCV』兩點原文沒有直接寫。fiv-felv-management-taiwan 內文沒有引用此 key，cited_by 應移除。｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
       "cat-emergency-care-taiwan",
       "cat-eye-ear-problems-taiwan",
@@ -1859,12 +1830,12 @@
     "type": "educational",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "",
+    "abstract_zh": "\n\n■ 全文核對補充（2026-10-18）\n超過 95% 的貓胰臟炎找不到明顯原因，飼主沒有有效的預防方法；常和慢性腸道病、肝膽疾病、糖尿病同時出現。最常見的症狀很模糊，主要是精神差、食慾差；約一半的貓會吐或變瘦，腹痛只在約 10–30% 的貓被發現（Clinical signs）。fPLI 是目前最專一的血液檢查，但可能漏掉輕微或慢性病例；超音波約可看到三分之二病例的變化（Diagnosis）。治療重點是補水、止吐、止痛、營養，越早恢復進食預後越好（Treatment）。",
     "keywords": [],
     "disease_tags": [],
     "status": "pending_review",
     "url_verified": true,
-    "notes": "auto-crawled from Cornell Feline Health Topics",
+    "notes": "auto-crawled from Cornell Feline Health Topics｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
       "cat-common-symptoms-taiwan"
     ]
@@ -2240,7 +2211,7 @@
     "type": "educational",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "ISFM 母組織 iCatCare 的百合中毒衛教文。症狀通常在 1-6 小時內出現。治療包含催吐、活性碳、清洗花粉、IV 利尿支持腎臟。強調有貓不要讓百合進家門或花園。",
+    "abstract_zh": "ISFM 母組織 iCatCare 的百合中毒衛教文。症狀通常在 1-6 小時內出現。治療包含催吐、活性碳、清洗花粉、IV 利尿支持腎臟。強調有貓不要讓百合進家門或花園。\n\n■ 全文核對補充（2026-10-18）\n百合屬（Lilium）與萱草屬（Hemerocallis）整株有毒，花粉、葉、莖、花瓶水都算，舔到毛上的花粉也會中毒，可能腎衰竭致死；鈴蘭、白鶴芋、海芋名字有百合但毒性不同。治療要住院，可能包括催吐、給活性碳減少吸收、清掉毛上的花粉、點滴支持腎臟（治療節）。",
     "keywords": [
       "百合",
       "lily",
@@ -2257,7 +2228,7 @@
     ],
     "status": "pending_review",
     "url_verified": true,
-    "notes": "iCatCare = ISFM 母組織，權威",
+    "notes": "iCatCare = ISFM 母組織，權威｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
       "cat-emergency-care-taiwan",
       "cat-toxic-substances-taiwan"
@@ -2349,7 +2320,7 @@
     "language": "en",
     "open_access": true,
     "study_design": "ISFM 專家共識（10 位作者跨 UK / US / 加拿大 / 法國），整合 IRIS 分期框架",
-    "abstract_zh": "ISFM 2016 CKD 共識指引（核心臨床參考之一）：\n\n■ CKD 是老年貓最常見診斷之一，個體間差異極大、需個人化處置\n■ 強調定期重新評估療效，平衡生活品質與證據導向介入\n■ 涵蓋：\n  - 早期偵測（SDMA、UPC、血壓）\n  - IRIS 分期應用於治療選擇\n  - 飲食磷限制（核心介入）\n  - 水分補充策略（鼓勵飲水 > 強制皮下輸液）\n  - 高血壓與蛋白尿的併發症處置\n  - 終末期生活品質決策\n■ 結論：CKD 病程多變，需依個體情況持續調整，而非套用固定方案",
+    "abstract_zh": "ISFM 2016 CKD 共識指引（核心臨床參考之一）：\n\n■ CKD 是老年貓最常見診斷之一，個體間差異極大、需個人化處置\n■ 強調定期重新評估療效，平衡生活品質與證據導向介入\n■ 涵蓋：\n  - 早期偵測（SDMA、UPC、血壓）\n  - IRIS 分期應用於治療選擇\n  - 飲食磷限制（核心介入）\n  - 水分補充策略（鼓勵飲水 > 強制皮下輸液）\n  - 高血壓與蛋白尿的併發症處置\n  - 終末期生活品質決策\n■ 結論：CKD 病程多變，需依個體情況持續調整，而非套用固定方案\n\n■ 全文核對補充（2026-10-18）\n補充（2026-10-18 PMC 全文核對）：應隨時提供乾淨的水和多種水源（含調味水、流動水如飲水機），可以的話餵濕食，能增加水分攝取（Long-term maintenance of hydration）。居家或門診皮下輸液（每 1 到 3 天 75 到 150 mL）最常用在第 3、4 期，要個別評估；餵食管補水在很多情況可能比皮下輸液好（同節）。嚴格限制蛋白質可能讓老貓流失肌肉，所以建議適度限制並追蹤體重、肌肉量與熱量；血磷偏高和 CKD 惡化有關（Protein and phosphate restriction）。食慾差可能造成蛋白質與熱量營養不良（Managing inappetence）。CKD 貓約 15% 到 30% 有細菌性泌尿道感染，老年母貓風險較高，多數沒有症狀（Managing UTIs in CKD）。SDMA 對早期 CKD 較敏感、看來不受肌肉量影響，但目前不建議當單一篩檢（SDMA）。原文沒有「易消化優質蛋白」或「限制蛋白質縮短存活」。",
     "keywords": [
       "ISFM",
       "CKD",
@@ -2363,7 +2334,7 @@
     "status": "approved",
     "url_verified": true,
     "verified_at": "2026-04-29",
-    "notes": "ISFM 官方共識，與 IRIS 分期互為核心臨床指引。",
+    "notes": "ISFM 官方共識，與 IRIS 分期互為核心臨床指引。｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
       "cat-ckd-complete-guide",
       "cat-end-of-life-care-taiwan",
@@ -2389,7 +2360,7 @@
     "language": "en",
     "open_access": true,
     "study_design": "回顧性綜述（40 年文獻整合）",
-    "abstract_zh": "Buffington 團隊（Ohio State）提出 Pandora 症候群框架，重新定位 FLUTD：\n\n■ 過去 40 年觀念變遷：FUS（feline urologic syndrome）→ FLUTD → FIC（feline idiopathic cystitis）→ Pandora\n■ 核心論點：膀胱不一定是「病因」，而是「全身性壓力反應系統敏感化」的受害者之一\n■ Pandora 症候群特徵：\n  - 中樞壓力反應系統長期失調\n  - 對環境變化的耐受範圍變窄\n  - 同一隻貓可能同時有膀胱、腸胃、皮膚、行為等多系統症狀\n■ 對臨床啟示：環境豐富化、降低壓力源、多重感官介入（MEMO）優先於單純膀胱用藥\n■ 影響：成為 ISFM/AAFP 後續 FLUTD 指引的觀念基礎",
+    "abstract_zh": "Buffington 團隊（Ohio State）提出 Pandora 症候群框架，重新定位 FLUTD：\n\n■ 過去 40 年觀念變遷：FUS（feline urologic syndrome）→ FLUTD → FIC（feline idiopathic cystitis）→ Pandora\n■ 核心論點：膀胱不一定是「病因」，而是「全身性壓力反應系統敏感化」的受害者之一\n■ Pandora 症候群特徵：\n  - 中樞壓力反應系統長期失調\n  - 對環境變化的耐受範圍變窄\n  - 同一隻貓可能同時有膀胱、腸胃、皮膚、行為等多系統症狀\n■ 對臨床啟示：環境豐富化、降低壓力源、多重感官介入（MEMO）優先於單純膀胱用藥\n■ 影響：成為 ISFM/AAFP 後續 FLUTD 指引的觀念基礎\n\n■ 全文核對補充（2026-10-18）\n全文核對補充：作者單位為俄亥俄州立大學；「潘朵拉症候群」由 Buffington 在 2011 年提出（引 J Vet Intern Med 2011），用來描述有慢性反覆下泌尿道症狀、同時合併其他系統問題的貓（Nosology 段落）。特發性膀胱炎的症狀會起伏，會被環境壓力加重；在 77 週的觀察中，照顧者更換、作息被打亂、少了互動等事件讓健康貓與膀胱炎貓的生病行為都增加，包括食量下降、在砂盆外排尿與排便（Where are we now?；Comorbid disorders）。有膀胱炎的貓能承受的環境範圍較窄，環境太缺乏或太有威脅都不利健康（Figure 4）。原文沒有談尿道阻塞的成因或飲水。",
     "keywords": [
       "Pandora",
       "FLUTD",
@@ -2406,7 +2377,7 @@
     "status": "approved",
     "url_verified": true,
     "verified_at": "2026-04-29",
-    "notes": "FLUTD 病因學的觀念基石，從「膀胱病」轉向「系統性壓力症候群」。 2026-10-14 補 PDF（小幫手 建議），PMC 版免費。",
+    "notes": "FLUTD 病因學的觀念基石，從「膀胱病」轉向「系統性壓力症候群」。 2026-10-14 補 PDF（小幫手 建議），PMC 版免費。｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
       "cat-inappropriate-elimination",
       "cat-litter-box-guide",
@@ -2430,7 +2401,7 @@
     "language": "en",
     "open_access": true,
     "study_design": "AAHA 專家工作小組共識指引（更新 2010 版本）",
-    "abstract_zh": "AAHA 2018 糖尿病指引（更新 2010 版）：\n\n■ 胰島素治療為臨床糖尿病核心\n■ 胰島素種類選擇、非胰島素藥物（口服降糖）、飲食策略討論\n■ 飼主教育重點：注射技巧、低血糖辨識、居家血糖監測\n■ 「控制良好」定義：臨床症狀減少 + 避免低血糖（不必強求血糖數值正常）\n■ 強調區分：真正糖尿病 vs 暫時性高血糖（壓力性 / 類固醇誘發），避免不必要治療\n■ 與 ISFM-DIABETES-2015 互補：ISFM 偏貓專科觀點，AAHA 為犬貓綜合臨床指引",
+    "abstract_zh": "AAHA 2018 糖尿病指引（更新 2010 版）：\n\n■ 胰島素治療為臨床糖尿病核心\n■ 胰島素種類選擇、非胰島素藥物（口服降糖）、飲食策略討論\n■ 飼主教育重點：注射技巧、低血糖辨識、居家血糖監測\n■ 「控制良好」定義：臨床症狀減少 + 避免低血糖（不必強求血糖數值正常）\n■ 強調區分：真正糖尿病 vs 暫時性高血糖（壓力性 / 類固醇誘發），避免不必要治療\n■ 與 ISFM-DIABETES-2015 互補：ISFM 偏貓專科觀點，AAHA 為犬貓綜合臨床指引\n\n■ 全文核對補充（2026-10-18）\n補充（原文核對）：臨床糖尿病依持續尿糖、持續高血糖加上典型症狀診斷；緊迫、類固醇、其他胰島素阻抗疾病都可能讓血糖暫時升高，要先排除（Diagnosis）。貓的緩解預測因子包括確診 6 個月內血糖控制良好、密集居家監測、停用拮抗胰島素的藥、使用 glargine 或 detemir 加低碳水飲食（Treatment for Cats）。要教飼主辨識低血糖：沒精神、嗜睡、行為怪異、步態異常、虛弱、顫抖、抽搐；清醒時餵高碳水食物，反應差或顫抖時在牙齦塗 1 到 2 茶匙玉米糖漿，5 分鐘內有反應再餵食，並送醫；貓不吃時聯絡獸醫，可考慮打半劑量（Client education）。",
     "keywords": [
       "AAHA",
       "diabetes",
@@ -2445,7 +2416,7 @@
     "status": "approved",
     "url_verified": true,
     "verified_at": "2026-04-29",
-    "notes": "美國動物醫院協會官方指引，與 ISFM 2015 共識互補使用。",
+    "notes": "美國動物醫院協會官方指引，與 ISFM 2015 共識互補使用。｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
       "cat-diabetes-care"
     ],
@@ -2498,7 +2469,7 @@
     "type": "legal",
     "language": "zh",
     "open_access": true,
-    "abstract_zh": "中華民國動物保護法。本站已逐字核對之關鍵條文：第25條——虐待動物致死或致重傷，處二年以下有期徒刑或拘役，併科新臺幣20萬元以上、200萬元以下罰金；第19條——飼主應辦理寵物登記，主管機關應給與身分標識並植入晶片（家貓適用對象與時程以農業部公告為準）。第22-5條——寵物食品應以中文及通用符號顯著標示：品名、淨重或容量、主要原料與添加物、營養成分及含量、製造或加工業者（輸入者另加輸入業者、國內負責廠商與原產地）、有效日期或製造日期、保存期限與方法、適用寵物種類與方法、其他公告指定事項；標示、宣傳或廣告不得不實、誇張或易生誤解。第5條第3項——飼主飼養之動物，除送交動物收容處所或主管機關指定場所外，不得棄養；違反者依第29條第1款處3萬元以上15萬元以下罰鍰，第32條並得沒入動物。第22條第1項——任何人不得販賣特定寵物，但經許可並領有營業證照的業者得經營特定寵物繁殖、買賣或寄養。第31條第1項第8款——違反寵物登記管理辦法有關出生、取得、轉讓、遺失、死亡登記期限的規定，處3千元以上1萬5千元以下罰鍰。第22-2條——特定寵物買賣業者的寵物要由取得許可的繁殖場或買賣業者供應，完成晶片植入後才能買賣或轉讓；交易時應備有登載寵物相關資訊的文件提供給購買者；在各種媒體廣告時應標示許可證字號。",
+    "abstract_zh": "中華民國動物保護法。本站已逐字核對之關鍵條文：第25條——虐待動物致死或致重傷，處二年以下有期徒刑或拘役，併科新臺幣20萬元以上、200萬元以下罰金；第19條——飼主應辦理寵物登記，主管機關應給與身分標識並植入晶片（家貓適用對象與時程以農業部公告為準）。第22-5條——寵物食品應以中文及通用符號顯著標示：品名、淨重或容量、主要原料與添加物、營養成分及含量、製造或加工業者（輸入者另加輸入業者、國內負責廠商與原產地）、有效日期或製造日期、保存期限與方法、適用寵物種類與方法、其他公告指定事項；標示、宣傳或廣告不得不實、誇張或易生誤解。第5條第3項——飼主飼養之動物，除送交動物收容處所或主管機關指定場所外，不得棄養；違反者依第29條第1款處3萬元以上15萬元以下罰鍰，第32條並得沒入動物。第22條第1項——任何人不得販賣特定寵物，但經許可並領有營業證照的業者得經營特定寵物繁殖、買賣或寄養。第31條第1項第8款——違反寵物登記管理辦法有關出生、取得、轉讓、遺失、死亡登記期限的規定，處3千元以上1萬5千元以下罰鍰。第22-2條——特定寵物買賣業者的寵物要由取得許可的繁殖場或買賣業者供應，完成晶片植入後才能買賣或轉讓；交易時應備有登載寵物相關資訊的文件提供給購買者；在各種媒體廣告時應標示許可證字號。\n\n■ 全文核對補充（2026-10-18）\n第 22-2 條：特定寵物買賣業者的寵物來源，必須是取得許可證的繁殖場或買賣業者；要完成晶片植入後才能買賣或轉讓；交易時業者要備有登載寵物相關資訊的文件並提供給購買者；廣告行銷要標示許可證字號。法條沒有要求買賣雙方簽書面契約。",
     "keywords": [
       "動保法",
       "虐待",
@@ -2513,7 +2484,7 @@
     "status": "approved",
     "url_verified": true,
     "verified_at": "2026-06-10",
-    "notes": "第25/19條經 WebFetch law.moa.gov.tw 逐字核對（2026-06-10）。｜2026-10-17 補第 22-5 條（寵物食品標示），讀全國法規資料庫 pcode=M0060027 核對（修正日期 110-05-19）。｜2026-10-17 補第5、22、29、31、32條，讀全國法規資料庫核對。",
+    "notes": "第25/19條經 WebFetch law.moa.gov.tw 逐字核對（2026-06-10）。｜2026-10-17 補第 22-5 條（寵物食品標示），讀全國法規資料庫 pcode=M0060027 核對（修正日期 110-05-19）。｜2026-10-17 補第5、22、29、31、32條，讀全國法規資料庫核對。｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
       "cat-food-selection-taiwan",
       "cat-home-safety-taiwan",
@@ -2702,7 +2673,7 @@
     "type": "review",
     "language": "en",
     "open_access": false,
-    "abstract_zh": "回顧貓認知功能障礙的臨床表現與神經病理。摘要引述一項研究：11 至 14 歲的家貓有 28% 出現至少一項老年才開始的行為問題，15 歲以上超過 50%。行為改變也可能來自全身性疾病、腦部疾病或單純的行為問題，強調要先完整檢查有沒有可治療的疾病，再調整飲食與環境。",
+    "abstract_zh": "回顧貓認知功能障礙的臨床表現與神經病理。摘要引述一項研究：11 至 14 歲的家貓有 28% 出現至少一項老年才開始的行為問題，15 歲以上超過 50%。行為改變也可能來自全身性疾病、腦部疾病或單純的行為問題，強調要先完整檢查有沒有可治療的疾病，再調整飲食與環境。\n\n■ 全文核對補充（2026-10-18）\n補充（僅摘要，全文付費未讀）：行為改變可能來自全身性疾病、腦部疾病或單純行為問題，年紀相關的認知功能障礙常被忽略；要完整檢查有沒有可治療的疾病，再配合飲食與環境調整（Abstract）。摘要沒有點名甲亢、高血壓或疼痛。",
     "keywords": [
       "認知功能障礙",
       "老貓",
@@ -2716,7 +2687,7 @@
     ],
     "status": "pending_review",
     "url_verified": true,
-    "notes": "2026-10-18 以 PubMed E-utilities 讀摘要原文（PMID 17617164）核對：原文是「28% 出現至少一項老年才開始的行為問題，15 歲以上超過 50%」，不是「與認知障礙相符的行為改變」「約 50%」，摘要與引用的文章已改。全文在 Wiley 付費，沒有讀到；原本寫的甲亢、高血壓、疼痛不在摘要裡，已拿掉。期刊不是開放取用，是否留用待負責人決定。",
+    "notes": "2026-10-18 以 PubMed E-utilities 讀摘要原文（PMID 17617164）核對：原文是「28% 出現至少一項老年才開始的行為問題，15 歲以上超過 50%」，不是「與認知障礙相符的行為改變」「約 50%」，摘要與引用的文章已改。全文在 Wiley 付費，沒有讀到；原本寫的甲亢、高血壓、疼痛不在摘要裡，已拿掉。期刊不是開放取用，是否留用待負責人決定。｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
       "cat-cognitive-dysfunction",
       "cat-life-stages-care-taiwan"
@@ -2980,7 +2951,7 @@
     "type": "research",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "觀察健康貓與間質性膀胱炎貓 77 週。照顧者更換、作息改變等不尋常的外在事件發生時，兩組貓的生病行為都明顯增加，包括食量下降、一整天沒有排泄、在砂盆外排便或排尿。健康貓也同樣受影響。",
+    "abstract_zh": "觀察健康貓與間質性膀胱炎貓 77 週。照顧者更換、作息改變等不尋常的外在事件發生時，兩組貓的生病行為都明顯增加，包括食量下降、一整天沒有排泄、在砂盆外排便或排尿。健康貓也同樣受影響。\n\n■ 全文核對補充（2026-10-18）\n研究記錄的生病行為包括上消化道症狀（吐毛、吐食物或膽汁）、下消化道症狀、泌尿症狀、皮膚問題、食量下降和躲避行為（Procedures）。不尋常事件讓砂盆外排便（相對風險 9.8）、食量下降（9.3）、一整天沒有排泄（6.4）、砂盆外排尿（1.6）的風險上升；嘔吐等上消化道症狀沒有因不尋常事件顯著增加，只和年齡有小幅關聯（1.2）（Results）。研究中的貓都不超過 8 歲（Discussion）。",
     "keywords": [
       "壓力",
       "生病行為",
@@ -2989,7 +2960,7 @@
     "status": "pending_review",
     "url_verified": true,
     "verified_at": "2026-10-14",
-    "notes": "2026-10-14 由查證 agent 核對。PMC 作者稿。",
+    "notes": "2026-10-14 由查證 agent 核對。PMC 作者稿。｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
       "cat-anxiety-stress-management",
       "kitten-socialization"
@@ -3032,7 +3003,7 @@
     "type": "guideline",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "IRIS 慢性腎病分期，貓的數值：在水合正常、狀況穩定時，用至少兩次空腹肌酸酐或 SDMA（最好兩者都驗）分期。第 1 期肌酸酐低於 1.6 mg/dL、SDMA 低於 18 μg/dL，但有其他腎臟異常；SDMA 持續高於 14 可用來診斷早期 CKD。第 2 期肌酸酐 1.6 到 2.8、SDMA 18 到 25；第 3 期 2.9 到 5.0、SDMA 26 到 38；第 4 期高於 5.0、SDMA 高於 38。兩個數值不一致時，SDMA 持續偏高就按較高的一期處理。再用尿蛋白肌酸酐比細分（低於 0.2 無蛋白尿、0.2 到 0.4 邊緣、高於 0.4 蛋白尿），以及收縮壓細分（低於 140 正常、140 到 159 高血壓前期、160 到 179 高血壓、180 以上重度）。SDMA 的數值以 IDEXX 的檢驗方法為準。",
+    "abstract_zh": "IRIS 慢性腎病分期，貓的數值：在水合正常、狀況穩定時，用至少兩次空腹肌酸酐或 SDMA（最好兩者都驗）分期。第 1 期肌酸酐低於 1.6 mg/dL、SDMA 低於 18 μg/dL，但有其他腎臟異常；SDMA 持續高於 14 可用來診斷早期 CKD。第 2 期肌酸酐 1.6 到 2.8、SDMA 18 到 25；第 3 期 2.9 到 5.0、SDMA 26 到 38；第 4 期高於 5.0、SDMA 高於 38。兩個數值不一致時，SDMA 持續偏高就按較高的一期處理。再用尿蛋白肌酸酐比細分（低於 0.2 無蛋白尿、0.2 到 0.4 邊緣、高於 0.4 蛋白尿），以及收縮壓細分（低於 140 正常、140 到 159 高血壓前期、160 到 179 高血壓、180 以上重度）。SDMA 的數值以 IDEXX 的檢驗方法為準。\n\n■ 全文核對補充（2026-10-18）\n第四期的說明是全身症狀與尿毒危機的風險越來越高（分期表）。血壓分級對應日後靶器官受損的風險：低於 140 極小、140 到 159 低、160 到 179 中度、180 以上高（2b. Substaging by Blood pressure）。SDMA 看來是較敏感的早期 CKD 指標（SDMA 註解）。分期文件沒有談肌肉量，也沒有列嘔吐、脫水、貧血等症狀。",
     "keywords": [
       "CKD",
       "IRIS",
@@ -3046,7 +3017,7 @@
     "status": "approved",
     "url_verified": true,
     "verified_at": "2026-10-14",
-    "notes": "2026-10-14 下載 PDF 逐頁核對。取代 IRIS-CKD-2023（IRIS 網站已改放 2026 版），貓的分期數值與 2023 版相同。小幫手 指出舊的兩筆文獻連到同一頁，改成各自的 PDF。",
+    "notes": "2026-10-14 下載 PDF 逐頁核對。取代 IRIS-CKD-2023（IRIS 網站已改放 2026 版），貓的分期數值與 2023 版相同。小幫手 指出舊的兩筆文獻連到同一頁，改成各自的 PDF。｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
       "cat-ckd-complete-guide",
       "cat-common-symptoms-taiwan",
@@ -3068,7 +3039,7 @@
     "type": "guideline",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "IRIS 依分期列出貓慢性腎病的治療建議。第 2 期可以考慮開始吃腎臟處方飲食，趁食慾還好時比較容易轉換；第 3、4 期建議吃腎臟處方飲食。血磷目標：第 2 期 2.7 到 4.5 mg/dL，第 3 期低於 5.0，第 4 期低於 6.0；FGF23 偏高時即使血磷在目標內也建議限磷。收縮壓持續高於 160 mmHg，或已有器官損傷時治療，用鈣離子通道阻斷劑 amlodipine 或血管收縮素受體阻斷劑 telmisartan，目標降到 160 以下、避免低於 120。尿蛋白肌酸酐比高於 0.4 時，使用 RAAS 抑制劑（ACE 抑制劑或血管收縮素受體阻斷劑）並搭配腎臟處方飲食；脫水的貓不可使用。貧血可用 darbepoetin、HIF-PH 抑制劑或輸血；低血鉀時補充鉀。第 3、4 期部分貓需要定期輸液維持水分。",
+    "abstract_zh": "IRIS 依分期列出貓慢性腎病的治療建議。第 2 期可以考慮開始吃腎臟處方飲食，趁食慾還好時比較容易轉換；第 3、4 期建議吃腎臟處方飲食。血磷目標：第 2 期 2.7 到 4.5 mg/dL，第 3 期低於 5.0，第 4 期低於 6.0；FGF23 偏高時即使血磷在目標內也建議限磷。收縮壓持續高於 160 mmHg，或已有器官損傷時治療，用鈣離子通道阻斷劑 amlodipine 或血管收縮素受體阻斷劑 telmisartan，目標降到 160 以下、避免低於 120。尿蛋白肌酸酐比高於 0.4 時，使用 RAAS 抑制劑（ACE 抑制劑或血管收縮素受體阻斷劑）並搭配腎臟處方飲食；脫水的貓不可使用。貧血可用 darbepoetin、HIF-PH 抑制劑或輸血；低血鉀時補充鉀。第 3、4 期部分貓需要定期輸液維持水分。\n\n■ 全文核對補充（2026-10-18）\n到第四期，改善生活品質的治療比延緩惡化更重要（導言、Stage 4）。任何一期貓脫水時，用等張多離子輸液（如乳酸林格氏液）從靜脈或皮下補回（各期 Management of dehydration）。嘔吐、噁心、食慾差可用 maropitant、ondansetron、mirtazapine 或 capromorelin；研究中 maropitant 減少嘔吐但沒有改善食慾或體重，mirtazapine 兩者都有改善（Stage 3、4 第 4 點）。磷結合劑每餐拌入食物；第 3、4 期的血磷目標（5.0、6.0 mg/dL 以下）原文稱為較實際的治療後目標（Reduction of phosphate intake）。肌肉流失明顯時改用 SDMA 分期與決定治療，因為它不受肌肉流失影響（Stage 2 第 4 點）。收縮壓持續高於 160 mmHg 或已有靶器官損傷時要治療（Systemic hypertension）。第 1 期沒有列處方飲食。",
     "keywords": [
       "CKD",
       "IRIS",
@@ -3083,7 +3054,7 @@
     "status": "approved",
     "url_verified": true,
     "verified_at": "2026-10-14",
-    "notes": "2026-10-14 下載 PDF 逐頁核對（22 頁）。取代 IRIS-CKD-TREATMENT-2023。和 2023 版的差異：第 2 期血磷上限 4.5（舊版 4.6）；貧血加入 HIF-PH 抑制劑；臨界蛋白尿可考慮治療但無證據能延緩惡化。",
+    "notes": "2026-10-14 下載 PDF 逐頁核對（22 頁）。取代 IRIS-CKD-TREATMENT-2023。和 2023 版的差異：第 2 期血磷上限 4.5（舊版 4.6）；貧血加入 HIF-PH 抑制劑；臨界蛋白尿可考慮治療但無證據能延緩惡化。｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
       "cat-ckd-complete-guide",
       "cat-end-of-life-care-taiwan",
@@ -3280,7 +3251,7 @@
     "type": "research",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "英國 VetCompass 資料庫 90 家動物醫院、118,016 隻貓中，隨機抽 4,009 隻確認死亡的貓分析，其中 91.7% 是混種貓。整體壽命中位數 14.0 年；混種貓壽命中位數 14.0 年，純種貓 12.5 年，但各純種品種之間差異很大。最常見死因是外傷、腎臟疾病、非特定疾病、腫瘤與腫塊。5 歲以後死亡的貓中，混種、體重較輕、已結紮與沒有保險和較長壽命有關。",
+    "abstract_zh": "英國 VetCompass 資料庫 90 家動物醫院、118,016 隻貓中，隨機抽 4,009 隻確認死亡的貓分析，其中 91.7% 是混種貓。整體壽命中位數 14.0 年；混種貓壽命中位數 14.0 年，純種貓 12.5 年，但各純種品種之間差異很大。最常見死因是外傷、腎臟疾病、非特定疾病、腫瘤與腫塊。5 歲以後死亡的貓中，混種、體重較輕、已結紮與沒有保險和較長壽命有關。\n\n■ 全文核對補充（2026-10-18）\n死於外傷的 405 隻貓中，243 隻（60.0%）歸因於車禍（Results）。5 歲前死亡的貓將近一半（47.3%）死於外傷，多數是車禍；英國超過 90% 的貓每天可以出門，作者認為這和外傷、車禍死亡有關（Discussion）。",
     "keywords": [
       "壽命",
       "混種貓",
@@ -3294,7 +3265,7 @@
     "status": "pending_review",
     "url_verified": true,
     "verified_at": "2026-10-15",
-    "notes": "2026-10-15 讀 PubMed 摘要核對。",
+    "notes": "2026-10-15 讀 PubMed 摘要核對。｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
       "cat-indoor-vs-outdoor-taiwan",
       "mixed-breed-cats-taiwan",
@@ -3348,7 +3319,7 @@
     "type": "research",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "橘色毛色由 X 染色體上的性聯橘色突變造成：只有一條 X 的公貓帶這個突變就是橘貓，母貓要兩條 X 都帶才是橘貓；只有一條 X 帶突變的母貓，因為每個細胞隨機關掉一條 X，毛色呈橘黑交錯，就是玳瑁貓與三花貓。研究找出這個突變是一段 5 kb 的缺失，讓 Arhgap36 基因在色素細胞裡異常表現。",
+    "abstract_zh": "橘色毛色由 X 染色體上的性聯橘色突變造成：只有一條 X 的公貓帶這個突變就是橘貓，母貓要兩條 X 都帶才是橘貓；只有一條 X 帶突變的母貓，因為每個細胞隨機關掉一條 X，毛色呈橘黑交錯，就是玳瑁貓與三花貓。研究找出這個突變是一段 5 kb 的缺失，讓 Arhgap36 基因在色素細胞裡異常表現。\n\n■ 全文核對補充（2026-10-18）\n玳瑁貓和三花貓都是帶一份橘色突變的母貓，X 染色體隨機去活化造成橘色和黑色的色塊；兩者的差別在三花貓另外帶有白斑突變（Kit 基因的顯性白斑），色塊比較大（Discussion；Figure 1 圖說）。",
     "keywords": [
       "毛色",
       "橘貓",
@@ -3362,7 +3333,7 @@
     "status": "pending_review",
     "url_verified": true,
     "verified_at": "2026-10-15",
-    "notes": "2026-10-15 讀 PMC 全文核對。",
+    "notes": "2026-10-15 讀 PMC 全文核對。｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
       "mixed-breed-cats-taiwan"
     ]
@@ -3674,7 +3645,7 @@
     "type": "educational",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "貓吃到帶蟲的獵物或生肉後感染，初次感染的貓多在 3 到 10 天後開始在糞便排出卵囊，約持續 10 到 14 天；卵囊在環境中要 1 到 5 天才具感染力，最少 24 小時。多數感染的貓沒有症狀。人較常經由生肉和沒洗的蔬果感染，摸貓、被抓咬感染的機會低；孕期才初次感染的母親，約三分之一到二分之一的嬰兒會受感染。過去曾建議孕婦避開貓，美國疾病管制中心現在認為沒有必要。預防：每天清貓砂、孕婦與免疫低下者不清貓砂、園藝戴手套、處理生肉後洗手；貓不餵生肉、不讓牠獵捕。貓血清 IgG 高代表過去感染、多半已不排卵囊。",
+    "abstract_zh": "貓吃到帶蟲的獵物或生肉後感染，初次感染的貓多在 3 到 10 天後開始在糞便排出卵囊，約持續 10 到 14 天；卵囊在環境中要 1 到 5 天才具感染力，最少 24 小時。多數感染的貓沒有症狀。人較常經由生肉和沒洗的蔬果感染，摸貓、被抓咬感染的機會低；孕期才初次感染的母親，約三分之一到二分之一的嬰兒會受感染。過去曾建議孕婦避開貓，美國疾病管制中心現在認為沒有必要。預防：每天清貓砂、孕婦與免疫低下者不清貓砂、園藝戴手套、處理生肉後洗手；貓不餵生肉、不讓牠獵捕。貓血清 IgG 高代表過去感染、多半已不排卵囊。\n\n■ 全文核對補充（2026-10-18）\n全文補充：弓形蟲症的貓最常見發燒、食慾差、精神差；侵犯肺會越來越喘，侵犯肝會黃疸，也可能造成眼睛發炎與走路不協調等中樞神經症狀（Clinical signs）。中間宿主吃到孢子化卵囊後，組織裡會形成囊體並終生存在（Life cycle）。健康的貓 IgM 高代表正在感染；兩種抗體都沒有代表還沒感染過，之後感染會排卵囊最長約兩週（Diagnosis）。預防：不吃沒洗的蔬果、不喝未經巴氏殺菌的乳品，貓砂每天清並常用滾水清洗貓砂盆（Prevention）。",
     "keywords": [
       "弓形蟲",
       "孕婦",
@@ -3689,7 +3660,7 @@
     "status": "pending_review",
     "url_verified": true,
     "verified_at": "2026-10-17",
-    "notes": "2026-10-17 讀原文核對數字（頁面標示 Updated June 2018；排卵囊時間另有一句寫 1 到 5 天、另一句寫最少 24 小時，兩個都照原文寫）。",
+    "notes": "2026-10-17 讀原文核對數字（頁面標示 Updated June 2018；排卵囊時間另有一句寫 1 到 5 天、另一句寫最少 24 小時，兩個都照原文寫）。｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
       "cat-toxoplasma-pregnancy"
     ]
@@ -3704,7 +3675,7 @@
     "type": "government",
     "language": "zh",
     "open_access": true,
-    "abstract_zh": "2026 年截至 6 月 22 日累計 6 例弓形蟲感染症確定病例，都是本土病例，低於 2022 到 2025 年同期的 7 到 17 例。人因吃到受污染的水、食物或沒煮熟的動物組織而感染，不會人傳人；懷孕期間初次感染可能經胎盤傳給胎兒，造成流產、死胎或胎兒異常。建議肉類加熱到 66°C 以上、烹調時不試吃，處理生肉的手和器具要洗淨，園藝或接觸可能有貓糞的土壤時戴手套；孕婦避免接觸來路不明的貓，家貓餵乾飼料、罐頭或煮熟的食物，不讓牠外出覓食。",
+    "abstract_zh": "2026 年截至 6 月 22 日累計 6 例弓形蟲感染症確定病例，都是本土病例，低於 2022 到 2025 年同期的 7 到 17 例。人因吃到受污染的水、食物或沒煮熟的動物組織而感染，不會人傳人；懷孕期間初次感染可能經胎盤傳給胎兒，造成流產、死胎或胎兒異常。建議肉類加熱到 66°C 以上、烹調時不試吃，處理生肉的手和器具要洗淨，園藝或接觸可能有貓糞的土壤時戴手套；孕婦避免接觸來路不明的貓，家貓餵乾飼料、罐頭或煮熟的食物，不讓牠外出覓食。\n\n■ 全文核對補充（2026-10-18）\n全文補充：潛伏期 10 到 23 天；免疫功能正常的人感染通常沒有症狀，少數急性感染會淋巴結腫大、倦怠、中度發燒；免疫功能不全者多是舊感染再活化，腦部最常受侵犯（新聞稿第 3 段）。",
     "keywords": [
       "弓形蟲",
       "孕婦",
@@ -3718,7 +3689,7 @@
     "status": "pending_review",
     "url_verified": true,
     "verified_at": "2026-10-17",
-    "notes": "2026-10-17 讀新聞稿原文核對（發布日期 115-06-23）。",
+    "notes": "2026-10-17 讀新聞稿原文核對（發布日期 115-06-23）。｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
       "cat-toxoplasma-pregnancy"
     ]
@@ -3763,7 +3734,7 @@
     "type": "educational",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "洋蔥和大蒜會傷害貓的紅血球，生的和粉狀的都一樣。一顆葡萄或葡萄乾就可能讓貓腎衰竭，含葡萄乾的烘焙點心也算。巧克力少量會吐、拉，量多可能抽搐、心律不整；黑巧克力和烘焙用巧克力毒性最強，少量就可能致命。貓喝到很少量的酒就可能很快嘔吐，嚴重時昏迷。",
+    "abstract_zh": "洋蔥和大蒜會傷害貓的紅血球，生的和粉狀的都一樣。一顆葡萄或葡萄乾就可能讓貓腎衰竭，含葡萄乾的烘焙點心也算。巧克力少量會吐、拉，量多可能抽搐、心律不整；黑巧克力和烘焙用巧克力毒性最強，少量就可能致命。貓喝到很少量的酒就可能很快嘔吐，嚴重時昏迷。\n\n■ 全文核對補充（2026-10-18）\n巧克力和咖啡少量會吐、拉，量多可能抽搐、心律不整，黑巧克力和烘焙用巧克力最毒；酒精很少量就可能讓貓嘔吐，嚴重時昏迷；一顆葡萄或葡萄乾就可能讓貓腎衰竭；洋蔥、大蒜（生的或粉狀）會傷紅血球；生麵團會在胃裡發酵產生乙醇（常見食物清單）。頁面沒有點名咖啡因或可可鹼。",
     "keywords": [
       "洋蔥",
       "大蒜",
@@ -3777,7 +3748,7 @@
     "status": "pending_review",
     "url_verified": true,
     "verified_at": "2026-10-17",
-    "notes": "2026-10-17 讀原文核對（頁面沒有作者與日期；圖片路徑為 2024）。",
+    "notes": "2026-10-17 讀原文核對（頁面沒有作者與日期；圖片路徑為 2024）。｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
       "cat-toxic-substances-taiwan"
     ]
@@ -4109,8 +4080,8 @@
     "url": "https://vcahospitals.com/know-your-pet/fish-oil",
     "year": 2025,
     "type": "educational",
-    "abstract_zh": "VCA 的魚油說明。魚油是來自冷水魚的保健品，用於發炎性疾病，例如皮膚過敏與皮膚炎，在貓狗都廣泛使用；保健品上市前不經美國 FDA 審查安全與效果。嚴重副作用包括異常瘀血或出血，貓特別要注意，出現時停用並聯絡獸醫；吃抗凝血藥的寵物要謹慎；找不到可靠來源時不要用，部分來源有重金屬中毒風險。保存在陰涼乾燥避光處，依廠商指示。頁面沒有給劑量。",
-    "notes": "2026-10-17 讀原文核對。"
+    "abstract_zh": "VCA 的魚油說明。魚油是來自冷水魚的保健品，用於發炎性疾病，例如皮膚過敏與皮膚炎，在貓狗都廣泛使用；保健品上市前不經美國 FDA 審查安全與效果。嚴重副作用包括異常瘀血或出血，貓特別要注意，出現時停用並聯絡獸醫；吃抗凝血藥的寵物要謹慎；找不到可靠來源時不要用，部分來源有重金屬中毒風險。保存在陰涼乾燥避光處，依廠商指示。頁面沒有給劑量。\n\n■ 全文核對補充（2026-10-18）\n魚油富含 EPA 與 DHA 兩種 omega-3 脂肪酸，有抗發炎作用，用於皮膚過敏（異位性皮膚炎）、皮膚炎、關節炎、腎病、心臟病、發炎性腸病等發炎性疾病，貓狗都常用（What is fish oil?）。",
+    "notes": "2026-10-17 讀原文核對。｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。"
   },
   "VCA-PROBIOTICS": {
     "journal": null,
@@ -4165,8 +4136,8 @@
     "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/danger-hairballs",
     "year": 2026,
     "type": "educational",
-    "abstract_zh": "Cornell 貓健康中心的毛球說明。貓每一到兩週吐一次毛球不算少見，通常不必擔心。貓精神差、超過一兩天不吃，或反覆乾嘔、嘔吐吐不出東西，要盡快就醫，毛球阻塞沒有手術可能致命。建議每天梳毛減少毛球；不要在沒有獸醫同意與監督下給貓吃緩瀉劑，標榜預防或緩解阻塞的市售產品也一樣。",
-    "notes": "2026-10-17 讀原文核對（頁面沒有日期）。"
+    "abstract_zh": "Cornell 貓健康中心的毛球說明。貓每一到兩週吐一次毛球不算少見，通常不必擔心。貓精神差、超過一兩天不吃，或反覆乾嘔、嘔吐吐不出東西，要盡快就醫，毛球阻塞沒有手術可能致命。建議每天梳毛減少毛球；不要在沒有獸醫同意與監督下給貓吃緩瀉劑，標榜預防或緩解阻塞的市售產品也一樣。\n\n■ 全文核對補充（2026-10-18）\n毛球是貓理毛時舌頭上向後的倒刺把毛送進胃裡，毛的角蛋白無法消化而在胃裡結團。長毛品種與年紀較大的貓較容易有毛球，換毛季較多。原文沒有提便秘。",
+    "notes": "2026-10-17 讀原文核對（頁面沒有日期）。｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。"
   },
   "VCA-HAIRBALL-REMEDIES": {
     "journal": null,
@@ -4226,8 +4197,8 @@
     "pmcid": "PMC10811760",
     "pmid": "38055304",
     "doi": "10.1177/1098612X231211763",
-    "abstract_zh": "義大利研究，兩家貓舍 12 隻蘇格蘭折耳貓與 5 隻直耳貓（平均 2.3 歲）。折耳貓全部帶有一份 TRPV4 c.1024G>T 變異，直耳貓都沒有，也沒有純合子；12 隻折耳貓只有 1 隻出現臨床症狀，追蹤 1.5 年沒有新的骨骼變化。作者認為這個變異可能不是發病的唯一原因。前言提到這是不完全顯性的遺傳病，純合子的關節病變會惡化到無法走路；折耳貓與直耳貓配種，約一半的幼貓是折耳。",
-    "notes": "2026-10-17 讀 PMC 全文核對。"
+    "abstract_zh": "義大利研究，兩家貓舍 12 隻蘇格蘭折耳貓與 5 隻直耳貓（平均 2.3 歲）。折耳貓全部帶有一份 TRPV4 c.1024G>T 變異，直耳貓都沒有，也沒有純合子；12 隻折耳貓只有 1 隻出現臨床症狀，追蹤 1.5 年沒有新的骨骼變化。作者認為這個變異可能不是發病的唯一原因。前言提到這是不完全顯性的遺傳病，純合子的關節病變會惡化到無法走路；折耳貓與直耳貓配種，約一半的幼貓是折耳。\n\n■ 全文核對補充（2026-10-18）\n前言整理既有文獻：雜合子折耳貓的骨骼病變從輕到重都有，臨床症狀的發病年齡、嚴重度與骨質增生的進展差異很大（Introduction）。作者認為雜合子的病程較溫和、較慢，年齡是風險因子之一，一歲以下的變化可能很細微（Discussion）。",
+    "notes": "2026-10-17 讀 PMC 全文核對。｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。"
   },
   "VELIE-2023-SCOTTISH-FOLD-PREVALENCE": {
     "open_access": true,
@@ -4443,7 +4414,8 @@
     "source": "VCA",
     "url": "https://vcahospitals.com/know-your-pet/bringing-home-your-new-kitten",
     "year": 2024,
-    "abstract_zh": "把幼貓連同外出籠放進家裡安靜、少人走動的小房間，水、食物、貓砂盆放在外出籠門口附近，貓砂盡量沿用原本用的；打開外出籠門，讓貓自己願意時出來，來去自如；30 分鐘後還不出來，可以拿掉外出籠上蓋，輕輕讓牠看到食物、水和砂盆。讓牠有足夠時間熟悉這個房間，再一次一個房間慢慢擴大，飼主陪著。沒人看顧時要有安全的區域，食物和水要和砂盆分開，檢查有沒有幼貓會躲進去卡住的縫隙。和家中其他寵物見面時，原本的寵物用牽繩或有人抱著，有攻擊跡象才介入；餵食和睡覺的地方先分開，新幼貓要有可以爬高或躲起來避開衝突的地方；介紹通常需要一到兩週。"
+    "abstract_zh": "把幼貓連同外出籠放進家裡安靜、少人走動的小房間，水、食物、貓砂盆放在外出籠門口附近，貓砂盡量沿用原本用的；打開外出籠門，讓貓自己願意時出來，來去自如；30 分鐘後還不出來，可以拿掉外出籠上蓋，輕輕讓牠看到食物、水和砂盆。讓牠有足夠時間熟悉這個房間，再一次一個房間慢慢擴大，飼主陪著。沒人看顧時要有安全的區域，食物和水要和砂盆分開，檢查有沒有幼貓會躲進去卡住的縫隙。和家中其他寵物見面時，原本的寵物用牽繩或有人抱著，有攻擊跡象才介入；餵食和睡覺的地方先分開，新幼貓要有可以爬高或躲起來避開衝突的地方；介紹通常需要一到兩週。\n\n■ 全文核對補充（2026-10-18）\n全文核對補充：家裡已有其他寵物時，新幼貓更需要待在限定區域，一方面要有自己的安全空間，一方面不要侵入原本寵物已占用的空間；餵食與睡覺的地方先分開一段時間（What should I do if I have other pets?）。",
+    "notes": "2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。"
   },
   "VCA-INTRO-ADULT-CATS": {
     "journal": null,
@@ -4522,7 +4494,8 @@
     "source": "iCatCare",
     "url": "https://icatcare.org/articles/helping-your-new-cat-or-kitten-settle-in",
     "year": 2025,
-    "abstract_zh": "iCatCare 衛教文（2024-10 發表，2025-09 更新）。幼貓一定要先待在一個房間，成貓尤其家裡已經有貓時也是；房間裡放食碗水碗、床、砂盆、玩具、貓抓柱。砂盆放在不顯眼的角落，食物放在對面，水離食物幾步遠、不要放在砂盆旁邊。幼貓可以用側放、裡面鋪毛毯的紙箱當躲藏處；成貓提供高處和隱蔽的安全處有助於安全感。把外出籠放進房間打開門，讓貓自己出來，不要強迫。貓躲起來時不要哄牠出來，坐在同一個房間讓牠自己靠近；不感興趣或焦慮就讓牠獨處。幼貓前幾週待在一個房間；有些貓要幾週才在新家感到安全。焦慮的貓可能只在半夜才吃東西、用砂盆，超過 24 小時要聯絡獸醫。孩子一開始在監督下短暫接觸。"
+    "abstract_zh": "iCatCare 衛教文（2024-10 發表，2025-09 更新）。幼貓一定要先待在一個房間，成貓尤其家裡已經有貓時也是；房間裡放食碗水碗、床、砂盆、玩具、貓抓柱。砂盆放在不顯眼的角落，食物放在對面，水離食物幾步遠、不要放在砂盆旁邊。幼貓可以用側放、裡面鋪毛毯的紙箱當躲藏處；成貓提供高處和隱蔽的安全處有助於安全感。把外出籠放進房間打開門，讓貓自己出來，不要強迫。貓躲起來時不要哄牠出來，坐在同一個房間讓牠自己靠近；不感興趣或焦慮就讓牠獨處。幼貓前幾週待在一個房間；有些貓要幾週才在新家感到安全。焦慮的貓可能只在半夜才吃東西、用砂盆，超過 24 小時要聯絡獸醫。孩子一開始在監督下短暫接觸。\n\n■ 全文核對補充（2026-10-18）\n全文核對補充：幼貓不要叫醒來摸或玩，要讓牠不被打擾地睡（Helping kittens settle in）。成貓若很想探索、家裡又沒有其他貓，不必限制在一個房間；有些貓要幾週才在新家感到安全（Helping adult cats settle in）。建議帶一些原本的寢具回家，讓幼貓有熟悉的東西。原文沒有提到不要用原本那隻貓用過的物品。",
+    "notes": "2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。"
   },
   "TW-PET-REGISTRATION-RULES": {
     "title": "寵物登記管理辦法",
@@ -4591,7 +4564,7 @@
     "type": "law",
     "language": "zh",
     "open_access": true,
-    "abstract_zh": "第 4 項：住戶飼養動物，不得妨礙公共衛生、公共安寧及公共安全；但法令或規約另有禁止飼養的規定時，從其規定。第 5 項：住戶違反時，管理負責人或管理委員會應予制止或按規約處理，經制止而不遵從者，得報請直轄市、縣（市）主管機關處理。",
+    "abstract_zh": "第 4 項：住戶飼養動物，不得妨礙公共衛生、公共安寧及公共安全；但法令或規約另有禁止飼養的規定時，從其規定。第 5 項：住戶違反時，管理負責人或管理委員會應予制止或按規約處理，經制止而不遵從者，得報請直轄市、縣（市）主管機關處理。\n\n■ 全文核對補充（2026-10-18）\n第 16 條第 4 項：住戶飼養動物，不得妨礙公共衛生、公共安寧及公共安全；法令或規約另有禁止飼養規定時，從其規定。第 5 項：違反時由管理負責人或管理委員會制止或依規約處理，不聽從的可以報請縣市主管機關處理。條文沒有涉及租約或房東。",
     "keywords": [
       "租屋",
       "法規",
@@ -4604,7 +4577,7 @@
     "status": "pending_review",
     "url_verified": true,
     "verified_at": "2026-10-17",
-    "notes": "2026-10-17 讀原文核對（查詢日期 2026-10-17）。",
+    "notes": "2026-10-17 讀原文核對（查詢日期 2026-10-17）。｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
       "renting-with-cats-taiwan",
       "should-i-adopt-cat-decision-taiwan"
