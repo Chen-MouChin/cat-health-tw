@@ -11,6 +11,8 @@
 - [編輯方針](https://cathealthtw.com/editorial.html)：誰在寫、怎麼審、引用哪些來源
 - [關於本站](https://cathealthtw.com/about.html)：資料來源與網站運作
 
+- [夜間急診動物醫院名單](https://cathealthtw.com/vets/night-er.html)：台北市、台中市、彰化縣、高雄市政府公告的夜間急診（彰化縣是醫院官網公告），附地址、電話與官方急診時段
+
 ## 各縣市動物醫院名單
 
 - [台北市（272 家）](https://cathealthtw.com/vets/taipei.html)
