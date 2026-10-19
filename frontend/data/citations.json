@@ -507,33 +507,6 @@
     "pdf_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10812122/pdf/10.1177_1098612X211021538.pdf",
     "verified_at": "2026-10-17"
   },
-  "AAFP-PAIN-2022": {
-    "title": "2022 ISFM/AAFP Cat Friendly Veterinary Interaction Guidelines",
-    "title_zh": "2022 ISFM/AAFP 貓友善獸醫互動指引",
-    "authors": "ISFM & AAFP",
-    "source": "AAFP",
-    "journal": "Journal of Feline Medicine and Surgery",
-    "url": "https://catvets.com/resource/cat-friendly-veterinary-interaction-guidelines/",
-    "year": 2022,
-    "type": "guideline",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "減少貓看診壓力的操作指引：低壓力固定法、費洛蒙使用、環境調控、鎮靜方案。含壓力量表（Cat Stress Score）。",
-    "keywords": [
-      "低壓力",
-      "貓友善",
-      "固定法",
-      "費洛蒙",
-      "壓力"
-    ],
-    "disease_tags": [
-      "vet_visit"
-    ],
-    "status": "pending_review",
-    "url_verified": true,
-    "notes": "AAFP 官網免費",
-    "cited_by": []
-  },
   "AAFP-DENTAL-2025": {
     "title": "2025 AAFP Feline Oral Health and Dental Care Guidelines",
     "title_zh": "2025 AAFP 貓口腔健康與牙科照護指引",
@@ -1248,42 +1221,44 @@
     "verified_at": "2026-10-17"
   },
   "AAFP-2022-AAFP-AAHA-ANTIMICROBIAL-STEWARDSHIP-2022": {
-    "title": "2022 AAFP/AAHA Antimicrobial Stewardship",
-    "title_zh": "",
+    "title": "2022 AAFP/AAHA Antimicrobial Stewardship Guidelines",
+    "title_zh": "2022 AAFP/AAHA 抗生素合理使用指引",
     "authors": "AAFP",
     "source": "AAFP",
     "journal": null,
-    "url": "https://catvets.com/resource/guidelines-practice-guidelines-antimicrobial-in-cats-antimicrobial-stewardship-guidelines/",
+    "url": "https://catvets.com/resource/aafp-aaha-antimicrobial-stewardship-guidelines/",
     "year": 2022,
     "type": "guideline",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "",
+    "abstract_zh": "美國貓科醫師協會（AAFP）與美國動物醫院協會（AAHA）2022 年的抗生素合理使用指引，取代 2006 與 2014 年舊版，採用美國獸醫學會（AVMA）的定義：先預防疾病，再依證據謹慎用藥（Position Statement）。\n\n預防性給藥不能取代疫苗、驅蟲與衛生照護。10 歲以下的貓下泌尿道疾病多半與細菌無關；疱疹或卡里西病毒引起的上呼吸道感染、急性腹瀉、例行洗牙，一般都不需要抗生素；沒有症狀的菌尿通常不治療。手術若要預防性用藥，在下刀前 30 到 60 分鐘給；結紮等乾淨手術通常不需要。\n\n選藥建議參考細胞學、培養與藥敏試驗，開始用藥 48 到 72 小時後重新評估。飼主要照指示給藥，例如 doxycycline 膠囊或錠劑吞下後要再給液體，以免食道狹窄。",
     "keywords": [],
     "disease_tags": [],
     "status": "pending_review",
     "url_verified": true,
-    "notes": "auto-crawled from catvets.com/guidelines",
-    "cited_by": []
+    "notes": "auto-crawled from catvets.com/guidelines；2026-10-19 讀原文補中文摘要（讀：https://catvets.com/wp-content/uploads/2024/01/2022-AAFP-AAHA-Antimicrobial-Guidelines.pdf）",
+    "cited_by": [],
+    "verified_at": "2026-10-19"
   },
   "AAFP-2022-APPROACHES-TO-UROLITHIASIS-TREATMEN-2022": {
-    "title": "2022 Approaches to Urolithiasis Treatment",
-    "title_zh": "",
+    "title": "2022 AAFP Consensus Statement: Approaches to Urolithiasis Treatment",
+    "title_zh": "2022 AAFP 貓尿路結石治療共識聲明",
     "authors": "AAFP",
     "source": "AAFP",
     "journal": null,
-    "url": "https://catvets.com/resource/guidelines-practice-guidelines-urolithiasis-approaches-to-urolithiasis-treatment-consensus-statement/",
+    "url": "https://catvets.com/resource/approaches-to-urolithiasis-treatment-consensus-statement/",
     "year": 2022,
     "type": "guideline",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "",
+    "abstract_zh": "美國貓科醫師協會（AAFP）2022 年的共識聲明，由 Dunn、Kornya、Lulich 撰寫，談貓膀胱結石的處理。草酸鈣與鳥糞石合計約占 90% 到 95%，尿酸鹽約 5%；X 光上的外觀是預測成分的主要依據（What Types of Uroliths are Common?）。\n\n建議先嘗試溶解：鳥糞石用限鎂、酸化尿液的處方食品，通常 14 到 21 天，最長可到 56 天，處方食品要當全部飲食；溶解期間阻塞風險極低，公貓也是。尿酸鹽可用鹼化尿液、allopurinol 與低嘌呤飲食；草酸鈣無法溶解；溶解不需抗生素。\n\n溶解失敗先考慮微創：母貓小於 2.5 公釐可排尿沖出、小於 3 公釐可用膀胱鏡網籃取出，應轉介專科。傳統膀胱切開術併發症比例為 37% 到 50%。預防復發靠增加水分、濕食與泌尿處方食品。",
     "keywords": [],
     "disease_tags": [],
     "status": "pending_review",
     "url_verified": true,
-    "notes": "auto-crawled from catvets.com/guidelines",
-    "cited_by": []
+    "notes": "auto-crawled from catvets.com/guidelines；2026-10-19 讀原文補中文摘要（讀：https://catvets.com/wp-content/uploads/2024/08/Urolithiasis-Consensus-Statement-FINAL.pdf）",
+    "cited_by": [],
+    "verified_at": "2026-10-19"
   },
   "AAFP-2021-FELINE-LIFE-STAGE-2021": {
     "title": "2021 Feline Life Stage",
@@ -1316,25 +1291,6 @@
     ],
     "pdf_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10812130/pdf/10.1177_1098612X21993657.pdf",
     "verified_at": "2026-10-17"
-  },
-  "AAFP-2020-FELINE-VACCINATION-2020": {
-    "title": "2020 Feline Vaccination",
-    "title_zh": "",
-    "authors": "AAFP",
-    "source": "AAFP",
-    "journal": null,
-    "url": "https://catvets.com/resource/guidelines-practice-guidelines-aafp-aaha-feline-vaccination-feline-vaccination-guidelines/",
-    "year": 2020,
-    "type": "guideline",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "",
-    "keywords": [],
-    "disease_tags": [],
-    "status": "pending_review",
-    "url_verified": true,
-    "notes": "auto-crawled from catvets.com/guidelines",
-    "cited_by": []
   },
   "AAFP-2019-ZOONOSES-2019": {
     "title": "2019 Zoonoses",
@@ -1385,42 +1341,44 @@
     ]
   },
   "AAFP-2018-HOW-TO-FEED-A-CAT-2018": {
-    "title": "2018 How to Feed a Cat",
-    "title_zh": "",
+    "title": "Feline Feeding Programs: Addressing Behavioral Needs to Improve Feline Health and Wellbeing",
+    "title_zh": "2018 AAFP 貓的餵食方式共識聲明",
     "authors": "AAFP",
     "source": "AAFP",
     "journal": null,
-    "url": "https://catvets.com/guidelines/practice-guidelines/how-to-feed-a-cat/",
+    "url": "https://catvets.com/resource/how-to-feed-how-to-feed-a-cat-consensus-statement/",
     "year": 2018,
     "type": "guideline",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "",
-    "keywords": [],
-    "disease_tags": [],
-    "status": "pending_review",
-    "url_verified": false,
-    "notes": "auto-crawled from catvets.com/guidelines",
-    "cited_by": []
-  },
-  "AAFP-2015-PAIN-MANAGEMENT-2015": {
-    "title": "2015 Pain Management",
-    "title_zh": "",
-    "authors": "AAFP",
-    "source": "AAFP",
-    "journal": null,
-    "url": "https://catvets.com/guidelines/practice-guidelines/pain-management-guidelines/",
-    "year": 2015,
-    "type": "guideline",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "",
+    "abstract_zh": "美國貓科醫師協會（AAFP）2018 年的共識聲明，刊於《Journal of Feline Medicine and Surgery》，主席 Tammy Sadek，談「怎麼餵」。AAFP 指出多數家貓在同一處任食，或一天吃一到兩頓大餐，加上室內缺乏刺激，這種餵法沒有顧到貓的行為需求。\n\n聲明建議在家中重現貓狩獵覓食、少量多餐、獨自進食的習性，多貓家庭也適用：用益智餵食器、把食物分散在不同地點、設多個食物與飲水站，必要時用自動餵食器；並依是否只在室內、多寵物同住、年老體弱等情況調整。\n\nAAFP 認為這樣可減少膀胱炎等壓力相關問題與肥胖，也能幫助因躲避其他寵物而吃不夠、變瘦的焦慮貓。（全文無法取得，本摘要依 AAFP 官方頁面說明撰寫。）",
     "keywords": [],
     "disease_tags": [],
     "status": "pending_review",
     "url_verified": true,
-    "notes": "auto-crawled from catvets.com/guidelines",
-    "cited_by": []
+    "notes": "auto-crawled from catvets.com/guidelines；2026-10-19 讀原文補中文摘要（讀：https://catvets.com/resource/how-to-feed-how-to-feed-a-cat-consensus-statement/ ；書目：PubMed 30375945（doi:10.1177/1098612X18791877））",
+    "cited_by": [],
+    "verified_at": "2026-10-19"
+  },
+  "AAFP-2015-PAIN-MANAGEMENT-2015": {
+    "title": "2015 AAHA/AAFP Pain Management Guidelines for Dogs and Cats",
+    "title_zh": "2015 AAHA/AAFP 犬貓疼痛管理指引",
+    "authors": "AAFP",
+    "source": "AAFP",
+    "journal": null,
+    "url": "https://catvets.com/resource/aafp-aaha-pain-management-guidelines/",
+    "year": 2015,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "美國動物醫院協會（AAHA）與美國貓科醫師協會（AAFP）2015 年的犬貓疼痛管理指引，刊於《Journal of Feline Medicine and Surgery》第 17 卷，由 Epstein 與 Rodan 共同主持，取代 2007 年版。\n\n指引把疼痛管理視為連續照護：事先預期、及早介入，依個別反應調整，飼主也是照護團隊的一員（Approaches）。處置包含藥物與非藥物方法；行為改變是目前判斷疼痛的主要指標，也是已驗證疼痛評分工具的基礎（Evidence base）。\n\n手術後疼痛可預期，已有證據支持事先減輕。慢性疼痛以退化性關節疾病為主，是貓狗最常被漏診的重要疾病之一，會隨時間惡化；本版新增貓退化性關節疾病一節。AAFP 官網註明，AAFP 現已背書 AAHA 2022 年犬貓疼痛管理指引。",
+    "keywords": [],
+    "disease_tags": [],
+    "status": "pending_review",
+    "url_verified": true,
+    "notes": "auto-crawled from catvets.com/guidelines；2026-10-19 讀原文補中文摘要（讀：https://catvets.com/resource/aafp-aaha-pain-management-guidelines/ ；摘要：PubMed 25701863（E-utilities））",
+    "cited_by": [],
+    "verified_at": "2026-10-19"
   },
   "AAFP-2014-DIAGNOSING-AND-SOLVING-HOUSE-SOILIN-2014": {
     "title": "2014 Diagnosing and Solving House-Soiling Behavior in Cats",
@@ -1508,12 +1466,12 @@
     "verified_at": "2026-10-17"
   },
   "AAFP-2006-BARTONELLA-SPP-2006": {
-    "title": "2006 Bartonella spp.",
+    "title": "American Association of Feline Practitioners 2006 Panel report on diagnosis, treatment, and prevention of Bartonella spp. infections",
     "title_zh": "",
     "authors": "AAFP",
     "source": "AAFP",
     "journal": null,
-    "url": "https://catvets.com/resource/guidelines-practice-guidelines-bartonella-guidelines-bartonella-spp-guidelines/",
+    "url": "https://catvets.com/resource/bartonella-spp-guidelines/",
     "year": 2006,
     "type": "guideline",
     "language": "en",
@@ -1523,7 +1481,7 @@
     "disease_tags": [],
     "status": "pending_review",
     "url_verified": true,
-    "notes": "auto-crawled from catvets.com/guidelines",
+    "notes": "auto-crawled from catvets.com/guidelines；2026-10-19 補摘要時讀不到內容：catvets.com 頁面（已轉址到 https://catvets.com/resource/bartonella-spp-guidelines/）只有成立背景，全文連到 SAGE（doi:10.1016/j.jfms.2006.05.006，JFMS 2006;8(4):213-226，PMID 16846781，PMC10822541）回 403；PMC 標示非開放取用、只有 PDF，E-utilities 拿不到內文，PubMed 也沒有摘要，Europe PMC 同樣 403。標題可修正為「American Association of Feline Practitioners 2006 Panel report on diagnosis, treatment, and prevention of Bartonella spp. infections」，年份 2006 正確。",
     "cited_by": []
   },
   "AAFP-2004-FELINE-BEHAVIOR-2004": {
@@ -1562,60 +1520,63 @@
   },
   "CORNELL-ASPERGILLOSIS-2024": {
     "title": "Aspergillosis",
-    "title_zh": "",
+    "title_zh": "貓的麴菌症",
     "authors": "Cornell University College of Veterinary Medicine",
     "source": "Cornell",
     "journal": null,
     "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/aspergillosis",
-    "year": 2024,
+    "year": 2021,
     "type": "educational",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "",
+    "abstract_zh": "康乃爾大學貓健康中心（Cornell Feline Health Center）的飼主衛教頁，2021 年更新。麴菌（Aspergillus）存在全球土壤與腐爛植物中，貓吸入孢子後可能發病，室內貓也可能經食物或貓砂接觸。這頁說無法預防，但多數接觸到的貓不會生病；波斯貓、喜馬拉雅貓等短鼻品種較容易得病。\n\n最常見的鼻竇型侷限在鼻腔與鼻竇，會打噴嚏、長期流鼻水、流鼻血、呼吸大聲，有時鼻孔有肉狀腫塊。侵犯到眼眶周圍稱鼻竇眼眶型，可能眼球突出、第三眼瞼升高，或失明、平衡困難。極少數擴散全身，引起肺炎、發燒、精神差、食慾下降。\n\n確診要在組織樣本中看到真菌菌絲；電腦斷層（CT）能看病灶範圍，但不取組織分不出是不是腫瘤。鼻竇型用長期口服抗黴菌藥，加上全身麻醉下局部灌注藥物；鼻竇眼眶型可能需要大範圍手術，治療不一定成功。預後看病灶範圍，隨局部治療技術進步而改善。",
     "keywords": [],
     "disease_tags": [],
     "status": "pending_review",
     "url_verified": true,
-    "notes": "auto-crawled from Cornell Feline Health Topics",
-    "cited_by": []
+    "notes": "auto-crawled from Cornell Feline Health Topics；2026-10-19 讀原文補中文摘要（讀：https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/aspergillosis）",
+    "cited_by": [],
+    "verified_at": "2026-10-19"
   },
   "CORNELL-BLASTOMYCOSIS-2024": {
     "title": "Blastomycosis",
-    "title_zh": "",
+    "title_zh": "貓的芽生菌病",
     "authors": "Cornell University College of Veterinary Medicine",
     "source": "Cornell",
     "journal": null,
     "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/blastomycosis",
-    "year": 2024,
+    "year": 2021,
     "type": "educational",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "",
+    "abstract_zh": "康乃爾大學貓健康中心（Cornell Feline Health Center）的飼主衛教頁，最後更新於 2021 年，介紹由皮炎芽生菌（Blastomyces dermatitidis）引起的芽生菌病。這種病在狗和人身上比在貓身上常見。真菌住在土壤裡，通常是吸入孢子而感染，也可能經由皮膚傷口直接接觸致病。北美洲的病例集中在密西西比河、密蘇里河、俄亥俄河流域，以及五大湖、曼尼托巴與安大略一帶。孢子多半在近水的土壤中，但這頁指出許多只待室內的貓也有病例記錄。\n\n貓最常見的症狀包括呼吸困難、精神差、體重減輕、發燒、咳嗽、眼睛病變、神經症狀或皮膚病灶。狗有尿液與血液檢測可用，貓的相關資料很少，所以貓一般是在顯微鏡下從受感染組織看到真菌來確診。治療是長期口服抗黴菌藥。這頁形容貓的預後須保留，但隨較新的抗黴菌藥問世，情況正在改善。",
     "keywords": [],
     "disease_tags": [],
     "status": "pending_review",
     "url_verified": true,
-    "notes": "auto-crawled from Cornell Feline Health Topics",
-    "cited_by": []
+    "notes": "auto-crawled from Cornell Feline Health Topics；2026-10-19 讀原文補中文摘要（讀：https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/blastomycosis）",
+    "cited_by": [],
+    "verified_at": "2026-10-19"
   },
   "CORNELL-COCCIDIOIDOMYCOSIS-2024": {
     "title": "Coccidioidomycosis",
-    "title_zh": "",
+    "title_zh": "貓的球孢子菌病（山谷熱）",
     "authors": "Cornell University College of Veterinary Medicine",
     "source": "Cornell",
     "journal": null,
     "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/coccidioidomycosis",
-    "year": 2024,
+    "year": 2021,
     "type": "educational",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "",
+    "abstract_zh": "康乃爾大學貓健康中心（Cornell Feline Health Center）的飼主衛教頁，最後更新於 2021 年，介紹球孢子菌病，又稱山谷熱（Valley Fever），病原是粗球孢子菌（Coccidioides immitis）。這種病很少出現在流行區以外，流行區涵蓋美國西南部乾燥地帶、墨西哥與中南美洲；在美國以加州、亞利桑那州與德州西南部最多。貓是從土壤吸入孢子而感染，乾土被擾動後（例如沙塵暴、地震、施工）風險較高。許多哺乳動物都會得病，貓比狗少見。\n\n貓的症狀沒有特異性，常見發燒、不吃、體重減輕；皮膚問題也常見，例如流膿的瘻管、膿瘍、淋巴結腫大。也可能出現眼睛病變與跛行；呼吸道症狀在貓身上相對少見，比其他動物少。貓的診斷很困難，通常靠顯微鏡下看到真菌；這頁建議在流行區內有相符症狀的貓要把這個病列入考慮。治療需要長期使用抗黴菌藥，長期預後須保留，因為第一次治療後復發很常見。",
     "keywords": [],
     "disease_tags": [],
     "status": "pending_review",
     "url_verified": true,
-    "notes": "auto-crawled from Cornell Feline Health Topics",
-    "cited_by": []
+    "notes": "auto-crawled from Cornell Feline Health Topics；2026-10-19 讀原文補中文摘要（讀：https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/coccidioidomycosis）",
+    "cited_by": [],
+    "verified_at": "2026-10-19"
   },
   "CORNELL-COMMON-CAT-HAZARDS-2024": {
     "title": "Common Cat Hazards — Cornell Feline Health Center",
@@ -1662,7 +1623,7 @@
     "disease_tags": [],
     "status": "pending_review",
     "url_verified": true,
-    "notes": "auto-crawled from Cornell Feline Health Topics",
+    "notes": "auto-crawled from Cornell Feline Health Topics；2026-10-19 補摘要時讀不到內容：網頁可讀（https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/cornell-veterinary-experts-address-feline-nutrition，HTTP 200），但實質內容是一段 Kaltura 嵌入影片，頁面文字只有約百字引言（列出營養、維生素與補充品、生食安全等題目，並提到康乃爾對 2,000 多隻貓肥胖研究的追蹤），沒有逐字稿，無法在不看影片的情況下寫出 150 字以上不臆測的摘要。頁面未標示日期。",
     "cited_by": []
   },
   "CORNELL-DISASTER-PREPAREDNESS-2024": {
@@ -1783,22 +1744,23 @@
   },
   "CORNELL-HISTOPLASMOSIS-2024": {
     "title": "Histoplasmosis",
-    "title_zh": "",
+    "title_zh": "貓的組織胞漿菌病",
     "authors": "Cornell University College of Veterinary Medicine",
     "source": "Cornell",
     "journal": null,
     "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/histoplasmosis",
-    "year": 2024,
+    "year": 2021,
     "type": "educational",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "",
+    "abstract_zh": "康乃爾大學貓健康中心（Cornell Feline Health Center）的飼主衛教頁，2021 年更新。這頁說組織胞漿菌病是貓第二常見的全身性黴菌病，主要在美國中部河谷，通報最多的是奧克拉荷馬、德州、維吉尼亞與路易斯安那州。病原莢膜組織胞漿菌（Histoplasma capsulatum）在被蝙蝠與鳥糞汙染的土壤中，貓多半吸入孢子感染。室內貓也會得，可能來源包括盆栽和未整修的地下室；感染貓白血病病毒（FeLV）的貓稍微容易發病。\n\n症狀通常模糊：精神差、體重減輕、不吃、發燒，咳嗽或呼吸困難也常見，較少見淋巴結腫大、皮膚腫塊與眼睛病變。確診通常靠組織中看到真菌；血液與尿液檢測偽陰性率可能偏高，也可能分不出芽生菌等其他黴菌。治療是口服伊曲康唑（itraconazole）或氟康唑（fluconazole），平均約 6 個月；這頁引用一項研究，成功率約 66%，預後依病灶範圍而定。",
     "keywords": [],
     "disease_tags": [],
     "status": "pending_review",
     "url_verified": true,
-    "notes": "auto-crawled from Cornell Feline Health Topics",
-    "cited_by": []
+    "notes": "auto-crawled from Cornell Feline Health Topics；2026-10-19 讀原文補中文摘要（讀：https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/histoplasmosis）",
+    "cited_by": [],
+    "verified_at": "2026-10-19"
   },
   "CORNELL-HYDRATION-2024": {
     "title": "Hydration",
@@ -1877,8 +1839,8 @@
     ]
   },
   "CORNELL-SK-ELIZABETH-CAN-I-CATCH-FIV-FROM-MY-CAT-2024": {
-    "title": "sk Elizabeth: Can I catch FIV from my cat?",
-    "title_zh": "",
+    "title": "Ask Elizabeth: Can I catch FIV from my cat?",
+    "title_zh": "問 Elizabeth：人會被貓傳染貓愛滋（FIV）嗎？",
     "authors": "Cornell University College of Veterinary Medicine",
     "source": "Cornell",
     "journal": null,
@@ -1887,17 +1849,18 @@
     "type": "educational",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "",
+    "abstract_zh": "康乃爾大學貓健康中心（Cornell Feline Health Center）「Ask Elizabeth」問答專欄。讀者的保母養了感染貓免疫不全病毒（FIV，俗稱貓愛滋）的貓，讀者擔心 23 個月大的孩子被傳染，問被咬、被抓、清貓砂或被舔有沒有風險。\n\n專欄回答：FIV 已知只感染貓，除少數例外，要感染貓的唾液經咬傷進入另一隻貓皮膚才會傳播，偶爾母貓傳給小貓；非咬傷行為造成傳染的證據很少。病毒離開貓體後只能存活很短時間，不會經保母衣物帶到家裡；共用貓砂盆、食碗一般認為不會傳給同住的貓，清理的人也沒有風險。\n\n作者說明無法做讓所有人接觸病毒的研究，只能研究高暴露族群：至少一項針對獸醫與實驗室人員的研究（作者也是受試者），連被感染貓咬傷或意外注射到病毒的人都沒有感染證據。她建議免疫功能低下者、年長者與幼兒保險起見，避免親吻感染貓口鼻，被舔處要洗，避免被咬。",
     "keywords": [],
     "disease_tags": [],
     "status": "pending_review",
     "url_verified": true,
-    "notes": "auto-crawled from Cornell Feline Health Topics",
-    "cited_by": []
+    "notes": "auto-crawled from Cornell Feline Health Topics；2026-10-19 讀原文補中文摘要（讀：https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/ask-elizabeth-can-i-catch-fiv-my-cat）",
+    "cited_by": [],
+    "verified_at": "2026-10-19"
   },
   "CORNELL-LYME-DISEASE-2024": {
-    "title": "Lyme Disease",
-    "title_zh": "",
+    "title": "Lyme Disease: A Potential, But Unlikely, Problem for Cats",
+    "title_zh": "萊姆病：貓有可能感染，但不太會發生",
     "authors": "Cornell University College of Veterinary Medicine",
     "source": "Cornell",
     "journal": null,
@@ -1906,13 +1869,14 @@
     "type": "educational",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "",
+    "abstract_zh": "康乃爾大學貓健康中心（Cornell Feline Health Center）的衛教文章，引述康乃爾獸醫學院皮膚科教授 William Miller Jr.。文章說萊姆病大概不是貓飼主要擔心的事：病菌能感染貓，但實驗室以外從未在貓身上見過這個病。\n\n病原是伯氏疏螺旋體（Borrelia burgdorferi），經若蟲或成年雌蜱叮咬傳入。早期症狀通常在感染後 4 週內出現：發燒、精神差、食慾下降、肌肉關節僵硬腫痛；Miller 建議蜱季看到這些症狀就找獸醫。治療通常用抗生素，實驗室研究中及早治療的貓康復機會很好，拖延數週可能造成不可逆的組織損傷。\n\n貓沒有萊姆病疫苗。外出前可用對貓安全的驅蟲產品，但貓對許多殺蟲劑敏感，要先問獸醫。回家後梳毛檢查，用鑷子貼近皮膚取下蜱。受感染蜱附著 36 到 48 小時後才開始傳播，每天檢查、48 小時內移除可大幅降低風險；取蜱要戴手套。",
     "keywords": [],
     "disease_tags": [],
     "status": "pending_review",
     "url_verified": true,
-    "notes": "auto-crawled from Cornell Feline Health Topics",
-    "cited_by": []
+    "notes": "auto-crawled from Cornell Feline Health Topics；2026-10-19 讀原文補中文摘要（讀：https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/lyme-disease-potential-unlikely-problem-cats）",
+    "cited_by": [],
+    "verified_at": "2026-10-19"
   },
   "CORNELL-TICKS-AND-YOUR-CAT-FAQS-2024": {
     "title": "Ticks and Your Cat – FAQs",
@@ -1958,26 +1922,6 @@
       "cat-common-symptoms-taiwan"
     ]
   },
-  "VCA-BREED-INFORMATION-2024": {
-    "title": "Breed Information",
-    "title_zh": "",
-    "authors": "VCA Animal Hospitals",
-    "source": "VCA",
-    "journal": null,
-    "url": "https://vcahospitals.com/",
-    "year": 2024,
-    "type": "educational",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "",
-    "keywords": [],
-    "disease_tags": [],
-    "status": "pending_review",
-    "url_verified": true,
-    "notes": "auto-crawled, search: kidney disease cat",
-    "cited_by": [],
-    "home_only": "VCA"
-  },
   "WSAVA-ANIMAL-WELFARE-GUIDELINES-2022": {
     "title": "WSAVA Animal Welfare Guidelines for companion animal practitioners and veterinary teams",
     "title_zh": "WSAVA 伴侶動物執業獸醫與團隊動物福祉指引",
@@ -2004,7 +1948,7 @@
   },
   "WSAVA-DENTAL-GUIDELINES-2022": {
     "title": "World Small Animal Veterinary Association Global Dental Guidelines",
-    "title_zh": "",
+    "title_zh": "WSAVA 全球牙科指引（2026 年版）",
     "authors": "Niemiec B, et al.",
     "source": "WSAVA",
     "journal": "Journal of Small Animal Practice 2026;67(10):859-987",
@@ -2013,17 +1957,17 @@
     "type": "guideline",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "",
+    "abstract_zh": "世界小動物獸醫協會（WSAVA）全球牙科委員會 2026 年在 Journal of Small Animal Practice 發表的新版牙科指引，更新 2019 年版。WSAVA 認為口腔疾病是小動物門診最常見的問題，會造成疼痛和感染，沒治療屬於動物福利問題。指引依 WSAVA 三級進修制度，訂出理想治療標準與最低照護標準，涵蓋常見口腔疾病、診斷與治療、牙科麻醉與止痛、居家照護與營養，並明確反對無麻醉洗牙。新版增加外傷、幼年動物口腔問題與 X 光判讀等章節（摘要）。WSAVA 給飼主的刷牙衛教單建議：成牙長齊後約 6 到 7 個月大、或洗牙後開始刷，每天一次、不到 2 分鐘，從摸臉、摸牙、按摩牙齦逐步換到牙刷，並每年檢查口腔（Introducing Toothbrushing）。",
     "keywords": [
       "WSAVA"
     ],
     "disease_tags": [],
     "status": "needs_review",
     "url_verified": true,
-    "notes": "auto-crawled from wsava.org\n2026-10-17 改指向 WSAVA 頁面摺疊裡的原始文件：2026 年新版刊在 JSAP，WSAVA 頁面只剩這一版的英文全文（2019 版只剩翻譯）。摘要還沒寫，要讀原文補。另有刷牙衛教 https://wsava.org/wp-content/uploads/2022/06/GDC-Toothbrushing-Toolkit-1.pdf",
+    "notes": "auto-crawled from wsava.org\n2026-10-17 改指向 WSAVA 頁面摺疊裡的原始文件：2026 年新版刊在 JSAP，WSAVA 頁面只剩這一版的英文全文（2019 版只剩翻譯）。摘要還沒寫，要讀原文補。另有刷牙衛教 https://wsava.org/wp-content/uploads/2022/06/GDC-Toothbrushing-Toolkit-1.pdf；2026-10-19 讀原文補中文摘要（讀：https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=42687403（PubMed 摘要）；https://wsava.org/wp-content/uploads/2022/06/GDC-Toothbrushing-Toolkit-1.pdf）；key 名稱寫 2022，實際是 2026 年新版（JSAP 2026;67(10):859-987，2026-09-02 線上刊登）；year 欄已是 2026，不用改。全文在 Wiley 被 Cloudflare 擋下、PMC 沒有收錄，摘要只依 PubMed 摘要與刷牙衛教單寫成，沒有讀到全文",
     "cited_by": [],
     "doi": "10.1111/jsap.70057",
-    "verified_at": "2026-10-17"
+    "verified_at": "2026-10-19"
   },
   "WSAVA-GASTROINTESTINAL-GUIDELINES-2022": {
     "title": "Endoscopic, biopsy, and histopathologic guidelines for the evaluation of gastrointestinal inflammation in companion animals",
@@ -2103,7 +2047,7 @@
   },
   "WSAVA-MICROCHIP-IDENTIFICATION-GUIDE-2022": {
     "title": "Microchip Identification Guidelines",
-    "title_zh": "",
+    "title_zh": "WSAVA 晶片辨識指引",
     "authors": "WSAVA",
     "source": "WSAVA",
     "journal": null,
@@ -2112,19 +2056,20 @@
     "type": "guideline",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "",
+    "abstract_zh": "世界小動物獸醫協會（WSAVA）的晶片植入與掃描指引，替犬貓、馬、經濟動物、鳥類、爬蟲類等訂出標準植入位置，因為晶片讀取距離很短，位置統一才容易掃到。犬貓有兩個標準位置：歐陸各國用左側頸部中段皮下，其他地區用背中線、肩胛骨前方皮下；掃不到要再掃另一處（Dogs and Cats）。掃描時先掃標準位置再擴大範圍，掃得夠久、重複掃過都沒有才判定沒有晶片；掃描時遠離電子設備與不鏽鋼檯面、拿掉金屬項圈，已植入的動物建議定期掃描確認（Enhancing Reader Performance）。指引也說明符合 ISO 11784／11785 標準的晶片，與部分不符合標準的晶片在讀取上的差異（FAQs）。",
     "keywords": [
       "WSAVA"
     ],
     "disease_tags": [],
     "status": "pending_review",
-    "url_verified": false,
-    "notes": "auto-crawled from wsava.org",
-    "cited_by": []
+    "url_verified": true,
+    "notes": "auto-crawled from wsava.org；2026-10-19 讀原文補中文摘要（讀：https://wsava.org/global-guidelines/microchip-identification-guidelines/）；網頁沒有標示發布或修訂日期，無法確認 2022；curl 被 wsava.org 限流（429），改用 WebFetch 讀頁面；wsava.org 擋自動抓取，原文數字未能逐字核對，摘要已拿掉具體數字",
+    "cited_by": [],
+    "verified_at": "2026-10-19"
   },
   "WSAVA-PAIN-GUIDELINES-2022": {
     "title": "2022 WSAVA guidelines for the recognition, assessment and treatment of pain",
-    "title_zh": "",
+    "title_zh": "2022 WSAVA 疼痛辨識、評估與治療指引",
     "authors": "Monteiro BP, et al.",
     "source": "WSAVA",
     "journal": "Journal of Small Animal Practice 2023;64(4):177-254",
@@ -2133,21 +2078,21 @@
     "type": "guideline",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "",
+    "abstract_zh": "世界小動物獸醫協會（WSAVA）全球疼痛委員會更新 2014 年版的疼痛指引，2022 年線上發表於 Journal of Small Animal Practice。貓的急性疼痛要看行為、姿勢與表情。貓咪鬼臉量表（Feline Grimace Scale）評五項、各 0 到 2 分，滿分 10 分，4 分以上該追加止痛；UNESP-Botucatu 簡式量表 12 分中 4 分以上、Glasgow 貓用量表 20 分中 5 分以上也要追加（Pain assessment）。用藥部分：慢性腎病穩定在 IRIS 第 1 到 3 期的貓，可在密切監測下用 meloxicam 或 robenacoxib 治慢性疼痛；乙醯胺酚對貓絕對禁用；gabapentin 用在慢性腎病貓要減量；貓用單株抗體 frunevetmab 打一針可緩解關節炎疼痛至少一個月（Pharmacological treatment）。",
     "keywords": [
       "WSAVA"
     ],
     "disease_tags": [],
     "status": "needs_review",
     "url_verified": true,
-    "notes": "auto-crawled from wsava.org\n2026-10-17 改指向 WSAVA 頁面摺疊裡的原始文件：改指向 JSAP 全文。貓結紮的止痛流程另有 https://wsava.org/wp-content/uploads/2024/08/Castration-and-OVH-cats.pdf；各情況疼痛程度表 https://wsava.org/wp-content/uploads/2020/01/WSAVA-Global-Pain-Council-Perceived-levels-of-pain.pdf。摘要還沒寫。",
+    "notes": "auto-crawled from wsava.org\n2026-10-17 改指向 WSAVA 頁面摺疊裡的原始文件：改指向 JSAP 全文。貓結紮的止痛流程另有 https://wsava.org/wp-content/uploads/2024/08/Castration-and-OVH-cats.pdf；各情況疼痛程度表 https://wsava.org/wp-content/uploads/2020/01/WSAVA-Global-Pain-Council-Perceived-levels-of-pain.pdf。摘要還沒寫。；2026-10-19 讀原文補中文摘要（讀：https://wsava.org/wp-content/uploads/2024/09/2022-WSAVA-guidelines-for-the-recognition_final.pdf（WSAVA 官方法文全譯本，Wiley 原文被擋）；https://wsava.org/wp-content/uploads/2024/08/Castration-and-OVH-cats.pdf）",
     "cited_by": [],
     "doi": "10.1111/jsap.13566",
-    "verified_at": "2026-10-17"
+    "verified_at": "2026-10-19"
   },
   "WSAVA-PROFESSIONAL-WELLNESS-GUIDELIN-2022": {
     "title": "WSAVA professional wellness guidelines",
-    "title_zh": "",
+    "title_zh": "WSAVA 獸醫專業人員身心健康指引",
     "authors": "Paton M, et al.",
     "source": "WSAVA",
     "journal": "Journal of Small Animal Practice 2024;65(3):153-175",
@@ -2156,22 +2101,22 @@
     "type": "guideline",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "",
+    "abstract_zh": "世界小動物獸醫協會（WSAVA）專業健康委員會 2024 年在 Journal of Small Animal Practice 發表的指引，對象是獸醫團隊本身，與貓的照護沒有直接關係。WSAVA 的重點版指出，全球獸醫常見的壓力來源是客戶互動、同事關係、組織管理、財務、時間與工作量（Introduction）；心理健康是從健康、反應、受傷到生病的連續光譜，受遺傳、生理、心理與環境影響（Aspects of a person）；工作自主性、角色清楚、公平待遇與安全感也有影響（The environment）。長期壓力可能造成憂鬱、焦慮、倦怠、同情疲勞與道德困擾（Stressors）。指引建議從學生教育、在職訓練與職場改善著手，列出 AVMA、Vetlife、Not One More Vet 等支援資源，狀況沒改善時要找專業協助（Solutions、Top tips）。",
     "keywords": [
       "WSAVA"
     ],
     "disease_tags": [],
     "status": "needs_review",
     "url_verified": true,
-    "notes": "auto-crawled from wsava.org\n2026-10-17 改指向 WSAVA 頁面摺疊裡的原始文件：改指向 JSAP 全文；pdf_url 是 WSAVA 的重點圖表。摘要還沒寫。",
+    "notes": "auto-crawled from wsava.org\n2026-10-17 改指向 WSAVA 頁面摺疊裡的原始文件：改指向 JSAP 全文；pdf_url 是 WSAVA 的重點圖表。摘要還沒寫。；2026-10-19 讀原文補中文摘要（讀：https://wsava.org/wp-content/uploads/2025/05/Professional_Wellness_Guidelines-FINAL.pdf（WSAVA 重點版；JSAP 全文被擋，PubMed 無摘要））；key 名稱寫 2022，實際刊登是 2024（JSAP 2024;65(3):153-175）；year 欄已是 2024",
     "cited_by": [],
     "doi": "10.1111/jsap.13689",
     "pdf_url": "https://wsava.org/wp-content/uploads/2025/05/Professional_Wellness_Guidelines-FINAL.pdf",
-    "verified_at": "2026-10-17"
+    "verified_at": "2026-10-19"
   },
   "WSAVA-REPRODUCTION-CONTROL-GUIDELINE-2022": {
     "title": "WSAVA guidelines for the control of reproduction in dogs and cats",
-    "title_zh": "",
+    "title_zh": "WSAVA 犬貓繁殖控制指引",
     "authors": "Romagnoli S, et al.",
     "source": "WSAVA",
     "journal": "Journal of Small Animal Practice 2024;65(7):424-559",
@@ -2180,17 +2125,17 @@
     "type": "guideline",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "",
+    "abstract_zh": "世界小動物獸醫協會（WSAVA）繁殖控制委員會 2024 年在 Journal of Small Animal Practice 發表的犬貓繁殖控制指引。母貓結紮可預防卵巢囊腫、子宮蓄膿與生殖道腫瘤；一項研究中母貓 13 歲前子宮蓄膿發生率 2.2%、致死率 5.9%。貓乳腺腫瘤八成以上是惡性，6 個月大前結紮可降低 91%，8 個月後才結紮的預防效果不明顯。結紮可減少貓之間的攻擊、消除持續發情，尿液標記不一定改善（Health benefits）。壞處是肥胖與糖尿病風險上升、公貓尤其明顯，可靠運動與低脂飲食預防（Health detriments）。考量貓繁殖力高、性成熟早，指引建議健康且打過疫苗的貓在 3 到 4 個月大結紮（Paediatric gonadectomy）。非手術方法有 deslorelin 植入劑、低劑量 megestrol 與褪黑激素，黃體素類藥物高劑量長期使用有乳腺腫瘤等副作用（Non-surgical sterilisation）。",
     "keywords": [
       "WSAVA"
     ],
     "disease_tags": [],
     "status": "needs_review",
     "url_verified": true,
-    "notes": "auto-crawled from wsava.org\n2026-10-17 改指向 WSAVA 頁面摺疊裡的原始文件：改指向 2024 年 JSAP 全文 PDF；摘要版 https://wsava.org/wp-content/uploads/2024/06/Executive-Summary.pdf。摘要還沒寫。",
+    "notes": "auto-crawled from wsava.org\n2026-10-17 改指向 WSAVA 頁面摺疊裡的原始文件：改指向 2024 年 JSAP 全文 PDF；摘要版 https://wsava.org/wp-content/uploads/2024/06/Executive-Summary.pdf。摘要還沒寫。；2026-10-19 讀原文補中文摘要（讀：https://wsava.org/wp-content/uploads/2024/05/J-of-Small-Animal-Practice-2024-Romagnoli-WSAVA-guidelines-for-the-control-of-reproduction-in-dogs-and-cats.pdf）；key 名稱寫 2022，實際刊登是 2024（JSAP 2024;65(7):424-559，2024-05-28 線上）；year 欄已是 2024。PubMed 記載 2025 年有兩則勘誤（doi 10.1111/jsap.13839、10.1111/jsap.13853）",
     "cited_by": [],
     "doi": "10.1111/jsap.13724",
-    "verified_at": "2026-10-17"
+    "verified_at": "2026-10-19"
   },
   "ASPCA-CAT-PLANT-LIST-2024": {
     "title": "Cat Plant List",
@@ -2673,7 +2618,8 @@
     "notes": "年份經 WebFetch 立法院頁逐字核對為2017（民106），非文章原寫的2022（renting 驗證，2026-06-10）。",
     "cited_by": [
       "cat-adoption-guide-taiwan",
-      "cat-laws-taiwan"
+      "cat-laws-taiwan",
+      "renting-with-cats-taiwan"
     ]
   },
   "MOA-CAT-REGISTRATION-2024": {
@@ -2928,37 +2874,6 @@
     "cited_by": [
       "barf-raw-food-taiwan"
     ]
-  },
-  "SCOBIE-2026-SDMA-SR": {
-    "title": "Diagnostic accuracy of symmetric dimethylarginine for chronic kidney disease in cats and dogs: A systematic review",
-    "title_zh": "SDMA 診斷犬貓慢性腎病的準確度：系統性回顧",
-    "authors": "Scobie C, Dean R, Stavisky J, Plüddemann A",
-    "source": "Veterinary Record",
-    "journal": "Veterinary Record",
-    "url": "https://bvajournals.onlinelibrary.wiley.com/doi/10.1002/vetr.70216",
-    "year": 2026,
-    "type": "research_paper",
-    "language": "en",
-    "open_access": false,
-    "abstract_zh": "納入 11 篇研究（貓 5 篇、481 隻；狗 6 篇、460 隻）。多數研究有高偏差風險與適用性疑慮，各研究的敏感度與特異度差異很大，無法做統合分析。作者認為 SDMA 診斷犬貓慢性腎病的準確度仍有很大的不確定性。",
-    "keywords": [
-      "SDMA",
-      "CKD",
-      "腎病",
-      "診斷準確度",
-      "系統性回顧"
-    ],
-    "disease_tags": [
-      "ckd"
-    ],
-    "status": "pending_review",
-    "url_verified": true,
-    "notes": "2026-10-12 加入。摘要內容來自搜尋結果；Wiley 原文頁回 403、Ovid 要付費，未逐字核對，核准前請打開原文確認。同年 iCatCare CKD 共識指引仍把 SDMA 列在 IRIS 分期。；2026-10-19 出版社網站擋自動抓取，改用 Crossref 核對 DOI 存在、標題與期刊相符",
-    "cited_by": [
-      "cat-ckd-complete-guide",
-      "cat-life-stages-care-taiwan"
-    ],
-    "verified_at": "2026-10-19"
   },
   "AAFCO-PFLM": {
     "title": "Introducing the New Model Pet Food and Specialty Pet Food Regulations (Pet Food Label Modernization)",
@@ -4859,34 +4774,6 @@
     "url_verified": true,
     "verified_at": "2026-10-17",
     "notes": "2026-10-17 讀原文核對（查詢日期 2026-10-17）。",
-    "cited_by": [
-      "renting-with-cats-taiwan"
-    ]
-  },
-  "LY-PET-CONDO-2017": {
-    "title": "公寓大廈不得禁止飼養寵物議題之研析",
-    "title_zh": "公寓大廈不得禁止飼養寵物議題之研析",
-    "authors": "立法院法制局（陳宏明）",
-    "source": "立法院",
-    "url": "https://www.ly.gov.tw/Pages/Detail.aspx?nodeid=6590&pid=163942",
-    "year": 2017,
-    "type": "government",
-    "language": "zh",
-    "open_access": true,
-    "abstract_zh": "立法院法制局陳宏明 2017 年 11 月的議題研析。內政部當時的修法方向是「除其他法令另有規定外，不得禁止飼養寵物」，研析支持在不妨害公共衛生、安全與安寧的前提下，伴侶動物不應全面禁止，飼養的管理規定可以由規約訂定，例如限制數量、體型或動線，並建議內政部在公寓大廈規約範本增訂相關條款。",
-    "keywords": [
-      "租屋",
-      "法規",
-      "台灣"
-    ],
-    "disease_tags": [
-      "law",
-      "taiwan"
-    ],
-    "status": "pending_review",
-    "url_verified": true,
-    "verified_at": "2026-10-17",
-    "notes": "2026-10-17 讀原文核對（撰成日期 106 年 11 月）。查詢當時現行公寓大廈管理條例第 16 條第 4 項仍允許規約禁止飼養。",
     "cited_by": [
       "renting-with-cats-taiwan"
     ]
