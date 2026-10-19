@@ -503,7 +503,8 @@
       "cat-life-stages-care-taiwan",
       "cat-litter-box-guide",
       "cat-neutering-aftercare-taiwan",
-      "cat-vaccination-wellness-taiwan"
+      "cat-vaccination-wellness-taiwan",
+      "cat-zoomies-night-activity"
     ],
     "pdf_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10812122/pdf/10.1177_1098612X211021538.pdf",
     "verified_at": "2026-10-17"
@@ -881,7 +882,8 @@
       "cat-emergency-care-taiwan",
       "cat-hyperthyroidism-senior",
       "cat-life-stages-care-taiwan",
-      "cat-vaccination-wellness-taiwan"
+      "cat-vaccination-wellness-taiwan",
+      "cat-zoomies-night-activity"
     ]
   },
   "CORNELL-HCM": {
@@ -942,9 +944,7 @@
     "status": "pending_review",
     "url_verified": true,
     "notes": "VCA 免費，獸醫撰寫｜2026-10-17 讀原文核對（小幫手指出這篇講休克與心肺復甦）；舊摘要的急診徵兆清單原文沒有，已改。｜2026-10-17 其他 8 篇與急診篇的急診徵兆清單改引 VCA-CAT-EMERGENCIES、VCA-SIGNS-ILLNESS-CATS、VCA-FALLS-CATS；只剩急診篇「急救不能取代就醫」那句引用本頁（原文：即使看起來恢復也要盡快就醫）。｜2026-10-18 讀原文補充摘要（整篇補出處時）。｜2026-10-19 條款檢查：該頁頁尾 LifeLearn 版權聲明有「The use of artificial intelligence or automated tools to rewrite, republish, adapt, or repurpose this content ... is prohibited」",
-    "cited_by": [
-      "cat-emergency-care-taiwan"
-    ],
+    "cited_by": [],
     "verified_at": "2026-10-17",
     "home_only": "VCA"
   },
@@ -1215,6 +1215,7 @@
     "notes": "auto-crawled from catvets.com/guidelines\n2026-10-17 合併重複條目 AAFP-CAT-FRIENDLY-VETERINARY-ENVIRONMENT-GUID-2020，補上期刊出處，摘要依原文改寫。\n2026-10-19 已讀本機全文 research/papers/AAFP-2022-ISFM-AAFP-CAT-FRIENDLY-VETERINARY-E-2022.pdf。作者共 8 位，authors 已補齊。利益衝突（全文核對 2026-10-19）：Taylor 任職於 Linnaeus 動物醫院集團；Dowgray 兼任 Royal Canin 資助的 Feline Healthy Ageing Clinic 博士後研究員；Rodan 擔任 Royal Canin 顧問委員。作者都曾因教材、演講或顧問工作收酬，聲明與本指引沒有直接衝突。ISFM 貓友善診所計畫由 IDEXX、Ceva、Royal Canin、Boehringer Ingelheim、Zoetis 贊助；AAFP 貓友善診所計畫由 Zoetis、Boehringer Ingelheim、Ceva、Elanco、Hill's、IDEXX、Merck、Purina Pro Plan Veterinary Diets、Royal Canin 贊助。撰寫本身沒有經費。",
     "cited_by": [
       "cat-leaving-home-taiwan",
+      "cat-pheromone-products-guide",
       "cat-vaccination-wellness-taiwan"
     ],
     "doi": "10.1177/1098612X221128763",
@@ -1417,6 +1418,7 @@
       "cat-pheromone-products-guide",
       "cat-upper-respiratory-infection",
       "cat-water-urinary-health-taiwan",
+      "cat-zoomies-night-activity",
       "male-cat-urethral-obstruction",
       "new-cat-first-week-guide",
       "should-i-adopt-cat-decision-taiwan"
@@ -2074,7 +2076,9 @@
     "status": "needs_review",
     "url_verified": true,
     "notes": "auto-crawled from wsava.org\n2026-10-17 改指向 WSAVA 頁面摺疊裡的原始文件：改指向 JSAP 全文。貓結紮的止痛流程另有 https://wsava.org/wp-content/uploads/2024/08/Castration-and-OVH-cats.pdf；各情況疼痛程度表 https://wsava.org/wp-content/uploads/2020/01/WSAVA-Global-Pain-Council-Perceived-levels-of-pain.pdf。摘要還沒寫。；2026-10-19 讀原文補中文摘要（讀：https://wsava.org/wp-content/uploads/2024/09/2022-WSAVA-guidelines-for-the-recognition_final.pdf（WSAVA 官方法文全譯本）；2026-10-19 已讀本機全文 research/papers/WSAVA-PAIN-GUIDELINES-2022.pdf（JSAP 英文版 64(4):177-254）；https://wsava.org/wp-content/uploads/2024/08/Castration-and-OVH-cats.pdf）\n利益衝突（全文核對 2026-10-19）：WSAVA 全球疼痛委員會接受 Zoetis 經由贊助 WSAVA 提供的經費（Zoetis 是 frunevetmab 的廠商），致謝寫贊助方未參與撰寫；所有作者都曾或正為多家藥廠提供顧問服務（Acknowledgements、Conflict of interest）。",
-    "cited_by": [],
+    "cited_by": [
+      "cat-zoomies-night-activity"
+    ],
     "doi": "10.1111/jsap.13566",
     "verified_at": "2026-10-19"
   },
@@ -3497,6 +3501,7 @@
     "url_verified": true,
     "verified_at": "2026-10-19",
     "cited_by": [
+      "cat-natural-behavior-taiwan",
       "cat-skin-allergies"
     ],
     "open_access": true,
@@ -3991,9 +3996,7 @@
     "disease_tags": [
       "nutrition"
     ],
-    "cited_by": [
-      "cat-food-selection-taiwan"
-    ],
+    "cited_by": [],
     "title": "Deciphering Cat Food Labels",
     "title_zh": "VCA：看懂貓飼料標示",
     "authors": "Canadian Academy of Veterinary Nutrition; Caitlin Grant, DVM, Dip ECVCN; Ryan Llera, DVM; Robin Downing, DVM",
@@ -4115,6 +4118,7 @@
       "cat-food-by-life-stage",
       "cat-food-selection-taiwan",
       "cat-obesity-weight-management",
+      "cat-pregnancy-birth-nursing-taiwan",
       "cat-treats-supplements-taiwan",
       "kitten-care-complete-taiwan"
     ],
@@ -4907,12 +4911,7 @@
     "authors": "Malcolm Weir, DVM; Tammy Hunter, DVM; Cheryl Yuill, DVM",
     "url": "https://vcahospitals.com/",
     "abstract_zh": "VCA 的貓生病徵兆說明（2024-05-08 更新）。貓沒有好好吃東西超過 24 小時，要立即就醫；食慾或喝水量的任何改變都值得注意；嘔吐要注意，特別是吐出透明泡沫或帶膽汁的液體；沒有排尿是危及生命的緊急狀況，尿量變少或在砂盆用力時要立即就醫；呼吸有問題的貓常會伸長頭和脖子，出現呼吸問題要立即就醫。\n\n■ 全文核對補充（2026-10-18）\n2026-10-18 讀原文核對，文章新用到以下內容，abstract_zh 尚未寫到，請補：生病的貓可能吃得多或少、喝得多或少；不舒服的貓理毛變差，毛凌亂、油膩、打結，過度理毛也可能有問題（Grooming）；反覆打噴嚏或咳嗽是健康問題的徵象，健康的貓耳朵不應有髒東西（Other symptoms）；慢性病的貓可能慢慢變瘦，要沿肋骨和背脊摸才發現（Weight）；砂盆尿量變多代表無法保留水分，變少代表腎臟或膀胱問題（Urination）；淺呼吸、張口呼吸、喘可能是呼吸道或肺部問題（Breathing）；生病的貓常退縮、躲起來，也有貓變黏人或易怒（Behavior）；覺得貓不對勁就盡早預約門診檢查。",
-    "cited_by": [
-      "cat-common-symptoms-taiwan",
-      "cat-emergency-care-taiwan",
-      "cat-hepatic-lipidosis",
-      "cat-obesity-weight-management"
-    ],
+    "cited_by": [],
     "notes": "2026-10-17 讀原文核對。｜2026-10-18 讀原文補充摘要（整篇補出處時）。｜2026-10-19 條款檢查：該頁頁尾 LifeLearn 版權聲明有「The use of artificial intelligence or automated tools to rewrite, republish, adapt, or repurpose this content ... is prohibited」｜2026-10-19 條款檢查：有（LifeLearn 版權聲明）｜2026-10-19 條款檢查：有",
     "home_only": "VCA"
   },
@@ -7016,7 +7015,6 @@
     "verified_at": "2026-10-18",
     "notes": "2026-10-18 讀原文核對｜2026-10-19 條款檢查：未核對（vcahospitals.com 回 429）｜2026-10-19 條款檢查：沒有（頁面全文未見 artificial intelligence 字樣）",
     "cited_by": [
-      "cat-environment-enrichment-taiwan",
       "cat-natural-behavior-taiwan"
     ],
     "home_only": "VCA"
@@ -7186,6 +7184,7 @@
       "cat-anxiety-stress-management",
       "cat-environment-enrichment-taiwan",
       "cat-natural-behavior-taiwan",
+      "cat-zoomies-night-activity",
       "kitten-care-complete-taiwan",
       "new-cat-first-week-guide"
     ],
@@ -7592,6 +7591,7 @@
       "cat-emergency-care-taiwan",
       "cat-end-of-life-care-taiwan",
       "cat-hyperthyroidism-senior",
+      "cat-neutering-aftercare-taiwan",
       "cat-upper-respiratory-infection"
     ]
   },
@@ -7617,7 +7617,8 @@
       "cat-hcm-heart-disease",
       "cat-hepatic-lipidosis",
       "cat-home-safety-taiwan",
-      "cat-ibd-intestinal-disease"
+      "cat-ibd-intestinal-disease",
+      "cat-neutering-aftercare-taiwan"
     ]
   },
   "AAHA-COLD-SAFETY": {
@@ -8327,6 +8328,7 @@
       "cat-emergency-care-taiwan",
       "cat-hepatic-lipidosis",
       "cat-ibd-intestinal-disease",
+      "cat-obesity-weight-management",
       "cat-treats-supplements-taiwan",
       "kitten-care-complete-taiwan"
     ]
@@ -9113,7 +9115,8 @@
     "verified_at": "2026-10-19",
     "notes": "2026-10-19 讀原文核對；頁面無禁止 AI 改寫條款",
     "cited_by": [
-      "cat-cognitive-dysfunction"
+      "cat-cognitive-dysfunction",
+      "cat-zoomies-night-activity"
     ]
   },
   "BLANCHARD-2025-CDS-NUTRITION": {
@@ -9643,12 +9646,13 @@
     "type": "educational",
     "language": "en",
     "open_access": true,
-    "abstract_zh": "美國獸醫學會（AVMA）給飼主的急救頁（犬貓通用）。急救不能取代獸醫診療，只能撐到送醫。受傷的寵物會痛、害怕、混亂，再溫和也可能變得難以預料甚至危險：不要抱受傷的寵物，臉遠離牠的嘴，可能咬人時戴口套，能找人幫忙就一起搬（For your safety）。骨折：輕輕讓寵物躺在平面上支撐；不確定怎麼包紮或上夾板就交給獸醫，包不好反而更糟；送醫途中把牠限制在小空間，外出籠或箱子都可以，要確保空氣夠，大型犬用板子或毯子當擔架（Fractures）。休克徵象是脈搏弱、呼吸淺、緊張、眼神呆滯，通常發生在重傷或極度驚嚇後；保持保暖、安靜，昏迷時頭和身體保持水平（Shock）。另有中毒、燒燙傷、中暑、抽搐、窒息、CPR 與急救包清單。",
+    "abstract_zh": "美國獸醫學會（AVMA）給飼主的急救頁（犬貓通用）。急救不能取代獸醫診療，只能撐到送醫。受傷的寵物會痛、害怕、混亂，再溫和也可能變得難以預料甚至危險：不要抱受傷的寵物，臉遠離牠的嘴，可能咬人時戴口套，能找人幫忙就一起搬（For your safety）。骨折：輕輕讓寵物躺在平面上支撐；不確定怎麼包紮或上夾板就交給獸醫，包不好反而更糟；送醫途中把牠限制在小空間，外出籠或箱子都可以，要確保空氣夠，大型犬用板子或毯子當擔架（Fractures）。休克徵象是脈搏弱、呼吸淺、緊張、眼神呆滯，通常發生在重傷或極度驚嚇後；保持保暖、安靜，昏迷時頭和身體保持水平（Shock）。另有中毒、燒燙傷、中暑、抽搐、窒息、CPR 與急救包清單。\n\n■ 補充（2026-10-20）\n外傷出血：用乾淨的布或毛巾直接在出血處用力壓，至少壓滿三分鐘再看有沒有止住；血滲過毛巾時不要拿掉，在上面再疊一層，以免弄掉已經形成的血塊（External wounds）。內出血的徵象有鼻子、嘴巴或肛門出血、咳血、血尿、牙齦蒼白、虛脫、脈搏弱而快，要讓寵物保暖、保持安靜（Internal bleeding）。窒息的寵物呼吸困難、一直用腳撥嘴巴、呼吸或咳嗽時有噎到的聲音，嘴唇或舌頭可能發青；在不冒受傷風險的前提下打開嘴巴看，看到異物就用手指輕輕取出，小心別往喉嚨裡推（If your pet is choking）。",
     "status": "pending_review",
     "url_verified": true,
     "verified_at": "2026-10-19",
     "notes": "2026-10-19 讀原文核對（AVMA 官網擋自動抓取，讀 Wayback 2026-01-15 存檔）。AVMA 使用條款：限非商業個人使用，未經書面同意不得翻譯、改作；沒有禁止深層連結。本站只轉述事實、不翻譯原文。沒寫脊椎受傷用平板、也沒寫不要給食物或水。",
     "cited_by": [
+      "cat-emergency-care-taiwan",
       "cat-home-safety-taiwan"
     ]
   },
@@ -9668,5 +9672,311 @@
     "verified_at": "2026-10-19",
     "notes": "DOI 10.1371/journal.pone.0342540，PMID 41666124；以 E-utilities efetch（db=pmc, id=12890148）讀全文。CC BY 4.0。尚未在文章引用，等加入 citations.json 後再補",
     "cited_by": []
+  },
+  "GUILLON-2026-GROOMING-PSYCHOGENIC-ALOPECIA": {
+    "title": "Exploring Normal to Abnormal Variations of Grooming Behaviours in Cats",
+    "title_zh": "貓理毛行為從正常到異常的變化",
+    "authors": "Guillon M, Naudin L, Cochet-Faivre N, Titeux E, Gilbert C",
+    "source": "PubMed (open access)",
+    "journal": "Veterinary Dermatology 2026;37(5):865-875（doi:10.1111/vde.70109）",
+    "year": 2026,
+    "pmid": "42504124",
+    "pmcid": "PMC13569197",
+    "doi": "10.1111/vde.70109",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/42504124/",
+    "type": "research",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "法國阿爾福國立獸醫學校的研究，請飼主拍下貓理毛的影片，比較短毛、長毛、無毛的健康貓和心因性掉毛的貓怎麼理毛。理毛是由好幾段短動作串起來的，健康的貓一次會整理好幾個部位；心因性掉毛的貓每次整理的部位比較少，咬毛的時間明顯比健康短毛貓長，作者認為心因性掉毛屬於重複出現的異常行為（Results、Discussion）。前言整理過去的文獻：貓自己舔到掉毛，最常見的原因是過敏這類會癢的皮膚病，外觀可能和心因性掉毛很像；多數學者要查過並排除身體原因後才診斷心因性掉毛，也有學者認為不必只當排除診斷；有些學者把心因性掉毛描述為範圍清楚、底下皮膚看起來健康的掉毛（Introduction）。收案條件是掉毛從肚子開始，所以心因性掉毛的貓全部在肚子掉毛，多數也在後腿內側；另一篇研究是肚子 75%、至少一肢 50%（Results、Discussion）。樣本少，影片由飼主有空時拍，沒有夜間與整天的紀錄（Discussion 限制段）。",
+    "keywords": [
+      "心因性掉毛",
+      "過度理毛",
+      "理毛行為"
+    ],
+    "disease_tags": [
+      "behavior",
+      "dermatology"
+    ],
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-20",
+    "notes": "2026-10-19 替代 VCA 引用時新增；授權 CC BY-NC 4.0（Wiley 開放取用，非商業可用、需標示出處），沒有禁止 AI 改寫或深層連結的條款。全文經 E-utilities efetch 讀 PMC13569197。摘要寫影片分析 7 隻心因性掉毛貓，結果段的品種與比例看起來是 9 隻（78% 在後腿內側），文章不寫隻數與比例。",
+    "cited_by": [
+      "cat-environment-enrichment-taiwan",
+      "cat-natural-behavior-taiwan"
+    ]
+  },
+  "GOLLNICK-2023-GI-FOREIGN-BODIES": {
+    "title": "Retrospective evaluation of surgical treatment of linear and discrete gastrointestinal foreign bodies in cats: 2009-2021",
+    "title_zh": "貓腸胃道線狀與塊狀異物手術治療的回溯研究（2009 到 2021 年）",
+    "authors": "Gollnick HR, Schmiedt CW, Wallace ML, Sutherland BJ, Grimes JA",
+    "source": "PubMed (open access)",
+    "journal": "Journal of Feline Medicine and Surgery 2023;25(6):1098612X231178140（doi:10.1177/1098612X231178140）",
+    "year": 2023,
+    "pmid": "37350262",
+    "pmcid": "PMC10811983",
+    "doi": "10.1177/1098612X231178140",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10811983/",
+    "type": "research",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "美國喬治亞大學教學醫院回顧 2009 到 2021 年因腸胃道異物開刀的 56 隻貓，18 隻是線狀異物、38 隻是塊狀異物。沒有貓在術後發生敗血性腹膜炎，全部存活；線狀異物的貓手術時間較長，術後傷口感染也比較多（Results）。線狀異物最常卡住的地方是胃的出口（幽門），其次是空腸，卡在舌頭底下的只有 3 隻；作者提醒舌下看不到線，也不能排除線狀異物（Results、Discussion）。結果段寫幽門 56%、討論段寫 44%，前後不一致，引用時不寫比例。",
+    "keywords": [
+      "線狀異物",
+      "腸胃道異物",
+      "手術"
+    ],
+    "disease_tags": [
+      "emergency",
+      "gastrointestinal"
+    ],
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-20",
+    "notes": "2026-10-19 替代 VCA 引用時新增；授權 CC BY-NC 4.0（SAGE／JFMS，非商業可用、需標示出處），沒有禁止 AI 改寫或深層連結的條款。全文經 E-utilities efetch 讀 PMC10811983。",
+    "cited_by": [
+      "cat-home-safety-taiwan"
+    ]
+  },
+  "MEOMARTINO-2026-GI-FB-IMAGING": {
+    "title": "Imaging of gastrointestinal foreign body obstructions in dogs and cats",
+    "title_zh": "犬貓腸胃道異物阻塞的影像診斷",
+    "authors": "Meomartino L, Costanza D, Matarazzo M, Damiano N, Del Treste A, Sangiuliano C, Greco A",
+    "source": "PubMed (open access)",
+    "journal": "European Journal of Radiology Open 2026;16:100753（doi:10.1016/j.ejro.2026.100753）",
+    "year": 2026,
+    "pmid": "42088454",
+    "pmcid": "PMC13137067",
+    "doi": "10.1016/j.ejro.2026.100753",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13137067/",
+    "type": "research",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "義大利拿坡里大學團隊比較 X 光和超音波診斷犬貓腸胃道異物阻塞的表現，確診的有 110 隻狗、29 隻貓（Results）。貓的超音波大多看得到異物本身；線狀異物在超音波上會看到腸子被拉得一節一節皺起來，像手風琴，有時還有很短的套疊（Results、Discussion）。線狀異物常只造成部分阻塞，但腸壁壞死和穿孔的風險較高；初期症狀不明顯，診斷容易延誤，拖久了可能造成腸穿孔和腹膜炎（Introduction、Discussion）。",
+    "keywords": [
+      "線狀異物",
+      "腸阻塞",
+      "超音波"
+    ],
+    "disease_tags": [
+      "emergency",
+      "gastrointestinal"
+    ],
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-20",
+    "notes": "2026-10-19 替代 VCA 引用時新增；授權 CC BY-NC-ND 4.0（非商業可用、需標示出處，不得發布改作版本），負責人已同意使用，本站只用自己的話轉述事實、不翻譯原文段落。Elsevier 開放期刊，沒有禁止深層連結。全文經 E-utilities efetch 讀 PMC13137067。",
+    "cited_by": [
+      "cat-home-safety-taiwan"
+    ]
+  },
+  "WHITE-2018-CHERRY-EYE-SURVEY": {
+    "title": "Variation in the Reported Management of Canine Prolapsed Nictitans Gland and Feline Herpetic Keratitis",
+    "title_zh": "英國獸醫處理狗櫻桃眼與貓疱疹病毒角膜炎方式的差異",
+    "authors": "White CN, Jones G, Baker S, Dean RS, Brennan ML",
+    "source": "PubMed (open access)",
+    "journal": "Veterinary Sciences 2018;5(2):54（doi:10.3390/vetsci5020054）",
+    "year": 2018,
+    "pmid": "29865183",
+    "pmcid": "PMC6024657",
+    "doi": "10.3390/vetsci5020054",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6024657/",
+    "type": "research",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "英國用病例情境問卷問一般獸醫和受過眼科進修的獸醫，怎麼處理狗的第三眼瞼腺脫出（櫻桃眼）和貓的疱疹病毒角膜炎。前言與討論整理文獻：這個腺體會製造淚液，而且有研究發現狗切除後乾眼的風險較高，所以現在不建議切除（Introduction、Discussion）。96.2% 的受訪獸醫建議手術把腺體放回原位，最常用口袋縫合法；第一次手術失敗時，一般獸醫較常改成切除，眼科進修過的獸醫較常選加上骨膜固定的術式（Abstract、Results）。櫻桃眼的部分只談狗。",
+    "keywords": [
+      "櫻桃眼",
+      "第三眼瞼腺脫出",
+      "乾眼"
+    ],
+    "disease_tags": [
+      "ophthalmology"
+    ],
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-20",
+    "notes": "2026-10-19 替代 VCA 引用時新增；授權 CC BY 4.0（MDPI，不是 Frontiers），沒有禁止 AI 改寫或深層連結。全文經 E-utilities efetch 讀 PMC6024657。櫻桃眼證據來自狗，引用時要寫明。",
+    "cited_by": [
+      "cat-eye-ear-problems-taiwan"
+    ]
+  },
+  "FULMER-2022-QOL-TOOLS": {
+    "title": "Quality of Life Measurement in Dogs and Cats: A Scoping Review of Generic Tools",
+    "title_zh": "犬貓生活品質量表的範疇回顧（通用型量表）",
+    "authors": "Fulmer AE, Laven LJ, Hill KE",
+    "source": "PubMed (open access)",
+    "journal": "Animals (Basel) 2022;12(3):400（doi:10.3390/ani12030400）",
+    "year": 2022,
+    "pmid": "35158723",
+    "pmcid": "PMC8833627",
+    "doi": "10.3390/ani12030400",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8833627/",
+    "type": "review",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "紐西蘭梅西大學團隊回顧已發表、不限特定疾病的犬貓生活品質量表，共九種，比較設計目的、題目形式和統計驗證的程度。Villalobos 2011 年的 HHHHHMM 量表犬貓都適用，主要是協助飼主和獸醫做安寧照護與臨終的決定；七個面向是疼痛、食慾、水分、清潔、心情、活動力、好日子是否比壞日子多，各用 10 分制評分，總分超過 35 分視為生活品質可以接受（Table 1、Discussion）。這份量表和另一份診間討論用的量表幾乎沒有統計驗證，只有獸醫參與擬題的內容效度（Discussion）。",
+    "keywords": [
+      "生活品質",
+      "量表",
+      "安寧照護"
+    ],
+    "disease_tags": [
+      "end-of-life"
+    ],
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-20",
+    "notes": "2026-10-19 替代 VCA 引用時新增；授權 CC BY 4.0（MDPI，不是 Frontiers），沒有禁止 AI 改寫或深層連結。全文經 E-utilities efetch 讀 PMC8833627；PMID 35158723 由全文 XML 查得。",
+    "cited_by": [
+      "cat-end-of-life-care-taiwan"
+    ]
+  },
+  "LENOX-2013-OMEGA3-ADVERSE": {
+    "title": "Potential adverse effects of omega-3 fatty acids in dogs and cats",
+    "title_zh": "犬貓補充 omega-3 脂肪酸可能的副作用（回顧）",
+    "authors": "Lenox CE, Bauer JE",
+    "source": "Journal of Veterinary Internal Medicine",
+    "journal": "Journal of Veterinary Internal Medicine 27(2):217-226",
+    "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/jvim.12033",
+    "pdf_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/jvim.12033",
+    "doi": "10.1111/jvim.12033",
+    "pmid": "23323770",
+    "year": 2013,
+    "type": "review",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "美國獸醫內科醫學會期刊的回顧，整理犬貓補充 omega-3（特別是魚油的 EPA、DHA）可能的副作用。魚油常被建議用於腫瘤、皮膚病、高血脂、心血管、腎臟、腸胃與骨關節疾病，主因是抗發炎作用。可能的問題有：血小板功能改變，一項貓研究出血時間變長、血小板凝集下降，另一項很高劑量的貓研究沒有影響；血小板本來就低的病患，輕微的影響可能變得有意義。腸胃副作用（嘔吐、拉肚子）在臨床很常見且與劑量有關，可能要減量或調整飲食；高脂飲食或高劑量下胰臟炎是理論上的擔心，但沒有魚油造成犬貓或人胰臟炎的報告。傷口癒合變慢在大鼠與狗看到，貓的口炎研究沒有影響，作者建議手術前停掉高劑量。魚油容易氧化，產品應含維生素 E 等抗氧化劑，可以問廠商。長期吃魚類食品或魚油可能有汞暴露，貓的汞中毒徵兆包括厭食、走路不穩、失明、抽搐。油的熱量可能造成增重。免疫功能可能被抑制。貓的資料顯示 omega-3 似乎不會造成高血糖，反而可能改善胰島素敏感性，但打胰島素的糖尿病患者要小心。可能和影響凝血的藥物交互作用（人的阿斯匹靈，狗的 carprofen、clopidogrel 是推論），貓狗沒有臨床報告。NRC 有訂狗的安全上限，貓的資料不足以訂上限。作者聲明無利益衝突。",
+    "status": "pending_review",
+    "url_verified": false,
+    "verified_at": "2026-10-20",
+    "notes": "2026-10-19 替代 VCA 引用時新增；授權：Wiley 免費閱讀（bronze OA），沒有 CC 授權，沒看到禁止 AI 改寫或深層連結的條款，Wiley 一般條款限制未經授權的文字探勘，只轉述事實。Wiley 擋自動抓取，2026-10-20 讀的是 Wayback 2024-01-04 存檔全文，沒有直接讀到出版社頁面，所以 url_verified 設 false；建議負責人用瀏覽器下載 PDF 留存。；利益衝突：作者聲明無利益衝突。",
+    "cited_by": [
+      "cat-treats-supplements-taiwan"
+    ]
+  },
+  "BAUER-2011-FISH-OIL": {
+    "title": "Therapeutic use of fish oils in companion animals",
+    "title_zh": "魚油在犬貓的治療用途（回顧）",
+    "authors": "Bauer JE",
+    "source": "JAVMA",
+    "journal": "Journal of the American Veterinary Medical Association 239(11):1441-1451",
+    "url": "https://avmajournals.avma.org/view/journals/javma/239/11/javma.239.11.1441.xml",
+    "pdf_url": "https://avmajournals.avma.org/downloadpdf/journals/javma/239/11/javma.239.11.1441.pdf",
+    "doi": "10.2460/javma.239.11.1441",
+    "pmid": "22087720",
+    "year": 2011,
+    "type": "review",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "德州農工大學獸醫營養專科 Bauer 在 JAVMA 的回顧，整理魚油（EPA、DHA）在犬貓的治療用途與建議劑量（以代謝體重計，並對照 NRC 安全上限）。狗的研究比較多，涵蓋異位性皮膚炎、腎病、心血管、高血脂、骨關節炎，IBD、癌症、認知與行為是新興領域。貓：自己轉換植物來源 omega-3 的能力低；有些開放標示研究把魚油用在粟粒性皮膚炎、異位性皮膚炎、食物過敏、嗜酸性肉芽腫等皮膚病，但多半混用其他脂肪酸，結論有限；腎病、退化性關節病、乳腺腫瘤、肥胖有初步資料但還沒定論。貓長期吃 omega-3 的安全性尚未確定，NRC 也沒有訂貓的安全上限；一項高劑量研究血小板功能沒有變化，另一項研究看到血小板活化與凝集下降、出血時間變長，也有研究看到部分免疫指標下降。作者建議貓每天超過每公斤代謝體重 75 毫克 EPA 加 DHA 時要謹慎，並在獸醫監督下使用。",
+    "status": "pending_review",
+    "url_verified": false,
+    "verified_at": "2026-10-20",
+    "notes": "2026-10-19 替代 VCA 引用時新增；授權：AVMA 期刊，頁面標示 Free access，沒看到禁止 AI 改寫或深層連結的條款；AVMA 官網條款限非商業、不得翻譯改作，期刊頁是否適用沒查到，只轉述事實。AVMA 網站擋自動抓取，2026-10-20 讀的是 Wayback 2026-09-20 存檔全文，沒有直接讀到期刊頁，所以 url_verified 設 false。；利益衝突：未看到聲明。",
+    "cited_by": [
+      "cat-treats-supplements-taiwan"
+    ]
+  },
+  "LOPEZMARTI-2025-BIOTICS-CATS": {
+    "title": "Efficacy of probiotic, prebiotic, synbiotic and postbiotic supplementation on gastrointestinal health in cats: systematic review and meta-analysis",
+    "title_zh": "益生菌、益生元、合生元與後生元對貓腸胃健康的效果：系統性回顧與統合分析",
+    "authors": "López Martí Á, Montero Palma C, López Martí H, Ranchal Sánchez A",
+    "source": "Journal of Small Animal Practice",
+    "journal": "Journal of Small Animal Practice 66:219-",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12000713/",
+    "doi": "10.1111/jsap.13822",
+    "pmid": "39800337",
+    "pmcid": "PMC12000713",
+    "year": 2025,
+    "type": "systematic_review",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "西班牙團隊依預先登錄的計畫書做的系統性回顧與統合分析，整理到 2024 年 8 月的貓試驗，問益生菌、益生元、合生元、後生元能不能治療或預防腸胃病、減少抗生素引起的腸胃症狀。收錄 20 篇報告，多數是健康貓，生病的貓只有 3 篇、吃抗生素的貓 4 篇，每組常只有 4 到 6 隻。證據不足以有把握判斷效果：7 篇益生菌試驗中有 5 篇糞便狀況改善；吃抗生素的貓補充合生元，減少嘔吐的效果沒有臨床意義，證據確定性很低。收容所貓與幼貓的兩項研究看到拉肚子的比例下降。除了高劑量酵母細胞壁造成腸道充血病灶，沒有其他副作用報告；有些試驗糞便變差，可能和果寡糖劑量偏高有關。體重與食慾在各組維持穩定。作者認為在推薦使用前還需要更多研究，特別是高風險族群與生病的貓。作者聲明無利益衝突；收錄的試驗有 7 篇由寵物營養公司出資。",
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-20",
+    "notes": "2026-10-19 替代 VCA 引用時新增；授權：CC BY-NC-ND 4.0（非商業、不得改作；本站非商業，只轉述事實、不翻譯原文）。Wiley 期刊，不是 Frontiers；收錄的 Gookin 2022 刊在 Frontiers in Veterinary Science，本站只引這篇回顧。2026-10-20 用 E-utilities 讀 PMC 全文（PMC12000713）核對。；利益衝突：作者聲明無利益衝突；收錄的試驗有 7 篇由寵物營養公司出資。",
+    "cited_by": [
+      "cat-treats-supplements-taiwan"
+    ]
+  },
+  "FDA-PET-FOOD-LABELS-GENERAL": {
+    "title": "Pet Food Labels - General",
+    "title_zh": "寵物食品標示總覽（FDA，存檔版）",
+    "authors": "U.S. Food and Drug Administration, Center for Veterinary Medicine",
+    "source": "FDA",
+    "journal": "FDA Animal Health Literacy（網頁，最後更新 2017-10-13）",
+    "url": "https://web.archive.org/web/20190423023009/https://www.fda.gov/AnimalVeterinary/ResourcesforYou/AnimalHealthLiteracy/ucm047113.htm",
+    "year": 2017,
+    "type": "web",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "美國 FDA 獸醫中心說明寵物食品標示怎麼看。產品名稱依 AAFCO 規則：只寫一種原料名（例如鮪魚貓食）時，扣掉加工用水至少 95% 是該原料；名稱加「晚餐」「主菜」之類字眼時只要 25%。原料表要依加進配方時的重量由多到少排列，包含原料本身的水分，所以比較不同含水量的原料會被誤導：肉約 75% 是水，肉粉去掉水和脂肪後只剩約 10% 水分；一款肉第一、玉米第二，另一款玉米第一、肉粉第二，換算乾物質後後者來自肉粉的動物性蛋白質反而比較多，但這不代表後者含比較多「肉」。保證成分是依原樣標示，罐頭含水約 75% 到 78%、乾糧 10% 到 12%，比較乾糧和罐頭要換算成乾物質。",
+    "status": "pending_review",
+    "url_verified": false,
+    "verified_at": "2026-10-20",
+    "notes": "2026-10-19 替代 VCA 引用時新增；授權：FDA 官網內容屬美國政府公有領域，沒有禁止 AI 改寫或深層連結。這頁已從 FDA 官網移除（新舊網址都 404），2026-10-20 讀的是 Wayback 2019-04-23 存檔（2017-10-13 版），原頁已不存在，所以 url_verified 設 false；正式引用時註明是存檔版。",
+    "cited_by": [
+      "cat-food-selection-taiwan"
+    ]
+  },
+  "PARKER-2022-INDOOR-OUTDOOR-RHYTHMS": {
+    "title": "Comparison of Locomotor and Feeding Rhythms between Indoor and Outdoor Cats Living in Captivity",
+    "title_zh": "圈養的室內與戶外貓活動與進食節律比較",
+    "authors": "Parker M, Serra J, Deputte BL, Ract-Madoux B, Faustin M, Challet E",
+    "source": "Animals (Basel) 2022;12(18):2440. doi:10.3390/ani12182440",
+    "journal": "Animals (Basel) 2022;12(18):2440",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9494968/",
+    "pmid": "36139300",
+    "pmcid": "PMC9494968",
+    "doi": "10.3390/ani12182440",
+    "year": 2022,
+    "type": "research_paper",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "法國史特拉斯堡大學等單位的研究，夏天用項圈上的追蹤器連續 21 天記錄兩群圈養貓的移動距離，並用感應餵食器記錄進食：一群住在約 29 平方公尺的室內房間（可用資料 15 隻，1 到 2 歲，結紮），一群住在收容所約 1145 平方公尺的戶外圍場（可用資料 8 隻），兩群都任食乾飼料（Materials and Methods）。兩群貓的活動與進食都以 24 小時為週期，一天有兩個高峰：天色將暗、將亮的時段走得較多、吃得較多，有人進來照顧時活動也增加；半夜和中午是活動低谷。作者整理既有文獻，認為晨昏性最能描述貓的活動型態（Introduction、Results、Discussion）。戶外圍場的貓每天走得較遠（約 4.3 公里，室內約 2.3 公里）、吃得較多，入夜後明顯比室內貓活躍，作者推測戶外環境保留了夜間探索行為；室內貓的節律較規律、進食次數較多，受人影響較大（Results、Discussion）。限制：樣本小，都是圈養貓且多數結紮，作者提醒結果不能直接推論到所有貓（Discussion）。",
+    "keywords": [
+      "活動節律",
+      "晨昏性",
+      "進食",
+      "室內貓"
+    ],
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-20",
+    "notes": "2026-10-20 補寫〈夜間暴衝〉時新增；授權 CC BY 4.0（MDPI），無禁止 AI 改寫或深層連結的條款。全文經 NCBI E-utilities efetch 取得（PMC9494968）。利益衝突：作者聲明無利益衝突；研究部分經費來自寵物食品公司 Royal Canin SAS，部分作者任職於該公司研究中心，實驗用乾飼料也是該公司產品（Funding、作者單位、Materials and Methods）。文章只引用活動節律，不提品牌。",
+    "cited_by": [
+      "cat-zoomies-night-activity"
+    ]
+  },
+  "DELGADO-2020-FEEDING-WELLBEING": {
+    "title": "Feeding Cats for Optimal Mental and Behavioral Well-Being",
+    "title_zh": "為貓的心理與行為健康而餵食",
+    "authors": "Delgado M, Dantas LMS",
+    "source": "Veterinary Clinics of North America: Small Animal Practice 2020;50(5):939-953. doi:10.1016/j.cvsm.2020.05.003",
+    "journal": "Vet Clin North Am Small Anim Pract 2020;50(5):939-953",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7415653/",
+    "pmid": "32653265",
+    "pmcid": "PMC7415653",
+    "doi": "10.1016/j.cvsm.2020.05.003",
+    "year": 2020,
+    "type": "review",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "加州大學戴維斯分校的 Delgado 與喬治亞大學獸醫行為醫學門診的 Dantas 所寫的回顧，談怎麼餵貓能照顧牠的行為與心理需求。貓的祖先以小鼠為主食，一隻約 30 大卡，所以演化成一天吃好幾小餐；讓貓自己選，一天大約吃 8 到 16 餐（Natural feeding behavior）。貓的狩獵大約只有三分之一成功；餓不是狩獵或玩耍的必要條件，但會增加兩者（Contrafreeloading）。益智餵食器分會滾動、裝乾飼料的，和固定式、從凹槽撈食物的，乾濕食都可用，可買可自製；難度要配合貓的能力，一開始幾乎不費力就拿得到，可先裝零食或在正餐前給；一項 19 隻家貓戴加速度計的隨機交叉試驗，用碗和用益智餵食器的每日、每週活動量沒有差別（Food puzzles）。接近餵食時間貓會更活躍、出現期待行為；固定時間餵比一叫就餵更能減少討食，但停止有求必應後可能出現消退爆發（叫得更多），搭配獎勵替代行為可能避免；過度依賴人討食的貓可用定時自動餵食器，也能讓半夜那餐不必起床（Begging；Automated feeders）。睡前與運動後餵一頓大餐可減少夜間活動，也可晚上留益智餵食器讓貓自己吃、白天用其他方式餵（Meal feeding）。",
+    "keywords": [
+      "益智餵食器",
+      "餵食行為",
+      "夜間活動",
+      "討食"
+    ],
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-20",
+    "notes": "2026-10-20 補寫〈夜間暴衝〉時新增；授權：PMC 的 NIH 作者稿（NIHMS1600463），PMC 標示可供文字探勘、依合理使用原則使用，不是 CC 授權，只轉述事實；沒有看到禁止 AI 改寫或深層連結的條款。全文經 NCBI E-utilities efetch 取得（PMC7415653）。原文沒有看到利益衝突聲明段落（作者稿的 XML 可能未收錄 Disclosure）。同作者群 Dantas 2016 JFMS〈Food puzzles for cats〉（PMC11148901）的 PMC 全文出版社不提供 XML、SAGE 擋下載，這次沒有收錄。",
+    "cited_by": [
+      "cat-zoomies-night-activity"
+    ]
   }
 }
