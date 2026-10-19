@@ -7830,6 +7830,7 @@
     "verified_at": "2026-10-19",
     "notes": "2026-10-19 讀原文核對；頁面與網站使用條款都沒有禁止 AI 改寫的條款。",
     "cited_by": [
+      "cat-eye-ear-problems-taiwan",
       "cat-home-grooming-guide"
     ],
     "home_only": "iCatCare"
@@ -9718,6 +9719,25 @@
     "notes": "2026-10-19 讀原文核對；頁面無禁止 AI 改寫條款（美國政府內容）。原文標題含品牌名，title 已拿掉品牌，文章只寫『市售生貓食』",
     "cited_by": [
       "barf-raw-food-taiwan"
+    ]
+  },
+  "AVMA-FIRST-AID": {
+    "title": "First aid tips for pet owners",
+    "title_zh": "給飼主的寵物急救須知",
+    "authors": "American Veterinary Medical Association",
+    "source": "AVMA",
+    "url": "https://www.avma.org/resources-tools/pet-owners/emergencycare/first-aid-tips-pet-owners",
+    "year": 2026,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "美國獸醫學會（AVMA）給飼主的急救頁（犬貓通用）。急救不能取代獸醫診療，只能撐到送醫。受傷的寵物會痛、害怕、混亂，再溫和也可能變得難以預料甚至危險：不要抱受傷的寵物，臉遠離牠的嘴，可能咬人時戴口套，能找人幫忙就一起搬（For your safety）。骨折：輕輕讓寵物躺在平面上支撐；不確定怎麼包紮或上夾板就交給獸醫，包不好反而更糟；送醫途中把牠限制在小空間，外出籠或箱子都可以，要確保空氣夠，大型犬用板子或毯子當擔架（Fractures）。休克徵象是脈搏弱、呼吸淺、緊張、眼神呆滯，通常發生在重傷或極度驚嚇後；保持保暖、安靜，昏迷時頭和身體保持水平（Shock）。另有中毒、燒燙傷、中暑、抽搐、窒息、CPR 與急救包清單。",
+    "status": "pending_review",
+    "url_verified": true,
+    "verified_at": "2026-10-19",
+    "notes": "2026-10-19 讀原文核對（AVMA 官網擋自動抓取，讀 Wayback 2026-01-15 存檔）。AVMA 使用條款：限非商業個人使用，未經書面同意不得翻譯、改作；沒有禁止深層連結。本站只轉述事實、不翻譯原文。沒寫脊椎受傷用平板、也沒寫不要給食物或水。",
+    "cited_by": [
+      "cat-home-safety-taiwan"
     ]
   }
 }

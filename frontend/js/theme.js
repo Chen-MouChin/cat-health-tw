@@ -9,6 +9,38 @@
 })();
 
 document.addEventListener("DOMContentLoaded", function () {
+  // 標題右邊的線條貓：viewBox 裁到圖案實際範圍，高度設成標題區塊的高度，上下緣才會和標題對齊；
+  // 最寬不超過整列的 30%，超過時縮小、垂直置中
+  var titleRows = [];
+  document.querySelectorAll(".title-row").forEach(function (row) {
+    var cat = row.querySelector(".title-cat"), text = row.firstElementChild, svg = cat && cat.querySelector("svg");
+    if (!svg || text === cat) return;
+    try {
+      var b = svg.getBBox(), p = 1.2;
+      if (!b.width || !b.height) return;
+      svg.setAttribute("viewBox", (b.x - p) + " " + (b.y - p) + " " + (b.width + 2 * p) + " " + (b.height + 2 * p));
+      titleRows.push({ row: row, cat: cat, text: text, ratio: (b.width + 2 * p) / (b.height + 2 * p) });
+    } catch (e) {}
+  });
+  function fitTitleCats() {
+    titleRows.forEach(function (t) {
+      var h = t.text.getBoundingClientRect().height, w = h * t.ratio, max = t.row.clientWidth * 0.3;
+      if (w > max) { w = max; h = w / t.ratio; }
+      t.cat.style.width = w + "px";
+      t.cat.style.height = h + "px";
+    });
+  }
+  if (titleRows.length) {
+    fitTitleCats();
+    if (window.ResizeObserver) {
+      var ro = new ResizeObserver(function () { window.requestAnimationFrame(fitTitleCats); });
+      titleRows.forEach(function (t) { ro.observe(t.text); });
+    } else {
+      window.addEventListener("resize", fitTitleCats);
+    }
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitTitleCats);
+  }
+
   var root = document.documentElement;
   var head = document.querySelector(".site-head");
   var nav = document.getElementById("mainNav");

@@ -11,11 +11,11 @@
 <meta name="description" content="全台 22 縣市動物醫院查詢，資料來自農業部與縣市政府公開資料（連江縣沒有登記的動物醫院）。可篩夜間急診與貓專科，手機可定位找附近的醫院。">
 <link rel="stylesheet" href="css/theme.css?v=20261018">
 <link rel="stylesheet" href="css/shell.css?v=20261019">
-<link rel="stylesheet" href="css/site.css?v=20261018">
+<link rel="stylesheet" href="css/site.css?v=20261019">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"CollectionPage","name":"全台動物醫院查詢：夜間急診與貓專科獸醫院 — 貓健康站","description":"全台 22 縣市動物醫院查詢，可篩夜間急診與貓專科。資料來源：農業部與縣市政府公開資料。","url":"https://chen-mouchin.github.io/cat-health-tw/vets.html","inLanguage":"zh-TW"}
 </script>
-<script src="js/theme.js?v=20261018"></script>
+<script src="js/theme.js?v=20261019"></script>
 <style>
 /* 動物醫院查詢｜共用外殼在 site.css；這裡只放查詢工具自己的版面。
    紅色不用在這頁：夜間急診只是資料標籤，判斷交給獸醫。 */
@@ -121,7 +121,10 @@
             </svg><!-- /cat-art --></template>
 <main id="main" class="vets-col">
   <div class="page-head">
-    <div class="page-art cat-art" aria-hidden="true"><!-- cat-art:9 --><svg aria-hidden="true" focusable="false" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <div class="title-row"><div>
+      <h1>動物醫院查詢</h1>
+      <p class="lede">全台 22 縣市共 <strong id="totalCount">—</strong> 家動物醫院，資料來自農業部與縣市政府公開資料。</p>
+    </div><span class="title-cat cat-art" aria-hidden="true"><!-- cat-art:9 --><svg aria-hidden="true" focusable="false" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M 19 14 C 19 9, 29 9, 29 14" />
                 <path d="M 12 14 L 36 14 C 38 14, 40 16, 41 19 L 43 37 C 43 39, 41 41, 39 41 L 9 41 C 7 41, 5 39, 5 37 L 7 19 C 8 16, 10 14, 12 14 Z" fill="var(--primary-pale)"/>
                 <rect x="11" y="18" width="26" height="19" rx="6" fill="var(--bg)" stroke="currentColor" stroke-width="2"/>
@@ -137,9 +140,7 @@
                 <line x1="39" y1="29" x2="40" y2="29" />
                 <path d="M 17 37 C 17 34.5, 20.5 34.5, 20.5 37" fill="var(--cat-white)"/>
                 <path d="M 27.5 37 C 27.5 34.5, 31 34.5, 31 37" fill="var(--cat-white)"/>
-            </svg><!-- /cat-art --></div>
-    <h1>動物醫院查詢</h1>
-    <p class="lede">全台 22 縣市共 <strong id="totalCount">—</strong> 家動物醫院，資料來自農業部與縣市政府公開資料。</p>
+            </svg><!-- /cat-art --></span></div>
     <p class="meta-line"><a href="about.html#data-quality" class="data-quality-badge" title="部分醫院的位置只精確到街道或行政區，距離會標「約」">位置資料怎麼來的</a></p>
   </div>
 

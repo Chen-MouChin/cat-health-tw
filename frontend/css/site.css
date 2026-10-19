@@ -71,17 +71,20 @@ body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.75 var
 @keyframes cat-peek { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
 @keyframes cat-tilt { 0%, 100% { transform: rotate(0deg); } 50% { transform: rotate(8deg); } }
 @keyframes cat-play { 0%, 100% { transform: translateX(0) rotate(0deg); } 50% { transform: translateX(-2px) rotate(-3deg); } }
-:is(a, .card-hover):hover .cat-art .anim-tail, .cat-art.play .anim-tail { animation: cat-tail-wag 1.5s ease-in-out infinite; }
-:is(a, .card-hover):hover .cat-art .anim-breathe, .cat-art.play .anim-breathe { animation: cat-breathe 3s ease-in-out infinite; }
-:is(a, .card-hover):hover .cat-art .anim-peek, .cat-art.play .anim-peek { animation: cat-peek 2s ease-in-out infinite; }
-:is(a, .card-hover):hover .cat-art .anim-tilt, .cat-art.play .anim-tilt { animation: cat-tilt 2s ease-in-out infinite; }
-:is(a, .card-hover):hover .cat-art .anim-play, .cat-art.play .anim-play { animation: cat-play 0.8s ease-in-out infinite; }
+:is(a, .card-hover, .title-row):hover .cat-art .anim-tail, .cat-art.play .anim-tail { animation: cat-tail-wag 1.5s ease-in-out infinite; }
+:is(a, .card-hover, .title-row):hover .cat-art .anim-breathe, .cat-art.play .anim-breathe { animation: cat-breathe 3s ease-in-out infinite; }
+:is(a, .card-hover, .title-row):hover .cat-art .anim-peek, .cat-art.play .anim-peek { animation: cat-peek 2s ease-in-out infinite; }
+:is(a, .card-hover, .title-row):hover .cat-art .anim-tilt, .cat-art.play .anim-tilt { animation: cat-tilt 2s ease-in-out infinite; }
+:is(a, .card-hover, .title-row):hover .cat-art .anim-play, .cat-art.play .anim-play { animation: cat-play 0.8s ease-in-out infinite; }
 @media (prefers-reduced-motion: reduce) { .cat-art * { animation: none !important; } }
-/* 頁首旁的插畫（獸醫院）與空結果插畫 */
-.page-art { float: right; width: 84px; margin: 0 0 8px 12px; padding: 10px; border-radius: 22px; background: var(--primary-pale); }
-.page-art svg, .empty-art svg { display: block; width: 100%; height: auto; }
+/* 空結果插畫 */
+.empty-art svg { display: block; width: 100%; height: auto; }
 .empty-art { width: 104px; margin: 0 auto 12px; padding: 12px; border-radius: 24px; background: var(--primary-pale); }
-@media (min-width: 640px) { .page-art { width: 104px; } }
+/* 標題右邊的線條貓：標題靠左，貓的上下緣和標題區塊對齊（theme.js 量標題高度、把 viewBox 裁到圖案範圍；沒有 JS 時固定 56px） */
+.title-row { display: flex; align-items: center; gap: 16px; }
+.title-row > :first-child { flex: 1; min-width: 0; }
+.title-cat { flex: none; width: 56px; }
+.title-cat svg { display: block; width: 100%; height: 100%; }
 .cover-ph-label { font-size: 14px; font-weight: 700; color: var(--primary-deep); letter-spacing: 0.08em; }
 
 

@@ -16,7 +16,7 @@
 
 ## 內容原則
 
-- **學術與衛教出處**：只引用 ISFM、iCatCare、WSAVA、IRIS、AAFP（FelineVMA）、AAHA、Cornell 貓健康中心、VCA、ASPCA、FDA、美國獸醫學會（AVMA）的期刊（JAVMA、AJVR），以及 PubMed 上可公開取得全文的論文。不引用 Frontiers 期刊。
+- **學術與衛教出處**：只引用 ISFM、iCatCare、WSAVA、IRIS、AAFP（FelineVMA）、AAHA、Cornell 貓健康中心、VCA、ASPCA、FDA、美國獸醫學會（AVMA）的期刊（JAVMA、AJVR）與官網衛教頁，以及 PubMed 上可公開取得全文的論文。不引用 Frontiers 期刊。
 - **台灣出處**：法規、統計與公告引用政府原始頁面（全國法規資料庫、農業部、衛福部、各縣市動保處）。
 - **審稿**：AI 協助起草，人工初審與核准後才上線。分工與流程寫在[編輯方針](https://chen-mouchin.github.io/cat-health-tw/editorial.html)。
 - **語氣**：醫療內容用建議的語氣，說明哪些情況建議帶去看醫生。

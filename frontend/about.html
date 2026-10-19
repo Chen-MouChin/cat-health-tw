@@ -11,17 +11,16 @@
   <meta name="description" content="貓健康站 是台灣養貓人一站式資訊平台，提供獸醫學術背書的知識庫、學術文獻索引與品種圖鑑。">
   <link rel="stylesheet" href="css/theme.css?v=20261018">
   <link rel="stylesheet" href="css/shell.css?v=20261019">
-  <link rel="stylesheet" href="css/site.css?v=20261018">
-  <script src="js/theme.js?v=20261018"></script>
+  <link rel="stylesheet" href="css/site.css?v=20261019">
+  <script src="js/theme.js?v=20261019"></script>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: var(--ui); background: var(--bg, #fafafa); color: var(--text, #333); line-height: 1.7; }
-    .about-art { width: 96px; margin: 0 auto; padding: 12px; border-radius: 24px; background: var(--primary-pale); }
-    .about-break { margin: 2.2rem 0 0.4rem; }
-    .about-art svg { display: block; width: 100%; height: auto; }
     .page-title { text-align: center; padding: 1.8rem 1rem 0.5rem; font-size: 1.6rem; color: var(--text); font-weight: 700; }
     main { max-width: 760px; margin: 1.5rem auto; padding: 0 1.5rem; }
     h2 { font-size: 1.2rem; color: var(--text, #1d1d1f); margin: 2rem 0 0.8rem; border-bottom: 1px solid var(--border, #e5e5ea); padding-bottom: 0.3rem; }
+    .about-intro { margin: 2rem 0 0.8rem; border-bottom: 1px solid var(--border, #e5e5ea); }
+    .about-intro h2 { margin: 0; border-bottom: none; }
     p { margin: 0.8rem 0; color: var(--text, #444); }
     ul { margin: 0.6rem 0 0.8rem 1.5rem; }
     li { margin: 0.3rem 0; }
@@ -133,19 +132,7 @@
   <h1 class="page-title">關於 貓健康站</h1>
 
   <main id="main">
-    <h2>本站介紹</h2>
-    <p>
-      <strong>貓健康站</strong> 是一個為台灣養貓人設計的一站式資訊平台，
-      整合幾條主線：
-    </p>
-    <ul>
-      <li><strong>學術文獻庫</strong>：<span data-stat="citations">388</span> 筆 ISFM / AAFP / IRIS / WSAVA 等權威指引索引，每筆回溯原文核實。</li>
-      <li><strong>知識庫文章</strong>：以學術來源為基礎的貓咪健康與行為文章，目前逐篇請人審核，審完再公開。</li>
-      <li><strong>品種圖鑑</strong>：<span data-stat="breeds">68</span> 種貓咪品種，含遺傳病風險警示與並排比較。資料來源：TheCatAPI + Wikipedia。</li>
-      <li><strong>動物醫院查詢</strong>：全台 22 縣市 <span data-stat="vets">2,070</span> 家動物醫院（台灣本島完整 + 澎湖、金門；連江縣無登記動物醫院），可篩夜間急診、貓專科、依縣市/區搜尋。</li>
-    </ul>
-
-  <div class="card-hover about-break"><div class="about-art cat-art" aria-hidden="true"><!-- cat-art:1 --><svg aria-hidden="true" focusable="false" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <div class="title-row about-intro"><h2>本站介紹</h2><span class="title-cat cat-art" aria-hidden="true"><!-- cat-art:1 --><svg aria-hidden="true" focusable="false" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                 <path class="anim-tail" style="transform-origin: 37px 33px;" d="M 37 33 C 43 32, 45 24, 41 19 C 39 17, 36 19, 37 23" />
                 <path d="M 9 36 C 7 32, 7 25, 10 21 L 9 12 L 16 17 C 19 16, 21 16, 24 17 L 31 12 L 29 21 C 36 21, 41 26, 41 33 C 41 36, 39 36, 35 36 Z" fill="var(--cat-white)"/>
                 <ellipse cx="13.5" cy="28.5" rx="2" ry="1.2" fill="var(--cat-blush)" stroke="none"/>
@@ -155,7 +142,17 @@
                 <path d="M 18 28.5 Q 19 30 20 28.5 Q 21 30 22 28.5" stroke-width="1.8"/>
                 <path d="M 14 36 C 14 33.5, 17.5 33.5, 17.5 36" fill="var(--cat-white)"/>
                 <path d="M 22.5 36 C 22.5 33.5, 26 33.5, 26 36" fill="var(--cat-white)"/>
-            </svg><!-- /cat-art --></div></div>
+            </svg><!-- /cat-art --></span></div>
+    <p>
+      <strong>貓健康站</strong> 是一個為台灣養貓人設計的一站式資訊平台，
+      整合幾條主線：
+    </p>
+    <ul>
+      <li><strong>學術文獻庫</strong>：<span data-stat="citations">389</span> 筆 ISFM / AAFP / IRIS / WSAVA 等權威指引索引，每筆回溯原文核實。</li>
+      <li><strong>知識庫文章</strong>：以學術來源為基礎的貓咪健康與行為文章，目前逐篇請人審核，審完再公開。</li>
+      <li><strong>品種圖鑑</strong>：<span data-stat="breeds">68</span> 種貓咪品種，含遺傳病風險警示與並排比較。資料來源：TheCatAPI + Wikipedia。</li>
+      <li><strong>動物醫院查詢</strong>：全台 22 縣市 <span data-stat="vets">2,070</span> 家動物醫院（台灣本島完整 + 澎湖、金門；連江縣無登記動物醫院），可篩夜間急診、貓專科、依縣市/區搜尋。</li>
+    </ul>
 
     <h2>資料來源與倫理原則</h2>
     <table class="source-table">
