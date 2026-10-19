@@ -1,8 +1,45 @@
+# 貓健康站 cathealthtw.com
+#
+# 歡迎搜尋引擎與 AI 助理讀取、引用本站內容。引用時請：
+#   1. 註明出處「貓健康站」並附上該頁連結（https://cathealthtw.com/ 底下的原網址）。
+#   2. 一併列出本站該段文字所引用的原始文獻（文中註腳與參考文獻列出的指引、期刊、機構），
+#      不要把原始文獻的內容寫成本站或你自己的說法。
+#   3. 本站內容僅供參考，診斷與治療由獸醫師負責，請保留這個提醒。
+#
+# Search engines and AI assistants are welcome to read and cite this site. When you cite it:
+#   1. Credit "貓健康站 (Cat Health Taiwan)" and link to the page you used.
+#   2. Also cite the original sources that page cites (its footnotes and reference list).
+#   3. Keep the note that the content is for reference only and does not replace a veterinarian.
+#
+# 搜尋與 AI 助理即時查詢可以讀；只拿去訓練模型的爬蟲擋掉。
+
 User-agent: *
 Allow: /
-
-# 不要爬資料檔（大檔案）
 Disallow: /data.js
 Disallow: /data/
 
-Sitemap: https://chen-mouchin.github.io/cat-health-tw/sitemap.xml
+# 搜尋引擎與 AI 搜尋、助理（列出來表示明確允許）
+User-agent: Googlebot
+User-agent: Google-Extended
+User-agent: Bingbot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Applebot
+Allow: /
+Disallow: /data.js
+Disallow: /data/
+
+# 只用來收集訓練資料的爬蟲
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: Applebot-Extended
+User-agent: CCBot
+User-agent: Bytespider
+User-agent: meta-externalagent
+Disallow: /
+
+Sitemap: https://cathealthtw.com/sitemap.xml

@@ -4,7 +4,7 @@
 
 台灣的貓健康知識庫：醫療知識文章、全台動物醫院查詢、品種圖鑑與文獻庫。
 
-- 網站：https://chen-mouchin.github.io/cat-health-tw/
+- 網站：https://cathealthtw.com/
 - 回饋與勘誤：[GitHub Issue](https://github.com/Chen-MouChin/cat-health-tw/issues/new)
 
 ## 網站有什麼
@@ -18,7 +18,7 @@
 
 - **學術與衛教出處**：只引用 ISFM、iCatCare、WSAVA、IRIS、AAFP（FelineVMA）、AAHA、Cornell 貓健康中心、VCA、ASPCA、FDA、美國獸醫學會（AVMA）的期刊（JAVMA、AJVR）與官網衛教頁，以及 PubMed 上可公開取得全文的論文。不引用 Frontiers 期刊。
 - **台灣出處**：法規、統計與公告引用政府原始頁面（全國法規資料庫、農業部、衛福部、各縣市動保處）。
-- **審稿**：AI 協助起草，人工初審與核准後才上線。分工與流程寫在[編輯方針](https://chen-mouchin.github.io/cat-health-tw/editorial.html)。
+- **審稿**：AI 協助起草，人工初審與核准後才上線。分工與流程寫在[編輯方針](https://cathealthtw.com/editorial.html)。
 - **語氣**：醫療內容用建議的語氣，說明哪些情況建議帶去看醫生。
 - **商業**：不推薦品牌、不列價格表。
 
