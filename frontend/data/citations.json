@@ -237,14 +237,15 @@
       "diabetes"
     ],
     "status": "pending_review",
-    "url_verified": false,
-    "notes": "JFMS 付費牆，但摘要免費。iCatCare 有對應的 owner guide 免費版 | DOI link verified (HEAD blocked by publisher, browser OK)｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
+    "url_verified": true,
+    "notes": "JFMS 付費牆，但摘要免費。iCatCare 有對應的 owner guide 免費版 | DOI link verified (HEAD blocked by publisher, browser OK)｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。；2026-10-19 出版社網站擋自動抓取，改用 Crossref 核對 DOI 存在、標題與期刊相符",
     "cited_by": [
       "cat-common-symptoms-taiwan",
       "cat-diabetes-care",
       "cat-life-stages-care-taiwan",
       "cat-water-urinary-health-taiwan"
-    ]
+    ],
+    "verified_at": "2026-10-19"
   },
   "ABCD-FIP-2019": {
     "title": "ABCD Guidelines on Feline Infectious Peritonitis",
@@ -333,11 +334,12 @@
       "hcm"
     ],
     "status": "pending_review",
-    "url_verified": false,
-    "notes": "JVIM 2018 後全 OA，全文免費 | DOI link verified (HEAD blocked by publisher, browser OK)｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
+    "url_verified": true,
+    "notes": "JVIM 2018 後全 OA，全文免費 | DOI link verified (HEAD blocked by publisher, browser OK)｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。；2026-10-19 出版社網站擋自動抓取，改用 Crossref 核對 DOI 存在、標題與期刊相符",
     "cited_by": [
       "cat-hcm-heart-disease"
-    ]
+    ],
+    "verified_at": "2026-10-19"
   },
   "AAFP-HYPERTHYROIDISM-2016": {
     "title": "2016 AAFP Guidelines for the Management of Feline Hyperthyroidism",
@@ -1169,11 +1171,12 @@
       "vet_visit"
     ],
     "status": "pending_review",
-    "url_verified": false,
-    "notes": "發表在 ISFM 的 JFMS 期刊，付費牆但摘要免費 | DOI link verified (HEAD blocked by publisher, browser OK)",
+    "url_verified": true,
+    "notes": "發表在 ISFM 的 JFMS 期刊，付費牆但摘要免費 | DOI link verified (HEAD blocked by publisher, browser OK)；2026-10-19 出版社網站擋自動抓取，改用 Crossref 核對 DOI 存在、標題與期刊相符",
     "cited_by": [
       "cat-environment-enrichment-taiwan"
-    ]
+    ],
+    "verified_at": "2026-10-19"
   },
   "AAFP-CAT-FRIENDLY-VETERINARY-INTERACTION-GUID-2020": {
     "title": "Cat Friendly Veterinary Interaction Guidelines: Approach and Handling Techniques",
@@ -1302,7 +1305,6 @@
     "cited_by": [
       "cat-adoption-guide-taiwan",
       "cat-cancer-tumors-guide",
-      "cat-cost-insurance-taiwan",
       "cat-food-by-life-stage",
       "cat-life-stages-care-taiwan",
       "cat-obesity-weight-management",
@@ -2701,7 +2703,6 @@
     "notes": "2026-09-06 依 WebSearch 結果摘要（農業部全球資訊網、動保資訊網新聞稿），尚待 WebFetch 逐字核對。｜2026-10-18 讀農業部新聞稿原文（發布日期 113-12-17）逐句核對：公告日 113-12-16、第 19 條第 1 項、114-01-01 起、1 年緩衝至 115-01-01、第 31 條第 1 項第 8 款 3,000–15,000 元、登記不需同時施打狂犬病疫苗，皆相符。",
     "cited_by": [
       "cat-adoption-guide-taiwan",
-      "cat-cost-insurance-taiwan",
       "cat-home-safety-taiwan",
       "cat-laws-taiwan",
       "cat-neutering-aftercare-taiwan",
@@ -2951,13 +2952,13 @@
       "ckd"
     ],
     "status": "pending_review",
-    "url_verified": false,
-    "notes": "2026-10-12 加入。摘要內容來自搜尋結果；Wiley 原文頁回 403、Ovid 要付費，未逐字核對，核准前請打開原文確認。同年 iCatCare CKD 共識指引仍把 SDMA 列在 IRIS 分期。",
+    "url_verified": true,
+    "notes": "2026-10-12 加入。摘要內容來自搜尋結果；Wiley 原文頁回 403、Ovid 要付費，未逐字核對，核准前請打開原文確認。同年 iCatCare CKD 共識指引仍把 SDMA 列在 IRIS 分期。；2026-10-19 出版社網站擋自動抓取，改用 Crossref 核對 DOI 存在、標題與期刊相符",
     "cited_by": [
       "cat-ckd-complete-guide",
       "cat-life-stages-care-taiwan"
     ],
-    "verified_at": null
+    "verified_at": "2026-10-19"
   },
   "AAFCO-PFLM": {
     "title": "Introducing the New Model Pet Food and Specialty Pet Food Regulations (Pet Food Label Modernization)",
@@ -3008,12 +3009,13 @@
       "骨頭"
     ],
     "status": "pending_review",
-    "url_verified": false,
-    "notes": "2026-10-14 由查證 agent 核對。出版社網站免費閱讀（Unpaywall 標 bronze OA，不在 PMC）。AVMA 網站擋爬蟲（403），全文由第三方鏡像 PDF 讀取，請負責人開原網址確認後再核准。小幫手 2026-10-13 建議加入。",
+    "url_verified": true,
+    "notes": "2026-10-14 由查證 agent 核對。出版社網站免費閱讀（Unpaywall 標 bronze OA，不在 PMC）。AVMA 網站擋爬蟲（403），全文由第三方鏡像 PDF 讀取，請負責人開原網址確認後再核准。小幫手 2026-10-13 建議加入。；2026-10-19 出版社網站擋自動抓取，改用 Crossref 核對 DOI 存在、標題與期刊相符",
     "cited_by": [
       "barf-raw-food-taiwan",
       "cat-parasite-prevention-taiwan"
-    ]
+    ],
+    "verified_at": "2026-10-19"
   },
   "MILLS-2011-SPRAYING-META": {
     "title": "A meta-analysis of studies of treatments for feline urine spraying",
@@ -4142,7 +4144,6 @@
     ],
     "cited_by": [
       "cat-common-symptoms-taiwan",
-      "cat-cost-insurance-taiwan",
       "cat-obesity-weight-management",
       "cat-treats-supplements-taiwan"
     ],
@@ -4915,9 +4916,7 @@
     "url_verified": true,
     "verified_at": "2026-10-17",
     "notes": "2026-10-17 讀產險公會網頁全文核對；另有指定獸醫院版。參考條款不是強制條款，實際以各公司保單為準。",
-    "cited_by": [
-      "cat-cost-insurance-taiwan"
-    ]
+    "cited_by": []
   },
   "BASTIEN-2019-FELD1": {
     "title": "Influence of time and phenotype on salivary Fel d1 in domestic shorthair cats",
