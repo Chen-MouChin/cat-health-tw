@@ -1,7 +1,7 @@
 window.BREEDS = {
   "_meta": {
     "count": 68,
-    "generated_at": "2026-10-19 03:11"
+    "generated_at": "2026-10-19 23:12"
   },
   "breeds": [
     {
@@ -3832,7 +3832,7 @@ window.BREEDS = {
         "lap": true
       },
       "description_en": "The Japanese Bobtail is an active, sweet, loving and highly intelligent breed. They love to be with people and play seemingly endlessly. They learn their name and respond to it. They bring toys to people and play fetch with a favorite toy for hours. Bobtails are social and are at their best when in the company of people. They take over the house and are not intimidated. If a dog is in the house, Bobtails assume Bobtails are in charge.",
-      "description_zh": "日本原生的天然短尾品種，尾巴短而彎折，像兔子尾巴。活潑愛叫、聰明，會玩接物。研究顯示短尾屬於體染色體顯性遺傳，和曼島貓（Manx）的短尾基因無關；這項研究也發現，尾巴彎折的位置和脊椎數目的差異，跟疾病或死亡沒有關聯。",
+      "description_zh": "在日本流傳數百年的天然短尾貓，一般認為最早由中國或韓國傳入，1970 年代在美國成為正式品種；尾巴短而彎折，像兔子尾巴。活潑愛叫、聰明，會玩接物。Pollard 等人 2015 年的研究指出，短尾屬於體染色體顯性遺傳，和曼島貓（Manx）的短尾基因無關；同一篇研究也發現，尾巴彎折的位置和脊椎數目的差異，跟疾病或死亡沒有關聯。",
       "description_zh_status": "translated",
       "tw_notes": {},
       "wikipedia_url_en": "https://en.wikipedia.org/wiki/Japanese_Bobtail",
