@@ -1,9 +1,9 @@
 {
   "_meta": {
     "description": "貓健康站 literature database",
-    "total": 129,
-    "pending_review": 90,
-    "approved": 23,
+    "total": 395,
+    "pending_review": 319,
+    "approved": 72,
     "rejected": 0,
     "cited_by": []
   },
@@ -531,7 +531,7 @@
     "disease_tags": [
       "dental"
     ],
-    "status": "pending_review",
+    "status": "approved",
     "url_verified": true,
     "notes": "2025 最新版，AAFP 官網免費；2026-10-09 合併重複 key AAFP-2025-FELINEVMA-FELINE-ORAL-HEALTH-AND-DE-2025（原 notes：auto-crawled from catvets.com/guidelines）｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
@@ -541,7 +541,8 @@
       "cat-life-stages-care-taiwan",
       "cat-vaccination-wellness-taiwan"
     ],
-    "pdf_url": "https://journals.sagepub.com/doi/epdf/10.1177/1098612X251398793"
+    "pdf_url": "https://journals.sagepub.com/doi/epdf/10.1177/1098612X251398793",
+    "verified_at": "2026-10-22"
   },
   "AAFP-NSAID-2024": {
     "title": "2024 ISFM and AAFP Consensus Guidelines on the Long-term Use of NSAIDs in Cats",
@@ -677,7 +678,7 @@
       "behavior",
       "flutd"
     ],
-    "status": "pending_review",
+    "status": "approved",
     "url_verified": true,
     "notes": "AAFP 官網免費 2026-10-12：catvets 改版，舊網址 404，換成新網址；PDF 為 JFMS 原文。 2026-10-14 補 PDF（小幫手 建議），PMC 版免費。｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
@@ -692,7 +693,7 @@
       "renting-with-cats-taiwan"
     ],
     "pdf_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11148882/pdf/10.1177/1098612X14539092.pdf",
-    "verified_at": "2026-10-12"
+    "verified_at": "2026-10-22"
   },
   "AAFP-HOSPICE-2023": {
     "title": "2023 AAFP/IAAHPC Feline Hospice and Palliative Care Guidelines",
@@ -789,7 +790,7 @@
     "disease_tags": [
       "diabetes"
     ],
-    "status": "pending_review",
+    "status": "approved",
     "url_verified": true,
     "notes": "Cornell 免費｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
@@ -805,7 +806,7 @@
       "cat-skin-allergies",
       "cat-water-urinary-health-taiwan"
     ],
-    "verified_at": "2026-10-17"
+    "verified_at": "2026-10-22"
   },
   "CORNELL-FLUTD": {
     "title": "Feline Lower Urinary Tract Disease — Cornell Feline Health Center",
@@ -829,7 +830,7 @@
     "disease_tags": [
       "flutd"
     ],
-    "status": "pending_review",
+    "status": "approved",
     "url_verified": true,
     "notes": "Cornell 免費｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
@@ -846,7 +847,7 @@
       "male-cat-urethral-obstruction",
       "new-cat-first-week-guide"
     ],
-    "verified_at": "2026-10-17",
+    "verified_at": "2026-10-22",
     "cited_by_add": [
       "cat-emergency-care-taiwan"
     ]
@@ -944,7 +945,9 @@
     "status": "pending_review",
     "url_verified": true,
     "notes": "VCA 免費，獸醫撰寫｜2026-10-17 讀原文核對（小幫手指出這篇講休克與心肺復甦）；舊摘要的急診徵兆清單原文沒有，已改。｜2026-10-17 其他 8 篇與急診篇的急診徵兆清單改引 VCA-CAT-EMERGENCIES、VCA-SIGNS-ILLNESS-CATS、VCA-FALLS-CATS；只剩急診篇「急救不能取代就醫」那句引用本頁（原文：即使看起來恢復也要盡快就醫）。｜2026-10-18 讀原文補充摘要（整篇補出處時）。｜2026-10-19 條款檢查：該頁頁尾 LifeLearn 版權聲明有「The use of artificial intelligence or automated tools to rewrite, republish, adapt, or repurpose this content ... is prohibited」",
-    "cited_by": [],
+    "cited_by": [
+      "cat-emergency-care-taiwan"
+    ],
     "verified_at": "2026-10-17",
     "home_only": "VCA"
   },
@@ -1339,12 +1342,13 @@
     "abstract_zh": "\n\n■ 全文核對補充（2026-10-18）\n術前禁食是為了減少胃內容物、預防胃食道逆流與吸入；傳統的禁食 6 到 12 小時沒有實證，禁食久也不保證胃是空的，壓力、餐量、食物含水量低都會延緩胃排空。雖然沒有貓的資料，獸醫可以斟酌改成麻醉前 3 到 4 小時給少量濕食；水可以喝到術前給藥為止（Preanesthetic assessment > Fasting）。全文 PMC10816483。",
     "keywords": [],
     "disease_tags": [],
-    "status": "pending_review",
+    "status": "approved",
     "url_verified": true,
     "notes": "auto-crawled from catvets.com/guidelines｜2026-10-18 讀原文全文，核對文章引用處，結果寫進摘要的「全文核對補充」。",
     "cited_by": [
       "cat-neutering-aftercare-taiwan"
-    ]
+    ],
+    "verified_at": "2026-10-22"
   },
   "AAFP-2015-PAIN-MANAGEMENT-2015": {
     "title": "2015 AAHA/AAFP Pain Management Guidelines for Dogs and Cats",
@@ -1765,7 +1769,7 @@
     "abstract_zh": "Cornell 貓健康中心的水分說明（2021 年更新）。貓每 5 磅（約 2.3 公斤）精瘦體重每天約需 4 盎司（約 120 毫升）水。濕食含水量最高可達 80%，吃乾糧的貓要靠多喝水補足。有些貓用飲水機會喝比較多，但每隻貓偏好不同；水要放在容易取得的地方，避免和其他寵物搶。可以餵濕食、在食物裡加水，或用鮪魚罐頭水、低鈉雞湯幫水調味。脫水徵象：精神差、虛弱、食慾差、牙齦乾黏，嚴重時眼睛凹陷；捏起肩膀上的皮膚回彈變慢，但老貓即使不缺水皮膚彈性也可能較差。懷疑脫水請盡快聯絡獸醫。",
     "keywords": [],
     "disease_tags": [],
-    "status": "pending_review",
+    "status": "approved",
     "url_verified": true,
     "notes": "2026-10-17 讀原文核對（last updated 2021）。",
     "cited_by": [
@@ -1775,7 +1779,7 @@
       "cat-water-urinary-health-taiwan",
       "male-cat-urethral-obstruction"
     ],
-    "verified_at": "2026-10-17"
+    "verified_at": "2026-10-22"
   },
   "CORNELL-RESPIRATORY-INFECTIONS-2024": {
     "title": "Respiratory Infections",
@@ -2073,14 +2077,14 @@
       "WSAVA"
     ],
     "disease_tags": [],
-    "status": "needs_review",
+    "status": "approved",
     "url_verified": true,
     "notes": "auto-crawled from wsava.org\n2026-10-17 改指向 WSAVA 頁面摺疊裡的原始文件：改指向 JSAP 全文。貓結紮的止痛流程另有 https://wsava.org/wp-content/uploads/2024/08/Castration-and-OVH-cats.pdf；各情況疼痛程度表 https://wsava.org/wp-content/uploads/2020/01/WSAVA-Global-Pain-Council-Perceived-levels-of-pain.pdf。摘要還沒寫。；2026-10-19 讀原文補中文摘要（讀：https://wsava.org/wp-content/uploads/2024/09/2022-WSAVA-guidelines-for-the-recognition_final.pdf（WSAVA 官方法文全譯本）；2026-10-19 已讀本機全文 research/papers/WSAVA-PAIN-GUIDELINES-2022.pdf（JSAP 英文版 64(4):177-254）；https://wsava.org/wp-content/uploads/2024/08/Castration-and-OVH-cats.pdf）\n利益衝突（全文核對 2026-10-19）：WSAVA 全球疼痛委員會接受 Zoetis 經由贊助 WSAVA 提供的經費（Zoetis 是 frunevetmab 的廠商），致謝寫贊助方未參與撰寫；所有作者都曾或正為多家藥廠提供顧問服務（Acknowledgements、Conflict of interest）。",
     "cited_by": [
       "cat-zoomies-night-activity"
     ],
     "doi": "10.1111/jsap.13566",
-    "verified_at": "2026-10-19"
+    "verified_at": "2026-10-22"
   },
   "WSAVA-PROFESSIONAL-WELLNESS-GUIDELIN-2022": {
     "title": "WSAVA professional wellness guidelines",
@@ -3955,9 +3959,9 @@
   "WSAVA-NUTRITION-CHECKLIST": {
     "journal": null,
     "open_access": true,
-    "status": "pending_review",
+    "status": "approved",
     "url_verified": true,
-    "verified_at": "2026-10-17",
+    "verified_at": "2026-10-22",
     "keywords": [
       "營養評估",
       "體態評分",
@@ -4012,9 +4016,9 @@
   "AAFCO-PFLM-TRIFOLD-2023": {
     "journal": null,
     "open_access": true,
-    "status": "pending_review",
+    "status": "approved",
     "url_verified": true,
-    "verified_at": "2026-10-17",
+    "verified_at": "2026-10-22",
     "keywords": [
       "AAFCO",
       "標示改版",
@@ -4866,9 +4870,9 @@
   "VCA-CAT-EMERGENCIES": {
     "journal": null,
     "open_access": true,
-    "status": "pending_review",
+    "status": "approved",
     "url_verified": true,
-    "verified_at": "2026-10-17",
+    "verified_at": "2026-10-22",
     "keywords": [
       "急診"
     ],
@@ -7015,6 +7019,7 @@
     "verified_at": "2026-10-18",
     "notes": "2026-10-18 讀原文核對｜2026-10-19 條款檢查：未核對（vcahospitals.com 回 429）｜2026-10-19 條款檢查：沒有（頁面全文未見 artificial intelligence 字樣）",
     "cited_by": [
+      "cat-environment-enrichment-taiwan",
       "cat-natural-behavior-taiwan"
     ],
     "home_only": "VCA"
@@ -7541,9 +7546,9 @@
     "language": "en",
     "open_access": true,
     "abstract_zh": "Cornell 貓健康中心衛教文章。除非打算讓幼貓將來繁殖，沒有充分理由不在幼年時結紮；結紮有助減少流浪與棄養貓。母貓在 3 到 6 個月大、乳腺組織發育前結紮，可大幅降低日後乳腺腫瘤風險，並排除子宮蓄膿；也可預防陰道增生、子宮脫垂與子宮卵巢的感染、囊腫與腫瘤。建議母貓在第一次發情前結紮，公貓建議 3 到 6 個月大去勢。術後一週左右盡量讓貓保持安靜。\n\n■ 全文核對補充（2026-10-19）\n結紮可預防子宮蓄膿（子宮積膿，可能致命）、陰道增生、子宮脫垂，以及子宮卵巢的感染、囊腫與腫瘤；公貓去勢可預防睪丸癌，幾乎可避免攝護腺腫大，也可能預防攝護腺癌；結紮停止分泌讓公貓遊蕩、攻擊其他貓、噴尿標記的荷爾蒙。母貓手術前至少 3 到 4 小時不吃，水可以喝，因為全身麻醉可能造成噁心嘔吐。術後一小時左右通常穩定、能走動，可能當天傍晚回家或留院一晚；回家後一週左右就近看著、盡量保持安靜，避免腹部切口形成疝氣。公貓去勢較快、較單純，在兩側睪丸上各切一個切口。阿斯匹靈、布洛芬、乙醯胺酚等成藥沒有獸醫同意不要給，對貓可能有毒。術後兩週左右，貓除了少了生殖器官外和術前一樣。結紮有助減少流浪與被棄養的貓。\n\n■ 引用補充（2026-10-19）\ncited_by 加 rehoming-cat-responsibly-taiwan（結紮時機）。",
-    "status": "pending_review",
+    "status": "approved",
     "url_verified": true,
-    "verified_at": "2026-10-19",
+    "verified_at": "2026-10-22",
     "notes": "2026-10-19 讀原文核對。頁面未標日期，年份為存取年。",
     "cited_by": [
       "cat-neutering-aftercare-taiwan",
@@ -8933,9 +8938,9 @@
     "language": "en",
     "open_access": true,
     "abstract_zh": "Cornell 貓健康中心衛教頁。幼貓與關節炎的老貓需要低邊、容易進出的砂盆；多數貓偏好無香味、顆粒細的砂；砂盆數為貓數加一。食碗水碗分開，遠離砂盆。依生命階段餵完整均衡的飼料，換食物時保留部分舊食物逐步轉換；符合 AAFCO 標準的飼料不需要補充品。從小訓練梳毛、剪指甲，長大較容易。新來的貓要盡快給獸醫檢查；家裡已有貓時先隔開，等檢查過再接觸；獸醫會檢查體內外寄生蟲。貓通常 6 個月以上結紮，也有獸醫建議更早；母貓結紮可防止懷孕，消除發情期的嚎叫與躁動，大幅降低乳腺癌風險；公貓結紮可減少攻擊、噴尿與公貓尿的強烈氣味。生病的徵兆包括食慾不振、持續嘔吐、腹瀉、鼻眼分泌物、打噴嚏、體重下降、排尿困難、呼吸困難或呼吸很快、嗜睡、快速出現或持續變大的腫塊。",
-    "status": "pending_review",
+    "status": "approved",
     "url_verified": true,
-    "verified_at": "2026-10-19",
+    "verified_at": "2026-10-22",
     "notes": "2026-10-19 讀原文核對；頁面無禁止 AI 改寫條款",
     "cited_by": [
       "cat-neutering-aftercare-taiwan",
@@ -8991,9 +8996,9 @@
     "language": "en",
     "open_access": false,
     "abstract_zh": "ISFM/AAFP 期刊（JFMS）臨床回顧，只讀摘要。提早結紮通常指 6 到 14 週大，在美國與英國收容所醫學越來越普遍，私人診所尚未普遍採用；動物福利團體視為控制貓過量繁殖的關鍵。幼貓對藥物較敏感、作用時間較長、心血管代償能力有限，是主要的麻醉考量。傳統認為 5 到 8 個月是最佳結紮年齡，但短期與長期研究都沒有發現傳統時機在行為和身體上有顯著好處；已有多種安全的麻醉與手術流程，提早結紮的併發症較少、死亡率相近。\n\n■ 全文核對補充（2026-10-19）\n提早結紮的定義是 4 個月大以前做，多半在 6 到 14 週；母貓第一次發情平均在 8 到 10 個月，少數 4 個月大就懷孕，公貓的青春期也多在 8 到 10 個月（Definition of early-age neutering）。\n時機依貓的來源而不同：家貓先打完疫苗，在 12 到 16 週結紮；收容所的幼貓在送養前做完；捉到的野貓不論年齡都做，限制是體重不到 300 公克時不容易找到睪丸（When to early neuter）。\n術後追蹤最長 11 年的研究，沒有發現身體問題，行為問題也少；提早去勢的公貓膿瘍、性行為、噴尿和對獸醫的攻擊明顯較少，公母貓的氣喘、牙齦炎、過動也較少；5.5 個月前結紮的貓，害羞和躲藏是唯一增加的行為（Reasons to early neuter）。\n常見疑慮逐項檢討：提早去勢和下泌尿道疾病沒有關聯，7 週、7 個月結紮與未結紮公貓的尿道直徑沒有差別；外生殖器會維持幼年外觀；7 週或 7 個月結紮的貓體重與體態評分都比未結紮高，但長期研究看不出結紮年齡和肥胖有關，結紮時就該提醒飼主調整飲食與活動；長骨生長板晚約 8 週閉合，不影響成年體型；結紮貓得糖尿病的機會是未結紮的 8.7 倍，但和結紮時機無關（What are the common concerns and how valid are they?）。\n短期研究沒有發現手術或麻醉風險增加，傷口感染反而較少；作者醫院 2009 年的資料（未發表）顯示，提早結紮出院後 72 小時內因併發症回診的比例不到 0.1%，和傳統年齡相當（Surgical risks）。\n幼貓麻醉要特別注意低體溫、低血糖與脫水：術前禁食最多 3 到 4 小時（8 週以下 2 到 3 小時），禁水不超過 1 小時，室溫維持 20°C 以上、縮短麻醉時間，站得起來就餵、讓牠回到同窩手足身邊（Paediatric physiology; Key surgical points）。約 1% 的幼貓有隱睪，摸不到兩顆睪丸時延到 6 個月再做（Surgical notes: early castration）。\nAAFP、AVMA、AAHA、ASPCA、ISFM 等組織都表態支持；但當時英國私人診所只有約 28% 的獸醫同意在 12 到 16 週結紮（Support for early neutering）。",
-    "status": "pending_review",
+    "status": "approved",
     "url_verified": true,
-    "verified_at": "2026-10-19",
+    "verified_at": "2026-10-22",
     "notes": "2026-10-19 以 PubMed E-utilities 讀摘要（PMID 21215944）；PMC10845413 只有 PDF，未讀全文；2026-10-19 讀負責人下載的全文 PDF 補全文核對，文章引用處都相符",
     "cited_by": [
       "cat-neutering-aftercare-taiwan",
@@ -9011,9 +9016,9 @@
     "language": "en",
     "open_access": true,
     "abstract_zh": "英國 Bristol Cats Study 的世代研究。結紮和體重增加的關聯早有研究；前言引述既有文獻，推測是荷爾蒙與代謝改變讓活動量下降、食量增加，這不是本研究的結果（Introduction）。貓最早 4 個月大就可能性成熟；英國 Cat Group 2006 年建議把家貓的標準結紮年齡從 6 個月降到 4 個月（Introduction）。青春期前結紮的貓，長大後體重與體態和 5 到 6 個月結紮的沒有差別；7 到 12 個月結紮的整體體重與體態增加風險較低。建議所有貓結紮後都給體重管理建議，監測時體態評分與體重一起看，長毛貓尤其如此：獸醫記錄的長毛貓體態分數較低、體重卻沒有差異，作者推測是厚毛讓體態被低估（Abstract、Discussion）。\n\n■ 全文核對補充（2026-10-19）\n資料來自 Bristol Cats Study：2010 到 2013 年招募 8 到 16 週大的幼貓，由獸醫在看診時記錄體態評分（5 分制）與體重，資料收到 2023 年 2 月。排除純種貓、懷孕過的貓與結紮年齡不明的貓後，分析 466 位飼主的 584 隻貓，共 2,410 筆體態評分、2,073 筆體重；結紮年齡為 4 個月以下 21%、5 個月 36%、6 個月 33%、7 到 12 個月 9%（Materials and methods、Results）。\n看診紀錄中 67% 是理想體態（3 分），30% 高於理想；48% 的貓至少一次被評為過重（4 分），9% 至少一次被評為肥胖（5 分）；平均體重 4.73 公斤（Results）。\n體重與體態隨年齡上升，約 8 到 9 歲達到高峰後下降；公貓整體較重、體態分數較高，母貓在夏、秋兩季的體重與體態較低（Results、Discussion）。\n長毛貓的體態分數較低，體重卻沒有差異，作者推測是厚毛讓評估的人低估了體態，因此建議體態評分和體重一起看（Discussion）。\n約九成的貓在 6 個月前結紮。作者提醒，7 到 12 個月才結紮的貓可能本來就因為體型較小或有健康問題才延後，結果不一定代表晚結紮有保護作用；考量族群控制等好處，作者仍支持青春期前結紮，並以飲食管理維持體重（Discussion）。\n限制：無法納入飲食、外出、多貓等生活型態資料，也無法評估福利；5 分制可能讓過重被低報（Abstract：Limitations、Discussion）。",
-    "status": "pending_review",
+    "status": "approved",
     "url_verified": true,
-    "verified_at": "2026-10-19",
+    "verified_at": "2026-10-22",
     "notes": "2026-10-19 讀原文核對；頁面無禁止 AI 改寫條款；授權為 CC BY-NC-ND 4.0，文章只摘述研究結果並標出處，未改編或轉載原文；研究經費來自 Cats Protection 與 Waltham；利益衝突：作者聲明無利益衝突；本研究沒有專案經費。Bristol Cats Study 由 Cats Protection（英國貓福利慈善團體，多數作者任職於此）與 Waltham Petcare Science Institute（Mars 寵物食品集團旗下研究所）資助。；2026-10-19 經 PMC E-utilities 讀全文補全文核對；2026-10-19 依全文更正摘要：活動量下降、食量增加的機轉出自前言引述的既有文獻，不是本研究結果；「飼主低估長毛貓體態」是討論引用 Courcier 等人的研究，改寫為本研究獸醫紀錄看到的結果與作者推論。",
     "cited_by": [
       "cat-neutering-aftercare-taiwan",
@@ -9032,9 +9037,9 @@
     "language": "en",
     "open_access": true,
     "abstract_zh": "WALTHAM 寵物營養中心的小型試驗（CC BY）。結紮是犬貓肥胖的風險因子；隨意吃到飽的貓結紮後 8 到 12 週內體重與體脂增加，可能持續到成年（Introduction 引述既有研究）。13 隻母幼貓分在 19 週或 31 週結紮，依體態評分逐週調整份量；31 週結紮的貓術後食量與體重快速上升，19 週結紮的沒有出現術後暴食；兩組多數都需要限制份量，到第 46 週全部維持理想體態；兩組活動量從 19 到 52 週都下降約 25%。\n\n■ 全文核對補充（2026-10-19）\n原本招募 14 隻、來自 14 窩的母幼貓，每組 7 隻，19 週組有 1 隻在 20 週時因和研究無關的健康原因退出，最後 13 隻（Materials and methods）。所有幼貓吃同一批市售幼貓乾糧，由受過訓練的評分小組每週看體態評分，份量依規則以 10% 為單位增減（Materials and methods）。31 週組在結紮前（24 到 32 週）體重增加變慢、食量較低，結紮後 36 到 40 週食量明顯高於 19 週組；13 隻中有 11 隻某個時期需要限制份量，19 週組有 2 隻在結紮前就要限制（Results）。依體態管理的貓平均約 3.4 公斤，和同一環境未結紮、自由吃乾糧的母貓（3.2 公斤）相近，低於 19 週結紮且自由吃的貓（4.1 公斤）（Discussion）。作者推測 26 週後才結紮、又自由吃乾糧的幼貓，可能食量驟增、在飼主察覺前就過重；早一點結紮或許有助體重管理，但也說這只是假說，要給動物醫院建議前還需要全面檢視其他研究（Discussion and conclusions）。",
-    "status": "pending_review",
+    "status": "approved",
     "url_verified": true,
-    "verified_at": "2026-10-19",
+    "verified_at": "2026-10-22",
     "notes": "2026-10-19 讀原文核對；頁面無禁止 AI 改寫條款；作者任職 WALTHAM（Mars），試驗使用單一廠牌幼貓乾糧，文章不涉及產品；利益衝突：研究由 Mars Petcare UK 出資，作者都受雇於 Mars（WALTHAM Centre for Pet Nutrition）；試驗用的幼貓乾糧是 Royal Canin Kitten（Mars 旗下品牌）（Acknowledgements、Materials and methods）。；2026-10-19 經 PMC E-utilities 讀全文補全文核對",
     "cited_by": [
       "cat-neutering-aftercare-taiwan"
@@ -9052,9 +9057,9 @@
     "language": "en",
     "open_access": true,
     "abstract_zh": "土耳其隨機分組研究（CC BY）。伊莉莎白頭套是最常用的限制頸圈，用來防止動物抓、拆繃帶、自殘手術部位與過度舔舐；頭套能有效防止自我傷害，但會限制貓理毛與抓頭（Introduction）。26 隻開腹結紮的母貓分成頭套組與術後護衣組各 13 隻，術後 6 到 96 小時兩種疼痛量表分數、追加止痛次數（17 與 16 次）、唾液皮質醇都沒有顯著差異；頭套組 13 隻有 10 隻試著拔頭套或甩頭，護衣組沒有這些行為（Results）。限制：只觀察 96 小時，在醫院病房進行。\n\n■ 全文核對補充（2026-10-19）\n26 隻母貓都是 1 到 3 歲、2 到 5 公斤、健康且個性溫和的貓，在土耳其布爾杜爾大學動物醫院做 2.5 公分的腹中線開腹結紮；術後連續 3 天皮下注射美洛昔康（meloxicam），疼痛分數達門檻就追加布托啡諾（butorphanol）（2 Materials and Methods）。\n頭套組 13 隻中 3 隻用腳想把頭套弄掉、7 隻一直甩頭，這些行為整個觀察期都持續出現；兩組都沒有過度理毛、叫或坐立不安（3.2 Discomfort Evaluation）。\n術後衣組到 96 小時疼痛分數已回到和術前沒有差異，作者認為可能代表術後衣組長期疼痛較低，但組間比較在每個時間點都沒有顯著差異（4 Discussion）。\n追加止痛的次數偏多，作者承認止痛方案可能不夠；唾液皮質醇一直低於貓的參考值，所用的檢驗套組沒有在貓驗證過（4 Discussion）。\n研究沒有比較兩種工具防止貓舔咬傷口、傷口併發症的效果，也沒有記錄體重和食量；限制還包括只觀察 96 小時、在醫院病房進行（4 Discussion）。\n經費來自布爾杜爾大學科研專案，作者聲明無利益衝突（Funding、Conflicts of Interest）。",
-    "status": "pending_review",
+    "status": "approved",
     "url_verified": true,
-    "verified_at": "2026-10-19",
+    "verified_at": "2026-10-22",
     "notes": "2026-10-19 讀原文核對；頁面無禁止 AI 改寫條款；2026-10-19 經 PMC E-utilities 讀全文補全文核對",
     "cited_by": [
       "cat-neutering-aftercare-taiwan"
@@ -9071,9 +9076,9 @@
     "language": "en",
     "open_access": false,
     "abstract_zh": "美國 2021 年 10 月針對 TNR 參與者的匿名問卷，526 人回覆、410 人完成。幾乎所有人認為剪耳代表貓已結紮；也有人認為同時代表打過狂犬病疫苗（19% 只選狂犬病、22% 兩者都選）或不親人（12%）。81% 剪左耳，92% 用目測決定剪多少、理想形狀是平剪。各地做法與意義不一，作者建議訂定標準。\n\n■ 全文核對補充（2026-10-19）\n問卷共 24 題，2021 年 10 月 4 日到 20 日透過收容所獸醫協會等 TNR 相關組織的論壇與郵件名單散發；526 份回覆排除 116 份（包含完成不到六成的 75 份），留下 410 份，來自 46 個州與領地。受訪者多在收容所（53%）和結紮診所（29%），每個單位每月剪耳中位數 50 隻（Materials and methods; Clinic demographics）。\n剪耳是在結紮手術的全身麻醉下切掉耳尖，讓人遠遠就認得出來、不必再誘捕（用望遠鏡最遠約 20 公尺）；V 形缺口不建議，容易和打架傷或凍傷混淆（Introduction）。\n只剪左耳 81%、只剪右耳 8%，只剪右耳的多在加州與奧勒岡；剪掉的長度說法不一（1 公分 36%、6 公釐 27%、耳朵四分之一 21%）；92% 靠目測、只有 5% 用模板，92% 認為理想形狀是平剪；81% 的單位至少有時由獸醫執行，也有技術員、助理甚至非醫療志工（Ear-tipping practices）。\n61% 的單位替所有剪耳貓另外刺青；遇到看起來可能已結紮的母貓，31% 仍會開腹確認（Ear-tip policies）。\n止血後仍出血的比例中位數 5%，收到負面回饋的比例中位數 1%，最常見的抱怨是剪太多；切除或止血方法和出血、抱怨都沒有顯著關聯（Complications）。\n作者認為剪耳本質上只代表「已結紮」；在 TNR 時普遍打狂犬病疫苗的地區，解讀成打過疫苗可能成立，但用來代表不親人並不可靠，因為社會化程度會變；剪耳只能在全身麻醉下做並給止痛，已結紮、只補剪耳的貓也一樣（Discussion）。\n限制：線上散發算不出回覆率，透過支持 TNR 的組織散發有選擇偏差，同一單位可能重複作答，數字多為回憶估計（Limitations）。",
-    "status": "pending_review",
+    "status": "approved",
     "url_verified": true,
-    "verified_at": "2026-10-19",
+    "verified_at": "2026-10-22",
     "notes": "2026-10-19 以 NCBI E-utilities 讀摘要（PMC10812308 只有摘要可讀）；2026-10-19 讀負責人下載的全文 PDF 補全文核對，文章引用處都相符",
     "cited_by": [
       "cat-neutering-aftercare-taiwan"
@@ -9090,9 +9095,9 @@
     "language": "zh",
     "open_access": true,
     "abstract_zh": "臺北市動物保護處行政規則，110 年 4 月 8 日修正發布、110 年 5 月 1 日生效，依寵物登記管理辦法第 12 條訂定。補助受理期間為每年 1 月 1 日起至 12 月 20 日，經費用完提前截止；補助項目與金額公告在動保處網站（第三點）。申請資格：犬貓的寵物登記飼主、戶籍設在臺北市，已為犬貓完成狂犬病預防注射且持有一年內有效證明（第四點）；年度累計申請 5 隻以上要附妥善飼養證明；同一案件不得重複申請相同性質補助。\n\n■ 全文核對補充（2026-10-19）\n臺北市動保處 115 年度家犬貓絕育補助頁（https://www.tcapo.gov.taipei/cp.aspx?n=76F07E383A77CF84，2026-10-19 讀取）列的申請條件同樣包括寵物已完成狂犬病預防注射、證明 1 年內有效；手術要在 115 年度內做，同年度 12 月 20 日前申請，或經費用完為止。要點（110 年修正）早於防檢署 114 年 7 月 1 日起室內貓可不強制施打狂犬病疫苗的措施，頁面沒有寫沒打狂犬病疫苗的室內貓怎麼處理。",
-    "status": "pending_review",
+    "status": "approved",
     "url_verified": true,
-    "verified_at": "2026-10-19",
+    "verified_at": "2026-10-22",
     "notes": "2026-10-19 讀臺北市法規查詢系統全文核對（查詢日期 2026-10-19）",
     "cited_by": [
       "cat-laws-taiwan",
@@ -9110,9 +9115,9 @@
     "language": "en",
     "open_access": true,
     "abstract_zh": "Cornell 貓健康中心衛教頁（2024 審閱）。認知功能障礙是和老化有關、會逐漸惡化的疾病，表現類似人類的阿茲海默症與老年失智；行為多半在 10 歲以上才明顯。徵兆包括空間迷失方向、離家遊蕩到陌生地方、對玩耍沒興趣、睡太多、睡醒週期改變、長時間盯著空中或牆壁、對食物和水不感興趣、在砂盆外大小便、看不出原因的大聲嚎叫（常在半夜）。關節炎疼痛讓貓動作變慢、來不及進砂盆；腎衰竭讓貓尿多、砂盆變髒而另找地方排泄；甲亢或高血壓的貓常夜間叫，高血壓也可能造成視網膜剝離與失明，引起焦慮與混亂；牙周病疼痛讓貓不太想吃飯。腦部的發炎、腫瘤、外傷或代謝病也會讓貓對周遭沒反應、繞圈、躲在角落，若磁振造影與腦脊髓液檢查找不到問題，交由動物行為專家或行為獸醫處理。排除甲亢、腎病等疾病後，獸醫可能開抗焦慮藥（例如 fluoxetine）減輕部分症狀；L-deprenyl（selegiline）可改善狗的腦功能，尚未核准用於貓。行為專家建議富含維生素 E 與抗氧化劑的飲食、避免帶新動物回家造成壓力、低邊砂盆、上下樓有困難時加斜坡，並定期健檢。",
-    "status": "pending_review",
+    "status": "approved",
     "url_verified": true,
-    "verified_at": "2026-10-19",
+    "verified_at": "2026-10-22",
     "notes": "2026-10-19 讀原文核對；頁面無禁止 AI 改寫條款",
     "cited_by": [
       "cat-cognitive-dysfunction",
@@ -9847,9 +9852,9 @@
     "language": "en",
     "open_access": true,
     "abstract_zh": "美國獸醫內科醫學會期刊的回顧，整理犬貓補充 omega-3（特別是魚油的 EPA、DHA）可能的副作用。魚油常被建議用於腫瘤、皮膚病、高血脂、心血管、腎臟、腸胃與骨關節疾病，主因是抗發炎作用。可能的問題有：血小板功能改變，一項貓研究出血時間變長、血小板凝集下降，另一項很高劑量的貓研究沒有影響；血小板本來就低的病患，輕微的影響可能變得有意義。腸胃副作用（嘔吐、拉肚子）在臨床很常見且與劑量有關，可能要減量或調整飲食；高脂飲食或高劑量下胰臟炎是理論上的擔心，但沒有魚油造成犬貓或人胰臟炎的報告。傷口癒合變慢在大鼠與狗看到，貓的口炎研究沒有影響，作者建議手術前停掉高劑量。魚油容易氧化，產品應含維生素 E 等抗氧化劑，可以問廠商。長期吃魚類食品或魚油可能有汞暴露，貓的汞中毒徵兆包括厭食、走路不穩、失明、抽搐。油的熱量可能造成增重。免疫功能可能被抑制。貓的資料顯示 omega-3 似乎不會造成高血糖，反而可能改善胰島素敏感性，但打胰島素的糖尿病患者要小心。可能和影響凝血的藥物交互作用（人的阿斯匹靈，狗的 carprofen、clopidogrel 是推論），貓狗沒有臨床報告。NRC 有訂狗的安全上限，貓的資料不足以訂上限。作者聲明無利益衝突。",
-    "status": "pending_review",
-    "url_verified": false,
-    "verified_at": "2026-10-20",
+    "status": "approved",
+    "url_verified": true,
+    "verified_at": "2026-10-22",
     "notes": "2026-10-19 替代 VCA 引用時新增；授權：Wiley 免費閱讀（bronze OA），沒有 CC 授權，沒看到禁止 AI 改寫或深層連結的條款，Wiley 一般條款限制未經授權的文字探勘，只轉述事實。Wiley 擋自動抓取，2026-10-20 讀的是 Wayback 2024-01-04 存檔全文，沒有直接讀到出版社頁面，所以 url_verified 設 false；建議負責人用瀏覽器下載 PDF 留存。；利益衝突：作者聲明無利益衝突。",
     "cited_by": [
       "cat-treats-supplements-taiwan"
@@ -9913,9 +9918,9 @@
     "language": "en",
     "open_access": true,
     "abstract_zh": "美國 FDA 獸醫中心說明寵物食品標示怎麼看。產品名稱依 AAFCO 規則：只寫一種原料名（例如鮪魚貓食）時，扣掉加工用水至少 95% 是該原料；名稱加「晚餐」「主菜」之類字眼時只要 25%。原料表要依加進配方時的重量由多到少排列，包含原料本身的水分，所以比較不同含水量的原料會被誤導：肉約 75% 是水，肉粉去掉水和脂肪後只剩約 10% 水分；一款肉第一、玉米第二，另一款玉米第一、肉粉第二，換算乾物質後後者來自肉粉的動物性蛋白質反而比較多，但這不代表後者含比較多「肉」。保證成分是依原樣標示，罐頭含水約 75% 到 78%、乾糧 10% 到 12%，比較乾糧和罐頭要換算成乾物質。",
-    "status": "pending_review",
-    "url_verified": false,
-    "verified_at": "2026-10-20",
+    "status": "approved",
+    "url_verified": true,
+    "verified_at": "2026-10-22",
     "notes": "2026-10-19 替代 VCA 引用時新增；授權：FDA 官網內容屬美國政府公有領域，沒有禁止 AI 改寫或深層連結。這頁已從 FDA 官網移除（新舊網址都 404），2026-10-20 讀的是 Wayback 2019-04-23 存檔（2017-10-13 版），原頁已不存在，所以 url_verified 設 false；正式引用時註明是存檔版。",
     "cited_by": [
       "cat-food-selection-taiwan"
