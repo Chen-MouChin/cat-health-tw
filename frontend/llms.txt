@@ -38,6 +38,14 @@
 - [澎湖縣（4 家）](https://cathealthtw.com/vets/penghu.html)
 - [金門縣（5 家）](https://cathealthtw.com/vets/kinmen.html)
 
+## 文章
+
+- [貓咪不同年齡怎麼吃：幼貓、成貓、老貓的飲食重點](https://cathealthtw.com/articles/cat-food-by-life-stage.html)：幼貓吃生長期飼料到大約 1 歲，結紮後熱量需求下降，老貓不一定要換高齡配方。依美國獸醫指引整理各年齡的飲食重點、怎麼看包裝上的生命階段標示，以及換飼料怎麼慢慢換。
+- [貓愛滋（FIV）與貓白血病（FeLV）：台灣版管理指南](https://cathealthtw.com/articles/fiv-felv-management-taiwan.html)：FIV 陽性貓多半能正常生活很多年，FeLV 陽性貓才需要更積極追蹤。這篇說明兩種病毒怎麼傳、快篩陽性為什麼要複檢、多貓家庭要不要隔離、已知陽性的貓哪些症狀要當天就醫，以及認養陽性貓前該問收容所什麼。
+- [貓飼料怎麼選](https://cathealthtw.com/articles/cat-food-selection-taiwan.html)：挑貓飼料看標示：先找 AAFCO 或 FEDIAF 的完整營養聲明（台灣法規不要求，要看原文包裝或問廠商），再讀原料表與保證成分、用乾基換算比較蛋白質，最後依貓的年齡、飲水量與病史決定乾糧、濕食或處方飲食，並照 WSAVA 建議保存與換飼料。
+- [貓咪結紮：時機、費用補助與術後 7 天照顧](https://cathealthtw.com/articles/cat-neutering-aftercare-taiwan.html)：母貓 6 個月前結紮，乳腺癌風險降低 91%；公貓結紮後遊蕩、打架、噴尿的荷爾蒙不再分泌。說明結紮時機、台灣法規與補助怎麼查、術前禁食的新舊做法、術後一週怎麼照顧，以及傷口裂開、一直吐、尿不出來等建議回診的狀況。
+- [貓零食與保健品：零食怎麼給、哪些補充品有根據](https://cathealthtw.com/articles/cat-treats-supplements-taiwan.html)：零食要少於每日熱量的 10%，4 公斤的貓一天約 22 大卡。整理 WSAVA、AAHA、VCA、Cornell 對零食、魚油、益生菌與化毛產品的說法，吃完整均衡飼料的貓不需要另外補維生素和礦物質。
+
 ## Optional
 
 - [品種圖鑑](https://cathealthtw.com/breeds.html)：68 種貓的基本資料與遺傳風險標示

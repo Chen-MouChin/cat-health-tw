@@ -2,7 +2,9 @@
    結構參考負責人做的實驗室網站：頁首黏在上方、半透明霧面；手機收成「選單」，往下讀時讓出畫面、往上滑就回來；
    頁尾分欄。配色用 theme.css 的苔綠、奶油米色，插畫用站上的線條貓。 */
 
-body { overflow-x: clip; }   /* 頁首頁尾的底色往兩側延伸到滿版，不能讓它撐出橫向捲軸 */
+/* 頁首頁尾的滿版底色用 border-image 往兩側外擴畫出來：外擴只算畫面效果，不會撐大頁面寬度。
+   以前用 inset: 0 -100vmax 的偽元素，body 雖然 overflow-x: clip，手機瀏覽器仍照 1200 多 px 的內容寬度縮放，右邊多出一大片空白（2026-10-23）。 */
+html, body { overflow-x: clip; }
 
 /* ── 頁首 ── */
 .site-head {
@@ -12,13 +14,12 @@ body { overflow-x: clip; }   /* 頁首頁尾的底色往兩側延伸到滿版，
   transition: transform .28s cubic-bezier(.22, 1, .36, 1);
 }
 .site-head::before {   /* 滿版霧面底：內容欄只有 600／1000px 寬，底色往兩側延伸 */
-  content: ""; position: absolute; inset: 0 -100vmax; z-index: -1;
-  background: rgba(249, 246, 240, .92);
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  border-image: linear-gradient(rgba(249, 246, 240, .94) calc(100% - 1px), var(--border-strong) 0) fill 0 / 0 / 0 100vmax;
   -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
-  border-bottom: 1px solid var(--border-strong);
-  transition: box-shadow .2s;
+  transition: filter .2s;
 }
-html.head-scrolled .site-head::before { box-shadow: 0 6px 24px rgba(47, 74, 52, .08); }
+html.head-scrolled .site-head::before { filter: drop-shadow(0 6px 12px rgba(47, 74, 52, .08)); }
 .brand { display: inline-flex; flex: none; color: var(--text); border-radius: 6px; }
 .brand svg { display: block; height: 34px; width: auto; }
 .head-tools { display: flex; align-items: center; gap: 8px; margin-left: auto; }
@@ -74,7 +75,7 @@ html.head-scrolled .site-head::before { box-shadow: 0 6px 24px rgba(47, 74, 52, 
 
 /* ── 頁尾 ── */
 .foot { position: relative; isolation: isolate; margin-top: 56px; padding: 36px 0 24px; font-size: 15px; line-height: 1.7; color: var(--text-2); }
-.foot::before { content: ""; position: absolute; inset: 0 -100vmax; z-index: -1; background: #f1ece1; border-top: 1px solid var(--border-strong); }
+.foot::before { content: ""; position: absolute; inset: 0; z-index: -1; border-image: linear-gradient(var(--border-strong) 1px, #f1ece1 0) fill 0 / 0 / 0 100vmax; }
 .foot p { margin: 0; }
 .page:has(> .foot) { padding-bottom: 0; }   /* 頁尾底色貼齊頁面最下緣 */
 .foot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px 20px; padding-bottom: 24px; }
