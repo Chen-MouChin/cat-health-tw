@@ -1,0 +1,109 @@
+/* site.css — 首頁以外各頁共用的外殼與元件（2026-10-09 起）
+   主調「溫暖插畫 × 公共服務」：頁首頁尾、按鈕、篩選膠囊、卡片、金色脈搏記號。
+   色票一律用 theme.css 的 token；首頁自己有一份內嵌樣式，數值和這裡對齊。
+   頁首頁尾的 HTML 由 build.py 產生（文章、列表直接套模板；獸醫院、文獻庫在標記區塊內注入）。 */
+
+:root {
+  --ui: -apple-system, BlinkMacSystemFont, "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+  --serif: "Noto Serif TC", "Source Han Serif TC", "PMingLiU", Georgia, serif;
+  --r-card: 18px;
+  --r-pill: 999px;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.75 var(--ui); -webkit-font-smoothing: antialiased; }
+.vh { position: absolute !important; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; border: 0; }
+.i { width: 24px; height: 24px; flex: none; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.skip { position: absolute; left: 12px; top: -60px; z-index: 5; padding: 8px 12px; }
+.skip:focus-visible { top: 8px; }
+.page { max-width: 600px; margin: 0 auto; padding: 0 20px 24px; }
+
+
+/* 頁面標題區 */
+.page-head { margin: 26px 0 18px; }
+.page-head h1 { margin: 0; font-size: 30px; line-height: 1.3; text-wrap: balance; }
+.page-head .lede { margin: 8px 0 0; color: var(--text-2); font-size: 16px; line-height: 1.65; }
+
+/* 區塊標題：金色脈搏記號 */
+.sec-h { display: flex; align-items: center; gap: 10px; margin: 36px 0 12px; font-size: 22px; line-height: 1.35; }
+.sec-h::before { content: ""; width: 30px; height: 14px; flex: none; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 14' fill='none' stroke='%23b8860b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 7.5h9l2.2-5 3.6 9.5 3-7.5 1.7 3H29'/%3E%3C/svg%3E") no-repeat center / contain; }
+.sec-h .count { margin-left: 4px; font-size: 15px; font-weight: 600; color: var(--text-muted); }
+
+/* 按鈕 */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; padding: 0 20px; border: 0; border-radius: var(--r-pill); background: var(--primary); color: var(--accent-on); font: 700 16px/1.2 var(--ui); text-decoration: none; cursor: pointer; box-shadow: 0 3px 0 var(--primary-deep); }
+.btn:hover { background: var(--primary-deep); color: var(--accent-on); }
+.btn:active { transform: translateY(3px); box-shadow: none; }
+.btn .i { width: 20px; height: 20px; }
+.btn-quiet { background: var(--bg-card); color: var(--primary-deep); box-shadow: inset 0 0 0 2px var(--primary); }
+.btn-quiet:hover { background: var(--primary-pale); color: var(--primary-deep); }
+.btn-quiet[aria-pressed="true"], .btn-quiet.active { background: var(--primary); color: var(--accent-on); box-shadow: 0 3px 0 var(--primary-deep); }
+
+/* 篩選膠囊：未選淺金、選中苔綠 */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 0 14px; border: 0; border-radius: var(--r-pill); background: var(--gold-pale); color: var(--text); font: 600 15px/1.2 var(--ui); text-decoration: none; cursor: pointer; white-space: nowrap; }
+.chip:hover { background: var(--gold-pale-deep); color: var(--text); }
+.chip.active, .chip[aria-pressed="true"] { background: var(--primary); color: var(--accent-on); }
+.chip .cnt { font-weight: 400; opacity: 0.75; font-size: 13px; }
+
+/* 輸入框 */
+.field { width: 100%; min-height: 52px; padding: 0 14px; border: 2px solid var(--text); border-radius: 14px; background: var(--bg-card); color: var(--text); font: 17px var(--ui); -webkit-appearance: none; appearance: none; }
+.field::placeholder { color: var(--text-muted); opacity: 1; }
+
+/* 卡片與說明框 */
+.panel { padding: 16px 18px; border: 1px solid var(--border-strong); border-radius: var(--r-card); background: var(--bg-card); }
+.note-box { padding: 12px 16px; border-radius: 12px; background: var(--gold-pale); color: var(--text-2); font-size: 15px; line-height: 1.65; }
+.note-box strong { color: var(--text); }
+.tag { display: inline-flex; align-items: center; padding: 0 8px; border-radius: 6px; font-size: 13px; font-weight: 700; line-height: 1.75; white-space: nowrap; }
+.tag-reviewed { background: var(--primary-pale); color: var(--primary-deep); }
+.tag-draft { background: var(--gold-pale); color: var(--draft-text); }
+.tag-quiet { background: var(--accent-light); color: var(--text-2); }
+
+/* 封面佔位圖：淺苔綠底、線條貓、分類名（真正的封面圖到位前先用這個） */
+.cover-ph { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; background: var(--primary-pale); color: var(--primary); }
+.cover-ph-cat { display: block; width: 72px; }
+.cover-ph-cat svg { display: block; width: 100%; height: auto; }
+
+/* 線條貓插畫：線條固定深色，白貓才不會和白線混在一起；滑過卡片時有小動作 */
+.cat-art { color: var(--cat-ink); }
+.cat-art svg { overflow: visible; filter: drop-shadow(0 3px 6px rgba(29, 29, 31, .08)); }
+@keyframes cat-tail-wag { 0%, 100% { transform: rotate(0deg); } 50% { transform: rotate(12deg); } }
+@keyframes cat-breathe { 0%, 100% { transform: scaleY(1); } 50% { transform: scaleY(1.04) translateY(-1px); } }
+@keyframes cat-peek { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+@keyframes cat-tilt { 0%, 100% { transform: rotate(0deg); } 50% { transform: rotate(8deg); } }
+@keyframes cat-play { 0%, 100% { transform: translateX(0) rotate(0deg); } 50% { transform: translateX(-2px) rotate(-3deg); } }
+:is(a, .card-hover, .title-row):hover .cat-art .anim-tail, .cat-art.play .anim-tail { animation: cat-tail-wag 1.5s ease-in-out infinite; }
+:is(a, .card-hover, .title-row):hover .cat-art .anim-breathe, .cat-art.play .anim-breathe { animation: cat-breathe 3s ease-in-out infinite; }
+:is(a, .card-hover, .title-row):hover .cat-art .anim-peek, .cat-art.play .anim-peek { animation: cat-peek 2s ease-in-out infinite; }
+:is(a, .card-hover, .title-row):hover .cat-art .anim-tilt, .cat-art.play .anim-tilt { animation: cat-tilt 2s ease-in-out infinite; }
+:is(a, .card-hover, .title-row):hover .cat-art .anim-play, .cat-art.play .anim-play { animation: cat-play 0.8s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) { .cat-art * { animation: none !important; } }
+/* 空結果插畫 */
+.empty-art svg { display: block; width: 100%; height: auto; }
+.empty-art { width: 104px; margin: 0 auto 12px; padding: 12px; border-radius: 24px; background: var(--primary-pale); }
+/* 標題右邊的線條貓：標題靠左，貓的上下緣和標題區塊對齊（theme.js 量標題高度、把 viewBox 裁到圖案範圍；沒有 JS 時固定 56px） */
+.title-row { display: flex; align-items: center; gap: 16px; }
+.title-row > :first-child { flex: 1; min-width: 0; }
+.title-cat { flex: none; width: 56px; }
+.title-cat svg { display: block; width: 100%; height: 100%; }
+.cover-ph-label { font-size: 14px; font-weight: 700; color: var(--primary-deep); letter-spacing: 0.08em; }
+
+
+.cat-body { fill: var(--bg-card); }
+.cat-nose { fill: var(--blush); stroke: var(--blush); stroke-width: 0.8; stroke-linejoin: round; }
+
+@media (min-width: 880px) {
+  .page { max-width: 1000px; padding: 0 32px 32px; }
+  .page-head { margin: 36px 0 22px; }
+  .page-head h1 { font-size: 40px; }
+  .sec-h { font-size: 24px; }
+}
+
+/* 文章內專有名詞提示（glossary-tip.js）：虛線底線，滑過或點一下顯示解釋 */
+.gl { border-bottom: 1.5px dotted var(--primary); cursor: help; }
+.gl:hover, .gl[aria-describedby] { background: var(--primary-pale); border-radius: 3px; }
+.gl-pop { position: absolute; z-index: 60; box-sizing: border-box; padding: 12px 14px; border: 1px solid var(--border-strong); border-radius: 12px; background: var(--bg-card); color: var(--text); box-shadow: 0 8px 24px rgba(0, 0, 0, .14); font-size: 15px; line-height: 1.6; }
+.gl-pop[hidden] { display: none; }
+.gl-pop .gl-t { font-weight: 700; color: var(--primary-deep); }
+.gl-pop .gl-en { font-size: 13px; color: var(--text-muted); }
+.gl-pop .gl-d { margin: 6px 0 0; }
+.gl-pop a { display: inline-block; margin-top: 8px; font-size: 14px; font-weight: 600; }
