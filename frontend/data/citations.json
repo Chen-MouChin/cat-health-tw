@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "貓健康站 literature database",
-    "total": 395
+    "total": 402
   },
   "WILHELMY-2016-BREED-COAT-BEHAVIOR": {
     "title": "Behavioral associations with breed, coat type, and eye color in single-breed cats",
@@ -8108,9 +8108,7 @@
     "url_verified": false,
     "doi": "10.2460/javma.239.11.1441",
     "pmid": "22087720",
-    "cited_by": [
-      "cat-treats-supplements-taiwan"
-    ]
+    "cited_by": []
   },
   "LOPEZMARTI-2025-BIOTICS-CATS": {
     "title": "Efficacy of probiotic, prebiotic, synbiotic and postbiotic supplementation on gastrointestinal health in cats: systematic review and meta-analysis",
@@ -8199,6 +8197,180 @@
     "doi": "10.1016/j.cvsm.2020.05.003",
     "pmid": "32653265",
     "pmcid": "PMC7415653",
+    "cited_by": []
+  },
+  "EVANGELISTA-2019-FELINE-GRIMACE-SCALE": {
+    "title": "Facial expressions of pain in cats: the development and validation of a Feline Grimace Scale",
+    "title_zh": "貓的疼痛表情：貓疼痛表情量表（Feline Grimace Scale）的建立與驗證",
+    "authors": "Evangelista MC, Watanabe R, Leung VSY, Monteiro BP, O'Toole E, Pang DSJ, Steagall PV",
+    "source": "Scientific Reports 2019;9:19128. doi:10.1038/s41598-019-55693-8",
+    "journal": "Scientific Reports 9:19128",
+    "year": 2019,
+    "type": "research_paper",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "加拿大蒙特婁大學獸醫學院的前瞻性病例對照研究，用臉部表情評估貓的急性疼痛。35 隻因疾病就醫、有疼痛的飼主貓和 20 隻健康對照貓，在籠內不受打擾錄影；疼痛的貓給止痛藥後一小時再錄一次（Methods）。從錄影擷取的 110 張臉部照片比對後，找出 5 個和疼痛有關的表情單位：耳朵位置（耳尖往兩側拉開、向外轉）、眼周緊縮（眼瞼間高度小於眼睛寬度一半，或瞇眼）、口鼻部緊繃（口鼻部由圓變成橢圓、被拉平拉長）、鬍鬚位置（鬍鬚往前、離開臉，像豎起來）、頭的位置（頭低於肩線或往下垂、下巴靠近胸口）（Results）。每個單位評 0 到 2 分，總分除以可評分的滿分。測量上，健康貓眼睛高度約為寬度的八成，疼痛貓約一半；口鼻部高度由寬度的約七成降到一半（Table 1；Discussion）。疼痛貓分數高於對照貓，給止痛藥後分數下降；和另一個已驗證的貓疼痛量表（Glasgow 綜合疼痛量表貓版）高度相關（rho = 0.86）；4 位評分者之間的一致性良好（組內相關係數 0.89），同一人隔 30 天重評一致性極佳（0.91 以上）（Results）。研究得出建議給止痛藥的門檻：總分大於 0.39（滿分 1.0）（Results；ROC 分析）。納入條件排除了眼睛疾病、頭部外傷、過度害怕或野性的貓，以及 24 小時內用過鎮靜或止痛藥的貓；需要立即搶救的貓（呼吸窘迫、休克、出血）沒有納入（Methods）。這個量表只驗證過急性疼痛。",
+    "status": "pending_review",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6911058/",
+    "keywords": [
+      "疼痛",
+      "疼痛評估",
+      "臉部表情",
+      "Feline Grimace Scale"
+    ],
+    "url_verified": true,
+    "doi": "10.1038/s41598-019-55693-8",
+    "pmid": "31836868",
+    "pmcid": "PMC6911058",
+    "cited_by": []
+  },
+  "EVANGELISTA-2021-FGS-RELIABILITY": {
+    "title": "Agreement and reliability of the Feline Grimace Scale among cat owners, veterinarians, veterinary students and nurses",
+    "title_zh": "貓疼痛表情量表在飼主、獸醫、獸醫系學生與動物護理師之間的一致性與信度",
+    "authors": "Evangelista MC, Steagall PV",
+    "source": "Scientific Reports 2021;11:5262. doi:10.1038/s41598-021-84696-7",
+    "journal": "Scientific Reports 11:5262",
+    "year": 2021,
+    "type": "research_paper",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "測試不同背景的人用貓疼痛表情量表評分是否一致。飼主、獸醫、獸醫系學生、動物護理師各 5 人，共 20 人，各自為 100 張貓臉照片評分；5 個表情單位（耳朵、眼周緊縮、口鼻部緊繃、鬍鬚、頭相對肩膀的位置）各評 0 到 2 分，無法判斷的不計，總分除以可評分的滿分（Methods）。各組總分的評分者間一致性良好（組內相關係數大於 0.8），但口鼻部與鬍鬚兩項較差（0.39 到 0.74）（Results）。同一人重評的一致性：獸醫與學生 0.91，飼主 0.87，護理師 0.81（Results）。以獸醫為基準，飼主、學生、護理師的分數只稍微偏高，差距很小，一致性界限沒有跨過 0.39 的止痛門檻（Results；Agreement）。作者結論是不同經驗的人用這個量表評估貓的急性疼痛都可靠（Discussion）。引言整理的既有調查指出，只有 8% 到 17% 的動物醫院使用正式的疼痛評分系統（Introduction）。限制：沒有事先估算樣本數；評分者以女性為主（20 人中 16 人），學生與護理師組全是女性，女性評分者給分較高，結果不一定能推論到其他族群（Discussion）。",
+    "status": "pending_review",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7933168/",
+    "keywords": [
+      "疼痛",
+      "疼痛評估",
+      "飼主評估",
+      "Feline Grimace Scale"
+    ],
+    "url_verified": true,
+    "doi": "10.1038/s41598-021-84696-7",
+    "pmid": "33664387",
+    "pmcid": "PMC7933168",
+    "cited_by": []
+  },
+  "FEDIAF-NUTRITION-GUIDELINES-2025": {
+    "title": "Nutritional Guidelines for Complete and Complementary Pet Food for Cats and Dogs (September 2025)",
+    "title_zh": "歐洲寵物食品業協會（FEDIAF）犬貓完整與補充性寵物食品營養指引（2025 年 9 月版）",
+    "authors": "FEDIAF（European Pet Food Industry Federation）",
+    "source": "FEDIAF, September 2025, 98 pages",
+    "year": 2025,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "歐洲寵物食品業協會給製造商的營養指引，也是歐洲主管機關參考的文件（Introduction）。貓的完整食品營養素建議值分三種單位：每 100 公克乾物、每 1000 大卡代謝能、每百萬焦耳代謝能；表上是商業寵物食品的最低建議值，不是最低需求，也不是最理想的攝取量；成貓的數值由 NRC 2006 推算，假設 4 公斤的精實成貓（Tables III-4a,b,c 說明）。成貓（每日能量需求以每公斤代謝體重 75 大卡計）每 100 公克乾物：蛋白質 33.3 公克、脂肪 9 公克、鈣 0.53 公克、磷 0.35 公克、牛磺酸罐頭 0.27 公克、乾糧 0.13 公克；每 1000 大卡：蛋白質 83.3 公克、脂肪 22.5 公克、磷 0.85 公克；以每公斤代謝體重 100 大卡計，蛋白質降為每 100 公克乾物 25 公克；成貓鈣磷比的營養上限是 2 比 1（Table III-4a、III-4b）。代謝能的估算（NRC 2006 的四步驟公式，乾糧濕食都適用）：總能 = 5.7 × 粗蛋白% + 9.4 × 粗脂肪% + 4.1 ×（無氮抽出物% + 粗纖維%）；貓的能量消化率% = 87.9 − 0.88 × 乾物中的粗纖維%；消化能 = 總能 × 消化率 ÷ 100；貓的代謝能 = 消化能 − 0.77 × 粗蛋白%（7.2.2.2 a）。肉、內臟、乳製品等天然狀態的食物，貓的代謝能用 4 × 粗蛋白% + 8.5 × 粗脂肪% + 4 × 無氮抽出物% 估算（7.2.2.2 b）。比較研究發現，乾糧用 NRC 公式比修正 Atwater 法準，濕食兩種方法準確度差不多（7.2.2.2）。成貓每日能量需求：結紮或室內貓每公斤代謝體重（體重的 0.67 次方）52 到 75 大卡，4 公斤的貓約每公斤體重 35 到 45 大卡；活動量大的貓 100 大卡，4 公斤約每公斤 60 到 65 大卡；幼貓 4 個月以下是成貓維持需求的 2 到 2.5 倍，4 到 9 個月 1.75 到 2 倍，9 到 12 個月 1.5 倍；懷孕母貓每公斤代謝體重 140 大卡（Table VII-9、VII-10）。實際需求個體差異很大，受年齡、品種、活動量、環境溫度、體態等影響（7.2.3）。",
+    "status": "pending_review",
+    "url": "https://europeanpetfood.org/nutritional-guidelines",
+    "pdf_url": "https://europeanpetfood.org/wp-content/uploads/2025/09/FEDIAF-Nutritional-Guidelines_2025-ONLINE.pdf",
+    "keywords": [
+      "營養",
+      "營養素建議值",
+      "熱量",
+      "代謝能",
+      "完整均衡"
+    ],
+    "url_verified": true,
+    "cited_by": []
+  },
+  "FEDIAF-CARBOHYDRATES-FACTSHEET": {
+    "title": "Carbohydrates in Pet Food (FEDIAF factsheet)",
+    "title_zh": "FEDIAF：寵物食品中的碳水化合物（說明文件）",
+    "authors": "FEDIAF（European Pet Food Industry Federation）",
+    "source": "FEDIAF, 12 pages",
+    "year": 2022,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "寵物食品標示沒有可消化碳水化合物（糖與澱粉）這一項，可以用差數估算，稱為無氮抽出物：無氮抽出物% = 100 −（粗蛋白 + 粗脂肪 + 粗纖維 + 灰分 + 水分）。粗纖維分析會大幅低估膳食纖維，所以無氮抽出物通常高估可消化碳水化合物。可消化碳水化合物每公克約提供 3.5 到 4 大卡代謝能；犬貓唾液沒有澱粉酶，煮熟的澱粉可以被利用。",
+    "status": "pending_review",
+    "url": "https://europeanpetfood.org/nutritional-guidelines",
+    "pdf_url": "https://europeanpetfood.org/wp-content/uploads/2022/03/FEDIAF_Carbohydrates-OnlineK.pdf",
+    "keywords": [
+      "碳水化合物",
+      "無氮抽出物",
+      "營養標示"
+    ],
+    "url_verified": true,
+    "cited_by": []
+  },
+  "LJUNGVALL-2014-SLEEPING-RESP-RATE": {
+    "title": "Sleeping and resting respiratory rates in healthy adult cats and cats with subclinical heart disease",
+    "title_zh": "健康成貓與無症狀心臟病貓的睡眠及休息呼吸次數",
+    "authors": "Ljungvall I, Rishniw M, Porciello F, Häggström J, Ohad D",
+    "source": "Journal of Feline Medicine and Surgery 2014;16(4):281-290. doi:10.1177/1098612X13508940",
+    "journal": "Journal of Feline Medicine and Surgery 16(4):281-290",
+    "year": 2014,
+    "type": "research_paper",
+    "language": "en",
+    "open_access": false,
+    "abstract_zh": "由飼主在家替貓量睡眠與休息時的呼吸次數，每隻貓量 8 到 10 次。對象是超音波檢查正常的貓 59 隻、外觀健康的貓 28 隻，以及無症狀心臟病的貓 54 隻。健康貓和左心房輕到中度擴大的心臟病貓，每隻貓睡眠呼吸次數的平均都低於每分鐘 30 次，這些平均值的中位數約每分鐘 21 次。左心房嚴重擴大的貓，平均有時超過 30 次，也比其他心臟病貓高。休息時的呼吸次數一律比睡眠時高。年齡和居住地區會影響健康貓的睡眠呼吸次數，體重則沒有影響。同一隻貓每天量到的數字差異小。多數飼主覺得在家量並不困難。作者建議平均超過每分鐘 30 次、或多次量到超過 30 次的貓應進一步檢查。（只讀到摘要：PMC 有收錄，但出版社不開放全文 XML 下載）",
+    "status": "pending_review",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/24170428/",
+    "keywords": [
+      "呼吸次數",
+      "睡眠呼吸",
+      "心臟病",
+      "在家監測"
+    ],
+    "disease_tags": [
+      "hcm"
+    ],
+    "url_verified": true,
+    "doi": "10.1177/1098612X13508940",
+    "pmid": "24170428",
+    "pmcid": "PMC11383104",
+    "cited_by": []
+  },
+  "CHENG-2023-FGS-KITTENS": {
+    "title": "Construct validity, responsiveness and reliability of the Feline Grimace Scale in kittens",
+    "title_zh": "貓疼痛表情量表用在幼貓的建構效度、反應度與信度",
+    "authors": "Cheng AJ, Malo A, Garbin M, Monteiro BP, Steagall PV",
+    "source": "Journal of Feline Medicine and Surgery 2023;25(12):1098612X231211765. doi:10.1177/1098612X231211765",
+    "journal": "Journal of Feline Medicine and Surgery 25(12)",
+    "year": 2023,
+    "type": "research_paper",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "檢驗貓疼痛表情量表能不能用在幼貓。36 隻 10 週到 6 個月大的健康母幼貓做結紮手術，用不含鴉片類的注射麻醉，部分另加多模式止痛，分別在術前、術後 1 小時與 2 小時錄影，需要追加止痛的再於給藥前與給藥後 1 小時錄影（Methods）。由評分者看截圖評分：術後 1 小時與 2 小時的總分中位數都是 0.30，高於術前的 0.10；追加止痛後分數由中位數 0.40 降到 0.20（Results）。評分者之間總分的一致性中等，部分單項較差（Results）。作者結論是這個量表在幼貓有效度與反應度，可用來評估幼貓術後疼痛（Conclusions）。限制：影像品質仍不理想，許多截圖因品質差被排除，對鬍鬚等細微部位的評分影響較大；評分者對幼貓可能比對成貓陌生（Discussion）。",
+    "status": "pending_review",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10811766/",
+    "keywords": [
+      "疼痛",
+      "疼痛評估",
+      "結紮",
+      "幼貓",
+      "Feline Grimace Scale"
+    ],
+    "url_verified": true,
+    "doi": "10.1177/1098612X231211765",
+    "pmid": "38095930",
+    "pmcid": "PMC10811766",
+    "cited_by": []
+  },
+  "KOSMAL-2026-CAT-WATER-INTAKE-REVIEW": {
+    "title": "Diet format, protein, amino acids, salt, and osmolytes, as well as water viscosity, affect water consumption in domestic cats: a scoping review of 32 publications (published from 1975 to 2025) on water intake, hydration status, and related health outcomes",
+    "title_zh": "飲食型態、蛋白質、胺基酸、鹽分、滲透調節物質與水的黏稠度影響家貓喝水量：32 篇喝水量、水合狀態與相關健康結果研究的範疇回顧（1975 到 2025 年）",
+    "authors": "Kosmal PAL, Shoveller AK, Gillies G, Armstrong LE",
+    "source": "Journal of Animal Science 2026;104:skaf434. doi:10.1093/jas/skaf434",
+    "journal": "Journal of Animal Science 104:skaf434",
+    "year": 2026,
+    "type": "review",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "整理 1975 到 2025 年 32 篇以貓喝水量為結果的英文研究。五組健康家貓的研究中，每天總水量（喝的水加食物裡的水）約每公斤體重 23 到 51 毫升；另有 8 篇報告每天 70 到 293 毫升。喝水量在研究之間和研究內部差異都很大，會受飲食型態（乾糧或濕食）、蛋白質或胺基酸含量、鹽分、滲透調節物質與水的黏稠度影響，脂肪含量和水碗型式（靜水或流動水）則沒有影響。尿比重是最常用的水合指標。每天總水量每公斤 42 到 51 毫升的健康貓，尿比重常低於 1.035，這只在吃濕食、或吃乾糧加營養強化水時做到；一般吃乾糧的貓總水量較低、尿比重較高。作者認為貓需要多少水才不增加泌尿或腎臟疾病風險仍不清楚。",
+    "status": "pending_review",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12893781/",
+    "keywords": [
+      "喝水",
+      "水合",
+      "乾糧",
+      "濕食",
+      "尿比重"
+    ],
+    "url_verified": true,
+    "doi": "10.1093/jas/skaf434",
+    "pmid": "41389339",
+    "pmcid": "PMC12893781",
     "cited_by": []
   }
 }

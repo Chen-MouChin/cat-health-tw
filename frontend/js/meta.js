@@ -1,7 +1,7 @@
 // 由 build.py 自動生成，請勿手動修改
 const SITE_META = {
-  built_at: "2026-10-26T15:42:16Z",
-  data_updated: "2026-10-26",
+  built_at: "2026-10-29T07:09:40Z",
+  data_updated: "2026-10-29",
   developer: "Chen-MouChin",
   developer_url: "https://github.com/Chen-MouChin"
 };
