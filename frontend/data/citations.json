@@ -523,7 +523,8 @@
     ],
     "url_verified": true,
     "cited_by": [
-      "cat-neutering-aftercare-taiwan"
+      "cat-neutering-aftercare-taiwan",
+      "male-cat-urethral-obstruction"
     ]
   },
   "AAFP-HOSPICE-2023": {
@@ -637,7 +638,8 @@
     "url_verified": true,
     "cited_by": [
       "cat-food-selection-taiwan",
-      "cat-neutering-aftercare-taiwan"
+      "cat-neutering-aftercare-taiwan",
+      "male-cat-urethral-obstruction"
     ]
   },
   "CORNELL-HYPERTHYROIDISM": {
@@ -1097,13 +1099,15 @@
     "language": "en",
     "open_access": true,
     "abstract_zh": "AAFP/ISFM 2013 貓環境需求指引（Ellis 等，JFMS）。提出「健康貓環境的五大支柱」：(1) 提供安全的躲藏空間；(2) 多處且分隔的關鍵資源（食、水、貓砂、休息、玩耍）；(3) 提供遊戲與掠食行為的機會；(4) 正向、一致、可預測的人貓互動；(5) 尊重貓的嗅覺。為居家環境豐富化與行為問題的核心參考。\n\n■ 全文核對補充（2026-10-18）\n全文核對補充：要讓貓只待室內、自由出門或兩者混合，由飼主決定，會受當地觀念、法規與環境安全影響；可行時讓貓接觸安全的戶外空間；圍起來的戶外空間保護貓不受傷，也避開掠食動物和流浪貓，減少傳染病接觸；牽繩散步也是安全選項，前提是用正向方式訓練過牽繩和胸背帶，散步時牽繩放鬆、讓貓選路；多貓家庭的躲藏處至少和貓一樣多（Pillar 1 > Other considerations；Figure 6）。食、水、砂盆、休息、玩耍、抓板都分開放，每種資源至少兩處；戶外也要有乾淨飲水（Pillar 2）。貓偏好熟悉環境，可預測與固定作息有助應對壓力（Introduction）。\n\n■ 併入的重複條目 AAFP-ENVIRONMENT-2013 摘要\n貓的五大環境需求：安全空間、多重資源點、遊戲機會、社交互動、嗅覺刺激。室內貓環境豐富化的具體做法。\n\n■ 全文核對補充（2026-10-18）\n全文核對補充（與 AAFP-2013-ENVIRONMENTAL-NEEDS-2013 為同一篇，建議合併）：貓偏好熟悉的領域，掌控感讓牠自在、壓力較低；可預測、熟悉與固定作息提升貓的應對能力；被迫離開熟悉環境（看醫生、搬家）或有新貓進入時，貓會迴避或躲起來，躲藏是一種應對方式（Introduction > The solitary hunter）。\n\n■ 全文核對補充（2026-10-19，居家安全文）\n能到高處（棲架）可增加貓的垂直空間，讓牠監看環境（Introduction，Figure 2）。安全處是私密安全的區域，常在高處；側放的紙箱、外出籠都可當安全處，外出籠帶著熟悉氣味，可放貓自己的墊子或帶飼主氣味的衣物（Pillar 1 > Methods）。\n\n■ 全文核對補充（2026-10-19，室內放養文）\n貓常常不會明顯表現壓力與焦慮，環境需求常要到貓打架、出現行為問題或壓力相關疾病才被注意到（Introduction）。尊重嗅覺：避免用會干擾貓感官或熟悉氣味的清潔劑、洗劑、有香味的貓砂，也不要清掉貓用臉部標記過的地方（Pillar 5 Methods；Figure 13b）。\n\n■ 全文核對補充（2026-10-19，跨文章檢核）\nPillar 2 Methods：每隻貓每種資源都要有選擇，例如至少兩處休息、兩處餵食、兩處如廁區；多貓家庭每隻貓要有自己的餵食點，每個社交群體的資源要實體分開。「至少兩處」是單貓的選擇下限，沒有寫成多貓的總數。",
-    "status": "pending_review",
+    "status": "approved",
     "url": "https://catvets.com/resource/guidelines-practice-guidelines-environmental-needs-guidelines/",
     "pdf_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11383066/pdf/10.1177_1098612X13477537.pdf",
     "keywords": [],
     "disease_tags": [],
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "male-cat-urethral-obstruction"
+    ]
   },
   "AAFP-2012-FELINE-FRIENDLY-NURSING-CARE-2012": {
     "title": "AAFP and ISFM Feline-Friendly Nursing Care Guidelines",
@@ -1379,7 +1383,8 @@
     "disease_tags": [],
     "url_verified": true,
     "cited_by": [
-      "cat-food-selection-taiwan"
+      "cat-food-selection-taiwan",
+      "male-cat-urethral-obstruction"
     ]
   },
   "CORNELL-RESPIRATORY-INFECTIONS-2024": {
@@ -1949,7 +1954,9 @@
     "doi": "10.1177/1098612X14530212",
     "pmid": "24794035",
     "pmcid": "PMC11104043",
-    "cited_by": []
+    "cited_by": [
+      "male-cat-urethral-obstruction"
+    ]
   },
   "BEHREND-2018-AAHA-DIABETES": {
     "title": "2018 AAHA Diabetes Management Guidelines for Dogs and Cats",
@@ -5353,7 +5360,7 @@
     "language": "en",
     "open_access": true,
     "abstract_zh": "結膜炎是貓最常見的眼睛疾病，很多貓一生中至少會有一次輕微的（第一段）。症狀可在單眼或雙眼，也常在第三眼瞼看到：瞇眼、頻繁眨眼、分泌物依原因可能是透明水狀或濃稠深色，結膜與第三眼瞼紅腫（症狀段）。灰塵、空氣中化學物質、戶外植物可引起；最常見的原因是疱疹病毒、卡里西病毒，或披衣菌、黴漿菌兩種細菌；FIV、FeLV 感染的貓也較常見（原因段）。主要發生在年輕的貓，多貓環境最常見；多數貓之後會產生免疫，帶疱疹病毒的貓會週期性復發（年齡段）。多數會自己好，但貓眼睛不舒服又有分泌物時應就醫排除更嚴重的眼病；常用抗生素眼藥 3 到 4 次／天、2 到 3 週，懷疑疱疹時加抗病毒眼藥（治療段）。頁面沒有標日期。\n\n■ 全文核對補充（2026-10-19）\n結膜炎主要發生在年輕的貓，貓舍與多貓環境最常見；幼貓會從年長的貓染上病毒或細菌，玩在一起互相傳（年齡段，引述 Thomas Kern）。",
-    "status": "pending_review",
+    "status": "approved",
     "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/conjunctivitis",
     "url_verified": true,
     "cited_by": []
@@ -7672,10 +7679,12 @@
     "language": "en",
     "open_access": true,
     "abstract_zh": "國際貓科醫學會（ISFM）2025 年在 JFMS 發表的貓下泌尿道疾病共識指引。下泌尿道症狀（排尿困難、血尿、在砂盆外尿、頻尿、用力排尿）由多種疾病造成，最常見的是特發性膀胱炎，約 55% 到 65% 的病例找不到原因而歸在這一類；尿道阻塞幾乎只發生在公貓，會危及生命（Introduction；Causes）。特發性膀胱炎多半沒有明顯的發炎反應，被視為牽涉神經、內分泌與免疫的全身性疾病；風險因子包括遺傳、早期不好的經驗、容易緊張、室內環境、常換食物、少活動、肥胖、用不凝結的貓砂、多貓、家庭不穩定、缺少高處；多數症狀 2 到 7 天內緩解但常復發；多面向的環境調整已證實能減少復發，是目前的標準做法，單一飲食或藥物單獨使用不太有效；餵濕食、增加飲水可能有助於預防復發，但研究還沒有定論（Feline idiopathic cystitis）。結石占下泌尿道症狀病例的 10% 到 23%，草酸鈣與鳥糞石加起來約九成，較新的研究認為鳥糞石又比草酸鈣常見；鳥糞石和偏鹼的尿液有關，可以用讓尿液偏酸的低磷鎂飲食溶解；草酸鈣和偏酸的尿液、飲食酸化有關，無法溶解，要取出，預防要用高水分、偏鹼的飲食；驗到的結晶種類不一定等於結石種類（Urolithiasis；Table 1）。健康成貓因細菌感染出現症狀的不到 3%（UTI）。尿道阻塞最常見的原因是特發性膀胱炎，尿道栓由蛋白質、發炎細胞和結晶組成；完全阻塞使膀胱內壓上升、腎臟過濾下降，鉀、磷、尿素氮、肌酸酐和酸排不出去，高血鉀是最常見的危及生命的併發症，急性完全阻塞 24 到 48 小時內出現尿毒；阻塞超過 24 小時會嘔吐、不吃、沒精神、意識改變、虛弱，飼主可能把排尿困難當成便秘；不處理可能心跳過慢、膀胱破裂、休克、死亡（Urethral obstruction：Pathophysiology、Diagnosis）。處置：放導尿管前就開始靜脈輸液，輸液是降血鉀最快的方法；心跳不慢也建議做心電圖；止痛優先，疼痛控制好可減少尿道痙攣；多數貓要全身麻醉放導尿管；導尿管通常不超過 24 到 36 小時；prazosin 在較新的研究沒有降低再阻塞，目前不建議常規使用；不建議預防性抗生素（Management）。最好看到貓自己排尿再出院，有些貓在醫院就是不尿；回家時多貓家庭可先讓牠待在一個房間、用襪子交換臉頰氣味再見面（Discharge）。出院率 91% 到 94%，再阻塞 11% 到 58%，最後 21% 被安樂死（Prognosis）。會陰部尿道造口術用於尿道末段阻塞，預後好，但泌尿道感染風險增加，特發性膀胱炎仍要處理。居家：砂盆數量貓數加一、放在安靜處並遠離食物和水、每天至少清一次；每天互動遊戲；不要處罰；有結石的貓追蹤尿比重和酸鹼值（Environmental modifications；Table 1）。",
-    "status": "pending_review",
+    "status": "approved",
     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11816079/",
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "male-cat-urethral-obstruction"
+    ]
   },
   "FDA-SGLT2-CATS-2023": {
     "title": "Two New Drugs to Treat Diabetes in Cats—Is One Right for Your Cat?",

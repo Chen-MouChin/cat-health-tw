@@ -353,12 +353,16 @@ window.WARN_BREEDS = {
  "crex": {
   "level": "moderate",
   "icon": "⚠️",
-  "short": "毛薄怕冷",
-  "detail": "柯尼斯捲毛貓（Cornish Rex）的捲毛來自 LPAR6 基因的隱性變異，毛短而捲，沒有外層的護毛。VCA 建議定期洗澡。毛少但一樣會產生過敏原，VCA 指出這個品種**並不低敏**。",
+  "short": "沒有護毛、怕冷",
+  "detail": "柯尼斯捲毛貓（Cornish Rex）的捲毛來自 LPAR6 基因的隱性變異，毛短而捲，沒有外層的護毛。CFA 的品種介紹說這種貓**天冷容易著涼**，可以考慮給牠穿衣服；沒有護毛的毛也擋不住太陽，曬太久要留意。VCA 建議定期洗澡。毛少但一樣會產生過敏原，VCA 指出這個品種**並不低敏**。",
   "refs": [
    {
     "t": "Gandolfi 2013：柯尼斯捲毛貓 LPAR6",
     "u": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3694948/"
+   },
+   {
+    "t": "CFA：Cornish Rex",
+    "u": "http://cfa.org/breed/cornish-rex/"
    },
    {
     "t": "VCA：Cornish Rex",
@@ -512,11 +516,15 @@ window.WARN_BREEDS = {
   "level": "moderate",
   "icon": "⚠️",
   "short": "緬甸貓頭顱缺陷基因",
-  "detail": "孟買貓（Bombay）由緬甸貓衍生而來，可能帶有緬甸貓的**頭顱顏面缺陷**（craniofacial defect）基因（ALX1 基因突變）。帶一份的貓臉型較短，帶兩份的幼貓**頭臉嚴重畸形、無法存活**。一項研究檢測 133 隻孟買貓，有 43 隻帶有。可以用 DNA 檢測避免兩隻帶因的貓配對。",
+  "detail": "孟買貓（Bombay）是 1966 年美國育種者以黑色美國短毛貓公貓配緬甸貓母貓育成的品種（CFA 1970 年登錄、1976 年升為冠軍級），可能帶有緬甸貓的**頭顱顏面缺陷**（craniofacial defect）基因（ALX1 基因突變）。帶一份的貓臉型較短，帶兩份的幼貓**頭臉嚴重畸形、無法存活**。一項研究檢測 133 隻孟買貓，有 43 隻帶有。可以用 DNA 檢測避免兩隻帶因的貓配對。CFA 也提到孟買貓有**肥厚型心肌病**的案例，負責任的繁殖者會在配種前檢測。",
   "refs": [
    {
     "t": "Lyons 2016：緬甸貓頭顱缺陷 ALX1",
     "u": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4724490/"
+   },
+   {
+    "t": "CFA：Bombay",
+    "u": "http://cfa.org/breed/bombay/"
    }
   ]
  },
