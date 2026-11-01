@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "貓健康站 literature database",
-    "total": 402
+    "total": 403
   },
   "WILHELMY-2016-BREED-COAT-BEHAVIOR": {
     "title": "Behavioral associations with breed, coat type, and eye color in single-breed cats",
@@ -373,6 +373,7 @@
     "url_verified": true,
     "cited_by": [
       "cat-food-by-life-stage",
+      "cat-litter-box-guide",
       "cat-neutering-aftercare-taiwan"
     ]
   },
@@ -523,6 +524,7 @@
     ],
     "url_verified": true,
     "cited_by": [
+      "cat-litter-box-guide",
       "cat-neutering-aftercare-taiwan",
       "male-cat-urethral-obstruction"
     ]
@@ -638,6 +640,7 @@
     "url_verified": true,
     "cited_by": [
       "cat-food-selection-taiwan",
+      "cat-litter-box-guide",
       "cat-neutering-aftercare-taiwan",
       "male-cat-urethral-obstruction"
     ]
@@ -1106,6 +1109,7 @@
     "disease_tags": [],
     "url_verified": true,
     "cited_by": [
+      "cat-litter-box-guide",
       "male-cat-urethral-obstruction"
     ]
   },
@@ -1955,6 +1959,7 @@
     "pmid": "24794035",
     "pmcid": "PMC11104043",
     "cited_by": [
+      "cat-litter-box-guide",
       "male-cat-urethral-obstruction"
     ]
   },
@@ -2512,7 +2517,7 @@
     "language": "en",
     "open_access": true,
     "abstract_zh": "康乃爾大學貓健康中心的衛教頁。在砂盆外排泄是飼主最常反映的貓行為問題。先帶貓給獸醫做完整檢查，生病的貓不一定看起來像生病；排除疾病後再逐項找原因。多數貓偏好無香味、顆粒較細、約一到兩英吋深的砂，砂盆要放在安靜、隱密、和食物分開的地方，結塊砂每天清；砂盆數量建議是貓數加一。頁面說明貓大概沒有用排泄物報復飼主所需的認知能力，而且貓不覺得尿和糞便噁心，不會拿來當武器；打罵、大吼沒有用，造成的焦慮還可能讓問題更嚴重。",
-    "status": "pending_review",
+    "status": "approved",
     "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/feline-behavior-problems-house-soiling",
     "keywords": [
       "亂尿",
@@ -2521,7 +2526,9 @@
       "處罰"
     ],
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-litter-box-guide"
+    ]
   },
   "MOA-PET-POPULATION-2023": {
     "title": "全國家犬貓飼養數量最新推估結果（112年調查）",
@@ -3633,7 +3640,7 @@
     "language": "en",
     "open_access": true,
     "abstract_zh": "Cornell 貓健康中心的耳朵疾病說明。飼主應定期檢查貓的耳朵，看有沒有腫脹、分泌物、變色或髒污堆積等感染徵象；貓一直抓耳朵時不要自己往耳朵裡探找原因，盡快請獸醫看。\n\n■ 全文核對補充（2026-10-19）\n引述該校外科 James Flanders。多數耳朵疾病可治療、不會永久失聰。後天耳病裡最常見的是外耳炎，通常由耳疥蟲引起，皮脂分泌多的貓較容易；外耳炎沒處理好會往中耳、內耳走，最嚴重時耳膜與內耳受到無法復原的傷害，造成失聰，並因影響前庭系統讓受影響的一側突然失去平衡（Acquired Disorders）。耳尖可能長鱗狀上皮細胞癌，常曬強烈陽光的貓特別常見；白貓或淺色貓應減少直射陽光（Acquired Disorders；Reducing the Risk）。建議定期檢查耳朵有沒有腫脹、分泌物、變色、髒污堆積；貓一直抓耳朵時不要自己往耳朵裡探，盡快給獸醫看（Reducing the Risk）。",
-    "status": "pending_review",
+    "status": "approved",
     "url": "https://www.vet.cornell.edu/node/3996",
     "keywords": [
       "耳朵"
@@ -5579,7 +5586,7 @@
     "language": "en",
     "open_access": true,
     "abstract_zh": "康乃爾貓健康中心的耳疥蟲衛教文，引述該校皮膚科教授 William Miller Jr.：耳疥蟲傳染力極強，貓和貓近距離接觸就會傳過去；外出的貓較常見。懷疑有耳疥蟲要盡快看獸醫。頁面沒有寫家裡其他寵物要不要一起治療。頁面未標日期。\n\n■ 全文核對補充（2026-10-19）\n耳疥蟲大約針頭大小，仔細看肉眼可以看到牠在動。典型徵象是外耳發炎、貓把耳朵壓平貼頭、一直抓、頻繁甩頭，耳道內有深色、黏稠、有臭味的耳垢與碎屑（第二、四段）。獸醫用耳鏡診斷；貓不讓耳鏡靠近時，用棉棒取耳垢放顯微鏡下確認（診斷段）。治療通常先徹底清耳，因為耳垢會擋住外用藥；外用、口服、全身性的藥有很多種，多數效果很好；之後的治療與耳朵保養在獸醫教過後通常可以在家做（治療段）。",
-    "status": "pending_review",
+    "status": "approved",
     "url": "https://vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/ear-mites-tiny-critters-can-pose-major-threat",
     "url_verified": true,
     "cited_by": []
@@ -6469,7 +6476,7 @@
     "language": "en",
     "open_access": true,
     "abstract_zh": "角膜表層細胞流失得比新生快就形成潰瘍，嚴重時角膜穿孔、眼內液體流出，可能失明甚至失去眼睛（第二段）。原因包括打架抓傷、睫毛內生、沙土卡在眼瞼下、腐蝕性化學物質、病毒或細菌感染，最常見的是貓疱疹病毒反覆感染（原因段）。症狀：角膜周圍發炎、眼睛分泌物、角膜混濁、怕強光，貓會瞇眼、揉眼，像看不清楚；很多淺的潰瘍幾天到一週內自己好，飼主不會發現（症狀段）。用螢光染劑確診，潰瘍處染成綠色（診斷段）。治療重點是控制發炎、止痛、預防細菌或黴菌感染，表淺潰瘍通常用抗生素眼藥膏；貓抓揉會讓潰瘍變糟，可能要戴頭套到完全癒合；懷疑疱疹病毒時用抗病毒藥（治療段）。頁面沒有標日期。",
-    "status": "pending_review",
+    "status": "approved",
     "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/corneal-ulcers",
     "url_verified": true,
     "cited_by": []
@@ -8380,6 +8387,21 @@
     "doi": "10.1093/jas/skaf434",
     "pmid": "41389339",
     "pmcid": "PMC12893781",
+    "cited_by": []
+  },
+  "FELINEVMA-EOL-DECISION-MAKING": {
+    "title": "End of Life Educational Toolkit: Decision Making",
+    "title_zh": "臨終教育工具包：做決定",
+    "authors": "Feline Veterinary Medical Association (FelineVMA, formerly AAFP)",
+    "source": "FelineVMA 臨終教育工具包（2023 AAFP/IAAHPC 貓安寧照護指引提到的 AAFP 臨終教育工具包）",
+    "year": 2026,
+    "type": "guideline",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "FelineVMA 給獸醫團隊的臨終決定說明。建議請飼主用簡單的方法記下貓每天的行為與特別的事，例如用月曆，每天統一標成好、壞或普通，比較客觀地評估貓的狀況，也能幫忙做之後的決定；好日子是照常活動、過日常生活，壞日子是噁心、呼吸困難、疼痛或其他不舒服。頁面提供 12 個月的月曆讓飼主下載。獸醫要和飼主一起確認這隻貓的生活品質包含哪些面向並取得共識，評估並同意生活品質的狀況，可以讓飼主更確定安樂死的決定是對的。",
+    "status": "pending_review",
+    "url": "https://catvets.com/end-of-life-toolkit/decision-making",
+    "url_verified": true,
     "cited_by": []
   }
 }
