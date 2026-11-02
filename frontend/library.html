@@ -17,6 +17,7 @@
 </script>
 <script src="js/theme.js?v=20261019"></script>
 <script src="js/articles-data.js"></script>
+<script src="data/breed-links.js"></script>
 <style>
 /* 文獻庫｜共用外殼在 site.css。內容區用「醫學期刊」排版：標題與摘要襯線體、書目式的作者／來源／年份。 */
 .lib-col { max-width: 820px; margin: 0 auto; }
@@ -100,6 +101,7 @@
 .term-related { margin-top: 6px; font-size: 13px; color: var(--text-muted); }
 .term-related a { font-weight: 600; cursor: pointer; }
 .term-tag { border-bottom: 1px dashed var(--primary); cursor: help; }
+.card-abstract a.breed-link { color: var(--primary); text-decoration: underline; text-underline-offset: 2px; }
 .term-tag:hover { background: var(--primary-pale); }
 
 @media (min-width: 880px) {
@@ -630,6 +632,21 @@ function jumpToTerm(key) {
 }
 
 // 把摘要中出現的術語包成可點 tooltip
+// 摘要裡的品種名稱連到品種單頁；長的名字先比（歐洲緬甸貓先於緬甸貓）
+const BREED_LINKS = window.BREED_LINKS || {};
+const breedRegex = Object.keys(BREED_LINKS).length
+  ? new RegExp('(' + Object.keys(BREED_LINKS).sort((a, b) => b.length - a.length)
+      .map(s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|') + ')')
+  : null;
+
+function linkBreeds(text) {
+  if (!breedRegex || !text) return highlightTerms(text);
+  // split 帶捕獲群組：奇數位是品種名，其餘照原本的名詞提示處理
+  return text.split(breedRegex).map((seg, i) => i % 2
+    ? `<a class="breed-link" href="breeds/${encodeURIComponent(BREED_LINKS[seg])}.html">${escapeHtml(seg)}</a>`
+    : highlightTerms(seg)).join('');
+}
+
 function highlightTerms(text) {
   if (!termRegex || !text) return escapeHtml(text || '');
   const escaped = escapeHtml(text);
@@ -696,6 +713,8 @@ function render() {
 
   document.querySelectorAll('.card-abstract').forEach(el => {
     el.onclick = (ev) => {
+      // 點品種連結就照常開品種頁，不展開摘要
+      if (ev.target.closest('a.breed-link')) return;
       // 點擊術語 tag → 跳到術語庫，不展開摘要
       if (ev.target.classList.contains('term-tag') && ev.target.dataset.term) {
         ev.stopPropagation();
@@ -754,7 +773,7 @@ function renderCard(cid, e) {
       <div class="card-title">${escapeHtml(primaryTitle || '')}</div>
       ${secondaryTitle ? `<div class="card-title-zh">${escapeHtml(secondaryTitle)}</div>` : ''}
       <div class="card-meta">${escapeHtml(e.authors || '')} · ${escapeHtml(e.source || '')}${journal} · ${e.year || ''}</div>
-      ${e.abstract_zh ? `<div class="card-abstract">${highlightTerms(e.abstract_zh)}</div>` : ''}
+      ${e.abstract_zh ? `<div class="card-abstract">${linkBreeds(e.abstract_zh)}</div>` : ''}
       ${keywords ? `<div class="card-keywords">${keywords}</div>` : ''}
       ${citedBy.length ? `<div class="cited-by" id="cited-by-${cid}" hidden>${renderCitedByList(citedBy)}</div>` : ''}
       ${e.url ? `<div class="card-link"><svg class="i" aria-hidden="true"><use href="#i-link"/></svg><a href="${escapeHtml(e.url)}" target="_blank" rel="noopener">${e.home_only
