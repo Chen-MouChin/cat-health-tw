@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "貓健康站 literature database",
-    "total": 418
+    "total": 374
   },
   "WILHELMY-2016-BREED-COAT-BEHAVIOR": {
     "title": "Behavioral associations with breed, coat type, and eye color in single-breed cats",
@@ -85,61 +85,6 @@
     "url_verified": true,
     "doi": "10.1038/s41598-019-44324-x",
     "pmid": "31138836",
-    "cited_by": []
-  },
-  "IRIS-CKD-2023": {
-    "title": "IRIS Staging of CKD (modified 2023)",
-    "title_zh": "IRIS 貓慢性腎病分期系統（2023 修訂版）",
-    "authors": "International Renal Interest Society",
-    "source": "iris-kidney.com",
-    "journal": null,
-    "year": 2023,
-    "type": "guideline",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "IRIS 慢性腎病分期（貓，2019 修訂版，IRIS 網站標示 2023）：\n\n■ 分期標準（空腹、水合狀態、至少兩次測量）\n  Stage 1：肌酸酐 < 1.6 mg/dL，SDMA < 18 μg/dL\n    → 非氮血症，僅有其他腎損傷標記（蛋白尿、影像異常、腎臟觸診異常）\n  Stage 2：肌酸酐 1.6–2.8，SDMA 18–25\n    → 輕度氮血症，通常無明顯臨床症狀\n  Stage 3：肌酸酐 2.9–5.0，SDMA 25–38\n    → 中度氮血症，開始出現多喝多尿、食慾下降、體重減輕\n  Stage 4：肌酸酐 > 5.0，SDMA > 38\n    → 重度氮血症，尿毒症狀明顯（嘔吐、脫水、貧血）\n\n■ SDMA vs 肌酸酐不一致時\n  若 SDMA 持續 >18 但肌酸酐 < 1.6 → 按 Stage 2 處理\n  若 SDMA 持續 >25 但肌酸酐在 Stage 2 範圍 → 按 Stage 3 處理\n  若 SDMA 持續 >38 但肌酸酐在 Stage 3 範圍 → 按 Stage 4 處理\n  （SDMA 比肌酸酐更敏感，較少受肌肉量影響）\n\n■ Sub-staging — 蛋白尿（UPC，排除泌尿道炎症/出血後測量）\n  Non-proteinuric：UPC < 0.2\n  Borderline proteinuric：UPC 0.2–0.4（2 個月內重測）\n  Proteinuric：UPC > 0.4 → 需治療介入\n\n■ Sub-staging — 收縮壓（多次測量，理想在不同日）\n  Normotensive：< 140 mmHg（最小風險）\n  Prehypertensive：140–159 mmHg（低風險）\n  Hypertensive：160–179 mmHg（中度風險）→ 需降壓藥\n  Severely hypertensive：≥ 180 mmHg（高風險）→ 可能靶器官損傷\n\n■ 重要注意\n  - 分期和 sub-staging 應隨治療變化而修訂\n  - 治療中的分期應標註「(treating)」\n  - 適用於貓和犬，但數值不同（上述為貓的數值）",
-    "status": "approved",
-    "url": "https://www.iris-kidney.com/iris-guidelines-1",
-    "ref_note": "IRIS 網站的指引頁同時放了「分期」和「治療建議」兩份文件，「原文」都連到這一頁。這筆是「分期」。「治療建議」是另一筆文獻。",
-    "keywords": [
-      "CKD",
-      "腎病",
-      "IRIS",
-      "分期",
-      "SDMA",
-      "肌酸酐"
-    ],
-    "disease_tags": [
-      "ckd"
-    ],
-    "url_verified": true,
-    "cited_by": []
-  },
-  "IRIS-CKD-TREATMENT-2023": {
-    "title": "IRIS Treatment Recommendations for CKD in Cats",
-    "title_zh": "IRIS 貓慢性腎病治療建議",
-    "authors": "International Renal Interest Society",
-    "source": "iris-kidney.com",
-    "journal": null,
-    "year": 2023,
-    "type": "guideline",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "IRIS 貓慢性腎病治療建議（2019 修訂，2023 重新發布）：\n\n■ Stage 1\n  - 停用腎毒性藥物\n  - 排除可治療原因（腎盂腎炎、尿路結石）\n  - 監測血壓和 UPC\n  - 保持充足飲水\n  - 血壓 ≥ 160 mmHg → 降壓藥：amlodipine 0.125-0.25 mg/kg 每日一次 或 telmisartan 2 mg/kg 每日一次\n  - UPC > 0.4 → 抗蛋白尿治療\n\n■ Stage 2\n  - 以上所有 + 開始腎臟處方飲食（趁食慾還好時轉換較容易）\n  - 磷控制目標：血磷 < 4.6 mg/dL（1.5 mmol/L），不低於 2.7 mg/dL（0.9 mmol/L）\n  - 若飲食控制不足 → 磷結合劑：aluminum hydroxide / calcium carbonate 等，30-60 mg/kg/day 混入食物\n  - FGF23 > 400 pg/ml → 即使血磷正常也建議限磷（2023 新增）\n\n■ Stage 3\n  - 以上所有 + 生活品質治療變得更重要\n  - 脫水管理：部分貓需要常規皮下輸液維持水合（原文未指定具體 ml 數）\n  - 磷目標同上，但原文提及 Stage 3 可能需要「更務實的目標」\n  - 噁心嘔吐：maropitant（Cerenia）1 mg/kg 每日一次\n  - 貧血：紅血球生成素（EPO/darbepoetin）當 PCV < 20%\n  - 代謝性酸中毒：口服碳酸氫鈉或檸檬酸鉀\n  - 監測頻率：至少每 3 個月\n\n■ Stage 4\n  - 以上所有 + 生活品質為最優先（超越延緩惡化的重要性）\n  - 常規皮下輸液維持水合（原文未指定具體 ml 數）\n  - 積極管理噁心/嘔吐/食慾/脫水/酸中毒/貧血\n\n■ 重要提醒\n  - 脫水貓禁用 RAAS 抑制劑（telmisartan/benazepril）→ 先補水再用藥，否則 GFR 可能驟降\n  - 降壓後肌酸酐微幅上升 < 0.5 mg/dL（或 SDMA < 2.0 μg/dL）屬正常\n  - 收縮壓 < 120 mmHg 伴隨虛弱/心搏過速 = 低血壓，需調藥\n  - 所有降壓貓需終身治療 + 穩定後至少每 3 個月監測\n  - 低白蛋白（< 2 g/dL）→ 考慮 clopidogrel 10-18.75 mg/day 預防血栓\n\n（各期的肌酸酐範圍見 IRIS 分期標準 IRIS-CKD-2023。）",
-    "status": "approved",
-    "url": "https://www.iris-kidney.com/iris-guidelines-1",
-    "ref_note": "IRIS 網站的指引頁同時放了「分期」和「治療建議」兩份文件，「原文」都連到這一頁。這筆是「治療建議」。「分期」是另一筆文獻。",
-    "keywords": [
-      "CKD",
-      "治療",
-      "磷結合劑",
-      "皮下輸液",
-      "飲食"
-    ],
-    "disease_tags": [
-      "ckd"
-    ],
-    "url_verified": true,
     "cited_by": []
   },
   "ISFM-DIABETES-2015": {
@@ -1703,33 +1648,6 @@
     "doi": "10.1111/jsap.13724",
     "cited_by": []
   },
-  "ASPCA-CAT-PLANT-LIST-2024": {
-    "title": "Cat Plant List",
-    "title_zh": "貓咪有毒植物清單 — ASPCA",
-    "authors": "ASPCA Animal Poison Control",
-    "source": "ASPCA",
-    "journal": null,
-    "year": 2024,
-    "type": "database",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "ASPCA 毒物資料庫的貓專用子集。只列對貓有毒的植物（過濾掉對狗馬才有毒的），最方便貓主快速查詢。",
-    "status": "pending_review",
-    "url": "https://www.aspca.org/",
-    "keywords": [
-      "中毒",
-      "植物",
-      "毒物",
-      "ASPCA",
-      "貓"
-    ],
-    "disease_tags": [
-      "toxicology"
-    ],
-    "url_verified": false,
-    "cited_by": [],
-    "home_only": "ASPCA"
-  },
   "FDA-LILIES-CATS-2024": {
     "title": "Lovely Lilies and Curious Cats: A Dangerous Combination",
     "title_zh": "可愛的百合與好奇的貓：危險組合",
@@ -1787,36 +1705,6 @@
     ],
     "url_verified": true,
     "cited_by": []
-  },
-  "VCA-PLANTS-TOXIC-CATS": {
-    "title": "Plants That are Toxic to Cats — VCA Animal Hospitals",
-    "title_zh": "對貓有毒的植物 — VCA 動物醫院",
-    "authors": "Renee Schmid, DVM; Tiffany Hughes, DVM（Pet Poison Helpline）",
-    "source": "VCA",
-    "journal": null,
-    "year": 2024,
-    "type": "educational",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "VCA 的貓有毒植物衛教文。真百合（Lilium 屬）與萱草（Hemerocallis 屬）可在接觸後 6 到 48 小時內造成腎衰竭；和平百合、海芋不會像真百合一樣造成腎衰竭，所含不溶性草酸鈣結晶刺激口腔與喉嚨，不預期有全身性中毒。鬱金香毒素集中在球根；水仙可能造成嚴重腸胃不適，少數影響心臟與神經；黃金葛、蔓綠絨、黛粉葉屬於含草酸鈣的室內植物；蘆薈葉內凝膠無毒，白色汁液會催吐。文中只列屬名，沒有列真百合的品種名。",
-    "status": "pending_review",
-    "url": "https://vcahospitals.com/",
-    "keywords": [
-      "植物",
-      "百合",
-      "lily",
-      "和平百合",
-      "海芋",
-      "中毒",
-      "VCA",
-      "toxicology"
-    ],
-    "disease_tags": [
-      "toxicology"
-    ],
-    "url_verified": true,
-    "cited_by": [],
-    "home_only": "VCA"
   },
   "ICATCARE-LILY-POISONING": {
     "title": "Lily poisoning in cats — International Cat Care",
@@ -2596,55 +2484,6 @@
     "url_verified": true,
     "cited_by": []
   },
-  "VCA-KITTEN-SOCIALIZATION": {
-    "title": "Socialization and Fear Prevention in Kittens",
-    "title_zh": "幼貓的社會化與預防恐懼",
-    "authors": "Ellen Lindell, Monique Feyrecilde, Debra Horwitz, Gary Landsberg（VCA Animal Hospitals）",
-    "source": "VCA Animal Hospitals",
-    "year": null,
-    "type": "guideline",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "由獸醫行為專科醫師撰寫的飼主衛教文。幼貓社會化最敏感的時期在出生後 2 到 7 週，這時的好壞經驗影響都比其他時期長久；7 週以後才帶回家的幼貓仍可以社會化，要多安排正面經驗。說明習慣化、減敏與反制約的意思，提醒一次很嚇人的經驗就可能留下長久影響，幼貓躲藏、想逃、不玩、不吃零食代表刺激太強，要先帶開、改用較輕的程度。建議由幼貓主動接近陌生人，幼童不要抱幼貓；和其他動物先隔著柵欄見面；練習打開嘴巴、摸腳掌尾巴、用毛巾包、梳毛等照護動作並配零食；坐車與外出籠練習。持續害怕時要暫停並找專業人員。恐懼程度也受基因、母貓健康與早期經驗影響。",
-    "status": "pending_review",
-    "url": "https://vcahospitals.com/",
-    "keywords": [
-      "幼貓",
-      "社會化",
-      "減敏",
-      "反制約"
-    ],
-    "disease_tags": [
-      "behavior"
-    ],
-    "url_verified": true,
-    "cited_by": [],
-    "home_only": "VCA"
-  },
-  "VCA-CAT-FEARS-PHOBIAS": {
-    "title": "Cat Behavior Problems - Fears and Phobias",
-    "title_zh": "貓的行為問題：恐懼與恐懼症",
-    "authors": "VCA Animal Hospitals",
-    "source": "VCA Animal Hospitals",
-    "year": null,
-    "type": "guideline",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "飼主衛教文。多數恐懼相關行為的首選處理是減敏加反制約：控制刺激強度，讓貓在刺激出現時仍能放鬆，再和好事配對。練習以外突然遇到完整強度的刺激，會引發完整的恐懼反應，可能讓練習的成果倒退。",
-    "status": "pending_review",
-    "url": "https://vcahospitals.com/",
-    "keywords": [
-      "恐懼",
-      "減敏",
-      "反制約"
-    ],
-    "disease_tags": [
-      "behavior"
-    ],
-    "url_verified": true,
-    "cited_by": [],
-    "home_only": "VCA"
-  },
   "TW-PET-BUSINESS-RULES": {
     "title": "特定寵物業管理辦法",
     "title_zh": "特定寵物業管理辦法（民國 106 年 10 月 16 日修正）",
@@ -2947,50 +2786,6 @@
     "cited_by": [],
     "home_only": "VCA"
   },
-  "VCA-FLEA-ALLERGY-CATS": {
-    "title": "Flea Allergy in Cats",
-    "title_zh": "貓的跳蚤過敏",
-    "authors": "VCA Animal Hospitals",
-    "source": "VCA Animal Hospitals",
-    "year": null,
-    "type": "guideline",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "飼主衛教文。跳蚤通常只在貓身上停留吸血的幾分鐘到幾小時，所以除非環境裡跳蚤很多，否則很少在貓身上看到活跳蚤。有其他過敏的貓對跳蚤叮咬特別敏感。就算看不到跳蚤，也要持續嚴格驅蟲並處理環境。",
-    "status": "pending_review",
-    "url": "https://vcahospitals.com/",
-    "keywords": [
-      "過敏"
-    ],
-    "disease_tags": [
-      "dermatology"
-    ],
-    "url_verified": true,
-    "cited_by": [],
-    "home_only": "VCA"
-  },
-  "VCA-FOOD-ALLERGY-CATS": {
-    "title": "Food Allergies in Cats",
-    "title_zh": "貓的食物過敏",
-    "authors": "VCA Animal Hospitals",
-    "source": "VCA Animal Hospitals",
-    "year": null,
-    "type": "guideline",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "飼主衛教文。食物過敏靠避開誘發的成分來控制；找到有效的飲食後要長期維持，避開含有致敏成分的零食與食物。食物過敏常和環境過敏同時存在。飲食試驗至少要 8 週。",
-    "status": "pending_review",
-    "url": "https://vcahospitals.com/",
-    "keywords": [
-      "過敏"
-    ],
-    "disease_tags": [
-      "dermatology"
-    ],
-    "url_verified": true,
-    "cited_by": [],
-    "home_only": "VCA"
-  },
   "MOA-SHELTER-STATS-2024": {
     "title": "113年度全國公立動物收容所收容處理情形統計表",
     "title_zh": "農業部 113 年度全國公立動物收容所收容處理情形統計表",
@@ -3092,61 +2887,6 @@
     ],
     "url_verified": true,
     "cited_by": []
-  },
-  "VCA-CAT-BBQ-SAFETY": {
-    "title": "Kick off BBQ season with these 5 safety tips for your cat",
-    "title_zh": "VCA：烤肉季節的 5 個貓咪安全提醒",
-    "authors": "VCA Animal Hospitals",
-    "source": "VCA",
-    "journal": null,
-    "year": 2024,
-    "type": "educational",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "洋蔥和大蒜會傷害貓的紅血球，生的和粉狀的都一樣。一顆葡萄或葡萄乾就可能讓貓腎衰竭，含葡萄乾的烘焙點心也算。巧克力少量會吐、拉，量多可能抽搐、心律不整；黑巧克力和烘焙用巧克力毒性最強，少量就可能致命。貓喝到很少量的酒就可能很快嘔吐，嚴重時昏迷。\n\n■ 全文核對補充（2026-10-18）\n巧克力和咖啡少量會吐、拉，量多可能抽搐、心律不整，黑巧克力和烘焙用巧克力最毒；酒精很少量就可能讓貓嘔吐，嚴重時昏迷；一顆葡萄或葡萄乾就可能讓貓腎衰竭；洋蔥、大蒜（生的或粉狀）會傷紅血球；生麵團會在胃裡發酵產生乙醇（常見食物清單）。頁面沒有點名咖啡因或可可鹼。",
-    "status": "pending_review",
-    "url": "https://vcahospitals.com/",
-    "keywords": [
-      "洋蔥",
-      "大蒜",
-      "葡萄",
-      "巧克力",
-      "酒精"
-    ],
-    "disease_tags": [
-      "toxicology"
-    ],
-    "url_verified": true,
-    "cited_by": [],
-    "home_only": "VCA"
-  },
-  "VCA-CAT-GAME-DAY": {
-    "title": "Dos and don'ts for a cat-safe game day!",
-    "title_zh": "VCA：球賽派對的貓咪安全須知",
-    "authors": "VCA Animal Hospitals",
-    "source": "VCA",
-    "journal": null,
-    "year": 2024,
-    "type": "educational",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "含大蒜或洋蔥的食物會傷害貓的紅血球和腎臟。葡萄和葡萄乾含有可能讓貓腎衰竭的毒素。巧克力含咖啡因和可可鹼，對貓有毒，顏色越深越危險，約 1 盎司的烘焙用或高級黑巧克力就可能讓貓中毒；咖啡含咖啡因，毒性和巧克力相同。含酒精的飲料可能造成嘔吐、腹瀉、呼吸困難、昏迷甚至死亡。",
-    "status": "pending_review",
-    "url": "https://vcahospitals.com/",
-    "keywords": [
-      "洋蔥",
-      "大蒜",
-      "葡萄",
-      "巧克力",
-      "咖啡因",
-      "酒精"
-    ],
-    "disease_tags": [
-      "toxicology"
-    ],
-    "url_verified": true,
-    "cited_by": [],
-    "home_only": "VCA"
   },
   "APHIA-RABIES-VACCINE-FAQ": {
     "title": "狂犬病疫苗",
@@ -3254,31 +2994,6 @@
     "cited_by": [
       "cat-food-selection-taiwan"
     ]
-  },
-  "VCA-CAT-FOOD-LABELS": {
-    "title": "Deciphering Cat Food Labels",
-    "title_zh": "VCA：看懂貓飼料標示",
-    "authors": "Canadian Academy of Veterinary Nutrition; Caitlin Grant, DVM, Dip ECVCN; Ryan Llera, DVM; Robin Downing, DVM",
-    "source": "VCA",
-    "journal": null,
-    "year": 2024,
-    "type": "educational",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "VCA 的貓飼料標示說明。原料要依重量由多到少排列，含水量高的原料比較重，所以含水的全雞可能排第一，即使飼料大部分是穀物。營養充足聲明可以用配方軟體與原料營養資料支持，也可以用飼餵試驗；飼餵試驗較理想，但較貴、較費時。保證成分分析列的是最低與最高百分比，不是確切含量，可以向廠商索取依實驗室分析的典型分析。要確認聲明對應的生命階段符合自己的貓。",
-    "status": "pending_review",
-    "url": "https://vcahospitals.com/",
-    "keywords": [
-      "標示",
-      "原料",
-      "飼餵試驗"
-    ],
-    "disease_tags": [
-      "nutrition"
-    ],
-    "url_verified": true,
-    "cited_by": [],
-    "home_only": "VCA"
   },
   "AAFCO-PFLM-TRIFOLD-2023": {
     "title": "What You Need to Know About Updated Nutritional Facts on Pet Food Labels",
@@ -3389,59 +3104,6 @@
       "cat-treats-supplements-taiwan"
     ]
   },
-  "VCA-FISH-OIL": {
-    "title": "Fish Oil",
-    "title_zh": "VCA：魚油",
-    "authors": "Kayla Hyland, DVM; Rania Gollakner, DVM",
-    "source": "VCA",
-    "journal": null,
-    "year": 2025,
-    "type": "educational",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "VCA 的魚油說明。魚油是來自冷水魚的保健品，用於發炎性疾病，例如皮膚過敏與皮膚炎，在貓狗都廣泛使用；保健品上市前不經美國 FDA 審查安全與效果。嚴重副作用包括異常瘀血或出血，貓特別要注意，出現時停用並聯絡獸醫；吃抗凝血藥的寵物要謹慎；找不到可靠來源時不要用，部分來源有重金屬中毒風險。保存在陰涼乾燥避光處，依廠商指示。頁面沒有給劑量。\n\n■ 全文核對補充（2026-10-18）\n魚油富含 EPA 與 DHA 兩種 omega-3 脂肪酸，有抗發炎作用，用於皮膚過敏（異位性皮膚炎）、皮膚炎、關節炎、腎病、心臟病、發炎性腸病等發炎性疾病，貓狗都常用（What is fish oil?）。",
-    "status": "approved",
-    "url": "https://vcahospitals.com/",
-    "keywords": [
-      "魚油",
-      "omega-3",
-      "出血"
-    ],
-    "disease_tags": [
-      "nutrition"
-    ],
-    "url_verified": true,
-    "cited_by": [
-      "cat-treats-supplements-taiwan"
-    ],
-    "home_only": "VCA"
-  },
-  "VCA-PROBIOTICS": {
-    "title": "Probiotics",
-    "title_zh": "VCA：益生菌",
-    "authors": "Kayla Hyland, DVM; Rania Gollakner, DVM",
-    "source": "VCA",
-    "journal": null,
-    "year": 2025,
-    "type": "educational",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "VCA 的益生菌說明。最常用來支持貓、狗、馬、兔的腸胃道，例如抗生素或壓力引起的腹瀉；保健品和草藥很少經過嚴謹的試驗確認效果，上市前也不經美國 FDA 審查。常見副作用是輕微脹氣或腸胃不適，少數出現過敏反應（呼吸不規則、疹子、發燒、臉腫）時停用並聯絡獸醫。依廠商指示保存，避光、防潮、避熱。",
-    "status": "approved",
-    "url": "https://vcahospitals.com/",
-    "keywords": [
-      "益生菌",
-      "腸胃"
-    ],
-    "disease_tags": [
-      "nutrition"
-    ],
-    "url_verified": true,
-    "cited_by": [
-      "cat-treats-supplements-taiwan"
-    ],
-    "home_only": "VCA"
-  },
   "CORNELL-HAIRBALLS": {
     "title": "The Danger of Hairballs",
     "title_zh": "Cornell：毛球的危險",
@@ -3467,33 +3129,6 @@
     "cited_by": [
       "cat-treats-supplements-taiwan"
     ]
-  },
-  "VCA-HAIRBALL-REMEDIES": {
-    "title": "Hairball remedies for cats",
-    "title_zh": "VCA：貓毛球的處理方法",
-    "authors": "VCA Animal Hospitals",
-    "source": "VCA",
-    "journal": null,
-    "year": 2024,
-    "type": "educational",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "VCA 的毛球處理方法。定期梳毛，在貓理毛吞下之前把掉毛梳掉；化毛飼料或化毛零食常含纖維或潤滑成分，幫助毛髮通過；增加水源或加濕食幫助毛髮在消化道移動；反覆嘔吐等嚴重情況，獸醫可能開藥；定期健檢以排除其他疾病。",
-    "status": "approved",
-    "url": "https://vcahospitals.com/",
-    "keywords": [
-      "毛球",
-      "化毛",
-      "纖維"
-    ],
-    "disease_tags": [
-      "nutrition"
-    ],
-    "url_verified": true,
-    "cited_by": [
-      "cat-treats-supplements-taiwan"
-    ],
-    "home_only": "VCA"
   },
   "SARTORE-2023-SCOTTISH-FOLD": {
     "title": "Osteochondrodysplasia and the c.1024G>T variant of TRPV4 gene in Scottish Fold cats: genetic and radiographic evaluation",
@@ -3577,75 +3212,6 @@
     "cited_by": [],
     "home_only": "iCatCare"
   },
-  "VCA-NAIL-TRIM": {
-    "title": "How to Trim a Cat's Nails",
-    "title_zh": "VCA：怎麼幫貓剪指甲",
-    "authors": "Courtney Barnes, DVM; Catherine Barnette, DVM",
-    "source": "VCA",
-    "journal": null,
-    "year": 2024,
-    "type": "educational",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "室內貓每 2 到 4 週剪一次指甲，可以減少家具受損；老貓的指甲可能長到彎曲刺進肉墊，需要飼主幫忙。白色指甲看得到血線，深色指甲剪到指甲往下勾的地方；寧可分幾次、每次剪短一點，也不要一次剪太多。指甲剪有鍘刀式和剪刀式兩種。剪到血線時在指甲末端撒止血粉，沒有的話用麵粉或玉米粉。貓抗拒時可以剪一隻就給一次零食，整個過程中常常給小零食；貓強烈抗拒保定時停下來，請獸醫協助。",
-    "status": "pending_review",
-    "url": "https://vcahospitals.com/",
-    "keywords": [
-      "美容"
-    ],
-    "disease_tags": [
-      "grooming"
-    ],
-    "url_verified": true,
-    "cited_by": [],
-    "home_only": "VCA"
-  },
-  "VCA-GROOMING-COAT": {
-    "title": "Grooming and Coat Care for Your Cat",
-    "title_zh": "VCA：貓的梳理與毛髮照顧",
-    "authors": "Courtney Barnes, DVM; Ryan Llera, DVM; Tammy Hunter, DVM; Cheryl Yuill, DVM",
-    "source": "VCA",
-    "journal": null,
-    "year": 2026,
-    "type": "educational",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "VCA 的梳毛與毛髮照顧（2026-02-13 更新）。長、絲狀或捲毛的貓要每天梳，避免打結；短毛貓可以少梳一些。短毛或底毛少的貓用硬毛刷；中長毛用長齒金屬梳或交錯齒的梳子；掉毛多可以用底毛梳。小的打結或毛球可以輕輕梳開；大的毛結只能用電剪，不要用剪刀，嚴重打結請美容師或獸醫處理。多數健康成貓很少需要洗澡，老貓、關節炎、過重或過敏的貓可能需要；只用貓專用洗毛精，例行洗澡建議無香料的低敏配方，洗後可用潤絲產品補充皮膚水分。工具可以請獸醫團隊依你的貓建議。",
-    "status": "pending_review",
-    "url": "https://vcahospitals.com/",
-    "keywords": [
-      "美容"
-    ],
-    "disease_tags": [
-      "grooming"
-    ],
-    "url_verified": true,
-    "cited_by": [],
-    "home_only": "VCA"
-  },
-  "VCA-KITTEN-GROOMING": {
-    "title": "How To Groom Your Kitten",
-    "title_zh": "VCA：幼貓的梳理",
-    "authors": "VCA Animal Hospitals",
-    "source": "VCA",
-    "journal": null,
-    "year": 2024,
-    "type": "educational",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "VCA 的幼貓梳理說明。貓不需要例行清耳朵；看到耳朵裡有髒污堆積、發紅或耳朵周圍有抓痕，預約獸醫排除疾病。室內幼貓每 2 到 4 週剪一次指甲，減少家具受損並避免指甲過長；會出門的幼貓建議留長一點保護自己。剪指甲時用非慣用手握住腳掌、輕壓肉墊讓指甲露出；多數貓的指甲淺色，看得到血線（含血管和神經的粉紅色部分），看不到時剪到指甲往下勾的地方；止血粉可以先備著，沒有時用麵粉或玉米粉。獸醫牙科醫師建議每天至少刷一次牙，做不到的話每週一兩次也比完全不刷好；用貓專用牙膏。",
-    "status": "pending_review",
-    "url": "https://vcahospitals.com/",
-    "keywords": [
-      "美容"
-    ],
-    "disease_tags": [
-      "grooming"
-    ],
-    "url_verified": true,
-    "cited_by": [],
-    "home_only": "VCA"
-  },
   "CORNELL-EAR-DISORDERS": {
     "title": "Feline Ear Disorders",
     "title_zh": "Cornell：貓的耳朵疾病",
@@ -3693,30 +3259,6 @@
     "url_verified": true,
     "cited_by": []
   },
-  "VCA-NEW-KITTEN": {
-    "title": "Bringing Home Your New Kitten",
-    "title_zh": "VCA：帶新幼貓回家",
-    "authors": "Debra Horwitz, DVM, DACVB; Gary Landsberg, DVM, DACVB; Lynn Buzhardt, DVM",
-    "source": "VCA",
-    "journal": null,
-    "year": 2024,
-    "type": "educational",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "把幼貓連同外出籠放進家裡安靜、少人走動的小房間，水、食物、貓砂盆放在外出籠門口附近，貓砂盡量沿用原本用的；打開外出籠門，讓貓自己願意時出來，來去自如；30 分鐘後還不出來，可以拿掉外出籠上蓋，輕輕讓牠看到食物、水和砂盆。讓牠有足夠時間熟悉這個房間，再一次一個房間慢慢擴大，飼主陪著。沒人看顧時要有安全的區域，食物和水要和砂盆分開，檢查有沒有幼貓會躲進去卡住的縫隙。和家中其他寵物見面時，原本的寵物用牽繩或有人抱著，有攻擊跡象才介入；餵食和睡覺的地方先分開，新幼貓要有可以爬高或躲起來避開衝突的地方；介紹通常需要一到兩週。\n\n■ 全文核對補充（2026-10-18）\n全文核對補充：家裡已有其他寵物時，新幼貓更需要待在限定區域，一方面要有自己的安全空間，一方面不要侵入原本寵物已占用的空間；餵食與睡覺的地方先分開一段時間（What should I do if I have other pets?）。",
-    "status": "pending_review",
-    "url": "https://vcahospitals.com/",
-    "keywords": [
-      "新貓",
-      "引介"
-    ],
-    "disease_tags": [
-      "behavior"
-    ],
-    "url_verified": true,
-    "cited_by": [],
-    "home_only": "VCA"
-  },
   "VCA-INTRO-ADULT-CATS": {
     "title": "Introducing New Adult Cats",
     "title_zh": "VCA：介紹新的成貓",
@@ -3728,30 +3270,6 @@
     "language": "en",
     "open_access": true,
     "abstract_zh": "獸醫行為專科醫師撰寫。新貓先待在小房間（浴室、洗衣間、客房），裡面有食物、水和砂盆，讓牠在這個安全空間待幾天；這段期間分別陪兩隻貓。接著讓原本的貓進新貓的房間、新貓探索家裡其他地方，幾個小時後各自回去，交換幾次。再來讓兩隻貓隔著屏障看得到但碰不到，每次把食碗或玩具慢慢移近屏障。出現哈氣或低吼，就退回上一個順利的步驟。合成貓費洛蒙有噴劑和擴香，可能減輕壓力。",
-    "status": "pending_review",
-    "url": "https://vcahospitals.com/",
-    "keywords": [
-      "新貓",
-      "引介"
-    ],
-    "disease_tags": [
-      "behavior"
-    ],
-    "url_verified": true,
-    "cited_by": [],
-    "home_only": "VCA"
-  },
-  "VCA-SECOND-CAT": {
-    "title": "Considerations When Getting a Second Cat",
-    "title_zh": "VCA：養第二隻貓之前要考慮的事",
-    "authors": "Ellen Lindell, VMD, DACVB; Monique Feyrecilde, LVT; Debra Horwitz, DVM, DACVB; Gary Landsberg, DVM, DACVB",
-    "source": "VCA",
-    "journal": null,
-    "year": 2024,
-    "type": "educational",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "新貓要有獨立的區域，有床、食物、砂盆和活動的地方。循序漸進的介紹可能需要幾天、幾週或幾個月；即使很小心，有些成貓始終不接受另一隻成貓。步驟：先分開幾天並交換床墊熟悉氣味；輪流讓兩隻貓待在對方的區域幾小時或一天；隔著屏障在兩側餵食、一起玩，幾週內慢慢移近；放鬆之後在監督下共處。每一步花幾天以上，讓壓力降到最低。",
     "status": "pending_review",
     "url": "https://vcahospitals.com/",
     "keywords": [
@@ -3986,104 +3504,6 @@
     "pmid": "31135257",
     "pmcid": "PMC6764004",
     "cited_by": []
-  },
-  "VCA-PKD-CATS": {
-    "title": "Polycystic Kidney Disease in Cats",
-    "title_zh": "VCA：貓的多囊腎",
-    "authors": "Kayla Hyland, DVM; Malcolm Weir, DVM; Ernest Ward, DVM",
-    "source": "VCA",
-    "journal": null,
-    "year": 2024,
-    "type": "educational",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "多囊腎在波斯貓最常見，約三分之一的波斯貓受影響；用波斯貓血統培育的品種（喜馬拉雅、蘇格蘭折耳、英國短毛、異國短毛、波米拉、西伯利亞貓等）也常見，夏特爾也有；多數其他貓，尤其混種貓很少發生。體染色體顯性遺傳，從父母任一方得到一份異常基因就可能發病，沒有症狀的貓也會遺傳給下一代。有基因檢測，建議波斯血統的幼貓做；但有些多囊腎的貓檢測是陰性，可能還有其他突變。\n\n■ 全文核對補充（2026-10-19）\n多囊腎是遺傳的腎臟病，腎臟裡形成許多裝液體的囊泡，出生就有，一開始很小、會慢慢變大，最後可能影響腎功能造成腎衰竭；肝臟、胰臟也可能長囊泡（What is polycystic kidney disease?）。多數貓囊泡長得慢，通常約 7 歲左右才出現腎病症狀，但進展速度個體差異大，無法預測（Prognosis）。",
-    "status": "pending_review",
-    "url": "https://vcahospitals.com/",
-    "keywords": [
-      "多囊腎",
-      "波斯貓",
-      "遺傳"
-    ],
-    "disease_tags": [
-      "genetics",
-      "kidney"
-    ],
-    "url_verified": true,
-    "cited_by": [],
-    "home_only": "VCA"
-  },
-  "VCA-CAT-EMERGENCIES": {
-    "title": "Emergencies in Cats",
-    "title_zh": "VCA：貓的緊急狀況",
-    "authors": "Malcolm Weir, DVM; Krista Williams, DVM; Ryan Llera, DVM; Ernest Ward, DVM",
-    "source": "VCA",
-    "journal": null,
-    "year": 2024,
-    "type": "educational",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "VCA 列出的貓緊急狀況（2024-02-21 更新）：過敏性休克（臉腫、蕁麻疹、嘔吐腹瀉，進展到虛脫與呼吸困難）；車禍（看起來正常也要檢查有無內傷）；咬傷；大量出血（直接壓迫止血）；呼吸困難，尤其張口呼吸或喘；燒燙傷（常之後才看得出來）；抽搐超過五分鐘或連續發作；持續嘔吐或腹瀉（帶血、超過 6 到 12 小時，或變得虛弱、反應差時要注意，可能是中毒、阻塞或感染）；眼睛受傷（撞到東西、跳不上去、瞳孔放大可能是突然失明）；中暑；疑似骨折、胸腹穿刺傷、頭部外傷；中毒；昏迷或虛脫；泌尿道阻塞（頻繁進出砂盆卻很少或沒有尿）；休克（呼吸急促有雜音、心跳快脈搏弱、牙齦蒼白、精神極差、四肢耳朵冰冷）。",
-    "status": "approved",
-    "url": "https://vcahospitals.com/",
-    "keywords": [
-      "急診"
-    ],
-    "disease_tags": [
-      "emergency"
-    ],
-    "url_verified": true,
-    "cited_by": [
-      "cat-neutering-aftercare-taiwan"
-    ],
-    "home_only": "VCA"
-  },
-  "VCA-SIGNS-ILLNESS-CATS": {
-    "title": "Recognizing the Signs of Illness in Cats",
-    "title_zh": "VCA：認識貓生病的徵兆",
-    "authors": "Malcolm Weir, DVM; Tammy Hunter, DVM; Cheryl Yuill, DVM",
-    "source": "VCA",
-    "journal": null,
-    "year": 2024,
-    "type": "educational",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "VCA 的貓生病徵兆說明（2024-05-08 更新）。貓沒有好好吃東西超過 24 小時，要立即就醫；食慾或喝水量的任何改變都值得注意；嘔吐要注意，特別是吐出透明泡沫或帶膽汁的液體；沒有排尿是危及生命的緊急狀況，尿量變少或在砂盆用力時要立即就醫；呼吸有問題的貓常會伸長頭和脖子，出現呼吸問題要立即就醫。\n\n■ 全文核對補充（2026-10-18）\n2026-10-18 讀原文核對，文章新用到以下內容，abstract_zh 尚未寫到，請補：生病的貓可能吃得多或少、喝得多或少；不舒服的貓理毛變差，毛凌亂、油膩、打結，過度理毛也可能有問題（Grooming）；反覆打噴嚏或咳嗽是健康問題的徵象，健康的貓耳朵不應有髒東西（Other symptoms）；慢性病的貓可能慢慢變瘦，要沿肋骨和背脊摸才發現（Weight）；砂盆尿量變多代表無法保留水分，變少代表腎臟或膀胱問題（Urination）；淺呼吸、張口呼吸、喘可能是呼吸道或肺部問題（Breathing）；生病的貓常退縮、躲起來，也有貓變黏人或易怒（Behavior）；覺得貓不對勁就盡早預約門診檢查。",
-    "status": "pending_review",
-    "url": "https://vcahospitals.com/",
-    "keywords": [
-      "急診"
-    ],
-    "disease_tags": [
-      "emergency"
-    ],
-    "url_verified": true,
-    "cited_by": [],
-    "home_only": "VCA"
-  },
-  "VCA-FALLS-CATS": {
-    "title": "First Aid for Falls in Cats",
-    "title_zh": "VCA：貓墜落的急救",
-    "authors": "Malcolm Weir, DVM; Ryan Llera, DVM; Lynn Buzhardt, DVM",
-    "source": "VCA",
-    "journal": null,
-    "year": 2024,
-    "type": "educational",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "VCA 的貓墜落急救說明。從高處掉落的貓可能扭傷、骨折、頭部外傷、胸腔或腹腔受傷，下巴骨折很常見；斷掉的肋骨刺穿肺臟會造成肺塌陷，脾臟或肝臟受傷可能大量出血。有些貓墜落後看起來正常、還會走動玩耍，之後才變得精神差、虛弱或呼吸困難，要密切觀察好幾天，這些延遲出現的問題是需要立即處理的緊急狀況；嚴重的墜落傷要立即讓獸醫評估治療。",
-    "status": "pending_review",
-    "url": "https://vcahospitals.com/",
-    "keywords": [
-      "墜落",
-      "急救"
-    ],
-    "disease_tags": [
-      "emergency"
-    ],
-    "url_verified": true,
-    "cited_by": [],
-    "home_only": "VCA"
   },
   "ONEILL-2019-PERSIAN": {
     "title": "Persian cats under first opinion veterinary care in the UK: demography, mortality and disorders",
@@ -4868,72 +4288,6 @@
     "cited_by": [],
     "home_only": "iCatCare"
   },
-  "VCA-SPHYNX": {
-    "title": "Sphynx",
-    "title_zh": "VCA：無毛貓",
-    "authors": "VCA Animal Hospitals",
-    "source": "VCA",
-    "journal": null,
-    "year": 2024,
-    "type": "educational",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "無毛貓皮膚會分泌油脂，建議每天擦拭、每週清耳朵；皮膚會曬傷，應減少日曬；不是低敏品種。",
-    "status": "pending_review",
-    "url": "https://vcahospitals.com/",
-    "keywords": [],
-    "disease_tags": [
-      "genetics",
-      "breed"
-    ],
-    "url_verified": true,
-    "cited_by": [],
-    "home_only": "VCA"
-  },
-  "VCA-DEVON-REX": {
-    "title": "Devon Rex",
-    "title_zh": "VCA：德文捲毛貓",
-    "authors": "VCA Animal Hospitals",
-    "source": "VCA",
-    "journal": null,
-    "year": 2024,
-    "type": "educational",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "德文捲毛貓掉毛少，但不是低敏品種；可以用濕布或貓用濕紙巾擦拭身體。",
-    "status": "pending_review",
-    "url": "https://vcahospitals.com/",
-    "keywords": [],
-    "disease_tags": [
-      "genetics",
-      "breed"
-    ],
-    "url_verified": true,
-    "cited_by": [],
-    "home_only": "VCA"
-  },
-  "VCA-CORNISH-REX": {
-    "title": "Cornish Rex",
-    "title_zh": "VCA：柯尼斯捲毛貓",
-    "authors": "VCA Animal Hospitals",
-    "source": "VCA",
-    "journal": null,
-    "year": 2024,
-    "type": "educational",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "柯尼斯捲毛貓沒有護毛，毛薄保暖差，常找溫暖處待著，定期洗澡有幫助；不是低敏品種。",
-    "status": "pending_review",
-    "url": "https://vcahospitals.com/",
-    "keywords": [],
-    "disease_tags": [
-      "genetics",
-      "breed"
-    ],
-    "url_verified": true,
-    "cited_by": [],
-    "home_only": "VCA"
-  },
   "GCCF-UNRECOGNISED-BREEDS": {
     "title": "Unrecognised breeds",
     "title_zh": "GCCF：不受理的品種",
@@ -5086,28 +4440,6 @@
     ],
     "url_verified": true,
     "cited_by": []
-  },
-  "VCA-BRITISH-SHORTHAIR": {
-    "title": "British Shorthair",
-    "title_zh": "VCA：英國短毛貓",
-    "authors": "VCA Animal Hospitals",
-    "source": "VCA",
-    "journal": null,
-    "year": 2024,
-    "type": "educational",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "英國短毛貓活動量中等，建議量好餵食份量避免過重，每週梳毛。",
-    "status": "pending_review",
-    "url": "https://vcahospitals.com/",
-    "keywords": [],
-    "disease_tags": [
-      "genetics",
-      "breed"
-    ],
-    "url_verified": true,
-    "cited_by": [],
-    "home_only": "VCA"
   },
   "TICA-CHAUSIE": {
     "title": "Chausie",
@@ -5299,22 +4631,6 @@
     "cited_by": [],
     "home_only": "VCA"
   },
-  "VCA-FROSTBITE-CATS": {
-    "title": "Frostbite in Cats",
-    "title_zh": "貓的凍傷",
-    "authors": "Malcolm Weir, Tammy Hunter, Ernest Ward (VCA Animal Hospitals)",
-    "source": "VCA Animal Hospitals",
-    "year": 2024,
-    "type": "educational",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "VCA 的貓凍傷說明（2024-06-11 更新）。處理方式：盡快把貓移到溫暖乾燥的地方；有失溫（核心體溫低）時先處理失溫，用溫暖乾燥的毛巾或毯子包住身體慢慢回溫，熱水袋用毛巾包好放在身體旁邊；凍傷部位不要搓揉按摩，不要用電熱墊或吹風機這類直接乾熱加熱凍傷部位，可用 37 到 45°C 溫水（How is frostbite treated?）。不要給人用止痛藥，乙醯胺酚、阿斯匹靈對貓有毒。",
-    "status": "pending_review",
-    "url": "https://vcahospitals.com/",
-    "url_verified": true,
-    "cited_by": [],
-    "home_only": "VCA"
-  },
   "ICATCARE-CATS-POISONS": {
     "title": "Cats and poisons",
     "title_zh": "貓與毒物",
@@ -5346,22 +4662,6 @@
     "url_verified": true,
     "cited_by": [],
     "home_only": "iCatCare"
-  },
-  "VCA-PAIN-SIGNS-CATS": {
-    "title": "How Do I Know if My Cat is in Pain?",
-    "title_zh": "怎麼知道貓在痛",
-    "authors": "Malcolm Weir, Robin Downing (VCA Animal Hospitals)",
-    "source": "VCA Animal Hospitals",
-    "year": 2025,
-    "type": "educational",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "VCA 的貓疼痛徵兆（2025-11-14 更新）。貓本能會隱藏疼痛。徵兆分類：叫聲（比平常多叫、低吼哈氣）；活動（不願上下樓梯或跳上家具、跛行）；日常習慣（理毛變少，毛凌亂打結；也有貓過度舔痛處，舔到掉毛或皮膚發炎；躲藏、退縮；吃喝變少；在砂盆外排泄）；攻擊性（被摸時出手、不願被梳毛或抱起）；姿勢與表情。",
-    "status": "pending_review",
-    "url": "https://vcahospitals.com/",
-    "url_verified": true,
-    "cited_by": [],
-    "home_only": "VCA"
   },
   "AAHA-PET-FIRST-AID-KIT": {
     "title": "How to Make a Pet First Aid Kit (and Actually Use It)",
@@ -5411,120 +4711,6 @@
     "cited_by": [
       "cat-eye-ear-problems-taiwan"
     ]
-  },
-  "VCA-CAT-CONJUNCTIVITIS": {
-    "title": "Conjunctivitis in Cats",
-    "title_zh": "VCA：貓結膜炎",
-    "authors": "VCA Animal Hospitals（LifeLearn）",
-    "source": "VCA",
-    "year": 2023,
-    "type": "educational",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "2023-05-10 更新。結膜炎的徵兆：單眼或雙眼過度流淚、混濁或黃綠色分泌物、結膜發紅，可能瞇眼或怕光，出現應就醫（症狀段）。感染是最常見原因：疱疹病毒、卡里西病毒，常續發其他細菌，披衣菌與黴漿菌也可直接引起（感染原因段）。非感染原因：波斯、喜馬拉雅等長毛品種可能天生眼瞼內翻，睫毛持續摩擦眼球刺激角膜；另有異物等（非感染原因段）。",
-    "status": "pending_review",
-    "url": "https://vcahospitals.com/",
-    "url_verified": true,
-    "cited_by": [],
-    "home_only": "VCA"
-  },
-  "VCA-CAT-CORNEAL-ULCERS": {
-    "title": "Corneal Ulcers in Cats",
-    "title_zh": "VCA：貓角膜潰瘍",
-    "authors": "VCA Animal Hospitals（LifeLearn）",
-    "source": "VCA",
-    "year": 2025,
-    "type": "educational",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "2025-07-25 更新。角膜是眼球表面透明的膜；潰瘍讓角膜積水而變混濁，蝕穿到最深層破裂時眼內液體流出、眼球塌陷，造成無法挽回的損傷（定義段）。最常見原因是外傷（磨眼、抓傷、尖刺）與病毒感染如貓疱疹病毒；洗毛精等化學灼傷也常見；眼瞼內翻等眼瞼異常也會刺激角膜（原因段）。很痛，多數貓用爪子或地毯揉眼，瞇眼、快速眨眼或緊閉，眼角可能積分泌物（症狀段）。用螢光染劑診斷，潰瘍處染成綠色（診斷段）。擦傷與表淺潰瘍一般 3 到 5 天癒合；抗生素眼藥、止痛、戴頭套，懷疑疱疹時加抗病毒藥；深潰瘍需密集用藥，可能手術（治療段）。可能惡化到失明，治療 2 到 3 天後應回診（惡化段）。類固醇太早用會延遲癒合（血管新生段）。",
-    "status": "pending_review",
-    "url": "https://vcahospitals.com/",
-    "url_verified": true,
-    "cited_by": [],
-    "home_only": "VCA"
-  },
-  "VCA-CAT-UVEITIS": {
-    "title": "Uveitis in Cats",
-    "title_zh": "VCA：貓葡萄膜炎",
-    "authors": "VCA Animal Hospitals（LifeLearn）",
-    "source": "VCA",
-    "year": 2023,
-    "type": "educational",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "2023-02-06 更新。葡萄膜包括虹膜、睫狀體與脈絡膜，可單眼或雙眼（定義段）。原因：FeLV、FIV、FIP 等病毒，細菌、寄生蟲（弓形蟲）、黴菌感染，糖尿病、高血壓、毒物、免疫疾病、外傷、水晶體損傷、眼內腫瘤；有時找不到原因（原因段）。會痛，貓可能揉眼、瞇眼或痙攣性眨眼，多數怕光；眼睛通常很紅，常有透明水狀分泌物，前葡萄膜炎時眼睛可能混濁；急性時瞳孔通常縮小，慢性時虹膜可能變色、可能白內障（症狀段）。因為是許多全身疾病的症狀，要做完整身體檢查，依情況驗血、驗尿、X 光、傳染病檢查；背後的疾病也要治療（診斷、治療段）。嚴重可導致永久失明（預後段）。",
-    "status": "pending_review",
-    "url": "https://vcahospitals.com/",
-    "url_verified": true,
-    "cited_by": [],
-    "home_only": "VCA"
-  },
-  "VCA-CHERRY-EYE": {
-    "title": "Cherry Eye",
-    "title_zh": "VCA：櫻桃眼（第三眼瞼腺脫出）",
-    "authors": "VCA Animal Hospitals（LifeLearn）",
-    "source": "VCA",
-    "year": 2026,
-    "type": "educational",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "2026-07-10 更新，內容以狗為主。櫻桃眼是第三眼瞼腺脫出；第三眼瞼內的腺體分泌相當比例的淚膜（定義段）。外觀是下眼瞼靠鼻側紅腫、像櫻桃的突起（外觀段）。易發品種列狗，另提緬甸貓和波斯貓也會發生（原因段）。治療是手術把腺體放回原位，不建議切除，因為切除後容易乾眼（治療段）。",
-    "status": "approved",
-    "url": "https://vcahospitals.com/",
-    "url_verified": true,
-    "cited_by": [
-      "cat-eye-ear-problems-taiwan"
-    ],
-    "home_only": "VCA"
-  },
-  "VCA-CAT-EAR-MITES": {
-    "title": "Ear Mites in Cats and Dogs",
-    "title_zh": "VCA：貓狗耳疥蟲",
-    "authors": "VCA Animal Hospitals（LifeLearn）",
-    "source": "VCA",
-    "year": 2025,
-    "type": "educational",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "2025-03-28 更新。耳疥蟲（Otodectes cynotis）寄生在貓、狗、雪貂，多在耳道，也可在皮膚表面；傳染力高，靠與受感染動物直接接觸傳播；肉眼幾乎看不到（定義段）。卵到成蟲約 3 週，成蟲活約 2 個月持續繁殖（生活史段）。幼犬幼貓常見；症狀有抓耳甩頭、深色蠟狀或結痂分泌物、耳朵周圍結痂疹子（症狀段）。用耳鏡或顯微鏡看到蟲確診，很痛時可能需鎮靜（診斷段）。有每天點的耳藥或單次使用的產品，藥殺不死卵；續發細菌、酵母菌感染要治療；徹底清耳能提高效果，很痛時延後或鎮靜下清；治療後可能回診確認（治療段）。頁面沒有寫同住動物是否都要治療。",
-    "status": "pending_review",
-    "url": "https://vcahospitals.com/",
-    "url_verified": true,
-    "cited_by": [],
-    "home_only": "VCA"
-  },
-  "VCA-CAT-EAR-INFECTIONS": {
-    "title": "Ear Infections in Cats (Otitis Externa)",
-    "title_zh": "VCA：貓外耳炎",
-    "authors": "VCA Animal Hospitals（LifeLearn）",
-    "source": "VCA",
-    "year": 2026,
-    "type": "educational",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "2026-04-02 更新。外耳炎是外耳道感染，貓最常見的原因是耳疥蟲；細菌與酵母菌引起的外耳炎在狗比貓常見（開頭）。甩頭抓耳，耳朵紅腫、可能有臭味，分泌物黑、褐或黃色；症狀和耳疥蟲相似，耳疥蟲多見於幼貓和外出貓，常續發細菌或黴菌感染，就醫時蟲可能已不見（症狀段）。不能自行用成藥：需確認耳膜完整，破裂時某些藥會造成聽力喪失；可能是異物、息肉或腫瘤（成藥段）。耳鏡檢查、細胞學決定用藥，抗生素、抗黴菌或加消炎藥的複方（診斷、治療段）。貓本來不易耳朵感染，尤其反覆發作時要找原因，如耳疥蟲、耳道形狀特殊、過敏等免疫疾病；找不到原因時效果差或停藥復發（治療段）。",
-    "status": "pending_review",
-    "url": "https://vcahospitals.com/",
-    "url_verified": true,
-    "cited_by": [],
-    "home_only": "VCA"
-  },
-  "VCA-CAT-QUALITY-OF-LIFE": {
-    "title": "Quality of Life at the End of Life for Your Cat",
-    "title_zh": "VCA：貓臨終的生活品質",
-    "authors": "VCA Animal Hospitals（LifeLearn）",
-    "source": "VCA",
-    "year": 2024,
-    "type": "educational",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "2024-08-14 更新。獸醫腫瘤科醫師 Alice Villalobos 設計的貓生活品質量表，用來衡量並調整安寧照護計畫（量表段）。七個類別 HHHHHMM：Hurt、Hunger、Hydration、Hygiene、Happiness、Mobility、More good days than bad，每項 1 到 10 分，10 最好；每項 5 分以上或總分超過 35，表示生活品質可接受、繼續臨終照護合理（量表段）。Hurt 包含呼吸順暢；Hunger 可先手餵；Hydration 可皮下補液；Hygiene 看能否梳理清潔；Happiness 看互動；Mobility 看能否自己移動；壞日子太多時生活品質受損（各類別段）。量表也能幫忙做安樂死決定（最後兩段）。",
-    "status": "pending_review",
-    "url": "https://vcahospitals.com/",
-    "url_verified": true,
-    "cited_by": [],
-    "home_only": "VCA"
   },
   "VCA-CAT-FOREIGN-BODIES": {
     "title": "Ingestion of Foreign Bodies in Cats",
@@ -5644,22 +4830,6 @@
       "cat-eye-ear-problems-taiwan"
     ]
   },
-  "VCA-CAT-ZOOMIES": {
-    "title": "Cat zoomies: Understanding these crazy bursts of energy",
-    "title_zh": "貓的 Zoomies：理解這陣瘋狂的精力爆發",
-    "authors": "VCA Animal Hospitals",
-    "source": "VCA Animal Hospitals",
-    "year": null,
-    "type": "educational",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "VCA 衛教頁（未標作者與日期）。Zoomies 是一陣陣狂熱的遊戲爆發，英文學名 FRAP（frenetic random activity periods），誘因仍不太清楚（開頭）。貓常在白天休息，到晚上累積了精力（Nocturnal habits and pent-up energy）。家貓仍保有跟蹤、追逐、撲的衝動，瘋跑時可能像在追想像中的對手（Predatory instincts）。偶爾發作屬正常；頻率或強度明顯改變時可能需要看獸醫（When to see a veterinarian）。頁面另有保健品販售區塊，正文為衛教內容。",
-    "status": "pending_review",
-    "url": "https://vcahospitals.com/",
-    "url_verified": true,
-    "cited_by": [],
-    "home_only": "VCA"
-  },
   "VCA-KITTEN-ZOOMIES": {
     "title": "Understanding Kitten Zoomies",
     "title_zh": "認識幼貓的 Zoomies",
@@ -5725,22 +4895,6 @@
     "cited_by": [],
     "home_only": "VCA"
   },
-  "VCA-CAT-MARKING-SPRAYING": {
-    "title": "Cat Behavior Problems - Marking and Spraying Behavior",
-    "title_zh": "貓的行為問題：標記與噴尿",
-    "authors": "Ellen Lindell, Debra Horwitz, Gary Landsberg（皆為獸醫行為專科醫師）",
-    "source": "VCA Animal Hospitals",
-    "year": 2026,
-    "type": "educational",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "貓的腳掌、臉頰、下巴、頭頂和尾巴根部有氣味腺；用臉頰磨蹭是一種標記，臉頰的費洛蒙似乎有安撫貓的作用，鼓勵臉部標記有助減少噴尿（費洛蒙段落）。在貓噴過尿的地方使用合成臉部費洛蒙（室內擴散器，或直接噴在噴尿處），可能減少噴尿、讓貓改用臉頰標記。作息改變、新的人或寵物、新家具、裝修都可能引發焦慮與標記；窗外的貓、多貓緊張也可能是原因（誘因段落）。持續在砂盆外排泄要先看獸醫，藥物可作為輔助。",
-    "status": "pending_review",
-    "url": "https://vcahospitals.com/",
-    "url_verified": true,
-    "cited_by": [],
-    "home_only": "VCA"
-  },
   "ICATCARE-SEIZURES-2025": {
     "title": "Seizures in cats",
     "title_zh": "貓的癲癇發作",
@@ -5756,22 +4910,6 @@
     "url_verified": true,
     "cited_by": [],
     "home_only": "iCatCare"
-  },
-  "VCA-AFTER-VACCINATION": {
-    "title": "Care for Your Pet After Vaccination",
-    "title_zh": "寵物打完疫苗後的照顧",
-    "authors": "Courtney Barnes, Ryan Llera, Rania Gollakner, Ernest Ward",
-    "source": "VCA Animal Hospitals",
-    "year": 2026,
-    "type": "educational",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "VCA 的疫苗後照顧說明（2026-04-17 更新，犬貓通用）。常見的輕微副作用有活動力下降（疲倦）、食慾變差、輕微發燒，很少需要就醫；任一症狀超過 24 小時，或寵物看起來非常不舒服，就通知獸醫（Minor side effects 段）。注射處的小硬塊應在 14 天內開始變小消失；鼻內疫苗的呼吸道症狀可能持續 2 到 4 天。虛脫或昏倒、呼吸困難、持續嚴重咳嗽、蕁麻疹、眼睛口鼻臉部腫脹、持續嘔吐或腹瀉屬於緊急狀況，要立即就醫（嚴重反應段）。",
-    "status": "pending_review",
-    "url": "https://vcahospitals.com/",
-    "url_verified": true,
-    "cited_by": [],
-    "home_only": "VCA"
   },
   "ICATCARE-SOCIAL-STRUCTURE": {
     "title": "The social structure of cat life",
@@ -6061,22 +5199,6 @@
       "cat-environment-enrichment-taiwan"
     ]
   },
-  "VCA-CAT-ARTHRITIS-SIGNS": {
-    "title": "14 signs your cat's arthritis is acting up",
-    "title_zh": "貓關節炎發作的 14 個徵兆",
-    "authors": "VCA Animal Hospitals",
-    "source": "VCA Animal Hospitals",
-    "year": null,
-    "type": "educational",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "VCA 衛教頁。關節炎徵兆清單包括：理毛變困難，毛況變差。",
-    "status": "pending_review",
-    "url": "https://vcahospitals.com/",
-    "url_verified": true,
-    "cited_by": [],
-    "home_only": "VCA"
-  },
   "HUMPHREY-2020-SLOW-BLINK": {
     "title": "The role of cat eye narrowing movements in cat-human communication",
     "title_zh": "貓瞇眼動作在人貓溝通中的角色",
@@ -6124,24 +5246,6 @@
     "cited_by": [],
     "home_only": "ASPCA"
   },
-  "ASPCA-DESTRUCTIVE-SCRATCHING": {
-    "title": "Destructive Scratching",
-    "title_zh": "破壞性抓撓",
-    "authors": "ASPCA",
-    "source": "ASPCA Pet Care",
-    "year": 2026,
-    "type": "educational",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "美國防止虐待動物協會（ASPCA）的衛教頁，頁面只有 2026 年的版權年，沒有標更新日期。貓會在玩耍和伸展時抓東西，也會用抓來標記地盤或威嚇其他貓；爪子要定期磨，抓的時候會把外層磨損的舊爪去掉，露出較新、較利的爪子。處理抓壞家具的方法，是教貓抓哪裡、抓什麼，不是阻止牠抓。每隻貓的偏好不同：有的喜歡平放的抓板，有的喜歡直立或斜放；有的喜歡直紋可以往下耙，有的喜歡橫紋可以勾；可以試瓦楞紙、地毯、木頭、麻繩、布料等材質，找出偏好之後，在家裡不同位置多放幾個同一類的。每隻貓都要穩固、用的時候不會移動或倒下的抓柱，多數貓也喜歡夠高、能把身體完全伸展開的。抓柱可以抹貓薄荷、掛玩具，放在貓會想爬上去的地方；不希望貓抓的東西就移開或蓋住，或在家具上、貓站著抓的地面貼雙面膠、放砂紙或倒放的塑膠地墊，並在旁邊放抓柱當替代。定期幫貓剪指甲；也可以考慮用黏的塑膠指甲套，約可維持 4 到 6 週。拍手或噴水嚇阻只能當最後手段，貓可能把這種驚嚇和人聯想在一起而怕人；需要時可以找合格的動物行為專家或獸醫行為專科。不要抓著貓的腳去磨抓柱，會嚇到牠，讓牠避開抓柱甚至避開人；抓舊、抓爛的愛用抓柱不要丟，貓偏好抓過的材質，也熟悉它的氣味和樣子。ASPCA 強烈反對幫貓去爪，去爪沒有證據能改善行為問題（包括對人或其他貓的攻擊），不應用來處理或預防行為問題。",
-    "status": "approved",
-    "url": "https://www.aspca.org/",
-    "url_verified": true,
-    "cited_by": [
-      "cat-environment-enrichment-taiwan"
-    ],
-    "home_only": "ASPCA"
-  },
   "ICATCARE-DENTAL-DISEASE": {
     "title": "Dental disease in cats",
     "title_zh": "iCatCare：貓的牙齒疾病",
@@ -6158,22 +5262,6 @@
     "cited_by": [],
     "home_only": "iCatCare"
   },
-  "VCA-DENTAL-DISEASE-CATS": {
-    "title": "Dental Disease in Cats",
-    "title_zh": "VCA：貓的牙齒疾病",
-    "authors": "VCA Animal Hospitals",
-    "source": "VCA",
-    "year": 2024,
-    "type": "educational",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "VCA 的貓牙齒疾病衛教頁。很多貓的牙齒疾病飼主察覺不到，有徵兆時可能是抓嘴、甩頭、下巴打顫、流口水、食物掉出來、吞嚥困難、口臭。減少牙菌斑和牙結石最有效的方法是每天刷牙，不可用人用牙膏。美國獸醫口腔健康委員會（VOHC）會評估牙科產品的效果，只有證實能減少牙菌斑或牙結石堆積的產品才拿得到它的標章，產品清單可在 vohc.org 查。完整口腔檢查要在全身麻醉下並拍口內 X 光，洗牙間隔由獸醫依個別狀況決定。",
-    "status": "pending_review",
-    "url": "https://vcahospitals.com/",
-    "url_verified": true,
-    "cited_by": [],
-    "home_only": "VCA"
-  },
   "WSAVA-CATS-VACCINATION-TABLE-2025": {
     "title": "Core and Non-Core Vaccines for Pet Cats (non-shelter) according to the 2024 guidelines for the vaccination of dogs and cats",
     "title_zh": "WSAVA 寵物貓核心與非核心疫苗一覽表",
@@ -6188,22 +5276,6 @@
     "url": "https://wsava.org/wp-content/uploads/2025/06/Cats-Vaccination-Table.pdf",
     "url_verified": true,
     "cited_by": []
-  },
-  "VCA-FATTY-LIVER-CAT": {
-    "title": "Hepatic Lipidosis in Cats (Fatty Liver Syndrome in Cats)",
-    "title_zh": "貓的脂肪肝（肝脂肪沉積症）",
-    "authors": "Tammy Hunter, Catherine Barnette, Ernest Ward（VCA Animal Hospitals／LifeLearn）",
-    "source": "VCA Animal Hospitals",
-    "year": 2023,
-    "type": "educational",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "VCA 給飼主的貓脂肪肝衛教頁（2023-02-13 更新）。脂肪肝是貓特有、也是貓最常見的肝病之一。典型的病例是貓連續三到四天幾乎沒吃東西，原本過重或肥胖的貓風險更高，多為中年貓，體重常已掉了至少四分之一。九成以上的貓背後另有讓牠不想吃的疾病，例如發炎性腸病、其他肝病、癌症、胰臟炎、焦慮、呼吸道疾病、糖尿病。不吃時身體快速分解脂肪供應能量，超過肝臟能處理的量，脂肪堆在肝細胞內外，讓肝功能更差；出現眼白或皮膚發黃的黃疸時，沒有快速積極治療會危及生命。診斷靠抽血看肝功能，或肝臟切片、細針抽吸。治療靠積極的營養支持，通常放食道或胃造口餵食管在家灌食，平均六到七週貓才會自己吃；同時可能用保肝、止吐藥並矯正電解質，頭幾天常住院打點滴；讓貓不吃的原發病也要治療。原發病能治好時預後相當不錯。",
-    "status": "pending_review",
-    "url": "https://vcahospitals.com/",
-    "url_verified": true,
-    "cited_by": [],
-    "home_only": "VCA"
   },
   "LY-PET-ADOPTION-2022": {
     "title": "寵物認養相關問題研析",
@@ -6733,24 +5805,6 @@
       "cat-environment-enrichment-taiwan"
     ],
     "home_only": "iCatCare"
-  },
-  "ASPCA-AGGRESSION-CATS": {
-    "title": "Aggression in Cats",
-    "title_zh": "貓的攻擊行為",
-    "authors": "ASPCA",
-    "source": "ASPCA",
-    "year": null,
-    "type": "educational",
-    "language": "en",
-    "open_access": true,
-    "abstract_zh": "美國防止虐待動物協會（ASPCA）的衛教頁，頁面未標日期，參考 Hetts 1999 年的寵物行為處置手冊（Pet Behavior Protocols）。頁面指出攻擊是動物行為專家遇到的第二常見貓行為問題，並依攻擊的目的分成貓與貓之間、恐懼或防衛、地盤、遊戲、轉向攻擊（redirected aggression）、撫摸引起、疼痛與易怒、母貓護幼、原因不明，以及掠食等類型。\n遊戲攻擊：2 歲以下的幼貓和年輕貓玩得粗魯很常見，這也是貓對飼主最常見的攻擊類型，動作包括跟蹤、追、埋伏、撲、咬等狩獵和玩耍動作。一般認為小貓在彼此玩耍時學會收斂咬力、揮爪時收起爪子，失去母貓或太早離乳的貓可能一直沒學會；長時間獨處又沒機會玩，或飼主拿手腳讓貓追咬，也可能促成遊戲攻擊。\n頁面強調每隻有攻擊行為的貓都需要先做醫療檢查。除了急性疼痛，骨關節問題、甲狀腺異常、腎上腺功能異常、認知功能障礙、神經疾病和感官退化都可能讓貓比較易怒、更具攻擊性，某些藥物也可能影響情緒。",
-    "status": "approved",
-    "url": "https://www.aspca.org/",
-    "url_verified": true,
-    "cited_by": [
-      "cat-environment-enrichment-taiwan"
-    ],
-    "home_only": "ASPCA"
   },
   "FELINEVMA-INTRO-NEW-CAT": {
     "title": "Step-by-Step Guide: How to Introduce a New Cat to Other Cats in Your Home",
@@ -8364,8 +7418,7 @@
     "open_access": true,
     "abstract_zh": "歐洲寵物食品業協會給製造商的營養指引，也是歐洲主管機關參考的文件（Introduction）。貓的完整食品營養素建議值分三種單位：每 100 公克乾物、每 1000 大卡代謝能、每百萬焦耳代謝能；表上是商業寵物食品的最低建議值，不是最低需求，也不是最理想的攝取量；成貓的數值由 NRC 2006 推算，假設 4 公斤的精實成貓（Tables III-4a,b,c 說明）。成貓（每日能量需求以每公斤代謝體重 75 大卡計）每 100 公克乾物：蛋白質 33.3 公克、脂肪 9 公克、鈣 0.53 公克、磷 0.35 公克、牛磺酸罐頭 0.27 公克、乾糧 0.13 公克；每 1000 大卡：蛋白質 83.3 公克、脂肪 22.5 公克、磷 0.85 公克；以每公斤代謝體重 100 大卡計，蛋白質降為每 100 公克乾物 25 公克；成貓鈣磷比的營養上限是 2 比 1（Table III-4a、III-4b）。代謝能的估算（NRC 2006 的四步驟公式，乾糧濕食都適用）：總能 = 5.7 × 粗蛋白% + 9.4 × 粗脂肪% + 4.1 ×（無氮抽出物% + 粗纖維%）；貓的能量消化率% = 87.9 − 0.88 × 乾物中的粗纖維%；消化能 = 總能 × 消化率 ÷ 100；貓的代謝能 = 消化能 − 0.77 × 粗蛋白%（7.2.2.2 a）。肉、內臟、乳製品等天然狀態的食物，貓的代謝能用 4 × 粗蛋白% + 8.5 × 粗脂肪% + 4 × 無氮抽出物% 估算（7.2.2.2 b）。比較研究發現，乾糧用 NRC 公式比修正 Atwater 法準，濕食兩種方法準確度差不多（7.2.2.2）。成貓每日能量需求：結紮或室內貓每公斤代謝體重（體重的 0.67 次方）52 到 75 大卡，4 公斤的貓約每公斤體重 35 到 45 大卡；活動量大的貓 100 大卡，4 公斤約每公斤 60 到 65 大卡；幼貓 4 個月以下是成貓維持需求的 2 到 2.5 倍，4 到 9 個月 1.75 到 2 倍，9 到 12 個月 1.5 倍；懷孕母貓每公斤代謝體重 140 大卡（Table VII-9、VII-10）。實際需求個體差異很大，受年齡、品種、活動量、環境溫度、體態等影響（7.2.3）。",
     "status": "pending_review",
-    "url": "https://europeanpetfood.org/nutritional-guidelines",
-    "pdf_url": "https://europeanpetfood.org/wp-content/uploads/2025/09/FEDIAF-Nutritional-Guidelines_2025-ONLINE.pdf",
+    "url": "https://europeanpetfood.org/wp-content/uploads/2025/09/FEDIAF-Nutritional-Guidelines_2025-ONLINE.pdf",
     "keywords": [
       "營養",
       "營養素建議值",
@@ -8387,8 +7440,7 @@
     "open_access": true,
     "abstract_zh": "寵物食品標示沒有可消化碳水化合物（糖與澱粉）這一項，可以用差數估算，稱為無氮抽出物：無氮抽出物% = 100 −（粗蛋白 + 粗脂肪 + 粗纖維 + 灰分 + 水分）。粗纖維分析會大幅低估膳食纖維，所以無氮抽出物通常高估可消化碳水化合物。可消化碳水化合物每公克約提供 3.5 到 4 大卡代謝能；犬貓唾液沒有澱粉酶，煮熟的澱粉可以被利用。",
     "status": "pending_review",
-    "url": "https://europeanpetfood.org/nutritional-guidelines",
-    "pdf_url": "https://europeanpetfood.org/wp-content/uploads/2022/03/FEDIAF_Carbohydrates-OnlineK.pdf",
+    "url": "https://europeanpetfood.org/wp-content/uploads/2022/03/FEDIAF_Carbohydrates-OnlineK.pdf",
     "keywords": [
       "碳水化合物",
       "無氮抽出物",
