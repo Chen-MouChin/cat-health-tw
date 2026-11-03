@@ -727,5 +727,146 @@
       "文獻庫會標出可以免費讀全文的文獻"
     ],
     "related": []
+  },
+  "Buffington": {
+    "term": "Buffington",
+    "full_en": "C. A. Tony Buffington",
+    "full_zh": "",
+    "category": "person",
+    "definition_zh": "美國俄亥俄州立大學的獸醫研究者，研究貓的特發性膀胱炎與壓力。他的團隊提出潘朵拉（Pandora）症候群的觀點，認為反覆發作的膀胱炎可能是全身壓力反應的一部分，膀胱只是其中一個出問題的地方，所以處理時把環境豐富化、減少壓力放在單純的膀胱用藥之前（BUFFINGTON-2014-PANDORA-FLUTD）。",
+    "key_points_zh": [
+      "2011 年提出、2014 年再整理潘朵拉症候群的觀點",
+      "同一隻貓可能同時有膀胱、腸胃、皮膚、行為等症狀",
+      "處理重點是環境調整與降低壓力"
+    ],
+    "related": [
+      "FIC"
+    ]
+  },
+  "Overley": {
+    "term": "Overley",
+    "full_en": "Overley B",
+    "full_zh": "",
+    "category": "person",
+    "definition_zh": "2005 年發表貓結紮時機和乳腺癌風險病例對照研究的第一作者，研究刊在美國獸醫內科學會的期刊。",
+    "key_points_zh": [
+      "6 個月前結紮，乳腺癌風險降低 91%",
+      "1 歲前結紮降低 86%",
+      "研究只給這兩個時間點的數字"
+    ],
+    "related": []
+  },
+  "Pedersen": {
+    "term": "Pedersen",
+    "full_en": "Pedersen NC",
+    "full_zh": "",
+    "category": "person",
+    "definition_zh": "美國加州大學戴維斯分校（UC Davis）的研究者，團隊 2019 年發表抗病毒藥 GS-441524 治療貓傳染性腹膜炎（FIP）的臨床試驗。",
+    "key_points_zh": [
+      "31 隻自然感染 FIP 的貓接受治療",
+      "完成首輪療程的 26 隻中有 8 隻復發",
+      "提高劑量再治療多數仍能成功"
+    ],
+    "related": [
+      "FIP"
+    ]
+  },
+  "Gandolfi": {
+    "term": "Gandolfi",
+    "full_en": "Gandolfi B",
+    "full_zh": "",
+    "category": "person",
+    "definition_zh": "貓遺傳學研究者，2016 年找到和蘇格蘭折耳貓折耳、骨軟骨發育不全有關的 TRPV4 基因突變，也發表過緬甸貓低血鉀、德文捲毛貓、柯尼斯捲毛貓的基因研究。",
+    "key_points_zh": [
+      "比較 44 隻折耳貓和 54 隻對照貓",
+      "折耳和骨骼疾病來自同一個顯性突變"
+    ],
+    "related": [
+      "TRPV4"
+    ]
+  },
+  "Fox": {
+    "term": "Fox",
+    "full_en": "Fox PR",
+    "full_zh": "",
+    "category": "person",
+    "definition_zh": "2018 年發表的 REVEAL 研究的第一作者。這是至今規模最大的貓肥厚型心肌病（HCM）國際追蹤研究，提供心衰竭與血栓長期風險的數字。",
+    "key_points_zh": [
+      "追蹤 1,008 隻 HCM 貓",
+      "心衰竭 10 年累計約 24%",
+      "動脈血栓栓塞 10 年累計約 11%"
+    ],
+    "related": [
+      "HCM"
+    ]
+  },
+  "Černá": {
+    "term": "Černá",
+    "full_en": "Černá P",
+    "full_zh": "",
+    "category": "person",
+    "definition_zh": "英國愛丁堡大學獸醫學院的研究者，2020 年和同事研究老貓認知功能障礙的夜間嚎叫，訪問 37 隻認知障礙老貓的飼主，也整理前人對盛行率的估計。",
+    "key_points_zh": [
+      "7 到 14 歲的貓約 28% 到 36% 受影響",
+      "15 歲以上約一半",
+      "超過六成飼主會被半夜吵醒"
+    ],
+    "related": []
+  },
+  "Blanchard": {
+    "term": "Blanchard",
+    "full_en": "Blanchard T",
+    "full_zh": "",
+    "category": "person",
+    "definition_zh": "2025 年發表貓狗認知功能障礙與營養補充系統性回顧的第一作者，整理出 DISHAA 六類徵象，也指出貓的對照試驗只有兩個、樣本很小。",
+    "key_points_zh": [
+      "11 到 14 歲的貓約三分之一有症狀",
+      "貓的試驗都是實驗室的貓，分別 8 隻和 16 隻"
+    ],
+    "related": [
+      "DISHAA"
+    ]
+  },
+  "Stella": {
+    "term": "Stella",
+    "full_en": "Stella JL",
+    "full_zh": "",
+    "category": "person",
+    "definition_zh": "2011 年和 Buffington 等人發表研究的第一作者：觀察健康貓與膀胱炎貓 77 週，發現照顧者更換、作息被打亂時，連健康的貓也會出現食量下降、在砂盆外大小便等生病行為。",
+    "key_points_zh": [
+      "健康貓和膀胱炎貓都受影響",
+      "研究中的貓都不超過 8 歲"
+    ],
+    "related": [
+      "Buffington"
+    ]
+  },
+  "Delgado": {
+    "term": "Delgado",
+    "full_en": "Delgado M",
+    "full_zh": "",
+    "category": "person",
+    "definition_zh": "美國加州大學戴維斯分校的貓行為研究者，2020 年和 Dantas 寫了一篇怎麼餵貓才能照顧行為與心理需求的回顧。",
+    "key_points_zh": [
+      "讓貓自己決定時，一天大約吃 8 到 16 餐",
+      "睡前餵一頓大餐可以減少夜間活動"
+    ],
+    "related": [
+      "Dantas"
+    ]
+  },
+  "Dantas": {
+    "term": "Dantas",
+    "full_en": "Dantas LMS",
+    "full_zh": "",
+    "category": "person",
+    "definition_zh": "美國喬治亞大學獸醫行為醫學門診的研究者，2020 年和 Delgado 寫了一篇怎麼餵貓才能照顧行為與心理需求的回顧。",
+    "key_points_zh": [
+      "讓貓自己決定時，一天大約吃 8 到 16 餐",
+      "益智餵食器的難度要配合貓的能力"
+    ],
+    "related": [
+      "Delgado"
+    ]
   }
 }
