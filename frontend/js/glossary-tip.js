@@ -27,6 +27,12 @@
       a.textContent = '在文獻庫看完整解釋';
       pop.appendChild(a);
     }
+    if (g.art) {
+      var b = document.createElement('a');
+      b.href = encodeURIComponent(g.art) + '.html';
+      b.textContent = '看本站的文章';
+      pop.appendChild(b);
+    }
   }
 
   function place(el) {
