@@ -1525,8 +1525,8 @@
     "type": "guideline",
     "language": "en",
     "open_access": false,
-    "abstract_zh": "WSAVA 肝臟標準化小組替犬貓肝病的組織學評估訂出全球共同標準，包括統一的命名、明確的組織學診斷條件，以及病程慢性度分期與嚴重度分級的定義（WSAVA 指引頁執行摘要）。全書章節涵蓋肝組織的採樣與處理、先天性門脈分流與門脈高壓的超音波判讀，以及循環、膽道、肝實質（含可逆性肝細胞損傷、肝炎與肝硬化、代謝性儲積疾病）與腫瘤性疾病的形態分類（ScienceDirect 目錄）。內容以切片的組織學為主，不是細胞學判讀標準。",
-    "status": "needs_review",
+    "abstract_zh": "WSAVA 肝臟標準化小組制定了犬貓肝臟疾病的國際診斷標準，旨在統一疾病命名、組織學診斷條件，以及相關病變的慢性度分期與嚴重度分級。2006 年出版的《WSAVA Standards for Clinical and Histological Diagnosis of Canine and Feline Liver Diseases》涵蓋肝組織採樣與處理、先天性門體分流及門脈高壓相關疾病的超音波評估，以及肝臟循環、膽道、肝實質和腫瘤性疾病的形態學分類。其中肝實質疾病包括可逆性肝細胞損傷、肝炎、肝硬化及代謝性儲積疾病等。這套標準以肝組織病理學為重要核心，並結合臨床檢查與影像學資訊。",
+    "status": "approved",
     "url": "https://www.sciencedirect.com/book/9780702027918/wsava-standards-for-clinical-and-histological-diagnosis-of-canine-and-feline-liver-diseases",
     "keywords": [
       "WSAVA"
@@ -4748,7 +4748,7 @@
     "language": "en",
     "open_access": true,
     "abstract_zh": "ASPCA 認養資源頁（頁面未標日期，2026-10-19 讀取）。引介要有耐心、慢慢來，無法預測兩隻貓合不合得來。第一步分開：新貓直接進一個安靜的房間，門保持關著，讓雙方聞得到、聽得到但看不到；每隻貓的空間都要有食物、水、砂盆、貓抓柱和躲藏處；原本的貓的環境與作息盡量不變，餵食時間照舊，不搬動砂盆、貓抓柱。分開期間在門邊給零食、陪玩，交換沾有對方氣味的寢具或毛巾；原本的貓沒有壓力跡象、新貓自在探索、吃得好、會用砂盆時，可交換雙方的位置。第二步：沒有哈氣低吼、雙方吃喝排泄正常才讓牠們隔著嬰兒柵欄或門縫互看，每次幾分鐘、在放鬆時結束，接下來幾天在屏障附近餵飯、給零食、陪玩，慢慢拉長互看時間。第三步：完全放鬆後才在監督下短時間相處，逐次拉長；準備大毛巾，打架時不要碰貓，用毛巾擋住視線再引開，退回第二步約一週。多貓家庭的資源要多份、分散放，砂盆至少和貓一樣多、最好多一個；看醫生回來的貓先分開至少一天。",
-    "status": "pending_review",
+    "status": "approved",
     "url": "https://www.aspca.org/",
     "url_verified": true,
     "cited_by": [],
@@ -6631,7 +6631,9 @@
       "enrichment"
     ],
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-environment-enrichment-taiwan"
+    ]
   },
   "AAHA-CAT-BEHAVIOR-PROBLEMS": {
     "title": "How Can I Fix My Cat's Behavior Problems?",
@@ -6658,7 +6660,9 @@
       "enrichment"
     ],
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-environment-enrichment-taiwan"
+    ]
   },
   "CATFRIENDLY-STALKING-HUNTING": {
     "title": "Stalking & Hunting — Cat Friendly Homes",
@@ -6713,7 +6717,9 @@
       "vet_visit"
     ],
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-environment-enrichment-taiwan"
+    ]
   },
   "CATFRIENDLY-8-SIGNS": {
     "title": "8 Signs That You Should Visit the Veterinarian — Cat Friendly Homes",
@@ -6741,7 +6747,9 @@
       "senior_care"
     ],
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-environment-enrichment-taiwan"
+    ]
   },
   "CATFRIENDLY-ABNORMAL-GROOMING": {
     "title": "Abnormal Grooming — Cat Friendly Homes",
@@ -6769,7 +6777,9 @@
       "behavior"
     ],
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-environment-enrichment-taiwan"
+    ]
   },
   "CATFRIENDLY-HAIRBALLS": {
     "title": "Hairballs — Cat Friendly Homes",
@@ -6797,7 +6807,9 @@
       "gastrointestinal"
     ],
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-treats-supplements-taiwan"
+    ]
   },
   "CANNON-2013-HAIRBALLS": {
     "title": "Hair balls in cats: a normal nuisance or a sign that something is wrong?",
@@ -6828,7 +6840,9 @@
     "doi": "10.1177/1098612X12470342",
     "pmid": "23254238",
     "pmcid": "PMC10816490",
-    "cited_by": []
+    "cited_by": [
+      "cat-environment-enrichment-taiwan"
+    ]
   },
   "RAMOS-2009-HUMAN-DIRECTED-AGGRESSION": {
     "title": "Human directed aggression in Brazilian domestic cats: owner reported prevalence, contexts and risk factors",
@@ -6855,7 +6869,9 @@
     "doi": "10.1016/j.jfms.2009.04.006",
     "pmid": "19577496",
     "pmcid": "PMC11135496",
-    "cited_by": []
+    "cited_by": [
+      "cat-environment-enrichment-taiwan"
+    ]
   },
   "MCLAUGHLIN-1988-TEAR-GLANDS-CATS": {
     "title": "Effect of removal of lacrimal and third eyelid glands on Schirmer tear test results in cats",
@@ -6880,7 +6896,9 @@
     ],
     "url_verified": true,
     "pmid": "3192460",
-    "cited_by": []
+    "cited_by": [
+      "cat-eye-ear-problems-taiwan"
+    ]
   },
   "CHAHORY-2004-NICTITANS-PROLAPSE-CATS": {
     "title": "Three cases of prolapse of the nictitans gland in cats",
@@ -6907,7 +6925,9 @@
     "url_verified": true,
     "doi": "10.1111/j.1463-5224.2004.04039.x",
     "pmid": "15511284",
-    "cited_by": []
+    "cited_by": [
+      "cat-eye-ear-problems-taiwan"
+    ]
   },
   "JERZSELE-2018-XYLITOL-CATS": {
     "title": "Effects of p.o. administered xylitol in cats",
