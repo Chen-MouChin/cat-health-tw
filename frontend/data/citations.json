@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "貓健康站 literature database",
-    "total": 323
+    "total": 328
   },
   "WILHELMY-2016-BREED-COAT-BEHAVIOR": {
     "title": "Behavioral associations with breed, coat type, and eye color in single-breed cats",
@@ -29,7 +29,9 @@
     ],
     "url_verified": true,
     "doi": "10.1016/j.jveb.2016.03.009",
-    "cited_by": []
+    "cited_by": [
+      "mixed-breed-cats-taiwan"
+    ]
   },
   "LITCHFIELD-2017-FELINE-FIVE": {
     "title": "The 'Feline Five': An exploration of personality in pet cats (Felis catus)",
@@ -85,7 +87,9 @@
     "url_verified": true,
     "doi": "10.1038/s41598-019-44324-x",
     "pmid": "31138836",
-    "cited_by": []
+    "cited_by": [
+      "mixed-breed-cats-taiwan"
+    ]
   },
   "ISFM-DIABETES-2015": {
     "title": "ISFM Consensus Guidelines on the Practical Management of Diabetes Mellitus in Cats",
@@ -111,7 +115,10 @@
       "diabetes"
     ],
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-diabetes-care",
+      "cat-life-stages-care-taiwan"
+    ]
   },
   "ABCD-FIP-2019": {
     "title": "ABCD Guidelines on Feline Infectious Peritonitis",
@@ -137,7 +144,9 @@
       "fip"
     ],
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-fip-guide-taiwan"
+    ]
   },
   "AAFP-FIP-DIAGNOSIS-2022": {
     "title": "2022 AAFP/EveryCat Feline Infectious Peritonitis Diagnosis Guidelines",
@@ -167,7 +176,9 @@
     "doi": "10.1177/1098612X221118761",
     "pmid": "36002137",
     "pmcid": "PMC10812230",
-    "cited_by": []
+    "cited_by": [
+      "cat-fip-guide-taiwan"
+    ]
   },
   "ACVIM-HCM-2020": {
     "title": "ACVIM Consensus Statement: Guidelines for the Classification, Diagnosis, and Management of Cardiomyopathies in Cats",
@@ -193,6 +204,9 @@
       "hcm"
     ],
     "url_verified": true,
+    "doi": "10.1111/jvim.15745",
+    "pmid": "32243654",
+    "pmcid": "PMC7255676",
     "cited_by": []
   },
   "AAFP-HYPERTHYROIDISM-2016": {
@@ -223,7 +237,13 @@
     "doi": "10.1177/1098612X16643252",
     "pmid": "27143042",
     "pmcid": "PMC11132203",
-    "cited_by": []
+    "cited_by": [
+      "cat-ckd-complete-guide",
+      "cat-diabetes-care",
+      "cat-hyperthyroidism-senior",
+      "cat-life-stages-care-taiwan",
+      "cat-zoomies-night-activity"
+    ]
   },
   "AAFP-VACCINATION-2020": {
     "title": "2020 AAFP/AAHA Feline Vaccination Guidelines",
@@ -254,8 +274,14 @@
     "pmid": "32845224",
     "pmcid": "PMC11135662",
     "cited_by": [
+      "cat-adoption-guide-taiwan",
+      "cat-cancer-tumors-guide",
       "cat-eye-ear-problems-taiwan",
-      "fiv-felv-management-taiwan"
+      "cat-leaving-home-taiwan",
+      "fiv-felv-management-taiwan",
+      "kitten-care-complete-taiwan",
+      "mixed-breed-cats-taiwan",
+      "new-cat-first-week-guide"
     ]
   },
   "AAFP-RETROVIRUS-2020": {
@@ -288,8 +314,12 @@
     "pmid": "31916872",
     "pmcid": "PMC11135720",
     "cited_by": [
+      "cat-adoption-guide-taiwan",
+      "cat-indoor-vs-outdoor-taiwan",
       "cat-neutering-aftercare-taiwan",
-      "fiv-felv-management-taiwan"
+      "fiv-felv-management-taiwan",
+      "mixed-breed-cats-taiwan",
+      "should-i-adopt-cat-decision-taiwan"
     ]
   },
   "AAFP-SENIOR-2021": {
@@ -318,10 +348,18 @@
     ],
     "url_verified": true,
     "cited_by": [
+      "cat-adoption-guide-taiwan",
+      "cat-ckd-complete-guide",
+      "cat-cognitive-dysfunction",
+      "cat-end-of-life-care-taiwan",
       "cat-eye-ear-problems-taiwan",
       "cat-food-by-life-stage",
+      "cat-ibd-intestinal-disease",
+      "cat-inappropriate-elimination",
+      "cat-life-stages-care-taiwan",
       "cat-litter-box-guide",
-      "cat-neutering-aftercare-taiwan"
+      "cat-neutering-aftercare-taiwan",
+      "cat-zoomies-night-activity"
     ]
   },
   "AAFP-DENTAL-2025": {
@@ -350,7 +388,9 @@
     ],
     "url_verified": true,
     "cited_by": [
-      "cat-food-selection-taiwan"
+      "cat-dental-health-taiwan",
+      "cat-food-selection-taiwan",
+      "cat-life-stages-care-taiwan"
     ]
   },
   "AAFP-NSAID-2024": {
@@ -382,7 +422,10 @@
     "doi": "10.1177/1098612X241241951",
     "pmid": "38587872",
     "pmcid": "PMC11103309",
-    "cited_by": []
+    "cited_by": [
+      "cat-life-stages-care-taiwan",
+      "scottish-fold-breed-guide-taiwan"
+    ]
   },
   "AAFP-NUTRITION-2018": {
     "title": "Feline feeding programs: addressing behavioral needs to improve feline health and wellbeing",
@@ -414,7 +457,12 @@
     "cited_by": [
       "cat-environment-enrichment-taiwan",
       "cat-food-by-life-stage",
-      "cat-food-selection-taiwan"
+      "cat-food-selection-taiwan",
+      "cat-hepatic-lipidosis",
+      "cat-life-stages-care-taiwan",
+      "cat-obesity-weight-management",
+      "cat-zoomies-night-activity",
+      "kitten-care-complete-taiwan"
     ]
   },
   "AAFP-FLUID-2013": {
@@ -472,9 +520,15 @@
     ],
     "url_verified": true,
     "cited_by": [
+      "cat-anxiety-stress-management",
+      "cat-cognitive-dysfunction",
+      "cat-inappropriate-elimination",
       "cat-litter-box-guide",
       "cat-neutering-aftercare-taiwan",
-      "male-cat-urethral-obstruction"
+      "cat-pheromone-products-guide",
+      "male-cat-urethral-obstruction",
+      "multi-cat-household-taiwan",
+      "renting-with-cats-taiwan"
     ]
   },
   "AAFP-HOSPICE-2023": {
@@ -506,7 +560,12 @@
     "doi": "10.1177/1098612X231201683",
     "pmid": "37768060",
     "pmcid": "PMC10812026",
-    "cited_by": []
+    "cited_by": [
+      "cat-cancer-tumors-guide",
+      "cat-end-of-life-care-taiwan",
+      "cat-life-stages-care-taiwan",
+      "cat-grief-bereavement-guide"
+    ]
   },
   "CORNELL-CKD": {
     "title": "Chronic Kidney Disease — Cornell Feline Health Center",
@@ -532,7 +591,13 @@
     ],
     "url_verified": true,
     "cited_by": [
-      "cat-food-by-life-stage"
+      "cat-ckd-complete-guide",
+      "cat-cognitive-dysfunction",
+      "cat-diabetes-care",
+      "cat-end-of-life-care-taiwan",
+      "cat-food-by-life-stage",
+      "cat-hyperthyroidism-senior",
+      "cat-life-stages-care-taiwan"
     ]
   },
   "CORNELL-DIABETES": {
@@ -559,7 +624,14 @@
     ],
     "url_verified": true,
     "cited_by": [
-      "cat-food-selection-taiwan"
+      "cat-cancer-tumors-guide",
+      "cat-cognitive-dysfunction",
+      "cat-diabetes-care",
+      "cat-food-selection-taiwan",
+      "cat-ibd-intestinal-disease",
+      "cat-inappropriate-elimination",
+      "cat-life-stages-care-taiwan",
+      "cat-obesity-weight-management"
     ]
   },
   "CORNELL-FLUTD": {
@@ -587,11 +659,15 @@
     ],
     "url_verified": true,
     "cited_by": [
+      "cat-anxiety-stress-management",
+      "cat-cognitive-dysfunction",
       "cat-environment-enrichment-taiwan",
       "cat-food-selection-taiwan",
+      "cat-inappropriate-elimination",
       "cat-litter-box-guide",
       "cat-neutering-aftercare-taiwan",
-      "male-cat-urethral-obstruction"
+      "male-cat-urethral-obstruction",
+      "new-cat-first-week-guide"
     ]
   },
   "CORNELL-HYPERTHYROIDISM": {
@@ -618,7 +694,12 @@
       "hyperthyroidism"
     ],
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-cognitive-dysfunction",
+      "cat-hyperthyroidism-senior",
+      "cat-life-stages-care-taiwan",
+      "cat-zoomies-night-activity"
+    ]
   },
   "CORNELL-HCM": {
     "title": "Hypertrophic Cardiomyopathy — Cornell Feline Health Center",
@@ -644,7 +725,11 @@
       "hcm"
     ],
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-hyperthyroidism-senior",
+      "mixed-breed-cats-taiwan",
+      "should-i-adopt-cat-decision-taiwan"
+    ]
   },
   "WSAVA-VACCINATION-2024": {
     "title": "WSAVA Guidelines for the Vaccination of Dogs and Cats (2024 Update)",
@@ -675,7 +760,11 @@
     "doi": "10.1111/jsap.13718",
     "pmid": "38568777",
     "cited_by": [
-      "fiv-felv-management-taiwan"
+      "cat-cancer-tumors-guide",
+      "cat-leaving-home-taiwan",
+      "cat-life-stages-care-taiwan",
+      "fiv-felv-management-taiwan",
+      "kitten-care-complete-taiwan"
     ]
   },
   "WSAVA-NUTRITION-2011": {
@@ -708,7 +797,10 @@
     "pmid": "21649660",
     "cited_by": [
       "cat-food-by-life-stage",
-      "cat-food-selection-taiwan"
+      "cat-food-selection-taiwan",
+      "cat-leaving-home-taiwan",
+      "cat-life-stages-care-taiwan",
+      "cat-obesity-weight-management"
     ]
   },
   "ASPCA-TOXIC-PLANTS": {
@@ -857,7 +949,10 @@
     "keywords": [],
     "disease_tags": [],
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-anxiety-stress-management",
+      "cat-pheromone-products-guide"
+    ]
   },
   "AAFP-2022-ISFM-AAFP-CAT-FRIENDLY-VETERINARY-E-2022": {
     "title": "2022 ISFM/AAFP Cat Friendly Veterinary Environment Guidelines",
@@ -879,7 +974,10 @@
     "doi": "10.1177/1098612X221128763",
     "pmid": "36259498",
     "pmcid": "PMC10845436",
-    "cited_by": []
+    "cited_by": [
+      "cat-leaving-home-taiwan",
+      "cat-pheromone-products-guide"
+    ]
   },
   "AAFP-2022-AAFP-AAHA-ANTIMICROBIAL-STEWARDSHIP-2022": {
     "title": "2022 AAFP/AAHA Antimicrobial Stewardship Guidelines",
@@ -935,8 +1033,17 @@
     "disease_tags": [],
     "url_verified": true,
     "cited_by": [
+      "cat-adoption-guide-taiwan",
+      "cat-cancer-tumors-guide",
+      "cat-ckd-complete-guide",
       "cat-food-by-life-stage",
-      "cat-neutering-aftercare-taiwan"
+      "cat-life-stages-care-taiwan",
+      "cat-neutering-aftercare-taiwan",
+      "cat-obesity-weight-management",
+      "kitten-care-complete-taiwan",
+      "new-cat-first-week-guide",
+      "rehoming-cat-responsibly-taiwan",
+      "should-i-adopt-cat-decision-taiwan"
     ]
   },
   "AAFP-2019-ZOONOSES-2019": {
@@ -959,7 +1066,9 @@
     "doi": "10.1177/1098612X19880436",
     "pmid": "31613173",
     "pmcid": "PMC10814210",
-    "cited_by": []
+    "cited_by": [
+      "cat-toxoplasma-pregnancy"
+    ]
   },
   "AAFP-2018-FELINE-ANESTHESIA-2018": {
     "title": "2018 Feline Anesthesia",
@@ -1035,9 +1144,22 @@
     "disease_tags": [],
     "url_verified": true,
     "cited_by": [
+      "cat-adoption-guide-taiwan",
+      "cat-aggression-causes-treatment",
+      "cat-anxiety-stress-management",
+      "cat-cognitive-dysfunction",
       "cat-environment-enrichment-taiwan",
+      "cat-hepatic-lipidosis",
+      "cat-inappropriate-elimination",
+      "cat-indoor-vs-outdoor-taiwan",
+      "cat-leaving-home-taiwan",
       "cat-litter-box-guide",
-      "male-cat-urethral-obstruction"
+      "cat-obesity-weight-management",
+      "cat-pheromone-products-guide",
+      "cat-zoomies-night-activity",
+      "male-cat-urethral-obstruction",
+      "new-cat-first-week-guide",
+      "should-i-adopt-cat-decision-taiwan"
     ]
   },
   "AAFP-2012-FELINE-FRIENDLY-NURSING-CARE-2012": {
@@ -1060,7 +1182,10 @@
     "doi": "10.1177/1098612X12445002",
     "pmid": "22511476",
     "pmcid": "PMC11132257",
-    "cited_by": []
+    "cited_by": [
+      "cat-leaving-home-taiwan",
+      "cat-pheromone-products-guide"
+    ]
   },
   "AAFP-2006-BARTONELLA-SPP-2006": {
     "title": "American Association of Feline Practitioners 2006 Panel report on diagnosis, treatment, and prevention of Bartonella spp. infections",
@@ -1098,7 +1223,16 @@
     "disease_tags": [],
     "url_verified": true,
     "cited_by": [
-      "cat-environment-enrichment-taiwan"
+      "cat-adoption-guide-taiwan",
+      "cat-cognitive-dysfunction",
+      "cat-environment-enrichment-taiwan",
+      "cat-inappropriate-elimination",
+      "cat-zoomies-night-activity",
+      "kitten-care-complete-taiwan",
+      "kitten-socialization",
+      "mixed-breed-cats-taiwan",
+      "renting-with-cats-taiwan",
+      "should-i-adopt-cat-decision-taiwan"
     ]
   },
   "CORNELL-ASPERGILLOSIS-2024": {
@@ -1171,7 +1305,11 @@
     "keywords": [],
     "disease_tags": [],
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-indoor-vs-outdoor-taiwan",
+      "cat-life-stages-care-taiwan",
+      "new-cat-first-week-guide"
+    ]
   },
   "CORNELL-CORNELL-VETERINARY-EXPERTS-ADDRESS-FELIN-2024": {
     "title": "Cornell Veterinary Experts Address Feline Nutrition",
@@ -1225,7 +1363,9 @@
     "keywords": [],
     "disease_tags": [],
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-fip-guide-taiwan"
+    ]
   },
   "CORNELL-FELINE-HEAT-SAFETY-2024": {
     "title": "Feline heat safety",
@@ -1243,7 +1383,9 @@
     "keywords": [],
     "disease_tags": [],
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-indoor-vs-outdoor-taiwan"
+    ]
   },
   "CORNELL-WARNING-SIGNS-OF-CANCER-2024": {
     "title": "Warning signs of cancer",
@@ -1261,7 +1403,13 @@
     "keywords": [],
     "disease_tags": [],
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-cancer-tumors-guide",
+      "cat-end-of-life-care-taiwan",
+      "cat-hepatic-lipidosis",
+      "cat-ibd-intestinal-disease",
+      "cat-life-stages-care-taiwan"
+    ]
   },
   "CORNELL-GRIEVING-THE-LOSS-OF-YOUR-CAT-2024": {
     "title": "Grieving the Loss of Your Cat",
@@ -1279,7 +1427,10 @@
     "keywords": [],
     "disease_tags": [],
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-end-of-life-care-taiwan",
+      "cat-grief-bereavement-guide"
+    ]
   },
   "CORNELL-HISTOPLASMOSIS-2024": {
     "title": "Histoplasmosis",
@@ -1316,6 +1467,7 @@
     "disease_tags": [],
     "url_verified": true,
     "cited_by": [
+      "cat-end-of-life-care-taiwan",
       "cat-food-selection-taiwan",
       "male-cat-urethral-obstruction"
     ]
@@ -1337,7 +1489,11 @@
     "disease_tags": [],
     "url_verified": true,
     "cited_by": [
-      "cat-eye-ear-problems-taiwan"
+      "cat-cancer-tumors-guide",
+      "cat-eye-ear-problems-taiwan",
+      "cat-leaving-home-taiwan",
+      "mixed-breed-cats-taiwan",
+      "new-cat-first-week-guide"
     ]
   },
   "CORNELL-SAFE-TOYS-AND-GIFTS-2024": {
@@ -1356,7 +1512,9 @@
     "keywords": [],
     "disease_tags": [],
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "kitten-care-complete-taiwan"
+    ]
   },
   "CORNELL-SK-ELIZABETH-CAN-I-CATCH-FIV-FROM-MY-CAT-2024": {
     "title": "Ask Elizabeth: Can I catch FIV from my cat?",
@@ -1410,7 +1568,9 @@
     "keywords": [],
     "disease_tags": [],
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-indoor-vs-outdoor-taiwan"
+    ]
   },
   "CORNELL-FELINE-PANCREATITIS-SERIOUS-2024": {
     "title": "Feline Pancreatitis: Serious",
@@ -1493,7 +1653,9 @@
     "url_verified": true,
     "doi": "10.1111/j.1939-1676.2009.0443.x",
     "pmid": "20391635",
-    "cited_by": []
+    "cited_by": [
+      "cat-ibd-intestinal-disease"
+    ]
   },
   "WSAVA-HEREDITARY-DISEASE-GUIDELINES-2022": {
     "title": "The Role of Health-Conscious Breeding and Genetic Testing in Reducing the Impact of Hereditary Disease: A Position Paper from the WSAVA Hereditary Disease Committee",
@@ -1535,7 +1697,9 @@
     "url_verified": true,
     "doi": null,
     "pmid": null,
-    "cited_by": []
+    "cited_by": [
+      "cat-hepatic-lipidosis"
+    ]
   },
   "WSAVA-MICROCHIP-IDENTIFICATION-GUIDE-2022": {
     "title": "Microchip Identification Guidelines",
@@ -1576,7 +1740,9 @@
     "disease_tags": [],
     "url_verified": true,
     "doi": "10.1111/jsap.13566",
-    "cited_by": []
+    "cited_by": [
+      "cat-zoomies-night-activity"
+    ]
   },
   "WSAVA-PROFESSIONAL-WELLNESS-GUIDELIN-2022": {
     "title": "WSAVA professional wellness guidelines",
@@ -1706,7 +1872,9 @@
     "doi": "10.1177/1098612X19825701",
     "pmid": "30755068",
     "pmcid": "PMC6435921",
-    "cited_by": []
+    "cited_by": [
+      "cat-fip-guide-taiwan"
+    ]
   },
   "FOX-2018-HCM-REVEAL": {
     "title": "International collaborative study to assess cardiovascular risk and evaluate long-term health in cats with preclinical hypertrophic cardiomyopathy and apparently healthy cats: The REVEAL Study",
@@ -1766,8 +1934,11 @@
     "pmid": "26936494",
     "pmcid": "PMC11148907",
     "cited_by": [
+      "cat-ckd-complete-guide",
+      "cat-end-of-life-care-taiwan",
       "cat-food-by-life-stage",
-      "cat-food-selection-taiwan"
+      "cat-food-selection-taiwan",
+      "cat-life-stages-care-taiwan"
     ]
   },
   "BUFFINGTON-2014-PANDORA-FLUTD": {
@@ -1802,6 +1973,8 @@
     "pmid": "24794035",
     "pmcid": "PMC11104043",
     "cited_by": [
+      "cat-anxiety-stress-management",
+      "cat-inappropriate-elimination",
       "cat-litter-box-guide",
       "male-cat-urethral-obstruction"
     ]
@@ -1834,7 +2007,10 @@
     "url_verified": true,
     "doi": "10.5326/JAAHA-MS-6822",
     "pmid": "29314873",
-    "cited_by": []
+    "cited_by": [
+      "cat-diabetes-care",
+      "cat-obesity-weight-management"
+    ]
   },
   "OVERLEY-2005-FELINE-MAMMARY": {
     "title": "Association between ovariohysterectomy and feline mammary carcinoma",
@@ -1865,7 +2041,10 @@
     "doi": "10.1111/j.1939-1676.2005.tb02727.x",
     "pmid": "16095174",
     "cited_by": [
-      "cat-neutering-aftercare-taiwan"
+      "cat-adoption-guide-taiwan",
+      "cat-cancer-tumors-guide",
+      "cat-neutering-aftercare-taiwan",
+      "kitten-care-complete-taiwan"
     ]
   },
   "TW-ANIMAL-PROTECTION-ACT": {
@@ -1893,9 +2072,17 @@
     ],
     "url_verified": true,
     "cited_by": [
+      "cat-adoption-guide-taiwan",
       "cat-food-by-life-stage",
       "cat-food-selection-taiwan",
-      "cat-neutering-aftercare-taiwan"
+      "cat-laws-taiwan",
+      "cat-leaving-home-taiwan",
+      "cat-neutering-aftercare-taiwan",
+      "mixed-breed-cats-taiwan",
+      "rehoming-cat-responsibly-taiwan",
+      "renting-with-cats-taiwan",
+      "scottish-fold-breed-guide-taiwan",
+      "should-i-adopt-cat-decision-taiwan"
     ]
   },
   "MOA-PET-POPULATION-2021": {
@@ -1920,7 +2107,9 @@
       "statistics"
     ],
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "mixed-breed-cats-taiwan"
+    ]
   },
   "LY-PET-HOUSING-2017": {
     "title": "公寓大廈不得禁止飼養寵物議題之研析",
@@ -1945,7 +2134,11 @@
       "law"
     ],
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-adoption-guide-taiwan",
+      "cat-laws-taiwan",
+      "renting-with-cats-taiwan"
+    ]
   },
   "MOA-CAT-REGISTRATION-2024": {
     "title": "增列貓需寵物登記，明年1/1起開始辦理",
@@ -1972,7 +2165,14 @@
     ],
     "url_verified": true,
     "cited_by": [
-      "cat-neutering-aftercare-taiwan"
+      "cat-adoption-guide-taiwan",
+      "cat-laws-taiwan",
+      "cat-neutering-aftercare-taiwan",
+      "kitten-care-complete-taiwan",
+      "kitten-socialization",
+      "mixed-breed-cats-taiwan",
+      "rehoming-cat-responsibly-taiwan",
+      "renting-with-cats-taiwan"
     ]
   },
   "APHIA-CAT-RABIES-2025": {
@@ -2002,7 +2202,15 @@
     ],
     "url_verified": true,
     "cited_by": [
-      "cat-neutering-aftercare-taiwan"
+      "cat-adoption-guide-taiwan",
+      "cat-aggression-causes-treatment",
+      "cat-indoor-vs-outdoor-taiwan",
+      "cat-laws-taiwan",
+      "cat-leaving-home-taiwan",
+      "cat-life-stages-care-taiwan",
+      "cat-neutering-aftercare-taiwan",
+      "kitten-care-complete-taiwan",
+      "rehoming-cat-responsibly-taiwan"
     ]
   },
   "GANDOLFI-2016-TRPV4": {
@@ -2032,7 +2240,9 @@
     "url_verified": true,
     "doi": "10.1016/j.joca.2016.03.019",
     "pmid": "27063440",
-    "cited_by": []
+    "cited_by": [
+      "scottish-fold-breed-guide-taiwan"
+    ]
   },
   "GUNN-MOORE-2007-FCDS": {
     "title": "Cognitive dysfunction and the neurobiology of ageing in cats",
@@ -2076,7 +2286,9 @@
     "status": "approved",
     "url": "https://www.aspca.org/",
     "url_verified": true,
-    "cited_by": [],
+    "cited_by": [
+      "barf-raw-food-taiwan"
+    ],
     "home_only": "ASPCA"
   },
   "AAHA-FLUID-2024": {
@@ -2099,7 +2311,10 @@
       "過度輸液"
     ],
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-ckd-complete-guide",
+      "cat-hepatic-lipidosis"
+    ]
   },
   "WSAVA-RAW-MEAT-2020": {
     "title": "WSAVA Global Nutrition Committee Statement on Risks of Raw Meat-Based Diets",
@@ -2123,7 +2338,9 @@
     ],
     "url_verified": true,
     "cited_by": [
-      "cat-food-selection-taiwan"
+      "barf-raw-food-taiwan",
+      "cat-food-selection-taiwan",
+      "cat-toxoplasma-pregnancy"
     ]
   },
   "FREDRIKSSON-AHOMAA-2017-RMBD": {
@@ -2148,7 +2365,9 @@
     ],
     "url_verified": true,
     "doi": "10.3390/vetsci4030033",
-    "cited_by": []
+    "cited_by": [
+      "barf-raw-food-taiwan"
+    ]
   },
   "AAFCO-PFLM": {
     "title": "Introducing the New Model Pet Food and Specialty Pet Food Regulations (Pet Food Label Modernization)",
@@ -2196,7 +2415,11 @@
     "url_verified": true,
     "doi": "10.1371/journal.pone.0018448",
     "pmid": "21525994",
-    "cited_by": []
+    "cited_by": [
+      "cat-anxiety-stress-management",
+      "cat-inappropriate-elimination",
+      "cat-pheromone-products-guide"
+    ]
   },
   "VITALE-2018-PHEROMONES": {
     "title": "Tools for managing feline problem behaviors: Pheromone therapy",
@@ -2219,7 +2442,13 @@
     "url_verified": true,
     "doi": "10.1177/1098612X18806759",
     "pmid": "30375946",
-    "cited_by": []
+    "cited_by": [
+      "cat-aggression-causes-treatment",
+      "cat-anxiety-stress-management",
+      "cat-inappropriate-elimination",
+      "cat-pheromone-products-guide",
+      "multi-cat-household-taiwan"
+    ]
   },
   "STELLA-2011-SICKNESS-BEHAVIOR": {
     "title": "Sickness behaviors in response to unusual external events in healthy cats and cats with feline interstitial cystitis",
@@ -2241,7 +2470,10 @@
     ],
     "url_verified": true,
     "pmid": "21194324",
-    "cited_by": []
+    "cited_by": [
+      "cat-anxiety-stress-management",
+      "kitten-socialization"
+    ]
   },
   "AAFP-INTERCAT-2024": {
     "title": "2024 AAFP Intercat Tension Guidelines: Recognition, Prevention and Management",
@@ -2263,7 +2495,13 @@
     ],
     "url_verified": true,
     "cited_by": [
-      "cat-environment-enrichment-taiwan"
+      "cat-aggression-causes-treatment",
+      "cat-anxiety-stress-management",
+      "cat-environment-enrichment-taiwan",
+      "cat-pheromone-products-guide",
+      "kitten-socialization",
+      "multi-cat-household-taiwan",
+      "new-cat-first-week-guide"
     ]
   },
   "IRIS-CKD-2026": {
@@ -2293,7 +2531,10 @@
     ],
     "url_verified": true,
     "cited_by": [
-      "cat-eye-ear-problems-taiwan"
+      "cat-ckd-complete-guide",
+      "cat-end-of-life-care-taiwan",
+      "cat-eye-ear-problems-taiwan",
+      "cat-life-stages-care-taiwan"
     ]
   },
   "IRIS-CKD-TREATMENT-2026": {
@@ -2324,8 +2565,11 @@
     ],
     "url_verified": true,
     "cited_by": [
+      "cat-ckd-complete-guide",
+      "cat-end-of-life-care-taiwan",
       "cat-food-by-life-stage",
-      "cat-food-selection-taiwan"
+      "cat-food-selection-taiwan",
+      "cat-life-stages-care-taiwan"
     ]
   },
   "CORNELL-HOUSE-SOILING": {
@@ -2349,6 +2593,8 @@
     ],
     "url_verified": true,
     "cited_by": [
+      "cat-anxiety-stress-management",
+      "cat-inappropriate-elimination",
       "cat-litter-box-guide"
     ]
   },
@@ -2375,7 +2621,11 @@
       "statistics"
     ],
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-adoption-guide-taiwan",
+      "cat-laws-taiwan",
+      "mixed-breed-cats-taiwan"
+    ]
   },
   "MOA-PET-POPULATION-2025": {
     "title": "全國家犬貓飼養數量最新推估結果（114年調查）",
@@ -2399,7 +2649,11 @@
       "statistics"
     ],
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-adoption-guide-taiwan",
+      "cat-laws-taiwan",
+      "mixed-breed-cats-taiwan"
+    ]
   },
   "TW-PET-BUSINESS-RULES": {
     "title": "特定寵物業管理辦法",
@@ -2424,7 +2678,16 @@
       "taiwan"
     ],
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-adoption-guide-taiwan",
+      "cat-laws-taiwan",
+      "cat-leaving-home-taiwan",
+      "kitten-socialization",
+      "mixed-breed-cats-taiwan",
+      "rehoming-cat-responsibly-taiwan",
+      "scottish-fold-breed-guide-taiwan",
+      "should-i-adopt-cat-decision-taiwan"
+    ]
   },
   "ONEILL-2015-CAT-LONGEVITY": {
     "title": "Longevity and mortality of cats attending primary care veterinary practices in England",
@@ -2453,7 +2716,11 @@
     "doi": "10.1177/1098612X14536176",
     "pmid": "24925771",
     "pmcid": "PMC10816413",
-    "cited_by": []
+    "cited_by": [
+      "cat-indoor-vs-outdoor-taiwan",
+      "mixed-breed-cats-taiwan",
+      "should-i-adopt-cat-decision-taiwan"
+    ]
   },
   "TENG-2024-CAT-LIFE-TABLES": {
     "title": "Life tables of annual life expectancy and risk factors for mortality in cats in the UK",
@@ -2482,7 +2749,9 @@
     "doi": "10.1177/1098612X241234556",
     "pmid": "38714312",
     "pmcid": "PMC11156239",
-    "cited_by": []
+    "cited_by": [
+      "mixed-breed-cats-taiwan"
+    ]
   },
   "KAELIN-2025-ORANGE-COAT": {
     "title": "Molecular and genetic characterization of sex-linked orange coat color in the domestic cat",
@@ -2511,7 +2780,9 @@
     "doi": "10.1016/j.cub.2025.04.055",
     "pmid": "40378841",
     "pmcid": "PMC12187551",
-    "cited_by": []
+    "cited_by": [
+      "mixed-breed-cats-taiwan"
+    ]
   },
   "SZCZERBAL-2026-TORTOISESHELL-TOM": {
     "title": "XX/XY Chimerism in Tortoiseshell Tomcats: A New Case and Review of the Literature",
@@ -2539,7 +2810,9 @@
     "doi": "10.1159/000551472",
     "pmid": "41818390",
     "pmcid": "PMC13160499",
-    "cited_by": []
+    "cited_by": [
+      "mixed-breed-cats-taiwan"
+    ]
   },
   "SANTORO-2021-FASS-DIAGNOSIS": {
     "title": "Clinical signs and diagnosis of feline atopic syndrome: detailed guidelines for a correct diagnosis",
@@ -2704,7 +2977,10 @@
       "statistics"
     ],
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "mixed-breed-cats-taiwan",
+      "should-i-adopt-cat-decision-taiwan"
+    ]
   },
   "CORNELL-TOXOPLASMOSIS": {
     "title": "Toxoplasmosis in Cats — Cornell Feline Health Center",
@@ -2731,7 +3007,11 @@
       "zoonosis"
     ],
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "barf-raw-food-taiwan",
+      "cat-indoor-vs-outdoor-taiwan",
+      "cat-toxoplasma-pregnancy"
+    ]
   },
   "TW-CDC-TOXOPLASMOSIS-2026": {
     "title": "國內新增弓形蟲感染症確定病例 籲請民眾避免生食及落實手部衛生",
@@ -2756,7 +3036,10 @@
       "taiwan"
     ],
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "barf-raw-food-taiwan",
+      "cat-toxoplasma-pregnancy"
+    ]
   },
   "TW-HPA-PRENATAL-CARE": {
     "title": "孕婦產前檢查項目及補助金額",
@@ -2781,7 +3064,9 @@
       "pregnancy"
     ],
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-toxoplasma-pregnancy"
+    ]
   },
   "APHIA-RABIES-VACCINE-FAQ": {
     "title": "狂犬病疫苗",
@@ -2807,7 +3092,17 @@
       "law"
     ],
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-adoption-guide-taiwan",
+      "cat-aggression-causes-treatment",
+      "cat-indoor-vs-outdoor-taiwan",
+      "cat-laws-taiwan",
+      "cat-leaving-home-taiwan",
+      "cat-life-stages-care-taiwan",
+      "kitten-care-complete-taiwan",
+      "rehoming-cat-responsibly-taiwan",
+      "should-i-adopt-cat-decision-taiwan"
+    ]
   },
   "CORNELL-PANLEUKOPENIA": {
     "title": "Feline Panleukopenia Virus — Cornell Feline Health Center",
@@ -2833,7 +3128,9 @@
       "vaccination"
     ],
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "kitten-care-complete-taiwan"
+    ]
   },
   "WSAVA-SELECTING-PET-FOODS-2021": {
     "title": "WSAVA Global Nutrition Committee: Guidelines on Selecting Pet Foods",
@@ -2887,7 +3184,8 @@
     ],
     "url_verified": true,
     "cited_by": [
-      "cat-food-selection-taiwan"
+      "cat-food-selection-taiwan",
+      "cat-obesity-weight-management"
     ]
   },
   "AAFCO-PFLM-TRIFOLD-2023": {
@@ -2940,6 +3238,7 @@
     ],
     "url_verified": true,
     "cited_by": [
+      "cat-obesity-weight-management",
       "cat-treats-supplements-taiwan"
     ]
   },
@@ -2966,8 +3265,10 @@
     ],
     "url_verified": true,
     "cited_by": [
+      "barf-raw-food-taiwan",
       "cat-food-by-life-stage",
       "cat-food-selection-taiwan",
+      "cat-obesity-weight-management",
       "cat-treats-supplements-taiwan"
     ]
   },
@@ -2996,7 +3297,9 @@
     "cited_by": [
       "cat-food-by-life-stage",
       "cat-food-selection-taiwan",
-      "cat-treats-supplements-taiwan"
+      "cat-obesity-weight-management",
+      "cat-treats-supplements-taiwan",
+      "kitten-care-complete-taiwan"
     ]
   },
   "CORNELL-HAIRBALLS": {
@@ -3022,6 +3325,8 @@
     ],
     "url_verified": true,
     "cited_by": [
+      "cat-home-grooming-guide",
+      "cat-ibd-intestinal-disease",
       "cat-treats-supplements-taiwan"
     ]
   },
@@ -3051,7 +3356,10 @@
     "doi": "10.1177/1098612X231211763",
     "pmid": "38055304",
     "pmcid": "PMC10811760",
-    "cited_by": []
+    "cited_by": [
+      "scottish-fold-breed-guide-taiwan",
+      "should-i-adopt-cat-decision-taiwan"
+    ]
   },
   "VELIE-2023-SCOTTISH-FOLD-PREVALENCE": {
     "title": "An estimation of osteochondrodysplasia prevalence in Australian Scottish Fold cats: a retrospective study using VetCompass Data",
@@ -3079,7 +3387,10 @@
     "doi": "10.1186/s12917-023-03811-0",
     "pmid": "38031079",
     "pmcid": "PMC10685627",
-    "cited_by": []
+    "cited_by": [
+      "scottish-fold-breed-guide-taiwan",
+      "should-i-adopt-cat-decision-taiwan"
+    ]
   },
   "CORNELL-EAR-DISORDERS": {
     "title": "Feline Ear Disorders",
@@ -3102,7 +3413,8 @@
     ],
     "url_verified": true,
     "cited_by": [
-      "cat-eye-ear-problems-taiwan"
+      "cat-eye-ear-problems-taiwan",
+      "cat-home-grooming-guide"
     ]
   },
   "CORNELL-DENTAL-DISEASE": {
@@ -3126,7 +3438,11 @@
       "dental"
     ],
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-dental-health-taiwan",
+      "cat-home-grooming-guide",
+      "cat-life-stages-care-taiwan"
+    ]
   },
   "TW-PET-REGISTRATION-RULES": {
     "title": "寵物登記管理辦法",
@@ -3151,7 +3467,14 @@
       "taiwan"
     ],
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-adoption-guide-taiwan",
+      "cat-laws-taiwan",
+      "kitten-care-complete-taiwan",
+      "mixed-breed-cats-taiwan",
+      "rehoming-cat-responsibly-taiwan",
+      "renting-with-cats-taiwan"
+    ]
   },
   "ASPCA-PET-PLANNING": {
     "title": "Making a Plan for Your Pet",
@@ -3174,7 +3497,9 @@
       "rehoming"
     ],
     "url_verified": true,
-    "cited_by": [],
+    "cited_by": [
+      "rehoming-cat-responsibly-taiwan"
+    ],
     "home_only": "ASPCA"
   },
   "TW-CONDO-ACT-16": {
@@ -3199,7 +3524,11 @@
       "taiwan"
     ],
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-adoption-guide-taiwan",
+      "renting-with-cats-taiwan",
+      "should-i-adopt-cat-decision-taiwan"
+    ]
   },
   "TW-LAND-ACT-99": {
     "title": "土地法第 99 條",
@@ -3223,7 +3552,9 @@
       "taiwan"
     ],
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "renting-with-cats-taiwan"
+    ]
   },
   "TW-RENTAL-HOUSING-ACT": {
     "title": "租賃住宅市場發展及管理條例（第 7、10 條）",
@@ -3247,7 +3578,9 @@
       "taiwan"
     ],
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "renting-with-cats-taiwan"
+    ]
   },
   "TW-CIVIL-CODE-438": {
     "title": "民法第 438 條",
@@ -3271,7 +3604,9 @@
       "taiwan"
     ],
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "renting-with-cats-taiwan"
+    ]
   },
   "NLIA-PET-INSURANCE-REF": {
     "title": "寵物綜合保險參考條款（一般獸醫院版）",
@@ -3322,7 +3657,9 @@
     "doi": "10.1177/1098612X19850973",
     "pmid": "31135257",
     "pmcid": "PMC6764004",
-    "cited_by": []
+    "cited_by": [
+      "should-i-adopt-cat-decision-taiwan"
+    ]
   },
   "ONEILL-2019-PERSIAN": {
     "title": "Persian cats under first opinion veterinary care in the UK: demography, mortality and disorders",
@@ -3370,7 +3707,9 @@
     "doi": "10.1016/S1098-612X(03)00052-4",
     "pmid": "14623204",
     "pmcid": "PMC10822557",
-    "cited_by": []
+    "cited_by": [
+      "cat-ckd-complete-guide"
+    ]
   },
   "VOLTA-2010-CHARTREUX-PKD": {
     "title": "Polycystic kidney disease in a Chartreux cat",
@@ -4217,7 +4556,9 @@
     ],
     "url_verified": true,
     "cited_by": [
-      "cat-food-by-life-stage"
+      "cat-food-by-life-stage",
+      "cat-life-stages-care-taiwan",
+      "cat-obesity-weight-management"
     ]
   },
   "TW-MOHW-1925-HOTLINE": {
@@ -4240,7 +4581,10 @@
     ],
     "disease_tags": [],
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-end-of-life-care-taiwan",
+      "cat-grief-bereavement-guide"
+    ]
   },
   "WSAVA-MCS-CAT": {
     "title": "Muscle Condition Score — Cat (WSAVA Global Nutrition Toolkit)",
@@ -4266,7 +4610,8 @@
     ],
     "url_verified": true,
     "cited_by": [
-      "cat-food-by-life-stage"
+      "cat-food-by-life-stage",
+      "cat-obesity-weight-management"
     ]
   },
   "WSAVA-CALORIE-CAT-2020": {
@@ -4292,7 +4637,8 @@
     ],
     "url_verified": true,
     "cited_by": [
-      "cat-food-by-life-stage"
+      "cat-food-by-life-stage",
+      "cat-obesity-weight-management"
     ]
   },
   "WSAVA-SAVVY-CAT-OWNER-2013": {
@@ -4392,7 +4738,9 @@
     "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/feline-vision-problems-host-possible-causes",
     "url_verified": true,
     "cited_by": [
-      "cat-eye-ear-problems-taiwan"
+      "cat-cognitive-dysfunction",
+      "cat-eye-ear-problems-taiwan",
+      "cat-life-stages-care-taiwan"
     ]
   },
   "HERRON-2010-INDOOR-ENRICHMENT": {
@@ -4409,7 +4757,10 @@
     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3922041/",
     "url_verified": true,
     "cited_by": [
-      "cat-environment-enrichment-taiwan"
+      "cat-anxiety-stress-management",
+      "cat-environment-enrichment-taiwan",
+      "cat-zoomies-night-activity",
+      "renting-with-cats-taiwan"
     ]
   },
   "BOL-2017-CAT-OLFACTORY-PLANTS": {
@@ -4460,7 +4811,8 @@
     "url": "https://vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/ear-mites-tiny-critters-can-pose-major-threat",
     "url_verified": true,
     "cited_by": [
-      "cat-eye-ear-problems-taiwan"
+      "cat-eye-ear-problems-taiwan",
+      "mixed-breed-cats-taiwan"
     ]
   },
   "BEUGNET-2014-EAR-MITE-PREVENTION": {
@@ -4494,7 +4846,11 @@
     "status": "approved",
     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7341261/",
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-cognitive-dysfunction",
+      "cat-life-stages-care-taiwan",
+      "cat-zoomies-night-activity"
+    ]
   },
   "CORNELL-FELINE-AGGRESSION": {
     "title": "Feline Behavior Problems: Aggression",
@@ -4510,7 +4866,12 @@
     "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/feline-behavior-problems-aggression",
     "url_verified": true,
     "cited_by": [
-      "cat-environment-enrichment-taiwan"
+      "cat-aggression-causes-treatment",
+      "cat-anxiety-stress-management",
+      "cat-environment-enrichment-taiwan",
+      "cat-zoomies-night-activity",
+      "kitten-care-complete-taiwan",
+      "new-cat-first-week-guide"
     ]
   },
   "CORNELL-CATS-LICK-TOO-MUCH": {
@@ -4527,6 +4888,7 @@
     "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/cats-lick-too-much",
     "url_verified": true,
     "cited_by": [
+      "cat-anxiety-stress-management",
       "cat-environment-enrichment-taiwan"
     ]
   },
@@ -4605,7 +4967,9 @@
     "status": "approved",
     "url": "https://www.ly.gov.tw/Pages/Detail.aspx?nodeid=6590&pid=219379",
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-adoption-guide-taiwan"
+    ]
   },
   "NTPC-POLICE-ONLINE-FRAUD-2016": {
     "title": "網路購物防詐騙小秘方",
@@ -4620,7 +4984,9 @@
     "status": "approved",
     "url": "https://www.shulin.police.ntpc.gov.tw/cp-1303-21296-20.html",
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-adoption-guide-taiwan"
+    ]
   },
   "FONTAINE-2012-PREGNANCY-LACTATION": {
     "title": "Food Intake and Nutrition During Pregnancy, Lactation and Weaning in the Dam and Offspring",
@@ -4636,7 +5002,8 @@
     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7169170/",
     "url_verified": true,
     "cited_by": [
-      "cat-food-by-life-stage"
+      "cat-food-by-life-stage",
+      "kitten-care-complete-taiwan"
     ]
   },
   "WICHERT-2009-GESTATION-LACTATION": {
@@ -4670,7 +5037,9 @@
     "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/spaying-and-neutering",
     "url_verified": true,
     "cited_by": [
-      "cat-neutering-aftercare-taiwan"
+      "cat-neutering-aftercare-taiwan",
+      "kitten-care-complete-taiwan",
+      "rehoming-cat-responsibly-taiwan"
     ]
   },
   "CORNELL-PKD": {
@@ -4686,7 +5055,9 @@
     "status": "approved",
     "url": "https://www.vet.cornell.edu/node/4059",
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-ckd-complete-guide"
+    ]
   },
   "CORNELL-DYSPNEA": {
     "title": "Dyspnea (Difficulty Breathing)",
@@ -4702,6 +5073,9 @@
     "url": "https://www.vet.cornell.edu/node/4087",
     "url_verified": true,
     "cited_by": [
+      "cat-cancer-tumors-guide",
+      "cat-end-of-life-care-taiwan",
+      "cat-hyperthyroidism-senior",
       "cat-neutering-aftercare-taiwan"
     ]
   },
@@ -4720,6 +5094,8 @@
     "url_verified": true,
     "cited_by": [
       "cat-eye-ear-problems-taiwan",
+      "cat-hepatic-lipidosis",
+      "cat-ibd-intestinal-disease",
       "cat-neutering-aftercare-taiwan"
     ]
   },
@@ -4751,7 +5127,9 @@
     "status": "approved",
     "url": "https://www.aspca.org/",
     "url_verified": true,
-    "cited_by": [],
+    "cited_by": [
+      "multi-cat-household-taiwan"
+    ],
     "home_only": "ASPCA"
   },
   "ASPCA-TRIM-CLAWS": {
@@ -4767,7 +5145,9 @@
     "status": "pending_review",
     "url": "https://www.aspca.org/",
     "url_verified": true,
-    "cited_by": [],
+    "cited_by": [
+      "cat-home-grooming-guide"
+    ],
     "home_only": "ASPCA"
   },
   "ASPCA-GROOMING-TIPS": {
@@ -4783,7 +5163,9 @@
     "status": "pending_review",
     "url": "https://www.aspca.org/",
     "url_verified": true,
-    "cited_by": [],
+    "cited_by": [
+      "cat-home-grooming-guide"
+    ],
     "home_only": "ASPCA"
   },
   "CORNELL-VOMITING": {
@@ -4799,7 +5181,10 @@
     "status": "approved",
     "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/vomiting",
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-cancer-tumors-guide",
+      "cat-ibd-intestinal-disease"
+    ]
   },
   "CORNELL-CORNEAL-ULCERS": {
     "title": "Corneal Ulcers",
@@ -4914,7 +5299,9 @@
     "status": "approved",
     "url": "https://catvets.com/wp-content/uploads/2026/07/FelineVMA-Step-by-Step-Guide-How-to-Introduce.pdf",
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "new-cat-first-week-guide"
+    ]
   },
   "FELINEVMA-FERAL-KITTENS-2025": {
     "title": "2025 Socialization of Feral Kittens (Position Statement)",
@@ -4929,7 +5316,10 @@
     "status": "approved",
     "url": "https://catvets.com/resource/2025-socialization-of-feral-kittens/",
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "kitten-care-complete-taiwan",
+      "kitten-socialization"
+    ]
   },
   "AAHA-BEHAVIOR-2015": {
     "title": "2015 AAHA Canine and Feline Behavior Management Guidelines: Changing Behaviors",
@@ -4944,7 +5334,10 @@
     "status": "pending_review",
     "url": "https://www.aaha.org/aaha-guidelines/behavior-management/changing-behaviors/",
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-aggression-causes-treatment",
+      "kitten-socialization"
+    ]
   },
   "CORNELL-HEPATIC-LIPIDOSIS": {
     "title": "Hepatic Lipidosis",
@@ -4960,7 +5353,12 @@
     "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/hepatic-lipidosis",
     "url_verified": true,
     "cited_by": [
-      "cat-food-by-life-stage"
+      "cat-anxiety-stress-management",
+      "cat-food-by-life-stage",
+      "cat-hepatic-lipidosis",
+      "cat-leaving-home-taiwan",
+      "cat-obesity-weight-management",
+      "new-cat-first-week-guide"
     ]
   },
   "FDA-REGULATION-PET-FOOD-2022": {
@@ -5042,7 +5440,9 @@
     "status": "pending_review",
     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11640698/",
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "kitten-care-complete-taiwan"
+    ]
   },
   "STELLA-2016-CAT-ENVIRONMENT": {
     "title": "Environmental Aspects of Domestic Cat Care and Management: Implications for Cat Welfare",
@@ -5058,7 +5458,9 @@
     "status": "pending_review",
     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5059607/",
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-leaving-home-taiwan"
+    ]
   },
   "JAHN-2023-TRAVEL-STRESS": {
     "title": "Feline stress management during air travel: a multimodal approach",
@@ -5074,7 +5476,9 @@
     "status": "pending_review",
     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10812047/",
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-leaving-home-taiwan"
+    ]
   },
   "LI-WU-2023-AMINO-ACIDS": {
     "title": "Amino acid nutrition and metabolism in domestic cats and dogs",
@@ -5108,7 +5512,13 @@
     "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/anorexia",
     "url_verified": true,
     "cited_by": [
-      "cat-treats-supplements-taiwan"
+      "cat-cancer-tumors-guide",
+      "cat-dental-health-taiwan",
+      "cat-hepatic-lipidosis",
+      "cat-ibd-intestinal-disease",
+      "cat-obesity-weight-management",
+      "cat-treats-supplements-taiwan",
+      "kitten-care-complete-taiwan"
     ]
   },
   "CORNELL-IBD": {
@@ -5124,7 +5534,9 @@
     "status": "approved",
     "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/inflammatory-bowel-disease",
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-ibd-intestinal-disease"
+    ]
   },
   "CORNELL-LYMPHOMA": {
     "title": "Lymphoma",
@@ -5139,7 +5551,10 @@
     "status": "approved",
     "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/lymphoma",
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-cancer-tumors-guide",
+      "cat-ibd-intestinal-disease"
+    ]
   },
   "CORNELL-MAMMARY-TUMORS": {
     "title": "Mammary Tumors",
@@ -5154,7 +5569,9 @@
     "status": "approved",
     "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/mammary-tumors",
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-cancer-tumors-guide"
+    ]
   },
   "CORNELL-SCC": {
     "title": "Squamous Cell Cancer: Dangerous",
@@ -5169,7 +5586,9 @@
     "status": "approved",
     "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/squamous-cell-cancer-dangerous",
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-cancer-tumors-guide"
+    ]
   },
   "CORNELL-CANCER-HOME-CARE": {
     "title": "Home Care for the Cancer Patient",
@@ -5184,7 +5603,9 @@
     "status": "approved",
     "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/home-care-cancer-patient",
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-cancer-tumors-guide"
+    ]
   },
   "CORNELL-CARDIOMYOPATHY": {
     "title": "Cardiomyopathy",
@@ -5199,7 +5620,9 @@
     "status": "approved",
     "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/cardiomyopathy",
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-cancer-tumors-guide"
+    ]
   },
   "WEBB-2018-HEPATIC-LIPIDOSIS": {
     "title": "Hepatic lipidosis: Clinical review drawn from collective effort",
@@ -5217,7 +5640,9 @@
     "url_verified": true,
     "doi": "10.1177/1098612X18758591",
     "pmid": "29478399",
-    "cited_by": []
+    "cited_by": [
+      "cat-hepatic-lipidosis"
+    ]
   },
   "WALLACE-2024-HL-FEEDING": {
     "title": "Association of time to start of enteral nutrition and outcome in cats with hepatic lipidosis",
@@ -5235,7 +5660,9 @@
     "url_verified": true,
     "doi": "10.1111/jvim.17200",
     "pmid": "39447212",
-    "cited_by": []
+    "cited_by": [
+      "cat-hepatic-lipidosis"
+    ]
   },
   "ISFM-INAPPETENT-2022": {
     "title": "2022 ISFM Consensus Guidelines on Management of the Inappetent Hospitalised Cat",
@@ -5253,7 +5680,9 @@
     "url_verified": true,
     "doi": "10.1177/1098612X221106353",
     "pmid": "35775307",
-    "cited_by": []
+    "cited_by": [
+      "cat-hepatic-lipidosis"
+    ]
   },
   "HOELMKJAER-2014-FELINE-OBESITY": {
     "title": "Management of obesity in cats",
@@ -5271,7 +5700,10 @@
     "url_verified": true,
     "doi": "10.2147/VMRR.S40869",
     "pmid": "32670850",
-    "cited_by": []
+    "cited_by": [
+      "cat-hepatic-lipidosis",
+      "cat-obesity-weight-management"
+    ]
   },
   "MARSILIO-2023-ACVIM-CE": {
     "title": "ACVIM consensus statement guidelines on diagnosing and distinguishing low-grade neoplastic from inflammatory lymphocytic chronic enteropathies in cats",
@@ -5289,7 +5721,10 @@
     "url_verified": true,
     "doi": "10.1111/jvim.16690",
     "pmid": "37130034",
-    "cited_by": []
+    "cited_by": [
+      "cat-cancer-tumors-guide",
+      "cat-ibd-intestinal-disease"
+    ]
   },
   "HARTMANN-2015-FISS-ABCD": {
     "title": "Feline injection-site sarcoma: ABCD guidelines on prevention and management",
@@ -5307,7 +5742,9 @@
     "url_verified": true,
     "doi": "10.1177/1098612X15588451",
     "pmid": "26101312",
-    "cited_by": []
+    "cited_by": [
+      "cat-cancer-tumors-guide"
+    ]
   },
   "TAMLIN-2020-MAST-CELL": {
     "title": "Comparative aspects of mast cell neoplasia in animals and the role of KIT in prognosis and treatment",
@@ -5325,7 +5762,9 @@
     "url_verified": true,
     "doi": "10.1002/vms3.201",
     "pmid": "31650704",
-    "cited_by": []
+    "cited_by": [
+      "cat-cancer-tumors-guide"
+    ]
   },
   "CORNELL-HEARTWORM-CATS": {
     "title": "Heartworm in Cats",
@@ -5370,7 +5809,9 @@
     "status": "approved",
     "url": "https://vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/gastrointestinal-parasites-cats",
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "kitten-care-complete-taiwan"
+    ]
   },
   "RUST-2017-CAT-FLEA": {
     "title": "The Biology and Ecology of Cat Fleas and Advancements in Their Pest Management: A Review",
@@ -5541,7 +5982,9 @@
     "status": "pending_review",
     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11350904/",
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "kitten-care-complete-taiwan"
+    ]
   },
   "CORNELL-FEEDING-YOUR-CAT": {
     "title": "Feeding Your Cat",
@@ -5557,8 +6000,10 @@
     "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/feeding-your-cat",
     "url_verified": true,
     "cited_by": [
+      "cat-cognitive-dysfunction",
       "cat-neutering-aftercare-taiwan",
-      "cat-treats-supplements-taiwan"
+      "cat-treats-supplements-taiwan",
+      "kitten-care-complete-taiwan"
     ]
   },
   "CORNELL-HOW-OFTEN-FEED": {
@@ -5574,7 +6019,9 @@
     "status": "approved",
     "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/how-often-should-you-feed-your-cat",
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "kitten-care-complete-taiwan"
+    ]
   },
   "CORNELL-NEW-CAT": {
     "title": "Choosing and Caring for Your New Cat",
@@ -5590,7 +6037,8 @@
     "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/choosing-and-caring-your-new-cat",
     "url_verified": true,
     "cited_by": [
-      "cat-neutering-aftercare-taiwan"
+      "cat-neutering-aftercare-taiwan",
+      "kitten-care-complete-taiwan"
     ]
   },
   "FDA-FLEA-TICK-SAFE-USE": {
@@ -5606,7 +6054,9 @@
     "status": "approved",
     "url": "https://www.fda.gov/consumers/consumer-updates/safe-use-flea-and-tick-products-pets",
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "kitten-care-complete-taiwan"
+    ]
   },
   "FDA-TICKS-LYME": {
     "title": "Ticks and Lyme Disease: Symptoms, Treatment, and Prevention",
@@ -5621,7 +6071,9 @@
     "status": "approved",
     "url": "https://www.fda.gov/consumers/consumer-updates/ticks-and-lyme-disease-symptoms-treatment-and-prevention",
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "kitten-care-complete-taiwan"
+    ]
   },
   "JOYCE-2011-EARLY-NEUTERING": {
     "title": "Help stop teenage pregnancy! Early-age neutering in cats",
@@ -5637,7 +6089,8 @@
     "url": "https://pubmed.ncbi.nlm.nih.gov/21215944/",
     "url_verified": true,
     "cited_by": [
-      "cat-neutering-aftercare-taiwan"
+      "cat-neutering-aftercare-taiwan",
+      "kitten-care-complete-taiwan"
     ]
   },
   "FOREMAN-WORSLEY-2025-NEUTER-AGE": {
@@ -5655,7 +6108,8 @@
     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12180291/",
     "url_verified": true,
     "cited_by": [
-      "cat-neutering-aftercare-taiwan"
+      "cat-neutering-aftercare-taiwan",
+      "kitten-care-complete-taiwan"
     ]
   },
   "ALLAWAY-2017-NEUTER-WEIGHT": {
@@ -5724,6 +6178,7 @@
     "url": "https://laws.gov.taipei/Law/LawSearch/LawArticleContent/FL077630",
     "url_verified": true,
     "cited_by": [
+      "cat-laws-taiwan",
       "cat-neutering-aftercare-taiwan"
     ]
   },
@@ -5740,7 +6195,10 @@
     "status": "approved",
     "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/cognitive-dysfunction",
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-cognitive-dysfunction",
+      "cat-zoomies-night-activity"
+    ]
   },
   "BLANCHARD-2025-CDS-NUTRITION": {
     "title": "Enhancing cognitive functions in aged dogs and cats: a systematic review of enriched diets and nutraceuticals",
@@ -5755,7 +6213,9 @@
     "status": "pending_review",
     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12181554/",
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-cognitive-dysfunction"
+    ]
   },
   "WHITNEY-1987-HIGH-RISE": {
     "title": "High-rise syndrome in cats",
@@ -5800,7 +6260,9 @@
     "status": "approved",
     "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/bad-breath-sign-illness",
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-dental-health-taiwan"
+    ]
   },
   "CORNELL-WHEN-KITTY-NEEDS-DENTIST": {
     "title": "When Kitty Needs a Dentist",
@@ -5815,7 +6277,9 @@
     "status": "approved",
     "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/when-kitty-needs-dentist",
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-dental-health-taiwan"
+    ]
   },
   "CORNELL-GINGIVOSTOMATITIS": {
     "title": "Gingivostomatitis",
@@ -5830,7 +6294,9 @@
     "status": "approved",
     "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/gingivostomatitis",
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-dental-health-taiwan"
+    ]
   },
   "CORNELL-TOOTH-RESORPTION": {
     "title": "Tooth Resorption",
@@ -5845,7 +6311,9 @@
     "status": "approved",
     "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/tooth-resorption",
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-dental-health-taiwan"
+    ]
   },
   "CORNELL-PET-LOSS-RESOURCES": {
     "title": "Pet Loss Resources and Support",
@@ -5860,7 +6328,10 @@
     "status": "approved",
     "url": "https://www.vet.cornell.edu/impact/community-impact/pet-loss-resources-and-support",
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-end-of-life-care-taiwan",
+      "cat-grief-bereavement-guide"
+    ]
   },
   "TW-SHELTER-RULES": {
     "title": "公立動物收容處所管理規則",
@@ -5875,7 +6346,12 @@
     "status": "approved",
     "url": "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=M0060082",
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-adoption-guide-taiwan",
+      "cat-laws-taiwan",
+      "mixed-breed-cats-taiwan",
+      "should-i-adopt-cat-decision-taiwan"
+    ]
   },
   "MOA-PET-REGISTRATION-FAQ": {
     "title": "全國動物登記管理資訊網：常見問題",
@@ -5890,7 +6366,9 @@
     "status": "pending_review",
     "url": "https://www.pet.gov.tw/Web/FAQ.aspx",
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-laws-taiwan"
+    ]
   },
   "CORNELL-FLEAS": {
     "title": "Fleas",
@@ -5905,7 +6383,9 @@
     "status": "approved",
     "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/fleas",
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "mixed-breed-cats-taiwan"
+    ]
   },
   "TAYLOR-2025-ISFM-LUTD": {
     "title": "2025 iCatCare consensus guidelines on the diagnosis and management of lower urinary tract diseases in cats",
@@ -5921,6 +6401,7 @@
     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11816079/",
     "url_verified": true,
     "cited_by": [
+      "cat-ckd-complete-guide",
       "male-cat-urethral-obstruction"
     ]
   },
@@ -5937,7 +6418,9 @@
     "status": "approved",
     "url": "https://www.fda.gov/animal-veterinary/animal-health-literacy/two-new-drugs-treat-diabetes-cats-one-right-your-cat",
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-diabetes-care"
+    ]
   },
   "CORNELL-CONSTIPATION": {
     "title": "Constipation",
@@ -6057,7 +6540,8 @@
     "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/hypertension",
     "url_verified": true,
     "cited_by": [
-      "cat-eye-ear-problems-taiwan"
+      "cat-eye-ear-problems-taiwan",
+      "cat-hyperthyroidism-senior"
     ]
   },
   "CORNELL-SUDDEN-BLINDNESS": {
@@ -6090,7 +6574,10 @@
     "status": "approved",
     "url": "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/zoonotic-disease-what-can-i-catch-my-cat",
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-aggression-causes-treatment",
+      "new-cat-first-week-guide"
+    ]
   },
   "VANHAAFTEN-2017-GABAPENTIN": {
     "title": "Effects of a single preappointment dose of gabapentin on signs of stress in cats during transportation and veterinary examination",
@@ -6106,7 +6593,9 @@
     "status": "approved",
     "url": "https://pubmed.ncbi.nlm.nih.gov/29099247/",
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-anxiety-stress-management"
+    ]
   },
   "FDA-RAW-PET-FOOD-2018": {
     "title": "Get the Facts! Raw Pet Food Diets can be Dangerous to You and Your Pet",
@@ -6121,7 +6610,9 @@
     "status": "approved",
     "url": "https://www.fda.gov/animal-veterinary/animal-health-literacy/get-facts-raw-pet-food-diets-can-be-dangerous-you-and-your-pet",
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "barf-raw-food-taiwan"
+    ]
   },
   "FDA-HPAI-CATS-2025": {
     "title": "FDA Outlines Ways to Reduce Risk of HPAI in Cats",
@@ -6136,7 +6627,9 @@
     "status": "approved",
     "url": "https://www.fda.gov/animal-veterinary/cvm-updates/fda-outlines-ways-reduce-risk-hpai-cats",
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "barf-raw-food-taiwan"
+    ]
   },
   "FDA-H5N1-RAW-CAT-FOOD-2025": {
     "title": "FDA Notifies Pet Owners That Tests Show H5N1 Contamination in Certain Lots of Raw Cat Food",
@@ -6151,7 +6644,9 @@
     "status": "approved",
     "url": "https://www.fda.gov/animal-veterinary/cvm-updates/fda-notifies-pet-owners-tests-show-h5n1-contamination-certain-lots-rawr-raw-cat-food-chicken-eats",
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "barf-raw-food-taiwan"
+    ]
   },
   "PLOSONE-2026-MILLS-EDITORIAL-NOTE": {
     "title": "Editorial Note: A Meta-Analysis of Studies of Treatments for Feline Urine Spraying",
@@ -6306,7 +6801,9 @@
     "doi": "10.3390/ani12030400",
     "pmid": "35158723",
     "pmcid": "PMC8833627",
-    "cited_by": []
+    "cited_by": [
+      "cat-end-of-life-care-taiwan"
+    ]
   },
   "LENOX-2013-OMEGA3-ADVERSE": {
     "title": "Potential adverse effects of omega-3 fatty acids in dogs and cats",
@@ -6391,7 +6888,9 @@
     "doi": "10.3390/ani12182440",
     "pmid": "36139300",
     "pmcid": "PMC9494968",
-    "cited_by": []
+    "cited_by": [
+      "cat-zoomies-night-activity"
+    ]
   },
   "DELGADO-2020-FEEDING-WELLBEING": {
     "title": "Feeding Cats for Optimal Mental and Behavioral Well-Being",
@@ -6416,7 +6915,9 @@
     "doi": "10.1016/j.cvsm.2020.05.003",
     "pmid": "32653265",
     "pmcid": "PMC7415653",
-    "cited_by": []
+    "cited_by": [
+      "cat-zoomies-night-activity"
+    ]
   },
   "EVANGELISTA-2019-FELINE-GRIMACE-SCALE": {
     "title": "Facial expressions of pain in cats: the development and validation of a Feline Grimace Scale",
@@ -6603,7 +7104,9 @@
     "status": "pending_review",
     "url": "https://catvets.com/end-of-life-toolkit/decision-making",
     "url_verified": true,
-    "cited_by": []
+    "cited_by": [
+      "cat-end-of-life-care-taiwan"
+    ]
   },
   "CORNELL-DESTRUCTIVE-BEHAVIOR": {
     "title": "Feline Behavior Problems: Destructive Behavior — Cornell Feline Health Center",
@@ -6977,7 +7480,10 @@
     "url_verified": true,
     "doi": "10.1177/1098612X18774437",
     "pmid": "29757071",
-    "cited_by": []
+    "cited_by": [
+      "cat-aggression-causes-treatment",
+      "cat-pheromone-products-guide"
+    ]
   },
   "CRUMP-2023-F3-CLINIC-STRESS": {
     "title": "Effectiveness of F3 feline facial pheromone analogue for acute stress reduction within clinical veterinary practice",
@@ -7001,7 +7507,9 @@
     "url_verified": true,
     "doi": "10.18849/ve.v8i4.669",
     "pmid": "42004555",
-    "cited_by": []
+    "cited_by": [
+      "cat-pheromone-products-guide"
+    ]
   },
   "DESOUSA-2026-F3-CARDIO": {
     "title": "Effects of a synthetic feline facial pheromone analogue (F3, Feliway) on stress and cardiovascular parameters during clinical examination in cats: a prospective crossover study",
@@ -7024,6 +7532,121 @@
     "url_verified": true,
     "doi": "10.1186/s12917-026-05511-x",
     "pmid": "42186056",
+    "cited_by": []
+  },
+  "STEE-2025-RUSSIAN-BLUE-RBD": {
+    "title": "A FAM8A1 frameshift variant is associated with REM sleep behavior disorder, urinary retention, and mydriasis in Russian Blue cats",
+    "title_zh": "俄羅斯藍貓的快速動眼期睡眠行為障礙與尿滯留：FAM8A1 基因變異",
+    "authors": "Stee K, Van Poucke M, Huguet JA, Batlle MP, Bossens K, Cohen-Solal A, et al.",
+    "source": "PubMed",
+    "journal": "Animal Genetics 2025;56(3):e70013",
+    "year": 2025,
+    "type": "study",
+    "language": "en",
+    "open_access": false,
+    "abstract_zh": "比利時兩個有親緣關係的家族中，5 隻年輕的成年俄羅斯藍貓睡覺時反覆出現異常動作（快速動眼期睡眠行為障礙），常伴隨漏尿，其中 3 隻兩次發作之間尿不出來、膀胱脹大，2 隻瞳孔放大。治療效果不好，4 隻安樂死，腦部組織檢查沒有看到異常。全基因體定序找到 FAM8A1 基因的一段缺失，屬隱性遺傳；西歐的俄羅斯藍貓（68 隻）等位基因頻率 1.5%，另外 32 個品種 276 隻貓（含近緣的尼比龍貓）都沒有。作者說現在可以用基因檢測診斷與預防。",
+    "status": "pending_review",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40266280/",
+    "keywords": [],
+    "disease_tags": [
+      "genetics",
+      "breed"
+    ],
+    "doi": "10.1111/age.70013",
+    "pmid": "40266280",
+    "pmcid": null,
+    "cited_by": []
+  },
+  "SCHIPPER-2022-CORNEAL-SEQUESTRA": {
+    "title": "Genetic Aspects of Corneal Sequestra in a Population of Persian, Himalayan and Exotic Cats",
+    "title_zh": "波斯、喜馬拉雅與異國短毛貓的角膜壞死遺傳研究",
+    "authors": "Schipper T, Storms G, Janssens G, Schoofs S, Capiau E, Verdonck D, et al.",
+    "source": "PubMed OA",
+    "journal": "Animals 2022;12(15):2008",
+    "year": 2022,
+    "type": "study",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "角膜壞死（corneal sequestrum，角膜上出現褐色到黑色的斑塊）在波斯、喜馬拉雅與異國短毛貓特別常見。研究分析同一個繁殖場的 692 隻貓，其中 61 隻有這個病；兩隻特定母貓生的小貓機率明顯較高，飼主回報資料估計的遺傳率是 0.96。作者認為遺傳影響很大，選擇性繁殖可能有效降低發生率。全基因體關聯分析樣本小，沒有找到相關的染色體區域。",
+    "status": "pending_review",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9367464/",
+    "keywords": [],
+    "disease_tags": [
+      "genetics",
+      "breed"
+    ],
+    "doi": "10.3390/ani12152008",
+    "pmid": "35953997",
+    "pmcid": "PMC9367464",
+    "cited_by": []
+  },
+  "REDONDO-2026-ANAESTHETIC-BREED": {
+    "title": "Breed-Specific Anaesthetic Mortality in Cats: Evidence from an Analysis of 14,964 Cases",
+    "title_zh": "不同品種的貓麻醉死亡風險：14,964 例分析",
+    "authors": "Redondo JI, Otero PE, Martínez-Taboada F, Hernández-Magaña EZ, Domenech L, Viscasillas J",
+    "source": "PubMed OA",
+    "journal": "Animals 2026;16(2):196",
+    "year": 2026,
+    "type": "study",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "198 個醫療中心的前瞻性多中心資料，14,964 隻全身麻醉的貓中 94 隻死於麻醉相關原因（0.63%，麻醉中或拔管後 48 小時內）。依麻醉前的身體狀況分級（ASA）校正後，多數品種和一般短毛貓沒有差別，波斯貓風險仍較高（相對風險 2.22）；明顯扁臉的品種（波斯、異國短毛、喜馬拉雅）合計相對風險 2.33，中度扁臉的品種（英國短毛、英國長毛、蘇格蘭摺耳）沒有增加。",
+    "status": "pending_review",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12837942/",
+    "keywords": [],
+    "disease_tags": [
+      "genetics",
+      "breed"
+    ],
+    "doi": "10.3390/ani16020196",
+    "pmid": "41594386",
+    "pmcid": "PMC12837942",
+    "cited_by": []
+  },
+  "ABITBOL-2015-BIRMAN-FOXN1": {
+    "title": "A deletion in FOXN1 is associated with a syndrome characterized by congenital hypotrichosis and short life expectancy in Birman cats",
+    "title_zh": "伯曼貓先天無毛與早夭症候群：FOXN1 基因缺失",
+    "authors": "Abitbol M, Bossé P, Thomas A, Tiret L",
+    "source": "PubMed OA",
+    "journal": "PLoS One 2015;10(3):e0120668",
+    "year": 2015,
+    "type": "study",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "伯曼貓有一種隱性遺傳的症候群，小貓出生時沒有毛，壽命也很短。研究找到 FOXN1 基因的一段 4 個鹼基的缺失，帶兩份才會發病；法國送驗的伯曼貓中，健康帶因貓約 3.2%。這個基因和毛髮與胸腺的發育有關。作者說已有 DNA 檢測，可以幫助避免高風險的配種。利益衝突：一位作者任職於販售貓基因檢測的 Antagene 公司。",
+    "status": "pending_review",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4363148/",
+    "keywords": [],
+    "disease_tags": [
+      "genetics",
+      "breed"
+    ],
+    "doi": "10.1371/journal.pone.0120668",
+    "pmid": "25781316",
+    "pmcid": "PMC4363148",
+    "cited_by": []
+  },
+  "PALTRINIERI-2018-BIRMAN-SDMA": {
+    "title": "Serum symmetric dimethylarginine and creatinine in Birman cats compared with cats of other breeds",
+    "title_zh": "伯曼貓與其他品種的血清 SDMA 與肌酸酐比較",
+    "authors": "Paltrinieri S, Giraldi M, Prolo A, Scarpa P, Piseddu E, Beccati M, et al.",
+    "source": "PubMed OA",
+    "journal": "Journal of Feline Medicine and Surgery 2018;20(10):905-912",
+    "year": 2018,
+    "type": "study",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "義大利比較 50 隻臨床健康的伯曼貓與 46 隻其他品種的貓。伯曼貓的血清肌酸酐與對稱二甲基精胺酸（SDMA）都比較高；50 隻中有 20 隻（40%）的肌酸酐超過實驗室的參考值，也超過國際腎臟學會（IRIS）分到第 2 期的門檻（1.6 mg/dl），SDMA 超過參考值的只有 10 隻，而且多數超出的幅度小於檢驗本身的誤差。作者認為用一般參考值時，SDMA 比肌酸酐更適合判斷伯曼貓的慢性腎臟病，兩項一起看可以避免誤判。利益衝突：SDMA 檢驗由 IDEXX 義大利公司提供，一位作者任職於該公司。",
+    "status": "pending_review",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11129243/",
+    "keywords": [],
+    "disease_tags": [
+      "genetics",
+      "breed"
+    ],
+    "doi": "10.1177/1098612X17734066",
+    "pmid": "28994640",
+    "pmcid": "PMC11129243",
     "cited_by": []
   }
 }

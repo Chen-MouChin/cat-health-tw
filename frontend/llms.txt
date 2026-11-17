@@ -1,6 +1,6 @@
 # 貓健康站
 
-> 台灣的貓健康知識庫：全台 2,070 家動物醫院（農業部與縣市政府公開資料）、422 筆獸醫學術文獻（422 筆有中文摘要）。文章引用國際獸醫指引，經人工審核才公開。
+> 台灣的貓健康知識庫：全台 2,070 家動物醫院（農業部與縣市政府公開資料）、428 筆獸醫學術文獻（428 筆有中文摘要）。文章引用國際獸醫指引，經人工審核才公開。
 
 本站內容僅供參考，診斷與治療由獸醫師負責。編輯流程、引用來源與更正方式見編輯方針。
 
@@ -40,15 +40,49 @@
 
 ## 文章
 
+- [貓吃生肉飲食（BARF）的風險：細菌、禽流感、營養失衡與衛生處理](https://cathealthtw.com/articles/barf-raw-food-taiwan.html)：WSAVA 建議不要餵貓生肉飲食：市售生食驗得出沙門氏菌、李斯特菌，冷凍乾燥也無法完全消除，貓也可能從生肉感染禽流感。整理已知風險、家裡有幼童或免疫力低下者的考量，以及仍要餵時處理生肉的衛生做法。
+- [貓咪為什麼會有攻擊行為：原因與處理方法](https://cathealthtw.com/articles/cat-aggression-causes-treatment.html)：貓咪咬人、抓人多半有原因，可能是玩過頭、害怕、被摸太久、把情緒轉到旁人身上、疼痛或領域衝突。整理各類攻擊的訊號與處理方式、什麼時候先給醫生檢查，以及被貓咬傷、抓傷後怎麼照顧傷口。
+- [貓咪焦慮與壓力管理：識別信號、常見誘因與緩解方法](https://cathealthtw.com/articles/cat-anxiety-stress-management.html)：貓有壓力時可能躲起來、吃得少、在砂盆外大小便、過度舔毛或噴尿，也可能讓特發性膀胱炎反覆發作。整理常見的壓力來源、環境怎麼調整，以及費洛蒙和藥物各自的證據與限制。
+- [貓咪慢性腎病（CKD）：分期、飲食與居家照護](https://cathealthtw.com/articles/cat-ckd-complete-guide.html)：十歲以上的貓最多有四成罹患慢性腎病。這篇說明 IRIS 分期怎麼看、哪些症狀建議帶去看醫生、腎臟處方飲食與補水為什麼是居家照護的重點，以及高血壓、貧血、低血鉀等合併症和回診要追蹤的項目。
+- [貓咪糖尿病：症狀、胰島素治療與緩解的可能](https://cathealthtw.com/articles/cat-diabetes-care.html)：貓的糖尿病多數和人類第二型相似，肥胖是主要風險因子。說明多喝多尿、吃很多卻變瘦等症狀，怎麼確診、胰島素怎麼打、低碳水飲食與居家血糖監測怎麼做，低血糖時怎麼處理，以及及早控制血糖達到緩解的機會。
 - [貓咪不同年齡怎麼吃：幼貓、成貓、老貓的飲食重點](https://cathealthtw.com/articles/cat-food-by-life-stage.html)：幼貓吃生長期飼料到大約 1 歲，結紮後熱量需求下降，老貓不一定要換高齡配方。依美國獸醫指引整理各年齡的飲食重點、怎麼看包裝上的生命階段標示，以及換飼料怎麼慢慢換。
+- [失去貓的前後：飼主的經驗、家人與自己](https://cathealthtw.com/articles/cat-grief-bereavement-guide.html)：從貓生病到最後、那一天、到之後的日子，一位失去過好幾隻貓的飼主的經驗，加上 Cornell 與貓安寧照護指引對哀傷、家人、孩子、家中其他貓與再養貓的說明。
+- [甲狀腺亢進：症狀、診斷與四種治療的取捨](https://cathealthtw.com/articles/cat-hyperthyroidism-senior.html)：中老年貓吃很多卻一直瘦、多喝多尿、變得躁動，常見原因是甲狀腺亢進。依 AAFP 2016 指引與 Cornell 資料，說明 T4 怎麼判讀、藥物、放射碘、手術與低碘飲食四種治療的優缺點，以及治療前為什麼要先確認腎功能。
+- [貓咪亂尿尿：先排除疾病，再找行為原因](https://cathealthtw.com/articles/cat-inappropriate-elimination.html)：貓在貓砂盆以外排尿，先分清楚是膀胱炎、尿道阻塞、腎病、糖尿病、關節炎這類疾病，還是砂盆、壓力、噴尿標記的行為問題。依 ISFM/AAFP 亂尿指引整理就醫前要準備什麼、噴尿與蹲尿怎麼分、排除疾病後砂盆與環境怎麼逐項檢查。
 - [貓砂盆怎麼選：貓砂材質、砂盆大小、數量位置與清潔頻率](https://cathealthtw.com/articles/cat-litter-box-guide.html)：依 ISFM/AAFP 亂尿指引與 Cornell 貓健康中心整理：貓偏好哪種砂、砂要鋪多深、砂盆要多大、有蓋還是無蓋、一隻貓要放幾個、放哪裡、多久撈一次和洗一次，以及哪些排尿狀況建議先帶去看醫生。
+- [貓咪半夜暴衝：原因與減少夜間吵鬧的方法](https://cathealthtw.com/articles/cat-zoomies-night-activity.html)：貓咪為什麼總在半夜狂奔？了解貓咪黎明動物的生理節律、暴衝的原因，以及調整作息讓貓咪和你一起安眠的實用方法。
 - [貓愛滋（FIV）與貓白血病（FeLV）：台灣版管理指南](https://cathealthtw.com/articles/fiv-felv-management-taiwan.html)：FIV 陽性貓多半能正常生活很多年，FeLV 陽性貓才需要更積極追蹤。這篇說明兩種病毒怎麼傳、快篩陽性為什麼要複檢、多貓家庭要不要隔離、已知陽性的貓哪些症狀要當天就醫，以及認養陽性貓前該問收容所什麼。
+- [幼貓社會化：哪幾週最有效、錯過了怎麼補](https://cathealthtw.com/articles/kitten-socialization.html)：幼貓大約在出生後 2 到 9 週最容易學會不怕人和新環境。說明這段時間要讓幼貓接觸什麼、幾週大適合離開母貓，以及怕人的貓怎麼用減敏和反制約慢慢改善。
 - [公貓尿道阻塞：怎麼辨識、醫院怎麼處理、怎麼預防再發](https://cathealthtw.com/articles/male-cat-urethral-obstruction.html)：公貓尿道完全阻塞後，鉀離子和尿毒會在一兩天內累積，常被誤認為便秘。這篇說明怎麼從蹲砂盆沒尿、哀叫、肚子硬痛辨識阻塞，醫院會怎麼處理，以及出院後從水分、砂盆與環境減壓預防再發。
+- [台灣米克斯貓：花色怎麼來、和純種貓差在哪、怎麼領養](https://cathealthtw.com/articles/mixed-breed-cats-taiwan.html)：米克斯是台灣最常見的家貓。說明橘貓、三花和玳瑁的花色怎麼遺傳、花色和個性有沒有關係、米克斯和純種貓的壽命差多少，以及在台灣怎麼領養與帶回家後要做的事。
+- [新貓到家第一週：逐日安置指南](https://cathealthtw.com/articles/new-cat-first-week-guide.html)：新貓到家先待在一個安全房（房間或籠子），讓牠自己決定什麼時候出來。整理 iCatCare 與美國貓科獸醫師協會對安全房怎麼布置、怎麼互動、什麼時候擴大活動範圍，以及和家裡原本的貓怎麼慢慢認識。
+- [負責任的送養貓咪：台灣的正確程序與常見錯誤](https://cathealthtw.com/articles/rehoming-cat-responsibly-taiwan.html)：需要幫貓找新家時，送養前要知道的法規（棄養可罰 3 萬到 15 萬元、轉讓一個月內辦變更登記）、怎麼和認養人談、要準備哪些資料給新飼主，以及怎麼幫貓適應新家。
+- [在台灣租屋養貓：法規、租約與房東溝通](https://cathealthtw.com/articles/renting-with-cats-taiwan.html)：房東或管委會可以禁止養貓嗎？整理公寓大廈管理條例第 16 條、民法第 438 條、違反租約禁養條款時房東可以怎麼做、押金上限兩個月、貓的寵物登記與搬家一個月內變更，以及租屋前要確認的文件與書面許可範例。
+- [蘇格蘭折耳貓：折耳基因與骨軟骨發育不全](https://cathealthtw.com/articles/scottish-fold-breed-guide-taiwan.html)：蘇格蘭折耳貓的折耳和骨軟骨發育不全來自同一個 TRPV4 基因變異。說明這個病是什麼、各研究看到的發病比例差多少、家裡已經有折耳貓要觀察哪些疼痛徵兆、怎麼調整居家環境，以及獸醫組織對繁殖的立場。
+- [貓咪常見腫瘤與癌症：淋巴瘤、注射部位肉瘤、口腔癌早期識別](https://cathealthtw.com/articles/cat-cancer-tumors-guide.html)：貓最常見的癌症是淋巴瘤，多長在腸胃道，症狀和腸道發炎很像。整理 Cornell 列出的癌症警訊，以及淋巴瘤、注射部位肉瘤、肥大細胞瘤、口腔鱗狀細胞癌與乳腺腫瘤各自的表現、檢查與治療選項，和哪些狀況建議盡早帶去動物醫院。
+- [老貓認知功能障礙（貓咪失智）：症狀識別與居家管理](https://cathealthtw.com/articles/cat-cognitive-dysfunction.html)：老貓半夜嚎叫、在家迷路、盯著牆發呆，可能是認知功能障礙，也可能是甲狀腺亢進、高血壓、腎病或關節痛。說明有多常見、要先做哪些檢查排除其他病，以及確診後家裡能調整什麼、飲食和藥物的證據到哪裡。
+- [貓傳染性腹膜炎（FIP）：症狀、診斷與 GS-441524 治療](https://cathealthtw.com/articles/cat-fip-guide-taiwan.html)：FIP 曾是幾乎無法治療的病，抗病毒藥 GS-441524 出現後多數貓能長期維持健康。說明濕型與乾型的症狀、為什麼冠狀病毒抗體陽性不等於 FIP、確診要做哪些檢查，以及 Pedersen 2019 試驗與 ABCD 指引的療程、復發與追蹤重點，幫你和醫生討論治療。
+- [貓咪脂肪肝（肝脂肪沉積症）：為什麼不吃東西會傷肝](https://cathealthtw.com/articles/cat-hepatic-lipidosis.html)：貓幾乎不吃東西時，身體會把儲存的脂肪大量送進肝臟，超過肝臟能處理的量就堆積成脂肪肝，肥胖的貓發生率高得多。說明哪些狀況建議帶去看醫生、獸醫怎麼確診、為什麼治療要靠餵食管把營養餵回去，以及在家怎麼預防。
+- [貓咪居家美容：梳毛、剪指甲、清耳朵的正確方法](https://cathealthtw.com/articles/cat-home-grooming-guide.html)：長毛貓每天梳毛、短毛貓至少每週梳、每天刷牙；多數貓不需要例行剪指甲，老貓和室內貓要多留意；貓不需要例行清耳朵，耳朵看起來髒先帶去看醫生。整理 iCatCare、ASPCA 與 Cornell 對梳毛工具、打結處理、剪指甲、刷牙與洗澡的建議，附 Cornell 示範影片。
+- [貓咪腸道炎（IBD）：慢性嘔吐腹瀉的背後原因與管理](https://cathealthtw.com/articles/cat-ibd-intestinal-disease.html)：貓的發炎性腸道疾病（IBD）會讓腸胃道長期發炎，常見嘔吐、變瘦、腹瀉，多見於中老年貓，而且和低惡性度腸道淋巴瘤很難分。說明哪些情況建議帶去看醫生、為什麼確診要切片、飲食試驗與藥物各自負責什麼。
+- [室內飼養 vs 放養：台灣環境下的風險與決策](https://cathealthtw.com/articles/cat-indoor-vs-outdoor-taiwan.html)：英國研究中，5 歲前死亡的貓將近一半死於外傷，死於外傷的貓六成是車禍。整理放養要面對的車禍、打架傳染病、寄生蟲、毒物、狂犬病疫苗規定與高溫，以及只養在室內時怎麼補足貓的需求、圍欄與牽繩這些接觸戶外的做法。
+- [貓咪肥胖與減重：體態評分、每日熱量怎麼算，為什麼不能減太快](https://cathealthtw.com/articles/cat-obesity-weight-management.html)：貓過重會提高糖尿病等疾病的風險，減重太快又可能引發脂肪肝，嚴重過重的貓可能要花一年慢慢減。說明怎麼用 BCS 體態評分判斷貓是否過重、怎麼從目標體重算每日熱量、減重期間哪些情況建議帶去看醫生，以及零食與多貓家庭的常見錯誤。
+- [貓咪費洛蒙產品指南：合成費洛蒙的使用時機與效果](https://cathealthtw.com/articles/cat-pheromone-products-guide.html)：費洛蒙擴散器和噴霧對特定壓力情境有效果。了解臉部費洛蒙與安撫費洛蒙的差異、適用情境、研究證據，以及費洛蒙沒效果時該怎麼辦。
+- [懷孕與養貓：弓形蟲怎麼傳染、孕期怎麼預防](https://cathealthtw.com/articles/cat-toxoplasma-pregnancy.html)：懷孕可以繼續養貓。說明弓形蟲從生肉、蔬果、土壤和貓砂傳到人的途徑，貓什麼時候才會排出有感染力的卵囊，以及孕期清貓砂、處理肉類和台灣產檢可以怎麼安排。
+- [台灣認養貓流程：通路、健康確認、合約與老貓認養](https://cathealthtw.com/articles/cat-adoption-guide-taiwan.html)：決定認養後怎麼走：公立收容所、民間中途、個人送養與網路平台的手續差在哪，認養前要確認晶片登記、狂犬病疫苗、FIV/FeLV 篩檢與絕育，怎麼看貓的個性，認養合約要注意的違約條款，到家前準備清單，以及認養老貓前要先問清楚的健檢項目。
+- [貓的牙周病與牙吸收症：刷牙、洗牙與就醫時機](https://cathealthtw.com/articles/cat-dental-health-taiwan.html)：貓的牙周病、牙吸收症與口炎常常沒有明顯症狀，牙痛的貓多半照常吃飯。只用一邊咀嚼、食物從嘴裡掉出來、流口水、口臭持續不散都可能是口腔在痛。說明牙菌斑怎麼變成牙周病、洗牙為什麼要麻醉、刷牙怎麼分階段開始，以及哪些情況建議帶去看醫生。
+- [貓咪臨終照護、安樂死決定與飼主哀傷](https://cathealthtw.com/articles/cat-end-of-life-care-taiwan.html)：貓進入末期後，照護重心從治病轉成減少疼痛與維持生活品質。這篇說明怎麼用生活品質量表追蹤、家裡的環境怎麼調整、指引為什麼建議一開始就談安樂死的意願，以及失去貓之後飼主、孩子和家中其他貓怎麼調適。
 - [貓咪環境豐富化與垂直空間：台灣公寓怎麼做](https://cathealthtw.com/articles/cat-environment-enrichment-taiwan.html)：室內貓的五大環境需求，怎麼在台灣公寓安排高處、躲藏處、抓板與氣味刺激，每天陪玩多久、雷射筆怎麼用，只養一隻貓時要多注意什麼。
 - [貓咪眼睛與耳朵問題：眼分泌物判讀、耳疥蟲與耳炎分辨、何時看醫生](https://cathealthtw.com/articles/cat-eye-ear-problems-taiwan.html)：貓眼分泌物的樣子代表什麼、結膜炎與角膜潰瘍怎麼分、耳疥蟲和外耳炎的耳垢差在哪裡、老貓突然看不見和高血壓的關係、哪些眼耳症狀建議帶去看醫生，以及在家能做的觀察與照顧。依 Cornell、AAFP 等資料整理。
 - [貓飼料怎麼選](https://cathealthtw.com/articles/cat-food-selection-taiwan.html)：挑貓飼料看標示：先找 AAFCO 或 FEDIAF 的完整營養聲明（台灣法規不要求，要看原文包裝或問廠商），再讀原料表與保證成分、用乾基換算比較蛋白質，最後依貓的年齡、飲水量與病史決定乾糧、濕食或處方飲食，並照 WSAVA 建議保存與換飼料。
+- [台灣養貓法規：晶片登記、狂犬病疫苗、絕育、動保法罰則與 TNR](https://cathealthtw.com/articles/cat-laws-taiwan.html)：台灣養貓的法定義務整理：貓 2026 年 1 月起未辦寵物登記罰 3,000 至 15,000 元，搬家、轉讓、走失、過世各有申報期限；狂犬病疫苗每年一劑，符合條件的室內貓可免；犬貓未絕育又未申報可罰；遺棄罰 3 萬至 15 萬，虐待可判刑；另說明 TNR 的法律地位與走失時怎麼靠晶片找回貓。
+- [出遠門時貓怎麼辦：請人到家照顧、貓旅館與動物醫院寄宿怎麼選](https://cathealthtw.com/articles/cat-leaving-home-taiwan.html)：飼主出遠門時，貓可以留在家請人照顧，或送去貓旅館、動物醫院寄宿。比較幾種方式對貓的壓力和感染風險，台灣貓旅館要有寄養許可，以及寄宿前的疫苗、要帶的東西和接回家後的注意事項。
+- [成貓與老貓分齡照顧：1 歲到 15 歲以上該做的健檢與觀察](https://cathealthtw.com/articles/cat-life-stages-care-taiwan.html)：依 AAFP 2021 生命階段指引與高齡照護指引，整理 1 到 6 歲、7 到 10 歲、10 歲以上的健檢頻率與檢查項目，7 歲後常見的腎病、甲亢、糖尿病、關節炎、高血壓、牙周病怎麼早期發現，以及喝水變多、吃多變瘦、半夜嚎叫這些常被當成老化的改變。
 - [貓咪結紮：時機、費用補助與術後 7 天照顧](https://cathealthtw.com/articles/cat-neutering-aftercare-taiwan.html)：母貓 6 個月前結紮，乳腺癌風險降低 91%；公貓結紮後遊蕩、打架、噴尿的荷爾蒙不再分泌。說明結紮時機、台灣法規與補助怎麼查、術前禁食的新舊做法、術後一週怎麼照顧，以及傷口裂開、一直吐、尿不出來等建議回診的狀況。
 - [貓零食與保健品：零食怎麼給、哪些補充品有根據](https://cathealthtw.com/articles/cat-treats-supplements-taiwan.html)：零食要少於每日熱量的 10%，4 公斤的貓一天約 22 大卡。整理 WSAVA、AAHA、VCA、Cornell 對零食、魚油、益生菌與化毛產品的說法，吃完整均衡飼料的貓不需要另外補維生素和礦物質。
+- [幼貓 0 到 6 個月照顧：哺育、斷奶、疫苗、晶片與結紮](https://cathealthtw.com/articles/kitten-care-complete-taiwan.html)：撿到或領養幼貓後前半年要做的事：奶貓要保暖、刺激排泄、每天量體重，不喝牛奶；約 4 週大開始吃固體食物；三合一從 6 到 8 週打到 16 週以上；出生 4 個月內辦寵物登記；結紮放在第一次發情前。
+- [多貓家庭：引介新貓、空間安排與衝突處理](https://cathealthtw.com/articles/multi-cat-household-taiwan.html)：家裡要養第二隻貓，或多貓之間常起衝突時可以看這篇：依 AAFP 2024 多貓指引整理新貓引介的步驟、砂盆與躲藏處等資源怎麼安排、玩耍和打架怎麼分，以及貓之間緊張的訊號。
+- [我適合養貓嗎？10 個自評問題與認養、購買的比較](https://cathealthtw.com/articles/should-i-adopt-cat-decision-taiwan.html)：英國研究中貓的壽命中位數是 14 年。養貓前先問自己 10 個問題：住處能不能養、家人過不過敏、花費與每天的時間、能不能接受不黏人的貓；再比較認養和購買，以及在台灣向業者購買時要確認的許可、晶片、法規與品種遺傳病。
 
 ## Optional
 
