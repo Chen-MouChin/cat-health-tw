@@ -1006,8 +1006,8 @@ window.ARTICLES_INDEX = [
       "中途之家",
       "認養合約"
     ],
-    "quality": "preview",
-    "last_reviewed": "null",
+    "quality": "reviewed",
+    "last_reviewed": "2026-11-19",
     "read_min": 9,
     "citations": [
       "MOA-CAT-REGISTRATION-2024",
@@ -1304,8 +1304,8 @@ window.ARTICLES_INDEX = [
       "動物醫院寄宿",
       "疫苗"
     ],
-    "quality": "preview",
-    "last_reviewed": "null",
+    "quality": "reviewed",
+    "last_reviewed": "2026-11-19",
     "read_min": 5,
     "citations": [
       "AAFP-2013-ENVIRONMENTAL-NEEDS-2013",
@@ -1553,8 +1553,8 @@ window.ARTICLES_INDEX = [
       "倫理",
       "責任"
     ],
-    "quality": "preview",
-    "last_reviewed": "null",
+    "quality": "reviewed",
+    "last_reviewed": "2026-11-19",
     "read_min": 4,
     "citations": [
       "ONEILL-2015-CAT-LONGEVITY",
