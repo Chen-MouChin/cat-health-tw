@@ -20,6 +20,13 @@ body { font-family: var(--ui); background: var(--bg, #fafafa); color: var(--text
 .page-title { text-align: center; padding: 1.8rem 1rem 0.3rem; font-size: 1.6rem; font-weight: 700; color: var(--text); }
 .page-sub { text-align: center; font-size: 0.85rem; color: var(--text-muted, #6e6e73); padding-bottom: 0.8rem; }
 .page-sub strong { color: var(--text, #1d1d1f); font-weight: 600; }
+/* 導讀（build.py 的 inject_breed_intro 產生）：原始檔就有的文字與有單頁的品種清單 */
+.breed-intro { max-width: 760px; margin: 0 auto 1rem; font-size: 0.95rem; line-height: 1.75; color: var(--text-2, #4a4a4c); }
+.breed-intro p { margin: 0 0 0.6rem; }
+.breed-intro .bi-list summary { cursor: pointer; font-weight: 700; color: var(--primary, #3b6a50); min-height: 44px; display: flex; align-items: center; }
+.breed-intro .bi-list ul { margin: 0.2rem 0 0.8rem; padding-left: 1.2rem; columns: 2 16rem; column-gap: 1.5rem; }
+.breed-intro .bi-list li { break-inside: avoid; margin: 0.2rem 0; }
+.breed-intro .bi-en { margin-left: 0.4rem; color: var(--text-muted, #636368); font-size: 0.85em; }
 
 main { max-width: 1100px; margin: 0 auto; padding: 0 1rem 2rem; }
 
@@ -601,6 +608,7 @@ body:has(.modal.open) { overflow: hidden; }
     <a href="vets.html">動物醫院</a>
     <a href="library.html">文獻庫</a>
     <a href="breeds.html" aria-current="page">品種</a>
+    <a href="feeding-calculator.html">餵食量計算</a>
     <a href="about.html">關於</a>
   </nav>
   <div class="head-tools">
@@ -614,6 +622,35 @@ body:has(.modal.open) { overflow: hidden; }
 <p class="page-sub">台灣常見品種 · 資料來自 <strong>TheCatAPI</strong> + <strong>Wikipedia</strong> · 中文翻譯與台灣化資訊持續補充中</p>
 
 <main id="main">
+  <!-- breed-intro -->
+  <section class="breed-intro" aria-label="圖鑑導讀">
+    <p>這裡收錄 68 個品種。點品種卡片可以看外觀、性格、各項評分和照片；評分是 TheCatAPI 給的 1 到 5 分，用來在品種之間比較，同一個品種的貓個性也會差很多。名稱前的標示是健康風險與法規限制，每一條都附出處。</p>
+    <p>想養貓的話，公立收容所和認養團體也有很多貓在等家，見<a href="articles/cat-adoption-guide-taiwan.html">認養前要準備什麼</a>。</p>
+    <details class="bi-list"><summary>有完整介紹頁的 20 個品種</summary>
+    <ul>
+      <li><a href="breeds/birm.html">伯曼貓</a><span class="bi-en">Birman</span>：原產法國，壽命約 14 到 15 年</li>
+      <li><a href="breeds/rblu.html">俄羅斯藍貓</a><span class="bi-en">Russian Blue</span>：原產俄羅斯，壽命約 10 到 16 年</li>
+      <li><a href="breeds/hima.html">喜馬拉雅貓</a><span class="bi-en">Himalayan</span>：原產美國，壽命約 9 到 15 年</li>
+      <li><a href="breeds/beng.html">孟加拉貓</a><span class="bi-en">Bengal</span>：原產美國，壽命約 12 到 15 年（有健康風險標示）</li>
+      <li><a href="breeds/ragd.html">布偶貓</a><span class="bi-en">Ragdoll</span>：原產美國，壽命約 12 到 17 年（有健康風險標示）</li>
+      <li><a href="breeds/drex.html">德文捲毛貓</a><span class="bi-en">Devon Rex</span>：原產英國，壽命約 10 到 15 年（有健康風險標示）</li>
+      <li><a href="breeds/norw.html">挪威森林貓</a><span class="bi-en">Norwegian Forest Cat</span>：原產挪威，壽命約 12 到 16 年（有健康風險標示）</li>
+      <li><a href="breeds/sphy.html">斯芬克斯貓</a><span class="bi-en">Sphynx</span>：原產加拿大，壽命約 12 到 14 年（有健康風險標示）</li>
+      <li><a href="breeds/siam.html">暹羅貓</a><span class="bi-en">Siamese</span>：原產泰國，壽命約 12 到 15 年（有健康風險標示）</li>
+      <li><a href="breeds/munc.html">曼赤肯貓</a><span class="bi-en">Munchkin</span>：原產美國，壽命約 10 到 15 年（有健康風險標示）</li>
+      <li><a href="breeds/pers.html">波斯貓</a><span class="bi-en">Persian</span>：原產伊朗（波斯），壽命約 14 到 15 年（有健康風險標示）</li>
+      <li><a href="breeds/esho.html">異國短毛貓</a><span class="bi-en">Exotic Shorthair</span>：原產美國，壽命約 12 到 15 年（有健康風險標示）</li>
+      <li><a href="breeds/mcoo.html">緬因貓</a><span class="bi-en">Maine Coon</span>：原產美國，壽命約 12 到 15 年（有健康風險標示）</li>
+      <li><a href="breeds/bure.html">緬甸貓</a><span class="bi-en">Burmese</span>：原產緬甸，壽命約 15 到 16 年</li>
+      <li><a href="breeds/asho.html">美國短毛貓</a><span class="bi-en">American Shorthair</span>：原產美國，壽命約 15 到 17 年</li>
+      <li><a href="breeds/bsho.html">英國短毛貓</a><span class="bi-en">British Shorthair</span>：原產英國，壽命約 12 到 17 年（有健康風險標示）</li>
+      <li><a href="breeds/bslo.html">英國長毛貓</a><span class="bi-en">British Longhair</span>：原產英國，壽命約 12 到 14 年</li>
+      <li><a href="breeds/sfol.html">蘇格蘭摺耳貓</a><span class="bi-en">Scottish Fold</span>：原產英國，壽命約 11 到 14 年（有健康風險標示）</li>
+      <li><a href="breeds/sibe.html">西伯利亞貓</a><span class="bi-en">Siberian</span>：原產俄羅斯，壽命約 12 到 15 年（有健康風險標示）</li>
+      <li><a href="breeds/abys.html">阿比西尼亞貓</a><span class="bi-en">Abyssinian</span>：原產埃及，壽命約 14 到 15 年（有健康風險標示）</li>
+    </ul></details>
+  </section>
+  <!-- /breed-intro -->
   <!-- 名稱前 icon 的意義 — 進頁面就要看到 -->
   <div class="alert-legend">
     <div class="lg-title">品種名稱前的標示</div>
