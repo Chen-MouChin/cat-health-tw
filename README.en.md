@@ -7,7 +7,7 @@ A cat health knowledge base for Taiwan: medical articles, a nationwide veterinar
 The site is written in Traditional Chinese.
 
 - Website: https://cathealthtw.com/
-- Feedback and corrections: [GitHub Issues](https://github.com/Chen-MouChin/cat-health-tw/issues/new)
+- Contact and corrections: contact@cathealthtw.com
 
 ## What's on the site
 

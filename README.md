@@ -5,7 +5,7 @@
 台灣的貓健康知識庫：醫療知識文章、全台動物醫院查詢、品種圖鑑與文獻庫。
 
 - 網站：https://cathealthtw.com/
-- 回饋與勘誤：[GitHub Issue](https://github.com/Chen-MouChin/cat-health-tw/issues/new)
+- 聯絡與勘誤：contact@cathealthtw.com
 
 ## 網站有什麼
 
