@@ -27,6 +27,15 @@
     .source-table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; }
     .source-table th { background: var(--accent-light, #f0f0f3); padding: 0.5rem 0.7rem; text-align: left; }
     .source-table td { padding: 0.4rem 0.7rem; border-top: 1px solid var(--border, #eee); }
+    /* 手機：表格一列變一張卡片，第一欄當標題，其他欄前面加欄名 */
+    @media (max-width: 560px) {
+      .source-table, .source-table tbody, .source-table tr, .source-table td { display: block; width: 100%; }
+      .source-table thead, .source-table tr:has(> th) { display: none; }
+      .source-table tr { border: 1px solid var(--border, #eee); border-radius: 10px; padding: 0.6rem 0.8rem; margin-bottom: 0.6rem; background: var(--bg-card, #fff); }
+      .source-table td { border-top: 0; padding: 0.2rem 0; }
+      .source-table td:first-child { font-weight: 700; }
+      .source-table td[data-label]::before { content: attr(data-label) "："; color: var(--text-muted, #636368); font-size: 0.85em; }
+    }
     .contact-box { background: var(--bg-card, #f5f5f5); border-radius: 8px; padding: 1rem 1.2rem; margin-top: 1rem; font-size: 0.9rem; }
 
   </style>
@@ -88,10 +97,10 @@
         <tr><th>資料類型</th><th>來源</th><th>更新頻率</th></tr>
       </thead>
       <tbody>
-        <tr><td>學術文獻庫</td><td>國際獸醫指引、大學獸醫中心、同儕審查期刊、台灣官方資料（完整清單見<a href="editorial.html">編輯方針</a>）</td><td>每筆核實後加入</td></tr>
-        <tr><td>知識庫文章</td><td>同上學術來源</td><td>手動審稿後發佈</td></tr>
-        <tr><td>品種圖鑑</td><td>TheCatAPI（thecatapi.com）</td><td>資料庫版本更新時</td></tr>
-        <tr><td>動物醫院列表</td><td>農業部公開資料；座標以 © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a>（ODbL）定位</td><td>年度更新</td></tr>
+        <tr><td>學術文獻庫</td><td data-label="來源">國際獸醫指引、大學獸醫中心、同儕審查期刊、台灣官方資料（完整清單見<a href="editorial.html">編輯方針</a>）</td><td data-label="更新頻率">每筆核實後加入</td></tr>
+        <tr><td>知識庫文章</td><td data-label="來源">同上學術來源</td><td data-label="更新頻率">手動審稿後發佈</td></tr>
+        <tr><td>品種圖鑑</td><td data-label="來源">TheCatAPI（thecatapi.com）</td><td data-label="更新頻率">資料庫版本更新時</td></tr>
+        <tr><td>動物醫院列表</td><td data-label="來源">農業部公開資料；座標以 © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a>（ODbL）定位</td><td data-label="更新頻率">年度更新</td></tr>
       </tbody>
     </table>
 

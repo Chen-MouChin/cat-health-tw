@@ -29,6 +29,15 @@
     .policy-table td { padding: 0.5rem 0.7rem; border-top: 1px solid var(--border, #eee); vertical-align: top; }
     .who-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin: 1rem 0; }
     @media (max-width: 560px) { .who-grid { grid-template-columns: 1fr; } }
+    /* 手機：表格一列變一張卡片，第一欄當標題，其他欄前面加欄名 */
+    @media (max-width: 560px) {
+      .policy-table, .policy-table tbody, .policy-table tr, .policy-table td { display: block; width: 100%; }
+      .policy-table thead { display: none; }
+      .policy-table tr { border: 1px solid var(--border, #eee); border-radius: 10px; padding: 0.6rem 0.8rem; margin-bottom: 0.6rem; background: var(--bg-card, #fff); }
+      .policy-table td { border-top: 0; padding: 0.2rem 0; }
+      .policy-table td:first-child { font-weight: 700; }
+      .policy-table td[data-label]::before { content: attr(data-label) "："; color: var(--text-muted, #636368); font-size: 0.85em; }
+    }
     .who-card { background: var(--bg-card, #fff); border: 1px solid var(--border, #e5e5ea); border-radius: 12px; padding: 1rem 1.2rem; }
     .who-card .role { font-size: 0.75rem; color: var(--text-muted, #6e6e73); letter-spacing: 0.05em; text-transform: uppercase; }
     .who-card .name { font-size: 1.05rem; font-weight: 700; margin: 0.2rem 0 0.4rem; }
@@ -175,13 +184,13 @@
       <tbody>
         <tr>
           <td><strong>指引原文的內容</strong></td>
-          <td>分期門檻、檢驗數值、劑量、疫苗時程、研究結果、法規條文。我們照來源轉述，數字與原文一致。</td>
-          <td>句尾有編號，例如 <sup>1</sup>，點了到文末參考文獻，再到文獻庫看那筆資料</td>
+          <td data-label="是什麼">分期門檻、檢驗數值、劑量、疫苗時程、研究結果、法規條文。我們照來源轉述，數字與原文一致。</td>
+          <td data-label="在頁面上怎麼看出來">句尾有編號，例如 <sup>1</sup>，點了到文末參考文獻，再到文獻庫看那筆資料</td>
         </tr>
         <tr>
           <td><strong>我們的整理</strong></td>
-          <td>章節安排、白話說明、把幾份指引放在同一張表比較、「哪些情況建議帶去看醫生」的歸納，以及台灣在地的就醫與法規資訊。</td>
-          <td>沒有編號的句子，依據有編號的內容整理而成</td>
+          <td data-label="是什麼">章節安排、白話說明、把幾份指引放在同一張表比較、「哪些情況建議帶去看醫生」的歸納，以及台灣在地的就醫與法規資訊。</td>
+          <td data-label="在頁面上怎麼看出來">沒有編號的句子，依據有編號的內容整理而成</td>
         </tr>
       </tbody>
     </table>
@@ -223,18 +232,18 @@
       <tbody>
         <tr>
           <td>沒有審核日期</td>
-          <td>人工審核還沒完成，頁面只標更新日期。</td>
-          <td>列入</td>
+          <td data-label="意義">人工審核還沒完成，頁面只標更新日期。</td>
+          <td data-label="搜尋引擎">列入</td>
         </tr>
         <tr>
           <td><span class="badge reviewed">已審核</span></td>
-          <td>人工審核通過，數值已對回原文，顯示審核日期。</td>
-          <td>列入</td>
+          <td data-label="意義">人工審核通過，數值已對回原文，顯示審核日期。</td>
+          <td data-label="搜尋引擎">列入</td>
         </tr>
         <tr>
           <td><span class="badge featured">精選</span></td>
-          <td>已審核，且為該主題最完整的一篇，首頁推薦。</td>
-          <td>列入</td>
+          <td data-label="意義">已審核，且為該主題最完整的一篇，首頁推薦。</td>
+          <td data-label="搜尋引擎">列入</td>
         </tr>
       </tbody>
     </table>
