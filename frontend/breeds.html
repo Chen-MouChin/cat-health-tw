@@ -299,6 +299,28 @@ main { max-width: 1100px; margin: 0 auto; padding: 0 1rem 2rem; }
   padding: 1px 7px; border-radius: 8px;
 }
 
+/* 顯示方式切換（261122）：大圖＝原本的卡片；宮格＝小方圖加名字；列表＝左邊小圖、右邊文字 */
+.view-toggle { display: inline-flex; border: 1px solid var(--border, #e5e5ea); border-radius: 999px; overflow: hidden; background: var(--bg-card, #fff); }
+.view-toggle button { min-height: 44px; padding: 0 0.9rem; border: 0; background: transparent; font: inherit; font-size: 0.85rem; color: var(--text-2, #4a4a4c); cursor: pointer; }
+.view-toggle button + button { border-left: 1px solid var(--border, #e5e5ea); }
+.view-toggle button[aria-pressed="true"] { background: var(--primary-pale, #e7efe9); color: var(--primary-deep, #2a4c39); font-weight: 700; }
+.breeds-grid.v-small { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 0.6rem; }
+.v-small .breed-card .img-wrap { aspect-ratio: 1 / 1; }
+.v-small .breed-card .body { padding: 0.5rem 0.6rem 0.6rem; }
+.v-small .breed-card h3 { font-size: 0.9rem; flex-wrap: wrap; gap: 0 0.3rem; margin: 0; }
+.v-small .breed-card .meta, .v-small .breed-card .tags { display: none; }
+.breeds-grid.v-list { grid-template-columns: 1fr; gap: 0.5rem; }
+.v-list .breed-card { flex-direction: row; align-items: stretch; }
+.v-list .breed-card:hover { transform: none; }
+.v-list .breed-card .img-wrap { width: 104px; flex: none; aspect-ratio: auto; min-height: 96px; }
+.v-list .breed-card .body { padding: 0.6rem 0.9rem; justify-content: center; min-width: 0; }
+.v-list .breed-card .tags { margin-top: 0.2rem; }
+@media (max-width: 420px) {
+  .breeds-grid.v-small { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.45rem; }
+  .v-small .breed-card h3 .en { display: none; }
+  .v-list .breed-card .img-wrap { width: 88px; min-height: 88px; }
+}
+
 /* Modal */
 .modal {
   display: none;
@@ -667,6 +689,11 @@ body:has(.modal.open) { overflow: hidden; }
       <option value="name">依中文名</option>
       <option value="lifespan">壽命長短</option>
     </select>
+    <div class="view-toggle" role="group" aria-label="顯示方式">
+      <button type="button" data-view="large" aria-pressed="true">大圖</button>
+      <button type="button" data-view="small" aria-pressed="false">宮格</button>
+      <button type="button" data-view="list" aria-pressed="false">列表</button>
+    </div>
   </div>
 
   <div class="filter-bar" id="filterBar">
@@ -1342,6 +1369,22 @@ window.addEventListener('popstate', () => {
 
 document.getElementById('q').addEventListener('input', render);
 document.getElementById('sortBy').addEventListener('change', render);
+// 顯示方式：大圖／宮格／列表，記在這台裝置的瀏覽器（存不了也照常用）
+(function () {
+  const grid = document.getElementById('grid');
+  const btns = document.querySelectorAll('.view-toggle button');
+  function setView(v) {
+    grid.classList.remove('v-small', 'v-list');
+    if (v === 'small') grid.classList.add('v-small');
+    if (v === 'list') grid.classList.add('v-list');
+    btns.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.view === v)));
+    try { localStorage.setItem('breedView', v); } catch (e) {}
+  }
+  btns.forEach(b => b.addEventListener('click', () => setView(b.dataset.view)));
+  let saved = 'large';
+  try { saved = localStorage.getItem('breedView') || 'large'; } catch (e) {}
+  setView(['large', 'small', 'list'].includes(saved) ? saved : 'large');
+})();
 
 // 篩選器互動
 document.getElementById('filterBar').addEventListener('click', (e) => {
