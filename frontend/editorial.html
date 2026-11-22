@@ -53,7 +53,7 @@
       font-size: 0.85rem; font-weight: 700; display: flex; align-items: center; justify-content: center;
     }
     .steps li strong { display: block; }
-    .steps li .tool { font-size: 0.8rem; color: var(--text-muted, #6e6e73); }
+    .steps li .tool { display: block; margin-top: 0.2rem; font-size: 0.8rem; color: var(--text-muted, #6e6e73); }
     .badge { display: inline-block; font-size: 0.72rem; padding: 1px 7px; border-radius: 8px; border: 1px solid transparent; font-weight: 600; }
     .badge.draft { background: #f5f0e8; color: #735f33; border-color: #d4c8b0; }
     .badge.reviewed { background: #e8f3ea; color: #2f6b3a; border-color: #b8d8bf; }
@@ -107,8 +107,7 @@
 
   <main id="main">
     <div class="callout">
-      本站內容由人工擬綱、AI 起草、人工逐篇審核與修改調整。
-      文章整理國際與臺灣可信資訊，幫做好功課。
+      本站內容由人工擬綱、AI 起草、人工逐篇審核與修改調整。文章整理國際與臺灣可信資訊，幫做好功課。
     </div>
 
     <h2>誰在做這個網站</h2>
@@ -153,21 +152,17 @@
     <h2>文章怎麼產生</h2>
     <ol class="steps">
       <li>
-        <strong>選題</strong>
-        以台灣飼主實際會遇到的問題為主：常見疾病、急診判斷、飲食、行為、法規與費用。
+        <strong>選題</strong>以台灣飼主實際會遇到的問題為主：常見疾病、急診判斷、飲食、行為、法規與費用。
       </li>
       <li>
-        <strong>先找來源，再寫文章</strong>
-        每篇文章動筆前，先確定有一級學術來源可引用。
-        <span class="tool">來源清單全部收錄在 <a href="library.html">學術文獻庫</a>。</span>
+        <strong>先找來源，再寫文章</strong>每篇文章動筆前，先確定有一級學術來源可引用。<span class="tool">來源清單全部收錄在 <a href="library.html">學術文獻庫</a>。</span>
       </li>
       <li>
         <strong>AI 起草</strong>
         Claude 依指定來源撰寫初稿，要求每個數值、劑量、分期標準都標明出處。
       </li>
       <li>
-        <strong>數值核對</strong>
-        檢查腳本會標出帶數字但缺少註腳的句子，以及品牌名稱與絕對化用語。每個註腳對應文獻庫裡的一筆資料，再逐項確認那筆資料支持這句話；對應不到原文的數字，改寫成描述性的說法。
+        <strong>數值核對</strong>檢查腳本會標出帶數字但缺少註腳的句子，以及品牌名稱與絕對化用語。每個註腳對應文獻庫裡的一筆資料，再逐項確認那筆資料支持這句話；對應不到原文的數字，改寫成描述性的說法。
       </li>
       <li>
         <strong>人工審核</strong>
@@ -197,25 +192,19 @@
     <h3>一個數字要通過這幾關</h3>
     <ol class="steps">
       <li>
-        <strong>有出處才能寫</strong>
-        每個數值、劑量、比例、年齡門檻句尾都帶註腳。找到可引用的來源才寫數字，其餘用「多數」「少數」這類描述。
+        <strong>有出處才能寫</strong>每個數值、劑量、比例、年齡門檻句尾都帶註腳。找到可引用的來源才寫數字，其餘用「多數」「少數」這類描述。
       </li>
       <li>
-        <strong>出處要支持這句話</strong>
-        註腳指向文獻庫的一筆資料。我們先讀那筆資料的中文摘要，確認內容相符才放上去。
+        <strong>出處要支持這句話</strong>註腳指向文獻庫的一筆資料。我們先讀那筆資料的中文摘要，確認內容相符才放上去。
       </li>
       <li>
-        <strong>文獻本身要核對過原文</strong>
-        文獻庫每一筆都標示狀態。「已審核」代表我們打開原文逐項比對過摘要與數字，並確認網址有效；「待審」代表這一步還在進行。狀態在
-        <a href="library.html">文獻庫</a>公開。
+        <strong>文獻本身要核對過原文</strong>文獻庫每一筆都標示狀態。「已審核」代表我們打開原文逐項比對過摘要與數字，並確認網址有效；「待審」代表這一步還在進行。狀態在<a href="library.html">文獻庫</a>公開。
       </li>
       <li>
-        <strong>標示更新與審核日期</strong>
-        文章頁會標示最後更新與人工審核的日期。審核是我們逐句核對引用來源的過程，每審完一次就更新審核日期；讀者回報或來源更新時，我們會修改文章並更新日期。
+        <strong>標示更新與審核日期</strong>文章頁會標示最後更新與人工審核的日期。審核是我們逐句核對引用來源的過程，每審完一次就更新審核日期；讀者回報或來源更新時，我們會修改文章並更新日期。
       </li>
       <li>
-        <strong>來源有分歧時兩邊都寫</strong>
-        指引意見有差異時，同時列出並說明差在哪裡，讓你和獸醫一起判斷。
+        <strong>來源有分歧時兩邊都寫</strong>指引意見有差異時，同時列出並說明差在哪裡，讓你和獸醫一起判斷。
       </li>
     </ol>
     <h3>內容範圍</h3>
@@ -296,8 +285,7 @@
       <li>需要大幅修正的文章會先下架，修正並重新審核後再上線。</li>
     </ul>
     <p>
-      回報管道：寫信到 <a href="mailto:contact@cathealthtw.com">contact@cathealthtw.com</a>。
-      所有修改都留在公開的 git 紀錄裡，任何人都能查到誰在什麼時候改了什麼。
+      回報管道：寫信到 <a href="mailto:contact@cathealthtw.com">contact@cathealthtw.com</a>。所有修改都留在公開的 git 紀錄裡，任何人都能查到誰在什麼時候改了什麼。
     </p>
 
     <h2>文章的定位</h2>
@@ -307,7 +295,7 @@
       <li>貓出現呼吸困難、無法排尿、抽搐、大量出血或誤食毒物時，建議直接聯絡獸醫或<a href="vets.html?only24h=1">附近的夜間急診動物醫院</a>。</li>
     </ul>
 
-    <p class="muted" style="margin-top:2rem">本頁最後更新：2026-10-18。方針有修改時會在此註記。</p>
+    <p class="muted" style="margin-top:2rem">本頁最後更新：2026-11-22。方針有修改時會在此註記。</p>
   </main>
 
   <!-- site-foot -->
