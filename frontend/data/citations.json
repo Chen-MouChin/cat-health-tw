@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "貓健康站 literature database",
-    "total": 328
+    "total": 330
   },
   "WILHELMY-2016-BREED-COAT-BEHAVIOR": {
     "title": "Behavioral associations with breed, coat type, and eye color in single-breed cats",
@@ -7647,6 +7647,48 @@
     "doi": "10.1177/1098612X17734066",
     "pmid": "28994640",
     "pmcid": "PMC11129243",
+    "cited_by": []
+  },
+  "CFA-PERSIAN": {
+    "title": "Persian",
+    "title_zh": "CFA：波斯貓",
+    "authors": "Cat Fanciers' Association",
+    "source": "CFA",
+    "journal": null,
+    "year": 2026,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "美國愛貓協會的波斯貓介紹與品種標準。比賽時依毛色分成七組：單色、虎斑、銀色與金色、漸層與煙色、雙色或多色、三花與雙色、喜馬拉雅（重點色）。銀色與金色組裡有 chinchilla silver 與 chinchilla golden（台灣常說的金吉拉）：底毛是白色或淡金色，背、身側、頭和尾巴的毛尖帶顏色，看起來閃亮；這一組的眼睛要是綠色或藍綠色。照顧方面，波斯貓需要大量梳毛，要用長短齒的金屬梳避免打結；大眼睛容易有淚痕，要用濕軟布清；洗澡前要先梳開毛、剪好指甲。",
+    "status": "pending_review",
+    "url": "https://cfa.org/breed/persian/",
+    "keywords": [],
+    "disease_tags": [
+      "genetics",
+      "breed"
+    ],
+    "url_verified": true,
+    "cited_by": []
+  },
+  "CFA-CORNISH-REX": {
+    "title": "Cornish Rex",
+    "title_zh": "CFA：柯尼斯捲毛貓",
+    "authors": "Cat Fanciers' Association",
+    "source": "CFA",
+    "journal": null,
+    "year": 2026,
+    "type": "educational",
+    "language": "en",
+    "open_access": true,
+    "abstract_zh": "美國愛貓協會的柯尼斯捲毛貓介紹與品種標準。這個品種的特徵是非常柔軟、呈波浪的短毛和修長的體型，摸起來溫熱。CFA 說這個品種沒有已知的遺傳健康問題，但沒有護毛的被毛比較脆弱，擋不住太陽，貓也可能曬傷；天冷時容易著涼，可以考慮給牠穿衣服。",
+    "status": "pending_review",
+    "url": "https://cfa.org/breed/cornish-rex/",
+    "keywords": [],
+    "disease_tags": [
+      "genetics",
+      "breed"
+    ],
+    "url_verified": true,
     "cited_by": []
   }
 }

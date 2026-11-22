@@ -421,6 +421,9 @@ window.BREEDS = {
           "t": "Bastien 2019：貓過敏原 Fel d1",
           "u": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6764004/"
         }
+      ],
+      "search_terms": [
+        "藍貓"
       ]
     },
     {
@@ -645,7 +648,11 @@ window.BREEDS = {
         }
       ],
       "thecatapi_url": "https://thecatapi.com/breeds/pixi",
-      "data_source": "thecatapi"
+      "data_source": "thecatapi",
+      "search_terms": [
+        "皮克西博布貓",
+        "皮克西博布"
+      ]
     },
     {
       "id": "kuri",
@@ -5395,7 +5402,10 @@ window.BREEDS = {
         }
       ],
       "thecatapi_url": "https://thecatapi.com/breeds/pers",
-      "data_source": "thecatapi"
+      "data_source": "thecatapi",
+      "search_terms": [
+        "金吉拉"
+      ]
     },
     {
       "id": "buri",
@@ -6032,7 +6042,10 @@ window.BREEDS = {
         }
       ],
       "thecatapi_url": "https://thecatapi.com/breeds/esho",
-      "data_source": "thecatapi"
+      "data_source": "thecatapi",
+      "search_terms": [
+        "加菲貓"
+      ]
     },
     {
       "id": "kora",
@@ -7459,7 +7472,14 @@ window.BREEDS = {
         }
       ],
       "thecatapi_url": "https://thecatapi.com/breeds/bsho",
-      "data_source": "thecatapi"
+      "data_source": "thecatapi",
+      "search_terms": [
+        "銀漸層",
+        "金漸層",
+        "藍貓",
+        "英國藍貓",
+        "英短"
+      ]
     },
     {
       "id": "bslo",
@@ -7881,7 +7901,11 @@ window.BREEDS = {
         }
       ],
       "thecatapi_url": "https://thecatapi.com/breeds/sfol",
-      "data_source": "thecatapi"
+      "data_source": "thecatapi",
+      "search_terms": [
+        "折耳",
+        "摺耳"
+      ]
     },
     {
       "id": "raga",
